@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 72" role="img" aria-label="AVORA">
+  <circle cx="32" cy="7" r="6" fill="#E2B44A"/>
+  <path d="M8 62 27 18h7L20 62Z" fill="#0D1B2A"/>
+  <path d="M56 62 37 18h-7l14 44Z" fill="#0D1B2A"/>
+  <path d="m22 61 10-22 10 22-10-11Z" fill="#E2B44A"/>
+</svg>

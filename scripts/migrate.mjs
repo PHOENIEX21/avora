@@ -1,0 +1,9 @@
+import fs from 'node:fs/promises';import path from 'node:path';import postgres from 'postgres';
+if(!process.env.DATABASE_URL){console.error('DATABASE_URL is missing. Add it to .env.local first.');process.exit(1)}
+const sql=postgres(process.env.DATABASE_URL,{ssl:'require',max:1,connect_timeout:20});const dir=path.join(process.cwd(),'database','migrations');const files=(await fs.readdir(dir)).filter(f=>f.endsWith('.sql')).sort();
+await sql`CREATE TABLE IF NOT EXISTS schema_migrations(filename text PRIMARY KEY,applied_at timestamptz NOT NULL DEFAULT now())`;
+for(const file of files){const done=await sql`SELECT 1 FROM schema_migrations WHERE filename=${file}`;if(done.length)continue;const body=await fs.readFile(path.join(dir,file),'utf8');await sql.begin(async tx=>{await tx.unsafe(body);await tx`INSERT INTO schema_migrations(filename) VALUES(${file})`});console.log(`Applied ${file}`)}
+const required=[['student_profiles','preferred_subject'],['student_profiles','onboarding_completed'],['student_profiles','diagnostic_completed'],['student_profiles','diagnostic_score'],['attempts','mode'],['attempts','hint_count'],['questions','interaction_steps'],['exam_sessions','assessment_type'],['questions','content_origin']];
+const missing=[];for(const [table,column] of required){const [r]=await sql`SELECT EXISTS(SELECT 1 FROM information_schema.columns WHERE table_schema='public' AND table_name=${table} AND column_name=${column}) AS ok`;if(!r?.ok)missing.push(`${table}.${column}`)}
+if(missing.length){console.error(`Schema verification failed. Missing: ${missing.join(', ')}`);await sql.end();process.exit(1)}
+console.log('Schema verification passed.');await sql.end();console.log('AVORA database is up to date.');

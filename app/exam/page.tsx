@@ -1,0 +1,1 @@
+import {getSession} from '@/lib/auth';import {redirect} from 'next/navigation';import ExamClient from '@/components/ExamClient';export default async function Exam(){if(!await getSession())redirect('/login');return <ExamClient/>}

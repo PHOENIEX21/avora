@@ -1,0 +1,2 @@
+import PracticeClient from '@/components/PracticeClient';import {getSession} from '@/lib/auth';import {redirect} from 'next/navigation';import {Suspense} from 'react';
+export default async function PracticePage(){const s=await getSession();if(!s)redirect('/login');return <main className="practice-page"><Suspense fallback={<div className="practice-stage">Preparing your learning…</div>}><PracticeClient/></Suspense></main>}
