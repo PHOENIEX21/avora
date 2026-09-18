@@ -1,19 +1,27 @@
 import Link from 'next/link';
 import {redirect} from 'next/navigation';
 import {getSession} from '@/lib/auth';
+import {requireStudentLearningAccess} from '@/lib/learningAccess';
 import {sql,withDbRetry} from '@/lib/db';
+import {learnerTopicTitle} from '@/lib/learnerPresentation';
+
+export const dynamic='force-dynamic';
+export const revalidate=0;
 
 export default async function Welcome(){
  const s=await getSession();
  if(!s) redirect('/login');
+ const access=await requireStudentLearningAccess(s);
 
  const [u]=await withDbRetry(()=>sql`SELECT u.full_name,sp.class_level,sp.target_exam,sp.preferred_subject,sp.learning_goal,sp.daily_goal_minutes,sp.onboarding_completed,sp.diagnostic_completed,sp.diagnostic_score FROM users u LEFT JOIN student_profiles sp ON sp.user_id=u.id WHERE u.id=${s.userId}`,2);
  if(!u?.onboarding_completed) redirect('/onboarding');
+ if(u?.class_level==='Primary 5'||u?.class_level==='Primary 6') redirect('/common-entrance');
 
- const [[st],[at],skillRows]=await Promise.all([
+ const [[st],[at],skillRows,remediationRows]=await Promise.all([
   withDbRetry(()=>sql`SELECT COALESCE(ROUND(AVG(score)*100),0) AS mastery,COUNT(*)::int skills FROM mastery WHERE student_id=${s.userId}`,2),
   withDbRetry(()=>sql`SELECT COUNT(*)::int attempts,COUNT(*) FILTER(WHERE is_correct)::int correct,COUNT(*) FILTER(WHERE mode='DIAGNOSTIC')::int diagnostic_attempts,COUNT(*) FILTER(WHERE mode='DIAGNOSTIC' AND is_correct)::int diagnostic_correct FROM attempts WHERE student_id=${s.userId}`,2),
-  withDbRetry(()=>sql`SELECT s.name,t.name AS topic,ROUND(AVG(CASE WHEN a.is_correct THEN 1 ELSE 0 END)*100)::int AS accuracy,COUNT(*)::int evidence FROM attempts a JOIN questions q ON q.id=a.question_id JOIN skills s ON s.id=q.skill_id JOIN topics t ON t.id=s.topic_id WHERE a.student_id=${s.userId} GROUP BY s.id,s.name,t.name ORDER BY accuracy ASC,evidence DESC LIMIT 3`,2)
+  withDbRetry(()=>sql`SELECT s.name,t.name AS topic,ROUND(AVG(CASE WHEN a.is_correct THEN 1 ELSE 0 END)*100)::int AS accuracy,COUNT(*)::int evidence FROM attempts a JOIN questions q ON q.id=a.question_id JOIN skills s ON s.id=q.skill_id JOIN topics t ON t.id=s.topic_id WHERE a.student_id=${s.userId} GROUP BY s.id,s.name,t.name ORDER BY accuracy ASC,evidence DESC LIMIT 3`,2),
+  withDbRetry(()=>sql`SELECT recommended_topic,plan_reason FROM remediation_plans WHERE student_id=${s.userId} AND status='ACTIVE' ORDER BY created_at DESC LIMIT 1`,2)
  ]);
 
  const first=(u.full_name||'Learner').split(/\s+/)[0];
@@ -27,9 +35,10 @@ export default async function Welcome(){
   await sql`UPDATE student_profiles SET diagnostic_completed=true,diagnostic_completed_at=COALESCE(diagnostic_completed_at,now()),diagnostic_score=${score},updated_at=now() WHERE user_id=${s.userId}`;
   diagnosticComplete=true;diag=Math.round(score*100);
  }
+ const remediation=remediationRows[0];
  const focus=skillRows[0];
  const focusName=focus?.skill_name||focus?.name||'Your next skill';
- const focusTopic=focus?.topic||u.preferred_subject||'Mathematics';
+ const focusTopic=remediation?.recommended_topic||focus?.topic||u.preferred_subject||'Mathematics';
  const focusAccuracy=focus?.accuracy==null?null:Number(focus.accuracy);
  const exam=u.target_exam||'BECE';
  const daily=Number(u.daily_goal_minutes||20);
@@ -38,21 +47,22 @@ export default async function Welcome(){
  const focusState=focusAccuracy==null?'Ready to begin':focusAccuracy<45?'Needs teaching':focusAccuracy<75?'Developing':'Building confidence';
 
  return <main className="premium-home">
-  {!diagnosticComplete&&<section className="shell diagnostic-home-callout"><div><span className="section-kicker">START HERE · ABOUT 5 QUESTIONS</span><h2>Help AVORA find your starting point.</h2><p>You can still explore Learn, Tutor and Exam. This short check simply makes your recommendations more personal.</p></div><Link href="/diagnostic" className="premium-primary">Start diagnostic <span>→</span></Link></section>}
+
+  {u.class_level==='JSS3'&&!diagnosticComplete&&<section className="shell diagnostic-home-callout"><div><span className="section-kicker">START HERE · ABOUT 5 QUESTIONS</span><h2>Help AVORA find your starting point.</h2><p>You can still explore Learn, Tutor and Exam. This short check simply makes your recommendations more personal.</p></div><Link href="/diagnostic" className="premium-primary">Start diagnostic <span>→</span></Link></section>}
   <section className="shell premium-welcome">
    <div className="welcome-main">
-    <div className="welcome-eyebrow"><span>YOUR LEARNING SPACE</span><i></i><b>{exam} · {u.preferred_subject||'Mathematics'}</b></div>
-    <h1>Welcome back, <span>{first}.</span></h1>
-    <p className="welcome-summary">Your learning path is ready. AVORA has a clear next step for you and will keep adapting as you show more evidence.</p>
+    <div className="welcome-eyebrow"><span>HOME · YOUR LEARNING SPACE</span><i></i><b>{exam} · {u.preferred_subject||'Mathematics'}</b></div>
+    <h1>Your learning plan, <span>{first}.</span></h1>
+    <p className="welcome-summary">Here’s what AVORA recommends next based on your learning evidence. Continue where you stopped, choose another subject, or follow today’s focus.</p>
     <div className="welcome-actions">
-     <Link href="/tutor" className="premium-primary">Continue with AVORA <span>→</span></Link>
-     <Link href="/exam" className="premium-secondary">View exam map</Link>
+     <Link href="/learn" className="premium-primary">Continue learning <span>→</span></Link>
+     <Link href="/learn" className="premium-secondary">Choose a subject</Link>
     </div>
    </div>
    <aside className="welcome-status" aria-label="Today's learning focus">
     <span className="status-label">TODAY'S FOCUS</span>
-    <strong>{focusTopic}</strong>
-    <p>{focusName}</p>
+    <strong>{learnerTopicTitle(focusTopic)}</strong>
+    <p>{learnerTopicTitle(focusName)}</p>
     <div className="status-row"><span>{focusState}</span><b>{focusAccuracy==null?'—':`${focusAccuracy}%`}</b></div>
    </aside>
   </section>
@@ -60,12 +70,12 @@ export default async function Welcome(){
   <section className="shell focus-band">
    <div className="focus-copy">
     <span className="section-kicker">YOUR NEXT MOVE</span>
-    <h2>{focusName}</h2>
-    <p>{focus?`AVORA noticed that this skill deserves attention. We’ll teach it in short interactive steps, check your reasoning, then give you a fresh question without help.`:'We’ll begin with a short guided sequence and use your answers to decide what comes next.'}</p>
-    <Link href="/tutor" className="focus-link">Start this learning session <span>→</span></Link>
+    <h2>{learnerTopicTitle(focusName)}</h2>
+    <p>{remediation?.plan_reason|| (focus?`AVORA noticed that this skill deserves attention. We’ll teach it in interactive steps, wait for your reasoning, then give you fresh independent proof.`:'We’ll begin with a guided sequence and use your answers to decide what comes next.')}</p>
+    <Link href={remediation?.recommended_topic?'/tutor?topic='+encodeURIComponent(remediation.recommended_topic)+'&subject='+encodeURIComponent(u.preferred_subject||'Mathematics'):'/learn'} className="focus-link">Start this learning session <span>→</span></Link>
    </div>
    <div className="focus-meta">
-    <div><span>Topic</span><strong>{focusTopic}</strong></div>
+    <div><span>Topic</span><strong>{learnerTopicTitle(focusTopic)}</strong></div>
     <div><span>Target exam</span><strong>{exam}</strong></div>
     <div><span>Daily rhythm</span><strong>{daily} min</strong></div>
     <div><span>Current evidence</span><strong>{focusAccuracy==null?'Not assessed':`${focusAccuracy}%`}</strong></div>

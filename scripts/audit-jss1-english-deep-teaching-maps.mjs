@@ -1,0 +1,13 @@
+import fs from 'node:fs';
+const curriculum=fs.readFileSync(new URL('../lib/revised2025Curriculum.ts',import.meta.url),'utf8');
+const maps=fs.readFileSync(new URL('../lib/jss1EnglishTeachingMaps.ts',import.meta.url),'utf8');
+const block=curriculum.slice(curriculum.indexOf('export const revised2025Jss1English'),curriculum.indexOf('const j2e='));
+const topics=[...block.matchAll(/j1e\('[^']+','([^']+)'/g)].map(x=>x[1]);
+const missing=topics.filter(t=>!maps.includes(`'${t}':m(`));
+const entries=[...maps.matchAll(/^'([^']+)':m\(/gm)].map(x=>x[1]);
+if(topics.length!==29) throw new Error(`Expected 29 revised JSS1 English topics, found ${topics.length}`);
+if(missing.length) throw new Error(`Missing maps: ${missing.join(', ')}`);
+if(entries.length!==29) throw new Error(`Expected 29 maps, found ${entries.length}`);
+if(!maps.includes('minimumRepresentativeExamples:3')) throw new Error('Three-example minimum missing');
+for(const required of ['define unfamiliar language terminology','model the skill','contrast or non-examples','evidence or a reason']) if(!maps.includes(required)) throw new Error(`Missing standard: ${required}`);
+console.log(`JSS1 English deep-teaching maps passed: ${topics.length}/${topics.length} topics mapped; 3+ representative examples per type required.`);

@@ -1,0 +1,15 @@
+AVORA V14.9.1 — NERDC Tutor Teaching UI
+Branch: v14.9.1-tutor-ui
+
+Verification completed before this commit/checkpoint:
+- V14.9.1 Tutor UI audit: 15/15 PASS
+- V14.9 NERDC official integration: 28/28 PASS
+- V14.9 authored JSS2 English bank: 14/14 PASS
+- Curriculum reality: 15/15 PASS
+- JSS1 Mathematics: 6/6 PASS
+- JSS2 Mathematics: 7/7 PASS
+- JSS1 English: 6/6 PASS
+- JSS2 English: 8/8 PASS
+- 202 TS/TSX files transpiled: 0 syntax errors
+
+Note: production typecheck/build remains to be run in a clean dependency environment or Vercel preview because this workspace has an incomplete node_modules cache.

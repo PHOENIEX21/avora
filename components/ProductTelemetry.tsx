@@ -1,0 +1,5 @@
+'use client';
+import {useEffect,useRef} from 'react';
+import {usePathname,useSearchParams} from 'next/navigation';
+import {flushTelemetry,trackEvent} from '@/lib/telemetry';
+export default function ProductTelemetry(){const path=usePathname();const params=useSearchParams();const last=useRef('');useEffect(()=>{const key=`${path}?${params.toString()}`;if(last.current===key)return;last.current=key;trackEvent('PAGE_VIEW',{path});if(path==='/parent/family')trackEvent('FAMILY_MANAGE_OPENED',{path});if(path==='/tutor'){const source=params.get('from')||'';const topic=params.get('topic')||'';if(source==='exam'||source==='review')trackEvent('EXAM_TO_TUTOR',{path,source,topic});else if(source==='mock-rubric')trackEvent('MOCK_TO_TUTOR',{path,source,topic});else if(source==='live-assessment')trackEvent('LIVE_TO_TUTOR',{path,source,topic});else if(source==='progress')trackEvent('PROGRESS_TO_TUTOR',{path,source,topic})}},[path,params]);useEffect(()=>{const online=()=>void flushTelemetry();window.addEventListener('online',online);void flushTelemetry();return()=>window.removeEventListener('online',online)},[]);return null}

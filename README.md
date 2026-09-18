@@ -1,3 +1,11 @@
+# AVORA V14.7.0 — Teacher Script Runtime
+
+See `README-V14.7.0.md` for this release.
+
+# AVORA V10.0.0 — Current Launch Candidate
+
+See `README-V10.0.0.md` for the revised-2025 curriculum rebuild, JSS1/JSS2 assessment parity, launch-gate results, and final deployment commands.
+
 # AVORA V6 — Curriculum Path + Evidence Groups
 
 V6 changes normal learning from random practice to a focused curriculum path.
@@ -30,3 +38,7 @@ Expected migration: `006_curriculum_groups.sql`.
 - Normalizes legacy/new JSON option shapes before rendering.
 - Practice and Exam clients guard against non-array option data.
 - Exam API safely falls back to short-answer rendering if an MCQ has no valid option array.
+
+
+## Current academic checkpoint
+See `README-V9.7.0.md` for the JSS2 English deep-coverage checkpoint.
