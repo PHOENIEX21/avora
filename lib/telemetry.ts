@@ -2,14 +2,14 @@
 
 export const TELEMETRY_EVENTS = [
   'PAGE_VIEW','TUTOR_LESSON_OPENED','TUTOR_LESSON_STARTED','TUTOR_LESSON_RESTORED','TUTOR_CACHED_LESSON_USED',
-  'TUTOR_RETEACH_TRIGGERED','TUTOR_LESSON_COMPLETED','TUTOR_OFFLINE_ENTERED','TUTOR_RECONNECTED',
+  'TUTOR_RETEACH_TRIGGERED','TUTOR_LESSON_COMPLETED','TUTOR_TOPIC_EXERCISE_STARTED','TUTOR_TOPIC_EXERCISE_COMPLETED','TUTOR_OFFLINE_ENTERED','TUTOR_RECONNECTED',
   'EXAM_COMPLETED','EXAM_TO_TUTOR','MOCK_TO_TUTOR','PROGRESS_TO_TUTOR','LIVE_TO_TUTOR',
   'PWA_INSTALLED','PWA_UPDATE_APPLIED','FAMILY_MANAGE_OPENED'
 ] as const;
 export type TelemetryEventName=typeof TELEMETRY_EVENTS[number];
 type Context=Record<string,string|number|boolean|null|undefined>;
 const KEY='avora:telemetry-queue:v1';
-const SAFE_KEYS=new Set(['path','subject','classLevel','topic','exam','source','outcome','mode','reason','mockSet','offline','restored','cached','surface']);
+const SAFE_KEYS=new Set(['path','subject','classLevel','topic','exam','source','outcome','mode','reason','mockSet','offline','restored','cached','surface','questions','score','total']);
 function safeContext(input:Context={}){const out:Record<string,string|number|boolean|null>={};for(const [k,v] of Object.entries(input)){if(!SAFE_KEYS.has(k)||v===undefined)continue;if(typeof v==='string')out[k]=v.slice(0,120);else if(typeof v==='number'&&Number.isFinite(v))out[k]=v;else if(typeof v==='boolean'||v===null)out[k]=v}return out}
 function queued(){if(typeof window==='undefined')return [] as any[];try{const x=JSON.parse(localStorage.getItem(KEY)||'[]');return Array.isArray(x)?x:[]}catch{return []}}
 function save(items:any[]){try{localStorage.setItem(KEY,JSON.stringify(items.slice(-100)))}catch{}}
