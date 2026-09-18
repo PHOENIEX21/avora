@@ -1,0 +1,10 @@
+{
+  "status": "REVISED_2025_RECONCILED_CURRENT_COHORTS",
+  "launchAllowed": true,
+  "reason": "AVORA now uses the September 2025 revised BEC for current JSS1/JSS2 cohorts, preserves the current JSS3 prior-cycle map, and regenerates teaching plus independent assessment evidence from the reconciled class inventories. Entries whose detailed NERDC class PDF is not publicly fetchable are explicitly tagged OFFICIAL_PLUS_SCHEME_CROSSCHECK rather than represented as verbatim official extraction.",
+  "currentCohorts": {"JSS1": "NERDC_NEW_REVISED_BEC_2025", "JSS2": "NERDC_NEW_REVISED_BEC_2025", "JSS3": "PRIOR_CYCLE_UNTIL_EXIT"},
+  "authorityUrl": "https://www.nerdc.gov.ng/content_manager/new_curriculum_home.html",
+  "implementationAuthorityUrl": "https://www.nerdc.gov.ng/content_manager/Revised%209%20Year%20BEC%20Implementation%20Strategy%203.pdf",
+  "verificationPolicy": "Official revised NERDC authority controls curriculum version. Where detailed class files are inaccessible to automated fetch, current schemes are used only as cross-checks and the topic is labelled accordingly.",
+  "checkedAt": "2026-09-09"
+}

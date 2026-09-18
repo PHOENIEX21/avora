@@ -1,0 +1,3263 @@
+{
+  "version": "14.8.1",
+  "generatedAt": "SOURCE_BUILD",
+  "sourceFiles": [
+    {
+      "name": "Avora_NCEE_CBT_English_Primary5_MockSet1.md",
+      "sha256": "feb4fef34f6e148d1ebe3f5984f1f53d74de38951188e40373bb6951d571d4a1"
+    },
+    {
+      "name": "Avora_NCEE_CBT_English_Primary6_MockSet1.md",
+      "sha256": "e5e8f2b3205369e29112ac93bb6d2816dc42794872ed4b3d103c02078285425d"
+    },
+    {
+      "name": "Avora_NCEE_CBT_GeneralPaper_Primary5_MockSet1.md",
+      "sha256": "eaf23ee3c7a91c6e7f7c047c85d24b9634ab1bfd362b609a4eaa59b7ccca5c47"
+    },
+    {
+      "name": "Avora_NCEE_CBT_GeneralPaper_Primary6_MockSet1.md",
+      "sha256": "67ac442304a4708eccaa447418e1f72a705d9ed4ddb4f2c2d4dca482430600ea"
+    },
+    {
+      "name": "Avora_NCEE_CBT_Maths_Primary5_MockSet1.md",
+      "sha256": "2a5d4fb7b8c6e5ac90f0adca126c1a89ab2ea4ad30c6506b18b5c7ea413a8ac6"
+    },
+    {
+      "name": "Avora_NCEE_CBT_Maths_Primary6_MockSet1.md",
+      "sha256": "980beb8af449db43a84b22ddfdb2da0e332664fa04af0b75d14b49c581822328"
+    },
+    {
+      "name": "Avora_NCEE_Curriculum_Primary5-6_Topics(1).md",
+      "sha256": "9f5afc0b62ff961eca60999ea843bfc19b9b44c9307534d079495e9542858bf0"
+    },
+    {
+      "name": "Avora_NCEE_English_Primary5_Term1.md",
+      "sha256": "07d5defcfcc221f7e4eefd1ea9e041e509f8181b840ba29cb73faf65e86371a9"
+    },
+    {
+      "name": "Avora_NCEE_English_Primary5_Term2.md",
+      "sha256": "e53547371e7a80f5dfe816137c657e81806aae2f9be509bbfd34c77326c619f9"
+    },
+    {
+      "name": "Avora_NCEE_English_Primary5_Term3.md",
+      "sha256": "b9e2126aeddb19ff317e54909453fcb05b60f310f71e805f772a88c0fda0e754"
+    },
+    {
+      "name": "Avora_NCEE_English_Primary6_Term1.md",
+      "sha256": "4fa37ccf761e7449ae98cd85f83b732116fbed118d3262097b88fd4051cb01ff"
+    },
+    {
+      "name": "Avora_NCEE_English_Primary6_Term2.md",
+      "sha256": "981299bb6b85e53abbcf3479926eed1ca7dd174fa7f9907aefdb80030c900137"
+    },
+    {
+      "name": "Avora_NCEE_English_Primary6_Term3.md",
+      "sha256": "04fbd0271eec413bab65b42e29f35cf4ac79705840a1f3cd3169a46fdbdc3880"
+    },
+    {
+      "name": "Avora_NCEE_GeneralPaper_Primary5.md",
+      "sha256": "5229332a90261c4d0ad015ec69996a01cf3b3a3f9d184a8c86cc10a0d2f289d7"
+    },
+    {
+      "name": "Avora_NCEE_GeneralPaper_Primary6.md",
+      "sha256": "71ce9adabd070192ebefa70c4008960e6e2fea41a06bbc95c642b86d02a0ab43"
+    },
+    {
+      "name": "Avora_NCEE_Maths_Primary5_Term1.md",
+      "sha256": "682e82251582fcdb2045120d1841f664fcba356fe1cdc7533d2529a26293d96c"
+    },
+    {
+      "name": "Avora_NCEE_Maths_Primary5_Term2.md",
+      "sha256": "fa35a7efe97f54a56fd11a932ece08e1dd78479e35fe709697b662766bc14541"
+    },
+    {
+      "name": "Avora_NCEE_Maths_Primary5_Term3.md",
+      "sha256": "a65bc84e0c800c7d451cfd6f74e62d7cd62164a30a4119b0adcc0fab08c1f0ee"
+    },
+    {
+      "name": "Avora_NCEE_Maths_Primary6_Term1.md",
+      "sha256": "ff483e4f58de2e811aa8342d34ad0069287b60fbcdc337de1b3f4cd4280a9284"
+    },
+    {
+      "name": "Avora_NCEE_Maths_Primary6_Term2.md",
+      "sha256": "b71bdce0134bc2a4571eae48dc402be08f486825a676b04aa49c908f15291719"
+    },
+    {
+      "name": "Avora_NCEE_Maths_Primary6_Term3.md",
+      "sha256": "e3bcf97cfd1f6a6c624baad882f9b4ef4a9699c19690892b382b4536173988c3"
+    },
+    {
+      "name": "Avora_NCEE_QuantitativeReasoning_Primary5.md",
+      "sha256": "3f61f764fd70078501749a3d4af66c616f8baf36de53fcb8a9683d8a3493988a"
+    },
+    {
+      "name": "Avora_NCEE_QuantitativeReasoning_Primary6.md",
+      "sha256": "6ae1c944198a9733ad692b5f5c91387c9530c05d7a62290532edfe5b452d7c4f"
+    },
+    {
+      "name": "Avora_NCEE_VerbalReasoning_Primary5.md",
+      "sha256": "99f62fdf8034c6a8b38546e88d9451003da6c3d12c560e867ff1c0ce2da9a58b"
+    },
+    {
+      "name": "Avora_NCEE_VerbalReasoning_Primary6.md",
+      "sha256": "1e31367bffb1c7955cd1d170e0f198255c22a333663d6c10c52a74adff06c438"
+    }
+  ],
+  "topics": [
+    {
+      "id": "ncee-source-p5-english-studies-first-term-nouns-pronouns-verbs",
+      "classLevel": "Primary 5",
+      "domain": "English Studies",
+      "subject": "English Studies",
+      "term": "First Term",
+      "title": "Nouns, Pronouns, Verbs",
+      "strand": "Grammar",
+      "subtopics": [],
+      "concepts": [
+        "Step 1 — Establish each part of speech with its JOB, using a simple sentence to show all three working together",
+        "\"Ada kicked the ball.\" — Ada (noun, names a person), kicked (verb, shows the action), it (a pronoun could replace \"the ball\": \"Ada kicked it\").",
+        "A part of speech describes the job a word is doing in a sentence. The same word can sometimes do different jobs in different sentences, so use context."
+      ],
+      "workedExamples": [
+        "Without pronouns: \"Musa took Musa's bag because Musa was going to school.\" (repetitive, awkward) With pronouns: \"Musa took his bag because he was going to school.\" (smoother)",
+        "“Ada carried her bag.” Ada and bag are nouns; carried is a verb; her is a pronoun/determiner referring to Ada."
+      ],
+      "practiceQuestions": [
+        "Identify the noun, verb, and pronoun in: \"She ate her lunch quickly.\"",
+        "Rewrite this sentence using a pronoun to avoid repetition: \"Tunde loves Tunde's dog. Tunde plays with the dog every day.\"",
+        "Identify the nouns and verb in “The pupils opened their books.”"
+      ],
+      "sourceFile": "Avora_NCEE_English_Primary5_Term1.md",
+      "sourceLineStart": 8,
+      "contentStatus": "TEACHING_READY",
+      "depthCompletionVersion": "14.8.1"
+    },
+    {
+      "id": "ncee-source-p5-english-studies-first-term-adjectives",
+      "classLevel": "Primary 5",
+      "domain": "English Studies",
+      "subject": "English Studies",
+      "term": "First Term",
+      "title": "Adjectives",
+      "strand": "Grammar",
+      "subtopics": [],
+      "concepts": [
+        "Step 1 — Establish that adjectives describe/give MORE detail about a noun",
+        "Adjectives describe or give more information about nouns. Comparatives compare two; superlatives compare three or more.",
+        "Many comparatives use -er and superlatives use -est, but longer adjectives often use more/most and irregular forms must be learned in context."
+      ],
+      "workedExamples": [
+        "\"The dog\" (plain) vs \"The big, brown dog\" (adjectives \"big\" and \"brown\" add detail).",
+        "tall → taller → tallest; beautiful → more beautiful → most beautiful."
+      ],
+      "practiceQuestions": [
+        "Add two adjectives to describe \"the house.\"",
+        "Identify the adjectives in: \"The tall, old man walked slowly.\" (note: \"slowly\" describes the verb, not the noun — it's an adverb, not an adjective; a useful early distinction).",
+        "Write the comparative and superlative of “bright.”"
+      ],
+      "sourceFile": "Avora_NCEE_English_Primary5_Term1.md",
+      "sourceLineStart": 22,
+      "contentStatus": "TEACHING_READY",
+      "depthCompletionVersion": "14.8.1"
+    },
+    {
+      "id": "ncee-source-p5-english-studies-first-term-simple-and-compound-sentences",
+      "classLevel": "Primary 5",
+      "domain": "English Studies",
+      "subject": "English Studies",
+      "term": "First Term",
+      "title": "Simple and Compound Sentences",
+      "strand": "Grammar",
+      "subtopics": [],
+      "concepts": [
+        "Step 1 — Establish a simple sentence (one complete idea) vs a compound sentence (two simple sentences joined by \"and,\" \"but,\" or \"or\")",
+        "A complete sentence expresses a complete thought and normally contains a subject and a verb.",
+        "A simple sentence has one main independent clause; a compound sentence joins two independent ideas with a suitable coordinator such as and, but, or, so."
+      ],
+      "workedExamples": [
+        "Simple: \"I like mangoes.\" Simple: \"I like oranges.\" Compound (joined): \"I like mangoes and oranges.\"",
+        "“I finished my work.” is simple. “I finished my work, so I went outside.” is compound."
+      ],
+      "practiceQuestions": [
+        "Join these two simple sentences into one compound sentence: \"It was raining. We stayed indoors.\"",
+        "Write one simple sentence and one compound sentence about your school.",
+        "Write one simple sentence."
+      ],
+      "sourceFile": "Avora_NCEE_English_Primary5_Term1.md",
+      "sourceLineStart": 33,
+      "contentStatus": "TEACHING_READY",
+      "depthCompletionVersion": "14.8.1"
+    },
+    {
+      "id": "ncee-source-p5-english-studies-first-term-reading-comprehension",
+      "classLevel": "Primary 5",
+      "domain": "English Studies",
+      "subject": "English Studies",
+      "term": "First Term",
+      "title": "Reading Comprehension",
+      "strand": "Reading Comprehension",
+      "subtopics": [],
+      "concepts": [
+        "Step 1 — Establish literal questions (answer is directly stated) vs inferential questions (answer requires reasoning from clues, not directly stated)",
+        "Read a comprehension passage for meaning before answering. First identify the main idea, then locate details and clues for inference.",
+        "A detail answer should be supported by exact information from the passage; an inference combines passage clues with logical reasoning without inventing new facts."
+      ],
+      "workedExamples": [
+        "Sample passage: \"Chidi woke up early to help his mother prepare for the market. He carried the heavy basket of vegetables to the roadside, where they waited for a bus.\"",
+        "\"What did Chidi carry?\" → Answer: a heavy basket of vegetables (directly stated).",
+        "\"Why do you think Chidi woke up early?\" → Answer: likely to have enough time to help prepare and get to the market before it got busy or before the goods spoiled — this isn't directly stated, but reasoned from the context."
+      ],
+      "practiceQuestions": [
+        "Using the passage above, is \"Where did Chidi and his mother wait?\" a literal or inferential question? Answer it.",
+        "Write one inferential question about the passage, and answer it using reasoning (not a directly stated fact).",
+        "State the main idea of a short paragraph in one sentence."
+      ],
+      "sourceFile": "Avora_NCEE_English_Primary5_Term1.md",
+      "sourceLineStart": 46,
+      "contentStatus": "TEACHING_READY",
+      "depthCompletionVersion": "14.8.1"
+    },
+    {
+      "id": "ncee-source-p5-english-studies-first-term-vocabulary",
+      "classLevel": "Primary 5",
+      "domain": "English Studies",
+      "subject": "English Studies",
+      "term": "First Term",
+      "title": "Vocabulary",
+      "strand": "Vocabulary",
+      "subtopics": [],
+      "concepts": [
+        "Step 1 — Establish synonyms (same/similar meaning) and antonyms (opposite meaning) with clear paired examples",
+        "Vocabulary means understanding and using words accurately in context. A word’s meaning can change with the sentence around it.",
+        "Synonyms are close in meaning; antonyms are opposites. Always test the proposed word in the sentence."
+      ],
+      "workedExamples": [
+        "Synonym of \"happy\": glad, joyful. Antonym of \"happy\": sad.",
+        "In “The rapid car passed us,” rapid means fast."
+      ],
+      "practiceQuestions": [
+        "Give a synonym for \"big.\"",
+        "Give an antonym for \"fast.\"",
+        "Choose the correct meaning from context: \"The famished dog ate quickly.\" What does \"famished\" mean, based on the clue \"ate quickly\"?"
+      ],
+      "sourceFile": "Avora_NCEE_English_Primary5_Term1.md",
+      "sourceLineStart": 61,
+      "contentStatus": "TEACHING_READY",
+      "depthCompletionVersion": "14.8.1"
+    },
+    {
+      "id": "ncee-source-p5-english-studies-first-term-writing",
+      "classLevel": "Primary 5",
+      "domain": "English Studies",
+      "subject": "English Studies",
+      "term": "First Term",
+      "title": "Writing",
+      "strand": "Writing",
+      "subtopics": [],
+      "concepts": [
+        "Step 1 — Model a simple descriptive paragraph, annotated",
+        "\"My classroom is bright and colourful. [general impression] The walls are painted blue, and posters of animals hang everywhere. [sight detail] Every morning, the sound of chattering students fills the room before the teacher arrives. [sound detail]\"",
+        "Good writing begins with a clear purpose and audience. Plan the main idea before drafting."
+      ],
+      "workedExamples": [
+        "Plan three points before writing a paragraph about your school.",
+        "Improve “My school is nice. It is nice. I like it.” by adding specific details and removing repetition."
+      ],
+      "practiceQuestions": [
+        "Write a short descriptive paragraph (3-4 sentences) about your bedroom, including at least one sight detail and one sound detail.",
+        "Write a short narrative paragraph about a fun day you had, using simple/compound sentences correctly.",
+        "Write a topic sentence about a memorable day."
+      ],
+      "sourceFile": "Avora_NCEE_English_Primary5_Term1.md",
+      "sourceLineStart": 75,
+      "contentStatus": "TEACHING_READY",
+      "depthCompletionVersion": "14.8.1"
+    },
+    {
+      "id": "ncee-source-p5-english-studies-first-term-spelling-and-dictation",
+      "classLevel": "Primary 5",
+      "domain": "English Studies",
+      "subject": "English Studies",
+      "term": "First Term",
+      "title": "Spelling and Dictation",
+      "strand": "Spelling and Dictation",
+      "subtopics": [],
+      "concepts": [
+        "Step 1 — Establish common tricky spelling patterns for this level",
+        "Words often confused: \"there/their/they're,\" \"here/hear,\" \"to/too/two.\"",
+        "Spelling is the conventional letter pattern used to write words. Dictation checks careful listening, word boundaries, spelling and punctuation."
+      ],
+      "workedExamples": [
+        "necessary can be checked by syllables and visual pattern: nec-es-sar-y.",
+        "In dictation, “They’re going home.” requires understanding that they’re means they are."
+      ],
+      "practiceQuestions": [
+        "Choose the correct word: \"___ going to the market.\" (There/Their/They're)",
+        "Choose the correct word: \"I have ___ books.\" (to/too/two)",
+        "Spell “beautiful” and “necessary.”"
+      ],
+      "sourceFile": "Avora_NCEE_English_Primary5_Term1.md",
+      "sourceLineStart": 87,
+      "contentStatus": "TEACHING_READY",
+      "depthCompletionVersion": "14.8.1"
+    },
+    {
+      "id": "ncee-source-p5-english-studies-second-term-adverbs-prepositions-conjunctions",
+      "classLevel": "Primary 5",
+      "domain": "English Studies",
+      "subject": "English Studies",
+      "term": "Second Term",
+      "title": "Adverbs, Prepositions, Conjunctions",
+      "strand": "Grammar",
+      "subtopics": [],
+      "concepts": [
+        "Step 1 — Recall adverbs describe HOW/WHEN/WHERE an action happens (often ending in \"-ly\")",
+        "Step 2 — Establish prepositions show position/relationship",
+        "Adverbs add information about verbs, adjectives or other adverbs; prepositions show relationships such as place or time; conjunctions join words, phrases or clauses."
+      ],
+      "workedExamples": [
+        "\"She sings beautifully.\" (beautifully = adverb, describes HOW she sings)",
+        "\"The cat is under the table.\" (under = preposition, shows position)"
+      ],
+      "practiceQuestions": [
+        "Identify the adverb in: \"He ran quickly to school.\"",
+        "Fill in the correct preposition: \"The book is ___ the shelf.\" (on/under/beside — choose based on described position)",
+        "Join with a conjunction: \"She was tired. She finished her homework.\" (use \"but\")"
+      ],
+      "sourceFile": "Avora_NCEE_English_Primary5_Term2.md",
+      "sourceLineStart": 8,
+      "contentStatus": "TEACHING_READY",
+      "depthCompletionVersion": "14.8.1"
+    },
+    {
+      "id": "ncee-source-p5-english-studies-second-term-subject-verb-agreement",
+      "classLevel": "Primary 5",
+      "domain": "English Studies",
+      "subject": "English Studies",
+      "term": "Second Term",
+      "title": "Subject-Verb Agreement",
+      "strand": "Grammar",
+      "subtopics": [],
+      "concepts": [
+        "Step 1 — Establish the rule: singular subjects need singular verbs (often with \"-s\"), plural subjects need plural verbs (no \"-s\")",
+        "Subject–verb agreement means the verb form must match the subject in number and person.",
+        "Find the true subject before choosing the verb; words between subject and verb can distract you."
+      ],
+      "workedExamples": [
+        "\"The dog barks.\" (singular dog → barks, with -s) \"The dogs bark.\" (plural dogs → bark, no -s)",
+        "“The boy runs.” but “The boys run.”"
+      ],
+      "practiceQuestions": [
+        "Choose correctly: \"The children (plays/play) outside.\"",
+        "Correct this sentence: \"My sister go to school every day.\"",
+        "Choose: The list of names (is/are) on the desk."
+      ],
+      "sourceFile": "Avora_NCEE_English_Primary5_Term2.md",
+      "sourceLineStart": 23,
+      "contentStatus": "TEACHING_READY",
+      "depthCompletionVersion": "14.8.1"
+    },
+    {
+      "id": "ncee-source-p5-english-studies-second-term-reading-comprehension",
+      "classLevel": "Primary 5",
+      "domain": "English Studies",
+      "subject": "English Studies",
+      "term": "Second Term",
+      "title": "Reading Comprehension",
+      "strand": "Reading Comprehension",
+      "subtopics": [],
+      "concepts": [
+        "Step 1 — Extend to SEQUENCING (putting events in the order they happened) and MAIN IDEA identification",
+        "Read a comprehension passage for meaning before answering. First identify the main idea, then locate details and clues for inference.",
+        "A detail answer should be supported by exact information from the passage; an inference combines passage clues with logical reasoning without inventing new facts."
+      ],
+      "workedExamples": [
+        "Sample passage: \"First, Ngozi watered the plants. Then she swept the compound. Finally, she fed the chickens before going to school.\"",
+        "\"What did Ngozi do FIRST?\" → watered the plants (the word \"first\" directly signals order).",
+        "\"What is this passage mainly about?\" → Ngozi completing her morning chores before school (not just one detail, but the overall point)."
+      ],
+      "practiceQuestions": [
+        "Using the passage, what did Ngozi do LAST?",
+        "State the main idea of the passage in one sentence.",
+        "State the main idea of a short paragraph in one sentence."
+      ],
+      "sourceFile": "Avora_NCEE_English_Primary5_Term2.md",
+      "sourceLineStart": 37,
+      "contentStatus": "TEACHING_READY",
+      "depthCompletionVersion": "14.8.1"
+    },
+    {
+      "id": "ncee-source-p5-english-studies-second-term-vocabulary",
+      "classLevel": "Primary 5",
+      "domain": "English Studies",
+      "subject": "English Studies",
+      "term": "Second Term",
+      "title": "Vocabulary",
+      "strand": "Vocabulary",
+      "subtopics": [],
+      "concepts": [
+        "Step 1 — Establish homophones (same sound, different meaning/spelling) and compound words (two words joined to make one new word)",
+        "Vocabulary means understanding and using words accurately in context. A word’s meaning can change with the sentence around it.",
+        "Synonyms are close in meaning; antonyms are opposites. Always test the proposed word in the sentence."
+      ],
+      "workedExamples": [
+        "\"flower\" (a plant) vs \"flour\" (used for baking) — sound identical, mean different things.",
+        "\"sun\" + \"flower\" = \"sunflower.\""
+      ],
+      "practiceQuestions": [
+        "Give the correct homophone: \"I need to ___ (bye/buy) some bread.\"",
+        "Break down \"football\" into its two smaller words, and explain what the combined word means.",
+        "Give a synonym for “rapid.”"
+      ],
+      "sourceFile": "Avora_NCEE_English_Primary5_Term2.md",
+      "sourceLineStart": 52,
+      "contentStatus": "TEACHING_READY",
+      "depthCompletionVersion": "14.8.1"
+    },
+    {
+      "id": "ncee-source-p5-english-studies-second-term-writing",
+      "classLevel": "Primary 5",
+      "domain": "English Studies",
+      "subject": "English Studies",
+      "term": "Second Term",
+      "title": "Writing",
+      "strand": "Writing",
+      "subtopics": [],
+      "concepts": [
+        "Step 1 — Model an informal letter, annotated",
+        "\"Dear Grandma, [casual salutation] I hope you are fine. I miss you so much! [warm opening] School has been fun this term — I made a new friend called Amina. [personal news] I can't wait to visit you during the holidays. [closing thought] Love, Tolu [casual closing]\"",
+        "Good writing begins with a clear purpose and audience. Plan the main idea before drafting."
+      ],
+      "workedExamples": [
+        "Plan three points before writing a paragraph about your school.",
+        "Improve “My school is nice. It is nice. I like it.” by adding specific details and removing repetition."
+      ],
+      "practiceQuestions": [
+        "Write a short informal letter to a friend telling them about your favorite subject in school.",
+        "Write a topic sentence about a memorable day.",
+        "List three checks to make during revision."
+      ],
+      "sourceFile": "Avora_NCEE_English_Primary5_Term2.md",
+      "sourceLineStart": 65,
+      "contentStatus": "TEACHING_READY",
+      "depthCompletionVersion": "14.8.1"
+    },
+    {
+      "id": "ncee-source-p5-english-studies-second-term-punctuation",
+      "classLevel": "Primary 5",
+      "domain": "English Studies",
+      "subject": "English Studies",
+      "term": "Second Term",
+      "title": "Punctuation",
+      "strand": "Punctuation",
+      "subtopics": [],
+      "concepts": [
+        "Step 1 — Establish capitalization rules (start of sentence, proper nouns) and end punctuation (full stop, question mark)",
+        "Punctuation shows sentence boundaries, pauses, ownership, quotation and other relationships in writing.",
+        "A full stop ends a statement; a comma separates suitable elements but cannot normally join two complete sentences by itself."
+      ],
+      "workedExamples": [
+        "Wrong: “It was late, we went home.” Better: “It was late, so we went home.”",
+        "“The boy’s book” means the book belongs to one boy; “the boys’ books” refers to more than one boy."
+      ],
+      "practiceQuestions": [
+        "Correct this sentence: \"my friend ada lives in lagos\"",
+        "Add the correct end punctuation: \"where is your book\" (should this end in a full stop or a question mark, and why?)",
+        "Correct: She was hungry she ate quickly."
+      ],
+      "sourceFile": "Avora_NCEE_English_Primary5_Term2.md",
+      "sourceLineStart": 76,
+      "contentStatus": "TEACHING_READY",
+      "depthCompletionVersion": "14.8.1"
+    },
+    {
+      "id": "ncee-source-p5-english-studies-third-term-direct-and-indirect-speech-introductory",
+      "classLevel": "Primary 5",
+      "domain": "English Studies",
+      "subject": "English Studies",
+      "term": "Third Term",
+      "title": "Direct and Indirect Speech (Introductory)",
+      "strand": "Grammar",
+      "subtopics": [],
+      "concepts": [
+        "Step 1 — Establish direct speech (the EXACT words spoken, in quotation marks) vs indirect speech (reporting what was said, without quotation marks, often changing pronouns/tense)",
+        "Direct speech gives the speaker’s exact words; indirect speech reports the message without quoting the exact wording.",
+        "When changing to indirect speech, pronouns, time words and verb tense may change to keep the meaning correct from the reporter’s viewpoint."
+      ],
+      "workedExamples": [
+        "Direct: Ada said, \"I am hungry.\" Indirect: Ada said that she was hungry. (notice: \"I\"→\"she\", \"am\"→\"was\")",
+        "Direct: She said, “I am tired.” Indirect: She said that she was tired."
+      ],
+      "practiceQuestions": [
+        "Convert to indirect speech: Musa said, \"I like football.\"",
+        "Convert to direct speech: Tola said that she was tired.",
+        "Change to indirect speech: He said, “I will come tomorrow.”"
+      ],
+      "sourceFile": "Avora_NCEE_English_Primary5_Term3.md",
+      "sourceLineStart": 8,
+      "contentStatus": "TEACHING_READY",
+      "depthCompletionVersion": "14.8.1"
+    },
+    {
+      "id": "ncee-source-p5-english-studies-third-term-plurals-and-comparatives-superlatives",
+      "classLevel": "Primary 5",
+      "domain": "English Studies",
+      "subject": "English Studies",
+      "term": "Third Term",
+      "title": "Plurals and Comparatives/Superlatives",
+      "strand": "Grammar",
+      "subtopics": [],
+      "concepts": [
+        "Adjectives describe or give more information about nouns. Comparatives compare two; superlatives compare three or more.",
+        "Many comparatives use -er and superlatives use -est, but longer adjectives often use more/most and irregular forms must be learned in context.",
+        "Plural forms show more than one; regular nouns often add -s/-es, while some are irregular."
+      ],
+      "workedExamples": [
+        "child→children (irregular). tall→taller→tallest (regular comparison).",
+        "tall → taller → tallest; beautiful → more beautiful → most beautiful."
+      ],
+      "practiceQuestions": [
+        "Give the plural of \"tooth\" and \"box.\"",
+        "Give the comparative and superlative of \"happy.\"",
+        "Write the comparative and superlative of “bright.”"
+      ],
+      "sourceFile": "Avora_NCEE_English_Primary5_Term3.md",
+      "sourceLineStart": 20,
+      "contentStatus": "TEACHING_READY",
+      "depthCompletionVersion": "14.8.1"
+    },
+    {
+      "id": "ncee-source-p5-english-studies-third-term-reading-comprehension",
+      "classLevel": "Primary 5",
+      "domain": "English Studies",
+      "subject": "English Studies",
+      "term": "Third Term",
+      "title": "Reading Comprehension",
+      "strand": "Reading Comprehension",
+      "subtopics": [],
+      "concepts": [
+        "Step 1 — Introduce figurative language recognition and TONE (the feeling/mood of a passage)",
+        "Sample sentence: \"The wind whispered through the trees, and dark clouds gathered ominously overhead.\"",
+        "Read a comprehension passage for meaning before answering. First identify the main idea, then locate details and clues for inference."
+      ],
+      "workedExamples": [
+        "This sentence uses personification (\"wind whispered\") and creates a tense/eerie TONE through word choice (\"ominously,\" \"dark clouds\").",
+        "If a passage says “Amina carried an umbrella because dark clouds gathered,” we can infer she expected rain, although the passage may not state that exact sentence."
+      ],
+      "practiceQuestions": [
+        "Identify the figurative language in: \"The stars danced in the night sky.\"",
+        "Is the tone of \"The children laughed and played joyfully in the sunshine\" happy or sad? Explain using specific words from the sentence.",
+        "State the main idea of a short paragraph in one sentence."
+      ],
+      "sourceFile": "Avora_NCEE_English_Primary5_Term3.md",
+      "sourceLineStart": 30,
+      "contentStatus": "TEACHING_READY",
+      "depthCompletionVersion": "14.8.1"
+    },
+    {
+      "id": "ncee-source-p5-english-studies-third-term-vocabulary",
+      "classLevel": "Primary 5",
+      "domain": "English Studies",
+      "subject": "English Studies",
+      "term": "Third Term",
+      "title": "Vocabulary",
+      "strand": "Vocabulary",
+      "subtopics": [],
+      "concepts": [
+        "Step 1 — Introduce idioms/proverbs (phrases whose meaning isn't literal) and word families",
+        "Vocabulary means understanding and using words accurately in context. A word’s meaning can change with the sentence around it.",
+        "Synonyms are close in meaning; antonyms are opposites. Always test the proposed word in the sentence."
+      ],
+      "workedExamples": [
+        "\"It's raining cats and dogs\" doesn't mean animals are literally falling — it means it's raining very heavily.",
+        "In “The rapid car passed us,” rapid means fast."
+      ],
+      "practiceQuestions": [
+        "Explain the meaning of the proverb: \"A stitch in time saves nine.\"",
+        "List 3 words in the same word family as \"teach\" (e.g., teacher, teaching).",
+        "Give a synonym for “rapid.”"
+      ],
+      "sourceFile": "Avora_NCEE_English_Primary5_Term3.md",
+      "sourceLineStart": 44,
+      "contentStatus": "TEACHING_READY",
+      "depthCompletionVersion": "14.8.1"
+    },
+    {
+      "id": "ncee-source-p5-english-studies-third-term-writing",
+      "classLevel": "Primary 5",
+      "domain": "English Studies",
+      "subject": "English Studies",
+      "term": "Third Term",
+      "title": "Writing",
+      "strand": "Writing",
+      "subtopics": [],
+      "concepts": [
+        "Step 1 — Introduce summary writing (very simple level): stating the main point of a short passage in one's own words",
+        "Good writing begins with a clear purpose and audience. Plan the main idea before drafting.",
+        "Organise ideas in a sensible order, use complete sentences and connect related ideas into paragraphs."
+      ],
+      "workedExamples": [
+        "Passage: \"Bola practiced her spelling words every evening for a week. On the test day, she scored 100%.\" Summary: \"Bola's regular practice helped her score perfectly on her spelling test.\"",
+        "Plan three points before writing a paragraph about your school."
+      ],
+      "practiceQuestions": [
+        "Write a one-sentence summary of: \"Musa forgot his umbrella and got soaked walking home in the rain. The next day, he remembered to carry it, and stayed dry.\"",
+        "Write a short essay (narrative OR descriptive, 5-6 sentences) on \"My Favorite Day of the Week.\"",
+        "Write a topic sentence about a memorable day."
+      ],
+      "sourceFile": "Avora_NCEE_English_Primary5_Term3.md",
+      "sourceLineStart": 56,
+      "contentStatus": "TEACHING_READY",
+      "depthCompletionVersion": "14.8.1"
+    },
+    {
+      "id": "ncee-source-p5-english-studies-third-term-verbal-reasoning-foundations",
+      "classLevel": "Primary 5",
+      "domain": "English Studies",
+      "subject": "English Studies",
+      "term": "Third Term",
+      "title": "Verbal Reasoning Foundations",
+      "strand": "Verbal Reasoning Foundations",
+      "subtopics": [],
+      "concepts": [
+        "Step 1 — Introduce odd-one-out and simple analogies as an early foundation for NCEE-style reasoning",
+        "Verbal reasoning uses relationships between word meanings, categories, letters or sentence logic.",
+        "State the relationship before selecting an answer; this makes distractors easier to reject."
+      ],
+      "workedExamples": [
+        "\"Apple, Banana, Carrot, Orange\" → Carrot is the odd one out, because it's a vegetable while the others are fruits.",
+        "\"Dog is to Puppy as Cat is to ___?\" → Kitten (the pattern: adult animal → baby animal)."
+      ],
+      "practiceQuestions": [
+        "Find the odd one out: \"Chair, Table, Spoon, Bed\" and explain why.",
+        "Complete the analogy: \"Hand is to Glove as Foot is to ___?\"",
+        "Complete an analogy and state the relationship."
+      ],
+      "sourceFile": "Avora_NCEE_English_Primary5_Term3.md",
+      "sourceLineStart": 68,
+      "contentStatus": "TEACHING_READY",
+      "depthCompletionVersion": "14.8.1"
+    },
+    {
+      "id": "ncee-source-p6-english-studies-first-term-full-tense-review",
+      "classLevel": "Primary 6",
+      "domain": "English Studies",
+      "subject": "English Studies",
+      "term": "First Term",
+      "title": "Full Tense Review",
+      "strand": "Grammar",
+      "subtopics": [],
+      "concepts": [
+        "Step 1 — Consolidate present, past, and future, both simple and continuous, with clear side-by-side examples",
+        "Simple → Continuous Present → She walks → She is walking Past → She walked → She was walking Future → She will walk → She will be walking",
+        "Tense locates an action or state in time and can also show whether it is ongoing or completed."
+      ],
+      "workedExamples": [
+        "\"By 6pm yesterday, she ___ (finish) her homework.\" — the word \"yesterday\" plus \"by 6pm\" signals a completed past action: \"had finished\" (though full past perfect is a JSS topic, \"finished\" as simple past also works at this level for NCEE purposes).",
+        "“They have finished” is present perfect: have + finished."
+      ],
+      "practiceQuestions": [
+        "Complete: \"Right now, she ___ (read) a book.\" (present continuous)",
+        "Complete: \"Tomorrow, we ___ (visit) our grandmother.\" (future)",
+        "Identify the tense in “We had left before noon.”"
+      ],
+      "sourceFile": "Avora_NCEE_English_Primary6_Term1.md",
+      "sourceLineStart": 8,
+      "contentStatus": "TEACHING_READY",
+      "depthCompletionVersion": "14.8.1"
+    },
+    {
+      "id": "ncee-source-p6-english-studies-first-term-parts-of-speech-consolidated",
+      "classLevel": "Primary 6",
+      "domain": "English Studies",
+      "subject": "English Studies",
+      "term": "First Term",
+      "title": "Parts of Speech Consolidated",
+      "strand": "Grammar",
+      "subtopics": [],
+      "concepts": [
+        "Step 1 — Recall all parts of speech together in one sentence, labeling each",
+        "A part of speech describes the job a word is doing in a sentence. The same word can sometimes do different jobs in different sentences, so use context.",
+        "Nouns name people, places, animals, things or ideas; pronouns replace nouns; verbs express actions or states."
+      ],
+      "workedExamples": [
+        "\"The (article) tall (adjective) boy (noun) quickly (adverb) kicked (verb) the (article) ball (noun) into (preposition) the (article) goal (noun).\"",
+        "“Ada carried her bag.” Ada and bag are nouns; carried is a verb; her is a pronoun/determiner referring to Ada."
+      ],
+      "practiceQuestions": [
+        "Label every word's part of speech in: \"She happily sang a beautiful song.\"",
+        "Identify the nouns and verb in “The pupils opened their books.”",
+        "Replace repeated nouns with suitable pronouns in a short sentence."
+      ],
+      "sourceFile": "Avora_NCEE_English_Primary6_Term1.md",
+      "sourceLineStart": 25,
+      "contentStatus": "TEACHING_READY",
+      "depthCompletionVersion": "14.8.1"
+    },
+    {
+      "id": "ncee-source-p6-english-studies-first-term-subject-verb-agreement-extended",
+      "classLevel": "Primary 6",
+      "domain": "English Studies",
+      "subject": "English Studies",
+      "term": "First Term",
+      "title": "Subject-Verb Agreement (Extended)",
+      "strand": "Grammar",
+      "subtopics": [],
+      "concepts": [
+        "Subject–verb agreement means the verb form must match the subject in number and person.",
+        "Find the true subject before choosing the verb; words between subject and verb can distract you.",
+        "With present-tense third-person singular subjects, the verb often takes -s, while plural subjects use the base form."
+      ],
+      "workedExamples": [
+        "\"The basket of apples (is/are) on the table.\" — the SUBJECT is \"basket\" (singular), not \"apples\" — so \"is\" is correct, even though \"apples\" (plural) sits right before the verb. This is a genuine trap many students fall into.",
+        "“The boy runs.” but “The boys run.”"
+      ],
+      "practiceQuestions": [
+        "Choose correctly: \"The group of students (is/are) going on a trip.\"",
+        "Correct: \"The list of items were long.\"",
+        "Choose: The list of names (is/are) on the desk."
+      ],
+      "sourceFile": "Avora_NCEE_English_Primary6_Term1.md",
+      "sourceLineStart": 35,
+      "contentStatus": "TEACHING_READY",
+      "depthCompletionVersion": "14.8.1"
+    },
+    {
+      "id": "ncee-source-p6-english-studies-first-term-reading-comprehension",
+      "classLevel": "Primary 6",
+      "domain": "English Studies",
+      "subject": "English Studies",
+      "term": "First Term",
+      "title": "Reading Comprehension",
+      "strand": "Reading Comprehension",
+      "subtopics": [],
+      "concepts": [
+        "Step 1 — Introduce NCEE-style passages combining literal, inferential, and vocabulary-in-context questions together",
+        "Read a comprehension passage for meaning before answering. First identify the main idea, then locate details and clues for inference.",
+        "A detail answer should be supported by exact information from the passage; an inference combines passage clues with logical reasoning without inventing new facts."
+      ],
+      "workedExamples": [
+        "Sample passage: \"Amina had always dreamed of becoming a pilot. Despite her family's initial doubts about a career they considered unconventional for a young girl in her village, she persisted, studying diligently and eventually earning a scholarship to aviation school.\"",
+        "If a passage says “Amina carried an umbrella because dark clouds gathered,” we can infer she expected rain, although the passage may not state that exact sentence."
+      ],
+      "practiceQuestions": [
+        "(Literal) What did Amina dream of becoming?",
+        "(Inferential) What can you infer about Amina's personality from her actions?",
+        "(Vocabulary) What does \"unconventional\" most likely mean, based on context?"
+      ],
+      "sourceFile": "Avora_NCEE_English_Primary6_Term1.md",
+      "sourceLineStart": 46,
+      "contentStatus": "TEACHING_READY",
+      "depthCompletionVersion": "14.8.1"
+    },
+    {
+      "id": "ncee-source-p6-english-studies-first-term-vocabulary",
+      "classLevel": "Primary 6",
+      "domain": "English Studies",
+      "subject": "English Studies",
+      "term": "First Term",
+      "title": "Vocabulary",
+      "strand": "Vocabulary",
+      "subtopics": [],
+      "concepts": [
+        "Step 1 — Extend to one-word substitution (finding a single word that means a whole phrase) and word formation",
+        "Vocabulary means understanding and using words accurately in context. A word’s meaning can change with the sentence around it.",
+        "Synonyms are close in meaning; antonyms are opposites. Always test the proposed word in the sentence."
+      ],
+      "workedExamples": [
+        "\"A person who studies stars\" = astronomer. \"A place where books are kept\" = library.",
+        "In “The rapid car passed us,” rapid means fast."
+      ],
+      "practiceQuestions": [
+        "Give a one-word substitute for \"a person who cannot read or write.\"",
+        "Form a noun from \"educate\" using a suffix.",
+        "Give a synonym for “rapid.”"
+      ],
+      "sourceFile": "Avora_NCEE_English_Primary6_Term1.md",
+      "sourceLineStart": 59,
+      "contentStatus": "TEACHING_READY",
+      "depthCompletionVersion": "14.8.1"
+    },
+    {
+      "id": "ncee-source-p6-english-studies-first-term-writing",
+      "classLevel": "Primary 6",
+      "domain": "English Studies",
+      "subject": "English Studies",
+      "term": "First Term",
+      "title": "Writing",
+      "strand": "Writing",
+      "subtopics": [],
+      "concepts": [
+        "Step 1 — Model a full narrative composition at NCEE level",
+        "[Full narrative essay following opening-rising action-climax-resolution-conclusion, similar structure to JSS1's model but with vocabulary appropriate to Primary 6 level.]",
+        "Good writing begins with a clear purpose and audience. Plan the main idea before drafting."
+      ],
+      "workedExamples": [
+        "Plan three points before writing a paragraph about your school.",
+        "Improve “My school is nice. It is nice. I like it.” by adding specific details and removing repetition."
+      ],
+      "practiceQuestions": [
+        "Write a full narrative essay (150 words) titled \"A Day I Will Always Remember.\"",
+        "Write a topic sentence about a memorable day.",
+        "List three checks to make during revision."
+      ],
+      "sourceFile": "Avora_NCEE_English_Primary6_Term1.md",
+      "sourceLineStart": 71,
+      "contentStatus": "TEACHING_READY",
+      "depthCompletionVersion": "14.8.1"
+    },
+    {
+      "id": "ncee-source-p6-english-studies-first-term-grammar-accuracy-articles",
+      "classLevel": "Primary 6",
+      "domain": "English Studies",
+      "subject": "English Studies",
+      "term": "First Term",
+      "title": "Grammar Accuracy: Articles",
+      "strand": "Writing",
+      "subtopics": [],
+      "concepts": [
+        "Articles come before nouns. “a” and “an” introduce one non-specific countable noun; “the” points to a specific or already-known noun.",
+        "Choose a or an by sound, not simply by the first written letter: an hour, a university.",
+        "Some plural or uncountable nouns take no article when speaking generally."
+      ],
+      "workedExamples": [
+        "\"an hour\" (silent h, vowel sound) vs \"a university\" (consonant sound despite vowel letter).",
+        "“She is an honest girl” because honest begins with a vowel sound."
+      ],
+      "practiceQuestions": [
+        "Choose \"a\" or \"an\": ___ orange, ___ hour, ___ uniform.",
+        "Choose: a/an hour.",
+        "Choose: a/an university."
+      ],
+      "sourceFile": "Avora_NCEE_English_Primary6_Term1.md",
+      "sourceLineStart": 80,
+      "contentStatus": "TEACHING_READY",
+      "depthCompletionVersion": "14.8.1"
+    },
+    {
+      "id": "ncee-source-p6-english-studies-second-term-direct-indirect-speech-full",
+      "classLevel": "Primary 6",
+      "domain": "English Studies",
+      "subject": "English Studies",
+      "term": "Second Term",
+      "title": "Direct/Indirect Speech (Full)",
+      "strand": "Grammar",
+      "subtopics": [],
+      "concepts": [
+        "Direct speech gives the speaker’s exact words; indirect speech reports the message without quoting the exact wording.",
+        "When changing to indirect speech, pronouns, time words and verb tense may change to keep the meaning correct from the reporter’s viewpoint.",
+        "Questions in indirect speech use statement word order and normally lose quotation marks and the direct question mark."
+      ],
+      "workedExamples": [
+        "Direct: She asked, \"Where are you going?\" Indirect: She asked where I was going. (notice: question word order changes, and no question mark in indirect speech)",
+        "Direct: She said, “I am tired.” Indirect: She said that she was tired."
+      ],
+      "practiceQuestions": [
+        "Convert to indirect speech: He said, \"I will come tomorrow.\"",
+        "Convert to indirect speech: She asked, \"What is your name?\"",
+        "Change to indirect speech: He said, “I will come tomorrow.”"
+      ],
+      "sourceFile": "Avora_NCEE_English_Primary6_Term2.md",
+      "sourceLineStart": 8,
+      "contentStatus": "TEACHING_READY",
+      "depthCompletionVersion": "14.8.1"
+    },
+    {
+      "id": "ncee-source-p6-english-studies-second-term-active-and-passive-voice-introductory",
+      "classLevel": "Primary 6",
+      "domain": "English Studies",
+      "subject": "English Studies",
+      "term": "Second Term",
+      "title": "Active and Passive Voice (Introductory)",
+      "strand": "Grammar",
+      "subtopics": [],
+      "concepts": [
+        "In active voice, the subject performs the action; in passive voice, the receiver of the action becomes the grammatical subject.",
+        "To form a basic passive sentence, use an appropriate form of be + past participle, preserving the original tense.",
+        "Use passive voice when the action or receiver is more important than the doer, but do not change the underlying meaning."
+      ],
+      "workedExamples": [
+        "Active: \"The boy kicked the ball.\" Passive: \"The ball was kicked by the boy.\"",
+        "Active: “The boy kicked the ball.” Passive: “The ball was kicked by the boy.”"
+      ],
+      "practiceQuestions": [
+        "Convert to passive: \"The teacher taught the lesson.\"",
+        "Change to passive: The chef cooked the meal.",
+        "Identify whether a sentence is active or passive."
+      ],
+      "sourceFile": "Avora_NCEE_English_Primary6_Term2.md",
+      "sourceLineStart": 18,
+      "contentStatus": "TEACHING_READY",
+      "depthCompletionVersion": "14.8.1"
+    },
+    {
+      "id": "ncee-source-p6-english-studies-second-term-conjunctions-and-linking-words",
+      "classLevel": "Primary 6",
+      "domain": "English Studies",
+      "subject": "English Studies",
+      "term": "Second Term",
+      "title": "Conjunctions and Linking Words",
+      "strand": "Grammar",
+      "subtopics": [],
+      "concepts": [
+        "Adverbs add information about verbs, adjectives or other adverbs; prepositions show relationships such as place or time; conjunctions join words, phrases or clauses.",
+        "Ask what job the word performs in the sentence instead of judging only by its spelling.",
+        "Conjunctions show relationships such as addition, contrast, cause or choice, so choose one that matches the meaning."
+      ],
+      "workedExamples": [
+        "\"Although it was raining, we went out.\" vs \"We went out because it stopped raining.\" (Note the different relationship each conjunction signals: contrast vs cause.)",
+        "“She ran quickly across the field because she was late.” quickly is an adverb, across is a preposition, because is a conjunction."
+      ],
+      "practiceQuestions": [
+        "Join with \"because\": \"She was happy. She passed her exam.\"",
+        "Join with \"although\": \"He was tired. He finished the race.\"",
+        "Identify the adverb and preposition in “The dog slept quietly under the table.”"
+      ],
+      "sourceFile": "Avora_NCEE_English_Primary6_Term2.md",
+      "sourceLineStart": 26,
+      "contentStatus": "TEACHING_READY",
+      "depthCompletionVersion": "14.8.1"
+    },
+    {
+      "id": "ncee-source-p6-english-studies-second-term-reading-comprehension",
+      "classLevel": "Primary 6",
+      "domain": "English Studies",
+      "subject": "English Studies",
+      "term": "Second Term",
+      "title": "Reading Comprehension",
+      "strand": "Reading Comprehension",
+      "subtopics": [],
+      "concepts": [
+        "Step 1 — Introduce figures of speech and author's purpose/tone at this level",
+        "Sample sentence: \"The classroom was as quiet as a graveyard during the test.\"",
+        "Read a comprehension passage for meaning before answering. First identify the main idea, then locate details and clues for inference."
+      ],
+      "workedExamples": [
+        "If a passage says “Amina carried an umbrella because dark clouds gathered,” we can infer she expected rain, although the passage may not state that exact sentence.",
+        "If the question asks for two barriers and the passage names cost and poor network, both must appear in the answer."
+      ],
+      "practiceQuestions": [
+        "Identify the figure of speech in the sentence above (simile — comparison using \"as\").",
+        "What tone does this sentence create — tense/serious, or relaxed/happy? Explain using the specific comparison used.",
+        "State the main idea of a short paragraph in one sentence."
+      ],
+      "sourceFile": "Avora_NCEE_English_Primary6_Term2.md",
+      "sourceLineStart": 36,
+      "contentStatus": "TEACHING_READY",
+      "depthCompletionVersion": "14.8.1"
+    },
+    {
+      "id": "ncee-source-p6-english-studies-second-term-vocabulary",
+      "classLevel": "Primary 6",
+      "domain": "English Studies",
+      "subject": "English Studies",
+      "term": "Second Term",
+      "title": "Vocabulary",
+      "strand": "Vocabulary",
+      "subtopics": [],
+      "concepts": [
+        "Step 1 — Introduce idioms and proverbs, plus confusable words",
+        "Vocabulary means understanding and using words accurately in context. A word’s meaning can change with the sentence around it.",
+        "Synonyms are close in meaning; antonyms are opposites. Always test the proposed word in the sentence."
+      ],
+      "workedExamples": [
+        "\"affect\" (verb, to influence) vs \"effect\" (noun, a result) — \"The rain will affect the match\" vs \"The effect of the rain was a delay.\"",
+        "In “The rapid car passed us,” rapid means fast."
+      ],
+      "practiceQuestions": [
+        "Explain the meaning of \"Actions speak louder than words.\"",
+        "Choose correctly: \"The medicine had a positive (affect/effect) on her health.\"",
+        "Give a synonym for “rapid.”"
+      ],
+      "sourceFile": "Avora_NCEE_English_Primary6_Term2.md",
+      "sourceLineStart": 48,
+      "contentStatus": "TEACHING_READY",
+      "depthCompletionVersion": "14.8.1"
+    },
+    {
+      "id": "ncee-source-p6-english-studies-second-term-formal-letter",
+      "classLevel": "Primary 6",
+      "domain": "English Studies",
+      "subject": "English Studies",
+      "term": "Second Term",
+      "title": "Formal Letter",
+      "strand": "Writing",
+      "subtopics": [],
+      "concepts": [
+        "A formal letter is written for an official purpose and uses respectful, clear language.",
+        "Its structure normally includes sender’s address, date, recipient’s title/address where required, salutation, heading/subject, organised body, closing and name/signature.",
+        "Each paragraph should have one purpose: introduce the reason, give needed details, and close with the requested action or thanks."
+      ],
+      "workedExamples": [
+        "\"[Sender's address] [Date] The Headmistress, [school name]. Dear Madam, REQUEST FOR PERMISSION TO ORGANIZE A READING CLUB. I am writing to request permission to start a reading club... Yours faithfully, [Name]\"",
+        "A request to a headteacher should clearly state what is requested and why, without slang."
+      ],
+      "practiceQuestions": [
+        "Write a formal letter to your headteacher requesting a new football for the school team.",
+        "List the main parts of a formal letter.",
+        "Write a suitable heading for a letter requesting library books."
+      ],
+      "sourceFile": "Avora_NCEE_English_Primary6_Term2.md",
+      "sourceLineStart": 62,
+      "contentStatus": "TEACHING_READY",
+      "depthCompletionVersion": "14.8.1"
+    },
+    {
+      "id": "ncee-source-p6-english-studies-second-term-expository-composition",
+      "classLevel": "Primary 6",
+      "domain": "English Studies",
+      "subject": "English Studies",
+      "term": "Second Term",
+      "title": "Expository Composition",
+      "strand": "Writing",
+      "subtopics": [],
+      "concepts": [
+        "Expository writing explains a topic or process clearly rather than telling a fictional story.",
+        "Organise the explanation in a logical order, using topic sentences and linking words such as first, next, because and finally.",
+        "Use precise details and examples; remove unrelated opinions that do not help explain the topic."
+      ],
+      "workedExamples": [
+        "\"How to Plant a Seed\" — a step-by-step explanation, no opinion.",
+        "To explain how to plant a seed, present materials and steps in order from preparing soil to watering."
+      ],
+      "practiceQuestions": [
+        "Write an expository paragraph explaining how to make a simple meal you know well.",
+        "Write an outline for “How to prepare for school.”",
+        "Give three linking words useful in expository writing."
+      ],
+      "sourceFile": "Avora_NCEE_English_Primary6_Term2.md",
+      "sourceLineStart": 70,
+      "contentStatus": "TEACHING_READY",
+      "depthCompletionVersion": "14.8.1"
+    },
+    {
+      "id": "ncee-source-p6-english-studies-second-term-verbal-reasoning-integration",
+      "classLevel": "Primary 6",
+      "domain": "English Studies",
+      "subject": "English Studies",
+      "term": "Second Term",
+      "title": "Verbal Reasoning Integration",
+      "strand": "Verbal Reasoning Integration",
+      "subtopics": [],
+      "concepts": [
+        "Verbal reasoning asks you to notice a relationship between words, not merely remember a definition. Before choosing an option, name the relationship you are using.",
+        "For sentence completion, read the whole sentence first. Decide what meaning is missing, then test each option in the sentence. Grammar and meaning must both fit.",
+        "For opposites, an antonym must reverse the important meaning of the target word. A word that is merely different is not automatically an opposite.",
+        "For analogies, read the first pair as a sentence that states the relationship, such as “a teacher teaches a student.” Apply that same relationship to the second pair.",
+        "A reliable verbal-reasoning answer survives a check: you can state the relationship in words and explain why the distractors do not fit it."
+      ],
+      "workedExamples": [
+        "Sentence completion: “The opposite of generous is ___: kind, selfish, happy.” Generous means willing to give. Selfish describes being mainly concerned with oneself, so it reverses the important idea. “Kind” is close to generous, while “happy” is unrelated. Answer: selfish.",
+        "Analogy: “Teacher is to Student as Doctor is to ___.” State the relationship first: a teacher teaches a student. A doctor treats a patient. Therefore the missing word is patient.",
+        "Analogy check: “Bird is to Nest as Bee is to ___.” The relationship is animal to its home. A bee lives in a hive, so hive completes the same relationship."
+      ],
+      "practiceQuestions": [
+        "Complete and explain: The opposite of “ancient” is ___ (modern / old / historic).",
+        "State the relationship first, then complete: Author is to Book as Composer is to ___.",
+        "Complete the sentence using meaning and grammar: “Because the road was flooded, the driver moved very ___.” (carefully / yesterday / blue)",
+        "Explain why “selfish” is a better opposite of “generous” than “happy”."
+      ],
+      "sourceFile": "Avora_NCEE_English_Primary6_Term2.md",
+      "sourceLineStart": 79,
+      "contentStatus": "TEACHING_READY",
+      "completionBasis": "AVORA-authored completion from the supplied Primary 6 English source, aligned to the NCEE verbal-aptitude relationship skills already present in AVORA.",
+      "completionVersion": "14.8.1",
+      "depthCompletionVersion": "14.8.1"
+    },
+    {
+      "id": "ncee-source-p6-english-studies-third-term-grammar-full-punctuation-and-error-correction",
+      "classLevel": "Primary 6",
+      "domain": "English Studies",
+      "subject": "English Studies",
+      "term": "Third Term",
+      "title": "Grammar — Full Punctuation and Error Correction",
+      "strand": "Grammar — Full Punctuation and Error Correction",
+      "subtopics": [],
+      "concepts": [
+        "Punctuation shows sentence boundaries, pauses, ownership, quotation and other relationships in writing.",
+        "A full stop ends a statement; a comma separates suitable elements but cannot normally join two complete sentences by itself.",
+        "Apostrophes can show possession or omitted letters, but they are not used simply to make ordinary plurals."
+      ],
+      "workedExamples": [
+        "Wrong: \"It was late, we went home.\" Correct: \"It was late, so we went home.\"",
+        "Wrong: “It was late, we went home.” Better: “It was late, so we went home.”"
+      ],
+      "practiceQuestions": [
+        "Correct: \"She was hungry she ate quickly.\"",
+        "Correct: \"The boys books are on the table.\" (apostrophe — possession)",
+        "Correct: She was hungry she ate quickly."
+      ],
+      "sourceFile": "Avora_NCEE_English_Primary6_Term3.md",
+      "sourceLineStart": 6,
+      "contentStatus": "TEACHING_READY",
+      "depthCompletionVersion": "14.8.1"
+    },
+    {
+      "id": "ncee-source-p6-english-studies-third-term-sentence-transformation",
+      "classLevel": "Primary 6",
+      "domain": "English Studies",
+      "subject": "English Studies",
+      "term": "Third Term",
+      "title": "Sentence Transformation",
+      "strand": "Grammar — Full Punctuation and Error Correction",
+      "subtopics": [],
+      "concepts": [
+        "Sentence transformation changes the form of a sentence while preserving the intended meaning.",
+        "The required connector or structure controls how clauses are rearranged; check pronouns, tense and punctuation after transforming.",
+        "A correct transformed sentence must be grammatical and keep the same logical relationship such as cause, contrast or result."
+      ],
+      "workedExamples": [
+        "Combine using a conjunction: \"He is poor. He is happy.\" → \"Although he is poor, he is happy.\"",
+        "He is poor. He is happy. → Although he is poor, he is happy."
+      ],
+      "practiceQuestions": [
+        "Combine: \"She studied hard. She passed the exam.\" (using \"so\")",
+        "Combine two sentences using although.",
+        "Rewrite two cause-and-effect sentences using because."
+      ],
+      "sourceFile": "Avora_NCEE_English_Primary6_Term3.md",
+      "sourceLineStart": 15,
+      "contentStatus": "TEACHING_READY",
+      "depthCompletionVersion": "14.8.1"
+    },
+    {
+      "id": "ncee-source-p6-english-studies-third-term-reading-comprehension-full-ncee-style-practice",
+      "classLevel": "Primary 6",
+      "domain": "English Studies",
+      "subject": "English Studies",
+      "term": "Third Term",
+      "title": "Reading Comprehension — Full NCEE-Style Practice",
+      "strand": "Reading Comprehension — Full NCEE-Style Practice",
+      "subtopics": [],
+      "concepts": [
+        "Sample passage (timed practice style): \"The introduction of mobile phones has transformed communication in rural Nigerian communities, allowing farmers to check market prices remotely and families to stay connected across long distances. However, concerns about network reliability and the cost of maintaining phones remain significant barriers for many households.\"",
+        "Read a comprehension passage for meaning before answering. First identify the main idea, then locate details and clues for inference.",
+        "A detail answer should be supported by exact information from the passage; an inference combines passage clues with logical reasoning without inventing new facts."
+      ],
+      "workedExamples": [
+        "If a passage says “Amina carried an umbrella because dark clouds gathered,” we can infer she expected rain, although the passage may not state that exact sentence.",
+        "If the question asks for two barriers and the passage names cost and poor network, both must appear in the answer."
+      ],
+      "practiceQuestions": [
+        "What has mobile phone use allowed farmers to do?",
+        "What are the TWO barriers mentioned?",
+        "What does \"barriers\" mean in this context?",
+        "What is the overall topic of this passage?"
+      ],
+      "sourceFile": "Avora_NCEE_English_Primary6_Term3.md",
+      "sourceLineStart": 24,
+      "contentStatus": "TEACHING_READY",
+      "depthCompletionVersion": "14.8.1"
+    },
+    {
+      "id": "ncee-source-p6-english-studies-third-term-vocabulary-comprehensive-review",
+      "classLevel": "Primary 6",
+      "domain": "English Studies",
+      "subject": "English Studies",
+      "term": "Third Term",
+      "title": "Vocabulary — Comprehensive Review",
+      "strand": "Vocabulary — Comprehensive Review",
+      "subtopics": [],
+      "concepts": [
+        "Vocabulary questions test meaning in context. The safest method is to identify the meaning needed in the sentence or expression before looking at the options.",
+        "A synonym has the same or nearly the same meaning in the given context. Two words can be related without being synonyms, so test them in a sentence.",
+        "An antonym expresses the opposite meaning. Check the exact sense being used: the opposite of “generous” is “selfish” or “stingy,” not simply any negative word.",
+        "A one-word substitution replaces a longer description with one precise word. The replacement must preserve the whole meaning, not only part of it.",
+        "An idiom has a meaning that cannot always be obtained by reading each word literally. Use the situation around the idiom to infer the intended meaning.",
+        "During review, compare close words and explain why one fits. This prevents guessing from familiarity."
+      ],
+      "workedExamples": [
+        "Synonym: “The examination was difficult.” In this sentence, “hard” can replace “difficult” without changing the main meaning. Therefore “hard” is a suitable synonym.",
+        "Antonym: “Ada is generous with her food.” The opposite idea is being unwilling to share. “Selfish” or “stingy” fits; “happy” does not reverse the meaning.",
+        "One-word substitution: “a person who loves books” can be called a bibliophile. For Primary 6, AVORA first teaches the meaning before expecting the label.",
+        "Idiom: “break the ice” does not mean breaking frozen water. In a social situation it means doing or saying something that makes people feel more comfortable and starts interaction."
+      ],
+      "practiceQuestions": [
+        "Give a synonym for “difficult” and use it in a sentence.",
+        "Give an antonym for “generous” and explain the contrast.",
+        "What does “break the ice” mean in this sentence: “The teacher told a funny story to break the ice on the first day”?",
+        "Choose the closest meaning of “rapid”: slow / quick / weak / quiet, and explain your choice."
+      ],
+      "sourceFile": "Avora_NCEE_English_Primary6_Term3.md",
+      "sourceLineStart": 37,
+      "contentStatus": "TEACHING_READY",
+      "completionBasis": "AVORA-authored completion from the supplied Primary 6 English review source; expands the source questions into explicit synonym, antonym, substitution and idiom teaching.",
+      "completionVersion": "14.8.1",
+      "depthCompletionVersion": "14.8.1"
+    },
+    {
+      "id": "ncee-source-p6-english-studies-third-term-writing-summary-and-full-composition-practice",
+      "classLevel": "Primary 6",
+      "domain": "English Studies",
+      "subject": "English Studies",
+      "term": "Third Term",
+      "title": "Writing — Summary and Full Composition Practice",
+      "strand": "Writing — Summary and Full Composition Practice",
+      "subtopics": [],
+      "concepts": [
+        "A summary keeps the central meaning while removing repetition, examples and unnecessary detail.",
+        "Read the full passage first, identify the main point and essential supporting ideas, then restate them briefly in your own words.",
+        "A summary should not introduce a new opinion or information that was not in the passage."
+      ],
+      "workedExamples": [
+        "Passage: \"Chidi trained every day for the school race, even when tired. On race day, his effort paid off as he won first place.\" Summary: \"Chidi's consistent training led to his race victory.\"",
+        "“Chidi trained daily despite tiredness and won the race.” can be summarised as “Chidi’s consistent training led to his victory.”"
+      ],
+      "practiceQuestions": [
+        "Summarize in one sentence: \"Ngozi saved a little money each week from her allowance. After a year, she had enough to buy her mother a special gift.\"",
+        "Write a full composition (any type — narrative, descriptive, or expository, 150-200 words) on a topic of your choice.",
+        "Summarise a three-sentence paragraph in one sentence."
+      ],
+      "sourceFile": "Avora_NCEE_English_Primary6_Term3.md",
+      "sourceLineStart": 47,
+      "contentStatus": "TEACHING_READY",
+      "depthCompletionVersion": "14.8.1"
+    },
+    {
+      "id": "ncee-source-p6-english-studies-third-term-full-ncee-style-objective-practice-combined",
+      "classLevel": "Primary 6",
+      "domain": "English Studies",
+      "subject": "English Studies",
+      "term": "Third Term",
+      "title": "Full NCEE-Style Objective Practice (Combined)",
+      "strand": "Full NCEE-Style Objective Practice (Combined)",
+      "subtopics": [],
+      "concepts": [
+        "Practice Questions (mixed, timed-practice style):"
+      ],
+      "workedExamples": [],
+      "practiceQuestions": [
+        "Choose the correct word: \"She is (a/an) honest girl.\"",
+        "Identify the tense: \"They have finished their homework.\"",
+        "Choose the antonym of \"ancient\": (modern/old/ancient-looking)",
+        "Complete the analogy: \"Kitten is to Cat as Puppy is to ___?\"",
+        "Correct the sentence: \"Him and me went to the shop.\""
+      ],
+      "sourceFile": "Avora_NCEE_English_Primary6_Term3.md",
+      "sourceLineStart": 58,
+      "contentStatus": "ASSESSMENT_ONLY"
+    },
+    {
+      "id": "ncee-source-p5-basic-science-and-technology-all-living-and-non-living-things",
+      "classLevel": "Primary 5",
+      "domain": "Basic Science & Technology",
+      "subject": "General Paper",
+      "term": "All Terms",
+      "title": "Living and Non-Living Things",
+      "strand": null,
+      "subtopics": [],
+      "concepts": [
+        "Step 1 — Establish the TEST for classifying something as living: does it grow, breathe, feed, move, and reproduce?",
+        "Living things carry out life processes such as feeding, respiration, growth, response, reproduction and removal of wastes; non-living things do not carry out these processes by themselves.",
+        "Movement alone does not prove that something is living: a car moves because an external system powers it."
+      ],
+      "workedExamples": [
+        "Is a rock living or non-living? Test: does it grow? No. Does it breathe/feed/reproduce? No. → Non-living. Is a tree living or non-living? Test: does it grow? Yes. Does it need food (nutrients/water) and produce seeds? Yes. → Living.",
+        "A fish grows, feeds, respires and reproduces, so it is living."
+      ],
+      "practiceQuestions": [
+        "Classify as living or non-living, explaining using the test: a car, a fish, a chair, a plant.",
+        "Classify a mushroom and explain two life characteristics.",
+        "Why is movement alone not enough to classify something as living?"
+      ],
+      "sourceFile": "Avora_NCEE_GeneralPaper_Primary5.md",
+      "sourceLineStart": 8,
+      "contentStatus": "TEACHING_READY",
+      "depthCompletionVersion": "14.8.1"
+    },
+    {
+      "id": "ncee-source-p5-basic-science-and-technology-all-human-body-major-organs-introductory",
+      "classLevel": "Primary 5",
+      "domain": "Basic Science & Technology",
+      "subject": "General Paper",
+      "term": "All Terms",
+      "title": "Human Body — Major Organs (Introductory)",
+      "strand": null,
+      "subtopics": [],
+      "concepts": [
+        "Step 1 — Establish a few key organs and their SPECIFIC function, not just names",
+        "The heart pumps blood around the body. The lungs help us breathe (take in oxygen, release carbon dioxide). The brain controls thinking and all body actions. The stomach helps digest food.",
+        "An organ is a body part made of tissues that performs a particular job. A body system is a group of organs working together."
+      ],
+      "workedExamples": [
+        "During exercise, breathing and heartbeat increase because muscles need more oxygen and nutrients.",
+        "Food is broken down by the digestive system and absorbed nutrients are transported by the blood."
+      ],
+      "practiceQuestions": [
+        "Which organ pumps blood around the body?",
+        "Which organ helps you breathe?",
+        "State the function of the heart and lungs."
+      ],
+      "sourceFile": "Avora_NCEE_GeneralPaper_Primary5.md",
+      "sourceLineStart": 19,
+      "contentStatus": "TEACHING_READY",
+      "depthCompletionVersion": "14.8.1"
+    },
+    {
+      "id": "ncee-source-p5-basic-science-and-technology-all-plants-parts-and-functions",
+      "classLevel": "Primary 5",
+      "domain": "Basic Science & Technology",
+      "subject": "General Paper",
+      "term": "All Terms",
+      "title": "Plants — Parts and Functions",
+      "strand": null,
+      "subtopics": [],
+      "concepts": [
+        "Roots anchor plants and absorb water/minerals; stems support and transport materials; leaves make food using light; flowers aid reproduction.",
+        "A structure’s function explains why damage to that part affects the whole plant.",
+        "Plants need suitable water, air, light and nutrients for healthy growth."
+      ],
+      "workedExamples": [
+        "Roots absorb water and nutrients from soil; the stem supports the plant and transports water; leaves make food using sunlight (photosynthesis, simply put as \"leaves make food using sunlight\"); flowers help the plant reproduce.",
+        "If roots are badly damaged, water uptake falls and the plant may wilt."
+      ],
+      "practiceQuestions": [
+        "Which part of a plant absorbs water from the soil?",
+        "Which part of a plant makes food?",
+        "State two functions of roots."
+      ],
+      "sourceFile": "Avora_NCEE_GeneralPaper_Primary5.md",
+      "sourceLineStart": 29,
+      "contentStatus": "TEACHING_READY",
+      "depthCompletionVersion": "14.8.1"
+    },
+    {
+      "id": "ncee-source-p5-basic-science-and-technology-all-states-of-matter",
+      "classLevel": "Primary 5",
+      "domain": "Basic Science & Technology",
+      "subject": "General Paper",
+      "term": "All Terms",
+      "title": "States of Matter",
+      "strand": null,
+      "subtopics": [],
+      "concepts": [
+        "Step 1 — Establish the three states by their SHAPE/VOLUME behavior",
+        "Solid: has a fixed shape and volume (e.g., a stone). Liquid: has a fixed volume but takes the shape of its container (e.g., water). Gas: has no fixed shape or volume, spreads to fill any space (e.g., air).",
+        "Solids have fixed shape and volume; liquids have fixed volume but take the container’s shape; gases have neither fixed shape nor fixed volume."
+      ],
+      "workedExamples": [
+        "Ice melts from solid to liquid when heated.",
+        "Water vapour cools and condenses into liquid water."
+      ],
+      "practiceQuestions": [
+        "Classify as solid, liquid, or gas: ice, air, milk, wood.",
+        "What happens to ice when it melts — which state does it change to?",
+        "Classify air, milk and wood by state."
+      ],
+      "sourceFile": "Avora_NCEE_GeneralPaper_Primary5.md",
+      "sourceLineStart": 37,
+      "contentStatus": "TEACHING_READY",
+      "depthCompletionVersion": "14.8.1"
+    },
+    {
+      "id": "ncee-source-p5-national-values-education-all-nigeria-s-states-and-geopolitical-zones",
+      "classLevel": "Primary 5",
+      "domain": "National Values Education",
+      "subject": "General Paper",
+      "term": "All Terms",
+      "title": "Nigeria's States and Geopolitical Zones",
+      "strand": null,
+      "subtopics": [],
+      "concepts": [
+        "Step 1 — Establish the SIX geopolitical zones as a way of grouping Nigeria's 36 states",
+        "Nigeria has 36 states plus the Federal Capital Territory (Abuja), grouped into six geopolitical zones: North West, North East, North Central, South West, South East, South South.",
+        "Nigeria has 36 states and the Federal Capital Territory. Geopolitical zones are six broad regional groupings used to organise states for discussion and administration."
+      ],
+      "workedExamples": [
+        "Lagos State belongs to the South West geopolitical zone.",
+        "Abuja is in the Federal Capital Territory and is associated geographically with the North Central region."
+      ],
+      "practiceQuestions": [
+        "Name the six geopolitical zones of Nigeria.",
+        "Which zone is Lagos State part of?",
+        "Name the six geopolitical zones."
+      ],
+      "sourceFile": "Avora_NCEE_GeneralPaper_Primary5.md",
+      "sourceLineStart": 51,
+      "contentStatus": "TEACHING_READY",
+      "depthCompletionVersion": "14.8.1"
+    },
+    {
+      "id": "ncee-source-p5-national-values-education-all-family-and-community-roles",
+      "classLevel": "Primary 5",
+      "domain": "National Values Education",
+      "subject": "General Paper",
+      "term": "All Terms",
+      "title": "Family and Community Roles",
+      "strand": null,
+      "subtopics": [],
+      "concepts": [
+        "A family is a group of people connected by birth, marriage, adoption or care who support one another. A community is a group of people who live, learn or work in the same area or share common institutions.",
+        "A role is the part a person plays in a group. A responsibility is a duty that the person is expected to carry out. Roles can differ, but every member should contribute responsibly.",
+        "Children have age-appropriate responsibilities such as respecting others, keeping personal and shared spaces tidy, caring for school materials and completing assigned chores safely.",
+        "Adults and community leaders also have responsibilities, such as caring for children, providing guidance, maintaining order, supporting community development and protecting public property.",
+        "Communities work well through cooperation, respect for rules, peaceful problem-solving, sanitation, honesty and participation in useful communal activities.",
+        "A responsible action should be judged by its effect on other people and on shared property. Good citizenship begins with everyday choices at home, school and in the community."
+      ],
+      "workedExamples": [
+        "A class is preparing for clean-up day. One learner sweeps only his desk while rubbish remains around the shared classroom. His personal area is clean, but his community role also includes helping protect the shared environment. A responsible action is to join the agreed class clean-up.",
+        "A younger child cannot safely carry a heavy water container. Responsibility does not mean doing unsafe work. The child can take an age-appropriate role, such as arranging light items or informing an adult that help is needed.",
+        "Neighbours organise a monthly sanitation exercise. Joining the exercise, disposing of waste properly and protecting the drainage are examples of cooperation for community wellbeing."
+      ],
+      "practiceQuestions": [
+        "Name two age-appropriate responsibilities a child can carry out at home and explain why each matters.",
+        "Give two ways members of a community can work together to improve their environment.",
+        "A child sees someone damaging a public tap. What responsible action should the child take?",
+        "Explain the difference between a role and a responsibility using a school example."
+      ],
+      "sourceFile": "Avora_NCEE_GeneralPaper_Primary5.md",
+      "sourceLineStart": 61,
+      "contentStatus": "TEACHING_READY",
+      "completionBasis": "AVORA-authored completion from the supplied Primary 5 General Paper source and NERDC National Values themes on family, community, rules and responsibilities.",
+      "completionVersion": "14.8.1",
+      "depthCompletionVersion": "14.8.1"
+    },
+    {
+      "id": "ncee-source-p5-national-values-education-all-citizenship-rights-and-responsibilities-introductory",
+      "classLevel": "Primary 5",
+      "domain": "National Values Education",
+      "subject": "General Paper",
+      "term": "All Terms",
+      "title": "Citizenship — Rights and Responsibilities (Introductory)",
+      "strand": null,
+      "subtopics": [],
+      "concepts": [
+        "Identify the value, right, duty or community principle involved before choosing an action.",
+        "Consider how the action affects other people, public property and peaceful community life.",
+        "Choose a responsible action and explain its likely consequence."
+      ],
+      "workedExamples": [
+        "A right is something you are entitled to (e.g., the right to education). A responsibility is something you are expected to do (e.g., respecting others' property).",
+        "Use a home or school situation to identify a responsibility."
+      ],
+      "practiceQuestions": [
+        "Name one right every child has.",
+        "Name one responsibility a student has at school.",
+        "Name the principle involved."
+      ],
+      "sourceFile": "Avora_NCEE_GeneralPaper_Primary5.md",
+      "sourceLineStart": 67,
+      "contentStatus": "TEACHING_READY",
+      "depthCompletionVersion": "14.8.1"
+    },
+    {
+      "id": "ncee-source-p6-basic-science-and-technology-all-human-body-systems-introductory",
+      "classLevel": "Primary 6",
+      "domain": "Basic Science & Technology",
+      "subject": "General Paper",
+      "term": "All Terms",
+      "title": "Human Body Systems (Introductory)",
+      "strand": null,
+      "subtopics": [],
+      "concepts": [
+        "Step 1 — Establish each system by its FUNCTION, not just its name",
+        "The digestive system breaks down food into nutrients the body can use (mouth→stomach→intestines). The respiratory system takes in oxygen and removes carbon dioxide (nose/lungs). The circulatory system moves blood (carrying oxygen and nutrients) around the body via the heart and blood vessels.",
+        "An organ is a body part made of tissues that performs a particular job. A body system is a group of organs working together."
+      ],
+      "workedExamples": [
+        "During exercise, breathing and heartbeat increase because muscles need more oxygen and nutrients.",
+        "Food is broken down by the digestive system and absorbed nutrients are transported by the blood."
+      ],
+      "practiceQuestions": [
+        "Which system breaks down food?",
+        "Which organ is central to the circulatory system?",
+        "State the function of the heart and lungs."
+      ],
+      "sourceFile": "Avora_NCEE_GeneralPaper_Primary6.md",
+      "sourceLineStart": 8,
+      "contentStatus": "TEACHING_READY",
+      "depthCompletionVersion": "14.8.1"
+    },
+    {
+      "id": "ncee-source-p6-basic-science-and-technology-all-plants-and-animals-classification-basics",
+      "classLevel": "Primary 6",
+      "domain": "Basic Science & Technology",
+      "subject": "General Paper",
+      "term": "All Terms",
+      "title": "Plants and Animals — Classification Basics",
+      "strand": null,
+      "subtopics": [],
+      "concepts": [
+        "Classification groups organisms using shared observable features. A useful rule must fit every member of the group.",
+        "Animals can be grouped by features such as body covering, habitat or backbone; plants can be grouped by observable structures and growth forms.",
+        "Use more than one characteristic when a single feature could place very different organisms together."
+      ],
+      "workedExamples": [
+        "Animals can be classified as vertebrates (have a backbone, e.g., fish, birds, mammals) or invertebrates (no backbone, e.g., insects, worms).",
+        "Birds have feathers, while mammals have hair/fur and feed their young with milk."
+      ],
+      "practiceQuestions": [
+        "Classify as vertebrate or invertebrate: a snake, a butterfly, a dog, a spider.",
+        "Give one feature used to classify animals.",
+        "Place fish and goat into different groups and state your rule."
+      ],
+      "sourceFile": "Avora_NCEE_GeneralPaper_Primary6.md",
+      "sourceLineStart": 18,
+      "contentStatus": "TEACHING_READY",
+      "depthCompletionVersion": "14.8.1"
+    },
+    {
+      "id": "ncee-source-p6-basic-science-and-technology-all-simple-machines-and-everyday-technology",
+      "classLevel": "Primary 6",
+      "domain": "Basic Science & Technology",
+      "subject": "General Paper",
+      "term": "All Terms",
+      "title": "Simple Machines and Everyday Technology",
+      "strand": null,
+      "subtopics": [],
+      "concepts": [
+        "A simple machine makes work easier by changing the size or direction of a force; common examples include lever, pulley, wheel and axle, inclined plane, screw and wedge.",
+        "Machines do not remove work completely; they trade force for distance or change how the force is applied.",
+        "Use tools safely for their intended purpose and identify the simple-machine principle involved."
+      ],
+      "workedExamples": [
+        "A lever (like a see-saw) makes lifting easier by using a pivot point. A pulley (like on a well) makes lifting heavy objects easier by changing the direction of force needed.",
+        "A ramp is an inclined plane that lets a load be raised with less force over a longer distance."
+      ],
+      "practiceQuestions": [
+        "Name a simple machine used to lift heavy water from a well.",
+        "Give an example of a lever used in everyday life.",
+        "Name the simple machine in a ramp."
+      ],
+      "sourceFile": "Avora_NCEE_GeneralPaper_Primary6.md",
+      "sourceLineStart": 25,
+      "contentStatus": "TEACHING_READY",
+      "depthCompletionVersion": "14.8.1"
+    },
+    {
+      "id": "ncee-source-p6-basic-science-and-technology-all-energy-and-forces-introductory",
+      "classLevel": "Primary 6",
+      "domain": "Basic Science & Technology",
+      "subject": "General Paper",
+      "term": "All Terms",
+      "title": "Energy and Forces (Introductory)",
+      "strand": null,
+      "subtopics": [],
+      "concepts": [
+        "A force is a push or pull that can change motion, direction or shape.",
+        "Energy is the ability to cause change or do work and appears in forms such as light, heat, sound, electrical and movement energy.",
+        "Energy can be transferred or changed from one form to another, while friction and other forces affect motion."
+      ],
+      "workedExamples": [
+        "Gravity is a force that pulls objects toward the Earth — this is why a dropped ball falls down, not up or sideways.",
+        "A battery-powered torch changes chemical energy in the battery to electrical energy and then light/heat."
+      ],
+      "practiceQuestions": [
+        "What force causes a dropped object to fall to the ground?",
+        "Name one source of renewable energy (e.g., sunlight, wind).",
+        "Give two effects a force can have."
+      ],
+      "sourceFile": "Avora_NCEE_GeneralPaper_Primary6.md",
+      "sourceLineStart": 33,
+      "contentStatus": "TEACHING_READY",
+      "depthCompletionVersion": "14.8.1"
+    },
+    {
+      "id": "ncee-source-p6-basic-science-and-technology-all-health-and-hygiene",
+      "classLevel": "Primary 6",
+      "domain": "Basic Science & Technology",
+      "subject": "General Paper",
+      "term": "All Terms",
+      "title": "Health and Hygiene",
+      "strand": null,
+      "subtopics": [],
+      "concepts": [
+        "Health is a state of physical and mental wellbeing. Hygiene means habits that help keep the body and surroundings clean and reduce the spread of disease.",
+        "Germs are tiny disease-causing organisms or agents that can spread through dirty hands, contaminated food or water, droplets from coughing and sneezing, and unclean surroundings. We cannot usually see them, so prevention depends on good habits.",
+        "Handwashing works best when hands are washed with clean running water and soap, including palms, backs of hands, between fingers and around nails, then rinsed and dried cleanly.",
+        "Respiratory hygiene means covering a cough or sneeze with a tissue or the inside of the elbow, disposing of the tissue safely and cleaning the hands afterwards.",
+        "A balanced diet contains appropriate amounts from different food groups so the body receives energy, body-building nutrients, vitamins, minerals, fibre and water. Eating only one type of food repeatedly is not balanced.",
+        "Safe food and water practices include using clean water, washing foods that should be washed, keeping utensils clean, cooking food properly where necessary and protecting food from flies and dirt.",
+        "Regular exercise, enough rest, personal cleanliness and a clean environment work together with good nutrition to support health."
+      ],
+      "workedExamples": [
+        "Before eating, Chika has visible dirt on her hands after playing outside. Rinsing quickly without soap may leave germs behind. A safer routine is to wash thoroughly with soap and clean running water before touching food.",
+        "A meal contains rice only. Rice provides useful energy, but a balanced meal needs other nutrients too. Adding beans or another protein source and vegetables or fruit gives a wider range of nutrients.",
+        "Tunde coughs directly into his palm and then holds a shared classroom ruler. Germs can move from his hand to the ruler. Coughing into the elbow or a tissue and cleaning the hands reduces this route of spread."
+      ],
+      "practiceQuestions": [
+        "Name two ways to reduce the spread of germs and explain how each works.",
+        "Why is a balanced diet better than eating only one favourite food every day?",
+        "What should you do after coughing into a tissue?",
+        "Give one food-safety habit and one environmental-hygiene habit."
+      ],
+      "sourceFile": "Avora_NCEE_GeneralPaper_Primary6.md",
+      "sourceLineStart": 41,
+      "contentStatus": "TEACHING_READY",
+      "completionBasis": "AVORA-authored completion from the supplied Primary 6 General Paper source; expands the two source questions into age-appropriate health, hygiene and prevention teaching.",
+      "completionVersion": "14.8.1",
+      "depthCompletionVersion": "14.8.1"
+    },
+    {
+      "id": "ncee-source-p6-national-values-education-all-nigeria-s-government-structure-introductory",
+      "classLevel": "Primary 6",
+      "domain": "National Values Education",
+      "subject": "General Paper",
+      "term": "All Terms",
+      "title": "Nigeria's Government Structure (Introductory)",
+      "strand": null,
+      "subtopics": [],
+      "concepts": [
+        "Step 1 — Establish the three tiers of government by their SCOPE (what area each governs)",
+        "Federal government (governs the whole country), State government (governs one state), Local government (governs a smaller local area within a state).",
+        "Nigeria operates three tiers of government: federal, state and local government."
+      ],
+      "workedExamples": [
+        "National defence is a federal responsibility because it concerns the whole country.",
+        "Local sanitation and community markets may involve local government responsibilities."
+      ],
+      "practiceQuestions": [
+        "Name the three tiers of government in Nigeria.",
+        "Which tier of government would handle a matter affecting the ENTIRE country (e.g., national defense)?",
+        "Name the three tiers."
+      ],
+      "sourceFile": "Avora_NCEE_GeneralPaper_Primary6.md",
+      "sourceLineStart": 51,
+      "contentStatus": "TEACHING_READY",
+      "depthCompletionVersion": "14.8.1"
+    },
+    {
+      "id": "ncee-source-p6-national-values-education-all-national-symbols-and-their-meaning",
+      "classLevel": "Primary 6",
+      "domain": "National Values Education",
+      "subject": "General Paper",
+      "term": "All Terms",
+      "title": "National Symbols and Their Meaning",
+      "strand": null,
+      "subtopics": [],
+      "concepts": [
+        "National symbols represent shared identity and values and should be treated with respect.",
+        "The Nigerian flag is green-white-green; the green is commonly taught as representing natural wealth/agriculture and the white as peace.",
+        "Symbols such as the coat of arms, anthem and pledge communicate national identity, unity and civic ideals."
+      ],
+      "workedExamples": [
+        "The Nigerian flag has green-white-green stripes: green represents the nation's rich agriculture/natural wealth, white represents peace and unity.",
+        "Recognising the flag is not enough; explain what its colours are intended to represent."
+      ],
+      "practiceQuestions": [
+        "What do the colors of the Nigerian flag represent?",
+        "Name Nigeria's national anthem's first line (or describe its general theme of unity/pride).",
+        "Describe the Nigerian flag."
+      ],
+      "sourceFile": "Avora_NCEE_GeneralPaper_Primary6.md",
+      "sourceLineStart": 61,
+      "contentStatus": "TEACHING_READY",
+      "depthCompletionVersion": "14.8.1"
+    },
+    {
+      "id": "ncee-source-p6-national-values-education-all-rights-and-responsibilities-of-citizens",
+      "classLevel": "Primary 6",
+      "domain": "National Values Education",
+      "subject": "General Paper",
+      "term": "All Terms",
+      "title": "Rights and Responsibilities of Citizens",
+      "strand": null,
+      "subtopics": [],
+      "concepts": [
+        "A right is a freedom or protection a person is entitled to under the law and society. A responsibility is a duty a person should carry out toward other people, the community and the country.",
+        "Rights and responsibilities belong together. Having a right does not mean a person may harm other people or prevent them from enjoying their own rights.",
+        "Examples of civic rights discussed at this level include access to education, freedom of expression within the law, fair treatment and protection of life and dignity.",
+        "Examples of responsibilities include obeying lawful rules, respecting the rights of others, protecting public property, keeping the environment clean, helping maintain peace and participating responsibly in community life.",
+        "Public property belongs to everyone collectively. Damaging a public school desk, road sign, water facility or health-centre property harms the whole community and is irresponsible.",
+        "Responsible citizenship also requires peaceful disagreement. A person can express an opinion without insulting, threatening or attacking others.",
+        "When a right appears to conflict with another person’s safety or rights, AVORA asks: What is the right? What is the duty? Who could be affected? What action respects both as far as possible?"
+      ],
+      "workedExamples": [
+        "A learner has a right to learn in school. The learner also has a responsibility not to disrupt the lesson so that classmates can enjoy the same right to learn.",
+        "Citizens may express opinions, but spreading a dangerous false alarm that causes panic can harm others. Responsible expression means using the freedom without violating other people’s safety and rights.",
+        "A public tap is damaged deliberately. Because it serves many people, protecting and reporting damage to it is a responsibility toward the community."
+      ],
+      "practiceQuestions": [
+        "Name one right and one responsibility of a citizen, then explain how they can support each other.",
+        "Why is protecting public property a civic responsibility?",
+        "A learner disagrees with a class rule. Give a peaceful and responsible way to raise the concern.",
+        "Explain why having a right does not mean ignoring the rights of other people."
+      ],
+      "sourceFile": "Avora_NCEE_GeneralPaper_Primary6.md",
+      "sourceLineStart": 69,
+      "contentStatus": "TEACHING_READY",
+      "completionBasis": "AVORA-authored completion from the supplied Primary 6 General Paper source and NERDC National Values/Civic Education themes on rights, duties and responsible citizenship.",
+      "completionVersion": "14.8.1",
+      "depthCompletionVersion": "14.8.1"
+    },
+    {
+      "id": "ncee-source-p6-national-values-education-all-nigeria-s-history-key-milestones",
+      "classLevel": "Primary 6",
+      "domain": "National Values Education",
+      "subject": "General Paper",
+      "term": "All Terms",
+      "title": "Nigeria's History — Key Milestones",
+      "strand": null,
+      "subtopics": [],
+      "concepts": [
+        "Historical milestones are important events used to organise a country’s story through time.",
+        "Nigeria gained independence from British colonial rule on 1 October 1960.",
+        "A date should be connected to what happened and why it mattered, rather than memorised as an isolated number."
+      ],
+      "workedExamples": [
+        "Nigeria gained independence from British colonial rule on October 1, 1960.",
+        "1 October 1960 marks Nigeria’s independence."
+      ],
+      "practiceQuestions": [
+        "In what year did Nigeria gain independence?",
+        "Name one significant event in Nigeria's history you have learned about.",
+        "What happened on 1 October 1960?"
+      ],
+      "sourceFile": "Avora_NCEE_GeneralPaper_Primary6.md",
+      "sourceLineStart": 75,
+      "contentStatus": "TEACHING_READY",
+      "depthCompletionVersion": "14.8.1"
+    },
+    {
+      "id": "ncee-source-p6-national-values-education-all-current-affairs-and-general-knowledge-ncee-relevant",
+      "classLevel": "Primary 6",
+      "domain": "National Values Education",
+      "subject": "General Paper",
+      "term": "All Terms",
+      "title": "Current Affairs and General Knowledge (NCEE-Relevant)",
+      "strand": null,
+      "subtopics": [],
+      "concepts": [
+        "General knowledge includes important facts about Nigeria and the world that are relatively stable, while current affairs concerns important events and office-holders that can change with time.",
+        "For a fact that can change, always attach a date and verify it from a reliable current source. A current office-holder should never be treated as a fact that can never change.",
+        "As of 14 September 2026, the President of the Federal Republic of Nigeria is Bola Ahmed Tinubu. This is a dated current-affairs fact and must be re-verified in a later release before it is taught as current.",
+        "Nigeria is in West Africa. Its land neighbours are Benin to the west, Niger to the north, Chad to the north-east and Cameroon to the east. Nigeria also has a southern coastline on the Gulf of Guinea.",
+        "Abuja is Nigeria’s Federal Capital Territory and seat of the federal government. Stable national facts should be distinguished from changing facts such as the names of current office-holders.",
+        "In an exam, read the wording carefully: a question asking for a current office-holder requires up-to-date knowledge, while a question about a capital, neighbour or historical date may be stable."
+      ],
+      "workedExamples": [
+        "Question: “Name one country that shares a land border with Nigeria.” Benin, Niger, Chad and Cameroon are all valid examples. Ghana is in West Africa but does not share a land border with Nigeria.",
+        "Question: “Who is the current President of Nigeria?” AVORA checks the date first. For this release, verified 14 September 2026, the answer is Bola Ahmed Tinubu. The date matters because the office-holder can change.",
+        "Question: “What is the capital of Nigeria?” Abuja is a stable general-knowledge answer. This is different from a current-affairs office-holder question because the capital is not expected to change frequently."
+      ],
+      "practiceQuestions": [
+        "Name two countries that share a land border with Nigeria.",
+        "Explain the difference between a current-affairs fact and a stable general-knowledge fact.",
+        "What is Nigeria’s capital?",
+        "Why should the name of a current office-holder be checked with a date before an exam?"
+      ],
+      "sourceFile": "Avora_NCEE_GeneralPaper_Primary6.md",
+      "sourceLineStart": 83,
+      "contentStatus": "TEACHING_READY",
+      "completionBasis": "AVORA-authored completion from the supplied Primary 6 General Paper source. Current President verified against the Nigerian State House on 14 September 2026; geography is treated as stable general knowledge.",
+      "completionVersion": "14.8.1",
+      "depthCompletionVersion": "14.8.1"
+    },
+    {
+      "id": "ncee-source-p5-mathematics-first-term-whole-numbers",
+      "classLevel": "Primary 5",
+      "domain": "Mathematics",
+      "subject": "Mathematics",
+      "term": "First Term",
+      "title": "Whole Numbers",
+      "strand": null,
+      "subtopics": [
+        "Place Value Up to Hundred-Thousands",
+        "Comparing and Ordering Numbers"
+      ],
+      "concepts": [
+        "Step 1 — Build place value from what's already familiar (tens, hundreds) outward",
+        "Every digit's value depends on WHERE it sits. In 45,326: the \"4\" sits in the ten-thousands spot, so it's worth 40,000 — not just \"4.\" Let's build this step by step using a place value chart: Ten-Thousands → Thousands → Hundreds → Tens → Units 4 → 5 → 3 → 2 → 6",
+        "Step 1 — Establish the method: compare digit by digit, starting from the LEFT (the biggest place value)"
+      ],
+      "workedExamples": [
+        "Write 45,326 in expanded form (showing what each digit is really worth): 40,000 + 5,000 + 300 + 20 + 6 = 45,326",
+        "72,408 — read as \"seventy-two thousand, four hundred and eight.\" Notice: there's a ZERO in the tens place, so we don't say \"seventy-two thousand, four hundred and zero eight\" — the zero is silent, just a placeholder.",
+        "Compare 34,521 and 34,498. Start from the left: both have \"3\" in ten-thousands, both have \"4\" in thousands — tie so far. Next: 5 vs 4 in hundreds — 5 is bigger, so 34,521 > 34,498. We didn't even need to look further right once we found a difference."
+      ],
+      "practiceQuestions": [
+        "Write 63,915 in expanded form.",
+        "What is the value of the digit 7 in 27,481?",
+        "Write in words: 90,204 (careful with the zero — how should it be read?).",
+        "Which is bigger: 56,204 or 56,240? Explain using the digit-by-digit method.",
+        "Order from smallest to largest: 12,890; 12,098; 12,908."
+      ],
+      "sourceFile": "Avora_NCEE_Maths_Primary5_Term1.md",
+      "sourceLineStart": 8,
+      "contentStatus": "TEACHING_READY",
+      "depthCompletionVersion": "14.8.1"
+    },
+    {
+      "id": "ncee-source-p5-mathematics-first-term-addition-and-subtraction-of-large-whole-numbers",
+      "classLevel": "Primary 5",
+      "domain": "Mathematics",
+      "subject": "Mathematics",
+      "term": "First Term",
+      "title": "Addition and Subtraction of Large Whole Numbers",
+      "strand": null,
+      "subtopics": [
+        "Addition with Regrouping (Carrying)",
+        "Subtraction with Regrouping (Borrowing)"
+      ],
+      "concepts": [
+        "Step 1 — Recall WHY we regroup: when a column adds to 10 or more, we can't write two digits in one column, so we carry the extra ten to the next column",
+        "Step 1 — Recall WHY we borrow: when the top digit is smaller than the bottom digit in a column, we bring one \"ten\" over from the next column left",
+        "Addition combines quantities; subtraction finds what remains or the difference between quantities."
+      ],
+      "workedExamples": [
+        "4,586 + 2,749 Units: 6+9=15 → write 5, carry 1 (that 1 means \"one ten\") Tens: 8+4+1(carried)=13 → write 3, carry 1 Hundreds: 5+7+1=13 → write 3, carry 1 Thousands: 4+2+1=7 Result: 7,335",
+        "6,203 − 2,847 Units: 3−7, can't do it — borrow from tens: tens digit (0) is also empty, so borrow travels further left to hundreds (2 becomes 1), tens becomes 10, then units borrows from tens (10 becomes 9): 13−7=6 Tens: 9−4=5 Hundreds: 1−8, can't do it — borrow from thousands: thousands (6 becomes 5), hundreds becomes 11: 11−8=3 Thousands: 5−2=3 Result: 3,356"
+      ],
+      "practiceQuestions": [
+        "Add: 3,847 + 2,956, showing every carry.",
+        "Add: 15,608 + 9,275.",
+        "Subtract: 5,402 − 1,867, showing every borrowing step.",
+        "Subtract: 8,000 − 3,456 (careful — multiple zeros require borrowing to travel far left)."
+      ],
+      "sourceFile": "Avora_NCEE_Maths_Primary5_Term1.md",
+      "sourceLineStart": 45,
+      "contentStatus": "TEACHING_READY",
+      "depthCompletionVersion": "14.8.1"
+    },
+    {
+      "id": "ncee-source-p5-mathematics-first-term-multiplication-of-whole-numbers",
+      "classLevel": "Primary 5",
+      "domain": "Mathematics",
+      "subject": "Mathematics",
+      "term": "First Term",
+      "title": "Multiplication of Whole Numbers",
+      "strand": null,
+      "subtopics": [
+        "Multiplying by a 2-Digit Number"
+      ],
+      "concepts": [
+        "Step 1 — Establish that multiplying by a 2-digit number means multiplying by the TENS part and the UNITS part separately, then adding the results",
+        "Multiplication is repeated equal grouping and can be broken apart using place value.",
+        "The distributive idea lets us multiply a number by parts, then add the partial products."
+      ],
+      "workedExamples": [
+        "234 × 23 Break 23 into 20 + 3. 234 × 3 = 702 234 × 20 = 4,680 (this is 234×2, then a zero added since we're really multiplying by 20) Add: 702 + 4,680 = 5,382",
+        "326 × 24 = 326×20 + 326×4 = 6,520 + 1,304 = 7,824."
+      ],
+      "practiceQuestions": [
+        "Multiply: 312 × 14, showing the breakdown into tens and units.",
+        "Multiply: 456 × 32.",
+        "Find 214 × 36."
+      ],
+      "sourceFile": "Avora_NCEE_Maths_Primary5_Term1.md",
+      "sourceLineStart": 83,
+      "contentStatus": "TEACHING_READY",
+      "depthCompletionVersion": "14.8.1"
+    },
+    {
+      "id": "ncee-source-p5-mathematics-first-term-division-of-whole-numbers",
+      "classLevel": "Primary 5",
+      "domain": "Mathematics",
+      "subject": "Mathematics",
+      "term": "First Term",
+      "title": "Division of Whole Numbers",
+      "strand": null,
+      "subtopics": [
+        "Division with Remainders"
+      ],
+      "concepts": [
+        "Step 1 — Establish what a remainder means: what's LEFT OVER when a number doesn't divide exactly",
+        "Division asks how many equal groups can be made or how large each equal share is.",
+        "Long division works by dividing one place-value part at a time, multiplying back, subtracting, and bringing down the next digit."
+      ],
+      "workedExamples": [
+        "47 ÷ 5. How many times does 5 fit into 47? 5×9=45 (fits 9 times), with 47−45=2 left over. 47 ÷ 5 = 9 remainder 2.",
+        "If 47 sweets are shared equally among 5 children, each gets 9 sweets, and 2 sweets are left over (not enough to give each child one more)."
+      ],
+      "practiceQuestions": [
+        "Divide: 58 ÷ 6, stating the remainder.",
+        "83 oranges are shared among 7 baskets equally. How many oranges per basket, and how many are left over?",
+        "Find 3,696 ÷ 12."
+      ],
+      "sourceFile": "Avora_NCEE_Maths_Primary5_Term1.md",
+      "sourceLineStart": 102,
+      "contentStatus": "TEACHING_READY",
+      "depthCompletionVersion": "14.8.1"
+    },
+    {
+      "id": "ncee-source-p5-mathematics-first-term-factors-and-multiples-introductory",
+      "classLevel": "Primary 5",
+      "domain": "Mathematics",
+      "subject": "Mathematics",
+      "term": "First Term",
+      "title": "Factors and Multiples (Introductory)",
+      "strand": null,
+      "subtopics": [],
+      "concepts": [
+        "Step 1 — Establish \"factor\" using the sharing idea, and \"multiple\" using repeated counting",
+        "A factor of a number divides into it exactly (no remainder). Multiples of a number are what you get counting up in that number's steps (like counting in 5s: 5,10,15,20...).",
+        "A factor divides a number exactly; a multiple is produced by multiplying the number by a whole number."
+      ],
+      "workedExamples": [
+        "Factors of 12: test each number 1-12 for exact division: 1✓,2✓,3✓,4✓,6✓,12✓ (5,7,8,9,10,11 don't divide exactly). Factors: 1,2,3,4,6,12.",
+        "Factors of 18 include 1,2,3,6,9,18; multiples of 18 begin 18,36,54."
+      ],
+      "practiceQuestions": [
+        "List the factors of 18.",
+        "List the first 5 multiples of 7.",
+        "Find the LCM of 4 and 6 (recall: list multiples of each, find the first one they share)."
+      ],
+      "sourceFile": "Avora_NCEE_Maths_Primary5_Term1.md",
+      "sourceLineStart": 121,
+      "contentStatus": "TEACHING_READY",
+      "depthCompletionVersion": "14.8.1"
+    },
+    {
+      "id": "ncee-source-p5-mathematics-first-term-fractions",
+      "classLevel": "Primary 5",
+      "domain": "Mathematics",
+      "subject": "Mathematics",
+      "term": "First Term",
+      "title": "Fractions",
+      "strand": null,
+      "subtopics": [
+        "Proper, Improper, and Mixed Numbers",
+        "Equivalent Fractions"
+      ],
+      "concepts": [
+        "Step 1 — Establish the THREE forms using a visual: a proper fraction is less than one whole; an improper fraction is one whole or more, written as a top-heavy fraction; a mixed number is the same amount as an improper fraction, written as a whole number plus a proper fraction",
+        "A fraction represents equal parts of a whole or of a quantity. The denominator tells how many equal parts make the whole; the numerator tells how many parts are considered.",
+        "Equivalent fractions name the same quantity with different-sized equal parts. Multiply or divide numerator and denominator by the same non-zero number to create an equivalent fraction."
+      ],
+      "workedExamples": [
+        "7/3 means 7 divided into groups of 3. 7÷3=2 remainder 1, so 7/3 = 2 whole groups plus 1/3 left over = 2⅓.",
+        "3¼: multiply the whole number by the denominator, then add the numerator: (3×4)+1=13, keep the same denominator: 13/4.",
+        "Is 2/3 the same as 6/9? Multiply top and bottom of 2/3 by 3: 2×3=6, 3×3=9 → yes, 2/3=6/9."
+      ],
+      "practiceQuestions": [
+        "Convert 9/4 to a mixed number.",
+        "Convert 5⅔ to an improper fraction.",
+        "Is 8/8 proper, improper, or does it equal exactly one whole? Explain.",
+        "Find an equivalent fraction to 3/5 with a denominator of 20.",
+        "Are 4/6 and 2/3 equivalent? Show your check."
+      ],
+      "sourceFile": "Avora_NCEE_Maths_Primary5_Term1.md",
+      "sourceLineStart": 137,
+      "contentStatus": "TEACHING_READY",
+      "depthCompletionVersion": "14.8.1"
+    },
+    {
+      "id": "ncee-source-p5-mathematics-second-term-addition-and-subtraction-of-fractions",
+      "classLevel": "Primary 5",
+      "domain": "Mathematics",
+      "subject": "Mathematics",
+      "term": "Second Term",
+      "title": "Addition and Subtraction of Fractions",
+      "strand": null,
+      "subtopics": [],
+      "concepts": [
+        "Step 1 — Recall why fractions need the same denominator before adding, using a visual: you can't add \"3 fifths\" and \"2 thirds\" directly because the \"pieces\" are different sizes",
+        "Addition combines quantities; subtraction finds what remains or the difference between quantities.",
+        "Align digits by place value before using the written method, so ones are combined with ones, tens with tens, and so on."
+      ],
+      "workedExamples": [
+        "⅓ + ¼: find a common denominator (12): ⅓=4/12, ¼=3/12. Add: 4/12+3/12=7/12.",
+        "2½ − 1¼: convert to improper fractions first: 2½=5/2, 1¼=5/4. Common denominator=4: 5/2=10/4. Subtract: 10/4−5/4=5/4=1¼."
+      ],
+      "practiceQuestions": [
+        "Add: ⅖ + ⅓",
+        "Subtract: ¾ − ⅖",
+        "A boy ate ⅜ of a cake and his sister ate ¼. How much cake did they eat altogether?"
+      ],
+      "sourceFile": "Avora_NCEE_Maths_Primary5_Term2.md",
+      "sourceLineStart": 6,
+      "contentStatus": "TEACHING_READY",
+      "depthCompletionVersion": "14.8.1"
+    },
+    {
+      "id": "ncee-source-p5-mathematics-second-term-multiplication-and-division-of-fractions",
+      "classLevel": "Primary 5",
+      "domain": "Mathematics",
+      "subject": "Mathematics",
+      "term": "Second Term",
+      "title": "Multiplication and Division of Fractions",
+      "strand": null,
+      "subtopics": [],
+      "concepts": [
+        "Step 1 — Recall: multiplying fractions means multiplying straight across (numerator×numerator, denominator×denominator)",
+        "Step 2 — Recall: dividing by a fraction means \"flip and multiply\" (the reciprocal)",
+        "To multiply fractions, multiply the numerators and denominators because you are taking a part of another part."
+      ],
+      "workedExamples": [
+        "⅔ × ¾ = (2×3)/(3×4) = 6/12 = ½ (simplified)",
+        "½ ÷ ¼ = ½ × 4/1 = 4/2 = 2 (makes sense: how many quarters fit into a half? Two.)"
+      ],
+      "practiceQuestions": [
+        "Multiply: ⅗ × ⅔",
+        "Divide: ¾ ÷ ½",
+        "Find 4/7 × 3/8."
+      ],
+      "sourceFile": "Avora_NCEE_Maths_Primary5_Term2.md",
+      "sourceLineStart": 23,
+      "contentStatus": "TEACHING_READY",
+      "depthCompletionVersion": "14.8.1"
+    },
+    {
+      "id": "ncee-source-p5-mathematics-second-term-decimals",
+      "classLevel": "Primary 5",
+      "domain": "Mathematics",
+      "subject": "Mathematics",
+      "term": "Second Term",
+      "title": "Decimals",
+      "strand": null,
+      "subtopics": [
+        "Place Value of Decimals",
+        "Addition and Subtraction of Decimals"
+      ],
+      "concepts": [
+        "Step 1 — Establish that decimal place value continues the SAME pattern as whole numbers, but going the OTHER direction (tenths, hundredths) after the decimal point",
+        "Tens → Units → . → Tenths → Hundredths 3 → 5 → . → 2 → 7 35.27 means 3 tens, 5 units, 2 tenths (2/10), and 7 hundredths (7/100).",
+        "Step 1 — Establish the KEY rule: line up the decimal points, so tenths add to tenths, hundredths to hundredths — just like lining up place value columns for whole numbers"
+      ],
+      "workedExamples": [
+        "¾ = 3÷4 = 0.75",
+        "4.35 + 2.7 Line up: 4.35 + 2.70 (write 2.7 as 2.70 to match the columns — this doesn't change its value, just makes lining up clearer) = 7.05"
+      ],
+      "practiceQuestions": [
+        "What is the value of the digit 4 in 26.489?",
+        "Convert ⅖ to a decimal.",
+        "Add: 3.62 + 4.8",
+        "Subtract: 9.5 − 3.27"
+      ],
+      "sourceFile": "Avora_NCEE_Maths_Primary5_Term2.md",
+      "sourceLineStart": 41,
+      "contentStatus": "TEACHING_READY",
+      "depthCompletionVersion": "14.8.1"
+    },
+    {
+      "id": "ncee-source-p5-mathematics-second-term-percentages-introductory",
+      "classLevel": "Primary 5",
+      "domain": "Mathematics",
+      "subject": "Mathematics",
+      "term": "Second Term",
+      "title": "Percentages (Introductory)",
+      "strand": null,
+      "subtopics": [],
+      "concepts": [
+        "Step 1 — Establish \"percent\" means \"out of 100,\" connecting directly to the decimal/fraction work just done",
+        "Percent means “out of 100.” A percentage can be converted to a fraction over 100 or to a decimal by dividing by 100.",
+        "To find a percentage of a quantity, multiply the quantity by the percentage written as a fraction or decimal."
+      ],
+      "workedExamples": [
+        "25% means 25 out of 100 = 25/100 = ¼ = 0.25.",
+        "25% of 80 = 0.25×80 = 20."
+      ],
+      "practiceQuestions": [
+        "Convert 40% to a fraction in lowest terms, and to a decimal.",
+        "Convert ⅗ to a percentage.",
+        "Find 15% of 240."
+      ],
+      "sourceFile": "Avora_NCEE_Maths_Primary5_Term2.md",
+      "sourceLineStart": 77,
+      "contentStatus": "TEACHING_READY",
+      "depthCompletionVersion": "14.8.1"
+    },
+    {
+      "id": "ncee-source-p5-mathematics-second-term-money-nigerian-currency",
+      "classLevel": "Primary 5",
+      "domain": "Mathematics",
+      "subject": "Mathematics",
+      "term": "Second Term",
+      "title": "Money (Nigerian Currency)",
+      "strand": null,
+      "subtopics": [],
+      "concepts": [
+        "Step 1 — Establish practical transaction skills: total cost, change given, simple budgeting",
+        "Money problems require identifying the starting amount, money added or received, and money spent or removed.",
+        "In Nigerian currency, 100 kobo = ₦1. Align naira and kobo or use decimal notation consistently."
+      ],
+      "workedExamples": [
+        "Ada buys a pencil for ₦150 and an eraser for ₦80. She pays with a ₦500 note. Find her change. Total cost=150+80=₦230. Change=500−230=₦270.",
+        "₦5,000 − (₦1,250 + ₦800) = ₦2,950 remaining."
+      ],
+      "practiceQuestions": [
+        "A book costs ₦450. If you pay with ₦1,000, find your change.",
+        "Musa has ₦2,000 pocket money for the week. He spends ₦300 on Monday, ₦250 on Tuesday. How much does he have left?",
+        "A child has ₦7,500 and spends ₦2,875. How much remains?"
+      ],
+      "sourceFile": "Avora_NCEE_Maths_Primary5_Term2.md",
+      "sourceLineStart": 90,
+      "contentStatus": "TEACHING_READY",
+      "depthCompletionVersion": "14.8.1"
+    },
+    {
+      "id": "ncee-source-p5-mathematics-third-term-measurement-length-mass-capacity",
+      "classLevel": "Primary 5",
+      "domain": "Mathematics",
+      "subject": "Mathematics",
+      "term": "Third Term",
+      "title": "Measurement — Length, Mass, Capacity",
+      "strand": null,
+      "subtopics": [],
+      "concepts": [
+        "Step 1 — Establish the base units and conversion method (recall pattern: divide going small→large, multiply going large→small)",
+        "Length: 100cm=1m, 1000m=1km. Mass: 1000g=1kg. Capacity: 1000ml=1litre.",
+        "Measurement uses agreed units. Before converting, identify the quantity: length, mass, capacity, time, area or volume."
+      ],
+      "workedExamples": [
+        "Convert 3.5km to metres: 3.5×1000=3,500m. Convert 2,400g to kg: 2,400÷1000=2.4kg.",
+        "3.5 m = 350 cm because 1 m = 100 cm."
+      ],
+      "practiceQuestions": [
+        "Convert 6.2m to cm.",
+        "Convert 1,800ml to litres.",
+        "A bag of rice weighs 2,500g. Express this in kg."
+      ],
+      "sourceFile": "Avora_NCEE_Maths_Primary5_Term3.md",
+      "sourceLineStart": 6,
+      "contentStatus": "TEACHING_READY",
+      "depthCompletionVersion": "14.8.1"
+    },
+    {
+      "id": "ncee-source-p5-mathematics-third-term-time",
+      "classLevel": "Primary 5",
+      "domain": "Mathematics",
+      "subject": "Mathematics",
+      "term": "Third Term",
+      "title": "Time",
+      "strand": null,
+      "subtopics": [],
+      "concepts": [
+        "Step 1 — Establish the 24-hour clock, converting from the familiar 12-hour format",
+        "Time can be expressed with clocks, minutes, hours, days and calendar units. Conversion factors must be used carefully: 60 minutes = 1 hour.",
+        "Elapsed time is the duration between a start and finish; it can be found by counting forward in manageable steps."
+      ],
+      "workedExamples": [
+        "3:00pm in 24-hour time: add 12 to the hour (since it's \"pm\" and past 12): 3+12=15:00.",
+        "A journey starts at 9:30am and ends at 1:15pm. Find the duration. From 9:30am to 12:00pm = 2hrs 30min. From 12:00pm to 1:15pm = 1hr 15min. Total = 2hr30min+1hr15min = 3hr45min."
+      ],
+      "practiceQuestions": [
+        "Convert 7:45pm to 24-hour time.",
+        "A class starts at 10:20am and lasts 50 minutes. What time does it end?",
+        "Find the elapsed time from 1:45 p.m. to 4:20 p.m."
+      ],
+      "sourceFile": "Avora_NCEE_Maths_Primary5_Term3.md",
+      "sourceLineStart": 23,
+      "contentStatus": "TEACHING_READY",
+      "depthCompletionVersion": "14.8.1"
+    },
+    {
+      "id": "ncee-source-p5-mathematics-third-term-perimeter-and-area",
+      "classLevel": "Primary 5",
+      "domain": "Mathematics",
+      "subject": "Mathematics",
+      "term": "Third Term",
+      "title": "Perimeter and Area",
+      "strand": null,
+      "subtopics": [],
+      "concepts": [
+        "Step 1 — Recall: perimeter is total distance around; area is surface covered, counted in unit squares",
+        "Perimeter measures the boundary around a flat shape, area measures the surface covered, and volume measures space occupied by a solid. They are different quantities and use different units.",
+        "For rectangles, perimeter = 2(length+width) and area = length×width. For rectangular prisms, volume = length×width×height."
+      ],
+      "workedExamples": [
+        "Rectangle 8cm by 5cm: Perimeter=2(8+5)=26cm. Area=8×5=40cm².",
+        "Rectangle 8 cm by 5 cm: perimeter=2(8+5)=26 cm; area=8×5=40 cm²."
+      ],
+      "practiceQuestions": [
+        "Find the perimeter and area of a square with side 6cm.",
+        "A rectangular garden is 12m by 7m. Find its perimeter and area.",
+        "Find the area and perimeter of a 12 cm by 7 cm rectangle."
+      ],
+      "sourceFile": "Avora_NCEE_Maths_Primary5_Term3.md",
+      "sourceLineStart": 40,
+      "contentStatus": "TEACHING_READY",
+      "depthCompletionVersion": "14.8.1"
+    },
+    {
+      "id": "ncee-source-p5-mathematics-third-term-basic-shapes-and-angles",
+      "classLevel": "Primary 5",
+      "domain": "Mathematics",
+      "subject": "Mathematics",
+      "term": "Third Term",
+      "title": "Basic Shapes and Angles",
+      "strand": null,
+      "subtopics": [],
+      "concepts": [
+        "Step 1 — Establish angle types by their SIZE range, using a visual clock-hand comparison",
+        "Acute angle: less than 90° (a \"sharp,\" small opening). Right angle: exactly 90° (like a square corner). Obtuse angle: more than 90° but less than 180°. Straight angle: exactly 180° (a straight line).",
+        "An angle measures turn and is measured in degrees. Acute angles are less than 90°, right angles equal 90°, obtuse angles lie between 90° and 180°."
+      ],
+      "workedExamples": [
+        "If one angle on a straight line is 65°, the other is 180°−65°=115°.",
+        "A triangle with angles 50° and 60° has third angle 70°."
+      ],
+      "practiceQuestions": [
+        "Classify these angles: 45°, 90°, 120°, 180°.",
+        "Name a 2D shape with exactly 3 sides, and one with exactly 4 equal sides.",
+        "Classify an angle of 135°."
+      ],
+      "sourceFile": "Avora_NCEE_Maths_Primary5_Term3.md",
+      "sourceLineStart": 53,
+      "contentStatus": "TEACHING_READY",
+      "depthCompletionVersion": "14.8.1"
+    },
+    {
+      "id": "ncee-source-p5-mathematics-third-term-simple-data-handling",
+      "classLevel": "Primary 5",
+      "domain": "Mathematics",
+      "subject": "Mathematics",
+      "term": "Third Term",
+      "title": "Simple Data Handling",
+      "strand": null,
+      "subtopics": [],
+      "concepts": [
+        "Step 1 — Establish reading a bar graph: the height of each bar shows the quantity for that category",
+        "Data are values collected to answer a question. Read headings, labels and units before using a table or chart.",
+        "The mean is total ÷ number of values. The mode is the most frequent value. The median is the middle value after ordering the data."
+      ],
+      "workedExamples": [
+        "A bar graph shows: Mango=5 votes, Orange=8 votes, Banana=3 votes. Which fruit was most popular? Orange, since its bar is tallest (8 votes, the highest number).",
+        "For 4, 6, 6, 8: mean=24/4=6, mode=6, median=(6+6)/2=6."
+      ],
+      "practiceQuestions": [
+        "From the data: Football=12, Basketball=7, Swimming=5 — which sport is least popular, and how do you know?",
+        "If a tally chart shows |||| | for a count, what number does this represent? (4 full lines + 1 = 5, since tally marks group in 5s)",
+        "Find the mean of 5,7,8,10."
+      ],
+      "sourceFile": "Avora_NCEE_Maths_Primary5_Term3.md",
+      "sourceLineStart": 65,
+      "contentStatus": "TEACHING_READY",
+      "depthCompletionVersion": "14.8.1"
+    },
+    {
+      "id": "ncee-source-p5-mathematics-third-term-word-problems-multi-step-revision",
+      "classLevel": "Primary 5",
+      "domain": "Mathematics",
+      "subject": "Mathematics",
+      "term": "Third Term",
+      "title": "Word Problems (Multi-Step Revision)",
+      "strand": null,
+      "subtopics": [],
+      "concepts": [
+        "A word problem must be translated before it is calculated: identify what is known, what is asked, and the relationship between the quantities.",
+        "Underline clue relationships but do not rely on one keyword alone; decide whether the situation describes combining, comparing, equal groups, rates, fractions or another structure.",
+        "For multi-step problems, write each intermediate result with its meaning, then check the final answer against the story."
+      ],
+      "workedExamples": [
+        "A trader had 3,500 oranges. She sold 1,250 in the morning and 980 in the afternoon. How many oranges are left? Total sold=1,250+980=2,230. Left=3,500−2,230=1,270.",
+        "A shop has 240 bottles, sells 85 in the morning and 67 later. Total sold=152; remaining=240−152=88."
+      ],
+      "practiceQuestions": [
+        "A tank holds 500 litres. If 180 litres are used in the morning and 95 litres in the evening, how much water remains?",
+        "Musa has ₦3,000. He buys 3 books at ₦450 each. How much money does he have left?",
+        "A farmer packs 1,260 oranges equally into 9 baskets. How many per basket?"
+      ],
+      "sourceFile": "Avora_NCEE_Maths_Primary5_Term3.md",
+      "sourceLineStart": 78,
+      "contentStatus": "TEACHING_READY",
+      "depthCompletionVersion": "14.8.1"
+    },
+    {
+      "id": "ncee-source-p6-mathematics-first-term-whole-numbers-place-value-to-millions-billions-standard-form-introductory",
+      "classLevel": "Primary 6",
+      "domain": "Mathematics",
+      "subject": "Mathematics",
+      "term": "First Term",
+      "title": "Whole Numbers — Place Value to Millions/Billions, Standard Form (Introductory)",
+      "strand": null,
+      "subtopics": [],
+      "concepts": [
+        "Step 1 — Extend Primary 5's place value work to millions, using the same grouping-in-3s method already established",
+        "Step 2 — Introduce standard form as a preview (fully developed later in JSS, but the CONCEPT starts here)",
+        "Standard form writes a number as (a number 1-10) × a power of 10. 4,000,000 = 4×10⁶ (since we move the decimal 6 places)."
+      ],
+      "workedExamples": [
+        "Read 4,250,000: group as 4 | 250 | 000 → four million, two hundred and fifty thousand.",
+        "In 4,582,731 the digit 8 is in the ten-thousands place, so its value is 80,000."
+      ],
+      "practiceQuestions": [
+        "Read 7,300,000 in words.",
+        "Write 3,000,000 in standard form.",
+        "What is the value of 7 in 2,734,105?"
+      ],
+      "sourceFile": "Avora_NCEE_Maths_Primary6_Term1.md",
+      "sourceLineStart": 6,
+      "contentStatus": "TEACHING_READY",
+      "depthCompletionVersion": "14.8.1"
+    },
+    {
+      "id": "ncee-source-p6-mathematics-first-term-approximation-and-estimation",
+      "classLevel": "Primary 6",
+      "domain": "Mathematics",
+      "subject": "Mathematics",
+      "term": "First Term",
+      "title": "Approximation and Estimation",
+      "strand": null,
+      "subtopics": [],
+      "concepts": [
+        "Step 1 — Recall the rounding rule (5 rounds up) and apply it at larger scales",
+        "Approximation replaces a number with a nearby simpler value according to a stated place value or number of significant figures.",
+        "To round, look at the digit immediately to the right of the place being kept: 5 or more rounds up; below 5 stays."
+      ],
+      "workedExamples": [
+        "Round 456,789 to the nearest ten-thousand. Look at the thousands digit (6): since 6≥5, round the ten-thousands digit up: 460,000.",
+        "48,763 rounded to the nearest thousand is 49,000."
+      ],
+      "practiceQuestions": [
+        "Round 82,349 to the nearest thousand.",
+        "Estimate the total cost of 3 items priced ₦1,980, ₦2,950, and ₦4,120 by first rounding each to the nearest thousand.",
+        "Round 6,748 to the nearest hundred."
+      ],
+      "sourceFile": "Avora_NCEE_Maths_Primary6_Term1.md",
+      "sourceLineStart": 23,
+      "contentStatus": "TEACHING_READY",
+      "depthCompletionVersion": "14.8.1"
+    },
+    {
+      "id": "ncee-source-p6-mathematics-first-term-factors-multiples-lcm-and-hcf-full-method",
+      "classLevel": "Primary 6",
+      "domain": "Mathematics",
+      "subject": "Mathematics",
+      "term": "First Term",
+      "title": "Factors, Multiples, LCM and HCF (Full Method)",
+      "strand": null,
+      "subtopics": [],
+      "concepts": [
+        "Step 1 — Recall factors/multiples from Primary 5, now applying the full LCM/HCF method (listing AND prime factorization)",
+        "A factor divides a number exactly; a multiple is produced by multiplying the number by a whole number.",
+        "HCF is the greatest factor shared by the numbers; LCM is the smallest positive multiple shared by them."
+      ],
+      "workedExamples": [
+        "Find the LCM of 8 and 12. Multiples of 8: 8,16,24... Multiples of 12: 12,24... First common: 24.",
+        "Find the HCF of 18 and 24. Factors of 18: 1,2,3,6,9,18. Factors of 24: 1,2,3,4,6,8,12,24. Common: 1,2,3,6. Highest: 6."
+      ],
+      "practiceQuestions": [
+        "Find the LCM of 6 and 9.",
+        "Find the HCF of 20 and 30.",
+        "Two bells ring every 6 and 8 minutes. When will they next ring together? (an LCM word problem)"
+      ],
+      "sourceFile": "Avora_NCEE_Maths_Primary6_Term1.md",
+      "sourceLineStart": 36,
+      "contentStatus": "TEACHING_READY",
+      "depthCompletionVersion": "14.8.1"
+    },
+    {
+      "id": "ncee-source-p6-mathematics-first-term-fractions-full-operations-and-word-problems",
+      "classLevel": "Primary 6",
+      "domain": "Mathematics",
+      "subject": "Mathematics",
+      "term": "First Term",
+      "title": "Fractions — Full Operations and Word Problems",
+      "strand": null,
+      "subtopics": [],
+      "concepts": [
+        "Step 1 — Consolidate all four operations, then apply to multi-step word problems",
+        "A fraction represents equal parts of a whole or of a quantity. The denominator tells how many equal parts make the whole; the numerator tells how many parts are considered.",
+        "Equivalent fractions name the same quantity with different-sized equal parts. Multiply or divide numerator and denominator by the same non-zero number to create an equivalent fraction."
+      ],
+      "workedExamples": [
+        "A tank is ⅔ full. If ¼ of the remaining space is filled, what fraction of the tank is now full? Remaining space initially = 1−⅔=⅓. ¼ of that remaining space is filled: ¼×⅓=1/12. New total filled = ⅔+1/12. Common denominator=12: ⅔=8/12. 8/12+1/12=9/12=¾.",
+        "3/4 means 3 of 4 equal parts. 6/8 is equivalent because both numerator and denominator were doubled."
+      ],
+      "practiceQuestions": [
+        "Add: 2⅓ + 1¾",
+        "A trader sold ⅗ of his oranges in the morning and ⅙ of the remainder in the afternoon. What fraction of the total did he sell in the afternoon? (careful: ⅙ of the REMAINDER, not of the original total)",
+        "Write an equivalent fraction for 5/6."
+      ],
+      "sourceFile": "Avora_NCEE_Maths_Primary6_Term1.md",
+      "sourceLineStart": 53,
+      "contentStatus": "TEACHING_READY",
+      "depthCompletionVersion": "14.8.1"
+    },
+    {
+      "id": "ncee-source-p6-mathematics-first-term-ratio-and-proportion-introductory",
+      "classLevel": "Primary 6",
+      "domain": "Mathematics",
+      "subject": "Mathematics",
+      "term": "First Term",
+      "title": "Ratio and Proportion (Introductory)",
+      "strand": null,
+      "subtopics": [],
+      "concepts": [
+        "Step 1 — Establish ratio as comparing quantities directly, connecting to the sharing method",
+        "A ratio compares quantities using equal-sized parts. Simplify a ratio by dividing every term by the same common factor.",
+        "In direct proportion, quantities change by the same scale factor; if one doubles, the corresponding quantity doubles."
+      ],
+      "workedExamples": [
+        "Share 60 sweets between two children in the ratio 2:3. Total parts=5. Each part=60÷5=12. First share=2×12=24. Second share=3×12=36.",
+        "Share ₦1,000 in ratio 2:3. Total parts=5; one part=₦200; shares are ₦400 and ₦600."
+      ],
+      "practiceQuestions": [
+        "Share ₦800 between two people in the ratio 3:5.",
+        "Simplify the ratio 12:16 to its lowest terms.",
+        "Simplify 18:24."
+      ],
+      "sourceFile": "Avora_NCEE_Maths_Primary6_Term1.md",
+      "sourceLineStart": 67,
+      "contentStatus": "TEACHING_READY",
+      "depthCompletionVersion": "14.8.1"
+    },
+    {
+      "id": "ncee-source-p6-mathematics-second-term-decimals-full-operations-and-word-problems",
+      "classLevel": "Primary 6",
+      "domain": "Mathematics",
+      "subject": "Mathematics",
+      "term": "Second Term",
+      "title": "Decimals — Full Operations and Word Problems",
+      "strand": null,
+      "subtopics": [],
+      "concepts": [
+        "Decimals extend place value to tenths, hundredths and thousandths. A digit’s value depends on its position relative to the decimal point.",
+        "When adding or subtracting decimals, align decimal points so equal place values are combined.",
+        "Fractions, decimals and percentages can describe the same quantity, so converting between forms helps check answers."
+      ],
+      "workedExamples": [
+        "3.2 × 1.5. Ignore decimals first: 32×15=480. Now count total decimal places in the original numbers (1 in 3.2, 1 in 1.5 = 2 total): place the decimal point 2 places from the right in 480: 4.80.",
+        "3.47 + 0.8 = 3.47 + 0.80 = 4.27."
+      ],
+      "practiceQuestions": [
+        "Multiply: 2.4 × 3.6",
+        "Divide: 6.4 ÷ 0.8 (hint: multiply both numbers by 10 to remove the decimal, then divide normally: 64÷8)",
+        "Find 8.5 − 2.76."
+      ],
+      "sourceFile": "Avora_NCEE_Maths_Primary6_Term2.md",
+      "sourceLineStart": 6,
+      "contentStatus": "TEACHING_READY",
+      "depthCompletionVersion": "14.8.1"
+    },
+    {
+      "id": "ncee-source-p6-mathematics-second-term-percentages-full-treatment",
+      "classLevel": "Primary 6",
+      "domain": "Mathematics",
+      "subject": "Mathematics",
+      "term": "Second Term",
+      "title": "Percentages — Full Treatment",
+      "strand": null,
+      "subtopics": [],
+      "concepts": [
+        "Step 1 — Recall percentage-of-a-quantity and percentage change, now with profit/loss framing",
+        "Percent means “out of 100.” A percentage can be converted to a fraction over 100 or to a decimal by dividing by 100.",
+        "To find a percentage of a quantity, multiply the quantity by the percentage written as a fraction or decimal."
+      ],
+      "workedExamples": [
+        "A trader buys an item for ₦800 and sells it for ₦1,000. Find the percentage profit. Profit=1,000−800=₦200. Percentage profit=(200/800)×100=25%.",
+        "25% of 80 = 0.25×80 = 20."
+      ],
+      "practiceQuestions": [
+        "Find 15% of ₦2,400.",
+        "A shopkeeper buys a shirt for ₦1,500 and sells it for ₦1,800. Find the percentage profit.",
+        "A price is reduced by 20% from ₦5,000. Find the new price."
+      ],
+      "sourceFile": "Avora_NCEE_Maths_Primary6_Term2.md",
+      "sourceLineStart": 17,
+      "contentStatus": "TEACHING_READY",
+      "depthCompletionVersion": "14.8.1"
+    },
+    {
+      "id": "ncee-source-p6-mathematics-second-term-simple-interest-introductory",
+      "classLevel": "Primary 6",
+      "domain": "Mathematics",
+      "subject": "Mathematics",
+      "term": "Second Term",
+      "title": "Simple Interest (Introductory)",
+      "strand": null,
+      "subtopics": [],
+      "concepts": [
+        "Simple interest is the extra money paid or earned on an original principal for a stated time at a stated rate.",
+        "For simple interest, SI = P×R×T/100, where P is principal, R is annual rate percent, and T is time in years.",
+        "The amount after simple interest is principal plus interest. Keep the rate and time units consistent."
+      ],
+      "workedExamples": [
+        "Find the simple interest on ₦10,000 for 2 years at 5% per annum. I=(P×R×T)/100=(10,000×5×2)/100=₦1,000.",
+        "For ₦20,000 at 5% per year for 2 years: SI=20,000×5×2/100=₦2,000; amount=₦22,000."
+      ],
+      "practiceQuestions": [
+        "Find the simple interest on ₦20,000 for 3 years at 4% per annum.",
+        "Find the simple interest on ₦15,000 at 4% for 3 years.",
+        "Find the amount on ₦6,000 at 5% for 2 years."
+      ],
+      "sourceFile": "Avora_NCEE_Maths_Primary6_Term2.md",
+      "sourceLineStart": 32,
+      "contentStatus": "TEACHING_READY",
+      "depthCompletionVersion": "14.8.1"
+    },
+    {
+      "id": "ncee-source-p6-mathematics-second-term-algebra-introductory",
+      "classLevel": "Primary 6",
+      "domain": "Mathematics",
+      "subject": "Mathematics",
+      "term": "Second Term",
+      "title": "Algebra (Introductory)",
+      "strand": null,
+      "subtopics": [],
+      "concepts": [
+        "Step 1 — Establish a letter standing for an unknown number, and solving simple one-step equations",
+        "A letter in algebra can represent an unknown number. An equation states that two expressions have the same value.",
+        "To solve an equation, keep the balance: whatever operation is done to one side must be done to the other side."
+      ],
+      "workedExamples": [
+        "Solve: x + 7 = 15. Subtract 7 from both sides: x=8.",
+        "2x+5=17 → 2x=12 → x=6; check 2(6)+5=17."
+      ],
+      "practiceQuestions": [
+        "Solve: x − 5 = 12",
+        "Solve: 3x = 21",
+        "A number added to 9 gives 20. Find the number (translate to an equation first)."
+      ],
+      "sourceFile": "Avora_NCEE_Maths_Primary6_Term2.md",
+      "sourceLineStart": 43,
+      "contentStatus": "TEACHING_READY",
+      "depthCompletionVersion": "14.8.1"
+    },
+    {
+      "id": "ncee-source-p6-mathematics-second-term-directed-numbers-introductory",
+      "classLevel": "Primary 6",
+      "domain": "Mathematics",
+      "subject": "Mathematics",
+      "term": "Second Term",
+      "title": "Directed Numbers (Introductory)",
+      "strand": null,
+      "subtopics": [],
+      "concepts": [
+        "Step 1 — Establish negative numbers using a real-world reference: temperature below zero, or debt",
+        "Directed numbers include positive numbers, zero and negative numbers. A number line shows their order clearly.",
+        "Moving right on a number line increases value; moving left decreases value. A negative number closer to zero is greater than one farther left."
+      ],
+      "workedExamples": [
+        "The temperature was −3°C and rose by 8°C. Find the new temperature: −3+8=5°C.",
+        "−3 is greater than −7 because −3 lies to the right of −7 on the number line."
+      ],
+      "practiceQuestions": [
+        "Calculate: −5 + 9",
+        "Calculate: 4 − 10",
+        "Order −5,2,0,−1 from least to greatest."
+      ],
+      "sourceFile": "Avora_NCEE_Maths_Primary6_Term2.md",
+      "sourceLineStart": 57,
+      "contentStatus": "TEACHING_READY",
+      "depthCompletionVersion": "14.8.1"
+    },
+    {
+      "id": "ncee-source-p6-mathematics-third-term-measurement-full-conversions-and-word-problems",
+      "classLevel": "Primary 6",
+      "domain": "Mathematics",
+      "subject": "Mathematics",
+      "term": "Third Term",
+      "title": "Measurement — Full Conversions and Word Problems",
+      "strand": null,
+      "subtopics": [],
+      "concepts": [
+        "Measurement uses agreed units. Before converting, identify the quantity: length, mass, capacity, time, area or volume.",
+        "A conversion changes the unit name without changing the actual quantity. Multiply when moving to smaller units and divide when moving to larger units, using the correct conversion factor.",
+        "Keep compound and square units distinct: 1 m = 100 cm, but 1 m² = 10,000 cm²."
+      ],
+      "workedExamples": [
+        "A tailor has 5.5m of cloth. Each shirt needs 1.25m. How many complete shirts can be made? 5.5÷1.25=4.4 → 4 complete shirts (0.4 of a shirt's worth of cloth remains, not enough for a 5th).",
+        "3.5 m = 350 cm because 1 m = 100 cm."
+      ],
+      "practiceQuestions": [
+        "A rope is 12.6m long. If it's cut into pieces of 0.9m each, how many pieces can be made?",
+        "Convert 4.75 m to cm.",
+        "Convert 3,250 mL to litres."
+      ],
+      "sourceFile": "Avora_NCEE_Maths_Primary6_Term3.md",
+      "sourceLineStart": 6,
+      "contentStatus": "TEACHING_READY",
+      "depthCompletionVersion": "14.8.1"
+    },
+    {
+      "id": "ncee-source-p6-mathematics-third-term-perimeter-area-and-volume",
+      "classLevel": "Primary 6",
+      "domain": "Mathematics",
+      "subject": "Mathematics",
+      "term": "Third Term",
+      "title": "Perimeter, Area, and Volume",
+      "strand": null,
+      "subtopics": [],
+      "concepts": [
+        "Perimeter measures the boundary around a flat shape, area measures the surface covered, and volume measures space occupied by a solid. They are different quantities and use different units.",
+        "For rectangles, perimeter = 2(length+width) and area = length×width. For rectangular prisms, volume = length×width×height.",
+        "Always write the correct unit: length units for perimeter, square units for area, cubic units for volume."
+      ],
+      "workedExamples": [
+        "A box is 8cm×5cm×4cm. Find its volume: 8×5×4=160cm³.",
+        "Rectangle 8 cm by 5 cm: perimeter=2(8+5)=26 cm; area=8×5=40 cm²."
+      ],
+      "practiceQuestions": [
+        "Find the area of a triangle with base 14cm and height 8cm.",
+        "Find the volume of a cuboid 10cm×6cm×5cm.",
+        "Find the area and perimeter of a 12 cm by 7 cm rectangle."
+      ],
+      "sourceFile": "Avora_NCEE_Maths_Primary6_Term3.md",
+      "sourceLineStart": 17,
+      "contentStatus": "TEACHING_READY",
+      "depthCompletionVersion": "14.8.1"
+    },
+    {
+      "id": "ncee-source-p6-mathematics-third-term-angles-and-basic-geometry",
+      "classLevel": "Primary 6",
+      "domain": "Mathematics",
+      "subject": "Mathematics",
+      "term": "Third Term",
+      "title": "Angles and Basic Geometry",
+      "strand": null,
+      "subtopics": [],
+      "concepts": [
+        "An angle measures turn and is measured in degrees. Acute angles are less than 90°, right angles equal 90°, obtuse angles lie between 90° and 180°.",
+        "Shapes are classified by properties such as number of sides, equal sides, parallel sides and angle sizes, not merely by how a drawing looks.",
+        "The angles on a straight line add to 180°, and the interior angles of a triangle add to 180°."
+      ],
+      "workedExamples": [
+        "Angles on a straight line: 65° and x°. Find x. x=180−65=115°.",
+        "If one angle on a straight line is 65°, the other is 180°−65°=115°."
+      ],
+      "practiceQuestions": [
+        "Find the missing angle: two angles on a straight line are 40° and x°.",
+        "Name a shape with 4 equal sides and 4 right angles.",
+        "Classify an angle of 135°."
+      ],
+      "sourceFile": "Avora_NCEE_Maths_Primary6_Term3.md",
+      "sourceLineStart": 28,
+      "contentStatus": "TEACHING_READY",
+      "depthCompletionVersion": "14.8.1"
+    },
+    {
+      "id": "ncee-source-p6-mathematics-third-term-data-handling-and-statistics",
+      "classLevel": "Primary 6",
+      "domain": "Mathematics",
+      "subject": "Mathematics",
+      "term": "Third Term",
+      "title": "Data Handling and Statistics",
+      "strand": null,
+      "subtopics": [],
+      "concepts": [
+        "Step 1 — Introduce average (mean) as \"sharing the total equally\"",
+        "Data are values collected to answer a question. Read headings, labels and units before using a table or chart.",
+        "The mean is total ÷ number of values. The mode is the most frequent value. The median is the middle value after ordering the data."
+      ],
+      "workedExamples": [
+        "Find the average of 4, 7, 9, 12. Total=4+7+9+12=32. Average=32÷4=8.",
+        "For 4, 6, 6, 8: mean=24/4=6, mode=6, median=(6+6)/2=6."
+      ],
+      "practiceQuestions": [
+        "Find the average of 10, 15, 20, 25, 30.",
+        "A pie chart shows 90° for a category out of a total of 40 people surveyed. How many people does this represent? (90/360=¼; ¼×40=10)",
+        "Find the mean of 5,7,8,10."
+      ],
+      "sourceFile": "Avora_NCEE_Maths_Primary6_Term3.md",
+      "sourceLineStart": 39,
+      "contentStatus": "TEACHING_READY",
+      "depthCompletionVersion": "14.8.1"
+    },
+    {
+      "id": "ncee-source-p6-mathematics-third-term-speed-distance-and-time-introductory",
+      "classLevel": "Primary 6",
+      "domain": "Mathematics",
+      "subject": "Mathematics",
+      "term": "Third Term",
+      "title": "Speed, Distance, and Time (Introductory)",
+      "strand": null,
+      "subtopics": [],
+      "concepts": [
+        "Speed compares distance travelled with time taken: speed = distance ÷ time.",
+        "The three related formulas are distance = speed×time, speed = distance÷time, and time = distance÷speed.",
+        "Convert time units before substituting into a formula; for example 30 minutes = 0.5 hour if speed is in km/h."
+      ],
+      "workedExamples": [
+        "A car travels 120km in 2 hours. Find its speed: 120÷2=60km/h.",
+        "At 60 km/h for 2.5 h, distance=60×2.5=150 km."
+      ],
+      "practiceQuestions": [
+        "A cyclist travels 45km in 3 hours. Find the speed.",
+        "A car travels at 60km/h for 2.5 hours. Find the distance covered (Distance=Speed×Time=60×2.5).",
+        "Find the distance travelled at 80 km/h for 45 minutes."
+      ],
+      "sourceFile": "Avora_NCEE_Maths_Primary6_Term3.md",
+      "sourceLineStart": 52,
+      "contentStatus": "TEACHING_READY",
+      "depthCompletionVersion": "14.8.1"
+    },
+    {
+      "id": "ncee-source-p6-mathematics-third-term-full-revision-ncee-style-mixed-word-problems",
+      "classLevel": "Primary 6",
+      "domain": "Mathematics",
+      "subject": "Mathematics",
+      "term": "Third Term",
+      "title": "Full Revision — NCEE-Style Mixed Word Problems",
+      "strand": null,
+      "subtopics": [],
+      "concepts": [
+        "A word problem must be translated before it is calculated: identify what is known, what is asked, and the relationship between the quantities.",
+        "Underline clue relationships but do not rely on one keyword alone; decide whether the situation describes combining, comparing, equal groups, rates, fractions or another structure.",
+        "For multi-step problems, write each intermediate result with its meaning, then check the final answer against the story."
+      ],
+      "workedExamples": [
+        "Musa had ₦5,000. He spent ⅖ on books and 15% of the remainder on transport. How much does he have left? Spent on books=⅖×5,000=₦2,000. Remainder=5,000−2,000=₦3,000. Spent on transport=15%×3,000=₦450. Left=3,000−450=₦2,550.",
+        "A shop has 240 bottles, sells 85 in the morning and 67 later. Total sold=152; remaining=240−152=88."
+      ],
+      "practiceQuestions": [
+        "A trader had 240 oranges. She sold ¾ of them and gave away 20% of the remainder to a neighbor. How many oranges does she have left?",
+        "A rectangular field is 60m by 40m. Find its area, then find how much it would cost to fence it at ₦500 per metre.",
+        "A farmer packs 1,260 oranges equally into 9 baskets. How many per basket?"
+      ],
+      "sourceFile": "Avora_NCEE_Maths_Primary6_Term3.md",
+      "sourceLineStart": 63,
+      "contentStatus": "TEACHING_READY",
+      "depthCompletionVersion": "14.8.1"
+    },
+    {
+      "id": "ncee-source-p5-quantitative-and-vocational-aptitude-all-number-patterns-and-sequences",
+      "classLevel": "Primary 5",
+      "domain": "Quantitative & Vocational Aptitude",
+      "subject": "Quantitative Reasoning",
+      "term": "All Terms",
+      "title": "Number Patterns and Sequences",
+      "strand": null,
+      "subtopics": [],
+      "concepts": [
+        "Step 1 — Establish the core method for ANY sequence puzzle: find the RULE connecting consecutive terms by testing simple operations first (add, subtract, multiply)",
+        "A number pattern is controlled by a rule. Test differences, ratios or alternating operations rather than guessing from the last two numbers only.",
+        "For changing-difference patterns, calculate consecutive differences and inspect how those differences change."
+      ],
+      "workedExamples": [
+        "1 (simple addition pattern): 2, 5, 8, 11, ___? Test: 5−2=3, 8−5=3, 11−8=3 — consistent rule: add 3 each time. Next: 11+3=14.",
+        "2 (multiplication pattern): 3, 6, 12, 24, ___? Test differences first: 6−3=3, 12−6=6, 24−12=12 — NOT constant, so addition isn't the rule. Test ratios instead: 6÷3=2, 12÷6=2, 24÷12=2 — consistent: multiply by 2 each time. Next: 24×2=48.",
+        "3 (a trickier alternating pattern, testing beyond the first guess) 1, 4, 2, 5, 3, 6, ___? This doesn't fit a single simple add/multiply rule across ALL terms. Look for TWO interleaved patterns: positions 1,3,5 (1,2,3 — adding 1 each time) and positions 2,4,6 (4,5,6 — adding 1 each time). The 7th term continues the first pattern: 3+1=4."
+      ],
+      "practiceQuestions": [
+        "Find the next number: 4, 8, 12, 16, ___?",
+        "Find the next number: 1, 3, 9, 27, ___? (test differences first, then ratios if differences don't work)",
+        "Find the next number: 20, 17, 14, 11, ___?",
+        "Find the missing number: 2, 4, 8, ___, 32 (test the rule using the numbers you DO have on both sides of the gap)"
+      ],
+      "sourceFile": "Avora_NCEE_QuantitativeReasoning_Primary5.md",
+      "sourceLineStart": 8,
+      "contentStatus": "TEACHING_READY",
+      "depthCompletionVersion": "14.8.1"
+    },
+    {
+      "id": "ncee-source-p5-quantitative-and-vocational-aptitude-all-relationships-between-numbers",
+      "classLevel": "Primary 5",
+      "domain": "Quantitative & Vocational Aptitude",
+      "subject": "Quantitative Reasoning",
+      "term": "All Terms",
+      "title": "Relationships Between Numbers",
+      "strand": null,
+      "subtopics": [],
+      "concepts": [
+        "Step 1 — Establish odd/even, factors, and multiples as tools for spotting relationships in puzzles",
+        "A coded-number puzzle hides a rule connecting inputs to outputs.",
+        "Test each candidate rule against every given example; a rule that fits only one example may be coincidence."
+      ],
+      "workedExamples": [
+        "\"Which number does not belong: 12, 18, 24, 25?\" Test: 12,18,24 are all multiples of 6 (12=6×2, 18=6×3, 24=6×4), but 25 is not (25÷6 doesn't divide evenly). 25 is the odd one out.",
+        "If 3☆4=10 and 5☆2=12, rule 2a+b fits both: 6+4=10 and 10+2=12."
+      ],
+      "practiceQuestions": [
+        "Which number does not belong: 15, 20, 25, 27? (test what the others have in common first)",
+        "Which number does not belong: 8, 16, 24, 30? (hint: test multiples of a specific number)",
+        "Test a rule against two examples before using it."
+      ],
+      "sourceFile": "Avora_NCEE_QuantitativeReasoning_Primary5.md",
+      "sourceLineStart": 32,
+      "contentStatus": "TEACHING_READY",
+      "depthCompletionVersion": "14.8.1"
+    },
+    {
+      "id": "ncee-source-p5-quantitative-and-vocational-aptitude-all-simple-logical-number-puzzles",
+      "classLevel": "Primary 5",
+      "domain": "Quantitative & Vocational Aptitude",
+      "subject": "Quantitative Reasoning",
+      "term": "All Terms",
+      "title": "Simple Logical Number Puzzles",
+      "strand": null,
+      "subtopics": [],
+      "concepts": [
+        "Step 1 — Establish reading a puzzle's given rule CAREFULLY and applying it exactly, testing with the given example before solving the actual question",
+        "A coded-number puzzle hides a rule connecting inputs to outputs.",
+        "Test each candidate rule against every given example; a rule that fits only one example may be coincidence."
+      ],
+      "workedExamples": [
+        "\"If ☆ means 'add 3 then double,' find 4☆.\" Apply step by step: 4+3=7, then double: 7×2=14. So 4☆=14.",
+        "If 3☆4=10 and 5☆2=12, rule 2a+b fits both: 6+4=10 and 10+2=12."
+      ],
+      "practiceQuestions": [
+        "If ◇ means \"multiply by 2 then subtract 1,\" find 5◇.",
+        "If a rule says \"double the number and add 5,\" and the result is 15, what was the original number? (work backwards: 15−5=10, then 10÷2=5)",
+        "Test a rule against two examples before using it."
+      ],
+      "sourceFile": "Avora_NCEE_QuantitativeReasoning_Primary5.md",
+      "sourceLineStart": 45,
+      "contentStatus": "TEACHING_READY",
+      "depthCompletionVersion": "14.8.1"
+    },
+    {
+      "id": "ncee-source-p5-quantitative-and-vocational-aptitude-all-word-based-number-problems-pattern-recognition",
+      "classLevel": "Primary 5",
+      "domain": "Quantitative & Vocational Aptitude",
+      "subject": "Quantitative Reasoning",
+      "term": "All Terms",
+      "title": "Word-Based Number Problems (Pattern Recognition)",
+      "strand": null,
+      "subtopics": [],
+      "concepts": [
+        "A number pattern is controlled by a rule. Test differences, ratios or alternating operations rather than guessing from the last two numbers only.",
+        "For changing-difference patterns, calculate consecutive differences and inspect how those differences change.",
+        "Confirm a proposed rule on more than one step before using it to predict the next term."
+      ],
+      "workedExamples": [
+        "\"A pattern of chairs is arranged: 1 chair in row 1, 3 chairs in row 2, 5 chairs in row 3. How many chairs in row 5?\" Pattern: odd numbers increasing by 2 each row (1,3,5,7,9...). Row 5 = 9 chairs.",
+        "1,2,4,7,11 has differences 1,2,3,4, so next difference is 5 and next term is 16."
+      ],
+      "practiceQuestions": [
+        "A pattern of tiles: 2, 4, 6, 8... How many tiles in the 6th position?",
+        "A saving pattern: Week 1 save ₦100, Week 2 save ₦150, Week 3 save ₦200. If the pattern continues, how much is saved in Week 5?",
+        "Find the next term: 3,6,11,18,27,..."
+      ],
+      "sourceFile": "Avora_NCEE_QuantitativeReasoning_Primary5.md",
+      "sourceLineStart": 59,
+      "contentStatus": "TEACHING_READY",
+      "depthCompletionVersion": "14.8.1"
+    },
+    {
+      "id": "ncee-source-p6-quantitative-and-vocational-aptitude-all-number-sequences-full-range-arithmetic-geometric-mixed-rule",
+      "classLevel": "Primary 6",
+      "domain": "Quantitative & Vocational Aptitude",
+      "subject": "Quantitative Reasoning",
+      "term": "All Terms",
+      "title": "Number Sequences (Full Range — Arithmetic, Geometric, Mixed-Rule)",
+      "strand": null,
+      "subtopics": [],
+      "concepts": [
+        "A number pattern is controlled by a rule. Test differences, ratios or alternating operations rather than guessing from the last two numbers only.",
+        "For changing-difference patterns, calculate consecutive differences and inspect how those differences change.",
+        "Confirm a proposed rule on more than one step before using it to predict the next term."
+      ],
+      "workedExamples": [
+        "1, 2, 4, 7, 11, ___? Test differences: 2−1=1, 4−2=2, 7−4=3, 11−7=4 — the DIFFERENCES themselves increase by 1 each time. Next difference=5: 11+5=16.",
+        "1,2,4,7,11 has differences 1,2,3,4, so next difference is 5 and next term is 16."
+      ],
+      "practiceQuestions": [
+        "Find the next number: 3, 6, 11, 18, 27, ___? (test the differences of the differences, as shown above)",
+        "Find the next number: 100, 50, 25, 12.5, ___?",
+        "Find the next term: 3,6,11,18,27,..."
+      ],
+      "sourceFile": "Avora_NCEE_QuantitativeReasoning_Primary6.md",
+      "sourceLineStart": 6,
+      "contentStatus": "TEACHING_READY",
+      "depthCompletionVersion": "14.8.1"
+    },
+    {
+      "id": "ncee-source-p6-quantitative-and-vocational-aptitude-all-relationships-disguised-as-puzzles",
+      "classLevel": "Primary 6",
+      "domain": "Quantitative & Vocational Aptitude",
+      "subject": "Quantitative Reasoning",
+      "term": "All Terms",
+      "title": "Relationships Disguised as Puzzles",
+      "strand": null,
+      "subtopics": [],
+      "concepts": [
+        "A coded-number puzzle hides a rule connecting inputs to outputs.",
+        "Test each candidate rule against every given example; a rule that fits only one example may be coincidence.",
+        "Once confirmed, apply exactly the same order of operations to the new input."
+      ],
+      "workedExamples": [
+        "\"If 3☆4=10 and 5☆2=12, find the rule and use it to find 6☆3.\" Test candidate rules against BOTH examples before committing to one: Try \"a+b\": 3+4=7 (not 10) — rejected immediately, since it fails the first example. Try \"2a+b\": 2(3)+4=10 ✓ matches the first example. Check against the second: 2(5)+2=12 ✓ matches too! Since this rule fits BOTH given examples consistently, it's confirmed. Apply to find 6☆3: 2(6)+3=15. This is the real exam skill: test a candidate rule against ALL given examples before trusting it — a rule that only fits ONE example could easily be a coincidence, not the actual pattern.",
+        "If 3☆4=10 and 5☆2=12, rule 2a+b fits both: 6+4=10 and 10+2=12."
+      ],
+      "practiceQuestions": [
+        "If 2★3=8 and 4★1=6, test at least two candidate rules against BOTH examples before finding the one that fits consistently, then find 5★2.",
+        "If a rule states \"double the first number and subtract the second,\" and 6◆2 uses this rule, find the result.",
+        "Test a rule against two examples before using it."
+      ],
+      "sourceFile": "Avora_NCEE_QuantitativeReasoning_Primary6.md",
+      "sourceLineStart": 18,
+      "contentStatus": "TEACHING_READY",
+      "depthCompletionVersion": "14.8.1"
+    },
+    {
+      "id": "ncee-source-p6-quantitative-and-vocational-aptitude-all-fractions-decimals-percentages-in-reasoning-puzzles",
+      "classLevel": "Primary 6",
+      "domain": "Quantitative & Vocational Aptitude",
+      "subject": "Quantitative Reasoning",
+      "term": "All Terms",
+      "title": "Fractions/Decimals/Percentages in Reasoning Puzzles",
+      "strand": null,
+      "subtopics": [],
+      "concepts": [
+        "A coded-number puzzle hides a rule connecting inputs to outputs.",
+        "Test each candidate rule against every given example; a rule that fits only one example may be coincidence.",
+        "Once confirmed, apply exactly the same order of operations to the new input."
+      ],
+      "workedExamples": [
+        "\"If ⅓ of a number is 15, find the number.\" Reasoning: if ⅓ = 15, the whole number = 15×3 = 45.",
+        "If 3☆4=10 and 5☆2=12, rule 2a+b fits both: 6+4=10 and 10+2=12."
+      ],
+      "practiceQuestions": [
+        "If ¼ of a number is 12, find the number.",
+        "If 20% of a number is 8, find the number.",
+        "Test a rule against two examples before using it."
+      ],
+      "sourceFile": "Avora_NCEE_QuantitativeReasoning_Primary6.md",
+      "sourceLineStart": 35,
+      "contentStatus": "TEACHING_READY",
+      "depthCompletionVersion": "14.8.1"
+    },
+    {
+      "id": "ncee-source-p6-quantitative-and-vocational-aptitude-all-algebraic-reasoning-puzzles",
+      "classLevel": "Primary 6",
+      "domain": "Quantitative & Vocational Aptitude",
+      "subject": "Quantitative Reasoning",
+      "term": "All Terms",
+      "title": "Algebraic Reasoning Puzzles",
+      "strand": null,
+      "subtopics": [],
+      "concepts": [
+        "A coded-number puzzle hides a rule connecting inputs to outputs.",
+        "Test each candidate rule against every given example; a rule that fits only one example may be coincidence.",
+        "Once confirmed, apply exactly the same order of operations to the new input."
+      ],
+      "workedExamples": [
+        "\"I think of a number, double it, and add 5. The result is 17. Find the number.\" (2x+5=17 → 2x=12 → x=6)",
+        "If 3☆4=10 and 5☆2=12, rule 2a+b fits both: 6+4=10 and 10+2=12."
+      ],
+      "practiceQuestions": [
+        "A number is tripled and 4 is subtracted, giving 20. Find the number.",
+        "Test a rule against two examples before using it.",
+        "Create a rule that fits two given input-output pairs."
+      ],
+      "sourceFile": "Avora_NCEE_QuantitativeReasoning_Primary6.md",
+      "sourceLineStart": 46,
+      "contentStatus": "TEACHING_READY",
+      "depthCompletionVersion": "14.8.1"
+    },
+    {
+      "id": "ncee-source-p6-quantitative-and-vocational-aptitude-all-time-speed-measurement-reasoning",
+      "classLevel": "Primary 6",
+      "domain": "Quantitative & Vocational Aptitude",
+      "subject": "Quantitative Reasoning",
+      "term": "All Terms",
+      "title": "Time, Speed, Measurement Reasoning",
+      "strand": null,
+      "subtopics": [],
+      "concepts": [
+        "Identify the quantities and units before calculating.",
+        "Convert units first when the formula uses a different unit, such as minutes to hours for km/h.",
+        "Use the relationship distance=speed×time and rearrange it only after identifying what is unknown."
+      ],
+      "workedExamples": [
+        "\"A car travels at 40km/h. How far does it travel in 45 minutes?\" Convert 45 min to hours: 45/60=¾hr. Distance=speed×time=40×¾=30km.",
+        "40 km/h for 45 min = 40×0.75=30 km."
+      ],
+      "practiceQuestions": [
+        "A train travels at 80km/h for 30 minutes. Find the distance covered.",
+        "Find distance at 60 km/h for 20 minutes.",
+        "Convert 90 minutes to hours."
+      ],
+      "sourceFile": "Avora_NCEE_QuantitativeReasoning_Primary6.md",
+      "sourceLineStart": 56,
+      "contentStatus": "TEACHING_READY",
+      "depthCompletionVersion": "14.8.1"
+    },
+    {
+      "id": "ncee-source-p6-quantitative-and-vocational-aptitude-all-full-ncee-style-timed-practice-set",
+      "classLevel": "Primary 6",
+      "domain": "Quantitative & Vocational Aptitude",
+      "subject": "Quantitative Reasoning",
+      "term": "All Terms",
+      "title": "Full NCEE-Style Timed Practice Set",
+      "strand": null,
+      "subtopics": [],
+      "concepts": [],
+      "workedExamples": [],
+      "practiceQuestions": [
+        "Find the next number: 5, 10, 20, 40, ___?",
+        "If ☆ means \"add 4 then multiply by 2,\" find 3☆.",
+        "If ⅖ of a number is 20, find the number.",
+        "A number doubled and increased by 3 gives 19. Find the number.",
+        "Find the odd one out: 16, 25, 36, 40 (test which are perfect squares)."
+      ],
+      "sourceFile": "Avora_NCEE_QuantitativeReasoning_Primary6.md",
+      "sourceLineStart": 66,
+      "contentStatus": "ASSESSMENT_ONLY"
+    },
+    {
+      "id": "ncee-source-p5-verbal-aptitude-all-odd-one-out-word-groups",
+      "classLevel": "Primary 5",
+      "domain": "Verbal Aptitude",
+      "subject": "Verbal Reasoning",
+      "term": "All Terms",
+      "title": "Odd-One-Out (Word Groups)",
+      "strand": null,
+      "subtopics": [],
+      "concepts": [
+        "Step 1 — Establish the method: find what MOST of the words have in common first, then identify which one breaks that pattern",
+        "Odd-one-out questions depend on a grouping rule shared by most items.",
+        "Test more than one possible rule and choose the one that creates the clearest consistent group."
+      ],
+      "workedExamples": [
+        "\"Rose, Tulip, Sunflower, Carrot\" → Test: Rose, Tulip, Sunflower are all flowers. Carrot is a vegetable/root. Odd one out: Carrot.",
+        "\"Whale, Shark, Dolphin, Salmon\" → All live in water, so that's not the distinguishing feature. Test another category: Whale and Dolphin are mammals; Shark and Salmon are fish. This puzzle actually needs the SPECIFIC instruction \"which does not belong with the others\" to be based on ONE clear odd-one-out — if the intended answer is based on \"mammal vs fish,\" then EITHER Whale/Dolphin (mammals) are the pair that stands apart from Shark/Salmon (fish), OR vice versa, depending on which group is \"the odd ones.\" This shows why reading the exact instruction matters — sometimes there are two valid groupings, and identifying the SPECIFIC contrast intended requires elimination based on the answer options given."
+      ],
+      "practiceQuestions": [
+        "Find the odd one out: \"Circle, Square, Triangle, Ball\" and explain your reasoning.",
+        "Find the odd one out: \"Doctor, Teacher, Nurse, Hospital\" (hint: three are people/professions, one is a place).",
+        "Find the odd one out: swim, run, jump, strong."
+      ],
+      "sourceFile": "Avora_NCEE_VerbalReasoning_Primary5.md",
+      "sourceLineStart": 6,
+      "contentStatus": "TEACHING_READY",
+      "depthCompletionVersion": "14.8.1"
+    },
+    {
+      "id": "ncee-source-p5-verbal-aptitude-all-word-analogies",
+      "classLevel": "Primary 5",
+      "domain": "Verbal Aptitude",
+      "subject": "Verbal Reasoning",
+      "term": "All Terms",
+      "title": "Word Analogies",
+      "strand": null,
+      "subtopics": [],
+      "concepts": [
+        "Step 1 — Establish the METHOD: identify the RELATIONSHIP between the first pair, then apply the SAME relationship to find the missing word",
+        "Understand every word first.",
+        "Identify the relationship or rule."
+      ],
+      "workedExamples": [
+        "\"Finger is to Hand as Toe is to ___?\" Relationship: a finger is PART OF a hand. Applying the same relationship: a toe is part of a ___? Answer: Foot.",
+        "\"Pen is to Write as Knife is to ___?\" Relationship: a pen is USED TO write. A knife is used to ___? Answer: Cut.",
+        "\"Rose is to Flower as Mango is to ___?\" Relationship: a rose is a TYPE OF flower. A mango is a type of ___? Answer: Fruit."
+      ],
+      "practiceQuestions": [
+        "Complete: \"Hand is to Glove as Foot is to ___?\"",
+        "Complete: \"Bird is to Nest as Bee is to ___?\"",
+        "Complete: \"Cold is to Ice as Hot is to ___?\" (identify the relationship type first: is this cause/effect, part/whole, or opposite?)"
+      ],
+      "sourceFile": "Avora_NCEE_VerbalReasoning_Primary5.md",
+      "sourceLineStart": 22,
+      "contentStatus": "TEACHING_READY",
+      "depthCompletionVersion": "14.8.1"
+    },
+    {
+      "id": "ncee-source-p5-verbal-aptitude-all-word-classification-and-grouping",
+      "classLevel": "Primary 5",
+      "domain": "Verbal Aptitude",
+      "subject": "Verbal Reasoning",
+      "term": "All Terms",
+      "title": "Word Classification and Grouping",
+      "strand": null,
+      "subtopics": [],
+      "concepts": [
+        "Step 1 — Establish sorting words into categories by shared properties",
+        "Classification groups words by a shared meaning, function, grammar or other clear property.",
+        "The rule must fit every member of the group; advanced questions may contain two hidden group rules."
+      ],
+      "workedExamples": [
+        "Sort into two groups: \"Lion, Rose, Tiger, Sunflower, Elephant, Tulip\" → Group 1 (animals): Lion, Tiger, Elephant. Group 2 (flowers): Rose, Sunflower, Tulip.",
+        "Rose, lily, tulip are flowers; carrot, cabbage, spinach are vegetables."
+      ],
+      "practiceQuestions": [
+        "Sort into two groups: \"Apple, Chair, Banana, Table, Orange, Bed\" (what are the two categories?).",
+        "Which word does NOT belong in this group, and why: \"Red, Blue, Green, Triangle, Yellow\"?",
+        "Sort six words into two named groups."
+      ],
+      "sourceFile": "Avora_NCEE_VerbalReasoning_Primary5.md",
+      "sourceLineStart": 45,
+      "contentStatus": "TEACHING_READY",
+      "depthCompletionVersion": "14.8.1"
+    },
+    {
+      "id": "ncee-source-p5-verbal-aptitude-all-basic-coding-letter-number-substitution",
+      "classLevel": "Primary 5",
+      "domain": "Verbal Aptitude",
+      "subject": "Verbal Reasoning",
+      "term": "All Terms",
+      "title": "Basic Coding (Letter/Number Substitution)",
+      "strand": null,
+      "subtopics": [],
+      "concepts": [
+        "Step 1 — Establish that a \"code\" follows a FIXED, consistent rule that must be discovered by testing",
+        "Coding replaces letters or words according to a rule. Decode by identifying and reversing the same rule.",
+        "Keep repeated letters consistent and track shifts carefully through the alphabet."
+      ],
+      "workedExamples": [
+        "\"If CAT is coded as DBU, what is DOG coded as?\" Test the rule: C→D (shift forward by 1 letter), A→B (shift by 1), T→U (shift by 1). Consistent rule: shift each letter forward by 1. Apply to DOG: D→E, O→P, G→H. Coded as: EPH.",
+        "Shift each letter forward by 3: CAT → FDW."
+      ],
+      "practiceQuestions": [
+        "If DOG is coded as EPH (using the same \"shift forward by 1\" rule), what would CAT be coded as? (Check your answer against the worked example above.)",
+        "If 1=A, 2=B, 3=C... what number represents the letter E?",
+        "Code DOG by shifting each letter forward 2."
+      ],
+      "sourceFile": "Avora_NCEE_VerbalReasoning_Primary5.md",
+      "sourceLineStart": 58,
+      "contentStatus": "TEACHING_READY",
+      "depthCompletionVersion": "14.8.1"
+    },
+    {
+      "id": "ncee-source-p6-verbal-aptitude-all-word-analogies-full-range",
+      "classLevel": "Primary 6",
+      "domain": "Verbal Aptitude",
+      "subject": "Verbal Reasoning",
+      "term": "All Terms",
+      "title": "Word Analogies (Full Range)",
+      "strand": null,
+      "subtopics": [],
+      "concepts": [
+        "Step 1 — Categorize the DIFFERENT types of relationships analogies can use, testing each type explicitly",
+        "- Synonym-based: \"Happy is to Joyful as Sad is to ___?\" → Unhappy/Sorrowful - Antonym-based: \"Hot is to Cold as Day is to ___?\" → Night - Part-to-whole: \"Page is to Book as Brick is to ___?\" → Wall/House - Function-based: \"Scissors is to Cut as Broom is to ___?\" → Sweep - Category-based: \"Rose is to Flower as Lion is to ___?\" → Animal",
+        "Understand every word first."
+      ],
+      "workedExamples": [
+        "\"Doctor is to Hospital as Teacher is to ___?\" Relationship: a doctor WORKS IN a hospital. Apply: a teacher works in a ___? Answer: School.",
+        "Work one example and name the relationship."
+      ],
+      "practiceQuestions": [
+        "Identify the relationship type, then complete: \"Fish is to Water as Bird is to ___?\"",
+        "Complete: \"Author is to Book as Sculptor is to ___?\"",
+        "Complete: \"Kind is to Cruel as Brave is to ___?\" (identify: synonym or antonym-based?)"
+      ],
+      "sourceFile": "Avora_NCEE_VerbalReasoning_Primary6.md",
+      "sourceLineStart": 6,
+      "contentStatus": "TEACHING_READY",
+      "depthCompletionVersion": "14.8.1"
+    },
+    {
+      "id": "ncee-source-p6-verbal-aptitude-all-odd-one-out-advanced",
+      "classLevel": "Primary 6",
+      "domain": "Verbal Aptitude",
+      "subject": "Verbal Reasoning",
+      "term": "All Terms",
+      "title": "Odd-One-Out (Advanced)",
+      "strand": null,
+      "subtopics": [],
+      "concepts": [
+        "Odd-one-out questions depend on a grouping rule shared by most items.",
+        "Test more than one possible rule and choose the one that creates the clearest consistent group.",
+        "State why the odd item fails the group rule; do not stop at naming it."
+      ],
+      "workedExamples": [
+        "\"Triangle, Square, Circle, Pentagon\" — test: number of sides. Triangle=3, Square=4, Pentagon=5 all have straight sides and a countable number of sides; Circle has NO straight sides/no countable sides. Odd one out: Circle.",
+        "Triangle, square and pentagon have straight sides; circle does not, so circle is odd."
+      ],
+      "practiceQuestions": [
+        "Find the odd one out: \"Novel, Poem, Play, Author\" (three are TYPES of writing, one is a person).",
+        "Find the odd one out: \"Swim, Run, Jump, Strong\" (three are actions/verbs, one is a description/adjective).",
+        "Find the odd one out: swim, run, jump, strong."
+      ],
+      "sourceFile": "Avora_NCEE_VerbalReasoning_Primary6.md",
+      "sourceLineStart": 26,
+      "contentStatus": "TEACHING_READY",
+      "depthCompletionVersion": "14.8.1"
+    },
+    {
+      "id": "ncee-source-p6-verbal-aptitude-all-coding-and-decoding-full",
+      "classLevel": "Primary 6",
+      "domain": "Verbal Aptitude",
+      "subject": "Verbal Reasoning",
+      "term": "All Terms",
+      "title": "Coding and Decoding (Full)",
+      "strand": null,
+      "subtopics": [],
+      "concepts": [
+        "Coding replaces letters or words according to a rule. Decode by identifying and reversing the same rule.",
+        "Keep repeated letters consistent and track shifts carefully through the alphabet.",
+        "Test the rule on a known part before applying it to the whole word."
+      ],
+      "workedExamples": [
+        "\"If APPLE is coded as 12345 where A=1, P=2, P=2, L=3... wait — establish the actual rule: each DIFFERENT letter gets the NEXT available number in order of first appearance: A=1, P=2 (first P), P=2 (repeat, same number), L=3, E=4. So APPLE=12234.\"",
+        "Shift each letter forward by 3: CAT → FDW."
+      ],
+      "practiceQuestions": [
+        "Using the same \"number letters in order of first appearance\" rule, code the word \"BANANA.\"",
+        "If a code shifts each letter BACK by 2 (so encoding D→B, O→M, G→E, meaning DOG becomes BME), decode \"BME\" by reversing the shift (moving each letter FORWARD by 2) to find the original word.",
+        "Code DOG by shifting each letter forward 2."
+      ],
+      "sourceFile": "Avora_NCEE_VerbalReasoning_Primary6.md",
+      "sourceLineStart": 37,
+      "contentStatus": "TEACHING_READY",
+      "depthCompletionVersion": "14.8.1"
+    },
+    {
+      "id": "ncee-source-p6-verbal-aptitude-all-sentence-and-word-sequencing",
+      "classLevel": "Primary 6",
+      "domain": "Verbal Aptitude",
+      "subject": "Verbal Reasoning",
+      "term": "All Terms",
+      "title": "Sentence and Word Sequencing",
+      "strand": null,
+      "subtopics": [],
+      "concepts": [
+        "Sequencing arranges words or events according to a logical relationship such as time, cause and effect, size or process.",
+        "Look for an event that must happen first and another that can only happen after something else.",
+        "After arranging, read the full sequence to check for impossible jumps or reversed cause and effect."
+      ],
+      "workedExamples": [
+        "Arrange in logical order: \"He ate breakfast. / He woke up. / He brushed his teeth. / He went to school.\" Correct order: He woke up → He brushed his teeth → He ate breakfast → He went to school (following the natural sequence of a morning routine).",
+        "Clouds gather → rain starts → rain stops → sun appears is a sensible time sequence."
+      ],
+      "practiceQuestions": [
+        "Arrange in logical order: \"The rain stopped. / Dark clouds gathered. / The sun came out. / It started raining.\"",
+        "Arrange four morning activities logically.",
+        "Explain which event must come first in a short process."
+      ],
+      "sourceFile": "Avora_NCEE_VerbalReasoning_Primary6.md",
+      "sourceLineStart": 48,
+      "contentStatus": "TEACHING_READY",
+      "depthCompletionVersion": "14.8.1"
+    },
+    {
+      "id": "ncee-source-p6-verbal-aptitude-all-word-classification-and-grouping-advanced",
+      "classLevel": "Primary 6",
+      "domain": "Verbal Aptitude",
+      "subject": "Verbal Reasoning",
+      "term": "All Terms",
+      "title": "Word Classification and Grouping (Advanced)",
+      "strand": null,
+      "subtopics": [],
+      "concepts": [
+        "Word classification means placing words into groups because they share a clear property. The important skill is not merely making groups; it is stating the rule that makes every member belong.",
+        "Start by looking for possible dimensions such as meaning, function, size, sound, part of speech, place, category or degree. Do not assume the first similarity you notice is the intended one.",
+        "A valid grouping rule must fit every word placed in that group. If one word does not fit, either the rule is wrong or the word belongs elsewhere.",
+        "Advanced classification may contain two different hidden dimensions. Name both groups explicitly before sorting the words.",
+        "Some words can fit more than one broad category, so prefer the grouping that explains all the words cleanly and creates balanced, meaningful sets.",
+        "After grouping, perform a reverse check: choose one word from each group and explain why swapping them would break the rule."
+      ],
+      "workedExamples": [
+        "Sort: Whisper, Shout, Elephant, Mouse, Murmur, Giant. First search for dimensions. Whisper, shout and murmur describe ways or volumes of speaking/sound. Elephant, mouse and giant relate to beings described strongly by size. The two rules explain all six words.",
+        "Sort: Rose, Lily, Carrot, Cabbage, Tulip, Spinach. Rose, lily and tulip are flowers; carrot, cabbage and spinach are vegetables. The category rule is consistent for every word.",
+        "Sort: Run, Swim, Happy, Angry, Jump, Sad. Run, swim and jump are actions; happy, angry and sad describe feelings or states. The grammatical/meaning distinction separates the sets."
+      ],
+      "practiceQuestions": [
+        "Sort into two groups and name each rule: Whisper, Shout, Elephant, Mouse, Murmur, Giant.",
+        "Group these words and explain your rule: Mango, Orange, Lion, Goat, Banana, Cow.",
+        "Which word would break this group and why: run, jump, swim, beautiful?",
+        "Create six words that can be sorted into two groups of three, then state both group rules."
+      ],
+      "sourceFile": "Avora_NCEE_VerbalReasoning_Primary6.md",
+      "sourceLineStart": 59,
+      "contentStatus": "TEACHING_READY",
+      "completionBasis": "AVORA-authored completion from the supplied Primary 6 Verbal Reasoning source; explicitly teaches rule discovery, consistency testing and explanation.",
+      "completionVersion": "14.8.1",
+      "depthCompletionVersion": "14.8.1"
+    },
+    {
+      "id": "ncee-source-p6-verbal-aptitude-all-full-ncee-style-timed-practice-set",
+      "classLevel": "Primary 6",
+      "domain": "Verbal Aptitude",
+      "subject": "Verbal Reasoning",
+      "term": "All Terms",
+      "title": "Full NCEE-Style Timed Practice Set",
+      "strand": null,
+      "subtopics": [],
+      "concepts": [],
+      "workedExamples": [],
+      "practiceQuestions": [
+        "Complete: \"Author is to Novel as Composer is to ___?\"",
+        "Find the odd one out: \"Run, Walk, Jump, Chair\"",
+        "If a code shifts each letter forward by 3 (A→D), code the word \"CAT\" letter by letter (C→?, A→?, T→?).",
+        "Arrange logically: \"Seed planted. / Flower blooms. / Plant grows. / Seed watered.\""
+      ],
+      "sourceFile": "Avora_NCEE_VerbalReasoning_Primary6.md",
+      "sourceLineStart": 66,
+      "contentStatus": "ASSESSMENT_ONLY"
+    }
+  ],
+  "policy": {
+    "studentSafe": true,
+    "dynamicCurrentAffairsExcluded": true,
+    "rawMarkdownTablesNeverSpoken": true,
+    "authorInstructionsNeverSpoken": true,
+    "officialExamStructureSource": "NECO 2026 NCEE timetable/general information",
+    "learnerCatalogueRequiresCompleteTeaching": true,
+    "practiceOnlyNeverLearnerVisible": true,
+    "timedPracticeSetsAreAssessmentsNotLessons": true,
+    "currentAffairsVerifiedAt": "2026-09-14"
+  }
+}

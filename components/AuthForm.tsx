@@ -32,7 +32,7 @@ export default function AuthForm({mode}:{mode:'login'|'register'}){
  const router=useRouter();
  const [error,setError]=useState('');
  const [busy,setBusy]=useState(false);
- const [verify,setVerify]=useState<{email:string;emailSent:boolean;devVerificationUrl?:string}|null>(null);
+ const [registerClass,setRegisterClass]=useState('');
  const audioRef=useRef<AudioContext|null>(null);
 
  async function submit(e:React.FormEvent<HTMLFormElement>){
@@ -48,22 +48,18 @@ export default function AuthForm({mode}:{mode:'login'|'register'}){
   let d:any;
   try{ d=await readJson<any>(r); }catch(err:any){ setBusy(false); setError(err.message||'AVORA could not complete sign in.'); return; }
   if(!r.ok){setBusy(false);setError(d.error||'Something went wrong.');return}
-  if(mode==='register'&&d.verificationRequired){setBusy(false);setVerify({email:d.email,emailSent:!!d.emailSent,devVerificationUrl:d.devVerificationUrl});return}
   if(mode==='login'){
     // Start the sonic mark while we are still in the user-initiated sign-in flow,
     // then navigate to a dedicated intro route. This makes the visual ident
     // reliable even when the login form unmounts immediately after auth succeeds.
     playAvoraSonicMark(audioRef.current);
-    // Authentication changes the server-rendered root layout (public vs signed-in nav).
-    // A full navigation guarantees the new httpOnly session cookie is reflected in
-    // the root layout immediately instead of preserving the cached logged-out layout.
-    window.location.assign('/signin-intro');
+    router.replace('/signin-intro');
+    router.refresh();
     return;
   }
-  window.location.assign('/signin-intro'); router.refresh();
+  router.replace('/home'); router.refresh();
  }
 
 
- if(verify)return <div className="verify-card"><div className="verify-icon">✓</div><h3>Check your inbox</h3><p>We created your AVORA account for <strong>{verify.email}</strong>. Verify that email to unlock your learning space.</p>{verify.emailSent?<div className="notice success">Verification email sent successfully.</div>:<div className="notice">SendGrid is not configured yet, so no email was sent.</div>}{verify.devVerificationUrl&&<a className="btn btn-primary" href={verify.devVerificationUrl}>Verify locally →</a>}<p className="microcopy">The verification link expires after 30 minutes.</p></div>
- return <form onSubmit={submit}>{error&&<div className="notice error">{error}</div>}{mode==='register'&&<><div className="field"><label>Full name</label><input name="fullName" required minLength={2}/></div><div className="field"><label>Class</label><select name="classLevel" defaultValue="JSS3"><option>JSS1</option><option>JSS2</option><option>JSS3</option></select></div><div className="field"><label>Target exam</label><select name="targetExam" defaultValue="BECE"><option>Common Entrance</option><option>BECE</option></select></div></>}<div className="field"><label>Email</label><input type="email" name="email" required autoComplete="email"/></div><div className="field"><label>Password</label><input type="password" name="password" required minLength={mode==='register'?8:1} autoComplete={mode==='login'?'current-password':'new-password'}/></div><button className="btn btn-primary auth-submit" style={{width:'100%',marginTop:8}} disabled={busy}>{busy?<><span className="button-spinner" aria-hidden="true"/> {mode==='login'?'Signing you in…':'Creating your account…'}</>:mode==='login'?'Sign in':'Create my AVORA account'}</button></form>
+ return <form onSubmit={submit} method="post" action={`/api/auth/${mode}`}>{error&&<div className="notice error">{error}</div>}{mode==='register'&&<><div className="field"><label>Full name</label><input name="fullName" required minLength={2}/></div><div className="field"><label>Class</label><select name="classLevel" value={registerClass} onChange={e=>setRegisterClass(e.target.value)} required><option value="" disabled>Choose your class</option><option>Primary 5</option><option>Primary 6</option><option>JSS1</option><option>JSS2</option><option>JSS3</option></select><small>Your class controls the curriculum, Tutor, Practice and Exam questions shown to you.</small></div><div className="field"><label>Learning route</label><input value={!registerClass?'Choose your class first':registerClass.startsWith('Primary')?'NCEE · National Common Entrance':'BECE · Basic Education Certificate'} disabled aria-label="Learning route"/><small>{!registerClass?'AVORA will assign the correct exam route after you choose a class.':registerClass.startsWith('Primary')?'Primary 5 and Primary 6 enter AVORA Common Entrance Prep.':'JSS1–JSS3 enter the BECE learning path.'}</small></div></>}<div className="field"><label>Email</label><input type="email" name="email" required autoComplete="email"/></div><div className="field"><label>Password</label><input type="password" name="password" required minLength={mode==='register'?8:1} autoComplete={mode==='login'?'current-password':'new-password'}/></div>{mode==='login'&&<p className="auth-help-link"><a href="/forgot-password">Forgot password?</a></p>}<button className="btn btn-primary auth-submit" style={{width:'100%',marginTop:8}} disabled={busy}>{busy?<><span className="button-spinner" aria-hidden="true"/> {mode==='login'?'Signing you in…':'Creating your account…'}</>:mode==='login'?'Sign in':'Create my AVORA account'}</button></form>
 }

@@ -1,0 +1,12 @@
+import Link from 'next/link';
+import {redirect} from 'next/navigation';
+import {getSession} from '@/lib/auth';
+import {sql,withDbRetry} from '@/lib/db';
+export const dynamic='force-dynamic';
+
+export default async function ExamArchive(){
+ const s=await getSession();if(!s)redirect('/login');
+ const rows=await withDbRetry(()=>sql`SELECT exam_name,exam_year,subject_name,paper_structure,availability_status,rights_status,questions_available,solutions_available,source_label,source_url,direct_reproduction_allowed FROM exam_year_registry WHERE questions_available=true AND exam_name='BECE' ORDER BY exam_name,exam_year DESC,subject_name`);
+ const groups=[...new Set((rows as any[]).map(x=>`${x.exam_name}:${x.exam_year}`))];
+ return <main className="shell archive-page"><header className="compact-head"><span className="section-kicker">PAST-QUESTION INTELLIGENCE</span><h1>Use the real exam history without hiding the source.</h1><p>AVORA records verified year references for Mathematics and English. Where redistribution rights are not cleared, the source stays visible and AVORA practises the same curriculum standard with original questions instead of silently copying the paper.</p></header><section className="rights-banner"><b>Two different things are kept separate</b><span><strong>Past-paper reference</strong> tells you the real exam/year/source. <strong>AVORA practice</strong> gives a safe standard-equivalent question bank with full solutions. Exact paper wording only enters AVORA when rights permit it.</span></section><div className="archive-years">{groups.map(k=>{const [exam,ys]=k.split(':');const year=Number(ys);const items=(rows as any[]).filter(x=>x.exam_name===exam&&Number(x.exam_year)===year);return <article key={k}><header><strong>{year}</strong><span>{exam}</span></header>{items.map(x=><div key={x.subject_name}><b>{x.subject_name}</b><span>{x.questions_available?'Paper reference verified':'Unconfirmed'} · {x.solutions_available?'solutions reported':'solutions not confirmed'}</span><small>{x.paper_structure}</small><em>{x.direct_reproduction_allowed?'Cleared for direct use':'Reference-only: exact wording not republished'}</em>{x.source_url&&<a href={x.source_url} target="_blank" rel="noreferrer">{x.source_label||'Open source reference'} ↗</a>}</div>)}</article>})}</div><div className="archive-actions"><Link href="/exam" className="btn btn-primary">Practise a verified year</Link><Link href="/learn" className="btn btn-secondary">Learn a weak topic</Link></div></main>
+}

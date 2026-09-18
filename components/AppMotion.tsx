@@ -3,26 +3,16 @@
 import { useEffect, useRef, useState } from 'react';
 import { usePathname } from 'next/navigation';
 
-const labels: Record<string,string> = {
-  '/learn': 'Opening your learning path…',
-  '/tutor': 'Preparing your AVORA Tutor…',
-  '/practice': 'Preparing your practice…',
-  '/exam': 'Preparing your exam…',
-  '/progress': 'Updating your progress…',
-  '/home': 'Opening your learning home…',
-};
-
-function labelFor(href:string){
-  const path = href.split('?')[0].split('#')[0];
-  const key = Object.keys(labels).find(k => path === k || path.startsWith(k + '/'));
-  return key ? labels[key] : 'Getting things ready…';
-}
+const SLOW_NAVIGATION_MS = 6000;
+const OFFLINE_MESSAGE = 'You appear to be offline. AVORA will keep trying…';
+const SLOW_MESSAGE = 'Connection is taking longer than usual…';
 
 export default function AppMotion({enabled=true}:{enabled?:boolean}){
   const pathname = usePathname();
   const [loading,setLoading] = useState(false);
-  const [message,setMessage] = useState('Getting things ready…');
+  const [message,setMessage] = useState(SLOW_MESSAGE);
   const timer = useRef<ReturnType<typeof setTimeout>|null>(null);
+  const pointerStart = useRef<{x:number;y:number}|null>(null);
 
   useEffect(()=>{
     setLoading(false);
@@ -31,8 +21,14 @@ export default function AppMotion({enabled=true}:{enabled?:boolean}){
 
   useEffect(()=>{
     if(!enabled) return;
+    function onPointerDown(e:PointerEvent){
+      pointerStart.current={x:e.clientX,y:e.clientY};
+    }
     function onClick(e:MouseEvent){
       if(e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+      const start=pointerStart.current;
+      pointerStart.current=null;
+      if(start&&Math.hypot(e.clientX-start.x,e.clientY-start.y)>10)return;
       const target = e.target as Element | null;
       const anchor = target?.closest('a[href]') as HTMLAnchorElement | null;
       if(!anchor || anchor.target === '_blank' || anchor.hasAttribute('download')) return;
@@ -41,12 +37,21 @@ export default function AppMotion({enabled=true}:{enabled?:boolean}){
       const current = new URL(window.location.href);
       const onlyHashChanged = url.pathname === current.pathname && url.search === current.search && url.hash !== current.hash;
       if(onlyHashChanged || (url.pathname === current.pathname && url.search === current.search && !url.hash)) return;
-      setMessage(labelFor(url.pathname));
       if(timer.current) clearTimeout(timer.current);
-      timer.current = setTimeout(()=>setLoading(true),450);
+      if(!navigator.onLine){
+        setMessage(OFFLINE_MESSAGE);
+        setLoading(true);
+        return;
+      }
+      setMessage(SLOW_MESSAGE);
+      // Normal AVORA navigation should feel immediate. Only reveal the route
+      // overlay when a transition is genuinely taking an unusually long time.
+      timer.current = setTimeout(()=>setLoading(true),SLOW_NAVIGATION_MS);
     }
+    document.addEventListener('pointerdown',onPointerDown,true);
     document.addEventListener('click',onClick,true);
     return ()=>{
+      document.removeEventListener('pointerdown',onPointerDown,true);
       document.removeEventListener('click',onClick,true);
       if(timer.current) clearTimeout(timer.current);
     };

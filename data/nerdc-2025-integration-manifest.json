@@ -1,0 +1,1626 @@
+{
+  "version": "14.9.0",
+  "curriculumVersion": "NERDC_NEW_REVISED_BEC_SEPTEMBER_2025",
+  "authority": "NERDC",
+  "topicCount": 75,
+  "topics": [
+    {
+      "classLevel": "JSS1",
+      "subject": "Mathematics",
+      "theme": "Number and Numeration",
+      "officialTopic": "Whole numbers",
+      "sourceFile": "NERDC_JSS1_Mathematics_From_First_Table.docx",
+      "sourcePages": [
+        1
+      ],
+      "performanceObjectiveCount": 4,
+      "evidenceIds": [
+        "nerdc-jss1-math-numbers-and-numeration-whole-numbers-1"
+      ],
+      "legacyTeachingTargets": [
+        "Whole Numbers (place value, counting in millions/billions/trillions, quantitative reasoning)"
+      ],
+      "reviewedBankQuestionsReusable": 8,
+      "conceptChecksNeededFor15": 7,
+      "exerciseQuestionTarget": 15,
+      "masteryThresholdPercent": 80,
+      "authoredNerdcQuestions": 0
+    },
+    {
+      "classLevel": "JSS1",
+      "subject": "Mathematics",
+      "theme": "Number and Numeration",
+      "officialTopic": "Lowest Common Multiples (LCM)",
+      "sourceFile": "NERDC_JSS1_Mathematics_From_First_Table.docx",
+      "sourcePages": [
+        2
+      ],
+      "performanceObjectiveCount": 3,
+      "evidenceIds": [
+        "nerdc-jss1-math-numbers-and-numeration-whole-numbers-2"
+      ],
+      "legacyTeachingTargets": [
+        "Lowest Common Multiple (LCM)"
+      ],
+      "reviewedBankQuestionsReusable": 8,
+      "conceptChecksNeededFor15": 7,
+      "exerciseQuestionTarget": 15,
+      "masteryThresholdPercent": 80,
+      "authoredNerdcQuestions": 0
+    },
+    {
+      "classLevel": "JSS1",
+      "subject": "Mathematics",
+      "theme": "Number and Numeration",
+      "officialTopic": "Highest Common Factor (HCF)",
+      "sourceFile": "NERDC_JSS1_Mathematics_From_First_Table.docx",
+      "sourcePages": [
+        3
+      ],
+      "performanceObjectiveCount": 5,
+      "evidenceIds": [
+        "nerdc-jss1-math-numbers-and-numeration-whole-numbers-3"
+      ],
+      "legacyTeachingTargets": [
+        "Highest Common Factor (HCF)"
+      ],
+      "reviewedBankQuestionsReusable": 8,
+      "conceptChecksNeededFor15": 7,
+      "exerciseQuestionTarget": 15,
+      "masteryThresholdPercent": 80,
+      "authoredNerdcQuestions": 0
+    },
+    {
+      "classLevel": "JSS1",
+      "subject": "Mathematics",
+      "theme": "Number and Numeration",
+      "officialTopic": "Counting in twos",
+      "sourceFile": "NERDC_JSS1_Mathematics_From_First_Table.docx",
+      "sourcePages": [
+        4
+      ],
+      "performanceObjectiveCount": 1,
+      "evidenceIds": [
+        "nerdc-jss1-math-numbers-and-numeration-whole-numbers-4"
+      ],
+      "legacyTeachingTargets": [
+        "Counting in Base Two"
+      ],
+      "reviewedBankQuestionsReusable": 8,
+      "conceptChecksNeededFor15": 7,
+      "exerciseQuestionTarget": 15,
+      "masteryThresholdPercent": 80,
+      "authoredNerdcQuestions": 0
+    },
+    {
+      "classLevel": "JSS1",
+      "subject": "Mathematics",
+      "theme": "Number and Numeration",
+      "officialTopic": "Conversion of Base-ten numerals to Binary numbers",
+      "sourceFile": "NERDC_JSS1_Mathematics_From_First_Table.docx",
+      "sourcePages": [
+        5
+      ],
+      "performanceObjectiveCount": 3,
+      "evidenceIds": [
+        "nerdc-jss1-math-numbers-and-numeration-whole-numbers-5"
+      ],
+      "legacyTeachingTargets": [
+        "Conversion of Base 10 to Binary Numbers (1–10)"
+      ],
+      "reviewedBankQuestionsReusable": 8,
+      "conceptChecksNeededFor15": 7,
+      "exerciseQuestionTarget": 15,
+      "masteryThresholdPercent": 80,
+      "authoredNerdcQuestions": 0
+    },
+    {
+      "classLevel": "JSS1",
+      "subject": "Mathematics",
+      "theme": "Number and Numeration",
+      "officialTopic": "Fractions",
+      "sourceFile": "NERDC_JSS1_Mathematics_From_First_Table.docx",
+      "sourcePages": [
+        6
+      ],
+      "performanceObjectiveCount": 5,
+      "evidenceIds": [
+        "nerdc-jss1-math-numbers-and-numeration-fractions-1"
+      ],
+      "legacyTeachingTargets": [
+        "Fractions (equivalent fractions, ordering, fractions↔decimals, fractions↔percentages)"
+      ],
+      "reviewedBankQuestionsReusable": 8,
+      "conceptChecksNeededFor15": 7,
+      "exerciseQuestionTarget": 15,
+      "masteryThresholdPercent": 80,
+      "authoredNerdcQuestions": 0
+    },
+    {
+      "classLevel": "JSS1",
+      "subject": "Mathematics",
+      "theme": "Basic Operations",
+      "officialTopic": "Addition and Subtraction",
+      "sourceFile": "NERDC_JSS1_Mathematics_From_First_Table.docx",
+      "sourcePages": [
+        7
+      ],
+      "performanceObjectiveCount": 5,
+      "evidenceIds": [
+        "nerdc-jss1-math-basic-operations-basic-operations-1"
+      ],
+      "legacyTeachingTargets": [
+        "Addition and Subtraction of Whole Numbers (place value, number line, positive/negative integers)"
+      ],
+      "reviewedBankQuestionsReusable": 8,
+      "conceptChecksNeededFor15": 7,
+      "exerciseQuestionTarget": 15,
+      "masteryThresholdPercent": 80,
+      "authoredNerdcQuestions": 0
+    },
+    {
+      "classLevel": "JSS1",
+      "subject": "Mathematics",
+      "theme": "Basic Operations",
+      "officialTopic": "Addition and Subtraction of fractions",
+      "sourceFile": "NERDC_JSS1_Mathematics_From_First_Table.docx",
+      "sourcePages": [
+        8
+      ],
+      "performanceObjectiveCount": 2,
+      "evidenceIds": [
+        "nerdc-jss1-math-basic-operations-basic-operations-2"
+      ],
+      "legacyTeachingTargets": [
+        "Addition and Subtraction of Fractions"
+      ],
+      "reviewedBankQuestionsReusable": 8,
+      "conceptChecksNeededFor15": 7,
+      "exerciseQuestionTarget": 15,
+      "masteryThresholdPercent": 80,
+      "authoredNerdcQuestions": 0
+    },
+    {
+      "classLevel": "JSS1",
+      "subject": "Mathematics",
+      "theme": "Basic Operations",
+      "officialTopic": "Multiplication and Division of Fractions",
+      "sourceFile": "NERDC_JSS1_Mathematics_From_First_Table.docx",
+      "sourcePages": [
+        9
+      ],
+      "performanceObjectiveCount": 3,
+      "evidenceIds": [
+        "nerdc-jss1-math-basic-operations-basic-operations-3"
+      ],
+      "legacyTeachingTargets": [
+        "Multiplication and Division of Fractions"
+      ],
+      "reviewedBankQuestionsReusable": 8,
+      "conceptChecksNeededFor15": 7,
+      "exerciseQuestionTarget": 15,
+      "masteryThresholdPercent": 80,
+      "authoredNerdcQuestions": 0
+    },
+    {
+      "classLevel": "JSS1",
+      "subject": "Mathematics",
+      "theme": "Basic Operations",
+      "officialTopic": "Estimation",
+      "sourceFile": "NERDC_JSS1_Mathematics_From_First_Table.docx",
+      "sourcePages": [
+        10
+      ],
+      "performanceObjectiveCount": 4,
+      "evidenceIds": [
+        "nerdc-jss1-math-basic-operations-derived-operations-1"
+      ],
+      "legacyTeachingTargets": [
+        "Estimation"
+      ],
+      "reviewedBankQuestionsReusable": 8,
+      "conceptChecksNeededFor15": 7,
+      "exerciseQuestionTarget": 15,
+      "masteryThresholdPercent": 80,
+      "authoredNerdcQuestions": 0
+    },
+    {
+      "classLevel": "JSS1",
+      "subject": "Mathematics",
+      "theme": "Basic Operations",
+      "officialTopic": "Approximation",
+      "sourceFile": "NERDC_JSS1_Mathematics_From_First_Table.docx",
+      "sourcePages": [
+        11
+      ],
+      "performanceObjectiveCount": 5,
+      "evidenceIds": [
+        "nerdc-jss1-math-basic-operations-derived-operations-2"
+      ],
+      "legacyTeachingTargets": [
+        "Approximation (rounding rules, decimal places)"
+      ],
+      "reviewedBankQuestionsReusable": 8,
+      "conceptChecksNeededFor15": 7,
+      "exerciseQuestionTarget": 15,
+      "masteryThresholdPercent": 80,
+      "authoredNerdcQuestions": 0
+    },
+    {
+      "classLevel": "JSS1",
+      "subject": "Mathematics",
+      "theme": "Basic Operations",
+      "officialTopic": "Addition of numbers in base 2.",
+      "sourceFile": "NERDC_JSS1_Mathematics_From_First_Table.docx",
+      "sourcePages": [
+        12
+      ],
+      "performanceObjectiveCount": 1,
+      "evidenceIds": [
+        "nerdc-jss1-math-basic-operations-derived-operations-3"
+      ],
+      "legacyTeachingTargets": [
+        "Addition of Binary Numbers (2–3 digit)"
+      ],
+      "reviewedBankQuestionsReusable": 8,
+      "conceptChecksNeededFor15": 7,
+      "exerciseQuestionTarget": 15,
+      "masteryThresholdPercent": 80,
+      "authoredNerdcQuestions": 0
+    },
+    {
+      "classLevel": "JSS1",
+      "subject": "Mathematics",
+      "theme": "Basic Operations",
+      "officialTopic": "Subtraction of numbers in base 2.",
+      "sourceFile": "NERDC_JSS1_Mathematics_From_First_Table.docx",
+      "sourcePages": [
+        13
+      ],
+      "performanceObjectiveCount": 1,
+      "evidenceIds": [
+        "nerdc-jss1-math-basic-operations-derived-operations-4"
+      ],
+      "legacyTeachingTargets": [
+        "Subtraction of Binary Numbers (2–3 digit)"
+      ],
+      "reviewedBankQuestionsReusable": 8,
+      "conceptChecksNeededFor15": 7,
+      "exerciseQuestionTarget": 15,
+      "masteryThresholdPercent": 80,
+      "authoredNerdcQuestions": 0
+    },
+    {
+      "classLevel": "JSS1",
+      "subject": "Mathematics",
+      "theme": "Basic Operations",
+      "officialTopic": "Multiplication of numbers in base 2.",
+      "sourceFile": "NERDC_JSS1_Mathematics_From_First_Table.docx",
+      "sourcePages": [
+        14
+      ],
+      "performanceObjectiveCount": 1,
+      "evidenceIds": [
+        "nerdc-jss1-math-basic-operations-derived-operations-5"
+      ],
+      "legacyTeachingTargets": [
+        "Multiplication of Binary Numbers (2-digit)"
+      ],
+      "reviewedBankQuestionsReusable": 8,
+      "conceptChecksNeededFor15": 7,
+      "exerciseQuestionTarget": 15,
+      "masteryThresholdPercent": 80,
+      "authoredNerdcQuestions": 0
+    },
+    {
+      "classLevel": "JSS1",
+      "subject": "Mathematics",
+      "theme": "Algebraic Processes",
+      "officialTopic": "Use of Symbols",
+      "sourceFile": "NERDC_JSS1_Mathematics_From_First_Table.docx",
+      "sourcePages": [
+        15,
+        16
+      ],
+      "performanceObjectiveCount": 6,
+      "evidenceIds": [
+        "nerdc-jss1-math-algebraic-processes-algebraic-operations-1"
+      ],
+      "legacyTeachingTargets": [
+        "Use of Symbols (open sentences, two-operation equations)"
+      ],
+      "reviewedBankQuestionsReusable": 8,
+      "conceptChecksNeededFor15": 7,
+      "exerciseQuestionTarget": 15,
+      "masteryThresholdPercent": 80,
+      "authoredNerdcQuestions": 0
+    },
+    {
+      "classLevel": "JSS1",
+      "subject": "Mathematics",
+      "theme": "Algebraic Processes",
+      "officialTopic": "Simplification of Algebraic Expressions",
+      "sourceFile": "NERDC_JSS1_Mathematics_From_First_Table.docx",
+      "sourcePages": [
+        17
+      ],
+      "performanceObjectiveCount": 7,
+      "evidenceIds": [
+        "nerdc-jss1-math-algebraic-processes-algebraic-operations-2"
+      ],
+      "legacyTeachingTargets": [
+        "Simplification of Algebraic Expressions (like/unlike terms, coefficients, brackets)"
+      ],
+      "reviewedBankQuestionsReusable": 8,
+      "conceptChecksNeededFor15": 7,
+      "exerciseQuestionTarget": 15,
+      "masteryThresholdPercent": 80,
+      "authoredNerdcQuestions": 0
+    },
+    {
+      "classLevel": "JSS1",
+      "subject": "Mathematics",
+      "theme": "Algebraic Processes",
+      "officialTopic": "Simple Equations",
+      "sourceFile": "NERDC_JSS1_Mathematics_From_First_Table.docx",
+      "sourcePages": [
+        18
+      ],
+      "performanceObjectiveCount": 3,
+      "evidenceIds": [
+        "nerdc-jss1-math-algebraic-processes-algebraic-operations-3"
+      ],
+      "legacyTeachingTargets": [
+        "Simple Equations (word problems → equations)"
+      ],
+      "reviewedBankQuestionsReusable": 8,
+      "conceptChecksNeededFor15": 7,
+      "exerciseQuestionTarget": 15,
+      "masteryThresholdPercent": 80,
+      "authoredNerdcQuestions": 0
+    },
+    {
+      "classLevel": "JSS1",
+      "subject": "Mathematics",
+      "theme": "Mensuration and Geometry",
+      "officialTopic": "Plane Shapes",
+      "sourceFile": "NERDC_JSS1_Mathematics_From_First_Table.docx",
+      "sourcePages": [
+        19
+      ],
+      "performanceObjectiveCount": 4,
+      "evidenceIds": [
+        "nerdc-jss1-math-mensuration-and-geometry-shapes-1"
+      ],
+      "legacyTeachingTargets": [
+        "Plane Shapes (similarities/differences, perimeter, area)"
+      ],
+      "reviewedBankQuestionsReusable": 8,
+      "conceptChecksNeededFor15": 7,
+      "exerciseQuestionTarget": 15,
+      "masteryThresholdPercent": 80,
+      "authoredNerdcQuestions": 0
+    },
+    {
+      "classLevel": "JSS1",
+      "subject": "Mathematics",
+      "theme": "Mensuration and Geometry",
+      "officialTopic": "Three dimensional Figures",
+      "sourceFile": "NERDC_JSS1_Mathematics_From_First_Table.docx",
+      "sourcePages": [
+        20
+      ],
+      "performanceObjectiveCount": 4,
+      "evidenceIds": [
+        "nerdc-jss1-math-mensuration-and-geometry-shapes-2"
+      ],
+      "legacyTeachingTargets": [
+        "Three-Dimensional Figures (cubes, cuboids, pyramids, cones, cylinders, spheres; volume)"
+      ],
+      "reviewedBankQuestionsReusable": 8,
+      "conceptChecksNeededFor15": 7,
+      "exerciseQuestionTarget": 15,
+      "masteryThresholdPercent": 80,
+      "authoredNerdcQuestions": 0
+    },
+    {
+      "classLevel": "JSS1",
+      "subject": "Mathematics",
+      "theme": "Mensuration and Geometry",
+      "officialTopic": "Construction",
+      "sourceFile": "NERDC_JSS1_Mathematics_From_First_Table.docx",
+      "sourcePages": [
+        21
+      ],
+      "performanceObjectiveCount": 4,
+      "evidenceIds": [
+        "nerdc-jss1-math-mensuration-and-geometry-shapes-3"
+      ],
+      "legacyTeachingTargets": [
+        "Construction (parallel/perpendicular lines, bisecting a segment, 90°/60° angles)"
+      ],
+      "reviewedBankQuestionsReusable": 8,
+      "conceptChecksNeededFor15": 7,
+      "exerciseQuestionTarget": 15,
+      "masteryThresholdPercent": 80,
+      "authoredNerdcQuestions": 0
+    },
+    {
+      "classLevel": "JSS1",
+      "subject": "Mathematics",
+      "theme": "Mensuration and Geometry",
+      "officialTopic": "Angles",
+      "sourceFile": "NERDC_JSS1_Mathematics_From_First_Table.docx",
+      "sourcePages": [
+        22
+      ],
+      "performanceObjectiveCount": 5,
+      "evidenceIds": [
+        "nerdc-jss1-math-mensuration-and-geometry-shapes-4"
+      ],
+      "legacyTeachingTargets": [
+        "Angles (measurement, vertically opposite/adjacent/alternate/corresponding, angles at a point/on a line)"
+      ],
+      "reviewedBankQuestionsReusable": 8,
+      "conceptChecksNeededFor15": 7,
+      "exerciseQuestionTarget": 15,
+      "masteryThresholdPercent": 80,
+      "authoredNerdcQuestions": 0
+    },
+    {
+      "classLevel": "JSS1",
+      "subject": "Mathematics",
+      "theme": "Everyday Statistics",
+      "officialTopic": "Needs for statistics",
+      "sourceFile": "NERDC_JSS1_Mathematics_From_First_Table.docx",
+      "sourcePages": [
+        23
+      ],
+      "performanceObjectiveCount": 6,
+      "evidenceIds": [
+        "nerdc-jss1-math-everyday-statistics-data-collection-and-presentation-1",
+        "nerdc-jss1-math-everyday-statistics-data-collection-and-presentation-2"
+      ],
+      "legacyTeachingTargets": [
+        "Need for Statistics",
+        "Data Collection"
+      ],
+      "reviewedBankQuestionsReusable": 15,
+      "conceptChecksNeededFor15": 0,
+      "exerciseQuestionTarget": 15,
+      "masteryThresholdPercent": 80,
+      "authoredNerdcQuestions": 0
+    },
+    {
+      "classLevel": "JSS1",
+      "subject": "Mathematics",
+      "theme": "Everyday Statistics",
+      "officialTopic": "Data representation",
+      "sourceFile": "NERDC_JSS1_Mathematics_From_First_Table.docx",
+      "sourcePages": [
+        24
+      ],
+      "performanceObjectiveCount": 1,
+      "evidenceIds": [
+        "nerdc-jss1-math-everyday-statistics-data-collection-and-presentation-3"
+      ],
+      "legacyTeachingTargets": [
+        "Data Presentation — Median (introductory)"
+      ],
+      "reviewedBankQuestionsReusable": 8,
+      "conceptChecksNeededFor15": 7,
+      "exerciseQuestionTarget": 15,
+      "masteryThresholdPercent": 80,
+      "authoredNerdcQuestions": 0
+    },
+    {
+      "classLevel": "JSS1",
+      "subject": "English Language",
+      "theme": "Listening and Speaking",
+      "officialTopic": "Oral Comprehension",
+      "sourceFile": "NERDC_JSS1_English_From_First_Table.docx",
+      "sourcePages": [
+        1
+      ],
+      "performanceObjectiveCount": 2,
+      "evidenceIds": [
+        "nerdc-jss1-english-listening-and-speaking-3",
+        "nerdc2025-special-jss1-english-oral-comprehension-current"
+      ],
+      "legacyTeachingTargets": [],
+      "reviewedBankQuestionsReusable": 8,
+      "conceptChecksNeededFor15": 7,
+      "exerciseQuestionTarget": 15,
+      "masteryThresholdPercent": 80,
+      "authoredNerdcQuestions": 0
+    },
+    {
+      "classLevel": "JSS1",
+      "subject": "English Language",
+      "theme": "Listening and Speaking",
+      "officialTopic": "Conversation on Various Issues",
+      "sourceFile": "NERDC_JSS1_English_From_First_Table.docx",
+      "sourcePages": [
+        2
+      ],
+      "performanceObjectiveCount": 2,
+      "evidenceIds": [
+        "revised2025-jss1-english-conversation"
+      ],
+      "legacyTeachingTargets": [],
+      "reviewedBankQuestionsReusable": 8,
+      "conceptChecksNeededFor15": 7,
+      "exerciseQuestionTarget": 15,
+      "masteryThresholdPercent": 80,
+      "authoredNerdcQuestions": 0
+    },
+    {
+      "classLevel": "JSS1",
+      "subject": "English Language",
+      "theme": "Listening and Speaking",
+      "officialTopic": "Speech Sounds (Vowels and Consonants)",
+      "sourceFile": "NERDC_JSS1_English_From_First_Table.docx",
+      "sourcePages": [
+        3
+      ],
+      "performanceObjectiveCount": 2,
+      "evidenceIds": [
+        "nerdc-jss1-english-listening-and-speaking-1",
+        "nerdc-jss1-english-listening-and-speaking-2"
+      ],
+      "legacyTeachingTargets": [
+        "Speech Work: speech organs and sound production; monophthongs (long/short vowel contrasts)",
+        "Speech Work: consonant clusters; diphthongs",
+        "Speech Work: mixed vowel discrimination (monophthongs + diphthongs)"
+      ],
+      "reviewedBankQuestionsReusable": 15,
+      "conceptChecksNeededFor15": 0,
+      "exerciseQuestionTarget": 15,
+      "masteryThresholdPercent": 80,
+      "authoredNerdcQuestions": 0
+    },
+    {
+      "classLevel": "JSS1",
+      "subject": "English Language",
+      "theme": "Reading",
+      "officialTopic": "Reading Short passages with fluency",
+      "sourceFile": "NERDC_JSS1_English_From_First_Table.docx",
+      "sourcePages": [
+        4
+      ],
+      "performanceObjectiveCount": 2,
+      "evidenceIds": [
+        "revised2025-jss1-english-fluency"
+      ],
+      "legacyTeachingTargets": [],
+      "reviewedBankQuestionsReusable": 15,
+      "conceptChecksNeededFor15": 0,
+      "exerciseQuestionTarget": 15,
+      "masteryThresholdPercent": 80,
+      "authoredNerdcQuestions": 0
+    },
+    {
+      "classLevel": "JSS1",
+      "subject": "English Language",
+      "theme": "Reading",
+      "officialTopic": "Reading passages for meaning",
+      "sourceFile": "NERDC_JSS1_English_From_First_Table.docx",
+      "sourcePages": [
+        5
+      ],
+      "performanceObjectiveCount": 2,
+      "evidenceIds": [
+        "nerdc-jss1-english-reading-2"
+      ],
+      "legacyTeachingTargets": [],
+      "reviewedBankQuestionsReusable": 8,
+      "conceptChecksNeededFor15": 7,
+      "exerciseQuestionTarget": 15,
+      "masteryThresholdPercent": 80,
+      "authoredNerdcQuestions": 0
+    },
+    {
+      "classLevel": "JSS1",
+      "subject": "English Language",
+      "theme": "Reading",
+      "officialTopic": "Reading Passages to Answer Literal, Inferential and Critical Questions",
+      "sourceFile": "NERDC_JSS1_English_From_First_Table.docx",
+      "sourcePages": [
+        6
+      ],
+      "performanceObjectiveCount": 1,
+      "evidenceIds": [
+        "nerdc-jss1-english-reading-3",
+        "nerdc-jss1-english-reading-4"
+      ],
+      "legacyTeachingTargets": [
+        "Comprehension: SPQ3R reading strategy; answering comprehension questions using textual evidence",
+        "Comprehension: full SPQ3R application; fact vs opinion"
+      ],
+      "reviewedBankQuestionsReusable": 15,
+      "conceptChecksNeededFor15": 0,
+      "exerciseQuestionTarget": 15,
+      "masteryThresholdPercent": 80,
+      "authoredNerdcQuestions": 0
+    },
+    {
+      "classLevel": "JSS1",
+      "subject": "English Language",
+      "theme": "Reading",
+      "officialTopic": "Reading for Summary",
+      "sourceFile": "NERDC_JSS1_English_From_First_Table.docx",
+      "sourcePages": [
+        7
+      ],
+      "performanceObjectiveCount": 3,
+      "evidenceIds": [
+        "revised2025-jss1-english-summary"
+      ],
+      "legacyTeachingTargets": [],
+      "reviewedBankQuestionsReusable": 8,
+      "conceptChecksNeededFor15": 7,
+      "exerciseQuestionTarget": 15,
+      "masteryThresholdPercent": 80,
+      "authoredNerdcQuestions": 0
+    },
+    {
+      "classLevel": "JSS1",
+      "subject": "English Language",
+      "theme": "Grammatical Accuracy",
+      "officialTopic": "Parts of speech: Nouns, Verbs and Adjectives",
+      "sourceFile": "NERDC_JSS1_English_From_First_Table.docx",
+      "sourcePages": [
+        8
+      ],
+      "performanceObjectiveCount": 4,
+      "evidenceIds": [
+        "nerdc-jss1-english-grammatical-accuracy-1"
+      ],
+      "legacyTeachingTargets": [
+        "Grammar: nouns (common/proper, countable/uncountable); verbs (action/state); adjectives (comparison); adverbs; present tense & subject-verb agreement; pronouns (subject/object); prepositions & conjunctions (introductory)"
+      ],
+      "reviewedBankQuestionsReusable": 8,
+      "conceptChecksNeededFor15": 7,
+      "exerciseQuestionTarget": 15,
+      "masteryThresholdPercent": 80,
+      "authoredNerdcQuestions": 0
+    },
+    {
+      "classLevel": "JSS1",
+      "subject": "English Language",
+      "theme": "Grammatical Accuracy",
+      "officialTopic": "Parts of speech: Adverbs, Conjunctions, Prepositions and Interjections",
+      "sourceFile": "NERDC_JSS1_English_From_First_Table.docx",
+      "sourcePages": [
+        9
+      ],
+      "performanceObjectiveCount": 4,
+      "evidenceIds": [
+        "nerdc-jss1-english-grammatical-accuracy-2",
+        "revised2025-jss1-english-interjections"
+      ],
+      "legacyTeachingTargets": [
+        "Grammar: prepositions of time vs place; conjunctions (coordinating vs subordinating)"
+      ],
+      "reviewedBankQuestionsReusable": 8,
+      "conceptChecksNeededFor15": 7,
+      "exerciseQuestionTarget": 15,
+      "masteryThresholdPercent": 80,
+      "authoredNerdcQuestions": 0
+    },
+    {
+      "classLevel": "JSS1",
+      "subject": "English Language",
+      "theme": "Grammatical Accuracy",
+      "officialTopic": "Subject-Verb Agreement",
+      "sourceFile": "NERDC_JSS1_English_From_First_Table.docx",
+      "sourcePages": [
+        10
+      ],
+      "performanceObjectiveCount": 4,
+      "evidenceIds": [
+        "revised2025-jss1-english-agreement"
+      ],
+      "legacyTeachingTargets": [],
+      "reviewedBankQuestionsReusable": 8,
+      "conceptChecksNeededFor15": 7,
+      "exerciseQuestionTarget": 15,
+      "masteryThresholdPercent": 80,
+      "authoredNerdcQuestions": 0
+    },
+    {
+      "classLevel": "JSS1",
+      "subject": "English Language",
+      "theme": "Grammatical Accuracy",
+      "officialTopic": "Use of Prefixes, Suffixes and Compounds",
+      "sourceFile": "NERDC_JSS1_English_From_First_Table.docx",
+      "sourcePages": [
+        11
+      ],
+      "performanceObjectiveCount": 5,
+      "evidenceIds": [
+        "revised2025-jss1-english-word-formation"
+      ],
+      "legacyTeachingTargets": [],
+      "reviewedBankQuestionsReusable": 8,
+      "conceptChecksNeededFor15": 7,
+      "exerciseQuestionTarget": 15,
+      "masteryThresholdPercent": 80,
+      "authoredNerdcQuestions": 0
+    },
+    {
+      "classLevel": "JSS1",
+      "subject": "English Language",
+      "theme": "Writing",
+      "officialTopic": "Writing Informal and Formal Letters",
+      "sourceFile": "NERDC_JSS1_English_From_First_Table.docx",
+      "sourcePages": [
+        12
+      ],
+      "performanceObjectiveCount": 3,
+      "evidenceIds": [
+        "nerdc-jss1-english-writing-3"
+      ],
+      "legacyTeachingTargets": [],
+      "reviewedBankQuestionsReusable": 8,
+      "conceptChecksNeededFor15": 7,
+      "exerciseQuestionTarget": 15,
+      "masteryThresholdPercent": 80,
+      "authoredNerdcQuestions": 0
+    },
+    {
+      "classLevel": "JSS1",
+      "subject": "English Language",
+      "theme": "Writing",
+      "officialTopic": "Introduction to Creative writing",
+      "sourceFile": "NERDC_JSS1_English_From_First_Table.docx",
+      "sourcePages": [
+        13
+      ],
+      "performanceObjectiveCount": 5,
+      "evidenceIds": [
+        "revised2025-jss1-english-creative-writing",
+        "nerdc-jss1-english-writing-2"
+      ],
+      "legacyTeachingTargets": [
+        "Composition: types of composition (narrative, descriptive, argumentative, expository); elements (introduction, body, conclusion) — full 5-part narrative structure"
+      ],
+      "reviewedBankQuestionsReusable": 15,
+      "conceptChecksNeededFor15": 0,
+      "exerciseQuestionTarget": 15,
+      "masteryThresholdPercent": 80,
+      "authoredNerdcQuestions": 0
+    },
+    {
+      "classLevel": "JSS1",
+      "subject": "English Language",
+      "theme": "Literature",
+      "officialTopic": "Introduction to Literature",
+      "sourceFile": "NERDC_JSS1_English_From_First_Table.docx",
+      "sourcePages": [
+        14
+      ],
+      "performanceObjectiveCount": 3,
+      "evidenceIds": [
+        "nerdc-jss1-english-literature-1"
+      ],
+      "legacyTeachingTargets": [
+        "Literature: functions of literature; genres (prose, poetry, drama); introduction to folktales"
+      ],
+      "reviewedBankQuestionsReusable": 8,
+      "conceptChecksNeededFor15": 7,
+      "exerciseQuestionTarget": 15,
+      "masteryThresholdPercent": 80,
+      "authoredNerdcQuestions": 0
+    },
+    {
+      "classLevel": "JSS1",
+      "subject": "English Language",
+      "theme": "Literature",
+      "officialTopic": "Folktales",
+      "sourceFile": "NERDC_JSS1_English_From_First_Table.docx",
+      "sourcePages": [
+        15
+      ],
+      "performanceObjectiveCount": 5,
+      "evidenceIds": [
+        "nerdc-jss1-english-literature-2"
+      ],
+      "legacyTeachingTargets": [
+        "Literature: functions of literature; genres (prose, poetry, drama); introduction to folktales"
+      ],
+      "reviewedBankQuestionsReusable": 8,
+      "conceptChecksNeededFor15": 7,
+      "exerciseQuestionTarget": 15,
+      "masteryThresholdPercent": 80,
+      "authoredNerdcQuestions": 0
+    },
+    {
+      "classLevel": "JSS1",
+      "subject": "English Language",
+      "theme": "Literature",
+      "officialTopic": "Myths and Legends",
+      "sourceFile": "NERDC_JSS1_English_From_First_Table.docx",
+      "sourcePages": [
+        16
+      ],
+      "performanceObjectiveCount": 5,
+      "evidenceIds": [
+        "nerdc-jss1-english-literature-3"
+      ],
+      "legacyTeachingTargets": [
+        "Literature: literary terms (simile, metaphor, personification, hyperbole, alliteration); myths and legends (vs folktales)"
+      ],
+      "reviewedBankQuestionsReusable": 8,
+      "conceptChecksNeededFor15": 7,
+      "exerciseQuestionTarget": 15,
+      "masteryThresholdPercent": 80,
+      "authoredNerdcQuestions": 0
+    },
+    {
+      "classLevel": "JSS1",
+      "subject": "English Language",
+      "theme": "Literature",
+      "officialTopic": "Introduction to Prose Fiction",
+      "sourceFile": "NERDC_JSS1_English_From_First_Table.docx",
+      "sourcePages": [
+        17
+      ],
+      "performanceObjectiveCount": 3,
+      "evidenceIds": [
+        "nerdc-jss1-english-literature-4"
+      ],
+      "legacyTeachingTargets": [
+        "Literature: elements of prose (plot, setting, theme, characterisation); introduction to drama (dialogue, stage directions)"
+      ],
+      "reviewedBankQuestionsReusable": 8,
+      "conceptChecksNeededFor15": 7,
+      "exerciseQuestionTarget": 15,
+      "masteryThresholdPercent": 80,
+      "authoredNerdcQuestions": 0
+    },
+    {
+      "classLevel": "JSS2",
+      "subject": "Mathematics",
+      "theme": "Number and Numeration",
+      "officialTopic": "Whole Numbers",
+      "sourceFile": "NERDC_JSS2_Mathematics_from_Roman_X_Complete_Tables.docx",
+      "sourcePages": [
+        1
+      ],
+      "performanceObjectiveCount": 6,
+      "evidenceIds": [
+        "nerdc-jss2-math-numbers-and-numeration-whole-numbers-1"
+      ],
+      "legacyTeachingTargets": [
+        "Whole Numbers — Standard Form; Indices (introductory laws)",
+        "Revision: Prime Factors, LCM, HCF; Squares and Square Roots"
+      ],
+      "reviewedBankQuestionsReusable": 15,
+      "conceptChecksNeededFor15": 0,
+      "exerciseQuestionTarget": 15,
+      "masteryThresholdPercent": 80,
+      "authoredNerdcQuestions": 0
+    },
+    {
+      "classLevel": "JSS2",
+      "subject": "Mathematics",
+      "theme": "Number and Numeration",
+      "officialTopic": "Square root of numbers",
+      "sourceFile": "NERDC_JSS2_Mathematics_from_Roman_X_Complete_Tables.docx",
+      "sourcePages": [
+        2
+      ],
+      "performanceObjectiveCount": 5,
+      "evidenceIds": [
+        "nerdc-jss2-math-numbers-and-numeration-whole-numbers-1"
+      ],
+      "legacyTeachingTargets": [
+        "Revision: Prime Factors, LCM, HCF; Squares and Square Roots"
+      ],
+      "reviewedBankQuestionsReusable": 15,
+      "conceptChecksNeededFor15": 0,
+      "exerciseQuestionTarget": 15,
+      "masteryThresholdPercent": 80,
+      "authoredNerdcQuestions": 0
+    },
+    {
+      "classLevel": "JSS2",
+      "subject": "Mathematics",
+      "theme": "Number and Numeration",
+      "officialTopic": "Fractions",
+      "sourceFile": "NERDC_JSS2_Mathematics_from_Roman_X_Complete_Tables.docx",
+      "sourcePages": [
+        3
+      ],
+      "performanceObjectiveCount": 2,
+      "evidenceIds": [
+        "nerdc-jss2-math-numbers-and-numeration-fractions-1"
+      ],
+      "legacyTeachingTargets": [
+        "Fractions, Percentages (increase/decrease), Ratio, Rate"
+      ],
+      "reviewedBankQuestionsReusable": 8,
+      "conceptChecksNeededFor15": 7,
+      "exerciseQuestionTarget": 15,
+      "masteryThresholdPercent": 80,
+      "authoredNerdcQuestions": 0
+    },
+    {
+      "classLevel": "JSS2",
+      "subject": "Mathematics",
+      "theme": "Basic Operations",
+      "officialTopic": "Commercial Arithmetic",
+      "sourceFile": "NERDC_JSS2_Mathematics_from_Roman_X_Complete_Tables.docx",
+      "sourcePages": [
+        4
+      ],
+      "performanceObjectiveCount": 2,
+      "evidenceIds": [
+        "nerdc-jss2-math-basic-operations-derived-operations-1"
+      ],
+      "legacyTeachingTargets": [
+        "Transactions in the Home and Office (budgeting; simple interest)"
+      ],
+      "reviewedBankQuestionsReusable": 8,
+      "conceptChecksNeededFor15": 7,
+      "exerciseQuestionTarget": 15,
+      "masteryThresholdPercent": 80,
+      "authoredNerdcQuestions": 0
+    },
+    {
+      "classLevel": "JSS2",
+      "subject": "Mathematics",
+      "theme": "Basic Operations",
+      "officialTopic": "Approximation",
+      "sourceFile": "NERDC_JSS2_Mathematics_from_Roman_X_Complete_Tables.docx",
+      "sourcePages": [
+        5
+      ],
+      "performanceObjectiveCount": 2,
+      "evidenceIds": [
+        "nerdc-jss2-math-basic-operations-derived-operations-2"
+      ],
+      "legacyTeachingTargets": [
+        "Approximation — Decimal Places and Significant Figures"
+      ],
+      "reviewedBankQuestionsReusable": 8,
+      "conceptChecksNeededFor15": 7,
+      "exerciseQuestionTarget": 15,
+      "masteryThresholdPercent": 80,
+      "authoredNerdcQuestions": 0
+    },
+    {
+      "classLevel": "JSS2",
+      "subject": "Mathematics",
+      "theme": "Basic Operations",
+      "officialTopic": "Multiplication and division of directed numbers",
+      "sourceFile": "NERDC_JSS2_Mathematics_from_Roman_X_Complete_Tables.docx",
+      "sourcePages": [
+        6
+      ],
+      "performanceObjectiveCount": 3,
+      "evidenceIds": [
+        "nerdc-jss2-math-basic-operations-derived-operations-3"
+      ],
+      "legacyTeachingTargets": [
+        "Multiplication and Division of Directed (Negative) Numbers"
+      ],
+      "reviewedBankQuestionsReusable": 8,
+      "conceptChecksNeededFor15": 7,
+      "exerciseQuestionTarget": 15,
+      "masteryThresholdPercent": 80,
+      "authoredNerdcQuestions": 0
+    },
+    {
+      "classLevel": "JSS2",
+      "subject": "Mathematics",
+      "theme": "Algebraic Processes",
+      "officialTopic": "Algebraic Expressions",
+      "sourceFile": "NERDC_JSS2_Mathematics_from_Roman_X_Complete_Tables.docx",
+      "sourcePages": [
+        7
+      ],
+      "performanceObjectiveCount": 6,
+      "evidenceIds": [
+        "nerdc-jss2-math-algebraic-processes-algebraic-operations-1"
+      ],
+      "legacyTeachingTargets": [
+        "Algebraic Expressions (introductory — multiplying terms)",
+        "Algebraic Expressions: expansion/simplification, substitution, LCM/HCF of algebraic terms, factorization (common factor), expansion to quadratics, factorization of simple quadratics, difference of two squares, algebraic fractions"
+      ],
+      "reviewedBankQuestionsReusable": 15,
+      "conceptChecksNeededFor15": 0,
+      "exerciseQuestionTarget": 15,
+      "masteryThresholdPercent": 80,
+      "authoredNerdcQuestions": 0
+    },
+    {
+      "classLevel": "JSS2",
+      "subject": "Mathematics",
+      "theme": "Algebraic Processes",
+      "officialTopic": "Simple Equations",
+      "sourceFile": "NERDC_JSS2_Mathematics_from_Roman_X_Complete_Tables.docx",
+      "sourcePages": [
+        8
+      ],
+      "performanceObjectiveCount": 1,
+      "evidenceIds": [
+        "nerdc-jss2-math-algebraic-processes-algebraic-operations-2"
+      ],
+      "legacyTeachingTargets": [
+        "Simple Linear Equations (balance method, brackets, fractions, word problems)"
+      ],
+      "reviewedBankQuestionsReusable": 8,
+      "conceptChecksNeededFor15": 7,
+      "exerciseQuestionTarget": 15,
+      "masteryThresholdPercent": 80,
+      "authoredNerdcQuestions": 0
+    },
+    {
+      "classLevel": "JSS2",
+      "subject": "Mathematics",
+      "theme": "Algebraic Processes",
+      "officialTopic": "Linear Inequalities",
+      "sourceFile": "NERDC_JSS2_Mathematics_from_Roman_X_Complete_Tables.docx",
+      "sourcePages": [
+        9
+      ],
+      "performanceObjectiveCount": 4,
+      "evidenceIds": [
+        "nerdc-jss2-math-algebraic-processes-algebraic-operations-3"
+      ],
+      "legacyTeachingTargets": [
+        "Linear Inequalities in One Variable (solving, sign-flip rule, combined inequalities, number-line representation)"
+      ],
+      "reviewedBankQuestionsReusable": 8,
+      "conceptChecksNeededFor15": 7,
+      "exerciseQuestionTarget": 15,
+      "masteryThresholdPercent": 80,
+      "authoredNerdcQuestions": 0
+    },
+    {
+      "classLevel": "JSS2",
+      "subject": "Mathematics",
+      "theme": "Algebraic Processes",
+      "officialTopic": "Graph",
+      "sourceFile": "NERDC_JSS2_Mathematics_from_Roman_X_Complete_Tables.docx",
+      "sourcePages": [
+        10
+      ],
+      "performanceObjectiveCount": 6,
+      "evidenceIds": [
+        "nerdc-jss2-math-algebraic-processes-algebraic-operations-4"
+      ],
+      "legacyTeachingTargets": [],
+      "reviewedBankQuestionsReusable": 8,
+      "conceptChecksNeededFor15": 7,
+      "exerciseQuestionTarget": 15,
+      "masteryThresholdPercent": 80,
+      "authoredNerdcQuestions": 0
+    },
+    {
+      "classLevel": "JSS2",
+      "subject": "Mathematics",
+      "theme": "Measurement And Geometry",
+      "officialTopic": "Plane Figure/ Shapes",
+      "sourceFile": "NERDC_JSS2_Mathematics_from_Roman_X_Complete_Tables.docx",
+      "sourcePages": [
+        11
+      ],
+      "performanceObjectiveCount": 6,
+      "evidenceIds": [
+        "nerdc-jss2-math-mensuration-and-geometry-shapes-1",
+        "revised2025-jss2-math-scale-drawing"
+      ],
+      "legacyTeachingTargets": [],
+      "reviewedBankQuestionsReusable": 15,
+      "conceptChecksNeededFor15": 0,
+      "exerciseQuestionTarget": 15,
+      "masteryThresholdPercent": 80,
+      "authoredNerdcQuestions": 0
+    },
+    {
+      "classLevel": "JSS2",
+      "subject": "Mathematics",
+      "theme": "Measurement And Geometry",
+      "officialTopic": "Angles",
+      "sourceFile": "NERDC_JSS2_Mathematics_from_Roman_X_Complete_Tables.docx",
+      "sourcePages": [
+        12
+      ],
+      "performanceObjectiveCount": 7,
+      "evidenceIds": [
+        "nerdc-jss2-math-mensuration-and-geometry-shapes-2",
+        "revised2025-jss2-math-elevation-depression"
+      ],
+      "legacyTeachingTargets": [
+        "Angles in a Polygon",
+        "Angles of Elevation and Depression"
+      ],
+      "reviewedBankQuestionsReusable": 15,
+      "conceptChecksNeededFor15": 0,
+      "exerciseQuestionTarget": 15,
+      "masteryThresholdPercent": 80,
+      "authoredNerdcQuestions": 0
+    },
+    {
+      "classLevel": "JSS2",
+      "subject": "Mathematics",
+      "theme": "Measurement And Geometry",
+      "officialTopic": "Bearing",
+      "sourceFile": "NERDC_JSS2_Mathematics_from_Roman_X_Complete_Tables.docx",
+      "sourcePages": [
+        14
+      ],
+      "performanceObjectiveCount": 3,
+      "evidenceIds": [
+        "nerdc-jss2-math-mensuration-and-geometry-shapes-3"
+      ],
+      "legacyTeachingTargets": [
+        "Bearing and Distances (compass directions, three-figure bearings, back bearings)"
+      ],
+      "reviewedBankQuestionsReusable": 8,
+      "conceptChecksNeededFor15": 7,
+      "exerciseQuestionTarget": 15,
+      "masteryThresholdPercent": 80,
+      "authoredNerdcQuestions": 0
+    },
+    {
+      "classLevel": "JSS2",
+      "subject": "Mathematics",
+      "theme": "Measurement And Geometry",
+      "officialTopic": "Construction",
+      "sourceFile": "NERDC_JSS2_Mathematics_from_Roman_X_Complete_Tables.docx",
+      "sourcePages": [
+        15
+      ],
+      "performanceObjectiveCount": 4,
+      "evidenceIds": [
+        "nerdc-jss2-math-mensuration-and-geometry-shapes-4"
+      ],
+      "legacyTeachingTargets": [],
+      "reviewedBankQuestionsReusable": 8,
+      "conceptChecksNeededFor15": 7,
+      "exerciseQuestionTarget": 15,
+      "masteryThresholdPercent": 80,
+      "authoredNerdcQuestions": 0
+    },
+    {
+      "classLevel": "JSS2",
+      "subject": "Mathematics",
+      "theme": "Everyday Statistics",
+      "officialTopic": "Data Presentation",
+      "sourceFile": "NERDC_JSS2_Mathematics_from_Roman_X_Complete_Tables.docx",
+      "sourcePages": [
+        16
+      ],
+      "performanceObjectiveCount": 5,
+      "evidenceIds": [
+        "nerdc-jss2-math-everyday-statistics-data-collection-and-presentation-1"
+      ],
+      "legacyTeachingTargets": [],
+      "reviewedBankQuestionsReusable": 15,
+      "conceptChecksNeededFor15": 0,
+      "exerciseQuestionTarget": 15,
+      "masteryThresholdPercent": 80,
+      "authoredNerdcQuestions": 0
+    },
+    {
+      "classLevel": "JSS2",
+      "subject": "Mathematics",
+      "theme": "Everyday Statistics",
+      "officialTopic": "Probability",
+      "sourceFile": "NERDC_JSS2_Mathematics_from_Roman_X_Complete_Tables.docx",
+      "sourcePages": [
+        17
+      ],
+      "performanceObjectiveCount": 3,
+      "evidenceIds": [
+        "nerdc-jss2-math-everyday-statistics-data-collection-and-presentation-2"
+      ],
+      "legacyTeachingTargets": [],
+      "reviewedBankQuestionsReusable": 8,
+      "conceptChecksNeededFor15": 7,
+      "exerciseQuestionTarget": 15,
+      "masteryThresholdPercent": 80,
+      "authoredNerdcQuestions": 0
+    },
+    {
+      "classLevel": "JSS2",
+      "subject": "English Language",
+      "theme": "Listening and Speaking",
+      "officialTopic": "Debate",
+      "sourceFile": "NERDC_JSS2_English_Studies_from_Roman_X.docx",
+      "sourcePages": [
+        1
+      ],
+      "performanceObjectiveCount": 2,
+      "evidenceIds": [
+        "nerdc2025-special-jss2-english-debate"
+      ],
+      "legacyTeachingTargets": [],
+      "reviewedBankQuestionsReusable": 0,
+      "conceptChecksNeededFor15": 0,
+      "exerciseQuestionTarget": 15,
+      "masteryThresholdPercent": 80,
+      "authoredNerdcQuestions": 15
+    },
+    {
+      "classLevel": "JSS2",
+      "subject": "English Language",
+      "theme": "Listening and Speaking",
+      "officialTopic": "Oral Comprehension",
+      "sourceFile": "NERDC_JSS2_English_Studies_from_Roman_X.docx",
+      "sourcePages": [
+        2
+      ],
+      "performanceObjectiveCount": 5,
+      "evidenceIds": [
+        "nerdc-jss2-english-listening-and-speaking-2",
+        "nerdc2025-special-jss2-english-oral-comprehension-current"
+      ],
+      "legacyTeachingTargets": [],
+      "reviewedBankQuestionsReusable": 8,
+      "conceptChecksNeededFor15": 7,
+      "exerciseQuestionTarget": 15,
+      "masteryThresholdPercent": 80,
+      "authoredNerdcQuestions": 0
+    },
+    {
+      "classLevel": "JSS2",
+      "subject": "English Language",
+      "theme": "Listening and Speaking",
+      "officialTopic": "Oral Summary",
+      "sourceFile": "NERDC_JSS2_English_Studies_from_Roman_X.docx",
+      "sourcePages": [
+        3
+      ],
+      "performanceObjectiveCount": 2,
+      "evidenceIds": [
+        "nerdc2025-special-jss2-english-oral-summary"
+      ],
+      "legacyTeachingTargets": [],
+      "reviewedBankQuestionsReusable": 0,
+      "conceptChecksNeededFor15": 0,
+      "exerciseQuestionTarget": 15,
+      "masteryThresholdPercent": 80,
+      "authoredNerdcQuestions": 15
+    },
+    {
+      "classLevel": "JSS2",
+      "subject": "English Language",
+      "theme": "Reading",
+      "officialTopic": "Reading with Fluency",
+      "sourceFile": "NERDC_JSS2_English_Studies_from_Roman_X.docx",
+      "sourcePages": [
+        4
+      ],
+      "performanceObjectiveCount": 2,
+      "evidenceIds": [
+        "nerdc2025-special-jss2-english-reading-fluency-current",
+        "nerdc-jss2-english-reading-4"
+      ],
+      "legacyTeachingTargets": [],
+      "reviewedBankQuestionsReusable": 15,
+      "conceptChecksNeededFor15": 0,
+      "exerciseQuestionTarget": 15,
+      "masteryThresholdPercent": 80,
+      "authoredNerdcQuestions": 0
+    },
+    {
+      "classLevel": "JSS2",
+      "subject": "English Language",
+      "theme": "Reading",
+      "officialTopic": "Reading to Understand the Writer’s Purpose",
+      "sourceFile": "NERDC_JSS2_English_Studies_from_Roman_X.docx",
+      "sourcePages": [
+        5
+      ],
+      "performanceObjectiveCount": 2,
+      "evidenceIds": [
+        "nerdc-jss2-english-reading-1"
+      ],
+      "legacyTeachingTargets": [
+        "Comprehension: writer"
+      ],
+      "reviewedBankQuestionsReusable": 8,
+      "conceptChecksNeededFor15": 7,
+      "exerciseQuestionTarget": 15,
+      "masteryThresholdPercent": 80,
+      "authoredNerdcQuestions": 0
+    },
+    {
+      "classLevel": "JSS2",
+      "subject": "English Language",
+      "theme": "Reading",
+      "officialTopic": "Reading to Identify the Meanings of Words in Various Contexts",
+      "sourceFile": "NERDC_JSS2_English_Studies_from_Roman_X.docx",
+      "sourcePages": [
+        6
+      ],
+      "performanceObjectiveCount": 2,
+      "evidenceIds": [
+        "nerdc-jss2-english-reading-2"
+      ],
+      "legacyTeachingTargets": [
+        "Comprehension: critical reading (claims vs evidence); reading words in context (context clues)"
+      ],
+      "reviewedBankQuestionsReusable": 8,
+      "conceptChecksNeededFor15": 7,
+      "exerciseQuestionTarget": 15,
+      "masteryThresholdPercent": 80,
+      "authoredNerdcQuestions": 0
+    },
+    {
+      "classLevel": "JSS2",
+      "subject": "English Language",
+      "theme": "Reading",
+      "officialTopic": "Critical Reading",
+      "sourceFile": "NERDC_JSS2_English_Studies_from_Roman_X.docx",
+      "sourcePages": [
+        7
+      ],
+      "performanceObjectiveCount": 5,
+      "evidenceIds": [
+        "nerdc-jss2-english-reading-3"
+      ],
+      "legacyTeachingTargets": [
+        "Comprehension: critical reading (claims vs evidence); reading words in context (context clues)"
+      ],
+      "reviewedBankQuestionsReusable": 15,
+      "conceptChecksNeededFor15": 0,
+      "exerciseQuestionTarget": 15,
+      "masteryThresholdPercent": 80,
+      "authoredNerdcQuestions": 0
+    },
+    {
+      "classLevel": "JSS2",
+      "subject": "English Language",
+      "theme": "Reading",
+      "officialTopic": "Reading for Summary",
+      "sourceFile": "NERDC_JSS2_English_Studies_from_Roman_X.docx",
+      "sourcePages": [
+        8
+      ],
+      "performanceObjectiveCount": 3,
+      "evidenceIds": [
+        "nerdc-jss2-english-reading-5"
+      ],
+      "legacyTeachingTargets": [
+        "Comprehension: summary writing (full method)"
+      ],
+      "reviewedBankQuestionsReusable": 15,
+      "conceptChecksNeededFor15": 0,
+      "exerciseQuestionTarget": 15,
+      "masteryThresholdPercent": 80,
+      "authoredNerdcQuestions": 0
+    },
+    {
+      "classLevel": "JSS2",
+      "subject": "English Language",
+      "theme": "Grammatical Accuracy",
+      "officialTopic": "Parts of Speech: Noun, Pronoun, Verb and Adjective",
+      "sourceFile": "NERDC_JSS2_English_Studies_from_Roman_X.docx",
+      "sourcePages": [
+        9
+      ],
+      "performanceObjectiveCount": 4,
+      "evidenceIds": [
+        "nerdc-jss2-english-grammatical-accuracy-1"
+      ],
+      "legacyTeachingTargets": [],
+      "reviewedBankQuestionsReusable": 8,
+      "conceptChecksNeededFor15": 7,
+      "exerciseQuestionTarget": 15,
+      "masteryThresholdPercent": 80,
+      "authoredNerdcQuestions": 0
+    },
+    {
+      "classLevel": "JSS2",
+      "subject": "English Language",
+      "theme": "Grammatical Accuracy",
+      "officialTopic": "Parts of Speech: Adverbs, Conjunctions, Prepositions and interjections",
+      "sourceFile": "NERDC_JSS2_English_Studies_from_Roman_X.docx",
+      "sourcePages": [
+        10
+      ],
+      "performanceObjectiveCount": 3,
+      "evidenceIds": [
+        "nerdc-jss2-english-grammatical-accuracy-2"
+      ],
+      "legacyTeachingTargets": [],
+      "reviewedBankQuestionsReusable": 15,
+      "conceptChecksNeededFor15": 0,
+      "exerciseQuestionTarget": 15,
+      "masteryThresholdPercent": 80,
+      "authoredNerdcQuestions": 0
+    },
+    {
+      "classLevel": "JSS2",
+      "subject": "English Language",
+      "theme": "Grammatical Accuracy",
+      "officialTopic": "Direct and Indirect Speeches",
+      "sourceFile": "NERDC_JSS2_English_Studies_from_Roman_X.docx",
+      "sourcePages": [
+        11
+      ],
+      "performanceObjectiveCount": 2,
+      "evidenceIds": [
+        "nerdc-jss2-english-grammatical-accuracy-5"
+      ],
+      "legacyTeachingTargets": [],
+      "reviewedBankQuestionsReusable": 8,
+      "conceptChecksNeededFor15": 7,
+      "exerciseQuestionTarget": 15,
+      "masteryThresholdPercent": 80,
+      "authoredNerdcQuestions": 0
+    },
+    {
+      "classLevel": "JSS2",
+      "subject": "English Language",
+      "theme": "Grammatical Accuracy",
+      "officialTopic": "Sentence Types (function): Declarative, Interrogative, Imperative (command) and Exclamatory",
+      "sourceFile": "NERDC_JSS2_English_Studies_from_Roman_X.docx",
+      "sourcePages": [
+        12
+      ],
+      "performanceObjectiveCount": 2,
+      "evidenceIds": [
+        "nerdc2025-special-jss2-english-sentence-function"
+      ],
+      "legacyTeachingTargets": [],
+      "reviewedBankQuestionsReusable": 0,
+      "conceptChecksNeededFor15": 0,
+      "exerciseQuestionTarget": 15,
+      "masteryThresholdPercent": 80,
+      "authoredNerdcQuestions": 15
+    },
+    {
+      "classLevel": "JSS2",
+      "subject": "English Language",
+      "theme": "Grammatical Accuracy",
+      "officialTopic": "Structural Sentence Types (simple, compound and complex)",
+      "sourceFile": "NERDC_JSS2_English_Studies_from_Roman_X.docx",
+      "sourcePages": [
+        13
+      ],
+      "performanceObjectiveCount": 3,
+      "evidenceIds": [
+        "nerdc2025-special-jss2-english-sentence-structure"
+      ],
+      "legacyTeachingTargets": [],
+      "reviewedBankQuestionsReusable": 0,
+      "conceptChecksNeededFor15": 0,
+      "exerciseQuestionTarget": 15,
+      "masteryThresholdPercent": 80,
+      "authoredNerdcQuestions": 15
+    },
+    {
+      "classLevel": "JSS2",
+      "subject": "English Language",
+      "theme": "Grammatical Accuracy",
+      "officialTopic": "Tenses",
+      "sourceFile": "NERDC_JSS2_English_Studies_from_Roman_X.docx",
+      "sourcePages": [
+        14
+      ],
+      "performanceObjectiveCount": 2,
+      "evidenceIds": [
+        "nerdc2025-special-jss2-english-tense-system-current",
+        "nerdc-jss2-english-grammatical-accuracy-3"
+      ],
+      "legacyTeachingTargets": [],
+      "reviewedBankQuestionsReusable": 8,
+      "conceptChecksNeededFor15": 7,
+      "exerciseQuestionTarget": 15,
+      "masteryThresholdPercent": 80,
+      "authoredNerdcQuestions": 0
+    },
+    {
+      "classLevel": "JSS2",
+      "subject": "English Language",
+      "theme": "Writing",
+      "officialTopic": "Composition Writing: Expository and Argumentative Essays",
+      "sourceFile": "NERDC_JSS2_English_Studies_from_Roman_X.docx",
+      "sourcePages": [
+        15
+      ],
+      "performanceObjectiveCount": 7,
+      "evidenceIds": [
+        "nerdc-jss2-english-writing-2"
+      ],
+      "legacyTeachingTargets": [],
+      "reviewedBankQuestionsReusable": 8,
+      "conceptChecksNeededFor15": 7,
+      "exerciseQuestionTarget": 15,
+      "masteryThresholdPercent": 80,
+      "authoredNerdcQuestions": 0
+    },
+    {
+      "classLevel": "JSS2",
+      "subject": "English Language",
+      "theme": "Writing",
+      "officialTopic": "Letter Writing: Informal and Formal",
+      "sourceFile": "NERDC_JSS2_English_Studies_from_Roman_X.docx",
+      "sourcePages": [
+        16
+      ],
+      "performanceObjectiveCount": 2,
+      "evidenceIds": [
+        "nerdc-jss2-english-writing-3"
+      ],
+      "legacyTeachingTargets": [
+        "Composition: formal letter writing (full structure)",
+        "Composition: informal/personal letter writing; report writing (introductory)"
+      ],
+      "reviewedBankQuestionsReusable": 8,
+      "conceptChecksNeededFor15": 7,
+      "exerciseQuestionTarget": 15,
+      "masteryThresholdPercent": 80,
+      "authoredNerdcQuestions": 0
+    },
+    {
+      "classLevel": "JSS2",
+      "subject": "English Language",
+      "theme": "Literature",
+      "officialTopic": "Reading class-appropriate plays",
+      "sourceFile": "NERDC_JSS2_English_Studies_from_Roman_X.docx",
+      "sourcePages": [
+        17
+      ],
+      "performanceObjectiveCount": 2,
+      "evidenceIds": [
+        "nerdc-jss2-english-literature-5"
+      ],
+      "legacyTeachingTargets": [
+        "Literature: drama elements extended (conflict, climax, resolution); figures of speech extended (irony, paradox, onomatopoeia)"
+      ],
+      "reviewedBankQuestionsReusable": 8,
+      "conceptChecksNeededFor15": 7,
+      "exerciseQuestionTarget": 15,
+      "masteryThresholdPercent": 80,
+      "authoredNerdcQuestions": 0
+    },
+    {
+      "classLevel": "JSS2",
+      "subject": "English Language",
+      "theme": "Literature",
+      "officialTopic": "Skit-making",
+      "sourceFile": "NERDC_JSS2_English_Studies_from_Roman_X.docx",
+      "sourcePages": [
+        19
+      ],
+      "performanceObjectiveCount": 2,
+      "evidenceIds": [
+        "nerdc2025-special-jss2-english-skit-making"
+      ],
+      "legacyTeachingTargets": [],
+      "reviewedBankQuestionsReusable": 0,
+      "conceptChecksNeededFor15": 0,
+      "exerciseQuestionTarget": 15,
+      "masteryThresholdPercent": 80,
+      "authoredNerdcQuestions": 15
+    },
+    {
+      "classLevel": "JSS2",
+      "subject": "English Language",
+      "theme": "Literature",
+      "officialTopic": "Writing dialogues",
+      "sourceFile": "NERDC_JSS2_English_Studies_from_Roman_X.docx",
+      "sourcePages": [
+        20
+      ],
+      "performanceObjectiveCount": 1,
+      "evidenceIds": [
+        "nerdc2025-special-jss2-english-dialogue-writing"
+      ],
+      "legacyTeachingTargets": [],
+      "reviewedBankQuestionsReusable": 0,
+      "conceptChecksNeededFor15": 0,
+      "exerciseQuestionTarget": 15,
+      "masteryThresholdPercent": 80,
+      "authoredNerdcQuestions": 15
+    }
+  ]
+}
