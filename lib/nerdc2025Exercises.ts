@@ -20,7 +20,12 @@ function cap(text:string){const v=norm(text);return v?`${v[0].toUpperCase()}${v.
 function rotate<T>(items:T[],offset:number){if(!items.length)return items;const n=((offset%items.length)+items.length)%items.length;return [...items.slice(n),...items.slice(0,n)]}
 function stableHash(input:string){let h=2166136261;for(let i=0;i<input.length;i++){h^=input.charCodeAt(i);h=Math.imul(h,16777619)}return h>>>0}
 
+export function hasKnownNerdcAssessmentGap(classLevel:string,subject:string,topic:string){
+ return classLevel==='JSS1'&&subject==='Mathematics'&&norm(topic)==='Addition and Subtraction';
+}
+
 function compatibleBankQuestions(classLevel:'JSS1'|'JSS2',subject:'Mathematics'|'English Language',topic:string){
+ if(hasKnownNerdcAssessmentGap(classLevel,subject,topic))return [];
  const evidence=new Set(evidenceIdsForOfficialTopic(classLevel,subject,topic));
  const oldIds=new Set(revised2025CurrentTopics.filter(t=>t.classLevel===classLevel&&t.subject===subject&&t.evidenceLessonIds.some(id=>evidence.has(id))).map(t=>t.id));
  return bank.filter(q=>q.classLevel===classLevel&&q.subject===subject&&oldIds.has(q.curriculumTopicId));
@@ -68,6 +73,9 @@ function conceptQuestions(classLevel:'JSS1'|'JSS2',subject:'Mathematics'|'Englis
 export function nerdc2025ExerciseQuestions(classLevel:string,subject:string,topic:string,count=15):NerdcExerciseQuestion[]{
  if((classLevel!=='JSS1'&&classLevel!=='JSS2')||(subject!=='Mathematics'&&subject!=='English Language'))return [];
  const official=officialNerdc2025Topic(classLevel,subject,topic);if(!official)return [];
+ // The uploaded JSS1 rebuild explicitly flags directed-number Addition and Subtraction as having no reviewed, topic-matched bank yet.
+ // Do not substitute the old whole-number bank or manufacture a fallback assessment: teaching remains available, independent mastery evidence waits for a deliberate bank decision.
+ if(hasKnownNerdcAssessmentGap(classLevel,subject,topic))return [];
  const authored=classLevel==='JSS2'&&subject==='English Language'?authoredNerdc2025EnglishQuestions(topic):[];
  if(authored.length){
   return authored.slice(0,count).map(q=>({

@@ -802,3 +802,91 @@ main,section,article,aside,header,footer,nav,form,div{min-width:0}
 /* V14.9.1 — NERDC objectives + visible tutor-teaching layer */
 .nerdc-objectives-v1491{max-width:860px;margin:16px auto 0;display:grid;grid-template-columns:minmax(0,1.5fr) minmax(250px,.7fr);gap:12px}.nerdc-objectives-main,.curriculum-details-v1491{border:1px solid #d9ddda;border-radius:14px;background:#fff;padding:18px}.curriculum-trust-chip{display:inline-flex;align-items:center;border-radius:999px;background:#f6f0dc;color:#725a17;padding:6px 10px;font-size:10px;line-height:1.2;font-weight:900;letter-spacing:.07em}.nerdc-objectives-main h3{margin:12px 0 10px;font-family:Georgia,serif;font-size:22px;color:var(--navy)}.nerdc-objectives-main ol{list-style:none;margin:0;padding:0;display:grid;gap:9px}.nerdc-objectives-main li{display:grid;grid-template-columns:30px 1fr;gap:10px;align-items:flex-start;color:#384251;line-height:1.5}.nerdc-objectives-main li>b{width:27px;height:27px;border-radius:50%;display:grid;place-items:center;background:#eef5ef;color:#205a42;font-size:12px}.curriculum-details-v1491{align-self:start;background:#fbfaf6}.curriculum-details-v1491 summary{cursor:pointer;font-weight:850;color:var(--navy)}.curriculum-details-v1491>div{padding-top:12px}.curriculum-details-v1491 p{margin:6px 0;color:#4e5865;font-size:13px;line-height:1.45}.curriculum-details-v1491 small{display:block;margin-top:10px;padding-top:10px;border-top:1px solid #e5e1d6;color:#6b7280;line-height:1.5}.avora-teacher-dialogue-v1491{display:grid;grid-template-columns:46px 1fr;gap:12px;margin:16px 0 12px;padding:16px;border:1px solid #d9e4dc;border-radius:14px;background:linear-gradient(135deg,#f7fbf8,#fffdf7)}.avora-tutor-mark{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:#0d5b46;color:#fff;font-family:Georgia,serif;font-size:22px;font-weight:800;box-shadow:0 8px 20px rgba(13,91,70,.12)}.avora-teacher-copy>span,.feedback-tutor-label{display:block;font-size:9px;letter-spacing:.12em;font-weight:900;color:#8a681d;margin-bottom:5px}.avora-teacher-copy p{margin:0;color:#22313a;font-size:16px;line-height:1.68}.teacher-interrupt-actions{display:flex;gap:7px;flex-wrap:wrap;margin-top:12px}.teacher-interrupt-actions button{border:1px solid #cddbd2;background:#fff;color:#18533f;border-radius:999px;padding:8px 11px;font-size:12px;font-weight:800}.teacher-interrupt-actions button:hover{background:#eff7f1}.tutor-feedback-v1491 button{margin-top:10px;border:1px solid #c9d6cd;background:#fff;color:#164e3b;border-radius:8px;padding:9px 12px;font-weight:800}.nerdc-topic-exercise .teacher-question{padding:18px;border:1px solid #e1e3e0;border-radius:12px;background:#fff}.nerdc-topic-exercise .teacher-options button{min-height:58px;border-radius:12px}.nerdc-topic-exercise .teacher-options button.chosen{border-color:#0d5b46;background:#eff8f2}.nerdc-topic-exercise .teacher-options button.chosen b{background:#0d5b46;color:#fff}
 @media(max-width:700px){.nerdc-objectives-v1491{grid-template-columns:1fr;margin:12px 0 0}.nerdc-objectives-main,.curriculum-details-v1491{padding:14px}.nerdc-objectives-main h3{font-size:20px}.avora-teacher-dialogue-v1491{grid-template-columns:38px 1fr;padding:13px}.avora-tutor-mark{width:36px;height:36px;font-size:18px}.avora-teacher-copy p{font-size:15px}.teacher-interrupt-actions{display:grid;grid-template-columns:1fr 1fr}.teacher-interrupt-actions button:last-child{grid-column:1/-1}.nerdc-topic-exercise .teacher-question{padding:14px}}
+
+/* =========================================================
+   AVORA V14.9.2 — global-ready slide teaching + golden mastery
+   ========================================================= */
+.tutor-slide-mode-v1492,.tutor-exercise-mode-v1492{padding-bottom:112px}
+.tutor-slide-mode-v1492 .live-teacher-stage{scroll-margin-top:76px;min-height:calc(100dvh - 92px);padding-bottom:118px;box-shadow:0 18px 55px rgba(27,40,70,.07)}
+.teaching-slide-progress-v1492{display:grid;grid-template-columns:auto minmax(100px,1fr);align-items:center;gap:12px;margin:0 0 12px}
+.teaching-slide-progress-v1492>span{font-size:9px;letter-spacing:.14em;font-weight:950;color:#7c6118;white-space:nowrap}
+.teaching-slide-progress-v1492>div{height:7px;background:#ece7d9;border-radius:999px;overflow:hidden}
+.teaching-slide-progress-v1492 i{display:block;height:100%;border-radius:inherit;background:linear-gradient(90deg,#0d5b46,#b58b2a);transition:width .24s ease}
+.tutor-slide-mode-v1492 .avora-teacher-dialogue-v1491{margin:10px 0 10px;padding:18px 20px;border-width:1px;box-shadow:0 10px 26px rgba(13,91,70,.055)}
+.tutor-slide-mode-v1492 .avora-teacher-copy p{font-size:clamp(17px,2.1vw,20px);line-height:1.62;font-weight:650;letter-spacing:-.006em;color:#1d2b35}
+.tutor-slide-mode-v1492 .animated-board-v1{min-height:235px;padding:18px 20px 52px;background:linear-gradient(180deg,#fffdf8,#faf8f0);border-color:#d9cfaf}
+.tutor-slide-mode-v1492 .board-step-meta{margin-bottom:14px}
+.tutor-slide-mode-v1492 .board-writing{gap:10px}
+.tutor-slide-mode-v1492 .board-line{font-size:clamp(19px,3.1vw,29px);line-height:1.28;white-space:pre-wrap}
+.tutor-slide-mode-v1492 .board-line.line-1{font-size:clamp(15px,2.2vw,19px);line-height:1.5}
+.tutor-slide-mode-v1492 .ask-teacher-v1{margin-bottom:18px}
+
+.teaching-slide-controls-v1492{position:fixed!important;left:50%;transform:translateX(-50%);bottom:max(10px,env(safe-area-inset-bottom));z-index:90;width:min(820px,calc(100vw - 24px));margin:0!important;padding:9px!important;display:grid!important;grid-template-columns:minmax(92px,.75fr) minmax(110px,1fr) minmax(92px,.75fr)!important;gap:8px!important;align-items:center;background:rgba(255,255,255,.96);border:1px solid #d9d6cb;border-radius:16px;box-shadow:0 18px 50px rgba(21,31,54,.2);backdrop-filter:blur(14px)}
+.teaching-slide-controls-v1492>button{min-height:52px!important;border-radius:11px!important;font-size:13px!important;padding:8px 12px!important}
+.teaching-slide-controls-v1492 .slide-prev-v1492{background:#fffaf0!important;border-color:#d7c58f!important;color:#6d5518!important}
+.teaching-slide-controls-v1492 .slide-next-v1492{background:var(--navy)!important;color:#fff!important;border-color:var(--navy)!important}
+.slide-control-status-v1492{min-width:0;display:grid;justify-items:center;gap:2px;text-align:center;color:var(--navy)}
+.slide-control-status-v1492 b{font-size:13px;line-height:1.1}
+.slide-control-status-v1492 span{max-width:100%;font-size:9px;line-height:1.2;font-weight:850;letter-spacing:.04em;color:#6f7784;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.teacher-voice-controls-v1492{grid-column:1/-1;display:flex;gap:6px;overflow-x:auto;padding-bottom:2px}
+.teacher-voice-controls-v1492 button{flex:0 0 auto;min-height:36px!important;padding:5px 9px!important;font-size:10px!important}
+
+/* Mastery exercise: premium gold, clearly separate from lesson teaching. */
+.tutor-exercise-mode-v1492 .nerdc-topic-exercise{scroll-margin-top:76px;padding-bottom:108px;border:2px solid #cfae49;border-top:7px solid #b58b2a;background:linear-gradient(160deg,#fffdf6 0%,#fff8df 48%,#fffdf8 100%);box-shadow:0 20px 58px rgba(126,91,10,.12)}
+.nerdc-topic-exercise>.teacher-kicker{display:inline-flex;padding:7px 10px;border-radius:999px;background:#8a681d;color:#fff5ce;letter-spacing:.1em}
+.nerdc-topic-exercise>h2{color:#4f3d0d}
+.nerdc-topic-exercise .teacher-copy{color:#6c5b2d}
+.exercise-progress-v1492{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:10px;margin:14px 0 8px}
+.exercise-progress-v1492>div{height:8px;border-radius:999px;background:#eadfbf;overflow:hidden;border:1px solid #dfcf9f}
+.exercise-progress-v1492 i{display:block;height:100%;border-radius:inherit;background:linear-gradient(90deg,#d9b84f,#8a681d);transition:width .22s ease}
+.exercise-progress-v1492 span{font-size:11px;font-weight:950;color:#725714}
+.nerdc-topic-exercise .exercise-score-strip{background:#f5e6ae;border:1px solid #dfc66e;color:#59440e}
+.nerdc-topic-exercise .exercise-score-strip span,.nerdc-topic-exercise .exercise-score-strip b{color:#59440e}
+.nerdc-topic-exercise .teacher-question{border:1px solid #d9bd61!important;background:rgba(255,255,255,.88)!important;box-shadow:inset 0 1px 0 rgba(255,255,255,.8)}
+.nerdc-topic-exercise .teacher-question h3{color:#332707;font-weight:800}
+.nerdc-topic-exercise .teacher-options{gap:10px}
+.nerdc-topic-exercise .teacher-options button{min-height:62px!important;border:1.5px solid #d5b85c!important;background:#fffdf7!important;color:#3c310f!important;box-shadow:0 4px 12px rgba(111,84,13,.045)}
+.nerdc-topic-exercise .teacher-options button b{background:#f2df9a!important;color:#5c4510!important;border:1px solid #d2b24f}
+.nerdc-topic-exercise .teacher-options button:hover{background:#fff7d9!important;border-color:#b58b2a!important}
+.nerdc-topic-exercise .teacher-options button.chosen{border:2px solid #8a681d!important;background:linear-gradient(135deg,#f8e7a5,#eed17a)!important;color:#2e250d!important}
+.nerdc-topic-exercise .teacher-options button.chosen b{background:#7c5e16!important;color:#fff8dc!important;border-color:#7c5e16!important}
+.nerdc-topic-exercise .persistent-feedback{border-left-color:#b58b2a;background:#fff5cf}
+.nerdc-topic-exercise .persistent-feedback.good{border-left-color:#6b7f58;background:#f4f7e8}
+.exercise-fixed-actions-v1492{position:fixed!important;left:50%;transform:translateX(-50%);bottom:max(10px,env(safe-area-inset-bottom));z-index:90;width:min(820px,calc(100vw - 24px));margin:0!important;padding:9px!important;background:rgba(255,249,225,.97);border:1px solid #cfad46;border-radius:16px;box-shadow:0 18px 50px rgba(79,59,7,.2);backdrop-filter:blur(14px)}
+.exercise-fixed-actions-v1492 button{width:100%;min-height:54px!important;border-radius:11px!important;background:linear-gradient(135deg,#8a681d,#b58b2a)!important;border-color:#8a681d!important;color:#fffaf0!important;font-size:14px!important}
+
+@media(max-width:700px){
+ .tutor-slide-mode-v1492,.tutor-exercise-mode-v1492{padding-bottom:102px}
+ .tutor-slide-mode-v1492 .live-teacher-stage{min-height:calc(100dvh - 74px);padding:14px 12px 106px}
+ .tutor-slide-mode-v1492 .teacher-stage-title{gap:5px;margin-bottom:8px}
+ .tutor-slide-mode-v1492 .teacher-stage-title h2{font-size:22px;line-height:1.12;margin:3px 0}
+ .teaching-slide-progress-v1492{margin-bottom:8px}
+ .tutor-slide-mode-v1492 .avora-teacher-dialogue-v1491{padding:13px;margin:7px 0}
+ .tutor-slide-mode-v1492 .avora-teacher-copy p{font-size:16.5px;line-height:1.54;font-weight:650}
+ .tutor-slide-mode-v1492 .teacher-interrupt-actions{margin-top:9px;gap:6px}
+ .tutor-slide-mode-v1492 .teacher-interrupt-actions button{padding:7px 8px;font-size:10px}
+ .tutor-slide-mode-v1492 .animated-board-v1{min-height:190px;padding:13px 12px 44px}
+ .tutor-slide-mode-v1492 .board-line{font-size:20px;line-height:1.25}
+ .tutor-slide-mode-v1492 .board-line.line-1{font-size:14.5px;line-height:1.42}
+ .teaching-slide-controls-v1492{width:calc(100vw - 16px);bottom:max(7px,env(safe-area-inset-bottom));padding:7px!important;grid-template-columns:minmax(84px,.8fr) minmax(82px,1fr) minmax(84px,.8fr)!important;border-radius:14px}
+ .teaching-slide-controls-v1492>button{min-height:48px!important;padding:6px 8px!important;font-size:12px!important}
+ .slide-control-status-v1492 b{font-size:12px}.slide-control-status-v1492 span{font-size:8px}
+ .tutor-exercise-mode-v1492 .nerdc-topic-exercise{padding:16px 13px 100px}
+ .nerdc-topic-exercise>h2{font-size:28px}
+ .nerdc-topic-exercise .teacher-question h3{font-size:23px;line-height:1.24}
+ .nerdc-topic-exercise .teacher-options button{min-height:58px!important;padding:10px!important}
+ .exercise-fixed-actions-v1492{width:calc(100vw - 16px);bottom:max(7px,env(safe-area-inset-bottom));padding:7px!important}
+ .exercise-fixed-actions-v1492 button{min-height:50px!important}
+}
+
+@media(max-height:700px) and (max-width:700px){
+ .tutor-slide-mode-v1492 .teacher-stage-title h2{font-size:20px}
+ .tutor-slide-mode-v1492 .avora-teacher-copy p{font-size:15.5px;line-height:1.48}
+ .tutor-slide-mode-v1492 .animated-board-v1{min-height:165px}
+}
+
+/* V14.9.2 — explicit academic honesty state for the directed-number assessment gap. */
+.assessment-gap-v1492{border:1px solid #cfad46;background:linear-gradient(150deg,#fffdf5,#fff8dc)}
+.assessment-gap-v1492 .teacher-kicker{color:#755711}
+.assessment-gap-v1492 h2{color:#3f340f}
+.assessment-gap-v1492 p{max-width:70ch;color:#62552e}

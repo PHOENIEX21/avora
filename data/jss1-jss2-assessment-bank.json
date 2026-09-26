@@ -5,1398 +5,6 @@
   "questionStandard": "Direct, self-contained, single-best-answer examination practice. No curriculum-awareness or AVORA-meta prompts.",
   "questions": [
     {
-      "id": "v132-nerdc2025-jss1-math-mathematics-whole-numbers-01",
-      "curriculumTopicId": "nerdc2025-jss1-math-mathematics-whole-numbers",
-      "classLevel": "JSS1",
-      "subject": "Mathematics",
-      "topic": "Whole Numbers",
-      "prompt": "What is the value of the digit 7 in 5,742,091?",
-      "questionType": "MULTIPLE_CHOICE",
-      "options": [
-        "700,000",
-        "70,000",
-        "7,000",
-        "7,000,000"
-      ],
-      "correctAnswer": "700,000",
-      "explanation": "The correct answer is 700,000.",
-      "difficulty": 1,
-      "assessmentKind": "CONCEPT",
-      "curriculumObjective": "Use place value to read, write, compare and order whole numbers",
-      "misconceptionTags": [
-        "reading 1,005,020 as one million fifty-two",
-        "dropping zero placeholders when writing words as numerals",
-        "comparing from the units side instead of the highest place"
-      ],
-      "qualityStatus": "REVIEWED",
-      "contentOrigin": "AVORA_ORIGINAL",
-      "curriculumVersion": "AVORA_MASTER_V13_2_EXAM_STANDARD",
-      "variantFamily": "v132-nerdc2025-jss1-math-mathematics-whole-numbers-exam-01"
-    },
-    {
-      "id": "v132-nerdc2025-jss1-math-mathematics-whole-numbers-02",
-      "curriculumTopicId": "nerdc2025-jss1-math-mathematics-whole-numbers",
-      "classLevel": "JSS1",
-      "subject": "Mathematics",
-      "topic": "Whole Numbers",
-      "prompt": "Which number is greatest?",
-      "questionType": "MULTIPLE_CHOICE",
-      "options": [
-        "6,040,000",
-        "6,004,000",
-        "6,000,400",
-        "6,400,000"
-      ],
-      "correctAnswer": "6,400,000",
-      "explanation": "The correct answer is 6,400,000.",
-      "difficulty": 1,
-      "assessmentKind": "APPLICATION",
-      "curriculumObjective": "Apply whole numbers in contextual problems",
-      "misconceptionTags": [
-        "reading 1,005,020 as one million fifty-two",
-        "dropping zero placeholders when writing words as numerals",
-        "comparing from the units side instead of the highest place"
-      ],
-      "qualityStatus": "REVIEWED",
-      "contentOrigin": "AVORA_ORIGINAL",
-      "curriculumVersion": "AVORA_MASTER_V13_2_EXAM_STANDARD",
-      "variantFamily": "v132-nerdc2025-jss1-math-mathematics-whole-numbers-exam-02"
-    },
-    {
-      "id": "v132-nerdc2025-jss1-math-mathematics-whole-numbers-03",
-      "curriculumTopicId": "nerdc2025-jss1-math-mathematics-whole-numbers",
-      "classLevel": "JSS1",
-      "subject": "Mathematics",
-      "topic": "Whole Numbers",
-      "prompt": "Write nine million, twelve thousand and six in figures.",
-      "questionType": "MULTIPLE_CHOICE",
-      "options": [
-        "9,012,060",
-        "9,102,006",
-        "9,012,006",
-        "9,120,006"
-      ],
-      "correctAnswer": "9,012,006",
-      "explanation": "The correct answer is 9,012,006.",
-      "difficulty": 1,
-      "assessmentKind": "REASONING",
-      "curriculumObjective": "Use place value to read, write, compare and order whole numbers",
-      "misconceptionTags": [
-        "reading 1,005,020 as one million fifty-two",
-        "dropping zero placeholders when writing words as numerals",
-        "comparing from the units side instead of the highest place"
-      ],
-      "qualityStatus": "REVIEWED",
-      "contentOrigin": "AVORA_ORIGINAL",
-      "curriculumVersion": "AVORA_MASTER_V13_2_EXAM_STANDARD",
-      "variantFamily": "v132-nerdc2025-jss1-math-mathematics-whole-numbers-exam-03"
-    },
-    {
-      "id": "v132-nerdc2025-jss1-math-mathematics-whole-numbers-04",
-      "curriculumTopicId": "nerdc2025-jss1-math-mathematics-whole-numbers",
-      "classLevel": "JSS1",
-      "subject": "Mathematics",
-      "topic": "Whole Numbers",
-      "prompt": "What is 125,400 + 98,750?",
-      "questionType": "MULTIPLE_CHOICE",
-      "options": [
-        "223,150",
-        "224,150",
-        "214,150",
-        "224,050"
-      ],
-      "correctAnswer": "224,150",
-      "explanation": "The correct answer is 224,150.",
-      "difficulty": 1,
-      "assessmentKind": "MISCONCEPTION",
-      "curriculumObjective": "Apply whole numbers in contextual problems",
-      "misconceptionTags": [
-        "reading 1,005,020 as one million fifty-two",
-        "dropping zero placeholders when writing words as numerals",
-        "comparing from the units side instead of the highest place"
-      ],
-      "qualityStatus": "REVIEWED",
-      "contentOrigin": "AVORA_ORIGINAL",
-      "curriculumVersion": "AVORA_MASTER_V13_2_EXAM_STANDARD",
-      "variantFamily": "v132-nerdc2025-jss1-math-mathematics-whole-numbers-exam-04"
-    },
-    {
-      "id": "v132-nerdc2025-jss1-math-mathematics-whole-numbers-05",
-      "curriculumTopicId": "nerdc2025-jss1-math-mathematics-whole-numbers",
-      "classLevel": "JSS1",
-      "subject": "Mathematics",
-      "topic": "Whole Numbers",
-      "prompt": "What is 900,000 - 275,650?",
-      "questionType": "MULTIPLE_CHOICE",
-      "options": [
-        "624,350",
-        "625,350",
-        "634,350",
-        "624,250"
-      ],
-      "correctAnswer": "624,350",
-      "explanation": "The correct answer is 624,350.",
-      "difficulty": 1,
-      "assessmentKind": "APPLICATION",
-      "curriculumObjective": "Use place value to read, write, compare and order whole numbers",
-      "misconceptionTags": [
-        "reading 1,005,020 as one million fifty-two",
-        "dropping zero placeholders when writing words as numerals",
-        "comparing from the units side instead of the highest place"
-      ],
-      "qualityStatus": "REVIEWED",
-      "contentOrigin": "AVORA_ORIGINAL",
-      "curriculumVersion": "AVORA_MASTER_V13_2_EXAM_STANDARD",
-      "variantFamily": "v132-nerdc2025-jss1-math-mathematics-whole-numbers-exam-05"
-    },
-    {
-      "id": "v132-nerdc2025-jss1-math-mathematics-whole-numbers-06",
-      "curriculumTopicId": "nerdc2025-jss1-math-mathematics-whole-numbers",
-      "classLevel": "JSS1",
-      "subject": "Mathematics",
-      "topic": "Whole Numbers",
-      "prompt": "Round 6,784,219 to the nearest thousand.",
-      "questionType": "MULTIPLE_CHOICE",
-      "options": [
-        "6,785,000",
-        "6,780,000",
-        "6,784,200",
-        "6,784,000"
-      ],
-      "correctAnswer": "6,784,000",
-      "explanation": "The correct answer is 6,784,000.",
-      "difficulty": 1,
-      "assessmentKind": "TRANSFER",
-      "curriculumObjective": "Apply whole numbers in contextual problems",
-      "misconceptionTags": [
-        "reading 1,005,020 as one million fifty-two",
-        "dropping zero placeholders when writing words as numerals",
-        "comparing from the units side instead of the highest place"
-      ],
-      "qualityStatus": "REVIEWED",
-      "contentOrigin": "AVORA_ORIGINAL",
-      "curriculumVersion": "AVORA_MASTER_V13_2_EXAM_STANDARD",
-      "variantFamily": "v132-nerdc2025-jss1-math-mathematics-whole-numbers-exam-06"
-    },
-    {
-      "id": "v132-nerdc2025-jss1-math-mathematics-whole-numbers-07",
-      "curriculumTopicId": "nerdc2025-jss1-math-mathematics-whole-numbers",
-      "classLevel": "JSS1",
-      "subject": "Mathematics",
-      "topic": "Whole Numbers",
-      "prompt": "Which is the correct ascending order?",
-      "questionType": "MULTIPLE_CHOICE",
-      "options": [
-        "6,040,000; 6,004,000; 6,400,000",
-        "6,004,000; 6,400,000; 6,040,000",
-        "6,004,000; 6,040,000; 6,400,000",
-        "6,400,000; 6,040,000; 6,004,000"
-      ],
-      "correctAnswer": "6,004,000; 6,040,000; 6,400,000",
-      "explanation": "The correct answer is 6,004,000; 6,040,000; 6,400,000.",
-      "difficulty": 1,
-      "assessmentKind": "MASTERY",
-      "curriculumObjective": "Use place value to read, write, compare and order whole numbers",
-      "misconceptionTags": [
-        "reading 1,005,020 as one million fifty-two",
-        "dropping zero placeholders when writing words as numerals",
-        "comparing from the units side instead of the highest place"
-      ],
-      "qualityStatus": "REVIEWED",
-      "contentOrigin": "AVORA_ORIGINAL",
-      "curriculumVersion": "AVORA_MASTER_V13_2_EXAM_STANDARD",
-      "variantFamily": "v132-nerdc2025-jss1-math-mathematics-whole-numbers-exam-07"
-    },
-    {
-      "id": "v132-nerdc2025-jss1-math-mathematics-whole-numbers-08",
-      "curriculumTopicId": "nerdc2025-jss1-math-mathematics-whole-numbers",
-      "classLevel": "JSS1",
-      "subject": "Mathematics",
-      "topic": "Whole Numbers",
-      "prompt": "How many thousands are in 3,500,000?",
-      "questionType": "MULTIPLE_CHOICE",
-      "options": [
-        "3,500,000",
-        "3,500",
-        "350",
-        "35,000"
-      ],
-      "correctAnswer": "3,500",
-      "explanation": "The correct answer is 3,500.",
-      "difficulty": 1,
-      "assessmentKind": "OBJECTIVE",
-      "curriculumObjective": "Apply whole numbers in contextual problems",
-      "misconceptionTags": [
-        "reading 1,005,020 as one million fifty-two",
-        "dropping zero placeholders when writing words as numerals",
-        "comparing from the units side instead of the highest place"
-      ],
-      "qualityStatus": "REVIEWED",
-      "contentOrigin": "AVORA_ORIGINAL",
-      "curriculumVersion": "AVORA_MASTER_V13_2_EXAM_STANDARD",
-      "variantFamily": "v132-nerdc2025-jss1-math-mathematics-whole-numbers-exam-08"
-    },
-    {
-      "id": "v132-nerdc2025-jss1-math-mathematics-lcm-least-common-multiple-01",
-      "curriculumTopicId": "nerdc2025-jss1-math-mathematics-lcm-least-common-multiple",
-      "classLevel": "JSS1",
-      "subject": "Mathematics",
-      "topic": "LCM (Least Common Multiple)",
-      "prompt": "What is the LCM of 6 and 8?",
-      "questionType": "MULTIPLE_CHOICE",
-      "options": [
-        "24",
-        "12",
-        "30",
-        "192"
-      ],
-      "correctAnswer": "24",
-      "explanation": "The least positive number divisible by both 6 and 8 is 24.",
-      "difficulty": 1,
-      "assessmentKind": "CONCEPT",
-      "curriculumObjective": "Find LCM using listing and prime-factor methods",
-      "misconceptionTags": [
-        "confusing factors with multiples",
-        "choosing any common multiple instead of the least",
-        "using the smallest prime powers in LCM"
-      ],
-      "qualityStatus": "REVIEWED",
-      "contentOrigin": "AVORA_ORIGINAL",
-      "curriculumVersion": "AVORA_MASTER_V13_2_EXAM_STANDARD",
-      "variantFamily": "v132-nerdc2025-jss1-math-mathematics-lcm-least-common-multiple-exam-01"
-    },
-    {
-      "id": "v132-nerdc2025-jss1-math-mathematics-lcm-least-common-multiple-02",
-      "curriculumTopicId": "nerdc2025-jss1-math-mathematics-lcm-least-common-multiple",
-      "classLevel": "JSS1",
-      "subject": "Mathematics",
-      "topic": "LCM (Least Common Multiple)",
-      "prompt": "What is the LCM of 9 and 12?",
-      "questionType": "MULTIPLE_CHOICE",
-      "options": [
-        "18",
-        "45",
-        "432",
-        "36"
-      ],
-      "correctAnswer": "36",
-      "explanation": "The least positive number divisible by both 9 and 12 is 36.",
-      "difficulty": 1,
-      "assessmentKind": "APPLICATION",
-      "curriculumObjective": "Apply LCM to repeated-event problems",
-      "misconceptionTags": [
-        "confusing factors with multiples",
-        "choosing any common multiple instead of the least",
-        "using the smallest prime powers in LCM"
-      ],
-      "qualityStatus": "REVIEWED",
-      "contentOrigin": "AVORA_ORIGINAL",
-      "curriculumVersion": "AVORA_MASTER_V13_2_EXAM_STANDARD",
-      "variantFamily": "v132-nerdc2025-jss1-math-mathematics-lcm-least-common-multiple-exam-02"
-    },
-    {
-      "id": "v132-nerdc2025-jss1-math-mathematics-lcm-least-common-multiple-03",
-      "curriculumTopicId": "nerdc2025-jss1-math-mathematics-lcm-least-common-multiple",
-      "classLevel": "JSS1",
-      "subject": "Mathematics",
-      "topic": "LCM (Least Common Multiple)",
-      "prompt": "What is the LCM of 10 and 15?",
-      "questionType": "MULTIPLE_CHOICE",
-      "options": [
-        "40",
-        "450",
-        "30",
-        "15"
-      ],
-      "correctAnswer": "30",
-      "explanation": "The least positive number divisible by both 10 and 15 is 30.",
-      "difficulty": 1,
-      "assessmentKind": "REASONING",
-      "curriculumObjective": "Find LCM using listing and prime-factor methods",
-      "misconceptionTags": [
-        "confusing factors with multiples",
-        "choosing any common multiple instead of the least",
-        "using the smallest prime powers in LCM"
-      ],
-      "qualityStatus": "REVIEWED",
-      "contentOrigin": "AVORA_ORIGINAL",
-      "curriculumVersion": "AVORA_MASTER_V13_2_EXAM_STANDARD",
-      "variantFamily": "v132-nerdc2025-jss1-math-mathematics-lcm-least-common-multiple-exam-03"
-    },
-    {
-      "id": "v132-nerdc2025-jss1-math-mathematics-lcm-least-common-multiple-04",
-      "curriculumTopicId": "nerdc2025-jss1-math-mathematics-lcm-least-common-multiple",
-      "classLevel": "JSS1",
-      "subject": "Mathematics",
-      "topic": "LCM (Least Common Multiple)",
-      "prompt": "What is the LCM of 12 and 18?",
-      "questionType": "MULTIPLE_CHOICE",
-      "options": [
-        "648",
-        "36",
-        "18",
-        "48"
-      ],
-      "correctAnswer": "36",
-      "explanation": "The least positive number divisible by both 12 and 18 is 36.",
-      "difficulty": 1,
-      "assessmentKind": "MISCONCEPTION",
-      "curriculumObjective": "Apply LCM to repeated-event problems",
-      "misconceptionTags": [
-        "confusing factors with multiples",
-        "choosing any common multiple instead of the least",
-        "using the smallest prime powers in LCM"
-      ],
-      "qualityStatus": "REVIEWED",
-      "contentOrigin": "AVORA_ORIGINAL",
-      "curriculumVersion": "AVORA_MASTER_V13_2_EXAM_STANDARD",
-      "variantFamily": "v132-nerdc2025-jss1-math-mathematics-lcm-least-common-multiple-exam-04"
-    },
-    {
-      "id": "v132-nerdc2025-jss1-math-mathematics-lcm-least-common-multiple-05",
-      "curriculumTopicId": "nerdc2025-jss1-math-mathematics-lcm-least-common-multiple",
-      "classLevel": "JSS1",
-      "subject": "Mathematics",
-      "topic": "LCM (Least Common Multiple)",
-      "prompt": "What is the LCM of 8 and 20?",
-      "questionType": "MULTIPLE_CHOICE",
-      "options": [
-        "40",
-        "20",
-        "48",
-        "800"
-      ],
-      "correctAnswer": "40",
-      "explanation": "The least positive number divisible by both 8 and 20 is 40.",
-      "difficulty": 1,
-      "assessmentKind": "APPLICATION",
-      "curriculumObjective": "Find LCM using listing and prime-factor methods",
-      "misconceptionTags": [
-        "confusing factors with multiples",
-        "choosing any common multiple instead of the least",
-        "using the smallest prime powers in LCM"
-      ],
-      "qualityStatus": "REVIEWED",
-      "contentOrigin": "AVORA_ORIGINAL",
-      "curriculumVersion": "AVORA_MASTER_V13_2_EXAM_STANDARD",
-      "variantFamily": "v132-nerdc2025-jss1-math-mathematics-lcm-least-common-multiple-exam-05"
-    },
-    {
-      "id": "v132-nerdc2025-jss1-math-mathematics-lcm-least-common-multiple-06",
-      "curriculumTopicId": "nerdc2025-jss1-math-mathematics-lcm-least-common-multiple",
-      "classLevel": "JSS1",
-      "subject": "Mathematics",
-      "topic": "LCM (Least Common Multiple)",
-      "prompt": "What is the LCM of 14 and 21?",
-      "questionType": "MULTIPLE_CHOICE",
-      "options": [
-        "21",
-        "56",
-        "882",
-        "42"
-      ],
-      "correctAnswer": "42",
-      "explanation": "The least positive number divisible by both 14 and 21 is 42.",
-      "difficulty": 1,
-      "assessmentKind": "TRANSFER",
-      "curriculumObjective": "Apply LCM to repeated-event problems",
-      "misconceptionTags": [
-        "confusing factors with multiples",
-        "choosing any common multiple instead of the least",
-        "using the smallest prime powers in LCM"
-      ],
-      "qualityStatus": "REVIEWED",
-      "contentOrigin": "AVORA_ORIGINAL",
-      "curriculumVersion": "AVORA_MASTER_V13_2_EXAM_STANDARD",
-      "variantFamily": "v132-nerdc2025-jss1-math-mathematics-lcm-least-common-multiple-exam-06"
-    },
-    {
-      "id": "v132-nerdc2025-jss1-math-mathematics-lcm-least-common-multiple-07",
-      "curriculumTopicId": "nerdc2025-jss1-math-mathematics-lcm-least-common-multiple",
-      "classLevel": "JSS1",
-      "subject": "Mathematics",
-      "topic": "LCM (Least Common Multiple)",
-      "prompt": "What is the LCM of 15 and 20?",
-      "questionType": "MULTIPLE_CHOICE",
-      "options": [
-        "75",
-        "1200",
-        "60",
-        "30"
-      ],
-      "correctAnswer": "60",
-      "explanation": "The least positive number divisible by both 15 and 20 is 60.",
-      "difficulty": 1,
-      "assessmentKind": "MASTERY",
-      "curriculumObjective": "Find LCM using listing and prime-factor methods",
-      "misconceptionTags": [
-        "confusing factors with multiples",
-        "choosing any common multiple instead of the least",
-        "using the smallest prime powers in LCM"
-      ],
-      "qualityStatus": "REVIEWED",
-      "contentOrigin": "AVORA_ORIGINAL",
-      "curriculumVersion": "AVORA_MASTER_V13_2_EXAM_STANDARD",
-      "variantFamily": "v132-nerdc2025-jss1-math-mathematics-lcm-least-common-multiple-exam-07"
-    },
-    {
-      "id": "v132-nerdc2025-jss1-math-mathematics-lcm-least-common-multiple-08",
-      "curriculumTopicId": "nerdc2025-jss1-math-mathematics-lcm-least-common-multiple",
-      "classLevel": "JSS1",
-      "subject": "Mathematics",
-      "topic": "LCM (Least Common Multiple)",
-      "prompt": "What is the LCM of 4 and 6?",
-      "questionType": "MULTIPLE_CHOICE",
-      "options": [
-        "72",
-        "12",
-        "6",
-        "16"
-      ],
-      "correctAnswer": "12",
-      "explanation": "The least positive number divisible by both 4 and 6 is 12.",
-      "difficulty": 1,
-      "assessmentKind": "OBJECTIVE",
-      "curriculumObjective": "Apply LCM to repeated-event problems",
-      "misconceptionTags": [
-        "confusing factors with multiples",
-        "choosing any common multiple instead of the least",
-        "using the smallest prime powers in LCM"
-      ],
-      "qualityStatus": "REVIEWED",
-      "contentOrigin": "AVORA_ORIGINAL",
-      "curriculumVersion": "AVORA_MASTER_V13_2_EXAM_STANDARD",
-      "variantFamily": "v132-nerdc2025-jss1-math-mathematics-lcm-least-common-multiple-exam-08"
-    },
-    {
-      "id": "v132-nerdc2025-jss1-math-mathematics-hcf-highest-common-factor-01",
-      "curriculumTopicId": "nerdc2025-jss1-math-mathematics-hcf-highest-common-factor",
-      "classLevel": "JSS1",
-      "subject": "Mathematics",
-      "topic": "HCF (Highest Common Factor)",
-      "prompt": "What is the HCF of 18 and 24?",
-      "questionType": "MULTIPLE_CHOICE",
-      "options": [
-        "6",
-        "3",
-        "12",
-        "18"
-      ],
-      "correctAnswer": "6",
-      "explanation": "6 is the greatest number that divides both 18 and 24 exactly.",
-      "difficulty": 1,
-      "assessmentKind": "CONCEPT",
-      "curriculumObjective": "Find HCF using factor and prime-factor methods",
-      "misconceptionTags": [
-        "using largest powers for HCF",
-        "assuming HCF must be one of the smaller numbers",
-        "using LCM in an equal-grouping problem"
-      ],
-      "qualityStatus": "REVIEWED",
-      "contentOrigin": "AVORA_ORIGINAL",
-      "curriculumVersion": "AVORA_MASTER_V13_2_EXAM_STANDARD",
-      "variantFamily": "v132-nerdc2025-jss1-math-mathematics-hcf-highest-common-factor-exam-01"
-    },
-    {
-      "id": "v132-nerdc2025-jss1-math-mathematics-hcf-highest-common-factor-02",
-      "curriculumTopicId": "nerdc2025-jss1-math-mathematics-hcf-highest-common-factor",
-      "classLevel": "JSS1",
-      "subject": "Mathematics",
-      "topic": "HCF (Highest Common Factor)",
-      "prompt": "What is the HCF of 30 and 45?",
-      "questionType": "MULTIPLE_CHOICE",
-      "options": [
-        "7",
-        "30",
-        "15 (1)",
-        "15"
-      ],
-      "correctAnswer": "15",
-      "explanation": "15 is the greatest number that divides both 30 and 45 exactly.",
-      "difficulty": 1,
-      "assessmentKind": "APPLICATION",
-      "curriculumObjective": "Distinguish HCF from LCM and apply it to grouping problems",
-      "misconceptionTags": [
-        "using largest powers for HCF",
-        "assuming HCF must be one of the smaller numbers",
-        "using LCM in an equal-grouping problem"
-      ],
-      "qualityStatus": "REVIEWED",
-      "contentOrigin": "AVORA_ORIGINAL",
-      "curriculumVersion": "AVORA_MASTER_V13_2_EXAM_STANDARD",
-      "variantFamily": "v132-nerdc2025-jss1-math-mathematics-hcf-highest-common-factor-exam-02"
-    },
-    {
-      "id": "v132-nerdc2025-jss1-math-mathematics-hcf-highest-common-factor-03",
-      "curriculumTopicId": "nerdc2025-jss1-math-mathematics-hcf-highest-common-factor",
-      "classLevel": "JSS1",
-      "subject": "Mathematics",
-      "topic": "HCF (Highest Common Factor)",
-      "prompt": "What is the HCF of 36 and 48?",
-      "questionType": "MULTIPLE_CHOICE",
-      "options": [
-        "24",
-        "36",
-        "12",
-        "6"
-      ],
-      "correctAnswer": "12",
-      "explanation": "12 is the greatest number that divides both 36 and 48 exactly.",
-      "difficulty": 1,
-      "assessmentKind": "REASONING",
-      "curriculumObjective": "Find HCF using factor and prime-factor methods",
-      "misconceptionTags": [
-        "using largest powers for HCF",
-        "assuming HCF must be one of the smaller numbers",
-        "using LCM in an equal-grouping problem"
-      ],
-      "qualityStatus": "REVIEWED",
-      "contentOrigin": "AVORA_ORIGINAL",
-      "curriculumVersion": "AVORA_MASTER_V13_2_EXAM_STANDARD",
-      "variantFamily": "v132-nerdc2025-jss1-math-mathematics-hcf-highest-common-factor-exam-03"
-    },
-    {
-      "id": "v132-nerdc2025-jss1-math-mathematics-hcf-highest-common-factor-04",
-      "curriculumTopicId": "nerdc2025-jss1-math-mathematics-hcf-highest-common-factor",
-      "classLevel": "JSS1",
-      "subject": "Mathematics",
-      "topic": "HCF (Highest Common Factor)",
-      "prompt": "What is the HCF of 72 and 96?",
-      "questionType": "MULTIPLE_CHOICE",
-      "options": [
-        "72",
-        "24",
-        "12",
-        "48"
-      ],
-      "correctAnswer": "24",
-      "explanation": "24 is the greatest number that divides both 72 and 96 exactly.",
-      "difficulty": 1,
-      "assessmentKind": "MISCONCEPTION",
-      "curriculumObjective": "Distinguish HCF from LCM and apply it to grouping problems",
-      "misconceptionTags": [
-        "using largest powers for HCF",
-        "assuming HCF must be one of the smaller numbers",
-        "using LCM in an equal-grouping problem"
-      ],
-      "qualityStatus": "REVIEWED",
-      "contentOrigin": "AVORA_ORIGINAL",
-      "curriculumVersion": "AVORA_MASTER_V13_2_EXAM_STANDARD",
-      "variantFamily": "v132-nerdc2025-jss1-math-mathematics-hcf-highest-common-factor-exam-04"
-    },
-    {
-      "id": "v132-nerdc2025-jss1-math-mathematics-hcf-highest-common-factor-05",
-      "curriculumTopicId": "nerdc2025-jss1-math-mathematics-hcf-highest-common-factor",
-      "classLevel": "JSS1",
-      "subject": "Mathematics",
-      "topic": "HCF (Highest Common Factor)",
-      "prompt": "What is the HCF of 20 and 30?",
-      "questionType": "MULTIPLE_CHOICE",
-      "options": [
-        "10",
-        "5",
-        "20",
-        "10 (1)"
-      ],
-      "correctAnswer": "10",
-      "explanation": "10 is the greatest number that divides both 20 and 30 exactly.",
-      "difficulty": 1,
-      "assessmentKind": "APPLICATION",
-      "curriculumObjective": "Find HCF using factor and prime-factor methods",
-      "misconceptionTags": [
-        "using largest powers for HCF",
-        "assuming HCF must be one of the smaller numbers",
-        "using LCM in an equal-grouping problem"
-      ],
-      "qualityStatus": "REVIEWED",
-      "contentOrigin": "AVORA_ORIGINAL",
-      "curriculumVersion": "AVORA_MASTER_V13_2_EXAM_STANDARD",
-      "variantFamily": "v132-nerdc2025-jss1-math-mathematics-hcf-highest-common-factor-exam-05"
-    },
-    {
-      "id": "v132-nerdc2025-jss1-math-mathematics-hcf-highest-common-factor-06",
-      "curriculumTopicId": "nerdc2025-jss1-math-mathematics-hcf-highest-common-factor",
-      "classLevel": "JSS1",
-      "subject": "Mathematics",
-      "topic": "HCF (Highest Common Factor)",
-      "prompt": "What is the HCF of 42 and 56?",
-      "questionType": "MULTIPLE_CHOICE",
-      "options": [
-        "7",
-        "28",
-        "42",
-        "14"
-      ],
-      "correctAnswer": "14",
-      "explanation": "14 is the greatest number that divides both 42 and 56 exactly.",
-      "difficulty": 1,
-      "assessmentKind": "TRANSFER",
-      "curriculumObjective": "Distinguish HCF from LCM and apply it to grouping problems",
-      "misconceptionTags": [
-        "using largest powers for HCF",
-        "assuming HCF must be one of the smaller numbers",
-        "using LCM in an equal-grouping problem"
-      ],
-      "qualityStatus": "REVIEWED",
-      "contentOrigin": "AVORA_ORIGINAL",
-      "curriculumVersion": "AVORA_MASTER_V13_2_EXAM_STANDARD",
-      "variantFamily": "v132-nerdc2025-jss1-math-mathematics-hcf-highest-common-factor-exam-06"
-    },
-    {
-      "id": "v132-nerdc2025-jss1-math-mathematics-hcf-highest-common-factor-07",
-      "curriculumTopicId": "nerdc2025-jss1-math-mathematics-hcf-highest-common-factor",
-      "classLevel": "JSS1",
-      "subject": "Mathematics",
-      "topic": "HCF (Highest Common Factor)",
-      "prompt": "What is the HCF of 27 and 36?",
-      "questionType": "MULTIPLE_CHOICE",
-      "options": [
-        "18",
-        "27",
-        "9",
-        "4"
-      ],
-      "correctAnswer": "9",
-      "explanation": "9 is the greatest number that divides both 27 and 36 exactly.",
-      "difficulty": 1,
-      "assessmentKind": "MASTERY",
-      "curriculumObjective": "Find HCF using factor and prime-factor methods",
-      "misconceptionTags": [
-        "using largest powers for HCF",
-        "assuming HCF must be one of the smaller numbers",
-        "using LCM in an equal-grouping problem"
-      ],
-      "qualityStatus": "REVIEWED",
-      "contentOrigin": "AVORA_ORIGINAL",
-      "curriculumVersion": "AVORA_MASTER_V13_2_EXAM_STANDARD",
-      "variantFamily": "v132-nerdc2025-jss1-math-mathematics-hcf-highest-common-factor-exam-07"
-    },
-    {
-      "id": "v132-nerdc2025-jss1-math-mathematics-hcf-highest-common-factor-08",
-      "curriculumTopicId": "nerdc2025-jss1-math-mathematics-hcf-highest-common-factor",
-      "classLevel": "JSS1",
-      "subject": "Mathematics",
-      "topic": "HCF (Highest Common Factor)",
-      "prompt": "What is the HCF of 24 and 36?",
-      "questionType": "MULTIPLE_CHOICE",
-      "options": [
-        "12 (1)",
-        "12",
-        "6",
-        "24"
-      ],
-      "correctAnswer": "12",
-      "explanation": "12 is the greatest number that divides both 24 and 36 exactly.",
-      "difficulty": 1,
-      "assessmentKind": "OBJECTIVE",
-      "curriculumObjective": "Distinguish HCF from LCM and apply it to grouping problems",
-      "misconceptionTags": [
-        "using largest powers for HCF",
-        "assuming HCF must be one of the smaller numbers",
-        "using LCM in an equal-grouping problem"
-      ],
-      "qualityStatus": "REVIEWED",
-      "contentOrigin": "AVORA_ORIGINAL",
-      "curriculumVersion": "AVORA_MASTER_V13_2_EXAM_STANDARD",
-      "variantFamily": "v132-nerdc2025-jss1-math-mathematics-hcf-highest-common-factor-exam-08"
-    },
-    {
-      "id": "v132-nerdc2025-jss1-math-mathematics-counting-in-base-2-01",
-      "curriculumTopicId": "nerdc2025-jss1-math-mathematics-counting-in-base-2",
-      "classLevel": "JSS1",
-      "subject": "Mathematics",
-      "topic": "Counting in Base 2",
-      "prompt": "Which binary numeral represents 1 in base ten?",
-      "questionType": "MULTIPLE_CHOICE",
-      "options": [
-        "1",
-        "0",
-        "10",
-        "1 (1)"
-      ],
-      "correctAnswer": "1",
-      "explanation": "1 in base ten is 1₂.",
-      "difficulty": 1,
-      "assessmentKind": "CONCEPT",
-      "curriculumObjective": "Explain binary place value",
-      "misconceptionTags": [
-        "writing digit 2 in a binary numeral",
-        "treating 10₂ as decimal ten",
-        "forgetting place values double to the left"
-      ],
-      "qualityStatus": "REVIEWED",
-      "contentOrigin": "AVORA_ORIGINAL",
-      "curriculumVersion": "AVORA_MASTER_V13_2_EXAM_STANDARD",
-      "variantFamily": "v132-nerdc2025-jss1-math-mathematics-counting-in-base-2-exam-01"
-    },
-    {
-      "id": "v132-nerdc2025-jss1-math-mathematics-counting-in-base-2-02",
-      "curriculumTopicId": "nerdc2025-jss1-math-mathematics-counting-in-base-2",
-      "classLevel": "JSS1",
-      "subject": "Mathematics",
-      "topic": "Counting in Base 2",
-      "prompt": "Which binary numeral represents 2 in base ten?",
-      "questionType": "MULTIPLE_CHOICE",
-      "options": [
-        "1",
-        "11",
-        "2",
-        "10"
-      ],
-      "correctAnswer": "10",
-      "explanation": "2 in base ten is 10₂.",
-      "difficulty": 1,
-      "assessmentKind": "APPLICATION",
-      "curriculumObjective": "Count and represent simple quantities in base two",
-      "misconceptionTags": [
-        "writing digit 2 in a binary numeral",
-        "treating 10₂ as decimal ten",
-        "forgetting place values double to the left"
-      ],
-      "qualityStatus": "REVIEWED",
-      "contentOrigin": "AVORA_ORIGINAL",
-      "curriculumVersion": "AVORA_MASTER_V13_2_EXAM_STANDARD",
-      "variantFamily": "v132-nerdc2025-jss1-math-mathematics-counting-in-base-2-exam-02"
-    },
-    {
-      "id": "v132-nerdc2025-jss1-math-mathematics-counting-in-base-2-03",
-      "curriculumTopicId": "nerdc2025-jss1-math-mathematics-counting-in-base-2",
-      "classLevel": "JSS1",
-      "subject": "Mathematics",
-      "topic": "Counting in Base 2",
-      "prompt": "Which binary numeral represents 3 in base ten?",
-      "questionType": "MULTIPLE_CHOICE",
-      "options": [
-        "100",
-        "3",
-        "11",
-        "10"
-      ],
-      "correctAnswer": "11",
-      "explanation": "3 in base ten is 11₂.",
-      "difficulty": 1,
-      "assessmentKind": "REASONING",
-      "curriculumObjective": "Explain binary place value",
-      "misconceptionTags": [
-        "writing digit 2 in a binary numeral",
-        "treating 10₂ as decimal ten",
-        "forgetting place values double to the left"
-      ],
-      "qualityStatus": "REVIEWED",
-      "contentOrigin": "AVORA_ORIGINAL",
-      "curriculumVersion": "AVORA_MASTER_V13_2_EXAM_STANDARD",
-      "variantFamily": "v132-nerdc2025-jss1-math-mathematics-counting-in-base-2-exam-03"
-    },
-    {
-      "id": "v132-nerdc2025-jss1-math-mathematics-counting-in-base-2-04",
-      "curriculumTopicId": "nerdc2025-jss1-math-mathematics-counting-in-base-2",
-      "classLevel": "JSS1",
-      "subject": "Mathematics",
-      "topic": "Counting in Base 2",
-      "prompt": "Which binary numeral represents 4 in base ten?",
-      "questionType": "MULTIPLE_CHOICE",
-      "options": [
-        "4",
-        "100",
-        "11",
-        "101"
-      ],
-      "correctAnswer": "100",
-      "explanation": "4 in base ten is 100₂.",
-      "difficulty": 1,
-      "assessmentKind": "MISCONCEPTION",
-      "curriculumObjective": "Count and represent simple quantities in base two",
-      "misconceptionTags": [
-        "writing digit 2 in a binary numeral",
-        "treating 10₂ as decimal ten",
-        "forgetting place values double to the left"
-      ],
-      "qualityStatus": "REVIEWED",
-      "contentOrigin": "AVORA_ORIGINAL",
-      "curriculumVersion": "AVORA_MASTER_V13_2_EXAM_STANDARD",
-      "variantFamily": "v132-nerdc2025-jss1-math-mathematics-counting-in-base-2-exam-04"
-    },
-    {
-      "id": "v132-nerdc2025-jss1-math-mathematics-counting-in-base-2-05",
-      "curriculumTopicId": "nerdc2025-jss1-math-mathematics-counting-in-base-2",
-      "classLevel": "JSS1",
-      "subject": "Mathematics",
-      "topic": "Counting in Base 2",
-      "prompt": "Which binary numeral represents 5 in base ten?",
-      "questionType": "MULTIPLE_CHOICE",
-      "options": [
-        "101",
-        "100",
-        "110",
-        "5"
-      ],
-      "correctAnswer": "101",
-      "explanation": "5 in base ten is 101₂.",
-      "difficulty": 1,
-      "assessmentKind": "APPLICATION",
-      "curriculumObjective": "Explain binary place value",
-      "misconceptionTags": [
-        "writing digit 2 in a binary numeral",
-        "treating 10₂ as decimal ten",
-        "forgetting place values double to the left"
-      ],
-      "qualityStatus": "REVIEWED",
-      "contentOrigin": "AVORA_ORIGINAL",
-      "curriculumVersion": "AVORA_MASTER_V13_2_EXAM_STANDARD",
-      "variantFamily": "v132-nerdc2025-jss1-math-mathematics-counting-in-base-2-exam-05"
-    },
-    {
-      "id": "v132-nerdc2025-jss1-math-mathematics-counting-in-base-2-06",
-      "curriculumTopicId": "nerdc2025-jss1-math-mathematics-counting-in-base-2",
-      "classLevel": "JSS1",
-      "subject": "Mathematics",
-      "topic": "Counting in Base 2",
-      "prompt": "Which binary numeral represents 6 in base ten?",
-      "questionType": "MULTIPLE_CHOICE",
-      "options": [
-        "101",
-        "111",
-        "6",
-        "110"
-      ],
-      "correctAnswer": "110",
-      "explanation": "6 in base ten is 110₂.",
-      "difficulty": 1,
-      "assessmentKind": "TRANSFER",
-      "curriculumObjective": "Count and represent simple quantities in base two",
-      "misconceptionTags": [
-        "writing digit 2 in a binary numeral",
-        "treating 10₂ as decimal ten",
-        "forgetting place values double to the left"
-      ],
-      "qualityStatus": "REVIEWED",
-      "contentOrigin": "AVORA_ORIGINAL",
-      "curriculumVersion": "AVORA_MASTER_V13_2_EXAM_STANDARD",
-      "variantFamily": "v132-nerdc2025-jss1-math-mathematics-counting-in-base-2-exam-06"
-    },
-    {
-      "id": "v132-nerdc2025-jss1-math-mathematics-counting-in-base-2-07",
-      "curriculumTopicId": "nerdc2025-jss1-math-mathematics-counting-in-base-2",
-      "classLevel": "JSS1",
-      "subject": "Mathematics",
-      "topic": "Counting in Base 2",
-      "prompt": "Which binary numeral represents 7 in base ten?",
-      "questionType": "MULTIPLE_CHOICE",
-      "options": [
-        "1000",
-        "7",
-        "111",
-        "110"
-      ],
-      "correctAnswer": "111",
-      "explanation": "7 in base ten is 111₂.",
-      "difficulty": 1,
-      "assessmentKind": "MASTERY",
-      "curriculumObjective": "Explain binary place value",
-      "misconceptionTags": [
-        "writing digit 2 in a binary numeral",
-        "treating 10₂ as decimal ten",
-        "forgetting place values double to the left"
-      ],
-      "qualityStatus": "REVIEWED",
-      "contentOrigin": "AVORA_ORIGINAL",
-      "curriculumVersion": "AVORA_MASTER_V13_2_EXAM_STANDARD",
-      "variantFamily": "v132-nerdc2025-jss1-math-mathematics-counting-in-base-2-exam-07"
-    },
-    {
-      "id": "v132-nerdc2025-jss1-math-mathematics-counting-in-base-2-08",
-      "curriculumTopicId": "nerdc2025-jss1-math-mathematics-counting-in-base-2",
-      "classLevel": "JSS1",
-      "subject": "Mathematics",
-      "topic": "Counting in Base 2",
-      "prompt": "Which binary numeral represents 8 in base ten?",
-      "questionType": "MULTIPLE_CHOICE",
-      "options": [
-        "8",
-        "1000",
-        "111",
-        "1001"
-      ],
-      "correctAnswer": "1000",
-      "explanation": "8 in base ten is 1000₂.",
-      "difficulty": 1,
-      "assessmentKind": "OBJECTIVE",
-      "curriculumObjective": "Count and represent simple quantities in base two",
-      "misconceptionTags": [
-        "writing digit 2 in a binary numeral",
-        "treating 10₂ as decimal ten",
-        "forgetting place values double to the left"
-      ],
-      "qualityStatus": "REVIEWED",
-      "contentOrigin": "AVORA_ORIGINAL",
-      "curriculumVersion": "AVORA_MASTER_V13_2_EXAM_STANDARD",
-      "variantFamily": "v132-nerdc2025-jss1-math-mathematics-counting-in-base-2-exam-08"
-    },
-    {
-      "id": "v132-nerdc2025-jss1-math-mathematics-conversion-of-base-10-numerals-to-binary-numbers-01",
-      "curriculumTopicId": "nerdc2025-jss1-math-mathematics-conversion-of-base-10-numerals-to-binary-numbers",
-      "classLevel": "JSS1",
-      "subject": "Mathematics",
-      "topic": "Conversion of Base 10 Numerals to Binary Numbers",
-      "prompt": "Convert 9₁₀ to base 2.",
-      "questionType": "MULTIPLE_CHOICE",
-      "options": [
-        "1001",
-        "1000",
-        "1010",
-        "9"
-      ],
-      "correctAnswer": "1001",
-      "explanation": "9₁₀ = 1001₂.",
-      "difficulty": 1,
-      "assessmentKind": "CONCEPT",
-      "curriculumObjective": "Convert simple base-ten whole numbers to binary and verify the result",
-      "misconceptionTags": [
-        "reading division remainders top-to-bottom",
-        "using powers of ten instead of powers of two",
-        "not checking the conversion"
-      ],
-      "qualityStatus": "REVIEWED",
-      "contentOrigin": "AVORA_ORIGINAL",
-      "curriculumVersion": "AVORA_MASTER_V13_2_EXAM_STANDARD",
-      "variantFamily": "v132-nerdc2025-jss1-math-mathematics-conversion-of-base-10-numerals-to-binary-numbers-exam-01"
-    },
-    {
-      "id": "v132-nerdc2025-jss1-math-mathematics-conversion-of-base-10-numerals-to-binary-numbers-02",
-      "curriculumTopicId": "nerdc2025-jss1-math-mathematics-conversion-of-base-10-numerals-to-binary-numbers",
-      "classLevel": "JSS1",
-      "subject": "Mathematics",
-      "topic": "Conversion of Base 10 Numerals to Binary Numbers",
-      "prompt": "Convert 10₁₀ to base 2.",
-      "questionType": "MULTIPLE_CHOICE",
-      "options": [
-        "1001",
-        "1011",
-        "10",
-        "1010"
-      ],
-      "correctAnswer": "1010",
-      "explanation": "10₁₀ = 1010₂.",
-      "difficulty": 1,
-      "assessmentKind": "APPLICATION",
-      "curriculumObjective": "Convert simple base-ten whole numbers to binary and verify the result",
-      "misconceptionTags": [
-        "reading division remainders top-to-bottom",
-        "using powers of ten instead of powers of two",
-        "not checking the conversion"
-      ],
-      "qualityStatus": "REVIEWED",
-      "contentOrigin": "AVORA_ORIGINAL",
-      "curriculumVersion": "AVORA_MASTER_V13_2_EXAM_STANDARD",
-      "variantFamily": "v132-nerdc2025-jss1-math-mathematics-conversion-of-base-10-numerals-to-binary-numbers-exam-02"
-    },
-    {
-      "id": "v132-nerdc2025-jss1-math-mathematics-conversion-of-base-10-numerals-to-binary-numbers-03",
-      "curriculumTopicId": "nerdc2025-jss1-math-mathematics-conversion-of-base-10-numerals-to-binary-numbers",
-      "classLevel": "JSS1",
-      "subject": "Mathematics",
-      "topic": "Conversion of Base 10 Numerals to Binary Numbers",
-      "prompt": "Convert 12₁₀ to base 2.",
-      "questionType": "MULTIPLE_CHOICE",
-      "options": [
-        "1101",
-        "12",
-        "1100",
-        "1011"
-      ],
-      "correctAnswer": "1100",
-      "explanation": "12₁₀ = 1100₂.",
-      "difficulty": 1,
-      "assessmentKind": "REASONING",
-      "curriculumObjective": "Convert simple base-ten whole numbers to binary and verify the result",
-      "misconceptionTags": [
-        "reading division remainders top-to-bottom",
-        "using powers of ten instead of powers of two",
-        "not checking the conversion"
-      ],
-      "qualityStatus": "REVIEWED",
-      "contentOrigin": "AVORA_ORIGINAL",
-      "curriculumVersion": "AVORA_MASTER_V13_2_EXAM_STANDARD",
-      "variantFamily": "v132-nerdc2025-jss1-math-mathematics-conversion-of-base-10-numerals-to-binary-numbers-exam-03"
-    },
-    {
-      "id": "v132-nerdc2025-jss1-math-mathematics-conversion-of-base-10-numerals-to-binary-numbers-04",
-      "curriculumTopicId": "nerdc2025-jss1-math-mathematics-conversion-of-base-10-numerals-to-binary-numbers",
-      "classLevel": "JSS1",
-      "subject": "Mathematics",
-      "topic": "Conversion of Base 10 Numerals to Binary Numbers",
-      "prompt": "Convert 15₁₀ to base 2.",
-      "questionType": "MULTIPLE_CHOICE",
-      "options": [
-        "15",
-        "1111",
-        "1110",
-        "10000"
-      ],
-      "correctAnswer": "1111",
-      "explanation": "15₁₀ = 1111₂.",
-      "difficulty": 1,
-      "assessmentKind": "MISCONCEPTION",
-      "curriculumObjective": "Convert simple base-ten whole numbers to binary and verify the result",
-      "misconceptionTags": [
-        "reading division remainders top-to-bottom",
-        "using powers of ten instead of powers of two",
-        "not checking the conversion"
-      ],
-      "qualityStatus": "REVIEWED",
-      "contentOrigin": "AVORA_ORIGINAL",
-      "curriculumVersion": "AVORA_MASTER_V13_2_EXAM_STANDARD",
-      "variantFamily": "v132-nerdc2025-jss1-math-mathematics-conversion-of-base-10-numerals-to-binary-numbers-exam-04"
-    },
-    {
-      "id": "v132-nerdc2025-jss1-math-mathematics-conversion-of-base-10-numerals-to-binary-numbers-05",
-      "curriculumTopicId": "nerdc2025-jss1-math-mathematics-conversion-of-base-10-numerals-to-binary-numbers",
-      "classLevel": "JSS1",
-      "subject": "Mathematics",
-      "topic": "Conversion of Base 10 Numerals to Binary Numbers",
-      "prompt": "Convert 18₁₀ to base 2.",
-      "questionType": "MULTIPLE_CHOICE",
-      "options": [
-        "10010",
-        "10001",
-        "10011",
-        "18"
-      ],
-      "correctAnswer": "10010",
-      "explanation": "18₁₀ = 10010₂.",
-      "difficulty": 1,
-      "assessmentKind": "APPLICATION",
-      "curriculumObjective": "Convert simple base-ten whole numbers to binary and verify the result",
-      "misconceptionTags": [
-        "reading division remainders top-to-bottom",
-        "using powers of ten instead of powers of two",
-        "not checking the conversion"
-      ],
-      "qualityStatus": "REVIEWED",
-      "contentOrigin": "AVORA_ORIGINAL",
-      "curriculumVersion": "AVORA_MASTER_V13_2_EXAM_STANDARD",
-      "variantFamily": "v132-nerdc2025-jss1-math-mathematics-conversion-of-base-10-numerals-to-binary-numbers-exam-05"
-    },
-    {
-      "id": "v132-nerdc2025-jss1-math-mathematics-conversion-of-base-10-numerals-to-binary-numbers-06",
-      "curriculumTopicId": "nerdc2025-jss1-math-mathematics-conversion-of-base-10-numerals-to-binary-numbers",
-      "classLevel": "JSS1",
-      "subject": "Mathematics",
-      "topic": "Conversion of Base 10 Numerals to Binary Numbers",
-      "prompt": "Convert 20₁₀ to base 2.",
-      "questionType": "MULTIPLE_CHOICE",
-      "options": [
-        "10011",
-        "10101",
-        "20",
-        "10100"
-      ],
-      "correctAnswer": "10100",
-      "explanation": "20₁₀ = 10100₂.",
-      "difficulty": 1,
-      "assessmentKind": "TRANSFER",
-      "curriculumObjective": "Convert simple base-ten whole numbers to binary and verify the result",
-      "misconceptionTags": [
-        "reading division remainders top-to-bottom",
-        "using powers of ten instead of powers of two",
-        "not checking the conversion"
-      ],
-      "qualityStatus": "REVIEWED",
-      "contentOrigin": "AVORA_ORIGINAL",
-      "curriculumVersion": "AVORA_MASTER_V13_2_EXAM_STANDARD",
-      "variantFamily": "v132-nerdc2025-jss1-math-mathematics-conversion-of-base-10-numerals-to-binary-numbers-exam-06"
-    },
-    {
-      "id": "v132-nerdc2025-jss1-math-mathematics-conversion-of-base-10-numerals-to-binary-numbers-07",
-      "curriculumTopicId": "nerdc2025-jss1-math-mathematics-conversion-of-base-10-numerals-to-binary-numbers",
-      "classLevel": "JSS1",
-      "subject": "Mathematics",
-      "topic": "Conversion of Base 10 Numerals to Binary Numbers",
-      "prompt": "Convert 25₁₀ to base 2.",
-      "questionType": "MULTIPLE_CHOICE",
-      "options": [
-        "11010",
-        "25",
-        "11001",
-        "11000"
-      ],
-      "correctAnswer": "11001",
-      "explanation": "25₁₀ = 11001₂.",
-      "difficulty": 1,
-      "assessmentKind": "MASTERY",
-      "curriculumObjective": "Convert simple base-ten whole numbers to binary and verify the result",
-      "misconceptionTags": [
-        "reading division remainders top-to-bottom",
-        "using powers of ten instead of powers of two",
-        "not checking the conversion"
-      ],
-      "qualityStatus": "REVIEWED",
-      "contentOrigin": "AVORA_ORIGINAL",
-      "curriculumVersion": "AVORA_MASTER_V13_2_EXAM_STANDARD",
-      "variantFamily": "v132-nerdc2025-jss1-math-mathematics-conversion-of-base-10-numerals-to-binary-numbers-exam-07"
-    },
-    {
-      "id": "v132-nerdc2025-jss1-math-mathematics-conversion-of-base-10-numerals-to-binary-numbers-08",
-      "curriculumTopicId": "nerdc2025-jss1-math-mathematics-conversion-of-base-10-numerals-to-binary-numbers",
-      "classLevel": "JSS1",
-      "subject": "Mathematics",
-      "topic": "Conversion of Base 10 Numerals to Binary Numbers",
-      "prompt": "Convert 31₁₀ to base 2.",
-      "questionType": "MULTIPLE_CHOICE",
-      "options": [
-        "31",
-        "11111",
-        "11110",
-        "100000"
-      ],
-      "correctAnswer": "11111",
-      "explanation": "31₁₀ = 11111₂.",
-      "difficulty": 1,
-      "assessmentKind": "OBJECTIVE",
-      "curriculumObjective": "Convert simple base-ten whole numbers to binary and verify the result",
-      "misconceptionTags": [
-        "reading division remainders top-to-bottom",
-        "using powers of ten instead of powers of two",
-        "not checking the conversion"
-      ],
-      "qualityStatus": "REVIEWED",
-      "contentOrigin": "AVORA_ORIGINAL",
-      "curriculumVersion": "AVORA_MASTER_V13_2_EXAM_STANDARD",
-      "variantFamily": "v132-nerdc2025-jss1-math-mathematics-conversion-of-base-10-numerals-to-binary-numbers-exam-08"
-    },
-    {
-      "id": "v132-nerdc2025-jss1-math-mathematics-fractions-types-simplification-and-equivalent-fractions-01",
-      "curriculumTopicId": "nerdc2025-jss1-math-mathematics-fractions-types-simplification-and-equivalent-fractions",
-      "classLevel": "JSS1",
-      "subject": "Mathematics",
-      "topic": "Fractions: Types, Simplification and Equivalent Fractions",
-      "prompt": "Which fraction is equivalent to 3/4?",
-      "questionType": "MULTIPLE_CHOICE",
-      "options": [
-        "6/8",
-        "6/10",
-        "9/16",
-        "4/7"
-      ],
-      "correctAnswer": "6/8",
-      "explanation": "The correct answer is 6/8.",
-      "difficulty": 1,
-      "assessmentKind": "CONCEPT",
-      "curriculumObjective": "Identify proper, improper and mixed fractions",
-      "misconceptionTags": [
-        "changing only numerator or denominator for an equivalent fraction",
-        "assuming larger denominator means larger fraction",
-        "multiplying by 100 incorrectly when converting percentage to fraction"
-      ],
-      "qualityStatus": "REVIEWED",
-      "contentOrigin": "AVORA_ORIGINAL",
-      "curriculumVersion": "AVORA_MASTER_V13_2_EXAM_STANDARD",
-      "variantFamily": "v132-nerdc2025-jss1-math-mathematics-fractions-types-simplification-and-equivalent-fractions-exam-01"
-    },
-    {
-      "id": "v132-nerdc2025-jss1-math-mathematics-fractions-types-simplification-and-equivalent-fractions-02",
-      "curriculumTopicId": "nerdc2025-jss1-math-mathematics-fractions-types-simplification-and-equivalent-fractions",
-      "classLevel": "JSS1",
-      "subject": "Mathematics",
-      "topic": "Fractions: Types, Simplification and Equivalent Fractions",
-      "prompt": "Simplify 18/24.",
-      "questionType": "MULTIPLE_CHOICE",
-      "options": [
-        "6/8",
-        "2/3",
-        "4/5",
-        "3/4"
-      ],
-      "correctAnswer": "3/4",
-      "explanation": "The correct answer is 3/4.",
-      "difficulty": 1,
-      "assessmentKind": "APPLICATION",
-      "curriculumObjective": "Simplify, compare and generate equivalent fractions",
-      "misconceptionTags": [
-        "changing only numerator or denominator for an equivalent fraction",
-        "assuming larger denominator means larger fraction",
-        "multiplying by 100 incorrectly when converting percentage to fraction"
-      ],
-      "qualityStatus": "REVIEWED",
-      "contentOrigin": "AVORA_ORIGINAL",
-      "curriculumVersion": "AVORA_MASTER_V13_2_EXAM_STANDARD",
-      "variantFamily": "v132-nerdc2025-jss1-math-mathematics-fractions-types-simplification-and-equivalent-fractions-exam-02"
-    },
-    {
-      "id": "v132-nerdc2025-jss1-math-mathematics-fractions-types-simplification-and-equivalent-fractions-03",
-      "curriculumTopicId": "nerdc2025-jss1-math-mathematics-fractions-types-simplification-and-equivalent-fractions",
-      "classLevel": "JSS1",
-      "subject": "Mathematics",
-      "topic": "Fractions: Types, Simplification and Equivalent Fractions",
-      "prompt": "Which is a proper fraction?",
-      "questionType": "MULTIPLE_CHOICE",
-      "options": [
-        "8/8",
-        "11/7",
-        "5/8",
-        "9/4"
-      ],
-      "correctAnswer": "5/8",
-      "explanation": "The correct answer is 5/8.",
-      "difficulty": 1,
-      "assessmentKind": "REASONING",
-      "curriculumObjective": "Identify proper, improper and mixed fractions",
-      "misconceptionTags": [
-        "changing only numerator or denominator for an equivalent fraction",
-        "assuming larger denominator means larger fraction",
-        "multiplying by 100 incorrectly when converting percentage to fraction"
-      ],
-      "qualityStatus": "REVIEWED",
-      "contentOrigin": "AVORA_ORIGINAL",
-      "curriculumVersion": "AVORA_MASTER_V13_2_EXAM_STANDARD",
-      "variantFamily": "v132-nerdc2025-jss1-math-mathematics-fractions-types-simplification-and-equivalent-fractions-exam-03"
-    },
-    {
-      "id": "v132-nerdc2025-jss1-math-mathematics-fractions-types-simplification-and-equivalent-fractions-04",
-      "curriculumTopicId": "nerdc2025-jss1-math-mathematics-fractions-types-simplification-and-equivalent-fractions",
-      "classLevel": "JSS1",
-      "subject": "Mathematics",
-      "topic": "Fractions: Types, Simplification and Equivalent Fractions",
-      "prompt": "Which is an improper fraction?",
-      "questionType": "MULTIPLE_CHOICE",
-      "options": [
-        "5/9",
-        "9/5",
-        "4/9",
-        "3/7"
-      ],
-      "correctAnswer": "9/5",
-      "explanation": "The correct answer is 9/5.",
-      "difficulty": 1,
-      "assessmentKind": "MISCONCEPTION",
-      "curriculumObjective": "Simplify, compare and generate equivalent fractions",
-      "misconceptionTags": [
-        "changing only numerator or denominator for an equivalent fraction",
-        "assuming larger denominator means larger fraction",
-        "multiplying by 100 incorrectly when converting percentage to fraction"
-      ],
-      "qualityStatus": "REVIEWED",
-      "contentOrigin": "AVORA_ORIGINAL",
-      "curriculumVersion": "AVORA_MASTER_V13_2_EXAM_STANDARD",
-      "variantFamily": "v132-nerdc2025-jss1-math-mathematics-fractions-types-simplification-and-equivalent-fractions-exam-04"
-    },
-    {
-      "id": "v132-nerdc2025-jss1-math-mathematics-fractions-types-simplification-and-equivalent-fractions-05",
-      "curriculumTopicId": "nerdc2025-jss1-math-mathematics-fractions-types-simplification-and-equivalent-fractions",
-      "classLevel": "JSS1",
-      "subject": "Mathematics",
-      "topic": "Fractions: Types, Simplification and Equivalent Fractions",
-      "prompt": "Convert 2 1/3 to an improper fraction.",
-      "questionType": "MULTIPLE_CHOICE",
-      "options": [
-        "7/3",
-        "6/3",
-        "5/3",
-        "8/3"
-      ],
-      "correctAnswer": "7/3",
-      "explanation": "The correct answer is 7/3.",
-      "difficulty": 1,
-      "assessmentKind": "APPLICATION",
-      "curriculumObjective": "Identify proper, improper and mixed fractions",
-      "misconceptionTags": [
-        "changing only numerator or denominator for an equivalent fraction",
-        "assuming larger denominator means larger fraction",
-        "multiplying by 100 incorrectly when converting percentage to fraction"
-      ],
-      "qualityStatus": "REVIEWED",
-      "contentOrigin": "AVORA_ORIGINAL",
-      "curriculumVersion": "AVORA_MASTER_V13_2_EXAM_STANDARD",
-      "variantFamily": "v132-nerdc2025-jss1-math-mathematics-fractions-types-simplification-and-equivalent-fractions-exam-05"
-    },
-    {
-      "id": "v132-nerdc2025-jss1-math-mathematics-fractions-types-simplification-and-equivalent-fractions-06",
-      "curriculumTopicId": "nerdc2025-jss1-math-mathematics-fractions-types-simplification-and-equivalent-fractions",
-      "classLevel": "JSS1",
-      "subject": "Mathematics",
-      "topic": "Fractions: Types, Simplification and Equivalent Fractions",
-      "prompt": "Which fraction is smallest?",
-      "questionType": "MULTIPLE_CHOICE",
-      "options": [
-        "1/3",
-        "1/4",
-        "1/5",
-        "1/6"
-      ],
-      "correctAnswer": "1/6",
-      "explanation": "The correct answer is 1/6.",
-      "difficulty": 1,
-      "assessmentKind": "TRANSFER",
-      "curriculumObjective": "Simplify, compare and generate equivalent fractions",
-      "misconceptionTags": [
-        "changing only numerator or denominator for an equivalent fraction",
-        "assuming larger denominator means larger fraction",
-        "multiplying by 100 incorrectly when converting percentage to fraction"
-      ],
-      "qualityStatus": "REVIEWED",
-      "contentOrigin": "AVORA_ORIGINAL",
-      "curriculumVersion": "AVORA_MASTER_V13_2_EXAM_STANDARD",
-      "variantFamily": "v132-nerdc2025-jss1-math-mathematics-fractions-types-simplification-and-equivalent-fractions-exam-06"
-    },
-    {
-      "id": "v132-nerdc2025-jss1-math-mathematics-fractions-types-simplification-and-equivalent-fractions-07",
-      "curriculumTopicId": "nerdc2025-jss1-math-mathematics-fractions-types-simplification-and-equivalent-fractions",
-      "classLevel": "JSS1",
-      "subject": "Mathematics",
-      "topic": "Fractions: Types, Simplification and Equivalent Fractions",
-      "prompt": "What fraction of 12 is 3?",
-      "questionType": "MULTIPLE_CHOICE",
-      "options": [
-        "3/4",
-        "1/6",
-        "1/4",
-        "1/3"
-      ],
-      "correctAnswer": "1/4",
-      "explanation": "The correct answer is 1/4.",
-      "difficulty": 1,
-      "assessmentKind": "MASTERY",
-      "curriculumObjective": "Identify proper, improper and mixed fractions",
-      "misconceptionTags": [
-        "changing only numerator or denominator for an equivalent fraction",
-        "assuming larger denominator means larger fraction",
-        "multiplying by 100 incorrectly when converting percentage to fraction"
-      ],
-      "qualityStatus": "REVIEWED",
-      "contentOrigin": "AVORA_ORIGINAL",
-      "curriculumVersion": "AVORA_MASTER_V13_2_EXAM_STANDARD",
-      "variantFamily": "v132-nerdc2025-jss1-math-mathematics-fractions-types-simplification-and-equivalent-fractions-exam-07"
-    },
-    {
-      "id": "v132-nerdc2025-jss1-math-mathematics-fractions-types-simplification-and-equivalent-fractions-08",
-      "curriculumTopicId": "nerdc2025-jss1-math-mathematics-fractions-types-simplification-and-equivalent-fractions",
-      "classLevel": "JSS1",
-      "subject": "Mathematics",
-      "topic": "Fractions: Types, Simplification and Equivalent Fractions",
-      "prompt": "Which pair contains equivalent fractions?",
-      "questionType": "MULTIPLE_CHOICE",
-      "options": [
-        "4/7 and 8/21",
-        "2/3 and 8/12",
-        "2/3 and 6/12",
-        "3/5 and 9/20"
-      ],
-      "correctAnswer": "2/3 and 8/12",
-      "explanation": "The correct answer is 2/3 and 8/12.",
-      "difficulty": 1,
-      "assessmentKind": "OBJECTIVE",
-      "curriculumObjective": "Simplify, compare and generate equivalent fractions",
-      "misconceptionTags": [
-        "changing only numerator or denominator for an equivalent fraction",
-        "assuming larger denominator means larger fraction",
-        "multiplying by 100 incorrectly when converting percentage to fraction"
-      ],
-      "qualityStatus": "REVIEWED",
-      "contentOrigin": "AVORA_ORIGINAL",
-      "curriculumVersion": "AVORA_MASTER_V13_2_EXAM_STANDARD",
-      "variantFamily": "v132-nerdc2025-jss1-math-mathematics-fractions-types-simplification-and-equivalent-fractions-exam-08"
-    },
-    {
       "id": "v132-nerdc2025-jss1-math-mathematics-basic-operations-on-whole-numbers-01",
       "curriculumTopicId": "nerdc2025-jss1-math-mathematics-basic-operations-on-whole-numbers",
       "classLevel": "JSS1",
@@ -1627,470 +235,6 @@
       "contentOrigin": "AVORA_ORIGINAL",
       "curriculumVersion": "AVORA_MASTER_V13_2_EXAM_STANDARD",
       "variantFamily": "v132-nerdc2025-jss1-math-mathematics-basic-operations-on-whole-numbers-exam-08"
-    },
-    {
-      "id": "v132-nerdc2025-jss1-math-mathematics-addition-and-subtraction-of-fractions-01",
-      "curriculumTopicId": "nerdc2025-jss1-math-mathematics-addition-and-subtraction-of-fractions",
-      "classLevel": "JSS1",
-      "subject": "Mathematics",
-      "topic": "Addition and Subtraction of Fractions",
-      "prompt": "Calculate 1/3 + 1/6.",
-      "questionType": "MULTIPLE_CHOICE",
-      "options": [
-        "1/2",
-        "2/9",
-        "1/9",
-        "2/3"
-      ],
-      "correctAnswer": "1/2",
-      "explanation": "The correct answer is 1/2.",
-      "difficulty": 1,
-      "assessmentKind": "CONCEPT",
-      "curriculumObjective": "Add and subtract fractions with like and unlike denominators",
-      "misconceptionTags": [
-        "adding denominators",
-        "using a common denominator without changing numerators equivalently",
-        "forgetting to simplify or convert improper result when appropriate"
-      ],
-      "qualityStatus": "REVIEWED",
-      "contentOrigin": "AVORA_ORIGINAL",
-      "curriculumVersion": "AVORA_MASTER_V13_2_EXAM_STANDARD",
-      "variantFamily": "v132-nerdc2025-jss1-math-mathematics-addition-and-subtraction-of-fractions-exam-01"
-    },
-    {
-      "id": "v132-nerdc2025-jss1-math-mathematics-addition-and-subtraction-of-fractions-02",
-      "curriculumTopicId": "nerdc2025-jss1-math-mathematics-addition-and-subtraction-of-fractions",
-      "classLevel": "JSS1",
-      "subject": "Mathematics",
-      "topic": "Addition and Subtraction of Fractions",
-      "prompt": "Calculate 3/4 - 1/8.",
-      "questionType": "MULTIPLE_CHOICE",
-      "options": [
-        "2/8",
-        "1/2",
-        "7/8",
-        "5/8"
-      ],
-      "correctAnswer": "5/8",
-      "explanation": "The correct answer is 5/8.",
-      "difficulty": 1,
-      "assessmentKind": "APPLICATION",
-      "curriculumObjective": "Solve contextual fraction problems",
-      "misconceptionTags": [
-        "adding denominators",
-        "using a common denominator without changing numerators equivalently",
-        "forgetting to simplify or convert improper result when appropriate"
-      ],
-      "qualityStatus": "REVIEWED",
-      "contentOrigin": "AVORA_ORIGINAL",
-      "curriculumVersion": "AVORA_MASTER_V13_2_EXAM_STANDARD",
-      "variantFamily": "v132-nerdc2025-jss1-math-mathematics-addition-and-subtraction-of-fractions-exam-02"
-    },
-    {
-      "id": "v132-nerdc2025-jss1-math-mathematics-addition-and-subtraction-of-fractions-03",
-      "curriculumTopicId": "nerdc2025-jss1-math-mathematics-addition-and-subtraction-of-fractions",
-      "classLevel": "JSS1",
-      "subject": "Mathematics",
-      "topic": "Addition and Subtraction of Fractions",
-      "prompt": "Calculate 2/5 + 3/10.",
-      "questionType": "MULTIPLE_CHOICE",
-      "options": [
-        "1/2",
-        "8/10",
-        "7/10",
-        "5/15"
-      ],
-      "correctAnswer": "7/10",
-      "explanation": "The correct answer is 7/10.",
-      "difficulty": 1,
-      "assessmentKind": "REASONING",
-      "curriculumObjective": "Add and subtract fractions with like and unlike denominators",
-      "misconceptionTags": [
-        "adding denominators",
-        "using a common denominator without changing numerators equivalently",
-        "forgetting to simplify or convert improper result when appropriate"
-      ],
-      "qualityStatus": "REVIEWED",
-      "contentOrigin": "AVORA_ORIGINAL",
-      "curriculumVersion": "AVORA_MASTER_V13_2_EXAM_STANDARD",
-      "variantFamily": "v132-nerdc2025-jss1-math-mathematics-addition-and-subtraction-of-fractions-exam-03"
-    },
-    {
-      "id": "v132-nerdc2025-jss1-math-mathematics-addition-and-subtraction-of-fractions-04",
-      "curriculumTopicId": "nerdc2025-jss1-math-mathematics-addition-and-subtraction-of-fractions",
-      "classLevel": "JSS1",
-      "subject": "Mathematics",
-      "topic": "Addition and Subtraction of Fractions",
-      "prompt": "Calculate 7/9 - 2/3.",
-      "questionType": "MULTIPLE_CHOICE",
-      "options": [
-        "1/3",
-        "1/9",
-        "5/6",
-        "5/9"
-      ],
-      "correctAnswer": "1/9",
-      "explanation": "The correct answer is 1/9.",
-      "difficulty": 1,
-      "assessmentKind": "MISCONCEPTION",
-      "curriculumObjective": "Solve contextual fraction problems",
-      "misconceptionTags": [
-        "adding denominators",
-        "using a common denominator without changing numerators equivalently",
-        "forgetting to simplify or convert improper result when appropriate"
-      ],
-      "qualityStatus": "REVIEWED",
-      "contentOrigin": "AVORA_ORIGINAL",
-      "curriculumVersion": "AVORA_MASTER_V13_2_EXAM_STANDARD",
-      "variantFamily": "v132-nerdc2025-jss1-math-mathematics-addition-and-subtraction-of-fractions-exam-04"
-    },
-    {
-      "id": "v132-nerdc2025-jss1-math-mathematics-addition-and-subtraction-of-fractions-05",
-      "curriculumTopicId": "nerdc2025-jss1-math-mathematics-addition-and-subtraction-of-fractions",
-      "classLevel": "JSS1",
-      "subject": "Mathematics",
-      "topic": "Addition and Subtraction of Fractions",
-      "prompt": "Calculate 1 1/2 + 2 1/4.",
-      "questionType": "MULTIPLE_CHOICE",
-      "options": [
-        "3 3/4",
-        "3 1/2",
-        "4 1/4",
-        "2 3/4"
-      ],
-      "correctAnswer": "3 3/4",
-      "explanation": "The correct answer is 3 3/4.",
-      "difficulty": 1,
-      "assessmentKind": "APPLICATION",
-      "curriculumObjective": "Add and subtract fractions with like and unlike denominators",
-      "misconceptionTags": [
-        "adding denominators",
-        "using a common denominator without changing numerators equivalently",
-        "forgetting to simplify or convert improper result when appropriate"
-      ],
-      "qualityStatus": "REVIEWED",
-      "contentOrigin": "AVORA_ORIGINAL",
-      "curriculumVersion": "AVORA_MASTER_V13_2_EXAM_STANDARD",
-      "variantFamily": "v132-nerdc2025-jss1-math-mathematics-addition-and-subtraction-of-fractions-exam-05"
-    },
-    {
-      "id": "v132-nerdc2025-jss1-math-mathematics-addition-and-subtraction-of-fractions-06",
-      "curriculumTopicId": "nerdc2025-jss1-math-mathematics-addition-and-subtraction-of-fractions",
-      "classLevel": "JSS1",
-      "subject": "Mathematics",
-      "topic": "Addition and Subtraction of Fractions",
-      "prompt": "Calculate 4 1/3 - 2 5/6.",
-      "questionType": "MULTIPLE_CHOICE",
-      "options": [
-        "2 1/2",
-        "1 2/3",
-        "1 5/6",
-        "1 1/2"
-      ],
-      "correctAnswer": "1 1/2",
-      "explanation": "The correct answer is 1 1/2.",
-      "difficulty": 1,
-      "assessmentKind": "TRANSFER",
-      "curriculumObjective": "Solve contextual fraction problems",
-      "misconceptionTags": [
-        "adding denominators",
-        "using a common denominator without changing numerators equivalently",
-        "forgetting to simplify or convert improper result when appropriate"
-      ],
-      "qualityStatus": "REVIEWED",
-      "contentOrigin": "AVORA_ORIGINAL",
-      "curriculumVersion": "AVORA_MASTER_V13_2_EXAM_STANDARD",
-      "variantFamily": "v132-nerdc2025-jss1-math-mathematics-addition-and-subtraction-of-fractions-exam-06"
-    },
-    {
-      "id": "v132-nerdc2025-jss1-math-mathematics-addition-and-subtraction-of-fractions-07",
-      "curriculumTopicId": "nerdc2025-jss1-math-mathematics-addition-and-subtraction-of-fractions",
-      "classLevel": "JSS1",
-      "subject": "Mathematics",
-      "topic": "Addition and Subtraction of Fractions",
-      "prompt": "A jug contains 3/4 L of juice. If 1/3 L is used, how much remains?",
-      "questionType": "MULTIPLE_CHOICE",
-      "options": [
-        "7/12 L",
-        "2/3 L",
-        "5/12 L",
-        "1/12 L"
-      ],
-      "correctAnswer": "5/12 L",
-      "explanation": "The correct answer is 5/12 L.",
-      "difficulty": 1,
-      "assessmentKind": "MASTERY",
-      "curriculumObjective": "Add and subtract fractions with like and unlike denominators",
-      "misconceptionTags": [
-        "adding denominators",
-        "using a common denominator without changing numerators equivalently",
-        "forgetting to simplify or convert improper result when appropriate"
-      ],
-      "qualityStatus": "REVIEWED",
-      "contentOrigin": "AVORA_ORIGINAL",
-      "curriculumVersion": "AVORA_MASTER_V13_2_EXAM_STANDARD",
-      "variantFamily": "v132-nerdc2025-jss1-math-mathematics-addition-and-subtraction-of-fractions-exam-07"
-    },
-    {
-      "id": "v132-nerdc2025-jss1-math-mathematics-addition-and-subtraction-of-fractions-08",
-      "curriculumTopicId": "nerdc2025-jss1-math-mathematics-addition-and-subtraction-of-fractions",
-      "classLevel": "JSS1",
-      "subject": "Mathematics",
-      "topic": "Addition and Subtraction of Fractions",
-      "prompt": "Calculate 5/6 + 1/4.",
-      "questionType": "MULTIPLE_CHOICE",
-      "options": [
-        "1 5/12",
-        "1 1/12",
-        "6/10",
-        "11/12"
-      ],
-      "correctAnswer": "1 1/12",
-      "explanation": "The correct answer is 1 1/12.",
-      "difficulty": 1,
-      "assessmentKind": "OBJECTIVE",
-      "curriculumObjective": "Solve contextual fraction problems",
-      "misconceptionTags": [
-        "adding denominators",
-        "using a common denominator without changing numerators equivalently",
-        "forgetting to simplify or convert improper result when appropriate"
-      ],
-      "qualityStatus": "REVIEWED",
-      "contentOrigin": "AVORA_ORIGINAL",
-      "curriculumVersion": "AVORA_MASTER_V13_2_EXAM_STANDARD",
-      "variantFamily": "v132-nerdc2025-jss1-math-mathematics-addition-and-subtraction-of-fractions-exam-08"
-    },
-    {
-      "id": "v132-nerdc2025-jss1-math-mathematics-multiplication-and-division-of-fractions-01",
-      "curriculumTopicId": "nerdc2025-jss1-math-mathematics-multiplication-and-division-of-fractions",
-      "classLevel": "JSS1",
-      "subject": "Mathematics",
-      "topic": "Multiplication and Division of Fractions",
-      "prompt": "Calculate 2/3 × 3/5.",
-      "questionType": "MULTIPLE_CHOICE",
-      "options": [
-        "2/5",
-        "6/8",
-        "5/6",
-        "1/5"
-      ],
-      "correctAnswer": "2/5",
-      "explanation": "The correct answer is 2/5.",
-      "difficulty": 1,
-      "assessmentKind": "CONCEPT",
-      "curriculumObjective": "Multiply and divide fractions and mixed numbers",
-      "misconceptionTags": [
-        "cross-multiplying as if solving a proportion",
-        "flipping the first fraction instead of the divisor",
-        "failing to convert mixed numbers"
-      ],
-      "qualityStatus": "REVIEWED",
-      "contentOrigin": "AVORA_ORIGINAL",
-      "curriculumVersion": "AVORA_MASTER_V13_2_EXAM_STANDARD",
-      "variantFamily": "v132-nerdc2025-jss1-math-mathematics-multiplication-and-division-of-fractions-exam-01"
-    },
-    {
-      "id": "v132-nerdc2025-jss1-math-mathematics-multiplication-and-division-of-fractions-02",
-      "curriculumTopicId": "nerdc2025-jss1-math-mathematics-multiplication-and-division-of-fractions",
-      "classLevel": "JSS1",
-      "subject": "Mathematics",
-      "topic": "Multiplication and Division of Fractions",
-      "prompt": "Calculate 4/7 ÷ 2/3.",
-      "questionType": "MULTIPLE_CHOICE",
-      "options": [
-        "8/21",
-        "3/14",
-        "1 1/7",
-        "6/7"
-      ],
-      "correctAnswer": "6/7",
-      "explanation": "The correct answer is 6/7.",
-      "difficulty": 1,
-      "assessmentKind": "APPLICATION",
-      "curriculumObjective": "Apply fraction operations to real situations",
-      "misconceptionTags": [
-        "cross-multiplying as if solving a proportion",
-        "flipping the first fraction instead of the divisor",
-        "failing to convert mixed numbers"
-      ],
-      "qualityStatus": "REVIEWED",
-      "contentOrigin": "AVORA_ORIGINAL",
-      "curriculumVersion": "AVORA_MASTER_V13_2_EXAM_STANDARD",
-      "variantFamily": "v132-nerdc2025-jss1-math-mathematics-multiplication-and-division-of-fractions-exam-02"
-    },
-    {
-      "id": "v132-nerdc2025-jss1-math-mathematics-multiplication-and-division-of-fractions-03",
-      "curriculumTopicId": "nerdc2025-jss1-math-mathematics-multiplication-and-division-of-fractions",
-      "classLevel": "JSS1",
-      "subject": "Mathematics",
-      "topic": "Multiplication and Division of Fractions",
-      "prompt": "Calculate 5/8 × 16/25.",
-      "questionType": "MULTIPLE_CHOICE",
-      "options": [
-        "4/5",
-        "1/5",
-        "2/5",
-        "10/33"
-      ],
-      "correctAnswer": "2/5",
-      "explanation": "The correct answer is 2/5.",
-      "difficulty": 1,
-      "assessmentKind": "REASONING",
-      "curriculumObjective": "Multiply and divide fractions and mixed numbers",
-      "misconceptionTags": [
-        "cross-multiplying as if solving a proportion",
-        "flipping the first fraction instead of the divisor",
-        "failing to convert mixed numbers"
-      ],
-      "qualityStatus": "REVIEWED",
-      "contentOrigin": "AVORA_ORIGINAL",
-      "curriculumVersion": "AVORA_MASTER_V13_2_EXAM_STANDARD",
-      "variantFamily": "v132-nerdc2025-jss1-math-mathematics-multiplication-and-division-of-fractions-exam-03"
-    },
-    {
-      "id": "v132-nerdc2025-jss1-math-mathematics-multiplication-and-division-of-fractions-04",
-      "curriculumTopicId": "nerdc2025-jss1-math-mathematics-multiplication-and-division-of-fractions",
-      "classLevel": "JSS1",
-      "subject": "Mathematics",
-      "topic": "Multiplication and Division of Fractions",
-      "prompt": "Calculate 3/4 ÷ 9/10.",
-      "questionType": "MULTIPLE_CHOICE",
-      "options": [
-        "3/10",
-        "5/6",
-        "27/40",
-        "6/5"
-      ],
-      "correctAnswer": "5/6",
-      "explanation": "The correct answer is 5/6.",
-      "difficulty": 1,
-      "assessmentKind": "MISCONCEPTION",
-      "curriculumObjective": "Apply fraction operations to real situations",
-      "misconceptionTags": [
-        "cross-multiplying as if solving a proportion",
-        "flipping the first fraction instead of the divisor",
-        "failing to convert mixed numbers"
-      ],
-      "qualityStatus": "REVIEWED",
-      "contentOrigin": "AVORA_ORIGINAL",
-      "curriculumVersion": "AVORA_MASTER_V13_2_EXAM_STANDARD",
-      "variantFamily": "v132-nerdc2025-jss1-math-mathematics-multiplication-and-division-of-fractions-exam-04"
-    },
-    {
-      "id": "v132-nerdc2025-jss1-math-mathematics-multiplication-and-division-of-fractions-05",
-      "curriculumTopicId": "nerdc2025-jss1-math-mathematics-multiplication-and-division-of-fractions",
-      "classLevel": "JSS1",
-      "subject": "Mathematics",
-      "topic": "Multiplication and Division of Fractions",
-      "prompt": "What is 2/3 of 18?",
-      "questionType": "MULTIPLE_CHOICE",
-      "options": [
-        "12",
-        "9",
-        "10",
-        "15"
-      ],
-      "correctAnswer": "12",
-      "explanation": "The correct answer is 12.",
-      "difficulty": 1,
-      "assessmentKind": "APPLICATION",
-      "curriculumObjective": "Multiply and divide fractions and mixed numbers",
-      "misconceptionTags": [
-        "cross-multiplying as if solving a proportion",
-        "flipping the first fraction instead of the divisor",
-        "failing to convert mixed numbers"
-      ],
-      "qualityStatus": "REVIEWED",
-      "contentOrigin": "AVORA_ORIGINAL",
-      "curriculumVersion": "AVORA_MASTER_V13_2_EXAM_STANDARD",
-      "variantFamily": "v132-nerdc2025-jss1-math-mathematics-multiplication-and-division-of-fractions-exam-05"
-    },
-    {
-      "id": "v132-nerdc2025-jss1-math-mathematics-multiplication-and-division-of-fractions-06",
-      "curriculumTopicId": "nerdc2025-jss1-math-mathematics-multiplication-and-division-of-fractions",
-      "classLevel": "JSS1",
-      "subject": "Mathematics",
-      "topic": "Multiplication and Division of Fractions",
-      "prompt": "A 3/4 m ribbon is cut into pieces of 1/8 m. How many pieces are made?",
-      "questionType": "MULTIPLE_CHOICE",
-      "options": [
-        "4",
-        "8",
-        "12",
-        "6"
-      ],
-      "correctAnswer": "6",
-      "explanation": "The correct answer is 6.",
-      "difficulty": 1,
-      "assessmentKind": "TRANSFER",
-      "curriculumObjective": "Apply fraction operations to real situations",
-      "misconceptionTags": [
-        "cross-multiplying as if solving a proportion",
-        "flipping the first fraction instead of the divisor",
-        "failing to convert mixed numbers"
-      ],
-      "qualityStatus": "REVIEWED",
-      "contentOrigin": "AVORA_ORIGINAL",
-      "curriculumVersion": "AVORA_MASTER_V13_2_EXAM_STANDARD",
-      "variantFamily": "v132-nerdc2025-jss1-math-mathematics-multiplication-and-division-of-fractions-exam-06"
-    },
-    {
-      "id": "v132-nerdc2025-jss1-math-mathematics-multiplication-and-division-of-fractions-07",
-      "curriculumTopicId": "nerdc2025-jss1-math-mathematics-multiplication-and-division-of-fractions",
-      "classLevel": "JSS1",
-      "subject": "Mathematics",
-      "topic": "Multiplication and Division of Fractions",
-      "prompt": "Calculate 1 1/2 × 2/3.",
-      "questionType": "MULTIPLE_CHOICE",
-      "options": [
-        "1 1/3",
-        "2",
-        "1",
-        "3/4"
-      ],
-      "correctAnswer": "1",
-      "explanation": "The correct answer is 1.",
-      "difficulty": 1,
-      "assessmentKind": "MASTERY",
-      "curriculumObjective": "Multiply and divide fractions and mixed numbers",
-      "misconceptionTags": [
-        "cross-multiplying as if solving a proportion",
-        "flipping the first fraction instead of the divisor",
-        "failing to convert mixed numbers"
-      ],
-      "qualityStatus": "REVIEWED",
-      "contentOrigin": "AVORA_ORIGINAL",
-      "curriculumVersion": "AVORA_MASTER_V13_2_EXAM_STANDARD",
-      "variantFamily": "v132-nerdc2025-jss1-math-mathematics-multiplication-and-division-of-fractions-exam-07"
-    },
-    {
-      "id": "v132-nerdc2025-jss1-math-mathematics-multiplication-and-division-of-fractions-08",
-      "curriculumTopicId": "nerdc2025-jss1-math-mathematics-multiplication-and-division-of-fractions",
-      "classLevel": "JSS1",
-      "subject": "Mathematics",
-      "topic": "Multiplication and Division of Fractions",
-      "prompt": "Calculate 2 1/4 ÷ 3/4.",
-      "questionType": "MULTIPLE_CHOICE",
-      "options": [
-        "2 1/2",
-        "3",
-        "2",
-        "4"
-      ],
-      "correctAnswer": "3",
-      "explanation": "The correct answer is 3.",
-      "difficulty": 1,
-      "assessmentKind": "OBJECTIVE",
-      "curriculumObjective": "Apply fraction operations to real situations",
-      "misconceptionTags": [
-        "cross-multiplying as if solving a proportion",
-        "flipping the first fraction instead of the divisor",
-        "failing to convert mixed numbers"
-      ],
-      "qualityStatus": "REVIEWED",
-      "contentOrigin": "AVORA_ORIGINAL",
-      "curriculumVersion": "AVORA_MASTER_V13_2_EXAM_STANDARD",
-      "variantFamily": "v132-nerdc2025-jss1-math-mathematics-multiplication-and-division-of-fractions-exam-08"
     },
     {
       "id": "v132-nerdc2025-jss1-math-mathematics-estimation-and-approximation-01",
@@ -25755,6 +23899,1862 @@
       "contentOrigin": "AVORA_ORIGINAL",
       "curriculumVersion": "AVORA_MASTER_V13_2_EXAM_STANDARD",
       "variantFamily": "v132-nerdc2025-jss2-english-literature-figures-of-speech-personification-and-onomatopoeia-exam-08"
+    },
+    {
+      "id": "avora-rebuild-v1-jss1-math-whole-numbers-01",
+      "curriculumTopicId": "nerdc2025-jss1-math-mathematics-whole-numbers",
+      "classLevel": "JSS1",
+      "subject": "Mathematics",
+      "topic": "Whole Numbers",
+      "prompt": "Write 63,405,090 in words, and state the value of the digit \"4\".",
+      "questionType": "MULTIPLE_CHOICE",
+      "options": [
+        "Sixty-three million, four hundred and five thousand and ninety; the 4 is worth 400,000",
+        "Six million, three hundred and forty thousand and five hundred and ninety; the 4 is worth 40,000",
+        "Sixty-three million, four hundred and five thousand and ninety; the 4 is worth 4,000,000",
+        "Sixty-three million, forty-five thousand and ninety; the 4 is worth 40,000"
+      ],
+      "correctAnswer": "Sixty-three million, four hundred and five thousand and ninety; the 4 is worth 400,000",
+      "explanation": "Split into periods: 63|405|090. The 4 sits in the hundred-thousands position within the thousands period, so it represents 400,000, not 40,000 or 4,000,000.",
+      "difficulty": 1,
+      "assessmentKind": "CONCEPT",
+      "curriculumObjective": "Use place value to read, write, compare and order whole numbers",
+      "misconceptionTags": [
+        "reading a number without splitting into periods first, e.g. misreading 1,005,020",
+        "dropping a zero placeholder when converting words back into figures",
+        "comparing numbers from the units side instead of the highest place value"
+      ],
+      "qualityStatus": "REVIEWED",
+      "contentOrigin": "AVORA_ORIGINAL",
+      "curriculumVersion": "AVORA_MASTER_V13_2_EXAM_STANDARD",
+      "variantFamily": "avora-rebuild-v1-jss1-math-whole-numbers"
+    },
+    {
+      "id": "avora-rebuild-v1-jss1-math-whole-numbers-02",
+      "curriculumTopicId": "nerdc2025-jss1-math-mathematics-whole-numbers",
+      "classLevel": "JSS1",
+      "subject": "Mathematics",
+      "topic": "Whole Numbers",
+      "prompt": "Write \"seven billion, eighteen million, three hundred thousand and six\" in figures.",
+      "questionType": "MULTIPLE_CHOICE",
+      "options": [
+        "7,018,300,006",
+        "7,180,300,006",
+        "7,018,300,600",
+        "7,018,030,006"
+      ],
+      "correctAnswer": "7,018,300,006",
+      "explanation": "Billions=7, Millions=018 (three digits: 0-1-8), Thousands=300, Units=006. Assembled: 7,018,300,006.",
+      "difficulty": 2,
+      "assessmentKind": "APPLICATION",
+      "curriculumObjective": "Use place value to read, write, compare and order whole numbers",
+      "misconceptionTags": [
+        "reading a number without splitting into periods first, e.g. misreading 1,005,020",
+        "dropping a zero placeholder when converting words back into figures",
+        "comparing numbers from the units side instead of the highest place value"
+      ],
+      "qualityStatus": "REVIEWED",
+      "contentOrigin": "AVORA_ORIGINAL",
+      "curriculumVersion": "AVORA_MASTER_V13_2_EXAM_STANDARD",
+      "variantFamily": "avora-rebuild-v1-jss1-math-whole-numbers"
+    },
+    {
+      "id": "avora-rebuild-v1-jss1-math-whole-numbers-03",
+      "curriculumTopicId": "nerdc2025-jss1-math-mathematics-whole-numbers",
+      "classLevel": "JSS1",
+      "subject": "Mathematics",
+      "topic": "Whole Numbers",
+      "prompt": "Without exact addition, which is bigger: 305,600,000+12,000,000, or 400,000,000?",
+      "questionType": "MULTIPLE_CHOICE",
+      "options": [
+        "400,000,000 is bigger",
+        "305,600,000+12,000,000 is bigger",
+        "They are exactly equal",
+        "Cannot tell without a calculator"
+      ],
+      "correctAnswer": "400,000,000 is bigger",
+      "explanation": "Leading-digit estimate: about 306 million+12 million≈318 million, clearly under 400 million. Exact check confirms: 317,600,000<400,000,000.",
+      "difficulty": 2,
+      "assessmentKind": "REASONING",
+      "curriculumObjective": "Use place value to read, write, compare and order whole numbers",
+      "misconceptionTags": [
+        "reading a number without splitting into periods first, e.g. misreading 1,005,020",
+        "dropping a zero placeholder when converting words back into figures",
+        "comparing numbers from the units side instead of the highest place value"
+      ],
+      "qualityStatus": "REVIEWED",
+      "contentOrigin": "AVORA_ORIGINAL",
+      "curriculumVersion": "AVORA_MASTER_V13_2_EXAM_STANDARD",
+      "variantFamily": "avora-rebuild-v1-jss1-math-whole-numbers"
+    },
+    {
+      "id": "avora-rebuild-v1-jss1-math-whole-numbers-04",
+      "curriculumTopicId": "nerdc2025-jss1-math-mathematics-whole-numbers",
+      "classLevel": "JSS1",
+      "subject": "Mathematics",
+      "topic": "Whole Numbers",
+      "prompt": "Write 8,204,017 in words.",
+      "questionType": "MULTIPLE_CHOICE",
+      "options": [
+        "Eight million, two hundred and four thousand and seventeen",
+        "Eighty-two million, four thousand and seventeen",
+        "Eight million, twenty-four thousand and seventeen",
+        "Eight million, two hundred and forty thousand and seventeen"
+      ],
+      "correctAnswer": "Eight million, two hundred and four thousand and seventeen",
+      "explanation": "Split into periods: 8|204|017. Millions=8, Thousands=204 (\"two hundred and four\"), Units=017 (\"seventeen\").",
+      "difficulty": 2,
+      "assessmentKind": "MISCONCEPTION",
+      "curriculumObjective": "Use place value to read, write, compare and order whole numbers",
+      "misconceptionTags": [
+        "reading a number without splitting into periods first, e.g. misreading 1,005,020",
+        "dropping a zero placeholder when converting words back into figures",
+        "comparing numbers from the units side instead of the highest place value"
+      ],
+      "qualityStatus": "REVIEWED",
+      "contentOrigin": "AVORA_ORIGINAL",
+      "curriculumVersion": "AVORA_MASTER_V13_2_EXAM_STANDARD",
+      "variantFamily": "avora-rebuild-v1-jss1-math-whole-numbers"
+    },
+    {
+      "id": "avora-rebuild-v1-jss1-math-whole-numbers-05",
+      "curriculumTopicId": "nerdc2025-jss1-math-mathematics-whole-numbers",
+      "classLevel": "JSS1",
+      "subject": "Mathematics",
+      "topic": "Whole Numbers",
+      "prompt": "Write 90,006,000,000 in words. Why is the thousands period skipped when read aloud?",
+      "questionType": "MULTIPLE_CHOICE",
+      "options": [
+        "Ninety billion, six million — the thousands and units periods are both 000, contributing nothing to speech",
+        "Ninety billion, six thousand — the millions period is skipped because it is small",
+        "Nine billion, sixty million — leading zeros are always skipped",
+        "Ninety billion, six million, six thousand — every non-zero digit must be read"
+      ],
+      "correctAnswer": "Ninety billion, six million — the thousands and units periods are both 000, contributing nothing to speech",
+      "explanation": "Split: 90|006|000|000. An entirely-zero period (thousands, units here) is correctly skipped when speaking the number, since it adds nothing to say.",
+      "difficulty": 2,
+      "assessmentKind": "APPLICATION",
+      "curriculumObjective": "Use place value to read, write, compare and order whole numbers",
+      "misconceptionTags": [
+        "reading a number without splitting into periods first, e.g. misreading 1,005,020",
+        "dropping a zero placeholder when converting words back into figures",
+        "comparing numbers from the units side instead of the highest place value"
+      ],
+      "qualityStatus": "REVIEWED",
+      "contentOrigin": "AVORA_ORIGINAL",
+      "curriculumVersion": "AVORA_MASTER_V13_2_EXAM_STANDARD",
+      "variantFamily": "avora-rebuild-v1-jss1-math-whole-numbers"
+    },
+    {
+      "id": "avora-rebuild-v1-jss1-math-whole-numbers-06",
+      "curriculumTopicId": "nerdc2025-jss1-math-mathematics-whole-numbers",
+      "classLevel": "JSS1",
+      "subject": "Mathematics",
+      "topic": "Whole Numbers",
+      "prompt": "Write \"twelve billion, five hundred million, four thousand and nine\" in figures.",
+      "questionType": "MULTIPLE_CHOICE",
+      "options": [
+        "12,500,004,009",
+        "12,500,400,009",
+        "12,050,004,009",
+        "12,500,004,900"
+      ],
+      "correctAnswer": "12,500,004,009",
+      "explanation": "Billions=12, Millions=500 (\"five hundred\"), Thousands=004 (\"four\"), Units=009 (\"nine\"). Assembled: 12,500,004,009.",
+      "difficulty": 2,
+      "assessmentKind": "TRANSFER",
+      "curriculumObjective": "Use place value to read, write, compare and order whole numbers",
+      "misconceptionTags": [
+        "reading a number without splitting into periods first, e.g. misreading 1,005,020",
+        "dropping a zero placeholder when converting words back into figures",
+        "comparing numbers from the units side instead of the highest place value"
+      ],
+      "qualityStatus": "REVIEWED",
+      "contentOrigin": "AVORA_ORIGINAL",
+      "curriculumVersion": "AVORA_MASTER_V13_2_EXAM_STANDARD",
+      "variantFamily": "avora-rebuild-v1-jss1-math-whole-numbers"
+    },
+    {
+      "id": "avora-rebuild-v1-jss1-math-whole-numbers-07",
+      "curriculumTopicId": "nerdc2025-jss1-math-mathematics-whole-numbers",
+      "classLevel": "JSS1",
+      "subject": "Mathematics",
+      "topic": "Whole Numbers",
+      "prompt": "Write \"three trillion, two hundred billion\" in figures. How many digits does it have?",
+      "questionType": "MULTIPLE_CHOICE",
+      "options": [
+        "3,200,000,000,000 — 13 digits",
+        "3,020,000,000,000 — 13 digits",
+        "3,200,000,000,000 — 12 digits",
+        "320,000,000,000 — 12 digits"
+      ],
+      "correctAnswer": "3,200,000,000,000 — 13 digits",
+      "explanation": "Trillions=3, Billions=200, and every period below (millions, thousands, units) is 000. Counting all digits gives 13.",
+      "difficulty": 3,
+      "assessmentKind": "MASTERY",
+      "curriculumObjective": "Use place value to read, write, compare and order whole numbers",
+      "misconceptionTags": [
+        "reading a number without splitting into periods first, e.g. misreading 1,005,020",
+        "dropping a zero placeholder when converting words back into figures",
+        "comparing numbers from the units side instead of the highest place value"
+      ],
+      "qualityStatus": "REVIEWED",
+      "contentOrigin": "AVORA_ORIGINAL",
+      "curriculumVersion": "AVORA_MASTER_V13_2_EXAM_STANDARD",
+      "variantFamily": "avora-rebuild-v1-jss1-math-whole-numbers"
+    },
+    {
+      "id": "avora-rebuild-v1-jss1-math-whole-numbers-08",
+      "curriculumTopicId": "nerdc2025-jss1-math-mathematics-whole-numbers",
+      "classLevel": "JSS1",
+      "subject": "Mathematics",
+      "topic": "Whole Numbers",
+      "prompt": "State the value of the digit \"3\" in 4,738,205,000.",
+      "questionType": "MULTIPLE_CHOICE",
+      "options": [
+        "30,000,000 (ten-millions place)",
+        "3,000,000 (millions place)",
+        "300,000,000 (hundred-millions place)",
+        "30,000 (ten-thousands place)"
+      ],
+      "correctAnswer": "30,000,000 (ten-millions place)",
+      "explanation": "Split: 4|738|205|000. The \"3\" sits in the ten-millions position within the millions period (738 = 7 hundred-millions, 3 ten-millions, 8 millions), worth 30,000,000.",
+      "difficulty": 1,
+      "assessmentKind": "OBJECTIVE",
+      "curriculumObjective": "Use place value to read, write, compare and order whole numbers",
+      "misconceptionTags": [
+        "reading a number without splitting into periods first, e.g. misreading 1,005,020",
+        "dropping a zero placeholder when converting words back into figures",
+        "comparing numbers from the units side instead of the highest place value"
+      ],
+      "qualityStatus": "REVIEWED",
+      "contentOrigin": "AVORA_ORIGINAL",
+      "curriculumVersion": "AVORA_MASTER_V13_2_EXAM_STANDARD",
+      "variantFamily": "avora-rebuild-v1-jss1-math-whole-numbers"
+    },
+    {
+      "id": "avora-rebuild-v1-jss1-math-lcm-least-common-multiple-01",
+      "curriculumTopicId": "nerdc2025-jss1-math-mathematics-lcm-least-common-multiple",
+      "classLevel": "JSS1",
+      "subject": "Mathematics",
+      "topic": "LCM (Least Common Multiple)",
+      "prompt": "Find the LCM of 6 and 9.",
+      "questionType": "MULTIPLE_CHOICE",
+      "options": [
+        "18",
+        "54",
+        "36",
+        "12"
+      ],
+      "correctAnswer": "18",
+      "explanation": "Multiples of 6: 6,12,18. Multiples of 9: 9,18. First shared value: 18.",
+      "difficulty": 1,
+      "assessmentKind": "CONCEPT",
+      "curriculumObjective": "Find LCM using listing and prime-factor methods",
+      "misconceptionTags": [
+        "assuming the LCM of two numbers is always their product",
+        "taking the lowest shared prime power (the HCF rule) instead of the highest",
+        "stopping at the first common multiple spotted without checking it is the lowest"
+      ],
+      "qualityStatus": "REVIEWED",
+      "contentOrigin": "AVORA_ORIGINAL",
+      "curriculumVersion": "AVORA_MASTER_V13_2_EXAM_STANDARD",
+      "variantFamily": "avora-rebuild-v1-jss1-math-lcm-least-common-multiple"
+    },
+    {
+      "id": "avora-rebuild-v1-jss1-math-lcm-least-common-multiple-02",
+      "curriculumTopicId": "nerdc2025-jss1-math-mathematics-lcm-least-common-multiple",
+      "classLevel": "JSS1",
+      "subject": "Mathematics",
+      "topic": "LCM (Least Common Multiple)",
+      "prompt": "Find the LCM of 14 and 21 using prime factors.",
+      "questionType": "MULTIPLE_CHOICE",
+      "options": [
+        "42",
+        "294",
+        "7",
+        "63"
+      ],
+      "correctAnswer": "42",
+      "explanation": "14=2×7, 21=3×7. Highest powers: 2¹,3¹,7¹. LCM=2×3×7=42. (294 is the product, wrongly used when the numbers share a factor.)",
+      "difficulty": 2,
+      "assessmentKind": "APPLICATION",
+      "curriculumObjective": "Find LCM using listing and prime-factor methods",
+      "misconceptionTags": [
+        "assuming the LCM of two numbers is always their product",
+        "taking the lowest shared prime power (the HCF rule) instead of the highest",
+        "stopping at the first common multiple spotted without checking it is the lowest"
+      ],
+      "qualityStatus": "REVIEWED",
+      "contentOrigin": "AVORA_ORIGINAL",
+      "curriculumVersion": "AVORA_MASTER_V13_2_EXAM_STANDARD",
+      "variantFamily": "avora-rebuild-v1-jss1-math-lcm-least-common-multiple"
+    },
+    {
+      "id": "avora-rebuild-v1-jss1-math-lcm-least-common-multiple-03",
+      "curriculumTopicId": "nerdc2025-jss1-math-mathematics-lcm-least-common-multiple",
+      "classLevel": "JSS1",
+      "subject": "Mathematics",
+      "topic": "LCM (Least Common Multiple)",
+      "prompt": "Two lights blink every 4 and 10 seconds, starting together. When do they next blink together?",
+      "questionType": "MULTIPLE_CHOICE",
+      "options": [
+        "20 seconds",
+        "40 seconds",
+        "14 seconds",
+        "10 seconds"
+      ],
+      "correctAnswer": "20 seconds",
+      "explanation": "4=2², 10=2×5. Highest powers: 2²,5¹. LCM=4×5=20 seconds.",
+      "difficulty": 2,
+      "assessmentKind": "REASONING",
+      "curriculumObjective": "Find LCM using listing and prime-factor methods",
+      "misconceptionTags": [
+        "assuming the LCM of two numbers is always their product",
+        "taking the lowest shared prime power (the HCF rule) instead of the highest",
+        "stopping at the first common multiple spotted without checking it is the lowest"
+      ],
+      "qualityStatus": "REVIEWED",
+      "contentOrigin": "AVORA_ORIGINAL",
+      "curriculumVersion": "AVORA_MASTER_V13_2_EXAM_STANDARD",
+      "variantFamily": "avora-rebuild-v1-jss1-math-lcm-least-common-multiple"
+    },
+    {
+      "id": "avora-rebuild-v1-jss1-math-lcm-least-common-multiple-04",
+      "curriculumTopicId": "nerdc2025-jss1-math-mathematics-lcm-least-common-multiple",
+      "classLevel": "JSS1",
+      "subject": "Mathematics",
+      "topic": "LCM (Least Common Multiple)",
+      "prompt": "Find the LCM of 7 and 9.",
+      "questionType": "MULTIPLE_CHOICE",
+      "options": [
+        "63",
+        "16",
+        "7",
+        "9"
+      ],
+      "correctAnswer": "63",
+      "explanation": "7 and 9 share no common factor (co-prime), so their LCM equals their product: 7×9=63.",
+      "difficulty": 2,
+      "assessmentKind": "MISCONCEPTION",
+      "curriculumObjective": "Find LCM using listing and prime-factor methods",
+      "misconceptionTags": [
+        "assuming the LCM of two numbers is always their product",
+        "taking the lowest shared prime power (the HCF rule) instead of the highest",
+        "stopping at the first common multiple spotted without checking it is the lowest"
+      ],
+      "qualityStatus": "REVIEWED",
+      "contentOrigin": "AVORA_ORIGINAL",
+      "curriculumVersion": "AVORA_MASTER_V13_2_EXAM_STANDARD",
+      "variantFamily": "avora-rebuild-v1-jss1-math-lcm-least-common-multiple"
+    },
+    {
+      "id": "avora-rebuild-v1-jss1-math-lcm-least-common-multiple-05",
+      "curriculumTopicId": "nerdc2025-jss1-math-mathematics-lcm-least-common-multiple",
+      "classLevel": "JSS1",
+      "subject": "Mathematics",
+      "topic": "LCM (Least Common Multiple)",
+      "prompt": "Find the LCM of 16 and 24 using prime factors.",
+      "questionType": "MULTIPLE_CHOICE",
+      "options": [
+        "48",
+        "384",
+        "8",
+        "96"
+      ],
+      "correctAnswer": "48",
+      "explanation": "16=2⁴, 24=2³×3. Highest powers: 2⁴,3¹. LCM=16×3=48. (384 is the product, wrongly used when a common factor exists.)",
+      "difficulty": 2,
+      "assessmentKind": "APPLICATION",
+      "curriculumObjective": "Find LCM using listing and prime-factor methods",
+      "misconceptionTags": [
+        "assuming the LCM of two numbers is always their product",
+        "taking the lowest shared prime power (the HCF rule) instead of the highest",
+        "stopping at the first common multiple spotted without checking it is the lowest"
+      ],
+      "qualityStatus": "REVIEWED",
+      "contentOrigin": "AVORA_ORIGINAL",
+      "curriculumVersion": "AVORA_MASTER_V13_2_EXAM_STANDARD",
+      "variantFamily": "avora-rebuild-v1-jss1-math-lcm-least-common-multiple"
+    },
+    {
+      "id": "avora-rebuild-v1-jss1-math-lcm-least-common-multiple-06",
+      "curriculumTopicId": "nerdc2025-jss1-math-mathematics-lcm-least-common-multiple",
+      "classLevel": "JSS1",
+      "subject": "Mathematics",
+      "topic": "LCM (Least Common Multiple)",
+      "prompt": "Find the LCM of 5, 6 and 8.",
+      "questionType": "MULTIPLE_CHOICE",
+      "options": [
+        "120",
+        "240",
+        "48",
+        "40"
+      ],
+      "correctAnswer": "120",
+      "explanation": "5=5, 6=2×3, 8=2³. Highest powers across all three: 2³,3¹,5¹. LCM=8×3×5=120.",
+      "difficulty": 2,
+      "assessmentKind": "TRANSFER",
+      "curriculumObjective": "Find LCM using listing and prime-factor methods",
+      "misconceptionTags": [
+        "assuming the LCM of two numbers is always their product",
+        "taking the lowest shared prime power (the HCF rule) instead of the highest",
+        "stopping at the first common multiple spotted without checking it is the lowest"
+      ],
+      "qualityStatus": "REVIEWED",
+      "contentOrigin": "AVORA_ORIGINAL",
+      "curriculumVersion": "AVORA_MASTER_V13_2_EXAM_STANDARD",
+      "variantFamily": "avora-rebuild-v1-jss1-math-lcm-least-common-multiple"
+    },
+    {
+      "id": "avora-rebuild-v1-jss1-math-lcm-least-common-multiple-07",
+      "curriculumTopicId": "nerdc2025-jss1-math-mathematics-lcm-least-common-multiple",
+      "classLevel": "JSS1",
+      "subject": "Mathematics",
+      "topic": "LCM (Least Common Multiple)",
+      "prompt": "A student claims the LCM of 9 and 15 is 135 (their product). Is this correct?",
+      "questionType": "MULTIPLE_CHOICE",
+      "options": [
+        "No — the true LCM is 45, since 9 and 15 share a common factor of 3",
+        "Yes, 135 is correct since LCM is always the product",
+        "No — the true LCM is 24",
+        "Yes, but only when both numbers are odd"
+      ],
+      "correctAnswer": "No — the true LCM is 45, since 9 and 15 share a common factor of 3",
+      "explanation": "9=3², 15=3×5. Highest powers: 3²,5¹. LCM=9×5=45. The product-shortcut only works for co-prime numbers; 9 and 15 share a factor of 3, so their true LCM (45) is smaller than their product (135).",
+      "difficulty": 3,
+      "assessmentKind": "MASTERY",
+      "curriculumObjective": "Find LCM using listing and prime-factor methods",
+      "misconceptionTags": [
+        "assuming the LCM of two numbers is always their product",
+        "taking the lowest shared prime power (the HCF rule) instead of the highest",
+        "stopping at the first common multiple spotted without checking it is the lowest"
+      ],
+      "qualityStatus": "REVIEWED",
+      "contentOrigin": "AVORA_ORIGINAL",
+      "curriculumVersion": "AVORA_MASTER_V13_2_EXAM_STANDARD",
+      "variantFamily": "avora-rebuild-v1-jss1-math-lcm-least-common-multiple"
+    },
+    {
+      "id": "avora-rebuild-v1-jss1-math-lcm-least-common-multiple-08",
+      "curriculumTopicId": "nerdc2025-jss1-math-mathematics-lcm-least-common-multiple",
+      "classLevel": "JSS1",
+      "subject": "Mathematics",
+      "topic": "LCM (Least Common Multiple)",
+      "prompt": "Two tankers deliver water every 6 and 8 days, both delivering today. When do they next deliver on the same day?",
+      "questionType": "MULTIPLE_CHOICE",
+      "options": [
+        "24 days",
+        "48 days",
+        "14 days",
+        "6 days"
+      ],
+      "correctAnswer": "24 days",
+      "explanation": "6=2×3, 8=2³. Highest powers: 2³,3¹. LCM=8×3=24 days.",
+      "difficulty": 1,
+      "assessmentKind": "OBJECTIVE",
+      "curriculumObjective": "Find LCM using listing and prime-factor methods",
+      "misconceptionTags": [
+        "assuming the LCM of two numbers is always their product",
+        "taking the lowest shared prime power (the HCF rule) instead of the highest",
+        "stopping at the first common multiple spotted without checking it is the lowest"
+      ],
+      "qualityStatus": "REVIEWED",
+      "contentOrigin": "AVORA_ORIGINAL",
+      "curriculumVersion": "AVORA_MASTER_V13_2_EXAM_STANDARD",
+      "variantFamily": "avora-rebuild-v1-jss1-math-lcm-least-common-multiple"
+    },
+    {
+      "id": "avora-rebuild-v1-jss1-math-hcf-highest-common-factor-01",
+      "curriculumTopicId": "nerdc2025-jss1-math-mathematics-hcf-highest-common-factor",
+      "classLevel": "JSS1",
+      "subject": "Mathematics",
+      "topic": "HCF (Highest Common Factor)",
+      "prompt": "Find all factors of 40, then find the HCF of 40 and 60.",
+      "questionType": "MULTIPLE_CHOICE",
+      "options": [
+        "Factors of 40: 1,2,4,5,8,10,20,40; HCF(40,60)=20",
+        "Factors of 40: 1,2,4,5,8,10,20,40; HCF(40,60)=10",
+        "Factors of 40: 1,2,5,8,40; HCF(40,60)=20",
+        "Factors of 40: 1,2,4,5,8,10,20,40; HCF(40,60)=40"
+      ],
+      "correctAnswer": "Factors of 40: 1,2,4,5,8,10,20,40; HCF(40,60)=20",
+      "explanation": "Factors of 40 (pairs: 1×40,2×20,4×10,5×8): 1,2,4,5,8,10,20,40. Factors of 60 include the same list up to 20 plus more; comparing, the highest common factor is 20.",
+      "difficulty": 1,
+      "assessmentKind": "CONCEPT",
+      "curriculumObjective": "Find HCF using factor and prime-factor methods",
+      "misconceptionTags": [
+        "taking the highest shared prime power (the LCM rule) instead of the lowest",
+        "including a prime that appears in only one of the two numbers",
+        "assuming two numbers must always share a common factor greater than 1"
+      ],
+      "qualityStatus": "REVIEWED",
+      "contentOrigin": "AVORA_ORIGINAL",
+      "curriculumVersion": "AVORA_MASTER_V13_2_EXAM_STANDARD",
+      "variantFamily": "avora-rebuild-v1-jss1-math-hcf-highest-common-factor"
+    },
+    {
+      "id": "avora-rebuild-v1-jss1-math-hcf-highest-common-factor-02",
+      "curriculumTopicId": "nerdc2025-jss1-math-mathematics-hcf-highest-common-factor",
+      "classLevel": "JSS1",
+      "subject": "Mathematics",
+      "topic": "HCF (Highest Common Factor)",
+      "prompt": "Find the HCF of 54 and 72 using prime factors, and simplify 54/72 using it.",
+      "questionType": "MULTIPLE_CHOICE",
+      "options": [
+        "HCF=18; 54/72=3/4",
+        "HCF=9; 54/72=6/8",
+        "HCF=18; 54/72=2/3",
+        "HCF=6; 54/72=9/12"
+      ],
+      "correctAnswer": "HCF=18; 54/72=3/4",
+      "explanation": "54=2×3³, 72=2³×3². Shared primes at lowest power: 2¹,3². HCF=2×9=18. Simplify: 54÷18=3, 72÷18=4 → 3/4.",
+      "difficulty": 2,
+      "assessmentKind": "APPLICATION",
+      "curriculumObjective": "Find HCF using factor and prime-factor methods",
+      "misconceptionTags": [
+        "taking the highest shared prime power (the LCM rule) instead of the lowest",
+        "including a prime that appears in only one of the two numbers",
+        "assuming two numbers must always share a common factor greater than 1"
+      ],
+      "qualityStatus": "REVIEWED",
+      "contentOrigin": "AVORA_ORIGINAL",
+      "curriculumVersion": "AVORA_MASTER_V13_2_EXAM_STANDARD",
+      "variantFamily": "avora-rebuild-v1-jss1-math-hcf-highest-common-factor"
+    },
+    {
+      "id": "avora-rebuild-v1-jss1-math-hcf-highest-common-factor-03",
+      "curriculumTopicId": "nerdc2025-jss1-math-mathematics-hcf-highest-common-factor",
+      "classLevel": "JSS1",
+      "subject": "Mathematics",
+      "topic": "HCF (Highest Common Factor)",
+      "prompt": "Two ropes of 18m and 24m are cut into equal pieces of the greatest possible length, none left over. Which method applies, and what is the answer?",
+      "questionType": "MULTIPLE_CHOICE",
+      "options": [
+        "HCF; pieces of 6m each",
+        "LCM; pieces of 72m each",
+        "HCF; pieces of 3m each",
+        "LCM; pieces of 6m each"
+      ],
+      "correctAnswer": "HCF; pieces of 6m each",
+      "explanation": "\"Greatest possible length, none left over\" is always HCF wording. 18=2×3², 24=2³×3. Shared at lowest power: 2¹,3¹. HCF=6m.",
+      "difficulty": 2,
+      "assessmentKind": "REASONING",
+      "curriculumObjective": "Find HCF using factor and prime-factor methods",
+      "misconceptionTags": [
+        "taking the highest shared prime power (the LCM rule) instead of the lowest",
+        "including a prime that appears in only one of the two numbers",
+        "assuming two numbers must always share a common factor greater than 1"
+      ],
+      "qualityStatus": "REVIEWED",
+      "contentOrigin": "AVORA_ORIGINAL",
+      "curriculumVersion": "AVORA_MASTER_V13_2_EXAM_STANDARD",
+      "variantFamily": "avora-rebuild-v1-jss1-math-hcf-highest-common-factor"
+    },
+    {
+      "id": "avora-rebuild-v1-jss1-math-hcf-highest-common-factor-04",
+      "curriculumTopicId": "nerdc2025-jss1-math-mathematics-hcf-highest-common-factor",
+      "classLevel": "JSS1",
+      "subject": "Mathematics",
+      "topic": "HCF (Highest Common Factor)",
+      "prompt": "Find all factors of 32 using the pair method.",
+      "questionType": "MULTIPLE_CHOICE",
+      "options": [
+        "1,2,4,8,16,32",
+        "1,2,4,8,32",
+        "1,2,4,8,16,32,64",
+        "1,4,8,16,32"
+      ],
+      "correctAnswer": "1,2,4,8,16,32",
+      "explanation": "Pairs: 1×32, 2×16, 4×8. Collecting every number used: 1,2,4,8,16,32.",
+      "difficulty": 2,
+      "assessmentKind": "MISCONCEPTION",
+      "curriculumObjective": "Find HCF using factor and prime-factor methods",
+      "misconceptionTags": [
+        "taking the highest shared prime power (the LCM rule) instead of the lowest",
+        "including a prime that appears in only one of the two numbers",
+        "assuming two numbers must always share a common factor greater than 1"
+      ],
+      "qualityStatus": "REVIEWED",
+      "contentOrigin": "AVORA_ORIGINAL",
+      "curriculumVersion": "AVORA_MASTER_V13_2_EXAM_STANDARD",
+      "variantFamily": "avora-rebuild-v1-jss1-math-hcf-highest-common-factor"
+    },
+    {
+      "id": "avora-rebuild-v1-jss1-math-hcf-highest-common-factor-05",
+      "curriculumTopicId": "nerdc2025-jss1-math-mathematics-hcf-highest-common-factor",
+      "classLevel": "JSS1",
+      "subject": "Mathematics",
+      "topic": "HCF (Highest Common Factor)",
+      "prompt": "Find the HCF of 18 and 27 by listing factors.",
+      "questionType": "MULTIPLE_CHOICE",
+      "options": [
+        "9",
+        "3",
+        "6",
+        "18"
+      ],
+      "correctAnswer": "9",
+      "explanation": "Factors of 18: 1,2,3,6,9,18. Factors of 27: 1,3,9,27. Common factors: 1,3,9. Highest: 9.",
+      "difficulty": 2,
+      "assessmentKind": "APPLICATION",
+      "curriculumObjective": "Find HCF using factor and prime-factor methods",
+      "misconceptionTags": [
+        "taking the highest shared prime power (the LCM rule) instead of the lowest",
+        "including a prime that appears in only one of the two numbers",
+        "assuming two numbers must always share a common factor greater than 1"
+      ],
+      "qualityStatus": "REVIEWED",
+      "contentOrigin": "AVORA_ORIGINAL",
+      "curriculumVersion": "AVORA_MASTER_V13_2_EXAM_STANDARD",
+      "variantFamily": "avora-rebuild-v1-jss1-math-hcf-highest-common-factor"
+    },
+    {
+      "id": "avora-rebuild-v1-jss1-math-hcf-highest-common-factor-06",
+      "curriculumTopicId": "nerdc2025-jss1-math-mathematics-hcf-highest-common-factor",
+      "classLevel": "JSS1",
+      "subject": "Mathematics",
+      "topic": "HCF (Highest Common Factor)",
+      "prompt": "Find the HCF of 64 and 96 using prime factors.",
+      "questionType": "MULTIPLE_CHOICE",
+      "options": [
+        "32",
+        "16",
+        "64",
+        "8"
+      ],
+      "correctAnswer": "32",
+      "explanation": "64=2⁶, 96=2⁵×3. Shared prime 2 at lowest power: 2⁵=32.",
+      "difficulty": 2,
+      "assessmentKind": "TRANSFER",
+      "curriculumObjective": "Find HCF using factor and prime-factor methods",
+      "misconceptionTags": [
+        "taking the highest shared prime power (the LCM rule) instead of the lowest",
+        "including a prime that appears in only one of the two numbers",
+        "assuming two numbers must always share a common factor greater than 1"
+      ],
+      "qualityStatus": "REVIEWED",
+      "contentOrigin": "AVORA_ORIGINAL",
+      "curriculumVersion": "AVORA_MASTER_V13_2_EXAM_STANDARD",
+      "variantFamily": "avora-rebuild-v1-jss1-math-hcf-highest-common-factor"
+    },
+    {
+      "id": "avora-rebuild-v1-jss1-math-hcf-highest-common-factor-07",
+      "curriculumTopicId": "nerdc2025-jss1-math-mathematics-hcf-highest-common-factor",
+      "classLevel": "JSS1",
+      "subject": "Mathematics",
+      "topic": "HCF (Highest Common Factor)",
+      "prompt": "Simplify 42/56 to lowest terms using HCF.",
+      "questionType": "MULTIPLE_CHOICE",
+      "options": [
+        "3/4",
+        "4/3",
+        "5/7",
+        "7/8"
+      ],
+      "correctAnswer": "3/4",
+      "explanation": "42=2×3×7, 56=2³×7. HCF=2×7=14. 42÷14=3, 56÷14=4 → 3/4.",
+      "difficulty": 3,
+      "assessmentKind": "MASTERY",
+      "curriculumObjective": "Find HCF using factor and prime-factor methods",
+      "misconceptionTags": [
+        "taking the highest shared prime power (the LCM rule) instead of the lowest",
+        "including a prime that appears in only one of the two numbers",
+        "assuming two numbers must always share a common factor greater than 1"
+      ],
+      "qualityStatus": "REVIEWED",
+      "contentOrigin": "AVORA_ORIGINAL",
+      "curriculumVersion": "AVORA_MASTER_V13_2_EXAM_STANDARD",
+      "variantFamily": "avora-rebuild-v1-jss1-math-hcf-highest-common-factor"
+    },
+    {
+      "id": "avora-rebuild-v1-jss1-math-hcf-highest-common-factor-08",
+      "curriculumTopicId": "nerdc2025-jss1-math-mathematics-hcf-highest-common-factor",
+      "classLevel": "JSS1",
+      "subject": "Mathematics",
+      "topic": "HCF (Highest Common Factor)",
+      "prompt": "A student says the HCF of 9 and 16 must be more than 1 \"because every pair of numbers shares a common factor.\" Is this correct?",
+      "questionType": "MULTIPLE_CHOICE",
+      "options": [
+        "No — HCF(9,16)=1; they are co-prime, sharing no prime factor",
+        "Yes — HCF(9,16)=3",
+        "No — HCF(9,16)=9",
+        "Yes — every pair of numbers must share a factor above 1"
+      ],
+      "correctAnswer": "No — HCF(9,16)=1; they are co-prime, sharing no prime factor",
+      "explanation": "9=3², 16=2⁴. No shared prime at all, so HCF=1. Two numbers can be co-prime — this is a valid, meaningful outcome, not an error.",
+      "difficulty": 1,
+      "assessmentKind": "OBJECTIVE",
+      "curriculumObjective": "Find HCF using factor and prime-factor methods",
+      "misconceptionTags": [
+        "taking the highest shared prime power (the LCM rule) instead of the lowest",
+        "including a prime that appears in only one of the two numbers",
+        "assuming two numbers must always share a common factor greater than 1"
+      ],
+      "qualityStatus": "REVIEWED",
+      "contentOrigin": "AVORA_ORIGINAL",
+      "curriculumVersion": "AVORA_MASTER_V13_2_EXAM_STANDARD",
+      "variantFamily": "avora-rebuild-v1-jss1-math-hcf-highest-common-factor"
+    },
+    {
+      "id": "avora-rebuild-v1-jss1-math-counting-in-base-2-01",
+      "curriculumTopicId": "nerdc2025-jss1-math-mathematics-counting-in-base-2",
+      "classLevel": "JSS1",
+      "subject": "Mathematics",
+      "topic": "Counting in Base 2",
+      "prompt": "Which sequence correctly counts in binary from 8 to 12?",
+      "questionType": "MULTIPLE_CHOICE",
+      "options": [
+        "1000, 1001, 1010, 1011, 1100",
+        "1000, 1001, 1002, 1010, 1011",
+        "1000, 1010, 1011, 1100, 1101",
+        "0111, 1000, 1001, 1010, 1011"
+      ],
+      "correctAnswer": "1000, 1001, 1010, 1011, 1100",
+      "explanation": "8=1000₂. Counting up: 1001(9),1010(10),1011(11),1100(12) — each step follows the carry rule, and the digit 2 never appears.",
+      "difficulty": 1,
+      "assessmentKind": "CONCEPT",
+      "curriculumObjective": "Explain binary place value",
+      "misconceptionTags": [
+        "writing the digit 2 anywhere in a binary numeral",
+        "reading binary '10' as if it were decimal ten",
+        "forgetting a carry chain when several columns are all 1"
+      ],
+      "qualityStatus": "REVIEWED",
+      "contentOrigin": "AVORA_ORIGINAL",
+      "curriculumVersion": "AVORA_MASTER_V13_2_EXAM_STANDARD",
+      "variantFamily": "avora-rebuild-v1-jss1-math-counting-in-base-2"
+    },
+    {
+      "id": "avora-rebuild-v1-jss1-math-counting-in-base-2-02",
+      "curriculumTopicId": "nerdc2025-jss1-math-mathematics-counting-in-base-2",
+      "classLevel": "JSS1",
+      "subject": "Mathematics",
+      "topic": "Counting in Base 2",
+      "prompt": "Group 21 objects into twos, fours, eights, sixteens. What binary numeral results, and does it check out?",
+      "questionType": "MULTIPLE_CHOICE",
+      "options": [
+        "10101₂ — checks out: 16+0+4+0+1=21",
+        "10101₂ — checks out: 16+4+1=21 is wrong, actual total is 20",
+        "10011₂ — checks out: 16+0+0+2+1=19",
+        "11001₂ — checks out: 16+8+1=25"
+      ],
+      "correctAnswer": "10101₂ — checks out: 16+0+4+0+1=21",
+      "explanation": "21=16+4+1 → one 16, zero 8s, one 4, zero 2s, one 1 → 10101₂. Check: 16+4+1=21. Correct.",
+      "difficulty": 2,
+      "assessmentKind": "APPLICATION",
+      "curriculumObjective": "Explain binary place value",
+      "misconceptionTags": [
+        "writing the digit 2 anywhere in a binary numeral",
+        "reading binary '10' as if it were decimal ten",
+        "forgetting a carry chain when several columns are all 1"
+      ],
+      "qualityStatus": "REVIEWED",
+      "contentOrigin": "AVORA_ORIGINAL",
+      "curriculumVersion": "AVORA_MASTER_V13_2_EXAM_STANDARD",
+      "variantFamily": "avora-rebuild-v1-jss1-math-counting-in-base-2"
+    },
+    {
+      "id": "avora-rebuild-v1-jss1-math-counting-in-base-2-03",
+      "curriculumTopicId": "nerdc2025-jss1-math-mathematics-counting-in-base-2",
+      "classLevel": "JSS1",
+      "subject": "Mathematics",
+      "topic": "Counting in Base 2",
+      "prompt": "Find the value of 1110₂ by place value.",
+      "questionType": "MULTIPLE_CHOICE",
+      "options": [
+        "14",
+        "11",
+        "15",
+        "7"
+      ],
+      "correctAnswer": "14",
+      "explanation": "Place values right to left: 1,2,4,8. Digits 1,1,1,0 → 8+4+2+0=14.",
+      "difficulty": 2,
+      "assessmentKind": "REASONING",
+      "curriculumObjective": "Explain binary place value",
+      "misconceptionTags": [
+        "writing the digit 2 anywhere in a binary numeral",
+        "reading binary '10' as if it were decimal ten",
+        "forgetting a carry chain when several columns are all 1"
+      ],
+      "qualityStatus": "REVIEWED",
+      "contentOrigin": "AVORA_ORIGINAL",
+      "curriculumVersion": "AVORA_MASTER_V13_2_EXAM_STANDARD",
+      "variantFamily": "avora-rebuild-v1-jss1-math-counting-in-base-2"
+    },
+    {
+      "id": "avora-rebuild-v1-jss1-math-counting-in-base-2-04",
+      "curriculumTopicId": "nerdc2025-jss1-math-mathematics-counting-in-base-2",
+      "classLevel": "JSS1",
+      "subject": "Mathematics",
+      "topic": "Counting in Base 2",
+      "prompt": "Find the value of 1001₂.",
+      "questionType": "MULTIPLE_CHOICE",
+      "options": [
+        "9",
+        "5",
+        "11",
+        "1001"
+      ],
+      "correctAnswer": "9",
+      "explanation": "Place values: 8,4,2,1. Digits 1,0,0,1 → 8+0+0+1=9.",
+      "difficulty": 2,
+      "assessmentKind": "MISCONCEPTION",
+      "curriculumObjective": "Explain binary place value",
+      "misconceptionTags": [
+        "writing the digit 2 anywhere in a binary numeral",
+        "reading binary '10' as if it were decimal ten",
+        "forgetting a carry chain when several columns are all 1"
+      ],
+      "qualityStatus": "REVIEWED",
+      "contentOrigin": "AVORA_ORIGINAL",
+      "curriculumVersion": "AVORA_MASTER_V13_2_EXAM_STANDARD",
+      "variantFamily": "avora-rebuild-v1-jss1-math-counting-in-base-2"
+    },
+    {
+      "id": "avora-rebuild-v1-jss1-math-counting-in-base-2-05",
+      "curriculumTopicId": "nerdc2025-jss1-math-mathematics-counting-in-base-2",
+      "classLevel": "JSS1",
+      "subject": "Mathematics",
+      "topic": "Counting in Base 2",
+      "prompt": "Find the value of 1111₂.",
+      "questionType": "MULTIPLE_CHOICE",
+      "options": [
+        "15",
+        "1111",
+        "10",
+        "16"
+      ],
+      "correctAnswer": "15",
+      "explanation": "Place values: 8,4,2,1, all digits 1 → 8+4+2+1=15.",
+      "difficulty": 2,
+      "assessmentKind": "APPLICATION",
+      "curriculumObjective": "Explain binary place value",
+      "misconceptionTags": [
+        "writing the digit 2 anywhere in a binary numeral",
+        "reading binary '10' as if it were decimal ten",
+        "forgetting a carry chain when several columns are all 1"
+      ],
+      "qualityStatus": "REVIEWED",
+      "contentOrigin": "AVORA_ORIGINAL",
+      "curriculumVersion": "AVORA_MASTER_V13_2_EXAM_STANDARD",
+      "variantFamily": "avora-rebuild-v1-jss1-math-counting-in-base-2"
+    },
+    {
+      "id": "avora-rebuild-v1-jss1-math-counting-in-base-2-06",
+      "curriculumTopicId": "nerdc2025-jss1-math-mathematics-counting-in-base-2",
+      "classLevel": "JSS1",
+      "subject": "Mathematics",
+      "topic": "Counting in Base 2",
+      "prompt": "Group 17 objects into twos, fours, eights. What binary numeral results?",
+      "questionType": "MULTIPLE_CHOICE",
+      "options": [
+        "10001₂",
+        "10010₂",
+        "01111₂",
+        "11000₂"
+      ],
+      "correctAnswer": "10001₂",
+      "explanation": "17=16+1 → one 16, zero 8s, zero 4s, zero 2s, one 1 → 10001₂. Check: 16+0+0+0+1=17.",
+      "difficulty": 2,
+      "assessmentKind": "TRANSFER",
+      "curriculumObjective": "Explain binary place value",
+      "misconceptionTags": [
+        "writing the digit 2 anywhere in a binary numeral",
+        "reading binary '10' as if it were decimal ten",
+        "forgetting a carry chain when several columns are all 1"
+      ],
+      "qualityStatus": "REVIEWED",
+      "contentOrigin": "AVORA_ORIGINAL",
+      "curriculumVersion": "AVORA_MASTER_V13_2_EXAM_STANDARD",
+      "variantFamily": "avora-rebuild-v1-jss1-math-counting-in-base-2"
+    },
+    {
+      "id": "avora-rebuild-v1-jss1-math-counting-in-base-2-07",
+      "curriculumTopicId": "nerdc2025-jss1-math-mathematics-counting-in-base-2",
+      "classLevel": "JSS1",
+      "subject": "Mathematics",
+      "topic": "Counting in Base 2",
+      "prompt": "What comes immediately after 1101₂ in the binary counting sequence?",
+      "questionType": "MULTIPLE_CHOICE",
+      "options": [
+        "1110₂",
+        "1102₂",
+        "1111₂",
+        "10101₂"
+      ],
+      "correctAnswer": "1110₂",
+      "explanation": "1101₂=13. Adding 1: ones column 1+1=10₂, write 0 carry 1. Twos column already 0, receives carry→1. Result: 1110₂=14.",
+      "difficulty": 3,
+      "assessmentKind": "MASTERY",
+      "curriculumObjective": "Explain binary place value",
+      "misconceptionTags": [
+        "writing the digit 2 anywhere in a binary numeral",
+        "reading binary '10' as if it were decimal ten",
+        "forgetting a carry chain when several columns are all 1"
+      ],
+      "qualityStatus": "REVIEWED",
+      "contentOrigin": "AVORA_ORIGINAL",
+      "curriculumVersion": "AVORA_MASTER_V13_2_EXAM_STANDARD",
+      "variantFamily": "avora-rebuild-v1-jss1-math-counting-in-base-2"
+    },
+    {
+      "id": "avora-rebuild-v1-jss1-math-counting-in-base-2-08",
+      "curriculumTopicId": "nerdc2025-jss1-math-mathematics-counting-in-base-2",
+      "classLevel": "JSS1",
+      "subject": "Mathematics",
+      "topic": "Counting in Base 2",
+      "prompt": "What comes immediately after 1111₂, and how many carries happen?",
+      "questionType": "MULTIPLE_CHOICE",
+      "options": [
+        "10000₂, with 4 carries happening in a chain",
+        "1112₂, with 1 carry",
+        "10000₂, with 1 carry",
+        "1000₂, with 3 carries"
+      ],
+      "correctAnswer": "10000₂, with 4 carries happening in a chain",
+      "explanation": "Adding 1 to 1111₂: every column is full of 1s, so the carry ripples through all four columns, resetting each to 0 and finally creating a new fifth column: 10000₂=16.",
+      "difficulty": 1,
+      "assessmentKind": "OBJECTIVE",
+      "curriculumObjective": "Explain binary place value",
+      "misconceptionTags": [
+        "writing the digit 2 anywhere in a binary numeral",
+        "reading binary '10' as if it were decimal ten",
+        "forgetting a carry chain when several columns are all 1"
+      ],
+      "qualityStatus": "REVIEWED",
+      "contentOrigin": "AVORA_ORIGINAL",
+      "curriculumVersion": "AVORA_MASTER_V13_2_EXAM_STANDARD",
+      "variantFamily": "avora-rebuild-v1-jss1-math-counting-in-base-2"
+    },
+    {
+      "id": "avora-rebuild-v1-jss1-math-conversion-of-base-10-numerals-to-binary-numbers-01",
+      "curriculumTopicId": "nerdc2025-jss1-math-mathematics-conversion-of-base-10-numerals-to-binary-numbers",
+      "classLevel": "JSS1",
+      "subject": "Mathematics",
+      "topic": "Conversion of Base 10 Numerals to Binary Numbers",
+      "prompt": "Convert 12 to binary using powers of two.",
+      "questionType": "MULTIPLE_CHOICE",
+      "options": [
+        "1100₂ (using 8 and 4)",
+        "1010₂ (using 8 and 2)",
+        "1110₂ (using 8, 4 and 2)",
+        "0110₂ (using 4 and 2)"
+      ],
+      "correctAnswer": "1100₂ (using 8 and 4)",
+      "explanation": "8 fits into 12 (remainder 4). 4 fits into remaining 4 (remainder 0). 2 and 1 not needed. Powers used: 8,4 → 1100₂.",
+      "difficulty": 1,
+      "assessmentKind": "CONCEPT",
+      "curriculumObjective": "Convert simple base-ten whole numbers to binary and verify the result",
+      "misconceptionTags": [
+        "reading division-table remainders top-to-bottom instead of bottom-to-top",
+        "skipping a power of two without writing its 0 placeholder",
+        "not verifying a binary conversion by converting back to decimal"
+      ],
+      "qualityStatus": "REVIEWED",
+      "contentOrigin": "AVORA_ORIGINAL",
+      "curriculumVersion": "AVORA_MASTER_V13_2_EXAM_STANDARD",
+      "variantFamily": "avora-rebuild-v1-jss1-math-conversion-of-base-10-numerals-to-binary-numbers"
+    },
+    {
+      "id": "avora-rebuild-v1-jss1-math-conversion-of-base-10-numerals-to-binary-numbers-02",
+      "curriculumTopicId": "nerdc2025-jss1-math-mathematics-conversion-of-base-10-numerals-to-binary-numbers",
+      "classLevel": "JSS1",
+      "subject": "Mathematics",
+      "topic": "Conversion of Base 10 Numerals to Binary Numbers",
+      "prompt": "Convert 19 to binary using the division table method.",
+      "questionType": "MULTIPLE_CHOICE",
+      "options": [
+        "10011₂",
+        "11001₂",
+        "10101₂",
+        "01111₂"
+      ],
+      "correctAnswer": "10011₂",
+      "explanation": "19÷2=9r1, 9÷2=4r1, 4÷2=2r0, 2÷2=1r0, 1÷2=0r1. Reading remainders bottom-to-top: 1,0,0,1,1 → 10011₂. Check: 16+0+0+2+1=19.",
+      "difficulty": 2,
+      "assessmentKind": "APPLICATION",
+      "curriculumObjective": "Convert simple base-ten whole numbers to binary and verify the result",
+      "misconceptionTags": [
+        "reading division-table remainders top-to-bottom instead of bottom-to-top",
+        "skipping a power of two without writing its 0 placeholder",
+        "not verifying a binary conversion by converting back to decimal"
+      ],
+      "qualityStatus": "REVIEWED",
+      "contentOrigin": "AVORA_ORIGINAL",
+      "curriculumVersion": "AVORA_MASTER_V13_2_EXAM_STANDARD",
+      "variantFamily": "avora-rebuild-v1-jss1-math-conversion-of-base-10-numerals-to-binary-numbers"
+    },
+    {
+      "id": "avora-rebuild-v1-jss1-math-conversion-of-base-10-numerals-to-binary-numbers-03",
+      "curriculumTopicId": "nerdc2025-jss1-math-mathematics-conversion-of-base-10-numerals-to-binary-numbers",
+      "classLevel": "JSS1",
+      "subject": "Mathematics",
+      "topic": "Conversion of Base 10 Numerals to Binary Numbers",
+      "prompt": "A student converts 15 to binary and gets 1111. Is this correct?",
+      "questionType": "MULTIPLE_CHOICE",
+      "options": [
+        "Yes — 1111₂ evaluates to 8+4+2+1=15, which matches",
+        "No — 1111₂ actually equals 16",
+        "No — the correct answer is 1110₂",
+        "Yes, but only using the division method, not powers of two"
+      ],
+      "correctAnswer": "Yes — 1111₂ evaluates to 8+4+2+1=15, which matches",
+      "explanation": "1111₂ = 8+4+2+1 = 15. This matches, so the student's answer is correct.",
+      "difficulty": 2,
+      "assessmentKind": "REASONING",
+      "curriculumObjective": "Convert simple base-ten whole numbers to binary and verify the result",
+      "misconceptionTags": [
+        "reading division-table remainders top-to-bottom instead of bottom-to-top",
+        "skipping a power of two without writing its 0 placeholder",
+        "not verifying a binary conversion by converting back to decimal"
+      ],
+      "qualityStatus": "REVIEWED",
+      "contentOrigin": "AVORA_ORIGINAL",
+      "curriculumVersion": "AVORA_MASTER_V13_2_EXAM_STANDARD",
+      "variantFamily": "avora-rebuild-v1-jss1-math-conversion-of-base-10-numerals-to-binary-numbers"
+    },
+    {
+      "id": "avora-rebuild-v1-jss1-math-conversion-of-base-10-numerals-to-binary-numbers-04",
+      "curriculumTopicId": "nerdc2025-jss1-math-mathematics-conversion-of-base-10-numerals-to-binary-numbers",
+      "classLevel": "JSS1",
+      "subject": "Mathematics",
+      "topic": "Conversion of Base 10 Numerals to Binary Numbers",
+      "prompt": "Convert 7 to binary using powers of two.",
+      "questionType": "MULTIPLE_CHOICE",
+      "options": [
+        "111₂",
+        "101₂",
+        "1000₂",
+        "110₂"
+      ],
+      "correctAnswer": "111₂",
+      "explanation": "4 fits (remainder 3), 2 fits (remainder 1), 1 fits (remainder 0). Powers used: 4,2,1 → 111₂. Check: 4+2+1=7.",
+      "difficulty": 2,
+      "assessmentKind": "MISCONCEPTION",
+      "curriculumObjective": "Convert simple base-ten whole numbers to binary and verify the result",
+      "misconceptionTags": [
+        "reading division-table remainders top-to-bottom instead of bottom-to-top",
+        "skipping a power of two without writing its 0 placeholder",
+        "not verifying a binary conversion by converting back to decimal"
+      ],
+      "qualityStatus": "REVIEWED",
+      "contentOrigin": "AVORA_ORIGINAL",
+      "curriculumVersion": "AVORA_MASTER_V13_2_EXAM_STANDARD",
+      "variantFamily": "avora-rebuild-v1-jss1-math-conversion-of-base-10-numerals-to-binary-numbers"
+    },
+    {
+      "id": "avora-rebuild-v1-jss1-math-conversion-of-base-10-numerals-to-binary-numbers-05",
+      "curriculumTopicId": "nerdc2025-jss1-math-mathematics-conversion-of-base-10-numerals-to-binary-numbers",
+      "classLevel": "JSS1",
+      "subject": "Mathematics",
+      "topic": "Conversion of Base 10 Numerals to Binary Numbers",
+      "prompt": "Convert 11 to binary using powers of two.",
+      "questionType": "MULTIPLE_CHOICE",
+      "options": [
+        "1011₂",
+        "1101₂",
+        "1001₂",
+        "0111₂"
+      ],
+      "correctAnswer": "1011₂",
+      "explanation": "8 fits (remainder 3), 4 doesn't fit remaining 3, 2 fits (remainder 1), 1 fits (remainder 0). Powers used: 8,2,1 → 1011₂. Check: 8+0+2+1=11.",
+      "difficulty": 2,
+      "assessmentKind": "APPLICATION",
+      "curriculumObjective": "Convert simple base-ten whole numbers to binary and verify the result",
+      "misconceptionTags": [
+        "reading division-table remainders top-to-bottom instead of bottom-to-top",
+        "skipping a power of two without writing its 0 placeholder",
+        "not verifying a binary conversion by converting back to decimal"
+      ],
+      "qualityStatus": "REVIEWED",
+      "contentOrigin": "AVORA_ORIGINAL",
+      "curriculumVersion": "AVORA_MASTER_V13_2_EXAM_STANDARD",
+      "variantFamily": "avora-rebuild-v1-jss1-math-conversion-of-base-10-numerals-to-binary-numbers"
+    },
+    {
+      "id": "avora-rebuild-v1-jss1-math-conversion-of-base-10-numerals-to-binary-numbers-06",
+      "curriculumTopicId": "nerdc2025-jss1-math-mathematics-conversion-of-base-10-numerals-to-binary-numbers",
+      "classLevel": "JSS1",
+      "subject": "Mathematics",
+      "topic": "Conversion of Base 10 Numerals to Binary Numbers",
+      "prompt": "Convert 18 to binary using the division table method.",
+      "questionType": "MULTIPLE_CHOICE",
+      "options": [
+        "10010₂",
+        "10001₂",
+        "01001₂",
+        "10100₂"
+      ],
+      "correctAnswer": "10010₂",
+      "explanation": "18÷2=9r0, 9÷2=4r1, 4÷2=2r0, 2÷2=1r0, 1÷2=0r1. Bottom-to-top: 1,0,0,1,0 → 10010₂. Check: 16+0+0+2+0=18.",
+      "difficulty": 2,
+      "assessmentKind": "TRANSFER",
+      "curriculumObjective": "Convert simple base-ten whole numbers to binary and verify the result",
+      "misconceptionTags": [
+        "reading division-table remainders top-to-bottom instead of bottom-to-top",
+        "skipping a power of two without writing its 0 placeholder",
+        "not verifying a binary conversion by converting back to decimal"
+      ],
+      "qualityStatus": "REVIEWED",
+      "contentOrigin": "AVORA_ORIGINAL",
+      "curriculumVersion": "AVORA_MASTER_V13_2_EXAM_STANDARD",
+      "variantFamily": "avora-rebuild-v1-jss1-math-conversion-of-base-10-numerals-to-binary-numbers"
+    },
+    {
+      "id": "avora-rebuild-v1-jss1-math-conversion-of-base-10-numerals-to-binary-numbers-07",
+      "curriculumTopicId": "nerdc2025-jss1-math-mathematics-conversion-of-base-10-numerals-to-binary-numbers",
+      "classLevel": "JSS1",
+      "subject": "Mathematics",
+      "topic": "Conversion of Base 10 Numerals to Binary Numbers",
+      "prompt": "Convert 25 to binary using the division table method.",
+      "questionType": "MULTIPLE_CHOICE",
+      "options": [
+        "11001₂",
+        "10011₂",
+        "11100₂",
+        "10101₂"
+      ],
+      "correctAnswer": "11001₂",
+      "explanation": "25÷2=12r1,12÷2=6r0,6÷2=3r0,3÷2=1r1,1÷2=0r1. Bottom-to-top: 1,1,0,0,1 → 11001₂. Check: 16+8+0+0+1=25.",
+      "difficulty": 3,
+      "assessmentKind": "MASTERY",
+      "curriculumObjective": "Convert simple base-ten whole numbers to binary and verify the result",
+      "misconceptionTags": [
+        "reading division-table remainders top-to-bottom instead of bottom-to-top",
+        "skipping a power of two without writing its 0 placeholder",
+        "not verifying a binary conversion by converting back to decimal"
+      ],
+      "qualityStatus": "REVIEWED",
+      "contentOrigin": "AVORA_ORIGINAL",
+      "curriculumVersion": "AVORA_MASTER_V13_2_EXAM_STANDARD",
+      "variantFamily": "avora-rebuild-v1-jss1-math-conversion-of-base-10-numerals-to-binary-numbers"
+    },
+    {
+      "id": "avora-rebuild-v1-jss1-math-conversion-of-base-10-numerals-to-binary-numbers-08",
+      "curriculumTopicId": "nerdc2025-jss1-math-mathematics-conversion-of-base-10-numerals-to-binary-numbers",
+      "classLevel": "JSS1",
+      "subject": "Mathematics",
+      "topic": "Conversion of Base 10 Numerals to Binary Numbers",
+      "prompt": "Convert 30 to binary, then verify with the other method. What is the result?",
+      "questionType": "MULTIPLE_CHOICE",
+      "options": [
+        "11110₂ (confirmed by both the division table and powers of two: 16+8+4+2=30)",
+        "11100₂",
+        "10111₂",
+        "11111₂"
+      ],
+      "correctAnswer": "11110₂ (confirmed by both the division table and powers of two: 16+8+4+2=30)",
+      "explanation": "Division table: 30÷2=15r0,15÷2=7r1,7÷2=3r1,3÷2=1r1,1÷2=0r1 → bottom-to-top: 1,1,1,1,0 → 11110₂. Powers check: 16+8+4+2+0=30. Both agree.",
+      "difficulty": 1,
+      "assessmentKind": "OBJECTIVE",
+      "curriculumObjective": "Convert simple base-ten whole numbers to binary and verify the result",
+      "misconceptionTags": [
+        "reading division-table remainders top-to-bottom instead of bottom-to-top",
+        "skipping a power of two without writing its 0 placeholder",
+        "not verifying a binary conversion by converting back to decimal"
+      ],
+      "qualityStatus": "REVIEWED",
+      "contentOrigin": "AVORA_ORIGINAL",
+      "curriculumVersion": "AVORA_MASTER_V13_2_EXAM_STANDARD",
+      "variantFamily": "avora-rebuild-v1-jss1-math-conversion-of-base-10-numerals-to-binary-numbers"
+    },
+    {
+      "id": "avora-rebuild-v1-jss1-math-fractions-types-simplification-and-equivalent-fractions-01",
+      "curriculumTopicId": "nerdc2025-jss1-math-mathematics-fractions-types-simplification-and-equivalent-fractions",
+      "classLevel": "JSS1",
+      "subject": "Mathematics",
+      "topic": "Fractions: Types, Simplification and Equivalent Fractions",
+      "prompt": "Generate two equivalent fractions for 3/7, and verify by decimal conversion.",
+      "questionType": "MULTIPLE_CHOICE",
+      "options": [
+        "6/14 and 9/21; all three equal 0.4286 as decimals",
+        "6/14 and 9/20; all equal 0.43",
+        "3/14 and 3/21; all equal 0.43",
+        "6/13 and 9/19; all equal 0.43"
+      ],
+      "correctAnswer": "6/14 and 9/21; all three equal 0.4286 as decimals",
+      "explanation": "Multiply top and bottom by 2: 6/14. By 3: 9/21. All three (3/7, 6/14, 9/21) equal 0.4286... as decimals, confirming they are equivalent.",
+      "difficulty": 1,
+      "assessmentKind": "CONCEPT",
+      "curriculumObjective": "Identify proper, improper and mixed fractions",
+      "misconceptionTags": [
+        "leaving a converted fraction or ratio unsimplified",
+        "converting a percentage to a fraction over 10 instead of 100",
+        "comparing fraction sizes without a common denominator"
+      ],
+      "qualityStatus": "REVIEWED",
+      "contentOrigin": "AVORA_ORIGINAL",
+      "curriculumVersion": "AVORA_MASTER_V13_2_EXAM_STANDARD",
+      "variantFamily": "avora-rebuild-v1-jss1-math-fractions-types-simplification-and-equivalent-fractions"
+    },
+    {
+      "id": "avora-rebuild-v1-jss1-math-fractions-types-simplification-and-equivalent-fractions-02",
+      "curriculumTopicId": "nerdc2025-jss1-math-mathematics-fractions-types-simplification-and-equivalent-fractions",
+      "classLevel": "JSS1",
+      "subject": "Mathematics",
+      "topic": "Fractions: Types, Simplification and Equivalent Fractions",
+      "prompt": "Arrange 2/3, 5/6 and 3/4 in descending order.",
+      "questionType": "MULTIPLE_CHOICE",
+      "options": [
+        "5/6, 3/4, 2/3",
+        "2/3, 3/4, 5/6",
+        "3/4, 5/6, 2/3",
+        "5/6, 2/3, 3/4"
+      ],
+      "correctAnswer": "5/6, 3/4, 2/3",
+      "explanation": "LCM of 3,6,4 is 12. Convert: 2/3=8/12, 5/6=10/12, 3/4=9/12. Descending by numerator: 10/12 > 9/12 > 8/12, i.e. 5/6 > 3/4 > 2/3.",
+      "difficulty": 2,
+      "assessmentKind": "APPLICATION",
+      "curriculumObjective": "Identify proper, improper and mixed fractions",
+      "misconceptionTags": [
+        "leaving a converted fraction or ratio unsimplified",
+        "converting a percentage to a fraction over 10 instead of 100",
+        "comparing fraction sizes without a common denominator"
+      ],
+      "qualityStatus": "REVIEWED",
+      "contentOrigin": "AVORA_ORIGINAL",
+      "curriculumVersion": "AVORA_MASTER_V13_2_EXAM_STANDARD",
+      "variantFamily": "avora-rebuild-v1-jss1-math-fractions-types-simplification-and-equivalent-fractions"
+    },
+    {
+      "id": "avora-rebuild-v1-jss1-math-fractions-types-simplification-and-equivalent-fractions-03",
+      "curriculumTopicId": "nerdc2025-jss1-math-mathematics-fractions-types-simplification-and-equivalent-fractions",
+      "classLevel": "JSS1",
+      "subject": "Mathematics",
+      "topic": "Fractions: Types, Simplification and Equivalent Fractions",
+      "prompt": "Find 5/8 of ₦960.",
+      "questionType": "MULTIPLE_CHOICE",
+      "options": [
+        "₦600",
+        "₦480",
+        "₦768",
+        "₦120"
+      ],
+      "correctAnswer": "₦600",
+      "explanation": "960÷8=120, then 120×5=₦600.",
+      "difficulty": 2,
+      "assessmentKind": "REASONING",
+      "curriculumObjective": "Identify proper, improper and mixed fractions",
+      "misconceptionTags": [
+        "leaving a converted fraction or ratio unsimplified",
+        "converting a percentage to a fraction over 10 instead of 100",
+        "comparing fraction sizes without a common denominator"
+      ],
+      "qualityStatus": "REVIEWED",
+      "contentOrigin": "AVORA_ORIGINAL",
+      "curriculumVersion": "AVORA_MASTER_V13_2_EXAM_STANDARD",
+      "variantFamily": "avora-rebuild-v1-jss1-math-fractions-types-simplification-and-equivalent-fractions"
+    },
+    {
+      "id": "avora-rebuild-v1-jss1-math-fractions-types-simplification-and-equivalent-fractions-04",
+      "curriculumTopicId": "nerdc2025-jss1-math-mathematics-fractions-types-simplification-and-equivalent-fractions",
+      "classLevel": "JSS1",
+      "subject": "Mathematics",
+      "topic": "Fractions: Types, Simplification and Equivalent Fractions",
+      "prompt": "Generate an equivalent fraction for 4/9.",
+      "questionType": "MULTIPLE_CHOICE",
+      "options": [
+        "8/18",
+        "8/13",
+        "4/18",
+        "8/9"
+      ],
+      "correctAnswer": "8/18",
+      "explanation": "Multiply top and bottom by 2: (4×2)/(9×2)=8/18, the same value as 4/9.",
+      "difficulty": 2,
+      "assessmentKind": "MISCONCEPTION",
+      "curriculumObjective": "Identify proper, improper and mixed fractions",
+      "misconceptionTags": [
+        "leaving a converted fraction or ratio unsimplified",
+        "converting a percentage to a fraction over 10 instead of 100",
+        "comparing fraction sizes without a common denominator"
+      ],
+      "qualityStatus": "REVIEWED",
+      "contentOrigin": "AVORA_ORIGINAL",
+      "curriculumVersion": "AVORA_MASTER_V13_2_EXAM_STANDARD",
+      "variantFamily": "avora-rebuild-v1-jss1-math-fractions-types-simplification-and-equivalent-fractions"
+    },
+    {
+      "id": "avora-rebuild-v1-jss1-math-fractions-types-simplification-and-equivalent-fractions-05",
+      "curriculumTopicId": "nerdc2025-jss1-math-mathematics-fractions-types-simplification-and-equivalent-fractions",
+      "classLevel": "JSS1",
+      "subject": "Mathematics",
+      "topic": "Fractions: Types, Simplification and Equivalent Fractions",
+      "prompt": "Are 6/8 and 9/12 equivalent?",
+      "questionType": "MULTIPLE_CHOICE",
+      "options": [
+        "Yes — both simplify to 3/4",
+        "No — 6/8 simplifies to 3/4 but 9/12 simplifies to 3/5",
+        "Yes — both simplify to 2/3",
+        "No — they cannot be compared without a calculator"
+      ],
+      "correctAnswer": "Yes — both simplify to 3/4",
+      "explanation": "6/8: HCF(6,8)=2 → 3/4. 9/12: HCF(9,12)=3 → 3/4. Both simplify to 3/4, so they are equivalent.",
+      "difficulty": 2,
+      "assessmentKind": "APPLICATION",
+      "curriculumObjective": "Identify proper, improper and mixed fractions",
+      "misconceptionTags": [
+        "leaving a converted fraction or ratio unsimplified",
+        "converting a percentage to a fraction over 10 instead of 100",
+        "comparing fraction sizes without a common denominator"
+      ],
+      "qualityStatus": "REVIEWED",
+      "contentOrigin": "AVORA_ORIGINAL",
+      "curriculumVersion": "AVORA_MASTER_V13_2_EXAM_STANDARD",
+      "variantFamily": "avora-rebuild-v1-jss1-math-fractions-types-simplification-and-equivalent-fractions"
+    },
+    {
+      "id": "avora-rebuild-v1-jss1-math-fractions-types-simplification-and-equivalent-fractions-06",
+      "curriculumTopicId": "nerdc2025-jss1-math-mathematics-fractions-types-simplification-and-equivalent-fractions",
+      "classLevel": "JSS1",
+      "subject": "Mathematics",
+      "topic": "Fractions: Types, Simplification and Equivalent Fractions",
+      "prompt": "Arrange 1/4, 3/10 and 1/5 in ascending order.",
+      "questionType": "MULTIPLE_CHOICE",
+      "options": [
+        "1/5, 1/4, 3/10",
+        "1/4, 1/5, 3/10",
+        "3/10, 1/4, 1/5",
+        "1/5, 3/10, 1/4"
+      ],
+      "correctAnswer": "1/5, 1/4, 3/10",
+      "explanation": "LCM of 4,10,5 is 20. Convert: 1/4=5/20, 3/10=6/20, 1/5=4/20. Ascending: 4/20<5/20<6/20, i.e. 1/5 < 1/4 < 3/10.",
+      "difficulty": 2,
+      "assessmentKind": "TRANSFER",
+      "curriculumObjective": "Identify proper, improper and mixed fractions",
+      "misconceptionTags": [
+        "leaving a converted fraction or ratio unsimplified",
+        "converting a percentage to a fraction over 10 instead of 100",
+        "comparing fraction sizes without a common denominator"
+      ],
+      "qualityStatus": "REVIEWED",
+      "contentOrigin": "AVORA_ORIGINAL",
+      "curriculumVersion": "AVORA_MASTER_V13_2_EXAM_STANDARD",
+      "variantFamily": "avora-rebuild-v1-jss1-math-fractions-types-simplification-and-equivalent-fractions"
+    },
+    {
+      "id": "avora-rebuild-v1-jss1-math-fractions-types-simplification-and-equivalent-fractions-07",
+      "curriculumTopicId": "nerdc2025-jss1-math-mathematics-fractions-types-simplification-and-equivalent-fractions",
+      "classLevel": "JSS1",
+      "subject": "Mathematics",
+      "topic": "Fractions: Types, Simplification and Equivalent Fractions",
+      "prompt": "Convert 5/6 to a decimal (2 d.p.) and a percentage.",
+      "questionType": "MULTIPLE_CHOICE",
+      "options": [
+        "0.83 and 83.3%",
+        "0.86 and 86%",
+        "0.56 and 56%",
+        "0.6 and 60%"
+      ],
+      "correctAnswer": "0.83 and 83.3%",
+      "explanation": "5÷6=0.8333...≈0.83. As a percentage: 0.8333×100≈83.3%.",
+      "difficulty": 3,
+      "assessmentKind": "MASTERY",
+      "curriculumObjective": "Identify proper, improper and mixed fractions",
+      "misconceptionTags": [
+        "leaving a converted fraction or ratio unsimplified",
+        "converting a percentage to a fraction over 10 instead of 100",
+        "comparing fraction sizes without a common denominator"
+      ],
+      "qualityStatus": "REVIEWED",
+      "contentOrigin": "AVORA_ORIGINAL",
+      "curriculumVersion": "AVORA_MASTER_V13_2_EXAM_STANDARD",
+      "variantFamily": "avora-rebuild-v1-jss1-math-fractions-types-simplification-and-equivalent-fractions"
+    },
+    {
+      "id": "avora-rebuild-v1-jss1-math-fractions-types-simplification-and-equivalent-fractions-08",
+      "curriculumTopicId": "nerdc2025-jss1-math-mathematics-fractions-types-simplification-and-equivalent-fractions",
+      "classLevel": "JSS1",
+      "subject": "Mathematics",
+      "topic": "Fractions: Types, Simplification and Equivalent Fractions",
+      "prompt": "Convert 0.44 to a fraction in lowest terms.",
+      "questionType": "MULTIPLE_CHOICE",
+      "options": [
+        "11/25",
+        "44/1000",
+        "11/50",
+        "4/9"
+      ],
+      "correctAnswer": "11/25",
+      "explanation": "Two decimal places → 44/100. HCF(44,100)=4. Simplify: 44÷4=11, 100÷4=25 → 11/25.",
+      "difficulty": 1,
+      "assessmentKind": "OBJECTIVE",
+      "curriculumObjective": "Identify proper, improper and mixed fractions",
+      "misconceptionTags": [
+        "leaving a converted fraction or ratio unsimplified",
+        "converting a percentage to a fraction over 10 instead of 100",
+        "comparing fraction sizes without a common denominator"
+      ],
+      "qualityStatus": "REVIEWED",
+      "contentOrigin": "AVORA_ORIGINAL",
+      "curriculumVersion": "AVORA_MASTER_V13_2_EXAM_STANDARD",
+      "variantFamily": "avora-rebuild-v1-jss1-math-fractions-types-simplification-and-equivalent-fractions"
+    },
+    {
+      "id": "avora-rebuild-v1-jss1-math-addition-and-subtraction-of-fractions-01",
+      "curriculumTopicId": "nerdc2025-jss1-math-mathematics-addition-and-subtraction-of-fractions",
+      "classLevel": "JSS1",
+      "subject": "Mathematics",
+      "topic": "Addition and Subtraction of Fractions",
+      "prompt": "Add 5/6 and 1/4.",
+      "questionType": "MULTIPLE_CHOICE",
+      "options": [
+        "13/12 = 1 1/12",
+        "6/10 = 3/5",
+        "2/5",
+        "11/12"
+      ],
+      "correctAnswer": "13/12 = 1 1/12",
+      "explanation": "LCM(6,4)=12. Convert: 5/6=10/12, 1/4=3/12. Add: 10/12+3/12=13/12=1 1/12.",
+      "difficulty": 1,
+      "assessmentKind": "CONCEPT",
+      "curriculumObjective": "Add and subtract fractions with like and unlike denominators",
+      "misconceptionTags": [
+        "adding numerators and denominators straight across without a common denominator",
+        "using the product of denominators instead of their LCM",
+        "not converting a mixed number to an improper fraction before combining"
+      ],
+      "qualityStatus": "REVIEWED",
+      "contentOrigin": "AVORA_ORIGINAL",
+      "curriculumVersion": "AVORA_MASTER_V13_2_EXAM_STANDARD",
+      "variantFamily": "avora-rebuild-v1-jss1-math-addition-and-subtraction-of-fractions"
+    },
+    {
+      "id": "avora-rebuild-v1-jss1-math-addition-and-subtraction-of-fractions-02",
+      "curriculumTopicId": "nerdc2025-jss1-math-mathematics-addition-and-subtraction-of-fractions",
+      "classLevel": "JSS1",
+      "subject": "Mathematics",
+      "topic": "Addition and Subtraction of Fractions",
+      "prompt": "Subtract 2/5 from 3/4.",
+      "questionType": "MULTIPLE_CHOICE",
+      "options": [
+        "7/20",
+        "1/20",
+        "1/9",
+        "5/9"
+      ],
+      "correctAnswer": "7/20",
+      "explanation": "LCM(4,5)=20. Convert: 3/4=15/20, 2/5=8/20. Subtract: 15/20−8/20=7/20.",
+      "difficulty": 2,
+      "assessmentKind": "APPLICATION",
+      "curriculumObjective": "Add and subtract fractions with like and unlike denominators",
+      "misconceptionTags": [
+        "adding numerators and denominators straight across without a common denominator",
+        "using the product of denominators instead of their LCM",
+        "not converting a mixed number to an improper fraction before combining"
+      ],
+      "qualityStatus": "REVIEWED",
+      "contentOrigin": "AVORA_ORIGINAL",
+      "curriculumVersion": "AVORA_MASTER_V13_2_EXAM_STANDARD",
+      "variantFamily": "avora-rebuild-v1-jss1-math-addition-and-subtraction-of-fractions"
+    },
+    {
+      "id": "avora-rebuild-v1-jss1-math-addition-and-subtraction-of-fractions-03",
+      "curriculumTopicId": "nerdc2025-jss1-math-mathematics-addition-and-subtraction-of-fractions",
+      "classLevel": "JSS1",
+      "subject": "Mathematics",
+      "topic": "Addition and Subtraction of Fractions",
+      "prompt": "A jug has 1¾ litres. 2/3 litre is poured out. How much remains?",
+      "questionType": "MULTIPLE_CHOICE",
+      "options": [
+        "1 1/12 litres",
+        "1 1/3 litres",
+        "3/4 litres",
+        "5/12 litres"
+      ],
+      "correctAnswer": "1 1/12 litres",
+      "explanation": "1¾=7/4. LCM(4,3)=12. Convert: 7/4=21/12, 2/3=8/12. Subtract: 21/12−8/12=13/12=1 1/12 litres.",
+      "difficulty": 2,
+      "assessmentKind": "REASONING",
+      "curriculumObjective": "Add and subtract fractions with like and unlike denominators",
+      "misconceptionTags": [
+        "adding numerators and denominators straight across without a common denominator",
+        "using the product of denominators instead of their LCM",
+        "not converting a mixed number to an improper fraction before combining"
+      ],
+      "qualityStatus": "REVIEWED",
+      "contentOrigin": "AVORA_ORIGINAL",
+      "curriculumVersion": "AVORA_MASTER_V13_2_EXAM_STANDARD",
+      "variantFamily": "avora-rebuild-v1-jss1-math-addition-and-subtraction-of-fractions"
+    },
+    {
+      "id": "avora-rebuild-v1-jss1-math-addition-and-subtraction-of-fractions-04",
+      "curriculumTopicId": "nerdc2025-jss1-math-mathematics-addition-and-subtraction-of-fractions",
+      "classLevel": "JSS1",
+      "subject": "Mathematics",
+      "topic": "Addition and Subtraction of Fractions",
+      "prompt": "Add 3/10 and 2/5.",
+      "questionType": "MULTIPLE_CHOICE",
+      "options": [
+        "7/10",
+        "5/15=1/3",
+        "1/2",
+        "6/15"
+      ],
+      "correctAnswer": "7/10",
+      "explanation": "LCM(10,5)=10. Convert: 2/5=4/10. Add: 3/10+4/10=7/10.",
+      "difficulty": 2,
+      "assessmentKind": "MISCONCEPTION",
+      "curriculumObjective": "Add and subtract fractions with like and unlike denominators",
+      "misconceptionTags": [
+        "adding numerators and denominators straight across without a common denominator",
+        "using the product of denominators instead of their LCM",
+        "not converting a mixed number to an improper fraction before combining"
+      ],
+      "qualityStatus": "REVIEWED",
+      "contentOrigin": "AVORA_ORIGINAL",
+      "curriculumVersion": "AVORA_MASTER_V13_2_EXAM_STANDARD",
+      "variantFamily": "avora-rebuild-v1-jss1-math-addition-and-subtraction-of-fractions"
+    },
+    {
+      "id": "avora-rebuild-v1-jss1-math-addition-and-subtraction-of-fractions-05",
+      "curriculumTopicId": "nerdc2025-jss1-math-mathematics-addition-and-subtraction-of-fractions",
+      "classLevel": "JSS1",
+      "subject": "Mathematics",
+      "topic": "Addition and Subtraction of Fractions",
+      "prompt": "Subtract 1/6 from 5/8.",
+      "questionType": "MULTIPLE_CHOICE",
+      "options": [
+        "11/24",
+        "4/2=2",
+        "1/2",
+        "4/48"
+      ],
+      "correctAnswer": "11/24",
+      "explanation": "LCM(8,6)=24. Convert: 5/8=15/24, 1/6=4/24. Subtract: 15/24−4/24=11/24.",
+      "difficulty": 2,
+      "assessmentKind": "APPLICATION",
+      "curriculumObjective": "Add and subtract fractions with like and unlike denominators",
+      "misconceptionTags": [
+        "adding numerators and denominators straight across without a common denominator",
+        "using the product of denominators instead of their LCM",
+        "not converting a mixed number to an improper fraction before combining"
+      ],
+      "qualityStatus": "REVIEWED",
+      "contentOrigin": "AVORA_ORIGINAL",
+      "curriculumVersion": "AVORA_MASTER_V13_2_EXAM_STANDARD",
+      "variantFamily": "avora-rebuild-v1-jss1-math-addition-and-subtraction-of-fractions"
+    },
+    {
+      "id": "avora-rebuild-v1-jss1-math-addition-and-subtraction-of-fractions-06",
+      "curriculumTopicId": "nerdc2025-jss1-math-mathematics-addition-and-subtraction-of-fractions",
+      "classLevel": "JSS1",
+      "subject": "Mathematics",
+      "topic": "Addition and Subtraction of Fractions",
+      "prompt": "Add 1 2/3 and 2 3/4, giving your answer as a simplified mixed number.",
+      "questionType": "MULTIPLE_CHOICE",
+      "options": [
+        "4 5/12",
+        "3 5/7",
+        "4 1/2",
+        "3 5/12"
+      ],
+      "correctAnswer": "4 5/12",
+      "explanation": "Improper: 1 2/3=5/3, 2 3/4=11/4. LCM(3,4)=12. Convert: 5/3=20/12, 11/4=33/12. Add: 53/12=4 5/12.",
+      "difficulty": 2,
+      "assessmentKind": "TRANSFER",
+      "curriculumObjective": "Add and subtract fractions with like and unlike denominators",
+      "misconceptionTags": [
+        "adding numerators and denominators straight across without a common denominator",
+        "using the product of denominators instead of their LCM",
+        "not converting a mixed number to an improper fraction before combining"
+      ],
+      "qualityStatus": "REVIEWED",
+      "contentOrigin": "AVORA_ORIGINAL",
+      "curriculumVersion": "AVORA_MASTER_V13_2_EXAM_STANDARD",
+      "variantFamily": "avora-rebuild-v1-jss1-math-addition-and-subtraction-of-fractions"
+    },
+    {
+      "id": "avora-rebuild-v1-jss1-math-addition-and-subtraction-of-fractions-07",
+      "curriculumTopicId": "nerdc2025-jss1-math-mathematics-addition-and-subtraction-of-fractions",
+      "classLevel": "JSS1",
+      "subject": "Mathematics",
+      "topic": "Addition and Subtraction of Fractions",
+      "prompt": "Subtract 1 1/4 from 3 1/2.",
+      "questionType": "MULTIPLE_CHOICE",
+      "options": [
+        "2 1/4",
+        "2 1/2",
+        "1 3/4",
+        "2 3/4"
+      ],
+      "correctAnswer": "2 1/4",
+      "explanation": "Improper: 3 1/2=7/2, 1 1/4=5/4. LCM(2,4)=4. Convert: 7/2=14/4. Subtract: 14/4−5/4=9/4=2 1/4.",
+      "difficulty": 3,
+      "assessmentKind": "MASTERY",
+      "curriculumObjective": "Add and subtract fractions with like and unlike denominators",
+      "misconceptionTags": [
+        "adding numerators and denominators straight across without a common denominator",
+        "using the product of denominators instead of their LCM",
+        "not converting a mixed number to an improper fraction before combining"
+      ],
+      "qualityStatus": "REVIEWED",
+      "contentOrigin": "AVORA_ORIGINAL",
+      "curriculumVersion": "AVORA_MASTER_V13_2_EXAM_STANDARD",
+      "variantFamily": "avora-rebuild-v1-jss1-math-addition-and-subtraction-of-fractions"
+    },
+    {
+      "id": "avora-rebuild-v1-jss1-math-addition-and-subtraction-of-fractions-08",
+      "curriculumTopicId": "nerdc2025-jss1-math-mathematics-addition-and-subtraction-of-fractions",
+      "classLevel": "JSS1",
+      "subject": "Mathematics",
+      "topic": "Addition and Subtraction of Fractions",
+      "prompt": "A student adds 3/5 and 1/10 and gets 4/15 by adding straight across (numerators and denominators separately). What is the correct answer?",
+      "questionType": "MULTIPLE_CHOICE",
+      "options": [
+        "7/10 — found using a common denominator, not by adding straight across",
+        "4/15 is correct",
+        "3/10",
+        "8/15"
+      ],
+      "correctAnswer": "7/10 — found using a common denominator, not by adding straight across",
+      "explanation": "LCM(5,10)=10. Convert: 3/5=6/10. Add: 6/10+1/10=7/10. Adding numerators and denominators separately (giving 4/15) is not a valid method.",
+      "difficulty": 1,
+      "assessmentKind": "OBJECTIVE",
+      "curriculumObjective": "Add and subtract fractions with like and unlike denominators",
+      "misconceptionTags": [
+        "adding numerators and denominators straight across without a common denominator",
+        "using the product of denominators instead of their LCM",
+        "not converting a mixed number to an improper fraction before combining"
+      ],
+      "qualityStatus": "REVIEWED",
+      "contentOrigin": "AVORA_ORIGINAL",
+      "curriculumVersion": "AVORA_MASTER_V13_2_EXAM_STANDARD",
+      "variantFamily": "avora-rebuild-v1-jss1-math-addition-and-subtraction-of-fractions"
+    },
+    {
+      "id": "avora-rebuild-v1-jss1-math-multiplication-and-division-of-fractions-01",
+      "curriculumTopicId": "nerdc2025-jss1-math-mathematics-multiplication-and-division-of-fractions",
+      "classLevel": "JSS1",
+      "subject": "Mathematics",
+      "topic": "Multiplication and Division of Fractions",
+      "prompt": "Multiply 5/6 and 9/10, using cancellation.",
+      "questionType": "MULTIPLE_CHOICE",
+      "options": [
+        "3/4",
+        "7/8",
+        "4/5",
+        "9/16"
+      ],
+      "correctAnswer": "3/4",
+      "explanation": "The 6 in the first denominator and the 9 in the second numerator share a factor of 3: 9÷3=3, 6÷3=2. Now (5/2)×(3/10). The 5 and 10 share a factor of 5: 5÷5=1,10÷5=2. Result: 1×3/(2×2)=3/4.",
+      "difficulty": 1,
+      "assessmentKind": "CONCEPT",
+      "curriculumObjective": "Multiply and divide fractions and mixed numbers",
+      "misconceptionTags": [
+        "finding a common denominator before multiplying fractions",
+        "flipping the first fraction instead of the divisor when dividing",
+        "forgetting to convert a mixed number before multiplying or dividing"
+      ],
+      "qualityStatus": "REVIEWED",
+      "contentOrigin": "AVORA_ORIGINAL",
+      "curriculumVersion": "AVORA_MASTER_V13_2_EXAM_STANDARD",
+      "variantFamily": "avora-rebuild-v1-jss1-math-multiplication-and-division-of-fractions"
+    },
+    {
+      "id": "avora-rebuild-v1-jss1-math-multiplication-and-division-of-fractions-02",
+      "curriculumTopicId": "nerdc2025-jss1-math-mathematics-multiplication-and-division-of-fractions",
+      "classLevel": "JSS1",
+      "subject": "Mathematics",
+      "topic": "Multiplication and Division of Fractions",
+      "prompt": "Divide 3/5 by 9/20.",
+      "questionType": "MULTIPLE_CHOICE",
+      "options": [
+        "4/3 = 1 1/3",
+        "3/4",
+        "27/100",
+        "20/45"
+      ],
+      "correctAnswer": "4/3 = 1 1/3",
+      "explanation": "Flip the divisor and multiply: 3/5×20/9. Cancel: 3 and 9 share 3 (3÷3=1,9÷3=3); 20 and 5 share 5 (20÷5=4,5÷5=1). Result: 1×4/(1×3)=4/3=1 1/3.",
+      "difficulty": 2,
+      "assessmentKind": "APPLICATION",
+      "curriculumObjective": "Multiply and divide fractions and mixed numbers",
+      "misconceptionTags": [
+        "finding a common denominator before multiplying fractions",
+        "flipping the first fraction instead of the divisor when dividing",
+        "forgetting to convert a mixed number before multiplying or dividing"
+      ],
+      "qualityStatus": "REVIEWED",
+      "contentOrigin": "AVORA_ORIGINAL",
+      "curriculumVersion": "AVORA_MASTER_V13_2_EXAM_STANDARD",
+      "variantFamily": "avora-rebuild-v1-jss1-math-multiplication-and-division-of-fractions"
+    },
+    {
+      "id": "avora-rebuild-v1-jss1-math-multiplication-and-division-of-fractions-03",
+      "curriculumTopicId": "nerdc2025-jss1-math-mathematics-multiplication-and-division-of-fractions",
+      "classLevel": "JSS1",
+      "subject": "Mathematics",
+      "topic": "Multiplication and Division of Fractions",
+      "prompt": "A tank holds 3/4 of its capacity, described as 2/3 of a bigger tank that holds 60 litres. How many litres are in the first tank?",
+      "questionType": "MULTIPLE_CHOICE",
+      "options": [
+        "40 litres",
+        "45 litres",
+        "30 litres",
+        "20 litres"
+      ],
+      "correctAnswer": "40 litres",
+      "explanation": "First find 2/3 of 60 = 40 litres (this IS the first tank's amount, since 3/4-full of the first tank equals 2/3 of the second tank's full 60L — the 40L figure is the direct answer to 'how many litres are in the first tank' as described).",
+      "difficulty": 2,
+      "assessmentKind": "REASONING",
+      "curriculumObjective": "Multiply and divide fractions and mixed numbers",
+      "misconceptionTags": [
+        "finding a common denominator before multiplying fractions",
+        "flipping the first fraction instead of the divisor when dividing",
+        "forgetting to convert a mixed number before multiplying or dividing"
+      ],
+      "qualityStatus": "REVIEWED",
+      "contentOrigin": "AVORA_ORIGINAL",
+      "curriculumVersion": "AVORA_MASTER_V13_2_EXAM_STANDARD",
+      "variantFamily": "avora-rebuild-v1-jss1-math-multiplication-and-division-of-fractions"
+    },
+    {
+      "id": "avora-rebuild-v1-jss1-math-multiplication-and-division-of-fractions-04",
+      "curriculumTopicId": "nerdc2025-jss1-math-mathematics-multiplication-and-division-of-fractions",
+      "classLevel": "JSS1",
+      "subject": "Mathematics",
+      "topic": "Multiplication and Division of Fractions",
+      "prompt": "Multiply 4/9 and 3/8.",
+      "questionType": "MULTIPLE_CHOICE",
+      "options": [
+        "1/6",
+        "12/72=1/6 (same value, unsimplified)",
+        "7/17",
+        "1/2"
+      ],
+      "correctAnswer": "1/6",
+      "explanation": "Cancel: 3 and 9 share 3 (3÷3=1,9÷3=3); 4 and 8 share 4 (4÷4=1,8÷4=2). Result: (1×1)/(3×2)=1/6.",
+      "difficulty": 2,
+      "assessmentKind": "MISCONCEPTION",
+      "curriculumObjective": "Multiply and divide fractions and mixed numbers",
+      "misconceptionTags": [
+        "finding a common denominator before multiplying fractions",
+        "flipping the first fraction instead of the divisor when dividing",
+        "forgetting to convert a mixed number before multiplying or dividing"
+      ],
+      "qualityStatus": "REVIEWED",
+      "contentOrigin": "AVORA_ORIGINAL",
+      "curriculumVersion": "AVORA_MASTER_V13_2_EXAM_STANDARD",
+      "variantFamily": "avora-rebuild-v1-jss1-math-multiplication-and-division-of-fractions"
+    },
+    {
+      "id": "avora-rebuild-v1-jss1-math-multiplication-and-division-of-fractions-05",
+      "curriculumTopicId": "nerdc2025-jss1-math-mathematics-multiplication-and-division-of-fractions",
+      "classLevel": "JSS1",
+      "subject": "Mathematics",
+      "topic": "Multiplication and Division of Fractions",
+      "prompt": "Multiply 5/7 and 14/15, using cancellation.",
+      "questionType": "MULTIPLE_CHOICE",
+      "options": [
+        "2/3",
+        "7/15",
+        "3/4",
+        "14/105"
+      ],
+      "correctAnswer": "2/3",
+      "explanation": "Cancel: 7 and 14 share 7 (14÷7=2,7÷7=1); 5 and 15 share 5 (5÷5=1,15÷5=3). Result: (1×2)/(1×3)=2/3.",
+      "difficulty": 2,
+      "assessmentKind": "APPLICATION",
+      "curriculumObjective": "Multiply and divide fractions and mixed numbers",
+      "misconceptionTags": [
+        "finding a common denominator before multiplying fractions",
+        "flipping the first fraction instead of the divisor when dividing",
+        "forgetting to convert a mixed number before multiplying or dividing"
+      ],
+      "qualityStatus": "REVIEWED",
+      "contentOrigin": "AVORA_ORIGINAL",
+      "curriculumVersion": "AVORA_MASTER_V13_2_EXAM_STANDARD",
+      "variantFamily": "avora-rebuild-v1-jss1-math-multiplication-and-division-of-fractions"
+    },
+    {
+      "id": "avora-rebuild-v1-jss1-math-multiplication-and-division-of-fractions-06",
+      "curriculumTopicId": "nerdc2025-jss1-math-mathematics-multiplication-and-division-of-fractions",
+      "classLevel": "JSS1",
+      "subject": "Mathematics",
+      "topic": "Multiplication and Division of Fractions",
+      "prompt": "Divide 5/6 by 2/3.",
+      "questionType": "MULTIPLE_CHOICE",
+      "options": [
+        "5/4 = 1 1/4",
+        "10/18=5/9",
+        "5/2",
+        "1/3"
+      ],
+      "correctAnswer": "5/4 = 1 1/4",
+      "explanation": "Flip and multiply: 5/6×3/2. Cancel: 3 and 6 share 3 (3÷3=1,6÷3=2). Result: 5/(2×2)=5/4=1 1/4.",
+      "difficulty": 2,
+      "assessmentKind": "TRANSFER",
+      "curriculumObjective": "Multiply and divide fractions and mixed numbers",
+      "misconceptionTags": [
+        "finding a common denominator before multiplying fractions",
+        "flipping the first fraction instead of the divisor when dividing",
+        "forgetting to convert a mixed number before multiplying or dividing"
+      ],
+      "qualityStatus": "REVIEWED",
+      "contentOrigin": "AVORA_ORIGINAL",
+      "curriculumVersion": "AVORA_MASTER_V13_2_EXAM_STANDARD",
+      "variantFamily": "avora-rebuild-v1-jss1-math-multiplication-and-division-of-fractions"
+    },
+    {
+      "id": "avora-rebuild-v1-jss1-math-multiplication-and-division-of-fractions-07",
+      "curriculumTopicId": "nerdc2025-jss1-math-mathematics-multiplication-and-division-of-fractions",
+      "classLevel": "JSS1",
+      "subject": "Mathematics",
+      "topic": "Multiplication and Division of Fractions",
+      "prompt": "Divide 7/8 by 1/4.",
+      "questionType": "MULTIPLE_CHOICE",
+      "options": [
+        "7/2 = 3 1/2",
+        "7/32",
+        "4/7",
+        "2/7"
+      ],
+      "correctAnswer": "7/2 = 3 1/2",
+      "explanation": "Flip and multiply: 7/8×4/1. Cancel: 4 and 8 share 4 (4÷4=1,8÷4=2). Result: 7/2=3 1/2.",
+      "difficulty": 3,
+      "assessmentKind": "MASTERY",
+      "curriculumObjective": "Multiply and divide fractions and mixed numbers",
+      "misconceptionTags": [
+        "finding a common denominator before multiplying fractions",
+        "flipping the first fraction instead of the divisor when dividing",
+        "forgetting to convert a mixed number before multiplying or dividing"
+      ],
+      "qualityStatus": "REVIEWED",
+      "contentOrigin": "AVORA_ORIGINAL",
+      "curriculumVersion": "AVORA_MASTER_V13_2_EXAM_STANDARD",
+      "variantFamily": "avora-rebuild-v1-jss1-math-multiplication-and-division-of-fractions"
+    },
+    {
+      "id": "avora-rebuild-v1-jss1-math-multiplication-and-division-of-fractions-08",
+      "curriculumTopicId": "nerdc2025-jss1-math-mathematics-multiplication-and-division-of-fractions",
+      "classLevel": "JSS1",
+      "subject": "Mathematics",
+      "topic": "Multiplication and Division of Fractions",
+      "prompt": "Multiply 2½ and 1⅔, converting to improper fractions first.",
+      "questionType": "MULTIPLE_CHOICE",
+      "options": [
+        "25/6 = 4 1/6",
+        "3 1/2",
+        "2 5/6",
+        "5/2"
+      ],
+      "correctAnswer": "25/6 = 4 1/6",
+      "explanation": "2½=5/2, 1⅔=5/3. Multiply: (5×5)/(2×3)=25/6=4 1/6.",
+      "difficulty": 1,
+      "assessmentKind": "OBJECTIVE",
+      "curriculumObjective": "Multiply and divide fractions and mixed numbers",
+      "misconceptionTags": [
+        "finding a common denominator before multiplying fractions",
+        "flipping the first fraction instead of the divisor when dividing",
+        "forgetting to convert a mixed number before multiplying or dividing"
+      ],
+      "qualityStatus": "REVIEWED",
+      "contentOrigin": "AVORA_ORIGINAL",
+      "curriculumVersion": "AVORA_MASTER_V13_2_EXAM_STANDARD",
+      "variantFamily": "avora-rebuild-v1-jss1-math-multiplication-and-division-of-fractions"
     }
   ],
   "performanceTasks": [
