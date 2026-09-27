@@ -92,7 +92,7 @@ function buildEvents(unit:any,topic:string,subject:string,classLevel:string):Boa
    expectation:moment.requiresLearnerResponse?'Attempt the authored curriculum check. Show the reasoning or working the question asks for.':undefined,
    lines:moment.lines,boardAction:moment.boardAction,pauseAfterMs:moment.pauseAfterMs
   }));
-  return sourceEvents.map(e=>e.kind==='check'?{...e,kind:'idea' as const,question:undefined,expectation:undefined}:e).flatMap(expandTeachingEvent);
+  return sourceEvents.map(e=>e.kind==='check'?({...e,kind:'idea',question:undefined,expectation:undefined} as BoardEvent):e).flatMap(expandTeachingEvent);
  }
  events.push({kind:'intro',label:'WHY THIS MATTERS',spoken:unit.why||`We are going to understand ${unit.title}, not just memorize a rule.`,lines:[unit.title,unit.why||`This is a required part of ${topic}.`]});
  events.push({kind:'idea',label:'WHAT YOU WILL UNDERSTAND',spoken:`By the end of this section, you should be able to explain the idea, apply it and justify your reasoning.`,lines:['By the end, you should be able to:',...depth.outcomes.map((x:string)=>`• ${x}`)]});
