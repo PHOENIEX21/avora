@@ -802,3 +802,293 @@ main,section,article,aside,header,footer,nav,form,div{min-width:0}
 /* V14.9.1 — NERDC objectives + visible tutor-teaching layer */
 .nerdc-objectives-v1491{max-width:860px;margin:16px auto 0;display:grid;grid-template-columns:minmax(0,1.5fr) minmax(250px,.7fr);gap:12px}.nerdc-objectives-main,.curriculum-details-v1491{border:1px solid #d9ddda;border-radius:14px;background:#fff;padding:18px}.curriculum-trust-chip{display:inline-flex;align-items:center;border-radius:999px;background:#f6f0dc;color:#725a17;padding:6px 10px;font-size:10px;line-height:1.2;font-weight:900;letter-spacing:.07em}.nerdc-objectives-main h3{margin:12px 0 10px;font-family:Georgia,serif;font-size:22px;color:var(--navy)}.nerdc-objectives-main ol{list-style:none;margin:0;padding:0;display:grid;gap:9px}.nerdc-objectives-main li{display:grid;grid-template-columns:30px 1fr;gap:10px;align-items:flex-start;color:#384251;line-height:1.5}.nerdc-objectives-main li>b{width:27px;height:27px;border-radius:50%;display:grid;place-items:center;background:#eef5ef;color:#205a42;font-size:12px}.curriculum-details-v1491{align-self:start;background:#fbfaf6}.curriculum-details-v1491 summary{cursor:pointer;font-weight:850;color:var(--navy)}.curriculum-details-v1491>div{padding-top:12px}.curriculum-details-v1491 p{margin:6px 0;color:#4e5865;font-size:13px;line-height:1.45}.curriculum-details-v1491 small{display:block;margin-top:10px;padding-top:10px;border-top:1px solid #e5e1d6;color:#6b7280;line-height:1.5}.avora-teacher-dialogue-v1491{display:grid;grid-template-columns:46px 1fr;gap:12px;margin:16px 0 12px;padding:16px;border:1px solid #d9e4dc;border-radius:14px;background:linear-gradient(135deg,#f7fbf8,#fffdf7)}.avora-tutor-mark{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:#0d5b46;color:#fff;font-family:Georgia,serif;font-size:22px;font-weight:800;box-shadow:0 8px 20px rgba(13,91,70,.12)}.avora-teacher-copy>span,.feedback-tutor-label{display:block;font-size:9px;letter-spacing:.12em;font-weight:900;color:#8a681d;margin-bottom:5px}.avora-teacher-copy p{margin:0;color:#22313a;font-size:16px;line-height:1.68}.teacher-interrupt-actions{display:flex;gap:7px;flex-wrap:wrap;margin-top:12px}.teacher-interrupt-actions button{border:1px solid #cddbd2;background:#fff;color:#18533f;border-radius:999px;padding:8px 11px;font-size:12px;font-weight:800}.teacher-interrupt-actions button:hover{background:#eff7f1}.tutor-feedback-v1491 button{margin-top:10px;border:1px solid #c9d6cd;background:#fff;color:#164e3b;border-radius:8px;padding:9px 12px;font-weight:800}.nerdc-topic-exercise .teacher-question{padding:18px;border:1px solid #e1e3e0;border-radius:12px;background:#fff}.nerdc-topic-exercise .teacher-options button{min-height:58px;border-radius:12px}.nerdc-topic-exercise .teacher-options button.chosen{border-color:#0d5b46;background:#eff8f2}.nerdc-topic-exercise .teacher-options button.chosen b{background:#0d5b46;color:#fff}
 @media(max-width:700px){.nerdc-objectives-v1491{grid-template-columns:1fr;margin:12px 0 0}.nerdc-objectives-main,.curriculum-details-v1491{padding:14px}.nerdc-objectives-main h3{font-size:20px}.avora-teacher-dialogue-v1491{grid-template-columns:38px 1fr;padding:13px}.avora-tutor-mark{width:36px;height:36px;font-size:18px}.avora-teacher-copy p{font-size:15px}.teacher-interrupt-actions{display:grid;grid-template-columns:1fr 1fr}.teacher-interrupt-actions button:last-child{grid-column:1/-1}.nerdc-topic-exercise .teacher-question{padding:14px}}
+
+
+/* V14.10 — focused lesson slides + golden mastery exercises */
+.tutor-slide-mode{padding-bottom:150px}
+.tutor-slide-mode .tutor-breadcrumb,
+.tutor-slide-mode .teacher-session-head,
+.tutor-slide-mode .nerdc-objectives-v1491,
+.tutor-slide-mode .text-first-source-banner,
+.tutor-slide-mode>.lesson-map-v1{display:none}
+.tutor-slide-mode .live-teacher-stage{
+ max-width:1120px;
+ margin:10px auto 0;
+ min-height:calc(100svh - 120px);
+ padding:clamp(16px,2.2vw,26px);
+ border:1px solid #d8d2c3;
+ border-radius:22px;
+ background:linear-gradient(180deg,#fff 0%,#fffdf8 100%);
+ box-shadow:0 22px 60px rgba(22,35,61,.09);
+ display:grid;
+ grid-template-rows:auto auto auto minmax(250px,1fr) auto auto auto;
+ gap:10px;
+ align-content:start;
+}
+.tutor-slide-mode .teacher-stage-title{margin:0}
+.tutor-slide-mode .teacher-stage-title h2{
+ font-size:clamp(24px,3vw,34px);
+ line-height:1.14;
+ margin:5px 0 0;
+}
+.tutor-slide-mode .teacher-state{white-space:nowrap}
+.slide-progress-v1410{
+ position:relative;
+ min-height:22px;
+ border-radius:999px;
+ background:#f3efe4;
+ border:1px solid #e2d5af;
+ overflow:hidden;
+ display:flex;
+ align-items:center;
+ justify-content:flex-end;
+ padding:0 9px;
+}
+.slide-progress-v1410>i{
+ position:absolute;
+ inset:0 auto 0 0;
+ width:4%;
+ background:linear-gradient(90deg,#b88719,#dfbd5c);
+ border-radius:999px;
+ transition:width .25s ease;
+}
+.slide-progress-v1410>span{
+ position:relative;
+ z-index:1;
+ font-size:10px;
+ font-weight:900;
+ letter-spacing:.08em;
+ color:#5f4610;
+ background:rgba(255,255,255,.78);
+ border-radius:999px;
+ padding:2px 6px;
+}
+.tutor-slide-mode .session-map-v1{
+ max-height:190px;
+ overflow:auto;
+ margin:0;
+}
+.tutor-slide-mode .avora-teacher-dialogue-v1491{
+ margin:0;
+ padding:clamp(14px,1.8vw,20px);
+ border-radius:16px;
+}
+.tutor-slide-mode .avora-teacher-copy p{
+ font-size:clamp(18px,2.05vw,23px);
+ line-height:1.52;
+ font-weight:650;
+ color:#1f2d37;
+}
+.tutor-slide-mode .teacher-interrupt-actions button{
+ min-height:40px;
+ font-size:12px;
+ padding:8px 13px;
+}
+.tutor-slide-mode .animated-board-v1{
+ min-height:min(46svh,430px);
+ max-height:48svh;
+ overflow:auto;
+ border-radius:16px;
+ padding:clamp(18px,2.4vw,28px) clamp(16px,2.4vw,28px) 64px;
+ background:linear-gradient(180deg,#fffefb,#fbf8ef);
+}
+.tutor-slide-mode .board-writing{
+ gap:16px;
+ align-content:start;
+}
+.tutor-slide-mode .board-line{
+ font-size:clamp(24px,3.3vw,40px);
+ line-height:1.3;
+ font-weight:760;
+ white-space:pre-line;
+}
+.tutor-slide-mode .board-line.line-1,
+.tutor-slide-mode .board-line.line-2{
+ font-size:clamp(18px,2.35vw,27px);
+ line-height:1.5;
+ font-weight:650;
+}
+.tutor-slide-mode .board-line.board-extra{
+ font-size:clamp(15px,1.8vw,19px);
+ line-height:1.5;
+ font-weight:650;
+}
+.tutor-slide-mode .lesson-checkpoint-v2{
+ margin:0;
+ max-height:38svh;
+ overflow:auto;
+}
+.tutor-slide-mode .teacher-controls-v1{
+ position:sticky;
+ bottom:12px;
+ z-index:45;
+ display:grid;
+ grid-template-columns:repeat(auto-fit,minmax(128px,1fr));
+ gap:8px;
+ margin:0;
+ padding:9px;
+ border:1px solid #d7c586;
+ border-radius:15px;
+ background:rgba(255,253,247,.96);
+ box-shadow:0 -12px 30px rgba(35,45,61,.13);
+ backdrop-filter:blur(12px);
+}
+.tutor-slide-mode .teacher-controls-v1 button{
+ min-height:52px;
+ padding:9px 12px;
+ font-size:13px;
+ font-weight:900;
+ border-color:#d6c27e;
+}
+.tutor-slide-mode .teacher-controls-v1 button:last-child{
+ background:var(--navy);
+ color:#fff;
+ border-color:var(--navy);
+}
+.tutor-slide-mode .ask-teacher-v1{
+ margin:0;
+ padding-top:12px;
+ max-height:220px;
+ overflow:auto;
+}
+
+/* The end-of-topic exercise is deliberately visually distinct: gold means independent mastery. */
+.nerdc-topic-exercise{
+ border:2px solid #c99a2e;
+ border-top:6px solid #a97810;
+ border-radius:18px;
+ background:linear-gradient(160deg,#fffdf6 0%,#fff7dc 100%);
+ box-shadow:0 18px 48px rgba(113,80,13,.12);
+}
+.nerdc-topic-exercise .teacher-kicker{
+ color:#76540d;
+ background:#f2d98f;
+ display:inline-flex;
+ width:max-content;
+ padding:6px 10px;
+ border-radius:999px;
+}
+.nerdc-topic-exercise>h2{color:#3d2d08}
+.nerdc-topic-exercise .teacher-copy{color:#655629}
+.nerdc-topic-exercise .exercise-score-strip{
+ border:1px solid #d5ae49;
+ background:linear-gradient(90deg,#f4dda0,#fff6d9);
+}
+.nerdc-topic-exercise .exercise-score-strip span,
+.nerdc-topic-exercise .exercise-score-strip b{color:#5a4109}
+.nerdc-topic-exercise .teacher-question{
+ border:1.5px solid #d6b55e;
+ background:#fffef9;
+ box-shadow:inset 0 0 0 1px rgba(255,255,255,.7);
+}
+.nerdc-topic-exercise .teacher-question h3{
+ color:#2e250e;
+ font-weight:780;
+}
+.nerdc-topic-exercise .teacher-options button{
+ min-height:64px;
+ border:1.5px solid #d7bb70;
+ background:#fffdf5;
+ color:#342a10;
+ border-radius:13px;
+ font-size:15px;
+ font-weight:700;
+}
+.nerdc-topic-exercise .teacher-options button b{
+ background:#f1d98d;
+ color:#5d4309;
+ font-weight:950;
+}
+.nerdc-topic-exercise .teacher-options button:hover{
+ border-color:#b88719;
+ background:#fff7dc;
+}
+.nerdc-topic-exercise .teacher-options button.chosen{
+ border:2px solid #85600d;
+ background:linear-gradient(135deg,#efd679,#d6ad3e);
+ color:#2f2308;
+ box-shadow:0 7px 18px rgba(112,78,8,.16);
+}
+.nerdc-topic-exercise .teacher-options button.chosen b{
+ background:#6e4e08;
+ color:#fff;
+}
+.nerdc-topic-exercise .teacher-actions{
+ position:sticky;
+ bottom:12px;
+ z-index:35;
+ padding:8px;
+ border:1px solid #d6b55e;
+ border-radius:13px;
+ background:rgba(255,249,225,.96);
+ box-shadow:0 -10px 24px rgba(94,66,10,.11);
+ backdrop-filter:blur(10px);
+}
+.nerdc-topic-exercise .teacher-actions .primary{
+ background:#7c590c;
+ border-color:#7c590c;
+ color:#fff;
+}
+.nerdc-topic-exercise .tutor-feedback-v1491{
+ border-left-color:#b88719;
+ background:#fff8de;
+}
+
+@media(max-width:760px){
+ .tutor-slide-mode{padding-bottom:190px}
+ .tutor-slide-mode .live-teacher-stage{
+  margin:4px 0 0;
+  min-height:calc(100svh - 98px);
+  padding:13px;
+  border-radius:16px;
+  gap:8px;
+ }
+ .tutor-slide-mode .teacher-stage-title{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:4px;
+ }
+ .tutor-slide-mode .teacher-state{white-space:normal}
+ .tutor-slide-mode .avora-teacher-dialogue-v1491{padding:12px}
+ .tutor-slide-mode .avora-teacher-copy p{
+  font-size:18px;
+  line-height:1.5;
+ }
+ .tutor-slide-mode .animated-board-v1{
+  min-height:36svh;
+  max-height:43svh;
+  padding:16px 14px 58px;
+ }
+ .tutor-slide-mode .board-line{
+  font-size:clamp(22px,7vw,31px);
+  line-height:1.3;
+ }
+ .tutor-slide-mode .board-line.line-1,
+ .tutor-slide-mode .board-line.line-2{
+  font-size:17px;
+ }
+ .tutor-slide-mode .teacher-controls-v1{
+  bottom:92px;
+  grid-template-columns:minmax(0,.9fr) minmax(0,1.35fr);
+  padding:7px;
+ }
+ .tutor-slide-mode .teacher-controls-v1 button{
+  min-height:50px;
+  font-size:12px;
+  padding:7px 8px;
+ }
+ .tutor-slide-mode .teacher-controls-v1 button:nth-last-child(n+3){display:none}
+ .tutor-slide-mode .ask-teacher-v1{max-height:180px}
+ .nerdc-topic-exercise{
+  margin-left:0;
+  margin-right:0;
+  padding:15px;
+ }
+ .nerdc-topic-exercise .teacher-question{padding:13px}
+ .nerdc-topic-exercise .teacher-options button{
+  min-height:60px;
+  padding:11px;
+  font-size:14px;
+ }
+ .nerdc-topic-exercise .teacher-actions{bottom:92px}
+}
