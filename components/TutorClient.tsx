@@ -48,6 +48,32 @@ function words(text:string){return new Set(String(text||'').toLowerCase().replac
 function questionFit(q:Q|undefined,unit:any){if(!q||!unit)return 0;const target=words([unit.title,unit.explain,(unit.terms||[]).map((x:any)=>x[0]).join(' '),(unit.outcomes||[]).join(' ')].join(' '));const source=words([q.skill,q.prompt,q.topic].join(' '));let score=0;for(const w of source)if(target.has(w))score++;return score}
 function questionInstruction(q:Q){if(q.type==='MULTIPLE_CHOICE')return 'Choose the option you believe is correct. Work it out first if needed, then tap one answer. AVORA will tell you clearly whether you got it and explain why.';return 'Work through the question, then type your answer or reasoning. AVORA will check it and explain what to improve.'}
 
+function teachingSlideChunks(text:string,maxChars=620){
+ const normalized=String(text||'').replace(/\s+/g,' ').trim();if(!normalized)return [''];
+ if(normalized.length<=maxChars)return [normalized];
+ const sentences=splitSentences(normalized);const out:string[]=[];let bucket='';
+ const push=(part:string)=>{const clean=part.trim();if(!clean)return;const next=bucket?bucket+' '+clean:clean;if(next.length>maxChars&&bucket){out.push(bucket);bucket=clean}else bucket=next};
+ for(const sentence of sentences){
+  if(sentence.length<=maxChars){push(sentence);continue}
+  const pieces=sentence.split(/(?<=[,;:])\s+/).map(x=>x.trim()).filter(Boolean);
+  if(pieces.length>1){for(const piece of pieces)push(piece);continue}
+  const words=sentence.split(/\s+/);let part='';for(const word of words){const next=part?part+' '+word:word;if(next.length>maxChars&&part){push(part);part=word}else part=next}if(part)push(part)
+ }
+ if(bucket)out.push(bucket);
+ return out.length?out:[normalized];
+}
+function slideBoardLines(text:string){
+ const sentences=splitSentences(text).filter(Boolean);if(sentences.length>1)return sentences.slice(0,4);
+ const parts=String(text||'').split(/\s*;\s*|\s+(?=(?:because|therefore|so|but|which|where|when)\b)/i).map(x=>x.trim()).filter(Boolean);
+ return parts.length>1?parts.slice(0,4):[String(text||'').trim()];
+}
+function expandTeachingEvent(event:BoardEvent):BoardEvent[]{
+ if(event.kind==='check'||event.boardAction==='DRAW'||!event.spoken||event.spoken.length<=700)return [event];
+ const chunks=teachingSlideChunks(event.spoken);
+ if(chunks.length<=1)return [event];
+ return chunks.map((spoken,i)=>({...event,stepId:i===0?event.stepId:`${event.stepId}-slide-${i+1}`,label:`${event.label} · ${i+1}/${chunks.length}`,spoken,lines:slideBoardLines(spoken),boardAction:i===0?event.boardAction:'WRITE',pauseAfterMs:Math.min(event.pauseAfterMs??900,900)}));
+}
+
 function buildEvents(unit:any,topic:string,subject:string,classLevel:string):BoardEvent[]{
  if(!unit)return [];
  const events:Array<Omit<BoardEvent,'stepId'>&{stepId?:string}>=[];
@@ -66,7 +92,7 @@ function buildEvents(unit:any,topic:string,subject:string,classLevel:string):Boa
    expectation:moment.requiresLearnerResponse?'Attempt the authored curriculum check. Show the reasoning or working the question asks for.':undefined,
    lines:moment.lines,boardAction:moment.boardAction,pauseAfterMs:moment.pauseAfterMs
   }));
-  return sourceEvents;
+  return sourceEvents.flatMap(expandTeachingEvent);
  }
  events.push({kind:'intro',label:'WHY THIS MATTERS',spoken:unit.why||`We are going to understand ${unit.title}, not just memorize a rule.`,lines:[unit.title,unit.why||`This is a required part of ${topic}.`]});
  events.push({kind:'idea',label:'WHAT YOU WILL UNDERSTAND',spoken:`By the end of this section, you should be able to explain the idea, apply it and justify your reasoning.`,lines:['By the end, you should be able to:',...depth.outcomes.map((x:string)=>`• ${x}`)]});
@@ -126,7 +152,7 @@ function buildEvents(unit:any,topic:string,subject:string,classLevel:string):Boa
  depth.misconceptions.forEach((m:string,i:number)=>events.push({kind:'mistake',label:`COMMON MISTAKE ${i+1} — WHY IT FAILS`,spoken:`A learner may make this mistake: ${m}. We do not just say “wrong”; we ask which definition, relationship, grammar rule, evidence or mathematical property it breaks.`,lines:['Common mistake',m,'Why it fails → which idea was broken?']}));
  events.push({kind:'idea',label:'BEFORE AVORA TESTS YOU',spoken:`Use this checklist before you answer: ${depth.masteryChecklist.join('. ')}.`,lines:['Understanding checklist',...depth.masteryChecklist.map((x:string)=>`✓ ${x}`)]});
  events.push({kind:'check',label:'SECTION UNDERSTANDING CHECK',spoken:`Now answer one clear question about exactly what we have just taught: ${unit.check}`,question:unit.check,expectation:subject==='English Language'?'Answer directly, identify the word/structure/evidence that controls the answer, and explain why it fits.':'Answer directly, state the rule or relationship first, show the working, and check the result.',lines:['Now you do something','Use only the concept just taught.','Explain the reason, not only the final answer.']});
- return events.map((e,i)=>({...e,stepId:e.stepId||`runtime-${String(i+1).padStart(3,'0')}`})) as BoardEvent[];
+ return events.map((e,i)=>({...e,stepId:e.stepId||`runtime-${String(i+1).padStart(3,'0')}`})).flatMap(expandTeachingEvent) as BoardEvent[];
 }
 
 export default function TutorClient(){
@@ -276,7 +302,7 @@ export default function TutorClient(){
  if(!topic)return <section className="tutor-picker-v2"><div className="tutor-subjects"><button className={subject==='Mathematics'?'active':''} onClick={()=>chooseSubject('Mathematics')}><span>∑</span><b>Mathematics</b><small>Choose any topic and start learning directly.</small></button><button className={subject==='English Language'?'active':''} onClick={()=>chooseSubject('English Language')}><span>Aa</span><b>English Language</b><small>Grammar, comprehension, vocabulary and usage.</small></button></div><div className="tutor-topic-grid">{topics.map(t=><button key={t.name} onClick={()=>selectTopic(t.name)}><span>{t.questions?`${t.questions} reviewed questions`:'Full lesson map'}</span><b>{t.name}</b><small>Teach me this topic →</small></button>)}</div></section>;
 
 
- return <section className="tutor-engine-v1">
+ return <section className={`tutor-engine-v1 ${phase==='teach'?'tutor-slide-mode':''}`}>
   <div className="tutor-breadcrumb"><Link href="/home">Home</Link><span>›</span><Link href={'/learn?subject='+encodeURIComponent(subject)}>{subject}</Link><span>›</span><b>{topic}</b></div>
   <header className="teacher-session-head"><div><span>{classLevel} · {exam} · {subject}</span><h2>{learnerTopicTitle(topic)}</h2><p>{plan?.goal||'AVORA will teach this topic, check your understanding and adapt to your questions.'}</p></div><button onClick={()=>{setTopic('');router.replace('/tutor?subject='+encodeURIComponent(subject))}}>Change topic</button></header>
   {officialTopic&&<section className="nerdc-objectives-v1491"><div className="nerdc-objectives-main"><span className="curriculum-trust-chip">NERDC NEW REVISED BEC · SEPTEMBER 2025</span><h3>By the end of this topic, you should be able to:</h3><ol>{officialTopic.objectives.map((objective,i)=><li key={i}><b>{i+1}</b><span>{objective}</span></li>)}</ol></div><details className="curriculum-details-v1491"><summary>View curriculum details</summary><div><p><b>Class:</b> {officialTopic.classLevel}</p><p><b>Subject:</b> {officialTopic.subject}</p><p><b>Theme:</b> {officialTopic.theme}</p><p><b>Official topic:</b> {officialTopic.topic}</p><p><b>NERDC content:</b> {officialTopic.content}</p><p><b>Evaluation guide:</b> {officialTopic.evaluation}</p><p><b>Source page{officialTopic.pages.length>1?'s':''}:</b> {officialTopic.pages.join(', ')}</p><small>AVORA splits this official topic into smaller teaching sections only to teach every objective explicitly. The official NERDC topic and objectives remain unchanged.</small></div></details></section>}
@@ -289,7 +315,8 @@ export default function TutorClient(){
   {phase==='probe'&&probeQ&&<article className="teacher-turn-card"><span className="teacher-kicker">BEFORE I TEACH</span><h2>Show me what you already know.</h2><p className="teacher-copy">This only sets the pace. One answer will never make AVORA skip the rest of the required topic.</p><Question q={probeQ} answer={answer} setAnswer={x=>{setAnswer(x);setFeedback(null);setError('')}}/>{checking&&<p className="answer-status" role="status">AVORA is checking your answer…</p>}{error&&<p className="answer-status error" role="alert">{error}</p>}{feedback&&<div className={feedback.correct?'persistent-feedback good':'persistent-feedback'}><b>{feedback.correct?'Correct — I can build from that.':'Not yet — this shows me where to begin.'}</b><p>{feedback.correct?(feedback.explanation||'That answer is correct.'):(feedback.feedback||feedback.hint||'I will teach the missing idea before asking you again.')}</p></div>}<div className="teacher-actions">{!feedback?<button type="button" className="primary" disabled={!answer||checking} onClick={()=>check('probe')}>{checking?'Checking…':'Check my answer'}</button>:<button type="button" className="primary" onClick={beginLesson}>Start teaching me →</button>}</div></article>}
 
   {phase==='teach'&&unit&&event&&<article className="live-teacher-stage">
-   <div className="teacher-stage-title"><div><button type="button" className="lesson-progress-button" onClick={()=>setShowLessonMap(value=>!value)} aria-expanded={showLessonMap}>SESSION {eventIndex+1} OF {events.length} · {showLessonMap?'Hide lesson map':'Open lesson map'}</button><h2>{learnerTopicTitle(unit.title)}</h2></div><div className="teacher-state"><i className={paused?'paused':speaking?'speaking':''}></i><span>{!VOICE_TEACHING_ENABLED?'Verified text lesson · move when you are ready':paused?'Paused — nothing is moving':speaking?'AVORA is teaching':'Ready for the next explanation'}</span></div></div>
+   <div className="teacher-stage-title"><div><button type="button" className="lesson-progress-button" onClick={()=>setShowLessonMap(value=>!value)} aria-expanded={showLessonMap}>LESSON SLIDE {eventIndex+1} OF {events.length} · {showLessonMap?'Hide lesson map':'Open lesson map'}</button><h2>{learnerTopicTitle(unit.title)}</h2></div><div className="teacher-state"><i className={paused?'paused':speaking?'speaking':''}></i><span>{!VOICE_TEACHING_ENABLED?'Focused lesson slide · move when you are ready':paused?'Paused — nothing is moving':speaking?'AVORA is teaching':'Ready for the next explanation'}</span></div></div>
+   <div className="slide-progress-v1410" aria-label="Lesson slide progress"><i style={{width:`${Math.max(4,Math.round(((eventIndex+1)/Math.max(1,events.length))*100))}%`}}/><span>{eventIndex+1} / {events.length}</span></div>
    {showLessonMap&&<nav className="session-map-v1" aria-label="Lesson map">{events.map((item,i)=><button type="button" key={item.stepId} className={i===eventIndex?'active':''} onClick={()=>{stopAll();setEventIndex(i);setPaused(true);pausedRef.current=true}}><i>{i<eventIndex?'✓':i+1}</i><span>{learnerSessionTitle(item.label)}</span></button>)}</nav>}
    <section className="avora-teacher-dialogue-v1491"><div className="avora-tutor-mark">A</div><div className="avora-teacher-copy"><span>AVORA IS TEACHING</span><p>{event.spoken}</p><div className="teacher-interrupt-actions"><button type="button" disabled={asking} onClick={()=>void askTeacher('Why is this step or idea valid? Explain the exact reason using what is currently on the board.')}>Why?</button><button type="button" disabled={asking} onClick={()=>void askTeacher('Explain this exact idea more simply, from the foundation, without skipping the reason behind it.')}>Explain more simply</button><button type="button" disabled={asking} onClick={()=>void askTeacher('Give me one different example of this exact idea, work it carefully, then give me one short question to try.')}>Another example</button></div></div></section>
    <div className={`animated-board-v1 ${paused?'is-paused':''} board-action-${(event.boardAction||'WRITE').toLowerCase()}`} data-step-id={event.stepId} aria-live="polite"><div className="board-step-meta"><span>{learnerSessionTitle(event.label)}</span></div><div className="board-writing" key={`${unitIndex}-${eventIndex}`}>{event.lines.slice(0,visibleBoardLineCount).map((line,i)=><div key={i} className={`board-line line-${i}`}>{line}</div>)}{extraBoard.map((line,i)=><div key={'x'+i} className="board-line board-extra">{line}</div>)}</div><VisualBoard spec={visualSpec}/><div className="board-timeline">{events.map((_,i)=><i key={i} className={i<eventIndex?'done':i===eventIndex?'active':''}></i>)}</div></div>
