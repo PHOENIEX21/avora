@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "npm run audit:v14.10-jss1-math-slides && next build",
     "start": "next start",
     "lint": "eslint .",
     "db:migrate": "node --env-file=.env.local scripts/migrate.mjs && npm run seed:class-assessments && npm run seed:ncee && npm run seed:authored-mocks && npm run seed:authored-mock-extended",
@@ -85,7 +85,8 @@
     "audit:teaching-pipeline": "node scripts/audit-teaching-pipeline-regression.mjs",
     "audit:v14.9-nerdc-official": "node scripts/audit-v14.9-nerdc-official.mjs",
     "audit:v14.9-authored-english-bank": "node --experimental-strip-types scripts/audit-v14.9-authored-jss2-english-bank.mjs",
-    "audit:v14.9.1-tutor-ui": "node scripts/audit-v14.9.1-tutor-ui.mjs"
+    "audit:v14.9.1-tutor-ui": "node scripts/audit-v14.9.1-tutor-ui.mjs",
+    "audit:v14.10-jss1-math-slides": "node scripts/audit-v14.10-jss1-math-slides.mjs"
   },
   "dependencies": {
     "bcryptjs": "^3.0.2",
