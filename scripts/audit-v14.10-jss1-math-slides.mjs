@@ -22,7 +22,7 @@ const checks=[];
 const check=(name,pass,detail='')=>checks.push({name,pass:Boolean(pass),detail});
 const rebuilt=bank.filter(q=>String(q.id||'').startsWith('avora-rebuild-v1-jss1-math-'));
 
-check('24 JSS1 Mathematics deep lesson objects', (lesson.match(/classLevel:\s*'JSS1'/g)||[]).length===24);
+check('24 JSS1 Mathematics deep lesson objects', (lesson.match(/topicId:\s*'nerdc-jss1-math-[^']+'/g)||[]).length===24);
 check('Deep Whole Numbers teaching replaced shallow copy', lesson.includes('place value system is built entirely on groups of three digits'));
 check('Deep Data Presentation lesson present', lesson.includes("topic: 'Data presentation'")&&/MEDIAN of a dataset is the single MIDDLE value/i.test(lesson));
 check('Assessment bank total remains 888', Array.isArray(bank)&&bank.length===888, String(bank?.length));
