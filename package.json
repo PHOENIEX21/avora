@@ -1,6 +1,6 @@
 {
   "name": "avora",
-  "version": "14.9.1",
+  "version": "14.10.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -15,7 +15,7 @@
     "audit:teaching": "node scripts/audit-teaching-depth.mjs",
     "audit:v9": "node scripts/audit-v9.mjs",
     "typecheck": "tsc --noEmit",
-    "launch:check": "npm run audit:v14.9.1-tutor-ui && npm run audit:v14.9-authored-english-bank && npm run audit:v14.9-nerdc-official && npm run audit:curriculum && npm run audit:v14.8.1-ncee-complete && npm run audit:v14.8-ncee-source && npm run audit:ncee-prep && npm run audit:ncee-v1010 && npm run audit:ncee-v1011 && npm run audit:ncee-v1012 && npm run audit:ncee-v1013 && npm run audit:v14.7.2-answer-admin && npm run test:answer-marking && npm run audit:v14.7.1-student-safe-family && npm run audit:v14.7-teacher-runtime && npm run audit:v14.6-flow-runtime && npm run audit:v14.5-gemini-email && npm run audit:v14.4-launch-commercial && npm run audit:v14.3-zero-fixed-cost && npm run audit:v14.2-validation-telemetry && npm run audit:v14.1-pwa-offline && npm run audit:v14-device-resilience && npm run audit:v13.9-voice-runtime && npm run audit:v13.8-tutor-runtime && npm run audit:v13.7-extended-mocks && npm run audit:v13.6-authored-mocks && npm run audit:v13.5-admin-operations && npm run audit:v13.4-responsive-release && npm run audit:v13.3-family-class-trial && npm run audit:v13.2-family-trial-bank && npm run audit:v13-master-curriculum && npm run audit:v12.8-source-truth && npm run audit:v12.7-security && npm run audit:v12.5-visual-teaching && npm run audit:deep-standard && npm run audit:assessment-parity && npm run audit:teaching-pipeline && npm run typecheck && npm run lint",
+    "launch:check": "npm run audit:v14.10-jss1-math-slides && npm run audit:v14.9.1-tutor-ui && npm run audit:v14.9-authored-english-bank && npm run audit:v14.9-nerdc-official && npm run audit:curriculum && npm run audit:v14.8.1-ncee-complete && npm run audit:v14.8-ncee-source && npm run audit:ncee-prep && npm run audit:ncee-v1010 && npm run audit:ncee-v1011 && npm run audit:ncee-v1012 && npm run audit:ncee-v1013 && npm run audit:v14.7.2-answer-admin && npm run test:answer-marking && npm run audit:v14.7.1-student-safe-family && npm run audit:v14.7-teacher-runtime && npm run audit:v14.6-flow-runtime && npm run audit:v14.5-gemini-email && npm run audit:v14.4-launch-commercial && npm run audit:v14.3-zero-fixed-cost && npm run audit:v14.2-validation-telemetry && npm run audit:v14.1-pwa-offline && npm run audit:v14-device-resilience && npm run audit:v13.9-voice-runtime && npm run audit:v13.8-tutor-runtime && npm run audit:v13.7-extended-mocks && npm run audit:v13.6-authored-mocks && npm run audit:v13.5-admin-operations && npm run audit:v13.4-responsive-release && npm run audit:v13.3-family-class-trial && npm run audit:v13.2-family-trial-bank && npm run audit:v13-master-curriculum && npm run audit:v12.8-source-truth && npm run audit:v12.7-security && npm run audit:v12.5-visual-teaching && npm run audit:deep-standard && npm run audit:assessment-parity && npm run audit:teaching-pipeline && npm run typecheck && npm run lint",
     "test:v9": "node scripts/test-v9-behaviour.mjs",
     "test:v903": "node scripts/test-v903-clarity.mjs",
     "test:v904": "node scripts/test-v904-depth.mjs",
