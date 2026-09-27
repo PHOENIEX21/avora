@@ -234,8 +234,8 @@ function deepEvidenceUnit(item:NerdcDeepEvidence,officialTopic:string):TutorUnit
  const steps:string[]=[
   `NERDC objective connection — this lesson unit supports the official topic “${officialTopic}”.`,
   ...item.prerequisites.map(x=>`Prerequisite — ${clean(x)}. If this is not secure, rebuild it before using it.`),
-  ...item.teaching.map(x=>clean(x)),
-  ...item.workedExamples.flatMap((x,i)=>[`Worked example ${i+1}: ${clean(x)}`,`Why this example matters — identify the rule, language evidence or relationship that makes the working valid before copying the result.`]),
+  ...item.teaching.map(x=>String(x||'').trim()),
+  ...item.workedExamples.flatMap((x,i)=>[`Worked example ${i+1}: ${String(x||'').trim()}`,`Why this example matters — identify the rule, language evidence or relationship that makes the working valid before copying the result.`]),
   ...item.misconceptions.map((x,i)=>`Common error ${i+1}: ${clean(x)}. Explain exactly which rule, definition, evidence or relationship this mistake breaks.`),
   `Mastery standard — ${clean(item.mastery.criterion)}`,
  ];

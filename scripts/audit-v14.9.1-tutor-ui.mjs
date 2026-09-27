@@ -3,7 +3,7 @@ const tutor=fs.readFileSync('components/TutorClient.tsx','utf8');
 const css=fs.readFileSync('app/globals.css','utf8');
 const pkg=JSON.parse(fs.readFileSync('package.json','utf8'));
 const checks=[
- ['release is V14.9.1',pkg.version==='14.9.1'],
+ ['release retains the V14.9 Tutor UI line',/^14\.9\.\d+$/.test(pkg.version)],
  ['official NERDC topic runtime imported',tutor.includes("officialNerdc2025Topic")],
  ['learning objectives are visible',tutor.includes('By the end of this topic, you should be able to:')],
  ['September 2025 NERDC trust label is visible',tutor.includes('NERDC NEW REVISED BEC · SEPTEMBER 2025')],

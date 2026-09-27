@@ -33,7 +33,7 @@ const specialRequired=[
  'nerdc2025-special-jss2-english-tense-system-current','nerdc2025-special-jss2-english-skit-making','nerdc2025-special-jss2-english-dialogue-writing'
 ];
 const checks=[
- ['release version is V14.9.x',['14.9.0','14.9.1'].includes(pkg.version)],
+ ['release version is V14.9.x',['14.9.0','14.9.1','14.9.2'].includes(pkg.version)],
  ['official source version is September 2025 NERDC',official.version==='NERDC_NEW_REVISED_BEC_SEPTEMBER_2025'&&official.authority==='NERDC'],
  ['official current-cohort inventory contains 75 topics',records.length===75],
  ['JSS1 Mathematics has 23 official topics',count('JSS1','Mathematics')===23],

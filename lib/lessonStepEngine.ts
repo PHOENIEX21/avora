@@ -1,6 +1,9 @@
 export type BoardAction='WRITE'|'DRAW'|'HIGHLIGHT'|'CLEAR_SECTION'|'ASK'|'PAUSE';
 export type StructuredTeachingStep={id:string;sequence:number;boardAction:BoardAction;boardText:string;narration:string;pauseAfterMs:number;requiresLearnerResponse:boolean;sourceText:string};
 
+const SLIDE_TARGET=420;
+const SLIDE_HARD_MAX=520;
+
 function isDrawInstruction(text:string){
  const t=cleanBoard(text).trim();
  // DRAW is reserved for an actual instruction to create a visual. Merely teaching ABOUT a
@@ -26,6 +29,67 @@ function stableStepBase(kind:'teach'|'check',text:string){
  const normalized=cleanBoard(text).toLowerCase().replace(/\s+/g,' ').trim();
  return `${kind}-${stableHash(normalized)}`;
 }
+
+function splitLongPiece(text:string):string[]{
+ const compact=text.replace(/\s+/g,' ').trim();
+ if(compact.length<=SLIDE_HARD_MAX)return compact?[compact]:[];
+ const out:string[]=[];
+ let rest=compact;
+ while(rest.length>SLIDE_HARD_MAX){
+  const window=rest.slice(0,SLIDE_HARD_MAX+1);
+  let cut=Math.max(window.lastIndexOf('. '),window.lastIndexOf('? '),window.lastIndexOf('! '));
+  if(cut<SLIDE_TARGET*.55)cut=Math.max(window.lastIndexOf('; '),window.lastIndexOf(': '));
+  if(cut<SLIDE_TARGET*.55)cut=Math.max(window.lastIndexOf(', '),window.lastIndexOf(' — '),window.lastIndexOf(' - '));
+  if(cut<SLIDE_TARGET*.55)cut=window.lastIndexOf(' ');
+  if(cut<1)cut=SLIDE_HARD_MAX;
+  else if(/[.!?]/.test(window[cut]))cut+=1;
+  const head=rest.slice(0,cut).trim();
+  if(head)out.push(head);
+  rest=rest.slice(cut).trim();
+ }
+ if(rest)out.push(rest);
+ return out;
+}
+
+function splitCodeBlock(block:string):string[]{
+ const trimmed=block.trim();
+ if(trimmed.length<=SLIDE_HARD_MAX)return [trimmed];
+ const inner=trimmed.replace(/^```[^\n]*\n?/,'').replace(/\n?```$/,'');
+ const lines=inner.split('\n');const out:string[]=[];let bucket:string[]=[];let size=0;
+ const flush=()=>{if(!bucket.length)return;out.push('```\n'+bucket.join('\n')+'\n```');bucket=[];size=0};
+ for(const line of lines){const next=size+line.length+1;if(next>SLIDE_TARGET&&bucket.length)flush();bucket.push(line);size+=line.length+1;if(size>=SLIDE_HARD_MAX)flush()}
+ flush();return out.length?out:[trimmed];
+}
+
+// Turn long authored explanations into meaningful, readable teaching slides without deleting or
+// summarising academic content. Sentence groups remain in source order; large fenced diagrams are
+// paged on line boundaries so the learner can read them without losing the persistent navigation.
+export function splitTeachingSlides(raw:string):string[]{
+ const text=String(raw||'').replace(/\r/g,'').trim();
+ if(!text)return [];
+ const blocks=text.split(/(```[\s\S]*?```)/g).filter(Boolean);
+ const out:string[]=[];
+ for(const block of blocks){
+  if(/^```[\s\S]*```$/.test(block.trim())){out.push(...splitCodeBlock(block));continue}
+  const paragraphs=block.split(/\n{2,}/).map(x=>x.trim()).filter(Boolean);
+  for(const paragraph of paragraphs){
+   const sentences=paragraph.replace(/\s+/g,' ').split(/(?<=[.!?])\s+(?=[A-Z0-9“"'(])/).map(x=>x.trim()).filter(Boolean);
+   let bucket='';
+   for(const sentence of sentences.length?sentences:[paragraph]){
+    if(sentence.length>SLIDE_HARD_MAX){
+     if(bucket){out.push(bucket);bucket=''}
+     out.push(...splitLongPiece(sentence));
+     continue;
+    }
+    const next=bucket?`${bucket} ${sentence}`:sentence;
+    if(next.length>SLIDE_TARGET&&bucket){out.push(bucket);bucket=sentence}else bucket=next;
+   }
+   if(bucket)out.push(bucket);
+  }
+ }
+ return out.length?out:[text];
+}
+
 export function structureTeachingSteps(sourceSteps:string[],checks:string[]=[]):StructuredTeachingStep[]{
  const out:StructuredTeachingStep[]=[];let sequence=0;const seen=new Map<string,number>();
  const idFor=(kind:'teach'|'check',text:string)=>{const base=stableStepBase(kind,text);const n=(seen.get(base)||0)+1;seen.set(base,n);return n===1?base:`${base}-${n}`};
@@ -46,8 +110,10 @@ export function structureTeachingSteps(sourceSteps:string[],checks:string[]=[]):
     out.push({id:idFor('teach',`${text}-screen-${boardText}`),sequence,boardAction,boardText,narration:'',pauseAfterMs:900,requiresLearnerResponse:false,sourceText:''});
     continue;
    }
-   const boardAction=actionFor(fragment);sequence++;
-   out.push({id:idFor('teach',fragment),sequence,boardAction,boardText:cleanBoard(fragment),narration:fragment,pauseAfterMs:boardAction==='DRAW'?1800:boardAction==='HIGHLIGHT'?1100:750,requiresLearnerResponse:false,sourceText:fragment});
+   for(const slide of splitTeachingSlides(fragment)){
+    const boardAction=actionFor(slide);sequence++;
+    out.push({id:idFor('teach',slide),sequence,boardAction,boardText:cleanBoard(slide),narration:slide,pauseAfterMs:boardAction==='DRAW'?1800:boardAction==='HIGHLIGHT'?1100:750,requiresLearnerResponse:false,sourceText:slide});
+   }
   }
  }
  for(const raw of checks){
