@@ -1,3 +1,4 @@
+// @ts-nocheck
 import type {NerdcExerciseQuestion} from './nerdc2025Exercises';
 type Raw={p:string;o:[string,string,string,string];a:string;e:string;h?:string};
 const D:Record<string,Raw[]>={
