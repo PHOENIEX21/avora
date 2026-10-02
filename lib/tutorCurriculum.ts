@@ -1,5 +1,5 @@
 import type {StructuredTeachingStep} from './lessonStepEngine';
-import {jss3WholeNumbersPlan,jss3WholeNumbersTopic,jss3RationalNonRationalPlan,jss3RationalNonRationalTopic,jss3BaseTwoOperationsPlan,jss3BaseTwoOperationsTopic,jss3FactorizationPlan,jss3FactorizationTopic,jss3FractionEquationsPlan,jss3FractionEquationsTopic,jss3SimultaneousLinearPlan,jss3SimultaneousLinearTopic,jss3SimilarShapesPlan,jss3SimilarShapesTopic,jss3TrigonometryPlan,jss3TrigonometryTopic,jss3AreaPlaneFiguresPlan,jss3AreaPlaneFiguresTopic,jss3ConstructionPlan,jss3ConstructionTopic,jss3CentralTendencyPlan,jss3CentralTendencyTopic,jss3DataPresentationPlan,jss3DataPresentationTopic} from './jss3ProvisionalMathematics';
+import {jss3WholeNumbersPlan,jss3WholeNumbersTopic,jss3RationalNonRationalPlan,jss3RationalNonRationalTopic,jss3BaseTwoOperationsPlan,jss3BaseTwoOperationsTopic,jss3FactorizationPlan,jss3FactorizationTopic,jss3FractionEquationsPlan,jss3FractionEquationsTopic,jss3SimultaneousLinearPlan,jss3SimultaneousLinearTopic,jss3SimilarShapesPlan,jss3SimilarShapesTopic,jss3TrigonometryPlan,jss3TrigonometryTopic,jss3AreaPlaneFiguresPlan,jss3AreaPlaneFiguresTopic,jss3ConstructionPlan,jss3ConstructionTopic,jss3CentralTendencyPlan,jss3CentralTendencyTopic,jss3DataPresentationPlan,jss3DataPresentationTopic,jss3VariationPlan,jss3VariationTopic,jss3ChangeSubjectPlan,jss3ChangeSubjectTopic,jss3ElevationDepressionPlan,jss3ElevationDepressionTopic} from './jss3ProvisionalMathematics';
 export type TutorUnit={title:string;terms:Array<[string,string]>;explain:string;example:string;check:string;why?:string;prerequisites?:string[];outcomes?:string[];commonMistakes?:string[];teachingTypes?:string[];noJumpChecks?:string[];sourceOrigin?:string;sourceSteps?:string[];sourceChecks?:string[];sourceSolutions?:string[];structuredSteps?:StructuredTeachingStep[]};
 export type TutorPlan={goal:string;why:string;units:TutorUnit[];examFocus?:string[];outcomes?:string[]};
 
@@ -329,6 +329,9 @@ export function getTutorPlan(exam:string,subject:string,topic:string):TutorPlan|
   if(exam!=='NCEE'&&subject==='Mathematics'&&topic===jss3ConstructionTopic)return jss3ConstructionPlan;
   if(exam!=='NCEE'&&subject==='Mathematics'&&topic===jss3CentralTendencyTopic)return jss3CentralTendencyPlan;
   if(exam!=='NCEE'&&subject==='Mathematics'&&topic===jss3DataPresentationTopic)return jss3DataPresentationPlan;
+  if(exam!=='NCEE'&&subject==='Mathematics'&&topic===jss3VariationTopic)return jss3VariationPlan;
+  if(exam!=='NCEE'&&subject==='Mathematics'&&topic===jss3ChangeSubjectTopic)return jss3ChangeSubjectPlan;
+  if(exam!=='NCEE'&&subject==='Mathematics'&&topic===jss3ElevationDepressionTopic)return jss3ElevationDepressionPlan;
   const plans=exam==='NCEE'?(subject==='English Language'?nceeEnglishPlans:nceeMathPlans):(subject==='English Language'?beceEnglishPlans:beceTutorPlans);
   // Prefer an exact curriculum topic before applying a cross-bank alias. This keeps
   // NCEE Concord/Comprehension and BECE specialist topics from being accidentally
