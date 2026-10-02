@@ -101,6 +101,105 @@ export const jss3WholeNumbersPlan:TutorPlan={
       example:'18−2(5+1)=18−12=6. For (375+225)÷12, the sum is 600 and 600÷12=50; a calculator display of 500 would signal an input error.',
       check:'Evaluate 24÷3+2×5, then explain the order you used.',
       commonMistakes:['doing every operation strictly from left to right','treating multiplication as always before division regardless of left-to-right order','trusting a calculator result without checking the entered expression']
+    },
+    {
+      title:'Expressions involving brackets and fractions',
+      terms:[['bracket','grouping symbol showing what must be treated together'],['fraction bar','division symbol that groups the whole numerator and denominator']],
+      outcomes:['simplify expressions containing brackets and fractions','preserve grouping correctly'],
+      explain:'NERDC explicitly requires JSS3 learners to simplify expressions involving brackets and fractions. Treat a fraction bar like a strong bracket: simplify the complete numerator and denominator as needed before division. Apply BODMAS and remove brackets carefully.',
+      example:'(18−6)/3 + 2(5−1) = 12/3 + 8 = 4+8=12. Also 3/4 of (20−8)=3/4×12=9.',
+      check:'Simplify (24−8)/4 + 3(7−5).',
+      commonMistakes:['dividing only one term in a grouped numerator','ignoring brackets','adding numerator and denominator separately']
+    },
+    {
+      title:'Direct proportion: more with more in a constant ratio',
+      terms:[['direct proportion','two quantities related so y/x stays constant; y=kx'],['constant of proportionality','fixed multiplier k']],
+      outcomes:['identify direct proportion','solve direct-proportion problems','apply it to practical contexts'],
+      explain:'In direct proportion, multiplying one quantity by a factor multiplies the other by the same factor. Write y∝x, so y=kx. Find k from one known pair, then use it for another pair. Unit method is also valid: find the value for1 unit, then scale.',
+      example:'If5 notebooks cost ₦2,000 at a fixed unit price, one costs ₦400 and8 cost ₦3,200. Cost/quantity remains ₦400 per notebook.',
+      check:'If6 identical items cost ₦4,500, what do10 cost at the same rate?',
+      commonMistakes:['adding the same amount instead of scaling','using inverse proportion','changing units unnoticed']
+    },
+    {
+      title:'Direct proportion in speed, productivity and consumption',
+      terms:[['rate','amount per unit'],['productivity','output produced per stated unit of time/resources']],
+      outcomes:['model practical direct-proportion situations','recognise when a fixed-rate assumption is required'],
+      explain:'NERDC names practical applications including speed, productivity and consumption. Direct proportion applies only when the relevant rate is fixed. At constant speed, distance∝time. At fixed fuel consumption per kilometre, fuel used∝distance. At fixed output per worker-hour, output∝worker-hours.',
+      example:'At60 km/h constant speed, distance in3.5 h=60×3.5=210 km.',
+      check:'A machine produces48 identical units in3 hours at constant rate. How many in7 hours?',
+      commonMistakes:['assume every real situation has a constant rate','mix hours/minutes','confuse distance-time direct relation with time-speed for fixed distance']
+    },
+    {
+      title:'Inverse proportion: one increases while the other decreases',
+      terms:[['inverse proportion','two quantities related so xy is constant; y=k/x'],['reciprocal','1/x']],
+      outcomes:['identify inverse proportion','solve inverse-proportion problems','distinguish it from direct proportion'],
+      explain:'In inverse proportion, multiplying one quantity by a factor divides the other by that factor. Write y∝1/x, so xy=k. This is not merely “one goes up, one goes down”; the product must remain constant under the model.',
+      example:'For a fixed job,6 workers taking10 days gives60 worker-days. If12 equally productive workers do the same work, days=60/12=5.',
+      check:'Eight identical pumps empty a tank in6 hours. Under the same conditions, how long would12 pumps take?',
+      commonMistakes:['use direct scaling','add differences instead of preserving product','ignore equal-efficiency assumption']
+    },
+    {
+      title:'Inverse proportion in speed and practical work',
+      terms:[['fixed distance','distance held constant while speed and time vary'],['fixed work','same total task shared among workers/machines']],
+      outcomes:['apply inverse proportion to speed/time and productivity situations'],
+      explain:'For a fixed distance, time=distance/speed, so time is inversely proportional to speed. For fixed work with equally productive workers, workers×time is constant. Always identify what is being held fixed before deciding the relationship.',
+      example:'A journey takes5 h at72 km/h, distance360 km. At90 km/h, time=360/90=4 h.',
+      check:'A fixed job takes15 days for8 workers. How many days for12 equally productive workers?',
+      commonMistakes:['speed and time treated as direct for fixed distance','forget fixed-work condition','wrong unit conversion']
+    },
+    {
+      title:'Direct or inverse? Diagnose before calculating',
+      terms:[['proportional model','relationship satisfying a constant ratio or constant product']],
+      outcomes:['classify direct versus inverse relationships','justify the classification mathematically'],
+      explain:'Ask what remains constant. Direct: y/x=k. Inverse: xy=k. Test with a sensible change: if x doubles, does y double or halve under the stated conditions?',
+      example:'More identical books at fixed price→direct. More workers for the same fixed job→inverse. Greater speed for the same distance→inverse time.',
+      check:'Classify and justify: litres of fuel used versus distance travelled at constant fuel rate.',
+      commonMistakes:['keyword guessing','assuming “more/less” is enough','not identifying fixed conditions']
+    },
+    {
+      title:'Simple interest foundation before compound interest',
+      terms:[['principal P','initial amount invested/borrowed'],['rate r','interest percentage per period'],['time n','number of periods'],['simple interest','interest calculated only on original principal']],
+      outcomes:['revise simple interest','distinguish simple from compound growth'],
+      explain:'NERDC explicitly asks for simple-interest revision before compound interest. Simple interest uses the original principal every period: I=Prn/100 and amount A=P+I. Compound interest instead updates the amount after each period, so later interest is earned/charged on earlier interest too.',
+      example:'₦20,000 at10% simple interest for2 years: I=20000×10×2/100=₦4,000; A=₦24,000.',
+      check:'Find simple interest on ₦15,000 at8% per year for3 years.',
+      commonMistakes:['compound when simple requested','rate10 entered as10 rather than0.10 in decimal formula','confuse interest with final amount']
+    },
+    {
+      title:'Compound interest: growth period by period',
+      terms:[['compound interest','interest calculated on the current accumulated amount'],['amount','principal plus accumulated interest'],['growth factor','1+r/100 per compounding period']],
+      outcomes:['calculate compound amount and interest','explain why it differs from simple interest'],
+      explain:'At rate r% per period, multiply the current amount by (1+r/100) each period. After n equal annual periods, A=P(1+r/100)^n and compound interest CI=A−P. The formula is repeated percentage growth written compactly.',
+      example:'₦20,000 at10% annually for2 years: year1=₦22,000; year2=₦24,200. CI=₦4,200. Simple interest would have been₦4,000 because year2 compound interest also earns on the first ₦2,000 interest.',
+      check:'Find amount and compound interest on ₦50,000 at5% annually for2 years.',
+      commonMistakes:['report amount as interest','use nr instead of exponent n','calculate each year from original principal']
+    },
+    {
+      title:'Compound interest with three or more periods',
+      terms:[['compounding period','interval at which interest is added to the balance']],
+      outcomes:['calculate repeated compound growth accurately','use table/step method or formula'],
+      explain:'For first encounter, a year-by-year table makes the mechanism visible. Once understood, the exponential formula is efficient. Keep enough decimal accuracy until the final currency rounding.',
+      example:'₦40,000 at5% annually for3 years: 40,000→42,000→44,100→46,305. CI=₦6,305.',
+      check:'₦30,000 at10% annually for3 years: find final amount.',
+      commonMistakes:['add10% of original each year','round balances too early','wrong exponent']
+    },
+    {
+      title:'Daily-life compound interest: deposits, loans, mortgages and pensions',
+      terms:[['fixed deposit','money kept for an agreed period under stated interest terms'],['loan','money borrowed and repaid under agreed terms'],['mortgage','long-term loan commonly secured on property'],['pension fund','long-term retirement savings arrangement']],
+      outcomes:['identify real-life compound-interest situations','interpret growth/cost without pretending real financial products have only one fee/rate'],
+      explain:'NERDC explicitly names mortgages, loans and pensions and points to fixed deposits. The school model teaches repeated percentage growth. Real products can also include fees, changing rates, repayment schedules or taxes, so use the exact terms supplied by a question rather than assuming the simple annual model describes every real contract.',
+      example:'A textbook-style deposit of ₦100,000 at6% compounded annually for2 years becomes100000(1.06)^2=₦112,360; CI=₦12,360.',
+      check:'List four real-life situations where compound interest can apply and state whether the learner is earning or paying interest.',
+      commonMistakes:['compound interest always benefits the customer','ignore loan terms','confuse a school model with a full real-world contract']
+    },
+    {
+      title:'Whole Numbers final NERDC mastery check',
+      terms:[['scope check','confirming every official performance objective has been taught and assessed']],
+      outcomes:['connect binary/word expressions with brackets-fractions, proportions and compound interest'],
+      explain:'The JSS3 Whole Numbers curriculum spans more than binary work. Mastery means you can handle the earlier binary/base and word-expression objectives AND simplify bracket/fraction expressions, distinguish/apply direct and inverse proportion, revise simple interest, calculate compound interest and recognise daily-life applications.',
+      example:'A mixed revision may ask binary conversion, then a direct-rate problem, then compound growth. Treat each model on its own terms and show the governing relationship.',
+      check:'Explain the difference between direct proportion, inverse proportion and compound percentage growth.',
+      commonMistakes:['treating Whole Numbers as binary only','using one proportional rule for every context','memorising compound formula without understanding repeated growth']
     }
   ]
 };
@@ -132,7 +231,26 @@ export const jss3WholeNumbersQuestions:Jss3ProvisionalQuestion[]=[
  {id:'jss3-whole-20',prompt:'A calculator gives 500 for (375+225)÷12. What should you conclude first?',options:['500 must be correct because a calculator produced it','The calculator is broken','Check the expression entered because 600÷12 should be about 50','Change the brackets to multiplication'],correctAnswer:'Check the expression entered because 600÷12 should be about 50',explanation:'375+225=600 and 600÷12=50, so estimation exposes a likely input error.',difficulty:3,skill:'technology-checking'},
  {id:'jss3-whole-21',prompt:'Which numeral is valid in base five?',options:['148₅','253₅','404₅','517₅'],correctAnswer:'404₅',explanation:'Base five permits only digits 0,1,2,3,4.',difficulty:2,skill:'number-bases'},
  {id:'jss3-whole-22',prompt:'What is the best first step when solving a verbal quantitative problem?',options:['Use every number immediately','Translate the relationships and identify what is required','Choose multiplication because it is usually harder','Enter the numbers into a calculator'],correctAnswer:'Translate the relationships and identify what is required',explanation:'Correct modelling comes before calculation.',difficulty:3,skill:'problem-solving'}
-];
+,
+
+ {id:'jss3-whole-23',prompt:'Simplify (24−8)/4 + 3(7−5).',options:['10','8','12','6'],correctAnswer:'10',explanation:'16/4+3×2=4+6=10.',difficulty:2,skill:'brackets-fractions'},
+ {id:'jss3-whole-24',prompt:'If6 identical items cost ₦4,500, what do10 cost at the same rate?',options:['₦7,500','₦6,000','₦9,000','₦4,510'],correctAnswer:'₦7,500',explanation:'Unit cost=4500/6=750;10×750=7500.',difficulty:2,skill:'direct-proportion'},
+ {id:'jss3-whole-25',prompt:'A machine makes48 units in3 hours at constant rate. In7 hours it makes:',options:['112','96','336','52'],correctAnswer:'112',explanation:'16 units/hour×7=112.',difficulty:2,skill:'direct-proportion'},
+ {id:'jss3-whole-26',prompt:'Eight identical pumps empty a tank in6 h. Twelve pumps take:',options:['4 h','9 h','6 h','3 h'],correctAnswer:'4 h',explanation:'Pump-hours constant:8×6=48;48/12=4.',difficulty:2,skill:'inverse-proportion'},
+ {id:'jss3-whole-27',prompt:'A360 km journey at72 km/h takes5 h. At90 km/h, same distance takes:',options:['4 h','6.25 h','5 h','3 h'],correctAnswer:'4 h',explanation:'360/90=4.',difficulty:2,skill:'inverse-proportion'},
+ {id:'jss3-whole-28',prompt:'Which relation is direct proportion?',options:['cost and number of identical items at fixed unit price','workers and days for same fixed job','speed and time for fixed distance','none'],correctAnswer:'cost and number of identical items at fixed unit price',explanation:'Cost/quantity remains constant.',difficulty:1,skill:'proportion-classification'},
+ {id:'jss3-whole-29',prompt:'Which relation is inverse proportion?',options:['workers and time for the same fixed job','cost and quantity at fixed unit price','distance and time at fixed speed','wages and hours at fixed hourly rate'],correctAnswer:'workers and time for the same fixed job',explanation:'Workers×time is constant under equal productivity.',difficulty:1,skill:'proportion-classification'},
+ {id:'jss3-whole-30',prompt:'Simple interest on ₦20,000 at10% for2 years is:',options:['₦4,000','₦4,200','₦24,000','₦2,000'],correctAnswer:'₦4,000',explanation:'I=Prn/100=20000×10×2/100.',difficulty:1,skill:'simple-interest'},
+ {id:'jss3-whole-31',prompt:'₦20,000 at10% compounded annually for2 years becomes:',options:['₦24,200','₦24,000','₦22,000','₦4,200'],correctAnswer:'₦24,200',explanation:'20000×1.1²=24200.',difficulty:2,skill:'compound-interest'},
+ {id:'jss3-whole-32',prompt:'Compound interest in the previous question is:',options:['₦4,200','₦24,200','₦4,000','₦2,200'],correctAnswer:'₦4,200',explanation:'CI=amount−principal=24200−20000.',difficulty:2,skill:'compound-interest'},
+ {id:'jss3-whole-33',prompt:'₦40,000 at5% compounded annually for3 years becomes:',options:['₦46,305','₦46,000','₦42,000','₦6,305'],correctAnswer:'₦46,305',explanation:'40000×1.05³=46305.',difficulty:2,skill:'compound-interest'},
+ {id:'jss3-whole-34',prompt:'Which statement distinguishes compound from simple interest?',options:['compound interest can earn/charge interest on accumulated interest','simple interest always has a higher rate','compound interest uses no percentage','simple interest changes principal every period'],correctAnswer:'compound interest can earn/charge interest on accumulated interest',explanation:'Compounding updates the balance each period.',difficulty:2,skill:'interest-concept'},
+ {id:'jss3-whole-35',prompt:'Which is a real-life context named by NERDC for compound-interest application?',options:['mortgages/loans/pensions','angle bisection','binary subtraction only','pie-chart sectors'],correctAnswer:'mortgages/loans/pensions',explanation:'NERDC explicitly names these daily-life contexts.',difficulty:1,skill:'interest-application'},
+ {id:'jss3-whole-36',prompt:'In direct proportion y=kx, which quantity is constant?',options:['y/x','xy','x+y','y−x always'],correctAnswer:'y/x',explanation:'The ratio is the constant of proportionality.',difficulty:2,skill:'direct-proportion'},
+ {id:'jss3-whole-37',prompt:'In inverse proportion y=k/x, which quantity is constant?',options:['xy','y/x','x+y','x−y'],correctAnswer:'xy',explanation:'Multiplying gives xy=k.',difficulty:2,skill:'inverse-proportion'},
+ {id:'jss3-whole-38',prompt:'At constant speed, distance and time are:',options:['directly proportional','inversely proportional','unrelated','always equal'],correctAnswer:'directly proportional',explanation:'distance=speed×time with speed fixed.',difficulty:1,skill:'practical-proportion'},
+ {id:'jss3-whole-39',prompt:'For a fixed distance, speed and travel time are:',options:['inversely proportional','directly proportional','always equal','not measurable'],correctAnswer:'inversely proportional',explanation:'time=distance/speed.',difficulty:1,skill:'practical-proportion'},
+ {id:'jss3-whole-40',prompt:'The complete NERDC Whole Numbers scope includes binary/base work plus:',options:['brackets/fractions, direct/inverse proportion and compound interest','only pie charts','only constructions','only algebraic factorisation'],correctAnswer:'brackets/fractions, direct/inverse proportion and compound interest',explanation:'These are explicit continuation objectives in the official JSS3 table.',difficulty:1,skill:'scope'}];
 
 
 export const jss3RationalNonRationalTopic='Rational and Irrational (Non-Rational) Numbers';
