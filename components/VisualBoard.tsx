@@ -81,6 +81,17 @@ function TrigonometryDiagram({context}:{context:string}){
  </svg>
 }
 
+
+function AreaPlaneFiguresDiagram({context}:{context:string}){
+ const t=context.toLowerCase(); const L=(x:number,y:number,s:string)=><text x={x} y={y} className="v-label">{s}</text>;
+ if(/sector/.test(t))return <svg viewBox="0 0 420 270" role="img" aria-label="Circle sector with radius and central angle labelled"><title>Sector area</title><circle cx="205" cy="140" r="92" className="v-guide"/><path d="M205 140L297 140A92 92 0 0 0 246 58Z" className="v-shape"/><line x1="205" y1="140" x2="297" y2="140" className="v-accent"/><line x1="205" y1="140" x2="246" y2="58" className="v-accent"/><path d="M239 140A34 34 0 0 0 220 110" className="v-thin"/>{L(238,116,'θ')}{L(250,158,'r')}{L(117,245,'sector area = (θ/360)πr²')}</svg>;
+ if(/circle|radius|diameter/.test(t))return <svg viewBox="0 0 420 270" role="img" aria-label="Circle with centre radius and diameter labelled"><title>Circle area</title><circle cx="210" cy="135" r="92" className="v-shape"/><circle cx="210" cy="135" r="3" className="v-fill"/><line x1="118" y1="135" x2="302" y2="135" className="v-accent"/><line x1="210" y1="135" x2="272" y2="68" className="v-guide"/>{L(206,155,'O')}{L(240,96,'r')}{L(177,126,'diameter = 2r')}{L(132,252,'A = πr²')}</svg>;
+ if(/trapez/.test(t))return <svg viewBox="0 0 420 270" role="img" aria-label="Trapezium with parallel sides and perpendicular height labelled"><title>Trapezium area</title><path d="M65 210L355 210L292 75L135 75Z" className="v-shape"/><line x1="135" y1="75" x2="135" y2="210" className="v-guide"/><path d="M135 194h16v16" className="v-thin"/>{L(192,62,'a')}{L(200,232,'b')}{L(112,148,'h')}{L(122,255,'A = ½(a + b)h')}</svg>;
+ if(/parallelogram/.test(t))return <svg viewBox="0 0 420 270" role="img" aria-label="Parallelogram with base and perpendicular height labelled"><title>Parallelogram area</title><path d="M90 210L330 210L275 75L35 75Z" className="v-shape"/><line x1="275" y1="75" x2="275" y2="210" className="v-guide"/><path d="M259 210v-16h16" className="v-thin"/>{L(187,232,'base b')}{L(285,148,'height h')}{L(160,255,'A = bh')}</svg>;
+ if(/composite|cut-out|flower bed|semicircle/.test(t))return <svg viewBox="0 0 420 270" role="img" aria-label="Composite figure divided into familiar regions"><title>Composite area</title><rect x="65" y="70" width="285" height="145" className="v-shape"/><path d="M207 70A72 72 0 0 1 207 214" className="v-guide"/><line x1="207" y1="70" x2="207" y2="215" className="v-thin"/>{L(92,52,'Region 1')}{L(255,52,'Region 2')}{L(95,248,'Total area = add regions, or outer − cut-out')}</svg>;
+ return <svg viewBox="0 0 420 270" role="img" aria-label="Triangle with base and perpendicular height labelled"><title>Triangle area</title><path d="M55 215L360 215L245 55Z" className="v-shape"/><line x1="245" y1="55" x2="245" y2="215" className="v-guide"/><path d="M229 215v-16h16" className="v-thin"/>{L(180,238,'base b')}{L(255,142,'perpendicular height h')}{L(145,260,'A = ½bh')}</svg>
+}
+
 function NumberLine(){return <svg viewBox="0 0 360 150" role="img" aria-label="Number line"><line x1="35" y1="75" x2="330" y2="75" className="v-stroke"/><path d="M330 75l-10-5v10zM35 75l10-5v10z" className="v-fill"/>{[-3,-2,-1,0,1,2,3].map((n,i)=>{const x=60+i*42;return <g key={n}><line x1={x} y1="68" x2={x} y2="82" className="v-thin"/><text x={x-6} y="105">{n}</text></g>})}</svg>}
 function Fraction(){return <svg viewBox="0 0 360 190" role="img" aria-label="Fraction area model"><rect x="55" y="45" width="250" height="90" rx="4" className="v-shape"/>{[1,2,3].map(i=><line key={i} x1={55+i*62.5} y1="45" x2={55+i*62.5} y2="135" className="v-thin"/>)}<rect x="55" y="45" width="125" height="90" className="v-soft"/><text x="115" y="165">equal parts of one whole</text></svg>}
 function Place({binary=false}:{binary?:boolean}){const labels=binary?['8','4','2','1']:['1000','100','10','1'];return <div className="visual-place-grid">{labels.map((x,i)=><div key={x}><small>{binary?'2'+['³','²','¹','⁰'][i]:x}</small><strong>{x}</strong></div>)}</div>}
@@ -112,5 +123,6 @@ export default function VisualBoard({spec}:{spec:VisualSpec}){
  else if(spec.kind==='bar-model') body=<BarModel/>;
  else if(spec.kind==='similar-shapes') body=<SimilarShapes context={spec.context||`${spec.title} ${spec.caption}`}/>;
  else if(spec.kind==='trigonometry') body=<TrigonometryDiagram context={spec.context||`${spec.title} ${spec.caption}`}/>;
+ else if(spec.kind==='area-plane-figures') body=<AreaPlaneFiguresDiagram context={spec.context||`${spec.title} ${spec.caption}`}/>;
  return <section className="avora-visual-board"><header><b>{spec.title}</b><span>LIVE VISUAL</span></header><div className="avora-visual-stage">{body}</div><p>{spec.caption}</p></section>
 }
