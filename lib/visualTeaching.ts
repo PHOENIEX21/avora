@@ -1,7 +1,7 @@
 export type VisualKind =
   | 'aligned-equations' | 'coordinate-plane' | 'number-line' | 'fraction-model'
   | 'place-value' | 'binary-place-value' | 'triangle' | 'polygon' | 'plane-shapes' | 'solid'
-  | 'construction' | 'bearing' | 'angle' | 'data-chart' | 'bar-model' | 'similar-shapes' | 'trigonometry' | 'none';
+  | 'construction' | 'bearing' | 'angle' | 'data-chart' | 'bar-model' | 'similar-shapes' | 'trigonometry' | 'area-plane-figures' | 'none';
 
 export type VisualSpec = {
   kind: VisualKind;
@@ -11,6 +11,7 @@ export type VisualSpec = {
 };
 
 const rules: Array<{test: RegExp; kind: VisualKind; title: string; caption: string}> = [
+  {test:/area of plane figures|triangle area|parallelogram area|trapezium area|circle area|sector area|composite figure|land measure|perpendicular height/i,kind:'area-plane-figures',title:'Area diagram',caption:'The relevant base, perpendicular height, parallel sides, radius or sector angle are labelled before the area relationship is applied.'},
   {test:/trigonometry|sine|cosine|tangent|soh.?cah.?toa|hypotenuse|opposite and adjacent|right.angled triangle|ladder|guy wire|cable|ramp/i,kind:'trigonometry',title:'Right-triangle trigonometry diagram',caption:'The right angle, reference angle θ, opposite, adjacent and hypotenuse are labelled on the actual geometry before a ratio is chosen.'},
   {test:/similar shapes?|similar figures?|similar versus congruent|corresponding vertices|corresponding sides|scale factor|enlargement|reduction|area factor|volume factor|similar triangles?|similar rectangles?|similar squares?|similar cubes?|similar cuboids?|distortion/i,kind:'similar-shapes',title:'Similar-shapes diagram',caption:'Corresponding vertices, dimensions and scale relationships are labelled directly on the figures so the proportion can be seen as well as calculated.'},
   {test:/plane shapes?|quadrilateral family|square vs rectangle|rhombus|trapezium|kite|circle foundation|circumference|radius|diameter|chord|sector|segment|tangent|rotation does not change|diagonals and bisection/i,kind:'plane-shapes',title:'Exact plane-shape diagram',caption:'Property marks—not appearance—identify the shape: equal-side ticks, parallel arrows, right-angle squares and labelled circle parts are drawn exactly.'},
