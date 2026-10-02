@@ -1,4 +1,3 @@
-// @ts-nocheck
 'use client';
 import React from 'react';
 type MathRow={left:string;right?:string;cancelLeft?:boolean;cancelRight?:boolean;operatorLeft?:string;operatorRight?:string};
