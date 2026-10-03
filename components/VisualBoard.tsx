@@ -1,4 +1,3 @@
-// @ts-nocheck
 'use client';
 import type {VisualSpec} from '@/lib/visualTeaching';
 
