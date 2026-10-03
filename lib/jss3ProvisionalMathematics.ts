@@ -1442,3 +1442,19 @@ export const jss3ElevationDepressionQuestions:Jss3ProvisionalQuestion[]=[
 {id:'jss3-ed-19',prompt:'If only opposite and adjacent sides are involved, the direct ratio is:',options:['tangent','sine','cosine','none'],correctAnswer:'tangent',explanation:'tan=O/A.',difficulty:1,skill:'ratio'},
 {id:'jss3-ed-20',prompt:'Strong workflow:',options:['draw horizontal/reference→mark angle→label O/A/H→choose ratio→solve→adjust instrument height if needed→check','guess ratio→calculate→draw later','always add eye height','use protractor as calculator'],correctAnswer:'draw horizontal/reference→mark angle→label O/A/H→choose ratio→solve→adjust instrument height if needed→check',explanation:'Geometry precedes arithmetic.',difficulty:1,skill:'mastery'}
 ];
+
+
+const jss3MathExerciseBanks:Record<string,Jss3ProvisionalQuestion[]>={
+ [jss3WholeNumbersTopic]:jss3WholeNumbersQuestions,[jss3RationalNonRationalTopic]:jss3RationalNonRationalQuestions,[jss3BaseTwoOperationsTopic]:jss3BaseTwoOperationsQuestions,[jss3FactorizationTopic]:jss3FactorizationQuestions,[jss3FractionEquationsTopic]:jss3FractionEquationsQuestions,[jss3SimultaneousLinearTopic]:jss3SimultaneousLinearQuestions,[jss3SimilarShapesTopic]:jss3SimilarShapesQuestions,[jss3TrigonometryTopic]:jss3TrigonometryQuestions,[jss3AreaPlaneFiguresTopic]:jss3AreaPlaneFiguresQuestions,[jss3ConstructionTopic]:jss3ConstructionQuestions,[jss3CentralTendencyTopic]:jss3CentralTendencyQuestions,[jss3DataPresentationTopic]:jss3DataPresentationQuestions,[jss3VariationTopic]:jss3VariationQuestions,[jss3ChangeSubjectTopic]:jss3ChangeSubjectQuestions,[jss3ElevationDepressionTopic]:jss3ElevationDepressionQuestions
+};
+function jss3MathTopicKey(v:string){return String(v||'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim()}
+export function jss3MathExerciseQuestions(topic:string,count=25){
+ const key=jss3MathTopicKey(topic);const entry=Object.entries(jss3MathExerciseBanks).find(([name])=>jss3MathTopicKey(name)===key);if(!entry)return [];
+ return entry[1].slice(0,Math.max(0,count)).map(q=>({id:q.id,classLevel:'JSS3',subject:'Mathematics',topic:entry[0],prompt:q.prompt,type:'MULTIPLE_CHOICE',options:q.options,explanation:q.explanation,hint:'Return to the exact method taught in the lesson, show the working, then test the options.',difficulty:q.difficulty,skill:q.skill,source:'AVORA_AUTHORED_JSS3_MATHEMATICS_BANK'}));
+}
+export function jss3MathExerciseCount(topic:string){const key=jss3MathTopicKey(topic);return Object.entries(jss3MathExerciseBanks).find(([name])=>jss3MathTopicKey(name)===key)?.[1].length||0}
+export function checkJss3MathExercise(questionId:string,answer:string){
+ const hit=Object.entries(jss3MathExerciseBanks).flatMap(([topic,questions])=>questions.map(question=>({topic,question}))).find(x=>x.question.id===questionId);if(!hit)return undefined;
+ const norm=(v:string)=>String(v||'').replace(/\s+/g,' ').trim().toLowerCase();const correct=norm(answer)===norm(hit.question.correctAnswer);
+ return {correct,correctAnswer:hit.question.correctAnswer,explanation:hit.question.explanation,hint:correct?'Correct. Recheck the working so the method, not guessing, is what you retain.':'Return to the relevant worked example and perform the operation line by line.',topic:hit.topic,skill:hit.question.skill,concept:hit.question.skill,solutionSteps:[hit.question.explanation],misconception:correct?'Correct answer; keep the method explicit.':'The selected option does not match the worked method or verification.',optionReview:hit.question.options.map(option=>({option,correct:norm(option)===norm(hit.question.correctAnswer),note:norm(option)===norm(hit.question.correctAnswer)?'This matches the verified result.':'This does not match the verified result.'}))};
+}
