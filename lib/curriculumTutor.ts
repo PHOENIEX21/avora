@@ -1,4 +1,4 @@
-import type {TutorPlan,TutorUnit} from './tutorCurriculum';
+import {getTutorPlan,type TutorPlan,type TutorUnit} from './tutorCurriculum';
 import {masterTopics,masterTopicByName} from './masterCurriculum';
 import {getSentCurriculumCourse,getSentCurriculumUnits} from './sentCurriculumRuntime';
 import {teachingMapFor} from './deepTeachingArchitecture';
@@ -56,14 +56,18 @@ function applyTeachingMap(units:TutorUnit[],classLevel:string,topic:string){
 
 export function getCurriculumTutorPlan(classLevel:string,subject:string,topic:string):TutorPlan|undefined{
  if(classLevel==='JSS3'&&subject==='English Language'){const authored=jss3EnglishTutorPlan(topic);return authored?{...authored,units:applyTeachingMap(authored.units,classLevel,topic)}:undefined;}
- // Source courses remain supported for owner/audit use but are not surfaced as curriculum topics.
- const sourceCourse=getSentCurriculumCourse(classLevel,subject,topic);
- if(sourceCourse)return {...sourceCourse,units:applyTeachingMap(sourceCourse.units,classLevel,topic)};
+ // JSS3 Mathematics has a complete authored BECE bank. It is authoritative and must
+ // win before legacy/sent curriculum sources.
+ if(classLevel==='JSS3'&&subject==='Mathematics'){
+  const authored=getTutorPlan('BECE',subject,topic);
+  if(authored)return {...authored,units:applyTeachingMap(authored.units,classLevel,topic)};
+ }
 
  const master=masterTopicByName(classLevel,subject,topic);
  if(!master)return undefined; // old/parallel curriculum names cannot silently enter runtime.
  const sent=getSentCurriculumUnits(classLevel,subject,topic);
  // Revised JSS1/JSS2 topics must expose only the newly authored NERDC deep lesson.
+ // Legacy source courses are deliberately not allowed to override these revised topics.
  // Do not merge legacy/sent curriculum units into learner teaching.
  const units=isNerdc2025Class(classLevel)?getNerdc2025DeepUnits(classLevel,subject,topic):sent;
  if(!units.length)return undefined; // launch audit treats this as a release blocker.
