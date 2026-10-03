@@ -13,7 +13,7 @@ export async function POST(req:Request){
  const own=await withDbRetry(()=>sql`SELECT id FROM learner_notes WHERE id=${noteId} AND student_id=${s.userId}`);if(!own.length)return NextResponse.json({error:'Note not found.'},{status:404});
  const {base,token}=cfg();if(!base||!token)return NextResponse.json({error:'Permanent note-image storage is not configured yet.',code:'NOTE_STORAGE_NOT_CONFIGURED'},{status:503});
  const ext=file.type==='image/png'?'png':file.type==='image/webp'?'webp':'jpg',hash=createHash('sha256').update(await file.arrayBuffer()).digest('hex').slice(0,20),key=`${s.userId}/${noteId}/${Date.now()}-${hash}.${ext}`;
- const bytes=await file.arrayBuffer();const up=await fetch(`${base}/${key}`,{method:'PUT',headers:{Authorization:`Bearer ${token}`,'Content-Type':file.type,'Content-Length':String(file.size)},body:bytes});if(!up.ok)return NextResponse.json({error:'The image could not be stored permanently.'},{status:503});
+ const bytes=await file.arrayBuffer();const up=await fetch(`${base}/${key}`,{method:'PUT',headers:{Authorization:`Bearer ${token}`,'Content-Type':file.type,'Content-Length':String(file.size)},body:new Uint8Array(bytes)});if(!up.ok)return NextResponse.json({error:'The image could not be stored permanently.'},{status:503});
  const [row]=await withDbRetry(()=>sql`INSERT INTO learner_note_images(note_id,student_id,storage_key,original_name,mime_type,byte_size) VALUES(${noteId},${s.userId},${key},${file.name},${file.type},${file.size}) RETURNING id,original_name,mime_type,byte_size,created_at`);
  return NextResponse.json({image:row},{status:201});
 }
