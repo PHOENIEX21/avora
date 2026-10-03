@@ -19,7 +19,8 @@ export async function POST(req:Request){
  if(row.classification_confidence==='UNCLASSIFIED'||!row.curriculum_topic_id)
   return NextResponse.json({error:'Confirm the curriculum topic before academic conversion.'},{status:409});
  const objectives=getOfficialObjectives(String(row.curriculum_topic_id))?.objectives||[];
- const converted=await convertAcademicQuestion({originalText:String(row.original_text),classLevel:String(row.class_level),subject:String(row.subject_name||''),topicId:String(row.curriculum_topic_id),objectives});
+ const suppliedOptions=[...String(row.original_text).matchAll(/(?:^|\n)\s*[A-D][.)]\s+(.+?)(?=\n\s*[A-D][.)]|$)/g)].map(m=>m[1].trim());
+ const converted=await convertAcademicQuestion({originalText:String(row.original_text),classLevel:String(row.class_level),subject:String(row.subject_name||''),topicId:String(row.curriculum_topic_id),objectives,suppliedOptions:suppliedOptions.length===4?suppliedOptions:[]});
  if(!converted.ok)return NextResponse.json({error:'Academic conversion could not be validated. The original question was left unchanged.'},{status:422});
  const q=converted.json!;
  await withDbRetry(()=>sql`
