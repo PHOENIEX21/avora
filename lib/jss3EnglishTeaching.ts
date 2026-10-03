@@ -557,4 +557,216 @@ export const jss3Modals:Jss3EnglishLesson={
  ['NERDC’s modal-form evaluation also includes…',['question tags and direct/indirect forms','only modal spelling','only poetry','only letter addresses'],'question tags and direct/indirect forms','The official evaluation row explicitly includes them.')
  ])};
 
-export const jss3EnglishLessons: Jss3EnglishLesson[]=[jss3CriticalEvaluation,jss3ReadingSpeed,jss3ReadingSummary,jss3Composition,jss3LetterWriting,jss3SummaryWriting,jss3Phonemes,jss3Prosody,jss3AdverbialsTenses,jss3AdverbsConjunctionsPrepositions,jss3Voice,jss3Modals];
+
+export const jss3Folktales:Jss3EnglishLesson={
+ topic:'Non-African Folktales',strand:'Literature',authority:'Official NERDC JSS1–JSS3 English Studies curriculum — JSS3 prior-cycle authority',
+ objectives:['Identify features of non-African folktales.','Retell folktales coherently.','Explain themes.','Identify moral lessons.','Narrate a folktale independently.'],
+ plan:{topic:'Non-African Folktales',objective:'Read, analyse, retell and narrate folktales while understanding their entertainment and teaching functions.',units:[
+ U('Folktale meaning','A folktale is a traditional story passed through a community, historically often by oral transmission. It may involve humans, animals, supernatural beings or exaggerated events. “Non-African” here refers to tales from traditions outside Africa; study them respectfully as products of particular cultures rather than assuming all cultures tell stories identically.'),
+ U('NERDC features','The curriculum highlights folktales as didactic, entertaining and sometimes archaic. Didactic means they teach or invite reflection on conduct; entertaining means story, suspense, humour or wonder gives pleasure; archaic elements may include old-fashioned settings, expressions, customs or beliefs.'),
+ U('Story structure','Retelling needs orientation (who/where), initiating problem, important events in causal order, climax/turning point and resolution. Do not retell by listing disconnected incidents. Use sequence words only where they genuinely help.'),
+ U('Theme versus moral','Theme is a central idea explored by the story—greed, courage, honesty, wisdom, consequences of pride. Moral is a lesson a reader may draw: “Greed can make a person lose what they already possess.” Avoid reducing every complex story to one slogan; support interpretation with events.'),
+ U('Character and consequence','Ask what each character wants, what choice is made and what follows. If a trickster repeatedly deceives neighbours and finally loses their trust, the chain choice→consequence supports themes of dishonesty and social trust.'),
+ U('Model tale: The Two Travellers','Two travellers promise to help each other. When danger appears, one climbs a tree and abandons the other, who survives by remaining still. Afterwards the first asks what the danger “whispered”. The abandoned traveller replies that one should beware of a companion who deserts a friend in danger. Analyse loyalty, self-preservation and friendship.'),
+ U('Retelling the model','Weak retell: “Two men travelled. There was danger. One climbed. The other lived.” Strong retell preserves causal links: they promised mutual support; danger tested the promise; one abandoned the other; the second survived; the final response exposed the failure of friendship.'),
+ U('Model tale: The Greedy Choice','A farmer finds a small source of wealth and benefits steadily. Wanting everything immediately, he destroys the source and loses future benefit. Theme: greed versus patience. Moral supported by events: uncontrolled greed can destroy sustainable gain. Do not add magical details that were not in the version read.'),
+ U('Comparing cultures carefully','You may compare a non-African folktale with an African one by feature—animal characters, trickster pattern, moral ending, supernatural event—but avoid claims such as “all European tales…” or “all African tales…”. Compare the actual texts.'),
+ U('Language and oral performance','A narrated folktale can use repeated phrases, direct speech, pauses, changes of voice and audience awareness. Performance should clarify character and event, not become noise. Retelling tests comprehension; narration tests organised oral expression.'),
+ U('Mastery checkpoint','You can identify didactic/entertaining/archaic features with evidence, retell in coherent sequence, state a defensible theme, derive a moral from events and narrate a complete folktale.')
+ ]},
+ questions:makeQs('j3e-folk',[
+ ['A folktale is generally…',['a traditional community story','a formal letter','a grammar table','a timetable'],'a traditional community story','Folktales belong to storytelling traditions.'],
+ ['Didactic means…',['teaching/instructive in effect','without meaning','only funny','written recently'],'teaching/instructive in effect','A didactic tale conveys lessons/reflection.'],
+ ['Entertaining means the tale…',['gives enjoyment/interest','has no theme','must be comedy only','cannot teach'],'gives enjoyment/interest','Entertainment and teaching can coexist.'],
+ ['Archaic elements may involve…',['old-fashioned language/customs/settings','future technology only','grammar errors','no culture'],'old-fashioned language/customs/settings','Archaic refers to older forms/contexts.'],
+ ['A coherent retelling should preserve…',['important causal sequence','every exact word','only the ending','random events'],'important causal sequence','Retelling keeps essential event relationships.'],
+ ['Theme is…',['a central idea explored by the story','the writer’s address','a punctuation mark','always one-word moral'],'a central idea explored by the story','Theme is broader than a slogan.'],
+ ['A moral is…',['a lesson reasonably drawn from events','the title only','a character’s age','a rhyme scheme'],'a lesson reasonably drawn from events','It should be supported by the tale.'],
+ ['If greed causes a character to lose everything, a supported theme is…',['consequences of greed','road signs','letter format','phonemes'],'consequences of greed','Events develop the idea.'],
+ ['A retelling should NOT…',['invent major events absent from the version read','preserve key conflict','state essential resolution','use sequence clearly'],'invent major events absent from the version read','Retelling remains faithful.'],
+ ['Character analysis asks…',['what a character wants/chooses and what follows','only name length','only clothing colour','only punctuation'],'what a character wants/chooses and what follows','Motivation and consequence reveal meaning.'],
+ ['The travellers model chiefly tests…',['loyalty under danger','formal addressing','road maintenance','vowel length'],'loyalty under danger','The promise is tested by crisis.'],
+ ['A theme should be supported with…',['events/details from the tale','an unrelated opinion','a dictionary page','a random proverb'],'events/details from the tale','Interpretation needs textual support.'],
+ ['Comparing cultures responsibly means…',['compare actual texts/features without sweeping stereotypes','claim all cultures are identical','generalise from one story to millions of people','ignore context'],'compare actual texts/features without sweeping stereotypes','Evidence should control comparison.'],
+ ['Oral narration may use…',['voice, pause and direct speech purposefully','random shouting','no sequence','unrelated jokes'],'voice, pause and direct speech purposefully','Performance can clarify story.'],
+ ['Retelling mainly demonstrates…',['comprehension and organisation','spelling only','drawing only','calculation'],'comprehension and organisation','The learner reconstructs essential events.'],
+ ['A folktale can be both…',['didactic and entertaining','fact and address only','letter and timetable','tense and preposition'],'didactic and entertaining','The functions are compatible.'],
+ ['The resolution is…',['how the central problem/event is settled','the first character name','the heading','the salutation'],'how the central problem/event is settled','It closes the story conflict.'],
+ ['A climax is…',['a major turning/high point','an address','a conjunction','a footnote'],'a major turning/high point','It is often the peak of conflict.'],
+ ['NERDC requires learners to narrate…',['a folktale','only definitions','only a list of features','only MCQs'],'a folktale','Performance is explicit.'],
+ ['Mastery includes…',['feature identification, retelling, theme/moral and narration','memorising one title only','reading silently only','copying the tale word-for-word'],'feature identification, retelling, theme/moral and narration','All official objectives are represented.')
+ ])},
+ performanceTasks:['Retell a non-African folktale in 2–3 minutes preserving cause and effect.','Identify two features, one theme and one moral, citing events that support each.','Narrate a folktale to a small audience using purposeful voice and pauses.']
+};
+
+export const jss3MythsLegends:Jss3EnglishLesson={
+ topic:'Lessons from Myths and Legends',strand:'Literature',authority:'Official NERDC JSS1–JSS3 English Studies curriculum — JSS3 prior-cycle authority',
+ objectives:['Retell myths and legends.','Explain themes.','Identify moral lessons.','Distinguish myth from legend in practical reading.','Narrate African and non-African examples coherently.'],
+ plan:{topic:'Myths and Legends',objective:'Understand how myths and legends carry cultural meaning, then retell and interpret them responsibly.',units:[
+ U('Myth','A myth is a traditional narrative often connected with origins, gods/supernatural beings, natural phenomena, sacred beliefs or a community’s worldview. Calling a story a myth in literary study does not mean insulting the culture that tells it.'),
+ U('Legend','A legend is a traditional story linked to a person, place or event regarded as historical or once possible, though details may have grown through retelling. Legends often mix remembered history with imaginative development.'),
+ U('Do not confuse the two','A creation story explaining how a natural feature came to exist through divine action fits myth more readily. A story about the extraordinary deeds of a remembered warrior or founder fits legend more readily. Some traditions blur boundaries; classify from features of the actual narrative.'),
+ U('Theme and moral','A myth/legend may explore obedience, pride, courage, sacrifice, leadership, justice or respect for limits. A moral is a lesson derived from what happens. Cite the decisive action/consequence rather than naming a theme without evidence.'),
+ U('Retelling method','Identify setting/cultural frame, principal figures, central problem or quest, key supernatural/historical element, turning point, outcome and meaning. Keep unfamiliar names accurately and do not replace cultural details with invented ones.'),
+ U('Model myth pattern','A community receives a precious gift with one clear condition. A character violates the condition through impatience, releasing consequences that cannot easily be reversed. Analyse: prohibition, choice, consequence, explanation of human condition. Possible theme: limits and responsibility.'),
+ U('Model legend pattern','A young leader unites divided settlements during a crisis through courage and negotiation. Later generations retell the achievement with increasingly extraordinary details. Analyse leadership, communal memory and the boundary between historical core and legendary embellishment.'),
+ U('African and non-African material','NERDC asks for both. The learning target is not memorising stereotypes but showing that you can listen/read, retell, explain theme and derive moral lessons from selected narratives in either category.'),
+ U('Moral reasoning','Avoid morals unsupported by the plot. If a hero succeeds through cooperation, “cooperation can overcome division” is supported. “Always travel by boat” is not, unless the story meaning genuinely centres on that lesson.'),
+ U('Mastery checkpoint','You can distinguish typical myth/legend features, retell two examples coherently, explain a theme using events and state a moral that logically follows from the narrative.')
+ ]},
+ questions:makeQs('j3e-myth',[
+ ['A myth often concerns…',['origins/supernatural worldview','formal addresses','timetables','grammar only'],'origins/supernatural worldview','These are common mythic concerns.'],
+ ['A legend is often linked to…',['a remembered person/place/event','only vowel sounds','a letter heading','a timetable row'],'a remembered person/place/event','Legends commonly have a quasi-historical anchor.'],
+ ['Which best fits myth?',['a supernatural creation explanation','a complaint letter','a school register','an instruction manual'],'a supernatural creation explanation','Origins through supernatural action are mythic.'],
+ ['Which best fits legend?',['extraordinary deeds of a remembered founder','a preposition list','a weather table','a formal salutation'],'extraordinary deeds of a remembered founder','Historical association is typical.'],
+ ['Theme should be supported by…',['events in the narrative','the reader’s unrelated belief','font size','page number'],'events in the narrative','Interpretation needs evidence.'],
+ ['A moral is…',['a lesson inferred from consequences/actions','always the title','a setting only','a character list'],'a lesson inferred from consequences/actions','It emerges from story meaning.'],
+ ['A retelling should preserve…',['cultural details and key sequence','only the final line','invented replacements','random order'],'cultural details and key sequence','Accuracy and coherence matter.'],
+ ['Calling a traditional narrative a myth in literature should…',['be descriptive, not disrespectful','mock the culture','prove it worthless','erase context'],'be descriptive, not disrespectful','Literary classification should respect cultural context.'],
+ ['Legends may combine…',['historical memory and imaginative embellishment','only scientific data','only grammar','no characters'],'historical memory and imaginative embellishment','Retelling can enlarge a historical core.'],
+ ['Myth/legend boundaries can…',['sometimes overlap','never vary across cultures','be decided only by story length','depend on punctuation'],'sometimes overlap','Actual traditions may not fit rigid boxes.'],
+ ['A theme of cooperation is supported when…',['characters overcome division by working together','nobody cooperates','the title rhymes','the story has a mountain'],'characters overcome division by working together','Action supports the theme.'],
+ ['Which is an unsupported moral?',['a lesson unrelated to any event','one tied to consequences','one tied to a character choice','one explained with evidence'],'a lesson unrelated to any event','Moral reasoning needs story support.'],
+ ['NERDC asks learners to study…',['African and non-African myths/legends','only one continent','only definitions','only grammar'],'African and non-African myths/legends','The content explicitly includes both.'],
+ ['A turning point is…',['an event that changes the direction of the narrative','an address','a modal','a preposition'],'an event that changes the direction of the narrative','It is structurally significant.'],
+ ['A quest commonly gives a narrative…',['goal-driven structure','letter format','tense table','no conflict'],'goal-driven structure','A figure pursues an objective.'],
+ ['Retelling tests whether a learner can…',['organise essential events coherently','copy punctuation only','avoid meaning','list random names'],'organise essential events coherently','Comprehension becomes structured narration.'],
+ ['Theme differs from moral because theme is more…',['an explored central idea','a direct instruction necessarily','a date','a salutation'],'an explored central idea','Moral is lesson; theme is broader idea.'],
+ ['A legend’s extraordinary detail should be treated as…',['part of the narrative tradition, not automatically verified history','certain documentary fact','grammar error','irrelevant always'],'part of the narrative tradition, not automatically verified history','Literary legend is not identical to historical proof.'],
+ ['A respectful comparison should…',['use features of selected texts','stereotype entire peoples','rank cultures','invent customs'],'use features of selected texts','Evidence-based comparison avoids stereotypes.'],
+ ['Mastery requires…',['retelling, theme explanation and moral identification','only naming myth','only naming legend','only MCQ recognition'],'retelling, theme explanation and moral identification','These match NERDC objectives.')
+ ])},
+ performanceTasks:['Retell one selected myth and one legend, keeping key cultural details accurate.','For each narrative, cite two events supporting its theme and one moral lesson.','Explain orally why one selected story is better classified as myth, legend, or a boundary case.']
+};
+
+export const jss3Prose:Jss3EnglishLesson={
+ topic:'Prose Revision',strand:'Literature',authority:'Official NERDC JSS1–JSS3 English Studies curriculum — JSS3 prior-cycle authority',
+ objectives:['Read short stories with understanding.','Explain themes.','Differentiate major prose types including fiction and non-fiction.','Identify plot, setting, characterisation, point of view and language.','Write short prose of appropriate type.'],
+ plan:{topic:'Prose Revision',objective:'Read prose as constructed meaning—events, characters, setting, narration and language working together.',units:[
+ U('Prose','Prose is ordinary written/spoken language organised mainly in sentences and paragraphs rather than verse lines. Literary prose includes short stories and novels; non-fiction prose includes biography, memoir, essays and factual narratives.'),
+ U('Fiction and non-fiction','Fiction is imaginatively created, even when realistic. Non-fiction presents people/events/information as factual. A historical novel may use real history but invent dialogue/characters; a biography claims factual treatment. Ask what truth-claim the text makes.'),
+ U('Plot','Plot is the organised chain of events and their relationships, not merely “everything that happened”. Identify exposition, conflict, rising action, climax and resolution where applicable. Cause and effect often matter more than chronology alone.'),
+ U('Setting','Setting includes place, time and social environment. It can create mood, limit choices or generate conflict. A story during fuel scarcity creates different pressures from the same characters in an ordinary week.'),
+ U('Characterisation','Characterisation is how a text builds a character through actions, speech, thoughts, appearance, other characters’ responses and narrator comment. Instead of saying “Bola is brave,” cite the action that demonstrates bravery.'),
+ U('Theme','Theme is a central idea developed through plot and character: integrity, peer pressure, responsibility, inequality, friendship. A theme statement should be arguable and supported, e.g. “Courage sometimes requires resisting one’s friends,” not just the word “courage”.'),
+ U('Point of view','First person uses I/we and gives a participant’s perspective. Third person uses he/she/they; the narrator may know one character closely or many. Ask what information the chosen viewpoint gives or withholds.'),
+ U('Language and tone','Diction, imagery, dialogue, sentence length and figurative language shape tone and character. A frightened narrator may use abrupt sentences; a boastful character’s dialogue may reveal personality without direct description.'),
+ U('Worked mini-story','A learner finds a leaked answer sheet, photographs it, then deletes the image and reports the leak despite friends’ anger. Plot conflict: loyalty to friends versus integrity. Characterisation: choice under pressure. Theme: integrity may carry social cost. Do not call the theme “answer sheet”; that is subject matter, not developed idea.'),
+ U('Writing prose','Plan character + desire + obstacle + meaningful choice + consequence. For non-fiction, define factual purpose, verify information and organise clearly. Do not label invented events “non-fiction”.'),
+ U('Mastery checkpoint','You can distinguish fiction/non-fiction, summarise plot, explain setting’s role, infer character from evidence, state a supported theme, identify viewpoint and write a coherent short prose piece.')
+ ]},
+ questions:makeQs('j3e-prose',[
+ ['Prose is mainly organised in…',['sentences and paragraphs','verse lines only','music notation','tables only'],'sentences and paragraphs','That is its usual formal distinction from poetry.'],
+ ['Fiction…',['is imaginatively created','must be false information presented as fact','is always a poem','cannot use real settings'],'is imaginatively created','Fiction can draw on reality while inventing narrative.'],
+ ['Non-fiction generally…',['presents its material as factual','must contain magic','uses no paragraphs','has no theme'],'presents its material as factual','Its truth-claim differs from fiction.'],
+ ['Plot is…',['the organised chain of events','only the setting','only the title','a list of adjectives'],'the organised chain of events','Plot concerns event structure/causality.'],
+ ['Setting includes…',['place, time and social environment','only character names','only climax','only narrator'],'place, time and social environment','All shape the story world.'],
+ ['Characterisation is shown through…',['actions, speech, thoughts and description','page numbers only','title only','punctuation only'],'actions, speech, thoughts and description','Texts reveal character through multiple methods.'],
+ ['A theme is…',['a central idea developed by the text','the same as a one-word topic always','a character name','the page number'],'a central idea developed by the text','Theme expresses what the story explores about its subject.'],
+ ['First-person narration commonly uses…',['I/we','he only','you only','no pronouns'],'I/we','The narrator participates/speaks as I/we.'],
+ ['A historical novel is…',['fiction that may use historical material','automatically a textbook','always verified biography','a formal letter'],'fiction that may use historical material','Real context does not make invented narrative non-fiction.'],
+ ['To prove a character is brave, cite…',['an action showing courage','only your feeling','font size','the book price'],'an action showing courage','Character claims need textual evidence.'],
+ ['Conflict is…',['a struggle/problem driving action','a salutation','a rhyme','a preposition'],'a struggle/problem driving action','It often propels plot.'],
+ ['Climax is…',['a major high/turning point','the opening address','a grammar table','the author’s biography always'],'a major high/turning point','It is a structural peak.'],
+ ['Resolution…',['settles or closes the central conflict','introduces every character','is always the title','must be happy'],'settles or closes the central conflict','Resolution need not be happy.'],
+ ['Point of view affects…',['what information the reader receives','spelling only','paper size','chapter count only'],'what information the reader receives','Narrative perspective controls access.'],
+ ['Tone can be shaped by…',['diction and sentence choices','page number only','book cover only','font alone'],'diction and sentence choices','Language creates attitude/mood.'],
+ ['“Integrity may carry social cost” is stronger as a theme than “integrity” because it…',['states an idea the story can develop','is longer only','names a character','gives a date'],'states an idea the story can develop','Themes are propositions/ideas, not just topics.'],
+ ['Writing fiction permits…',['invented events presented as story','invented facts labelled verified news','no organisation','no characters ever'],'invented events presented as story','Fiction openly uses imagination.'],
+ ['Writing non-fiction requires special attention to…',['factual accuracy','inventing evidence','magic','rhyme scheme'],'factual accuracy','It claims to represent reality.'],
+ ['NERDC expects learners to…',['differentiate prose types and write stories','identify title only','avoid reading stories','study only poetry'],'differentiate prose types and write stories','The prose row includes reading, differentiation and writing.'],
+ ['Prose mastery combines…',['comprehension, analysis and creation','memorisation of names only','spelling only','MCQ guessing'],'comprehension, analysis and creation','The curriculum expects active literary competence.')
+ ])},
+ performanceTasks:['Read a short story and produce a plot map with conflict, climax and resolution.','Write a paragraph proving one character trait with three pieces of textual evidence.','Write a 500-word fictional or non-fiction prose piece and label which type it is and why.']
+};
+
+export const jss3Poetry:Jss3EnglishLesson={
+ topic:'Poetry Revision',strand:'Literature',authority:'Official NERDC JSS1–JSS3 English Studies curriculum — JSS3 prior-cycle authority',
+ objectives:['Read oral and written poems with appropriate rhythm.','Explain meanings of selected poems.','Identify types including dirge, epic, lyric and dramatic poetry.','Identify features of poetic language.','Write simple poems.'],
+ plan:{topic:'Poetry Revision',objective:'Read, hear, interpret and create poetry by connecting form, sound, imagery and meaning.',units:[
+ U('Poetry','Poetry uses highly selected language, sound, rhythm, imagery and line arrangement to concentrate experience or ideas. Not every poem rhymes, and line breaks alone do not guarantee good poetry. Meaning comes from how choices work together.'),
+ U('Oral and written poetry','Oral poetry is composed/performed within oral traditions and may rely strongly on voice, repetition, audience response and memory. Written poetry is preserved primarily in text, though it too should be heard. Do not assume oral means inferior or unwritten means unstructured.'),
+ U('Lyric','Lyric poetry expresses a concentrated voice, feeling or reflection. It is often shorter than epic and may focus on love, loss, nature, hope or personal thought. “Lyric” does not mean song lyrics only.'),
+ U('Epic','An epic is an extended narrative poem associated with major deeds, heroes, communal history or large-scale conflict. Scale and narrative breadth distinguish it from a brief personal lyric.'),
+ U('Dirge','A dirge is associated with mourning the dead/loss. Tone may be sorrowful, reflective, praising or communal. Identify from purpose and content, not merely because the poem contains the word “death”.'),
+ U('Dramatic poetry','Dramatic poetry presents a speaker/character or situation with dramatic qualities, sometimes as monologue or dialogue. Ask who is speaking, to whom, in what situation and with what conflict.'),
+ U('Poetic language: concision','NERDC highlights poetry language as concise and distinctive. Poetry often compresses meaning: “The city swallowed the sun” uses few words to create image and implication. Concision is not the same as vagueness.'),
+ U('Imagery','Imagery appeals to sensory imagination. “Dust scratched our throats” combines tactile sensation and vivid verb. Identify what you imagine and explain how it supports mood/theme rather than merely labelling “imagery”.'),
+ U('Figures of speech','Simile compares explicitly (“like/as”); metaphor identifies one thing through another; personification gives human qualities; hyperbole exaggerates; irony creates contrast between expectation/appearance and meaning. Explain effect in context.'),
+ U('Sound and rhythm','Repetition, alliteration, rhyme, assonance and rhythm can reinforce mood or memory. Do not say “alliteration makes it interesting” automatically; explain which repeated sound and how it affects the line.'),
+ U('Speaker versus poet','The voice saying “I” in a poem is the speaker/persona, not automatically the real poet. Treat the poem as a constructed voice unless context proves autobiography.'),
+ U('How to explain a poem','Read aloud; identify speaker/situation; paraphrase difficult lines; identify central movement; mark key images/figures/sound; connect devices to meaning; state theme with evidence.'),
+ U('Writing a simple poem','Choose one experience or idea; collect concrete images; choose a voice; draft lines; remove weak filler; use sound/figure only when purposeful; read aloud and revise. A poem need not rhyme to be complete.'),
+ U('Mastery checkpoint','You can distinguish major types, recite with rhythm, paraphrase meaning, identify poetic language and explain its effect, support a theme and write two simple purposeful poems.')
+ ]},
+ questions:makeQs('j3e-poet',[
+ ['Poetry often uses…',['concentrated language, sound and imagery','only formal addresses','only facts','no rhythm ever'],'concentrated language, sound and imagery','Poetry intensifies language choices.'],
+ ['Oral poetry may strongly use…',['voice, repetition and audience response','letter headings','tables only','no structure'],'voice, repetition and audience response','Performance is central in many oral traditions.'],
+ ['A lyric commonly focuses on…',['concentrated feeling/reflection','a long heroic narrative only','formal complaint','road signs'],'concentrated feeling/reflection','Lyric is often personal/reflexive.'],
+ ['An epic is generally…',['extended heroic/communal narrative poetry','a two-line greeting','a formal letter','a timetable'],'extended heroic/communal narrative poetry','Scale and narrative are characteristic.'],
+ ['A dirge is associated with…',['mourning/loss','comic instruction only','traffic rules','letter format'],'mourning/loss','It is a mourning form.'],
+ ['Dramatic poetry often foregrounds…',['speaker, situation and dramatic tension','only page numbers','only rhyme','no character voice'],'speaker, situation and dramatic tension','It has dramatic presentation.'],
+ ['Concision means…',['expressing much with selected economical language','being meaningless','using one word only','avoiding images'],'expressing much with selected economical language','Poetry often compresses meaning.'],
+ ['Imagery appeals to…',['sensory imagination','addresses','grammar labels only','page count'],'sensory imagination','It makes experience perceptible.'],
+ ['A simile commonly uses…',['like/as comparison','no comparison','only rhyme','a question tag'],'like/as comparison','It makes explicit comparison.'],
+ ['A metaphor…',['presents one thing in terms of another','must use like','is a date','is a preposition'],'presents one thing in terms of another','It makes implicit/identity comparison.'],
+ ['Personification gives…',['human qualities to non-human things','numbers to nouns','addresses to poems','tense to titles'],'human qualities to non-human things','It humanises non-human subjects.'],
+ ['Hyperbole is…',['deliberate exaggeration','understatement only','a formal closing','a rhyme scheme'],'deliberate exaggeration','It intensifies beyond literal truth.'],
+ ['Alliteration involves…',['repetition of initial/consonant sounds in nearby words','only final punctuation','sentence length','plot order'],'repetition of initial/consonant sounds in nearby words','Sound repetition creates pattern/effect.'],
+ ['The “I” in a poem is…',['the speaker/persona, not automatically the poet','always the real poet','always the reader','a conjunction'],'the speaker/persona, not automatically the poet','Literary voice is constructed.'],
+ ['To explain a device well, state…',['what it does in that context','its name only','the page number','that it is “nice”'],'what it does in that context','Analysis connects technique to meaning/effect.'],
+ ['A poem…',['does not have to rhyme','must rhyme every line','cannot tell a story','cannot be oral'],'does not have to rhyme','Rhyme is optional.'],
+ ['Before analysing deeply, it helps to…',['paraphrase difficult lines and identify situation','count letters','ignore speaker','skip reading aloud'],'paraphrase difficult lines and identify situation','Basic comprehension supports analysis.'],
+ ['NERDC poetry types include…',['dirge, epic, lyric and dramatic','formal, informal, memo, report','noun, verb, adjective, adverb','scan, skim, survey only'],'dirge, epic, lyric and dramatic','These examples appear in the official content.'],
+ ['Poetry mastery includes creation because learners should…',['write simple poems','only identify titles','only copy poems','avoid performance'],'write simple poems','Writing is an explicit objective.'],
+ ['A good poetry performance should…',['use rhythm and meaningfully placed pauses','race through lines','ignore punctuation/meaning','stress every syllable equally'],'use rhythm and meaningfully placed pauses','Oral delivery should serve meaning.')
+ ])},
+ performanceTasks:['Recite a selected poem with marked rhythm, stress and sense pauses.','Analyse one image and one sound device by explaining their effect on meaning/mood.','Write two short poems of different types or purposes and revise them after reading aloud.']
+};
+
+export const jss3Drama:Jss3EnglishLesson={
+ topic:'Drama Revision',strand:'Literature',authority:'Official NERDC JSS1–JSS3 English Studies curriculum — JSS3 prior-cycle authority',
+ objectives:['Read and dramatise a given text.','Identify theme and features of a play.','Identify essential props and costumes.','Understand performance, audience, director, setting, characterisation and dramatic language.','Write and perform a short play.'],
+ plan:{topic:'Drama Revision',objective:'Understand drama as literature written for performance and create a short playable scene.',units:[
+ U('Drama is action before an audience','Drama presents story through characters’ speech and action and is designed for performance. Reading a play requires imagining stage movement, pauses, entrances, exits, objects and audience effect—not treating it as prose with character names.'),
+ U('Script features','A script may contain cast list, acts/scenes, dialogue, stage directions and setting notes. Stage directions guide action, tone, movement or technical choices; they are not normally spoken as dialogue.'),
+ U('Theme','Theme is a central idea developed through conflict and choices. In a play where students hide bullying until one character reports it, themes may include courage, complicity and responsibility. Support with dramatic events.'),
+ U('Conflict and plot','Drama depends strongly on conflict: person vs person, self, society or circumstance. Plot develops through scenes, rising tension, climax and resolution. Every scene should have a purpose—someone wants something and encounters resistance.'),
+ U('Characterisation','Actors and readers infer character from dialogue, action, reaction, stage directions and relationships. A character who says “I am generous” but repeatedly refuses to help may be characterised ironically through contradiction.'),
+ U('Setting','Setting includes time/place/social environment and may be represented through dialogue, set, lighting, sound and props. A classroom scene needs only purposeful details; stage writing is not a shopping list.'),
+ U('Props','Props are movable objects used in performance: a letter, phone, book, walking stick, cup. A prop should matter to action or setting. If a missing document causes the conflict, that document is an essential prop.'),
+ U('Costume','Costume helps establish role, period, occupation, status or personality. A school uniform can immediately locate a character as learner. Costume should support the script rather than distract from it.'),
+ U('Director and audience','The director coordinates interpretation and performance choices—movement, pacing, acting and production elements. The audience receives and responds to the performance; playwright/director anticipate what the audience can see/hear and understand.'),
+ U('Dramatic language','Dialogue must sound speakable and reveal character, relationship, conflict or information. Avoid speeches that exist only to explain what both characters already know. Subtext is what a character means or wants beneath literal words.'),
+ U('Stage directions','Weak: “[He is angry.]” Stronger when action helps performance: “[Tunde folds the letter slowly, avoiding her eyes.]” Do not over-direct every breath; give playable information.'),
+ U('Worked scene design','Premise: a class project file disappears before presentation. Character A wants to blame a rival; B knows the file was accidentally moved; C fears admitting responsibility. Prop: labelled flash drive. Conflict grows through accusation; climax occurs when C admits the truth; resolution addresses trust and responsibility.'),
+ U('Writing a short play','Choose theme and conflict; create 2–4 characters with different wants; set one playable location; outline beginning/escalation/turning point/resolution; draft dialogue plus selective stage directions; read aloud; cut unnatural explanation; ensure props/costumes are feasible.'),
+ U('Performance skills','Know lines/intent; speak audibly; listen and react; use movement motivated by action; handle props naturally; maintain character; respect cues. Performance is communication, not shouting or reciting at the audience.'),
+ U('Mastery checkpoint','You can read/dramatise a script, identify theme and dramatic features, justify props/costumes, explain director/audience/setting/characterisation/language, and write a coherent short play that can actually be performed.')
+ ]},
+ questions:makeQs('j3e-drama',[
+ ['Drama is especially written for…',['performance','indexing','only silent reading','tables'],'performance','Drama comes fully alive in enactment.'],
+ ['Dialogue is…',['speech exchanged by characters','the address','a page number','a stage object'],'speech exchanged by characters','It carries dramatic interaction.'],
+ ['Stage directions usually…',['guide performance/action','are spoken as every character’s dialogue','replace the plot','serve as letter heading'],'guide performance/action','They instruct rather than normally being spoken.'],
+ ['Theme in drama should be supported by…',['conflict, choices and events','costume colour alone','page number','title length'],'conflict, choices and events','Dramatic action develops ideas.'],
+ ['A prop is…',['a movable object used in performance','the audience','the theme','a tense'],'a movable object used in performance','Props are stage objects.'],
+ ['Costume can communicate…',['role, period, status or personality','only plot ending','grammar','page count'],'role, period, status or personality','Clothing contributes visual character/setting.'],
+ ['The director mainly…',['coordinates interpretation and performance choices','writes every examination','is the audience','is a prop'],'coordinates interpretation and performance choices','The director shapes production.'],
+ ['The audience…',['receives/responds to the performance','is a stage direction','is a costume','is a conjunction'],'receives/responds to the performance','Drama anticipates spectators.'],
+ ['Characterisation comes through…',['dialogue, action, reaction and directions','names only','costume only','title only'],'dialogue, action, reaction and directions','Multiple dramatic signals build character.'],
+ ['Conflict is…',['a struggle driving dramatic action','a greeting','a rhyme scheme','a preposition'],'a struggle driving dramatic action','Competing wants/problems create tension.'],
+ ['Setting includes…',['time, place and social environment','only props','only audience','only dialogue'],'time, place and social environment','It frames action.'],
+ ['A good prop should…',['serve action/setting purpose','be included randomly','always be expensive','replace actors'],'serve action/setting purpose','Production elements should support drama.'],
+ ['Subtext is…',['underlying intention/meaning beneath literal words','the play title','a prop list','punctuation'],'underlying intention/meaning beneath literal words','Characters may mean more than they say.'],
+ ['A playable scene needs…',['characters with wants and resistance','only description','no conflict ever','a narrator explaining everything'],'characters with wants and resistance','Dramatic action grows from objectives/conflict.'],
+ ['The climax is…',['a major turning/high point','the cast list','the first stage direction always','the costume list'],'a major turning/high point','It peaks the tension/action.'],
+ ['Performance requires actors to…',['listen/react as well as speak','shout every line','ignore cues','avoid movement always'],'listen/react as well as speak','Acting is responsive interaction.'],
+ ['Over-explanatory dialogue sounds unnatural when…',['characters tell each other facts both already know solely for audience','a character asks a genuine question','conflict changes','a secret is revealed naturally'],'characters tell each other facts both already know solely for audience','Exposition should be motivated.'],
+ ['NERDC specifically requires learners to identify…',['props and costumes','only theme','only title','only author name'],'props and costumes','These are explicit objectives.'],
+ ['NERDC also requires learners to…',['write a play','only read definitions','avoid performance','study only prose'],'write a play','Creation is an explicit performance objective.'],
+ ['Drama mastery is complete when a learner can…',['analyse and perform/create','name one prop only','memorise a definition only','answer MCQs only'],'analyse and perform/create','The strand combines reading, analysis, writing and performance.')
+ ])},
+ performanceTasks:['Read and perform a short scene, using purposeful movement, voice, props and cues.','Annotate a script for theme, conflict, setting, characterisation, essential props and costumes.','Write a 3–5 page short play with 2–4 characters, clear conflict, stage directions and a performable resolution, then stage a reading.']
+};
+
+export const jss3EnglishLessons: Jss3EnglishLesson[]=[jss3CriticalEvaluation,jss3ReadingSpeed,jss3ReadingSummary,jss3Composition,jss3LetterWriting,jss3SummaryWriting,jss3Phonemes,jss3Prosody,jss3AdverbialsTenses,jss3AdverbsConjunctionsPrepositions,jss3Voice,jss3Modals,jss3Folktales,jss3MythsLegends,jss3Prose,jss3Poetry,jss3Drama];
