@@ -661,9 +661,25 @@ export const masterCurriculum:MasterCurriculumTopic[]=[
     classLevel: "JSS3",
     subject: "Mathematics",
     term: 3,
-    topic: "BECE Revision: formula/method reference synthesis; exam technique guidance; full mixed-topic mock practice (objective + theory) with worked solutions",
+    topic: "Variation (direct, inverse, joint and partial variation; practical applications)",
     foundation: false,
-    id: "jss3-math-t3-bece-revision-formula-method-reference-synthesis-exam-techni"
+    id: "jss3-math-t3-variation"
+  },
+  {
+    classLevel: "JSS3",
+    subject: "Mathematics",
+    term: 3,
+    topic: "Change of Subject of Formulae (addition, multiplication, division and roots)",
+    foundation: false,
+    id: "jss3-math-t3-change-of-subject"
+  },
+  {
+    classLevel: "JSS3",
+    subject: "Mathematics",
+    term: 3,
+    topic: "Angles of Elevation and Depression (trigonometric ratios, clinometer and distance/height estimation)",
+    foundation: false,
+    id: "jss3-math-t3-elevation-depression"
   },
   {
     classLevel: "JSS3",
