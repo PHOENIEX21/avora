@@ -6,8 +6,8 @@ import {useEffect,useState} from 'react';
 const primary=[
  {href:'/home',label:'Home',icon:'⌂'},
  {href:'/learn',label:'Learn',icon:'▤'},
- {href:'/tutor',label:'Tutor',icon:'▣'},
- {href:'/exam',label:'Exam',icon:'◷'},
+ {href:'/school-work',label:'School Work',icon:'▣'},
+ {href:'/progress',label:'Progress',icon:'◎'},
 ];
 
 export default function MobileNav({role='STUDENT'}:{role?:string}){
@@ -16,11 +16,12 @@ export default function MobileNav({role='STUDENT'}:{role?:string}){
  useEffect(()=>setOpen(false),[path]);
  if(role==='ADMIN') return <nav className="mobile-dock admin-mobile-dock" aria-label="Admin navigation"><Link href="/admin" className={path==='/admin'?'active':''}><span aria-hidden="true">⌂</span><b>Dashboard</b></Link><Link href="/admin/academic-preview" className={path.startsWith('/admin/academic-preview')?'active':''}><span aria-hidden="true">▤</span><b>Academic</b></Link><Link href="/admin/students" className={path.startsWith('/admin/students')?'active':''}><span aria-hidden="true">◎</span><b>Students</b></Link><Link href="/admin/live-assessments" className={path.startsWith('/admin/live-assessments')?'active':''}><span aria-hidden="true">◷</span><b>Live</b></Link><Link href="/admin/support" className={path.startsWith('/admin/support')?'active':''}><span aria-hidden="true">✉</span><b>Support</b></Link><Link href="/admin/families" className={path.startsWith('/admin/families')?'active':''}><span aria-hidden="true">⌂</span><b>Families</b></Link></nav>;
  if(role==='PARENT') return <nav className="mobile-dock parent-mobile-dock" aria-label="Parent navigation"><Link href="/parent" className={path==='/parent'||path.startsWith('/parent/child')||path.startsWith('/parent/live-assessment')?'active':''}><span aria-hidden="true">⌂</span><b>Overview</b></Link><Link href="/parent/family" className={path.startsWith('/parent/family')?'active':''}><span aria-hidden="true">＋</span><b>Children</b></Link><Link href="/parent/billing" className={path.startsWith('/parent/billing')?'active':''}><span aria-hidden="true">◎</span><b>Plan</b></Link></nav>;
- const moreActive=path.startsWith('/practice')||path.startsWith('/progress')||path.startsWith('/live-assessment')||path.startsWith('/support')||path.startsWith('/parent-connect');
+ const moreActive=path.startsWith('/tutor')||path.startsWith('/practice')||path.startsWith('/exam')||path.startsWith('/live-assessment')||path.startsWith('/support')||path.startsWith('/parent-connect');
  return <>
   {open&&<div className="mobile-more-panel" role="dialog" aria-label="More learning tools">
+   <Link href="/tutor"><span>AVORA Tutor</span><small>Get a topic taught step by step when you need deeper help.</small></Link>
    <Link href="/practice"><span>Independent practice</span><small>Prove what you can do without Tutor help.</small></Link>
-   <Link href="/progress"><span>Progress</span><small>See evidence, mastery and what still needs work.</small></Link>
+   <Link href="/exam"><span>Assessment centre</span><small>Take mocks, topic tests and weakness checks when you need formal proof.</small></Link>
    <Link href="/live-assessment"><span>Live assessment</span><small>Join scheduled parent-supervised AVORA sessions.</small></Link>
    <Link href="/parent-connect"><span>Parent connection</span><small>Give your parent a secure one-time code to connect to your progress.</small></Link>
    <Link href="/support"><span>Human support</span><small>Message a real AVORA support person inside the app.</small></Link>
