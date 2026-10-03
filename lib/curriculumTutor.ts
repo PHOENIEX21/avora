@@ -4,8 +4,10 @@ import {getSentCurriculumCourse,getSentCurriculumUnits} from './sentCurriculumRu
 import {teachingMapFor} from './deepTeachingArchitecture';
 import {getNerdc2025DeepUnits} from './nerdc2025Teaching';
 import {officialNerdc2025Topic,isNerdc2025Class} from './nerdc2025Official';
+import {jss3EnglishLessons,jss3EnglishTutorPlan} from './jss3EnglishTeaching';
 
 export function getOfficialTopicNames(classLevel:string,subject:string):string[]{
+ if(classLevel==='JSS3'&&subject==='English Language')return jss3EnglishLessons.map(x=>x.topic);
  return masterTopics(classLevel,subject).map(x=>x.topic);
 }
 
@@ -53,6 +55,7 @@ function applyTeachingMap(units:TutorUnit[],classLevel:string,topic:string){
 }
 
 export function getCurriculumTutorPlan(classLevel:string,subject:string,topic:string):TutorPlan|undefined{
+ if(classLevel==='JSS3'&&subject==='English Language'){const authored=jss3EnglishTutorPlan(topic);return authored?{...authored,units:applyTeachingMap(authored.units,classLevel,topic)}:undefined;}
  // Source courses remain supported for owner/audit use but are not surfaced as curriculum topics.
  const sourceCourse=getSentCurriculumCourse(classLevel,subject,topic);
  if(sourceCourse)return {...sourceCourse,units:applyTeachingMap(sourceCourse.units,classLevel,topic)};
