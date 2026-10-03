@@ -19,7 +19,8 @@ CREATE TABLE IF NOT EXISTS learner_note_images (
  storage_key text NOT NULL UNIQUE,
  original_name text NOT NULL,
  mime_type text NOT NULL CHECK(mime_type IN ('image/jpeg','image/png','image/webp')),
- byte_size integer NOT NULL CHECK(byte_size>0 AND byte_size<=8388608),
+ byte_size integer NOT NULL CHECK(byte_size>0 AND byte_size<=5242880),
+ image_bytes bytea NOT NULL,
  created_at timestamptz NOT NULL DEFAULT now()
 );
 CREATE INDEX IF NOT EXISTS idx_learner_note_images_note ON learner_note_images(note_id,created_at);
