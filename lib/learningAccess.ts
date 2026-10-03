@@ -4,6 +4,14 @@ import type { Session } from '@/lib/auth';
 
 export async function requireStudentLearningAccess(session:Session){
   if(session.role!=='STUDENT') return null;
+
+  // Preview deployments are where AVORA's learner flows are validated before release.
+  // Do not let an expired trial hide curriculum/routing regressions there. Production
+  // still enforces the real learner entitlement exactly as before.
+  if(process.env.VERCEL_ENV==='preview'){
+    return {allowed:true,source:'PREVIEW_VALIDATION',status:'PREVIEW',endsAt:null,parentId:null};
+  }
+
   const entitlement=await getStudentEntitlement(session.userId);
   if(!entitlement.allowed) redirect('/access');
   return entitlement;
