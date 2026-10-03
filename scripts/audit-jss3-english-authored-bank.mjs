@@ -14,5 +14,13 @@ if(direct<65) throw new Error('Direct authored question bank unexpectedly short:
 if(generated!==14) throw new Error('Expected 14 generated 20-question banks, found '+generated);
 const estimatedQuestions=direct+(generated*20);
 if(estimatedQuestions<340) throw new Error('Question coverage below floor: '+estimatedQuestions);
-for(const marker of ['performanceTasks','Mastery checkpoint','Official NERDC JSS1–JSS3 English Studies curriculum']) if(!src.includes(marker)) throw new Error('Missing quality marker: '+marker);
-console.log(JSON.stringify({lessons:registered.length,directQuestions:direct,generatedBanks:generated,estimatedQuestions,authority:'NERDC prior-cycle JSS3'},null,2));
+for(const marker of ['performanceTasks','Mastery checkpoint','Official NERDC JSS1–JSS3 English Studies curriculum','jss3EnglishTutorPlan','publicJss3EnglishExerciseQuestions','checkJss3EnglishExercise']) if(!src.includes(marker)) throw new Error('Missing quality/runtime marker: '+marker);
+const curriculum=fs.readFileSync(new URL('../lib/curriculumTutor.ts',import.meta.url),'utf8');
+const master=fs.readFileSync(new URL('../lib/masterCurriculum.ts',import.meta.url),'utf8');
+const tutorApi=fs.readFileSync(new URL('../app/api/tutor/route.ts',import.meta.url),'utf8');
+const checker=fs.readFileSync(new URL('../app/api/tutor/exercise-check/route.ts',import.meta.url),'utf8');
+for(const marker of ["jss3EnglishTutorPlan(topic)","jss3EnglishLessons.map(x=>x.topic)"]) if(!curriculum.includes(marker)) throw new Error('JSS3 English not wired into curriculumTutor: '+marker);
+for(const lesson of registered){const topicMatch=src.match(new RegExp('export const '+lesson+'[\\s\\S]*?topic:\\'([^\\']+)\\''));if(!topicMatch||!master.includes('topic: '+JSON.stringify(topicMatch[1])))throw new Error('Master curriculum missing authored topic for '+lesson);}
+if(!tutorApi.includes('publicJss3EnglishExerciseQuestions(requestedTopic,20)')) throw new Error('Tutor API does not expose JSS3 English authored exercises');
+if(!checker.includes('checkJss3EnglishExercise(questionId,answer)')) throw new Error('Exercise checker does not grade JSS3 English authored exercises');
+console.log(JSON.stringify({lessons:registered.length,directQuestions:direct,generatedBanks:generated,estimatedQuestions,runtimeIntegrated:true,exerciseIntegrated:true,authority:'NERDC prior-cycle JSS3'},null,2));
