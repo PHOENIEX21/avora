@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import {requireAdmin} from '@/lib/admin/access';
-import {getOfficialTopicNames,getDeepCurriculumLesson,deepLessonToTutorPlan} from '@/lib/curriculumTutor';
+import {getOfficialTopicNames,getCurriculumTutorPlan} from '@/lib/curriculumTutor';
 import {NCEE_DOMAINS,NCEE_PREP_CLASSES,nceeTopicsFor,nceeTopicById,type NceeDomain,type PrimaryPrepClass} from '@/lib/nceePrep';
 import {nceeRichDeepLesson} from '@/lib/nceeRichTeaching';
 
@@ -24,8 +24,7 @@ export default async function AcademicPreview({searchParams}:{searchParams:Promi
  const requested=String(sp.topic||'');
  const selectedJss=!primary&&jssTopics.includes(requested)?requested:'';
  const selectedNcee=primary?nceeTopics.find(x=>x.id===requested):undefined;
- const jssLesson=selectedJss?getDeepCurriculumLesson(classLevel,subject,selectedJss):undefined;
- const jssPlan=jssLesson?deepLessonToTutorPlan(jssLesson):undefined;
+ const jssPlan=selectedJss?getCurriculumTutorPlan(classLevel,subject,selectedJss):undefined;
  const nceeLesson=selectedNcee?nceeRichDeepLesson(nceeTopicById(selectedNcee.id)!):undefined;
 
  return <main className="shell admin-v103 academic-preview-page">
@@ -46,7 +45,7 @@ export default async function AcademicPreview({searchParams}:{searchParams:Promi
    {(primary?nceeTopics:jssTopics).map((t:any,i:number)=>{const id=primary?t.id:t;const title=primary?t.title:t;const active=requested===id;return <Link className={active?'active':''} key={id} href={`/admin/academic-preview?class=${enc(classLevel)}&subject=${enc(subject)}&topic=${enc(id)}`}><small>{String(i+1).padStart(2,'0')}</small><b>{title}</b><span>{active?'Open below ↓':'Inspect →'}</span></Link>})}
   </div></section>
 
-  {jssLesson&&jssPlan&&<section className="admin-panel academic-lesson-inspector learner-exact-preview"><header><span>EXACT LEARNER VIEW</span><h2>{jssLesson.topic}</h2><p>This is the same Tutor route and learner-facing lesson renderer used by students. The admin preview no longer reformats the lesson into source-unit cards.</p></header><div style={{border:'1px solid #dbe3ef',borderRadius:18,overflow:'hidden',background:'#fff'}}><iframe title={`Learner preview · ${classLevel} · ${subject} · ${jssLesson.topic}`} src={`/tutor?subject=${enc(subject)}&topic=${enc(jssLesson.topic)}&previewClass=${enc(classLevel)}`} style={{display:'block',width:'100%',height:'82vh',minHeight:760,border:0}} /></div><p style={{marginTop:12,fontSize:13}}>Preview only: this does not change the admin account's registered learner class or progress.</p></section>}
+  {selectedJss&&jssPlan&&<section className="admin-panel academic-lesson-inspector learner-exact-preview"><header><span>EXACT LEARNER VIEW</span><h2>{selectedJss}</h2><p>This is the same Tutor route and learner-facing lesson renderer used by students. The admin preview resolves the current authored curriculum directly instead of requiring an older deep-lesson registry entry first.</p></header><div style={{border:'1px solid #dbe3ef',borderRadius:18,overflow:'hidden',background:'#fff'}}><iframe title={`Learner preview · ${classLevel} · ${subject} · ${selectedJss}`} src={`/tutor?subject=${enc(subject)}&topic=${enc(selectedJss)}&previewClass=${enc(classLevel)}`} style={{display:'block',width:'100%',height:'82vh',minHeight:760,border:0}} /></div><p style={{marginTop:12,fontSize:13}}>Preview only: this does not change the admin account's registered learner class or progress.</p></section>}
 
   {nceeLesson&&<section className="admin-panel academic-lesson-inspector"><header><span>NCEE DEEP TEACHING PREVIEW</span><h2>{nceeLesson.title}</h2><p>{nceeLesson.objective}</p></header><div className="academic-inspector-stats"><span><b>{nceeLesson.definitions.length}</b> definitions</span><span><b>{nceeLesson.workedExamples.length}</b> worked examples</span><span><b>{nceeLesson.teachingPhases.length}</b> teaching phases</span><span><b>{nceeLesson.masteryChecks.length}</b> mastery checks</span></div><details open><summary>Big idea + why it works</summary><p>{nceeLesson.bigIdea}</p><p><b>Why:</b> {nceeLesson.whyItWorks}</p></details><details><summary>Prerequisites + definitions</summary>{nceeLesson.prerequisites.map(x=><p key={x}>✓ {x}</p>)}{nceeLesson.definitions.map(x=><article key={x.term}><b>{x.term}</b><p>{x.simple}</p><small>{x.use}</small></article>)}</details><details><summary>Eight-stage teaching journey</summary>{nceeLesson.teachingPhases.map((x,i)=><p key={x.name}><b>{i+1}. {x.name}:</b> {x.text}</p>)}</details><details><summary>Five worked examples</summary>{nceeLesson.workedExamples.map((x,i)=><article key={i}><b>Example {i+1}: {x.prompt}</b><p>Answer: {x.answer}</p><small>{x.explanation}</small></article>)}</details><details><summary>Misconception repair</summary>{nceeLesson.misconceptionRepairs.map((x,i)=><p key={i}><b>Mistake:</b> {x.mistake}<br/><b>Repair:</b> {x.repair}</p>)}</details><details><summary>Guided + independent practice</summary>{nceeLesson.guidedPractice.map(x=><p key={'g'+x}>GUIDED · {x}</p>)}{nceeLesson.independentPractice.map(x=><p key={'i'+x}>INDEPENDENT · {x}</p>)}</details><div className="academic-master-gate"><b>Mastery checks</b>{nceeLesson.masteryChecks.map(x=><p key={x}>□ {x}</p>)}</div></section>}
  </main>
