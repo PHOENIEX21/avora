@@ -51,9 +51,9 @@ export default async function Welcome(){
   {u.class_level==='JSS3'&&!diagnosticComplete&&<section className="shell diagnostic-home-callout"><div><span className="section-kicker">START HERE · ABOUT 5 QUESTIONS</span><h2>Help AVORA find your starting point.</h2><p>You can still explore Learn, Tutor and Exam. This short check simply makes your recommendations more personal.</p></div><Link href="/diagnostic" className="premium-primary">Start diagnostic <span>→</span></Link></section>}
   <section className="shell premium-welcome">
    <div className="welcome-main">
-    <div className="welcome-eyebrow"><span>HOME · YOUR LEARNING SPACE</span><i></i><b>{exam} · {u.preferred_subject||'Mathematics'}</b></div>
+    <div className="welcome-eyebrow"><span>TODAY · LEARN WHAT MATTERS</span><i></i><b>{exam} · {u.preferred_subject||'Mathematics'}</b></div>
     <h1>Your learning plan, <span>{first}.</span></h1>
-    <p className="welcome-summary">Here’s what AVORA recommends next based on your learning evidence. Continue where you stopped, choose another subject, or follow today’s focus.</p>
+    <p className="welcome-summary">AVORA connects what your class is learning, the school work you bring in, and what you need to remember. Learn today’s work, revisit weak areas, and build evidence that lasts.</p>
     <div className="welcome-actions">
      <Link href="/learn" className="premium-primary">Continue learning <span>→</span></Link>
      <Link href="/learn" className="premium-secondary">Choose a subject</Link>
@@ -110,8 +110,8 @@ export default async function Welcome(){
   </section>}
 
   <section className="shell journey-guide">
-   <div className="journey-head"><span className="section-kicker">HOW TO USE AVORA</span><h2>Every feature has one job.</h2><p>You should always know what to do next and why.</p></div>
-   <div className="journey-steps"><Link href="/exam"><b>01 · Exam</b><span>Find the gaps</span><small>Take a timed paper so AVORA can see where exam skills break down.</small></Link><Link href="/tutor"><b>02 · Tutor</b><span>Learn the gap</span><small>Choose a topic and learn it through simple, visual or guided teaching.</small></Link><Link href="/practice"><b>03 · Practice</b><span>Prove it alone</span><small>Answer without tutor support so the result counts as independent evidence.</small></Link><Link href="/progress"><b>04 · Progress</b><span>See mastery</span><small>Know what is weak, developing, secure and ready for the exam.</small></Link></div>
+   <div className="journey-head"><span className="section-kicker">THE AVORA LEARNING LOOP</span><h2>School today. Understanding now. Memory for later.</h2><p>Every part of AVORA feeds the same learning record, so lessons, school assignments and revision work together.</p></div>
+   <div className="journey-steps"><Link href="/learn"><b>01 · Learn</b><span>Understand today’s curriculum</span><small>Follow verified class topics and learn them deeply before trying to memorise answers.</small></Link><Link href="/school-work"><b>02 · School Work</b><span>Bring in what your teacher gives you</span><small>Keep real assignments connected to the topics they test instead of losing them after submission.</small></Link><Link href="/practice"><b>03 · Review</b><span>Return to what needs strengthening</span><small>AVORA mixes fresh work with older mastered and weak questions so understanding lasts.</small></Link><Link href="/progress"><b>04 · Progress</b><span>See what the evidence says</span><small>Know what is taught, what is independently proven, and what should come back next.</small></Link></div>
   </section>
 
   <section className="shell home-promise">
