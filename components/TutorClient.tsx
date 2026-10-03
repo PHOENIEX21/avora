@@ -349,11 +349,23 @@ export default function TutorClient(){
  const guidedQ=useMemo(()=>{if(!unit||!questions.length)return undefined;const ranked=[...questions].map(q=>({q,score:questionFit(q,unit)})).sort((a,b)=>b.score-a.score);const matched=ranked.filter(x=>x.score>=1);if(matched.length)return matched[unitIndex%matched.length].q;return questions[unitIndex%questions.length]},[questions,unit,unitIndex]);
  const lessonQuickCheck=useMemo(()=>{if(!unit||!exerciseQuestions.length)return undefined;const ranked=[...exerciseQuestions].filter(q=>q.type==='MULTIPLE_CHOICE'&&Array.isArray(q.options)&&q.options.length>=2).map(q=>({q,score:questionFit(q,unit)})).sort((a,b)=>b.score-a.score);return ranked.find(x=>x.score>=1)?.q},[exerciseQuestions,unit]);
 
- useEffect(()=>{setSubject(requestedSubject==='English Language'?'English Language':'Mathematics');},[requestedSubject]);
- useEffect(()=>{if(requestedTopic&&requestedTopic!==topic)setTopic(requestedTopic);},[requestedTopic,topic]);
- // The lesson loader intentionally re-runs only when the selected topic/subject changes.
+ useEffect(()=>{
+  const nextSubject=requestedSubject==='English Language'?'English Language':'Mathematics';
+  setSubject(current=>current===nextSubject?current:nextSubject);
+  setTopic(current=>current===requestedTopic?current:requestedTopic);
+  if(['JSS1','JSS2','JSS3'].includes(requestedPreviewClass)){
+   setPreviewClass(current=>current===requestedPreviewClass?current:requestedPreviewClass);
+  }
+ },[requestedSubject,requestedTopic,requestedPreviewClass]);
+
+ // Treat the URL as the single source of truth for route-driven lesson changes.
+ // This avoids transient requests where a new topic is loaded with the previous subject.
  // eslint-disable-next-line react-hooks/exhaustive-deps
- useEffect(()=>{void load(topic,subject)},[subject,topic]);
+ useEffect(()=>{
+  const routeSubject=requestedSubject==='English Language'?'English Language':'Mathematics';
+  const routeTopic=requestedTopic;
+  void load(routeTopic,routeSubject);
+ },[requestedSubject,requestedTopic,requestedPreviewClass]);
  // stopAll is the current mounted playback cleanup; do not restart this effect on each render.
  // eslint-disable-next-line react-hooks/exhaustive-deps
  useEffect(()=>()=>stopAll(),[]);
@@ -391,8 +403,17 @@ export default function TutorClient(){
    }
   }catch(e:any){if(requestId===loadRequestRef.current)setError(e.message||'Could not prepare Tutor.')}finally{if(requestId===loadRequestRef.current){activeSessionKeyRef.current=chosen?`${subj}:${chosen}`:'';if(chosen)trackEvent('TUTOR_LESSON_OPENED',{subject:subj,topic:chosen,exam});setSessionReady(true);setLoading(false)}}
  }
- function selectTopic(t:string){setTopic(t);const u=new URLSearchParams({topic:t,subject});if(previewClass)u.set('previewClass',previewClass);router.replace('/tutor?'+u.toString());}
- function chooseSubject(s:string){setTopic('');setPlan(undefined);setTopics([]);setQuestions([]);setExerciseQuestions([]);setLoading(true);const u=new URLSearchParams({subject:s});if(previewClass||classLevel)u.set('previewClass',previewClass||classLevel);router.replace('/tutor?'+u.toString());}
+ function selectTopic(t:string){
+  const u=new URLSearchParams({topic:t,subject});
+  if(previewClass)u.set('previewClass',previewClass);
+  router.replace('/tutor?'+u.toString());
+ }
+ function chooseSubject(s:string){
+  setPlan(undefined);setTopics([]);setQuestions([]);setExerciseQuestions([]);setLoading(true);
+  const u=new URLSearchParams({subject:s});
+  if(previewClass||classLevel)u.set('previewClass',previewClass||classLevel);
+  router.replace('/tutor?'+u.toString());
+ }
 
  function scheduleAdvance(ms:number){clearTimer();if(event?.kind==='check')return;const token=playToken.current;timer.current=window.setTimeout(()=>{if(pausedRef.current||token!==playToken.current)return;if(eventIndex<events.length-1)setEventIndex(i=>i+1);else continueAfterGuided()},ms)}
  function playCurrent(){
