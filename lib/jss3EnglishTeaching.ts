@@ -434,7 +434,7 @@ export const jss3AdverbialsTenses:Jss3EnglishLesson={
  ['“For two hours” commonly expresses…',['duration/time','place','manner','degree'],'duration/time','It answers how long.'],
  ['“With confidence” commonly expresses…',['manner','time','frequency','future'],'manner','It describes how the action is done.'],
  ['The best tense choice depends mainly on…',['intended time/meaning and context','one isolated time word only','sentence length','capital letters'],'intended time/meaning and context','Context controls grammatical choice.'],
- ['NERDC expects learners to do more than identify forms; they must…',['use them correctly in sentences','copy definitions only','avoid passages','memorise labels only'],'use them correctly in sentences','Production is an explicit objective.')
+ ['NERDC expects learners to do more than identify forms; they must…',['use them correctly in sentences','copy definitions only','avoid passages','memorise labels only'],'use them correctly in sentences','Production is an explicit objective.']
  ])
 };
 
@@ -474,7 +474,7 @@ export const jss3AdverbsConjunctionsPrepositions:Jss3EnglishLesson={
  ['Parallel structure: “She enjoys both…”',['reading and writing','reading and to write','to read and writing','read and to writing'],'reading and writing','Correlative pairs should join parallel forms.'],
  ['“Responsible ___ the project” normally takes…',['for','on','at','by'],'for','“Responsible for” is the standard collocation.'],
  ['Classification of a word depends strongly on…',['its function in context','its first letter','sentence length','font'],'its function in context','Words such as before can serve different roles.'],
- ['NERDC expects learners to…',['identify and make sentences with these classes','name them only','avoid original sentences','study only spelling'],'identify and make sentences with these classes','Use in sentences is an explicit evaluation target.')
+ ['NERDC expects learners to…',['identify and make sentences with these classes','name them only','avoid original sentences','study only spelling'],'identify and make sentences with these classes','Use in sentences is an explicit evaluation target.']
  ])
 };
 
@@ -515,7 +515,7 @@ export const jss3Voice:Jss3EnglishLesson={
  ['“Workers are repairing the road” →…',['The road is being repaired by workers','The road was repaired by workers','The road being repair','Workers were road'],'The road is being repaired by workers','Present progressive is preserved.'],
  ['Which error drops the passive auxiliary?',['The road repaired yesterday','The road was repaired yesterday','The road is repaired regularly','The road has been repaired'],'The road repaired yesterday','A finite passive needs the appropriate BE auxiliary.'],
  ['Voice choice should depend partly on…',['information focus','letter count','font','paragraph number'],'information focus','Writers choose what to foreground.'],
- ['NERDC expects learners to…',['identify and make active/passive sentences','memorise one definition only','avoid passages','use passive everywhere'],'identify and make active/passive sentences','Both recognition and production are required.')
+ ['NERDC expects learners to…',['identify and make active/passive sentences','memorise one definition only','avoid passages','use passive everywhere'],'identify and make active/passive sentences','Both recognition and production are required.']
  ])
 };
 
@@ -560,7 +560,7 @@ export const jss3Modals:Jss3EnglishLesson={
  ['Which is wrong?',['He can goes','He can go','He might come','He should read'],'He can goes','Modal takes base verb without -s.'],
  ['Pronoun changes in reported speech depend on…',['speaker/reporter viewpoint','a fixed replacement table only','sentence length','punctuation only'],'speaker/reporter viewpoint','Reference determines the correct pronoun.'],
  ['Backshift should be…',['guided by reporting context and meaning','applied blindly in every case','never used','used only in letters'],'guided by reporting context and meaning','Current truths/context may affect tense choice.'],
- ['NERDC’s modal-form evaluation also includes…',['question tags and direct/indirect forms','only modal spelling','only poetry','only letter addresses'],'question tags and direct/indirect forms','The official evaluation row explicitly includes them.')
+ ['NERDC’s modal-form evaluation also includes…',['question tags and direct/indirect forms','only modal spelling','only poetry','only letter addresses'],'question tags and direct/indirect forms','The official evaluation row explicitly includes them.']
  ])
 };
 
@@ -601,7 +601,7 @@ export const jss3Folktales:Jss3EnglishLesson={
  ['The resolution is…',['how the central problem/event is settled','the first character name','the heading','the salutation'],'how the central problem/event is settled','It closes the story conflict.'],
  ['A climax is…',['a major turning/high point','an address','a conjunction','a footnote'],'a major turning/high point','It is often the peak of conflict.'],
  ['NERDC requires learners to narrate…',['a folktale','only definitions','only a list of features','only MCQs'],'a folktale','Performance is explicit.'],
- ['Mastery includes…',['feature identification, retelling, theme/moral and narration','memorising one title only','reading silently only','copying the tale word-for-word'],'feature identification, retelling, theme/moral and narration','All official objectives are represented.')
+ ['Mastery includes…',['feature identification, retelling, theme/moral and narration','memorising one title only','reading silently only','copying the tale word-for-word'],'feature identification, retelling, theme/moral and narration','All official objectives are represented.']
  ]),
  performanceTasks:['Retell a non-African folktale in 2–3 minutes preserving cause and effect.','Identify two features, one theme and one moral, citing events that support each.','Narrate a folktale to a small audience using purposeful voice and pauses.']
 };
@@ -641,7 +641,7 @@ export const jss3MythsLegends:Jss3EnglishLesson={
  ['Theme differs from moral because theme is more…',['an explored central idea','a direct instruction necessarily','a date','a salutation'],'an explored central idea','Moral is lesson; theme is broader idea.'],
  ['A legend’s extraordinary detail should be treated as…',['part of the narrative tradition, not automatically verified history','certain documentary fact','grammar error','irrelevant always'],'part of the narrative tradition, not automatically verified history','Literary legend is not identical to historical proof.'],
  ['A respectful comparison should…',['use features of selected texts','stereotype entire peoples','rank cultures','invent customs'],'use features of selected texts','Evidence-based comparison avoids stereotypes.'],
- ['Mastery requires…',['retelling, theme explanation and moral identification','only naming myth','only naming legend','only MCQ recognition'],'retelling, theme explanation and moral identification','These match NERDC objectives.')
+ ['Mastery requires…',['retelling, theme explanation and moral identification','only naming myth','only naming legend','only MCQ recognition'],'retelling, theme explanation and moral identification','These match NERDC objectives.']
  ]),
  performanceTasks:['Retell one selected myth and one legend, keeping key cultural details accurate.','For each narrative, cite two events supporting its theme and one moral lesson.','Explain orally why one selected story is better classified as myth, legend, or a boundary case.']
 };
@@ -682,7 +682,7 @@ export const jss3Prose:Jss3EnglishLesson={
  ['Writing fiction permits…',['invented events presented as story','invented facts labelled verified news','no organisation','no characters ever'],'invented events presented as story','Fiction openly uses imagination.'],
  ['Writing non-fiction requires special attention to…',['factual accuracy','inventing evidence','magic','rhyme scheme'],'factual accuracy','It claims to represent reality.'],
  ['NERDC expects learners to…',['differentiate prose types and write stories','identify title only','avoid reading stories','study only poetry'],'differentiate prose types and write stories','The prose row includes reading, differentiation and writing.'],
- ['Prose mastery combines…',['comprehension, analysis and creation','memorisation of names only','spelling only','MCQ guessing'],'comprehension, analysis and creation','The curriculum expects active literary competence.')
+ ['Prose mastery combines…',['comprehension, analysis and creation','memorisation of names only','spelling only','MCQ guessing'],'comprehension, analysis and creation','The curriculum expects active literary competence.']
  ]),
  performanceTasks:['Read a short story and produce a plot map with conflict, climax and resolution.','Write a paragraph proving one character trait with three pieces of textual evidence.','Write a 500-word fictional or non-fiction prose piece and label which type it is and why.']
 };
@@ -726,7 +726,7 @@ export const jss3Poetry:Jss3EnglishLesson={
  ['Before analysing deeply, it helps to…',['paraphrase difficult lines and identify situation','count letters','ignore speaker','skip reading aloud'],'paraphrase difficult lines and identify situation','Basic comprehension supports analysis.'],
  ['NERDC poetry types include…',['dirge, epic, lyric and dramatic','formal, informal, memo, report','noun, verb, adjective, adverb','scan, skim, survey only'],'dirge, epic, lyric and dramatic','These examples appear in the official content.'],
  ['Poetry mastery includes creation because learners should…',['write simple poems','only identify titles','only copy poems','avoid performance'],'write simple poems','Writing is an explicit objective.'],
- ['A good poetry performance should…',['use rhythm and meaningfully placed pauses','race through lines','ignore punctuation/meaning','stress every syllable equally'],'use rhythm and meaningfully placed pauses','Oral delivery should serve meaning.')
+ ['A good poetry performance should…',['use rhythm and meaningfully placed pauses','race through lines','ignore punctuation/meaning','stress every syllable equally'],'use rhythm and meaningfully placed pauses','Oral delivery should serve meaning.']
  ]),
  performanceTasks:['Recite a selected poem with marked rhythm, stress and sense pauses.','Analyse one image and one sound device by explaining their effect on meaning/mood.','Write two short poems of different types or purposes and revise them after reading aloud.']
 };
@@ -771,7 +771,7 @@ export const jss3Drama:Jss3EnglishLesson={
  ['Over-explanatory dialogue sounds unnatural when…',['characters tell each other facts both already know solely for audience','a character asks a genuine question','conflict changes','a secret is revealed naturally'],'characters tell each other facts both already know solely for audience','Exposition should be motivated.'],
  ['NERDC specifically requires learners to identify…',['props and costumes','only theme','only title','only author name'],'props and costumes','These are explicit objectives.'],
  ['NERDC also requires learners to…',['write a play','only read definitions','avoid performance','study only prose'],'write a play','Creation is an explicit performance objective.'],
- ['Drama mastery is complete when a learner can…',['analyse and perform/create','name one prop only','memorise a definition only','answer MCQs only'],'analyse and perform/create','The strand combines reading, analysis, writing and performance.')
+ ['Drama mastery is complete when a learner can…',['analyse and perform/create','name one prop only','memorise a definition only','answer MCQs only'],'analyse and perform/create','The strand combines reading, analysis, writing and performance.']
  ]),
  performanceTasks:['Read and perform a short scene, using purposeful movement, voice, props and cues.','Annotate a script for theme, conflict, setting, characterisation, essential props and costumes.','Write a 3–5 page short play with 2–4 characters, clear conflict, stage directions and a performable resolution, then stage a reading.']
 };
