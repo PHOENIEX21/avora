@@ -387,7 +387,7 @@ export default function TutorClient(){
   }catch(e:any){if(requestId===loadRequestRef.current)setError(e.message||'Could not prepare Tutor.')}finally{if(requestId===loadRequestRef.current){activeSessionKeyRef.current=chosen?`${subj}:${chosen}`:'';if(chosen)trackEvent('TUTOR_LESSON_OPENED',{subject:subj,topic:chosen,exam});setSessionReady(true);setLoading(false)}}
  }
  function selectTopic(t:string){setTopic(t);const u=new URLSearchParams({topic:t,subject});if(previewClass)u.set('previewClass',previewClass);router.replace('/tutor?'+u.toString());}
- function chooseSubject(s:string){setSubject(s);setTopic('');router.replace('/tutor?subject='+encodeURIComponent(s));}
+ function chooseSubject(s:string){setTopic('');setPlan(undefined);setTopics([]);setQuestions([]);setExerciseQuestions([]);setLoading(true);const u=new URLSearchParams({subject:s});if(previewClass||classLevel)u.set('previewClass',previewClass||classLevel);router.replace('/tutor?'+u.toString());}
 
  function scheduleAdvance(ms:number){clearTimer();if(event?.kind==='check')return;const token=playToken.current;timer.current=window.setTimeout(()=>{if(pausedRef.current||token!==playToken.current)return;if(eventIndex<events.length-1)setEventIndex(i=>i+1);else continueAfterGuided()},ms)}
  function playCurrent(){
