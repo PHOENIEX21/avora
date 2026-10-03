@@ -124,7 +124,7 @@ export const jss3ReadingSpeed: Jss3EnglishLesson = {
  Q('j3e-speed-18','Referencing skill helps a learner…',['locate needed information efficiently','avoid books','replace comprehension with guessing','read only fiction'],'locate needed information efficiently','Indexes and contents pages guide rapid retrieval.'),
  Q('j3e-speed-19','Survey → skim → focused reading is useful because it moves from…',['overview to main ideas to needed detail','detail to guessing','memorisation to copying','speech to spelling'],'overview to main ideas to needed detail','The sequence progressively narrows attention.'),
  Q('j3e-speed-20','NERDC mastery of reading for speed still requires…',['comprehension of selected material','speed alone','no questions afterward','oral memorisation only'],'comprehension of selected material','The evaluation guide explicitly includes comprehension.')
- ]},
+ ],
  performanceTasks:['Survey a textbook chapter in 45 seconds and report its structure without reading every paragraph.','Skim a 400-word passage and state its main idea plus three major points.','Scan a timetable/notice for five specified details against a timer, then verify each in context.']
 };
 
@@ -170,7 +170,7 @@ export const jss3ReadingSummary: Jss3EnglishLesson = {
  Q('j3e-rsum-18','After writing a summary, compare it with the passage mainly to…',['check fidelity and missing essentials','make it longer automatically','add opinions','copy phrases'],'check fidelity and missing essentials','Verification catches distortion and omission.'),
  Q('j3e-rsum-19','Which is a useful final-summary test?',['Does every word copy the original?','Is it shorter, accurate and complete in essentials?','Did I add my view?','Did I include every example?'],'Is it shorter, accurate and complete in essentials?','Those are core summary qualities.'),
  Q('j3e-rsum-20','NERDC expects learners to identify…',['topic sentences and key ideas','only spelling errors','only character names','only dates'],'topic sentences and key ideas','These are explicit performance objectives.')
- ]},
+ ],
  performanceTasks:['Label the topic sentence, main idea and supporting details in five varied paragraphs.','Reduce a 250-word passage to 70–90 words without adding information.','Summarise three paragraphs first separately and then as one coherent whole.']
 };
 
@@ -218,7 +218,8 @@ export const jss3Composition: Jss3EnglishLesson={
  ['Expository writing about BECE preparation should…',['explain how and why strategies work','tell an unrelated folktale','attack weak students','avoid organisation'],'explain how and why strategies work','Exposition develops clear information.'],
  ['The body of a composition should…',['develop the main ideas in logical paragraphs','contain only the title','repeat the introduction word-for-word','ignore the purpose'],'develop the main ideas in logical paragraphs','The body carries the development.'],
  ['A strong composition is best described as…',['relevant, organised and appropriately expressed','long regardless of relevance','full of difficult words','one unbroken paragraph'],'relevant, organised and appropriately expressed','Quality depends on purpose, coherence and control.']
- ])};
+ ])
+};
 
 export const jss3LetterWriting:Jss3EnglishLesson={
  topic:'Revision of Informal and Formal Letter Writing',strand:'Writing',authority:'Official NERDC JSS1–JSS3 English Studies curriculum — JSS3 prior-cycle authority',
@@ -258,7 +259,8 @@ export const jss3LetterWriting:Jss3EnglishLesson={
  ['Which is inappropriate in a formal letter?',['texting abbreviations and uncontrolled slang','clear evidence','respectful request','specific heading'],'texting abbreviations and uncontrolled slang','Formal register requires conventional language.'],
  ['Final editing should check…',['format, content, register and mechanics','only address length','only handwriting','only greeting'],'format, content, register and mechanics','All dimensions matter.'],
  ['The best way to choose formal vs informal is by…',['relationship and communicative purpose','topic length','number of paragraphs','day of the week'],'relationship and communicative purpose','Audience/purpose determines the form.']
- ])};
+ ])
+};
 
 export const jss3SummaryWriting:Jss3EnglishLesson={
  topic:'Summary Writing',strand:'Writing',authority:'Official NERDC JSS1–JSS3 English Studies curriculum — JSS3 prior-cycle authority',
@@ -299,7 +301,8 @@ export const jss3SummaryWriting:Jss3EnglishLesson={
  ['Paraphrase should…',['change wording without changing meaning','reverse cause and effect','add judgement','remove every key idea'],'change wording without changing meaning','Fidelity is essential.'],
  ['A final summary check should remove…',['duplication','required points','grammar','meaning'],'duplication','Repeated points waste space and credit.'],
  ['NERDC expects learners to summarise…',['passages/paragraphs through key ideas','only poems','only letters','only dialogue'],'passages/paragraphs through key ideas','This is explicit in the evaluation guide.']
- ])};
+ ])
+};
 
 
 export const jss3Phonemes:Jss3EnglishLesson={
@@ -342,7 +345,7 @@ export const jss3Phonemes:Jss3EnglishLesson={
  ['Connected-speech practice means…',['using target sounds in natural phrases/sentences','writing IPA only','reading letters separately','avoiding sentences'],'using target sounds in natural phrases/sentences','Production must transfer beyond isolated words.'],
  ['Which is NOT enough for phoneme mastery?',['knowing symbols without hearing/producing sounds','discrimination practice','sentence production','minimal-pair listening'],'knowing symbols without hearing/producing sounds','The topic is listening and speaking.'],
  ['A good self-correction routine is…',['record, compare, target one contrast, repeat','speak faster without listening','change every sound at once','avoid models'],'record, compare, target one contrast, repeat','Focused feedback supports improvement.']
- ])},
+ ]),
  performanceTasks:['Listen to 12 minimal-pair items and identify the word heard before seeing spelling.','Record five sentences containing long/short vowels, /f/-/v/ contrasts and clusters; compare with a model.','Build and pronounce ten consonant clusters from slow segmentation to natural speech.']
 };
 
@@ -385,7 +388,7 @@ export const jss3Prosody:Jss3EnglishLesson={
  ['Before reciting a poem, first…',['understand its meaning','memorise arrows only','ignore punctuation','increase speed'],'understand its meaning','Prosody should express content.'],
  ['NERDC expects learners to…',['identify and produce appropriate patterns','identify only on paper','avoid speaking','study spelling only'],'identify and produce appropriate patterns','Listening and speaking require performance.'],
  ['Prosodic mastery is shown by…',['meaningful spoken use, not symbol memorisation','drawing arrows only','writing definitions only','reading silently'],'meaningful spoken use, not symbol memorisation','Production demonstrates control.']
- ])},
+ ]),
  performanceTasks:['Record the same short sentence with falling, rising and fall-rise contours and explain the meaning difference.','Move contrastive stress across a five-word sentence and explain each focus change.','Mark and recite a short poem with sense groups, stress and rhythm, then self-evaluate.']
 };
 
@@ -432,7 +435,8 @@ export const jss3AdverbialsTenses:Jss3EnglishLesson={
  ['“With confidence” commonly expresses…',['manner','time','frequency','future'],'manner','It describes how the action is done.'],
  ['The best tense choice depends mainly on…',['intended time/meaning and context','one isolated time word only','sentence length','capital letters'],'intended time/meaning and context','Context controls grammatical choice.'],
  ['NERDC expects learners to do more than identify forms; they must…',['use them correctly in sentences','copy definitions only','avoid passages','memorise labels only'],'use them correctly in sentences','Production is an explicit objective.')
- ])};
+ ])
+};
 
 export const jss3AdverbsConjunctionsPrepositions:Jss3EnglishLesson={
  topic:'Adverbs, Conjunctions and Prepositions',strand:'Grammatical Accuracy',authority:'Official NERDC JSS1–JSS3 English Studies curriculum — JSS3 prior-cycle authority',
@@ -471,7 +475,8 @@ export const jss3AdverbsConjunctionsPrepositions:Jss3EnglishLesson={
  ['“Responsible ___ the project” normally takes…',['for','on','at','by'],'for','“Responsible for” is the standard collocation.'],
  ['Classification of a word depends strongly on…',['its function in context','its first letter','sentence length','font'],'its function in context','Words such as before can serve different roles.'],
  ['NERDC expects learners to…',['identify and make sentences with these classes','name them only','avoid original sentences','study only spelling'],'identify and make sentences with these classes','Use in sentences is an explicit evaluation target.')
- ])};
+ ])
+};
 
 export const jss3Voice:Jss3EnglishLesson={
  topic:'Active and Passive Verbs',strand:'Grammatical Accuracy',authority:'Official NERDC JSS1–JSS3 English Studies curriculum — JSS3 prior-cycle authority',
@@ -511,7 +516,8 @@ export const jss3Voice:Jss3EnglishLesson={
  ['Which error drops the passive auxiliary?',['The road repaired yesterday','The road was repaired yesterday','The road is repaired regularly','The road has been repaired'],'The road repaired yesterday','A finite passive needs the appropriate BE auxiliary.'],
  ['Voice choice should depend partly on…',['information focus','letter count','font','paragraph number'],'information focus','Writers choose what to foreground.'],
  ['NERDC expects learners to…',['identify and make active/passive sentences','memorise one definition only','avoid passages','use passive everywhere'],'identify and make active/passive sentences','Both recognition and production are required.')
- ])};
+ ])
+};
 
 export const jss3Modals:Jss3EnglishLesson={
  topic:'Modal Forms, Question Tags, Direct and Indirect Forms',strand:'Grammatical Accuracy',authority:'Official NERDC JSS1–JSS3 English Studies curriculum — JSS3 prior-cycle authority',
@@ -555,7 +561,8 @@ export const jss3Modals:Jss3EnglishLesson={
  ['Pronoun changes in reported speech depend on…',['speaker/reporter viewpoint','a fixed replacement table only','sentence length','punctuation only'],'speaker/reporter viewpoint','Reference determines the correct pronoun.'],
  ['Backshift should be…',['guided by reporting context and meaning','applied blindly in every case','never used','used only in letters'],'guided by reporting context and meaning','Current truths/context may affect tense choice.'],
  ['NERDC’s modal-form evaluation also includes…',['question tags and direct/indirect forms','only modal spelling','only poetry','only letter addresses'],'question tags and direct/indirect forms','The official evaluation row explicitly includes them.')
- ])};
+ ])
+};
 
 
 export const jss3Folktales:Jss3EnglishLesson={
@@ -595,7 +602,7 @@ export const jss3Folktales:Jss3EnglishLesson={
  ['A climax is…',['a major turning/high point','an address','a conjunction','a footnote'],'a major turning/high point','It is often the peak of conflict.'],
  ['NERDC requires learners to narrate…',['a folktale','only definitions','only a list of features','only MCQs'],'a folktale','Performance is explicit.'],
  ['Mastery includes…',['feature identification, retelling, theme/moral and narration','memorising one title only','reading silently only','copying the tale word-for-word'],'feature identification, retelling, theme/moral and narration','All official objectives are represented.')
- ])},
+ ]),
  performanceTasks:['Retell a non-African folktale in 2–3 minutes preserving cause and effect.','Identify two features, one theme and one moral, citing events that support each.','Narrate a folktale to a small audience using purposeful voice and pauses.']
 };
 
@@ -635,7 +642,7 @@ export const jss3MythsLegends:Jss3EnglishLesson={
  ['A legend’s extraordinary detail should be treated as…',['part of the narrative tradition, not automatically verified history','certain documentary fact','grammar error','irrelevant always'],'part of the narrative tradition, not automatically verified history','Literary legend is not identical to historical proof.'],
  ['A respectful comparison should…',['use features of selected texts','stereotype entire peoples','rank cultures','invent customs'],'use features of selected texts','Evidence-based comparison avoids stereotypes.'],
  ['Mastery requires…',['retelling, theme explanation and moral identification','only naming myth','only naming legend','only MCQ recognition'],'retelling, theme explanation and moral identification','These match NERDC objectives.')
- ])},
+ ]),
  performanceTasks:['Retell one selected myth and one legend, keeping key cultural details accurate.','For each narrative, cite two events supporting its theme and one moral lesson.','Explain orally why one selected story is better classified as myth, legend, or a boundary case.']
 };
 
@@ -676,7 +683,7 @@ export const jss3Prose:Jss3EnglishLesson={
  ['Writing non-fiction requires special attention to…',['factual accuracy','inventing evidence','magic','rhyme scheme'],'factual accuracy','It claims to represent reality.'],
  ['NERDC expects learners to…',['differentiate prose types and write stories','identify title only','avoid reading stories','study only poetry'],'differentiate prose types and write stories','The prose row includes reading, differentiation and writing.'],
  ['Prose mastery combines…',['comprehension, analysis and creation','memorisation of names only','spelling only','MCQ guessing'],'comprehension, analysis and creation','The curriculum expects active literary competence.')
- ])},
+ ]),
  performanceTasks:['Read a short story and produce a plot map with conflict, climax and resolution.','Write a paragraph proving one character trait with three pieces of textual evidence.','Write a 500-word fictional or non-fiction prose piece and label which type it is and why.']
 };
 
@@ -720,7 +727,7 @@ export const jss3Poetry:Jss3EnglishLesson={
  ['NERDC poetry types include…',['dirge, epic, lyric and dramatic','formal, informal, memo, report','noun, verb, adjective, adverb','scan, skim, survey only'],'dirge, epic, lyric and dramatic','These examples appear in the official content.'],
  ['Poetry mastery includes creation because learners should…',['write simple poems','only identify titles','only copy poems','avoid performance'],'write simple poems','Writing is an explicit objective.'],
  ['A good poetry performance should…',['use rhythm and meaningfully placed pauses','race through lines','ignore punctuation/meaning','stress every syllable equally'],'use rhythm and meaningfully placed pauses','Oral delivery should serve meaning.')
- ])},
+ ]),
  performanceTasks:['Recite a selected poem with marked rhythm, stress and sense pauses.','Analyse one image and one sound device by explaining their effect on meaning/mood.','Write two short poems of different types or purposes and revise them after reading aloud.']
 };
 
@@ -765,7 +772,7 @@ export const jss3Drama:Jss3EnglishLesson={
  ['NERDC specifically requires learners to identify…',['props and costumes','only theme','only title','only author name'],'props and costumes','These are explicit objectives.'],
  ['NERDC also requires learners to…',['write a play','only read definitions','avoid performance','study only prose'],'write a play','Creation is an explicit performance objective.'],
  ['Drama mastery is complete when a learner can…',['analyse and perform/create','name one prop only','memorise a definition only','answer MCQs only'],'analyse and perform/create','The strand combines reading, analysis, writing and performance.')
- ])},
+ ]),
  performanceTasks:['Read and perform a short scene, using purposeful movement, voice, props and cues.','Annotate a script for theme, conflict, setting, characterisation, essential props and costumes.','Write a 3–5 page short play with 2–4 characters, clear conflict, stage directions and a performable resolution, then stage a reading.']
 };
 
