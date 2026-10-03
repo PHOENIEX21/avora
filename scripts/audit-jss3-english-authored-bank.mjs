@@ -1,0 +1,18 @@
+import fs from 'node:fs';
+const src=fs.readFileSync(new URL('../lib/jss3EnglishTeaching.ts',import.meta.url),'utf8');
+const expected=['jss3CriticalEvaluation','jss3ReadingSpeed','jss3ReadingSummary','jss3Composition','jss3LetterWriting','jss3SummaryWriting','jss3Phonemes','jss3Prosody','jss3AdverbialsTenses','jss3AdverbsConjunctionsPrepositions','jss3Voice','jss3Modals','jss3Folktales','jss3MythsLegends','jss3Prose','jss3Poetry','jss3Drama'];
+const missing=expected.filter(x=>!src.includes('export const '+x));
+if(missing.length) throw new Error('Missing JSS3 English lessons: '+missing.join(', '));
+const final=src.match(/export const jss3EnglishLessons:[^=]*=\[([^\]]+)\]/s);
+if(!final) throw new Error('Missing final JSS3 English lesson registry');
+const registered=final[1].split(',').map(x=>x.trim()).filter(Boolean);
+if(registered.length!==17) throw new Error('Expected 17 registered lessons, found '+registered.length);
+for(const name of expected) if(!registered.includes(name)) throw new Error(name+' is authored but not registered');
+const direct=(src.match(/Q\('j3e-/g)||[]).length;
+const generated=(src.match(/makeQs\('j3e-/g)||[]).length;
+if(direct<65) throw new Error('Direct authored question bank unexpectedly short: '+direct);
+if(generated!==14) throw new Error('Expected 14 generated 20-question banks, found '+generated);
+const estimatedQuestions=direct+(generated*20);
+if(estimatedQuestions<340) throw new Error('Question coverage below floor: '+estimatedQuestions);
+for(const marker of ['performanceTasks','Mastery checkpoint','Official NERDC JSS1–JSS3 English Studies curriculum']) if(!src.includes(marker)) throw new Error('Missing quality marker: '+marker);
+console.log(JSON.stringify({lessons:registered.length,directQuestions:direct,generatedBanks:generated,estimatedQuestions,authority:'NERDC prior-cycle JSS3'},null,2));
