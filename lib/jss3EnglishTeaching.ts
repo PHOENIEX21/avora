@@ -5,10 +5,10 @@ export type Jss3EnglishQuestion = {
 };
 export type Jss3EnglishLesson = {
   topic: string; strand: 'Reading'|'Writing'|'Listening and Speaking'|'Grammatical Accuracy'|'Literature';
-  authority: string; objectives: string[]; plan: TutorPlan; questions: Jss3EnglishQuestion[];
+  authority: string; objectives: string[]; plan: {topic:string;objective:string;units:TutorUnit[]}; questions: Jss3EnglishQuestion[];
   performanceTasks?: string[];
 };
-const U=(title:string,body:string):TutorUnit=>({title,body});
+const U=(title:string,body:string):TutorUnit=>({title,terms:[],explain:body,example:'',check:''});
 const Q=(id:string,prompt:string,options:string[],correctAnswer:string,explanation:string):Jss3EnglishQuestion=>({id,prompt,options,correctAnswer,explanation});
 
 export const jss3CriticalEvaluation: Jss3EnglishLesson = {
@@ -770,3 +770,20 @@ export const jss3Drama:Jss3EnglishLesson={
 };
 
 export const jss3EnglishLessons: Jss3EnglishLesson[]=[jss3CriticalEvaluation,jss3ReadingSpeed,jss3ReadingSummary,jss3Composition,jss3LetterWriting,jss3SummaryWriting,jss3Phonemes,jss3Prosody,jss3AdverbialsTenses,jss3AdverbsConjunctionsPrepositions,jss3Voice,jss3Modals,jss3Folktales,jss3MythsLegends,jss3Prose,jss3Poetry,jss3Drama];
+function topicKey(value:string){return String(value||'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim()}
+export function jss3EnglishLessonByTopic(topic:string){const key=topicKey(topic);return jss3EnglishLessons.find(x=>topicKey(x.topic)===key)}
+export function jss3EnglishTutorPlan(topic:string):TutorPlan|undefined{
+ const lesson=jss3EnglishLessonByTopic(topic);if(!lesson)return undefined;
+ return {goal:lesson.plan.objective,why:`${lesson.authority}. AVORA teaches every authored unit before mastery is claimed.`,outcomes:lesson.objectives,units:lesson.plan.units};
+}
+export function publicJss3EnglishExerciseQuestions(topic:string,count=20){
+ const lesson=jss3EnglishLessonByTopic(topic);if(!lesson)return [];
+ return lesson.questions.slice(0,Math.max(0,count)).map(q=>({id:q.id,classLevel:'JSS3',subject:'English Language',topic:lesson.topic,prompt:q.prompt,type:'MULTIPLE_CHOICE',options:q.options,explanation:q.explanation,hint:'Use the exact rule, evidence or language function established in the lesson before choosing.',difficulty:2,skill:lesson.topic,source:'AVORA_AUTHORED_JSS3_ENGLISH_BANK'}));
+}
+export function checkJss3EnglishExercise(questionId:string,answer:string){
+ const q=jss3EnglishLessons.flatMap(l=>l.questions.map(question=>({lesson:l,question}))).find(x=>x.question.id===questionId);if(!q)return undefined;
+ const norm=(v:string)=>String(v||'').replace(/\s+/g,' ').trim().toLowerCase();const correct=norm(answer)===norm(q.question.correctAnswer);
+ const chosen=q.question.options.find(x=>norm(x)===norm(answer))||answer;const hint='Return to the lesson rule, evidence or language function and test every option against it.';
+ return {correct,correctAnswer:q.question.correctAnswer,explanation:q.question.explanation,hint:correct?'Correct. Explain the rule or evidence as well so the answer is transferable.':hint,topic:q.lesson.topic,skill:q.lesson.topic,concept:q.lesson.topic,solutionSteps:[q.question.explanation],misconception:correct?'The choice is correct; verify why the alternatives fail.':`Your choice was ${chosen}. Recheck it against the taught rule or evidence.`,optionReview:q.question.options.map(option=>({option,correct:norm(option)===norm(q.question.correctAnswer),note:norm(option)===norm(q.question.correctAnswer)?'This matches the taught rule or evidence.':norm(option)===norm(chosen)&&!correct?'This was your choice; it does not satisfy the governing rule or evidence.':'This option does not match the required rule, meaning or evidence.'})),finalAnswer:`Therefore, the correct answer is ${q.question.correctAnswer}.`};
+}
+
