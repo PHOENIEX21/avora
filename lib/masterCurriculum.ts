@@ -668,114 +668,138 @@ export const masterCurriculum:MasterCurriculumTopic[]=[
   {
     classLevel: "JSS3",
     subject: "English Language",
-    term: 1,
-    topic: "Speech Work: long/short vowel contrasts (extended, BECE-level); consonant contrasts (place/manner of articulation)",
+    term: null,
+    topic: "Reading for Critical Evaluation",
     foundation: false,
-    id: "jss3-eng-t1-speech-work-long-short-vowel-contrasts-extended-bece-level-c"
+    id: "jss3-eng-01-reading-for-critical-evaluation"
   },
   {
     classLevel: "JSS3",
     subject: "English Language",
-    term: 1,
-    topic: "Grammar: expressing obligation/necessity (must/have to/need to/ought to); expressing emotions (verb + preposition patterns)",
+    term: null,
+    topic: "Reading for Speed",
     foundation: false,
-    id: "jss3-eng-t1-grammar-expressing-obligation-necessity-must-have-to-need-to"
+    id: "jss3-eng-02-reading-for-speed"
   },
   {
     classLevel: "JSS3",
     subject: "English Language",
-    term: 1,
-    topic: "Comprehension: skimming vs scanning; word formation (prefixes and suffixes)",
+    term: null,
+    topic: "Reading for Summary",
     foundation: false,
-    id: "jss3-eng-t1-comprehension-skimming-vs-scanning-word-formation-prefixes-a"
+    id: "jss3-eng-03-reading-for-summary"
   },
   {
     classLevel: "JSS3",
     subject: "English Language",
-    term: 1,
-    topic: "Composition: narrative essay (guided writing, BECE level); formal letter (comprehensive review — complaint letter, tone control)",
+    term: null,
+    topic: "Revision of Composition Writing — Narrative, Descriptive, Expository and Argumentative",
     foundation: false,
-    id: "jss3-eng-t1-composition-narrative-essay-guided-writing-bece-level-formal"
+    id: "jss3-eng-04-revision-of-composition-writing-narrative-descriptive-expo"
   },
   {
     classLevel: "JSS3",
     subject: "English Language",
-    term: 1,
-    topic: "Literature: fiction vs non-fiction; poetry analysis (stanza, rhyme scheme)",
+    term: null,
+    topic: "Revision of Informal and Formal Letter Writing",
     foundation: false,
-    id: "jss3-eng-t1-literature-fiction-vs-non-fiction-poetry-analysis-stanza-rhy"
+    id: "jss3-eng-05-revision-of-informal-and-formal-letter-writing"
   },
   {
     classLevel: "JSS3",
     subject: "English Language",
-    term: 2,
-    topic: "Speech Work: the schwa sound; stress and intonation (word-stress meaning shifts, statement vs question intonation)",
+    term: null,
+    topic: "Summary Writing",
     foundation: false,
-    id: "jss3-eng-t2-speech-work-the-schwa-sound-stress-and-intonation-word-stres"
+    id: "jss3-eng-06-summary-writing"
   },
   {
     classLevel: "JSS3",
     subject: "English Language",
-    term: 2,
-    topic: "Grammar: expressing exception (except/except for/but for/apart from); adverbs of frequency; positive-to-negative statement conversion",
+    term: null,
+    topic: "Speech / Phonemes",
     foundation: false,
-    id: "jss3-eng-t2-grammar-expressing-exception-except-except-for-but-for-apart"
+    id: "jss3-eng-07-speech-phonemes"
   },
   {
     classLevel: "JSS3",
     subject: "English Language",
-    term: 2,
-    topic: "Comprehension: interpreting diagrams/maps/sketches; topic vocabulary (Science/Technology, Law/Justice)",
+    term: null,
+    topic: "Intonation, Stress and Rhythm",
     foundation: false,
-    id: "jss3-eng-t2-comprehension-interpreting-diagrams-maps-sketches-topic-voca"
+    id: "jss3-eng-08-intonation-stress-and-rhythm"
   },
   {
     classLevel: "JSS3",
     subject: "English Language",
-    term: 2,
-    topic: "Composition: argumentative essay on complex issues (e.g. Nigeria's oil); expository essay (entrepreneurship)",
+    term: null,
+    topic: "Adverbials and Tenses",
     foundation: false,
-    id: "jss3-eng-t2-composition-argumentative-essay-on-complex-issues-e-g-nigeri"
+    id: "jss3-eng-09-adverbials-and-tenses"
   },
   {
     classLevel: "JSS3",
     subject: "English Language",
-    term: 2,
-    topic: "Literature: prose — reading and summarizing chapters; distinguishing irony, euphemism, and hyperbole",
+    term: null,
+    topic: "Adverbs, Conjunctions and Prepositions",
     foundation: false,
-    id: "jss3-eng-t2-literature-prose-reading-and-summarizing-chapters-distinguis"
+    id: "jss3-eng-10-adverbs-conjunctions-and-prepositions"
   },
   {
     classLevel: "JSS3",
     subject: "English Language",
-    term: 3,
-    topic: "Grammar: punctuation marks (comprehensive review, incl. comma splices); full tense system revision (3×3 grid incl. perfect aspect)",
+    term: null,
+    topic: "Active and Passive Verbs",
     foundation: false,
-    id: "jss3-eng-t3-grammar-punctuation-marks-comprehensive-review-incl-comma-sp"
+    id: "jss3-eng-11-active-and-passive-verbs"
   },
   {
     classLevel: "JSS3",
     subject: "English Language",
-    term: 3,
-    topic: "Comprehension: topic vocabulary (Mass Media); full mixed-skill revision passage",
+    term: null,
+    topic: "Modal Forms, Question Tags, Direct and Indirect Forms",
     foundation: false,
-    id: "jss3-eng-t3-comprehension-topic-vocabulary-mass-media-full-mixed-skill-r"
+    id: "jss3-eng-12-modal-forms-question-tags-direct-and-indirect-forms"
   },
   {
     classLevel: "JSS3",
     subject: "English Language",
-    term: 3,
-    topic: "Composition: debate (oral composition); full BECE-style mixed essay practice with exam-choice strategy",
+    term: null,
+    topic: "Non-African Folktales",
     foundation: false,
-    id: "jss3-eng-t3-composition-debate-oral-composition-full-bece-style-mixed-es"
+    id: "jss3-eng-13-non-african-folktales"
   },
   {
     classLevel: "JSS3",
     subject: "English Language",
-    term: 3,
-    topic: "Literature: themes and characterisation (multi-layered analysis); full revision guidance for recommended texts",
+    term: null,
+    topic: "Lessons from Myths and Legends",
     foundation: false,
-    id: "jss3-eng-t3-literature-themes-and-characterisation-multi-layered-analysi"
+    id: "jss3-eng-14-lessons-from-myths-and-legends"
+  },
+  {
+    classLevel: "JSS3",
+    subject: "English Language",
+    term: null,
+    topic: "Prose Revision",
+    foundation: false,
+    id: "jss3-eng-15-prose-revision"
+  },
+  {
+    classLevel: "JSS3",
+    subject: "English Language",
+    term: null,
+    topic: "Poetry Revision",
+    foundation: false,
+    id: "jss3-eng-16-poetry-revision"
+  },
+  {
+    classLevel: "JSS3",
+    subject: "English Language",
+    term: null,
+    topic: "Drama Revision",
+    foundation: false,
+    id: "jss3-eng-17-drama-revision"
   }
 ].map(x=>({...x,source:'AVORA_MASTER_CURRICULUM' as const})) as MasterCurriculumTopic[];
 
