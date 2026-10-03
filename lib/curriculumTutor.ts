@@ -1,4 +1,5 @@
 import {getTutorPlan,type TutorPlan,type TutorUnit} from './tutorCurriculum';
+import {jss3WholeNumbersTopic,jss3RationalNonRationalTopic,jss3BaseTwoOperationsTopic,jss3FactorizationTopic,jss3FractionEquationsTopic,jss3SimultaneousLinearTopic,jss3SimilarShapesTopic,jss3TrigonometryTopic,jss3AreaPlaneFiguresTopic,jss3ConstructionTopic,jss3CentralTendencyTopic,jss3DataPresentationTopic,jss3VariationTopic,jss3ChangeSubjectTopic,jss3ElevationDepressionTopic} from './jss3ProvisionalMathematics';
 import {masterTopics,masterTopicByName} from './masterCurriculum';
 import {getSentCurriculumCourse,getSentCurriculumUnits} from './sentCurriculumRuntime';
 import {teachingMapFor} from './deepTeachingArchitecture';
