@@ -301,4 +301,92 @@ export const jss3SummaryWriting:Jss3EnglishLesson={
  ['NERDC expects learners to summarise…',['passages/paragraphs through key ideas','only poems','only letters','only dialogue'],'passages/paragraphs through key ideas','This is explicit in the evaluation guide.']
  ])};
 
-export const jss3EnglishLessons: Jss3EnglishLesson[]=[jss3CriticalEvaluation,jss3ReadingSpeed,jss3ReadingSummary,jss3Composition,jss3LetterWriting,jss3SummaryWriting];
+
+export const jss3Phonemes:Jss3EnglishLesson={
+ topic:'Speech / Phonemes',strand:'Listening and Speaking',authority:'Official NERDC JSS1–JSS3 English Studies curriculum — JSS3 prior-cycle authority',
+ objectives:['Identify and produce contrasting long and short vowels.','Identify and produce consonant sounds.','Identify and produce consonant clusters in context.','Recognise and use diphthongs in words and sentences.','Apply sound discrimination in connected speech.'],
+ plan:{topic:'Speech / Phonemes',objective:'Hear and produce important English sound contrasts clearly in words, sentences and connected speech.',units:[
+ U('Sound, not spelling','A phoneme is a sound unit that can distinguish meaning. English spelling is not a perfect sound guide: “machine” begins with letters ma but its later sound pattern differs from what spelling alone predicts. Train the ear and mouth, not only the eye.'),
+ U('Minimal pairs','A minimal pair differs in one sound and shows that the contrast matters: ship/sheep, bit/beat, full/fool. Say each slowly, then normally. Ask: which sound changed and did the word change?'),
+ U('Short /ɪ/ and long /iː/','Compare bit/beat, sit/seat, live/leave, fill/feel, ship/sheep. /iː/ is generally longer and tenser; /ɪ/ is shorter. Do not merely stretch any “i” spelling—listen to the word’s actual pronunciation. Sentence drill: “The sheep will sit near the seat.”'),
+ U('Other vowel contrasts','Practise pairs such as full/fool (/ʊ/–/uː/) and cot/caught where the target accent distinguishes them. The learning goal is consistent intelligible contrast, not mocking a learner’s home accent. Use model audio/teacher pronunciation and repeated discrimination.'),
+ U('Consonants','Consonant sounds involve some obstruction of airflow. Contrast sounds that learners may confuse: /f/ and /v/ in fan/van, fine/vine; /s/ and /z/ in sip/zip; /t/ and /d/ in ten/den. Feel voicing: place fingers lightly on the throat—/v/ vibrates more than /f/.'),
+ U('/θ/ and /ð/','For the sounds in thin and this, the tongue tip is near/between the teeth and air passes through. Contrast thin/tin, thank/tank; then this/dis, though/do as appropriate discrimination practice. Aim for intelligibility through careful modelling rather than spelling guesses.'),
+ U('Consonant clusters','A cluster contains two or more consonant sounds together without an intervening vowel: /st/ in stop, /pl/ in play, /str/ in street, final /nd/ in hand. Do not insert an extra vowel (“sətop”) or delete a sound (“sreet”). Build slowly: s + top → stop; s + t + reet → street.'),
+ U('Initial and final clusters','Initial: play, school, spring, street. Final: helped, asked, next, hands. Final clusters can be harder because several consonants meet. Practise the base then add the ending: help → helped; ask → asked.'),
+ U('Diphthongs','A diphthong glides from one vowel quality toward another within one syllable. Examples include /eɪ/ day, /aɪ/ my, /ɔɪ/ boy, /aʊ/ now, /əʊ/ go in common teaching models. Hear the movement rather than pronouncing two separate syllables.'),
+ U('Diphthongs in sentences','“The boy found a coin.” Focus /ɔɪ/ in boy/coin. “They may go home today.” Focus /eɪ/ in may/today and /əʊ/ in go/home. Mark the target words, listen, repeat, then say the full sentence naturally.'),
+ U('From word to connected speech','Correct isolation is only the first step. Practise target sounds in phrases and sentences at natural pace. Record, compare with a reliable model, identify one contrast to improve, repeat. Do not try to correct every sound at once.'),
+ U('Listening discrimination','Teacher/audio says one word from a pair: ship/sheep, fan/van, sip/zip. Learner identifies it before seeing spelling. This proves the ear can distinguish the phonemes. Then reverse: learner produces, partner identifies.'),
+ U('Common errors','Judging sound only from spelling; inserting vowels into clusters; dropping final consonants; treating diphthongs as two syllables; knowing IPA symbols but being unable to hear/produce the sound. Oral mastery requires listening and production.'),
+ U('Mastery checkpoint','You can discriminate long/short vowel contrasts, produce key consonant contrasts, pronounce initial/final clusters without insertion/deletion, identify common diphthongs and use all targets intelligibly in connected sentences.')
+ ]},
+ questions:makeQs('j3e-phon',[
+ ['A phoneme is best understood as…',['a sound unit that can distinguish meaning','a paragraph','a punctuation mark','a letter name only'],'a sound unit that can distinguish meaning','Phonemes function in the sound system.'],
+ ['Which pair contrasts /ɪ/ and /iː/?',['ship/sheep','fan/van','sip/zip','ten/den'],'ship/sheep','The vowel contrast changes the word.'],
+ ['Which word commonly contains /iː/?',['seat','sit','bit','ship'],'seat','Seat uses the long vowel /iː/.'],
+ ['Which pair contrasts /f/ and /v/?',['fan/van','bit/beat','sip/zip','thin/tin'],'fan/van','Only the target consonant changes.'],
+ ['Voicing can be felt by…',['lightly touching the throat','closing the book','counting letters','writing capitals'],'lightly touching the throat','Voiced sounds create vocal-fold vibration.'],
+ ['A consonant cluster occurs in…',['street','ago','idea','open'],'street','/str/ is an initial consonant cluster.'],
+ ['An error in “sətop” for “stop” is…',['vowel insertion into a cluster','diphthong production','correct clustering','stress marking'],'vowel insertion into a cluster','The cluster should not be split by an added vowel.'],
+ ['Which has a final cluster?',['asked','away','open','idea'],'asked','The ending contains multiple consonant sounds.'],
+ ['A diphthong involves…',['a glide between vowel qualities in one syllable','two paragraphs','only consonants','a silent letter only'],'a glide between vowel qualities in one syllable','It is a moving vowel quality.'],
+ ['/aɪ/ is heard in…',['my','day','boy','go'],'my','“my” contains /aɪ/.'],
+ ['/ɔɪ/ is heard in…',['boy','now','day','see'],'boy','“boy” contains /ɔɪ/.'],
+ ['Why practise minimal pairs?',['to hear how one sound changes meaning','to memorise addresses','to learn paragraphs','to avoid listening'],'to hear how one sound changes meaning','They isolate a contrast.'],
+ ['Which is an initial cluster?',['/pl/ in play','the vowel in see','the vowel in my','the full stop'],'/pl/ in play','Two consonants occur together initially.'],
+ ['Oral mastery requires…',['identification and production','symbol memorisation only','spelling only','silent reading only'],'identification and production','NERDC requires learners to produce sounds.'],
+ ['The safest way to learn pronunciation is to…',['use reliable models plus listening and practice','guess from spelling alone','add vowels to clusters','ignore context'],'use reliable models plus listening and practice','Sound learning needs auditory models.'],
+ ['Which pair contrasts /s/ and /z/?',['sip/zip','fan/van','bit/beat','full/fool'],'sip/zip','The initial consonant changes.'],
+ ['A learner who recognises /str/ but says “sreet” is…',['deleting a cluster sound','adding a diphthong','using correct cluster','changing tense'],'deleting a cluster sound','/t/ has been omitted.'],
+ ['Connected-speech practice means…',['using target sounds in natural phrases/sentences','writing IPA only','reading letters separately','avoiding sentences'],'using target sounds in natural phrases/sentences','Production must transfer beyond isolated words.'],
+ ['Which is NOT enough for phoneme mastery?',['knowing symbols without hearing/producing sounds','discrimination practice','sentence production','minimal-pair listening'],'knowing symbols without hearing/producing sounds','The topic is listening and speaking.'],
+ ['A good self-correction routine is…',['record, compare, target one contrast, repeat','speak faster without listening','change every sound at once','avoid models'],'record, compare, target one contrast, repeat','Focused feedback supports improvement.']
+ ])},
+ performanceTasks:['Listen to 12 minimal-pair items and identify the word heard before seeing spelling.','Record five sentences containing long/short vowels, /f/-/v/ contrasts and clusters; compare with a model.','Build and pronounce ten consonant clusters from slow segmentation to natural speech.']
+};
+
+export const jss3Prosody:Jss3EnglishLesson={
+ topic:'Intonation, Stress and Rhythm',strand:'Listening and Speaking',authority:'Official NERDC JSS1–JSS3 English Studies curriculum — JSS3 prior-cycle authority',
+ objectives:['Identify appropriate intonation patterns for statements, questions and commands.','Produce statements, questions and commands with appropriate intonation.','Identify and use stress meaningfully.','Recognise rhythm and recite poems with appropriate rhythm.'],
+ plan:{topic:'Intonation, Stress and Rhythm',objective:'Use pitch movement, prominence and timing to make spoken English clear and meaningful.',units:[
+ U('Speech has melody','Intonation is the movement of voice pitch across an utterance. The same words can sound complete, questioning, surprised or doubtful depending on pitch movement. Do not confuse intonation with simply speaking loudly.'),
+ U('Falling intonation','A fall is common in complete statements, many WH-questions and firm commands: “The bus has arrived ↘.” “Where are you going ↘?” “Close the door ↘.” Context can change patterns, so learn the normal functions before exceptions.'),
+ U('Rising intonation','A rise is common in yes/no questions and can signal incompleteness or checking: “Are you ready ↗?” “Did she call ↗?” A rise can also make a statement sound like a check rather than a firm assertion.'),
+ U('Fall-rise','Fall-rise often suggests reservation, contrast, politeness or “there is more”. “I like it ↘↗” may imply “but…”. NERDC asks for three intonation patterns; learners should hear and practise fall, rise and fall-rise rather than memorise arrows only.'),
+ U('Stress','Stress gives a syllable or word greater prominence through a combination of loudness, length and pitch. Word stress: PREsent (noun) vs preSENT (verb) in many standard models. Sentence stress highlights important information.'),
+ U('Meaning through sentence stress','“SHE borrowed my book” corrects who. “She borrowed MY book” corrects whose. “She BORROWED my book” contrasts borrowing with another action. Stress can redirect meaning even when the words stay the same.'),
+ U('Content and function words','In neutral English rhythm, nouns, main verbs, adjectives and adverbs often carry stronger stress; articles, auxiliaries and prepositions are often weaker. This is a tendency, not an unbreakable rule—any word can receive contrastive stress.'),
+ U('Rhythm','Rhythm is the patterned movement of stressed and unstressed syllables in speech. In poetry, rhythm may be especially noticeable through repeated beats, syllable patterns, pauses and sound effects. Do not turn rhythm into mechanical shouting.'),
+ U('Chunking and pauses','Meaningful thought groups improve delivery: “After the rain stopped / the players returned to the field.” Pausing at sense boundaries helps listeners follow ideas. Random pauses can distort meaning.'),
+ U('Poetry performance','First understand the poem; mark sense groups; underline prominent words; note punctuation; identify repeated beat/sound; practise slowly; then recite naturally. Appropriate rhythm supports meaning and mood, not merely speed.'),
+ U('Commands and questions','Compare “Sit down ↘” (firm command), “Sit down ↗?” (checking/surprised in a special context), “Can you sit down ↗?” (yes/no request). Grammar and intonation work together.'),
+ U('Common errors','Using a flat pitch for every sentence; assuming every question rises; stressing every word equally; confusing loudness with stress; racing through poetry without sense pauses; memorising arrows without producing the sound.'),
+ U('Mastery checkpoint','You can identify and produce fall, rise and fall-rise in suitable contexts; shift sentence stress to change focus; mark sense groups; and recite a short poem with meaningful rhythm and pauses.')
+ ]},
+ questions:makeQs('j3e-pros',[
+ ['Intonation is…',['pitch movement across an utterance','spelling pattern','paragraph length','handwriting'],'pitch movement across an utterance','It is the melody of speech.'],
+ ['A normal complete statement often takes…',['falling intonation','rising only','no pitch at all','spelling stress'],'falling intonation','A fall commonly signals completion.'],
+ ['A yes/no question commonly takes…',['rising intonation','fall only in every context','no intonation','a comma'],'rising intonation','Rise commonly marks yes/no questioning.'],
+ ['A WH-question commonly has…',['a fall in neutral use','always a rise','no stress','only fall-rise'],'a fall in neutral use','Many WH-questions normally fall.'],
+ ['Fall-rise can suggest…',['reservation or contrast','a spelling error','plural only','past tense only'],'reservation or contrast','It often signals qualified meaning.'],
+ ['Stress makes a syllable/word…',['more prominent','silent','a paragraph','ungrammatical'],'more prominent','Prominence combines several acoustic cues.'],
+ ['“SHE borrowed my book” focuses on…',['who borrowed it','whose book','when','where'],'who borrowed it','Stress on SHE corrects/contrasts the person.'],
+ ['“She borrowed MY book” focuses on…',['ownership','time','place','question type'],'ownership','MY receives contrastive prominence.'],
+ ['Rhythm involves…',['patterned stressed and unstressed movement','only loudness','only spelling','addresses'],'patterned stressed and unstressed movement','Speech and poetry have timing patterns.'],
+ ['A good poetry recitation should…',['reflect meaning, pauses and rhythm','be shouted at one volume','ignore punctuation','be as fast as possible'],'reflect meaning, pauses and rhythm','Performance should serve meaning.'],
+ ['Random pauses may…',['distort meaning','always improve speech','create correct stress automatically','replace grammar'],'distort meaning','Thought groups should guide pauses.'],
+ ['Which is NOT one of the three patterns taught here?',['fall','rise','fall-rise','capitalisation'],'capitalisation','Capitalisation is writing, not intonation.'],
+ ['Every question rises. This statement is…',['false','always true','a definition of stress','a rhythm rule'],'false','WH-questions often fall; context also matters.'],
+ ['Sentence stress can…',['change information focus','change spelling automatically','remove grammar','replace words'],'change information focus','Prominence tells listeners what is contrasted/new.'],
+ ['Content words are often…',['more prominent in neutral speech','always silent','never stressed','punctuation'],'more prominent in neutral speech','They commonly carry lexical information.'],
+ ['Function words…',['can receive contrastive stress when needed','can never be stressed','are not English','must be shouted'],'can receive contrastive stress when needed','Stress responds to meaning.'],
+ ['A firm command often ends with…',['a fall','a mandatory rise','no pitch','a question mark'],'a fall','Falling intonation commonly signals firmness/completion.'],
+ ['Before reciting a poem, first…',['understand its meaning','memorise arrows only','ignore punctuation','increase speed'],'understand its meaning','Prosody should express content.'],
+ ['NERDC expects learners to…',['identify and produce appropriate patterns','identify only on paper','avoid speaking','study spelling only'],'identify and produce appropriate patterns','Listening and speaking require performance.'],
+ ['Prosodic mastery is shown by…',['meaningful spoken use, not symbol memorisation','drawing arrows only','writing definitions only','reading silently'],'meaningful spoken use, not symbol memorisation','Production demonstrates control.']
+ ])},
+ performanceTasks:['Record the same short sentence with falling, rising and fall-rise contours and explain the meaning difference.','Move contrastive stress across a five-word sentence and explain each focus change.','Mark and recite a short poem with sense groups, stress and rhythm, then self-evaluate.']
+};
+
+export const jss3EnglishLessons: Jss3EnglishLesson[]=[jss3CriticalEvaluation,jss3ReadingSpeed,jss3ReadingSummary,jss3Composition,jss3LetterWriting,jss3SummaryWriting,jss3Phonemes,jss3Prosody];
