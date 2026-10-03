@@ -16,5 +16,5 @@ export async function POST(req:Request){
 export async function GET(req:Request){
  const s=await getSession();if(!s)return NextResponse.json({error:'Sign in required.'},{status:401});const id=new URL(req.url).searchParams.get('id');
  const [row]=await withDbRetry(()=>sql\`SELECT mime_type,image_bytes FROM learner_note_images WHERE id=\${id} AND student_id=\${s.userId}\`);if(!row)return NextResponse.json({error:'Image not found.'},{status:404});
- return new NextResponse(row.image_bytes,{headers:{'Content-Type':row.mime_type,'Cache-Control':'private, max-age=3600','X-Content-Type-Options':'nosniff'}});
+ const stored=Buffer.isBuffer(row.image_bytes)?row.image_bytes:Buffer.from(row.image_bytes);const body=stored.buffer.slice(stored.byteOffset,stored.byteOffset+stored.byteLength) as ArrayBuffer;return new NextResponse(body,{headers:{'Content-Type':row.mime_type,'Cache-Control':'private, max-age=3600','X-Content-Type-Options':'nosniff'}});
 }
