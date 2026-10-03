@@ -39,7 +39,7 @@ export async function PUT(req:Request){
      questionIds.push(String(q.id));
    }
    await tx`UPDATE uploaded_assignments SET status='CONVERTED',updated_at=now() WHERE id=${row.id}`;
-   return {...row,questionIds};
+   return {id:String(row.id),questionIds};
  }));
  return NextResponse.json({assignmentId:assignment.id,questionIds:assignment.questionIds,questionCount:segments.length,status:'CONVERTED',requiresAcademicConversion:true,requiresReview:true});
 }
