@@ -4,7 +4,7 @@ import {getOfficialTopicNames,getCurriculumTutorPlan} from '@/lib/curriculumTuto
 import {NCEE_DOMAINS,NCEE_PREP_CLASSES,nceeTopicsFor,nceeTopicById,type NceeDomain,type PrimaryPrepClass} from '@/lib/nceePrep';
 import {nceeRichDeepLesson} from '@/lib/nceeRichTeaching';
 
-export const dynamic='force-dynamic';
+// Academic Preview resolves lessons through the current Tutor curriculum.\nexport const dynamic='force-dynamic';
 type Search={class?:string;subject?:string;topic?:string};
 const JSS_SUBJECTS=['Mathematics','English Language'] as const;
 const ALL_CLASSES=['Primary 5','Primary 6','JSS1','JSS2','JSS3'] as const;
