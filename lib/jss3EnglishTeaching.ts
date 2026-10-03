@@ -389,4 +389,172 @@ export const jss3Prosody:Jss3EnglishLesson={
  performanceTasks:['Record the same short sentence with falling, rising and fall-rise contours and explain the meaning difference.','Move contrastive stress across a five-word sentence and explain each focus change.','Mark and recite a short poem with sense groups, stress and rhythm, then self-evaluate.']
 };
 
-export const jss3EnglishLessons: Jss3EnglishLesson[]=[jss3CriticalEvaluation,jss3ReadingSpeed,jss3ReadingSummary,jss3Composition,jss3LetterWriting,jss3SummaryWriting,jss3Phonemes,jss3Prosody];
+
+export const jss3AdverbialsTenses:Jss3EnglishLesson={
+ topic:'Adverbials and Tenses',strand:'Grammatical Accuracy',authority:'Official NERDC JSS1–JSS3 English Studies curriculum — JSS3 prior-cycle authority',
+ objectives:['Identify adverbials in passages.','Identify tense forms in context.','Use adverbials and tenses correctly in sentences.','Maintain logical tense consistency while expressing time, place, manner, frequency, reason and degree.'],
+ plan:{topic:'Adverbials and Tenses',objective:'Use adverbial information and tense choices to locate actions clearly in time and circumstance.',units:[
+ U('Adverbial meaning','An adverbial is a word, phrase or clause that adds information about an action, state or whole clause—when, where, how, how often, why, to what extent or under what condition. “She arrived yesterday” (time); “They waited outside the hall” (place); “He spoke carefully” (manner).'),
+ U('Forms of adverbials','Single adverb: slowly. Phrase: after the lesson. Prepositional phrase: in the library. Clause: because the road was flooded. The function matters more than length: each can modify the verb/clause.'),
+ U('Time and frequency','Time answers when/how long: yesterday, at noon, after school, for two hours. Frequency answers how often: always, often, twice a week. Position can affect naturalness: “She often reads at night”; “Yesterday, she read for two hours.”'),
+ U('Place and direction','Place: here, at home, beside the gate. Direction: towards the field, into the room. Distinguish location from movement: “They waited in the hall” vs “They walked into the hall.”'),
+ U('Manner, degree and reason','Manner: carefully, with confidence. Degree: very, completely, to a great extent. Reason: because of the rain / because the bus broke down. Choose forms that express the intended relationship precisely.'),
+ U('Tense and time','Tense locates a situation grammatically, especially present and past; English also expresses future time using forms such as will, be going to and present constructions. Do not choose a tense merely because a time word appears—match the whole meaning.'),
+ U('Simple present','Use for habits, routines and general truths: “She walks to school every day.” “Water boils under suitable conditions.” With third-person singular, use the appropriate -s form: “He walks.”'),
+ U('Present progressive','Use for actions in progress/temporary situations: “They are repairing the road now.” Form: am/is/are + -ing. Avoid “They repairing” or “They are repair.”'),
+ U('Simple past','Use for completed past events: “The team won yesterday.” Regular verbs often take -ed; irregular verbs change differently: go→went, write→wrote. Time adverbials often clarify the completed period.'),
+ U('Past progressive','Use for an action in progress at a past time, often interrupted: “We were reading when the lights went out.” The longer background action is “were reading”; the shorter event is “went out.”'),
+ U('Present perfect','Have/has + past participle links past action to present relevance or an unfinished period: “She has completed the assignment.” Avoid combining it carelessly with a finished-time marker: standard usage prefers “She completed it yesterday,” not “has completed it yesterday.”'),
+ U('Past perfect','Had + past participle can show the earlier of two past events: “The bus had left before we reached the park.” Use it when the time relationship needs clarification, not in every past sentence.'),
+ U('Future expression','“We will write tomorrow”; “We are going to visit the centre”; “The bus leaves at six tomorrow.” English uses several constructions for future meaning. Match form to prediction, intention, arrangement or schedule.'),
+ U('Tense consistency','Keep time relationships logical. Wrong: “Yesterday we enter the hall and the teacher gives us a test.” Better: “Yesterday we entered the hall and the teacher gave us a test.” A justified shift is fine: “The teacher explained that water boils at 100°C under standard conditions”—the general truth remains present.'),
+ U('Adverbials guide tense but do not control blindly','“Every day” usually fits habitual present; “now” often fits progressive; “last week” fits past. But meaning rules: “I am leaving tomorrow” uses present progressive for a future arrangement.'),
+ U('Mastery checkpoint','You can identify adverbial form/function, choose tense from context, form major tense constructions correctly, explain time relationships and edit inconsistent passages.')
+ ]},
+ questions:makeQs('j3e-advten',[
+ ['In “She arrived yesterday”, yesterday is an adverbial of…',['time','place','manner','degree'],'time','It answers when.'],
+ ['“Beside the gate” most naturally expresses…',['place','frequency','degree','tense'],'place','It locates an action/state.'],
+ ['“Carefully” is commonly an adverbial of…',['manner','place','time','reason'],'manner','It tells how.'],
+ ['“Because the road was flooded” can function adverbially as…',['reason','place only','degree only','a noun name only'],'reason','It explains why.'],
+ ['A routine is commonly expressed with…',['simple present','past perfect only','future only','present perfect only'],'simple present','Habits commonly use simple present.'],
+ ['“They are repairing the road now” is…',['present progressive','simple past','past perfect','simple present'],'present progressive','am/is/are + -ing marks ongoing action.'],
+ ['“We were reading when the lights went out” uses…',['past progressive plus simple past','future plus present','two infinitives','present perfect only'],'past progressive plus simple past','Background action is interrupted by a completed event.'],
+ ['Present perfect is formed with…',['have/has + past participle','had + infinitive','will + -ing only','is + past tense'],'have/has + past participle','That is its core form.'],
+ ['“The bus had left before we arrived” shows…',['an earlier past event with past perfect','a present habit','a future plan','a command'],'an earlier past event with past perfect','Leaving occurred before arrival.'],
+ ['Which is standard?',['She completed it yesterday','She has completed it yesterday','She complete it yesterday','She completing it yesterday'],'She completed it yesterday','A finished past-time marker normally takes simple past.'],
+ ['“Often” expresses…',['frequency','place','direction','reason'],'frequency','It tells how often.'],
+ ['“Into the room” expresses…',['direction','frequency','degree','tense'],'direction','It indicates movement toward an interior.'],
+ ['Which has consistent past narration?',['We entered and the teacher gave us a test','We enter and the teacher gave us a test yesterday','We entered and teacher gives us a test yesterday','We entering and gave'],'We entered and the teacher gave us a test','Both events are appropriately past.'],
+ ['A justified tense shift occurs when…',['the time/reference genuinely changes','the writer is careless','every sentence changes randomly','there is punctuation'],'the time/reference genuinely changes','Consistency means logical, not mechanically identical, tense.'],
+ ['“I am leaving tomorrow” shows that…',['present progressive can express a future arrangement','tomorrow always requires will','tense words never matter','progressive is past'],'present progressive can express a future arrangement','Future time can be expressed through several constructions.'],
+ ['An adverbial can be…',['a word, phrase or clause','only one word','only a clause','only an adjective'],'a word, phrase or clause','Function, not size, defines it.'],
+ ['“For two hours” commonly expresses…',['duration/time','place','manner','degree'],'duration/time','It answers how long.'],
+ ['“With confidence” commonly expresses…',['manner','time','frequency','future'],'manner','It describes how the action is done.'],
+ ['The best tense choice depends mainly on…',['intended time/meaning and context','one isolated time word only','sentence length','capital letters'],'intended time/meaning and context','Context controls grammatical choice.'],
+ ['NERDC expects learners to do more than identify forms; they must…',['use them correctly in sentences','copy definitions only','avoid passages','memorise labels only'],'use them correctly in sentences','Production is an explicit objective.')
+ ])};
+
+export const jss3AdverbsConjunctionsPrepositions:Jss3EnglishLesson={
+ topic:'Adverbs, Conjunctions and Prepositions',strand:'Grammatical Accuracy',authority:'Official NERDC JSS1–JSS3 English Studies curriculum — JSS3 prior-cycle authority',
+ objectives:['Identify adverbs, conjunctions and prepositions in context.','Explain their functions.','Use each class correctly in original sentences.','Distinguish words whose class changes with context.'],
+ plan:{topic:'Adverbs, Conjunctions and Prepositions',objective:'Recognise how these connecting/modifying words work and use them accurately in meaningful sentences.',units:[
+ U('Adverbs','Adverbs commonly modify verbs, adjectives, other adverbs or whole clauses. “She spoke softly” modifies spoke; “very careful” modifies careful; “extremely slowly” modifies slowly; “Fortunately, nobody was hurt” comments on the whole clause.'),
+ U('Types by meaning','Manner: carefully. Time: yesterday. Place: outside. Frequency: often. Degree: very/almost. Focusing/limiting: only/even. Do not classify by ending alone—many adverbs do not end in -ly, and some -ly words are adjectives.'),
+ U('Conjunctions connect','Coordinating conjunctions join units of similar grammatical status: and, but, or, so, yet. “She studied hard, but she remained nervous.” The conjunction expresses the relationship, not merely connection.'),
+ U('Subordinating conjunctions','Words such as because, although, if, when, while, since can introduce dependent clauses: “Although it rained, the match continued.” The dependent clause cannot normally stand alone as the complete message in that use.'),
+ U('Correlative pairs','Either…or, neither…nor, both…and, not only…but also work in pairs. Keep structures parallel: “She enjoys both reading and writing,” not “both reading and to write.”'),
+ U('Prepositions show relationships','Prepositions typically introduce noun phrases and express relationships of place, time, direction, means and more: in the room, at noon, through the gate, with a key, for two hours.'),
+ U('Time prepositions','At for points: at 7:00; on for days/dates: on Monday; in for longer periods: in October, in 2026. Context and idiom matter, so learn common patterns through meaningful examples.'),
+ U('Place prepositions','At the gate (point), in the room (inside), on the table (surface), between two houses, among many learners, beside the road. Draw or imagine the spatial relationship instead of memorising definitions only.'),
+ U('Same word, different job','“Before lunch” — before is preposition followed by noun phrase. “Before we ate” — before introduces a clause and functions as conjunction. “I have seen her before” — before functions adverbially. Classification depends on use.'),
+ U('Common errors','Confusing adjective/adverb: “She sang beautiful” → beautifully. Double conjunction: “Although it rained but…” → choose although or but structure. Wrong preposition combinations must be corrected through standard usage: interested in, depend on, responsible for.'),
+ U('Mastery checkpoint','You can identify each class inside a passage, state what it connects/modifies/relates, choose suitable forms, use paired conjunctions in parallel structures and classify ambiguous words from context.')
+ ]},
+ questions:makeQs('j3e-acp',[
+ ['In “She spoke softly”, softly modifies…',['spoke','she','a noun only','the full stop'],'spoke','It tells how she spoke.'],
+ ['“Very” in “very careful” modifies…',['the adjective careful','a noun','a preposition','a conjunction'],'the adjective careful','Degree adverbs can modify adjectives.'],
+ ['Which is a coordinating conjunction?',['but','because','under','slowly'],'but','It can join coordinate units.'],
+ ['Which commonly introduces a reason clause?',['because','and','under','very'],'because','It subordinates a reason clause.'],
+ ['“Although it rained, the match continued” expresses…',['concession/contrast','place','degree','frequency'],'concession/contrast','Although sets an unexpected contrast.'],
+ ['Which is a correlative pair?',['either…or','in…at','very…slowly','because…under'],'either…or','The words work as a paired conjunction.'],
+ ['A preposition commonly shows…',['relationship between its complement and another element','only tense','only plural','paragraph structure'],'relationship between its complement and another element','Place/time/direction are common relations.'],
+ ['Use ___ Monday.',['on','in','at','by always'],'on','Days commonly take on.'],
+ ['Use ___ October.',['in','on','at','through'],'in','Months commonly take in.'],
+ ['Use ___ 7:00 a.m.',['at','on','in','among'],'at','Clock points commonly take at.'],
+ ['“Between” is most naturally used for…',['a relationship involving distinct items, often two','degree','manner','tense'],'a relationship involving distinct items, often two','It marks separation/relationship among distinct entities.'],
+ ['In “Before lunch”, before is…',['a preposition','an adjective only','a pronoun','a verb'],'a preposition','It is followed by the noun phrase lunch.'],
+ ['In “Before we ate”, before functions as…',['a conjunction introducing a clause','a noun','an adjective','a main verb'],'a conjunction introducing a clause','It links the dependent time clause.'],
+ ['In “I have seen her before”, before is…',['adverbial','preposition with stated complement','noun','determiner'],'adverbial','No complement follows; it modifies time.'],
+ ['Correct form: “She sang ___.”',['beautifully','beautiful','beauty','more beauty'],'beautifully','The verb requires an adverb of manner.'],
+ ['Which is faulty?',['Although it rained but we played','Although it rained, we played','It rained, but we played','Because it rained, we stayed'],'Although it rained but we played','Standard construction does not pair although with but that way.'],
+ ['Parallel structure: “She enjoys both…”',['reading and writing','reading and to write','to read and writing','read and to writing'],'reading and writing','Correlative pairs should join parallel forms.'],
+ ['“Responsible ___ the project” normally takes…',['for','on','at','by'],'for','“Responsible for” is the standard collocation.'],
+ ['Classification of a word depends strongly on…',['its function in context','its first letter','sentence length','font'],'its function in context','Words such as before can serve different roles.'],
+ ['NERDC expects learners to…',['identify and make sentences with these classes','name them only','avoid original sentences','study only spelling'],'identify and make sentences with these classes','Use in sentences is an explicit evaluation target.')
+ ])};
+
+export const jss3Voice:Jss3EnglishLesson={
+ topic:'Active and Passive Verbs',strand:'Grammatical Accuracy',authority:'Official NERDC JSS1–JSS3 English Studies curriculum — JSS3 prior-cycle authority',
+ objectives:['Identify active and passive constructions in passages.','Transform active clauses to passive where appropriate.','Form passive verbs accurately across common tenses.','Choose active or passive according to information focus.'],
+ plan:{topic:'Active and Passive Verbs',objective:'Understand who does an action, what receives it, and how voice changes focus without changing the core event.',units:[
+ U('Active voice','In active voice, the grammatical subject typically performs the action: “The prefect closed the gate.” Subject/doer = the prefect; verb = closed; object/receiver = the gate.'),
+ U('Passive voice','In passive voice, the receiver becomes subject: “The gate was closed by the prefect.” Core form: appropriate form of BE + past participle. The by-agent may be omitted when unknown, obvious or unimportant: “The gate was closed.”'),
+ U('Why use passive','Use passive when the receiver/result is the focus, the doer is unknown, or an impersonal style is useful: “The stolen bicycle was recovered.” Active is often clearer when the doer matters: “The police recovered the bicycle.”'),
+ U('Transformation method','1 Find subject, verb, object. 2 Move object to subject position. 3 keep the original tense in BE. 4 use past participle. 5 add by + original subject only if useful. “Students clean the room” → “The room is cleaned by students.”'),
+ U('Past and progressive passive','“They repaired the road” → “The road was repaired.” “Workers are repairing the road” → “The road is being repaired.” The auxiliary chain carries tense/aspect; the lexical verb becomes past participle.'),
+ U('Perfect and modal passive','“They have completed the work” → “The work has been completed.” “Drivers must obey the sign” → “The sign must be obeyed by drivers.” Modal + be + past participle.'),
+ U('Not every verb passivises naturally','A normal passive transformation requires a transitive construction with an object. “The baby slept” has no object to promote; “The baby was slept” is not the equivalent passive.'),
+ U('Pronoun changes','“She helped him” → “He was helped by her.” Subject/object pronoun forms change with grammatical role. Do not write “Him was helped by she.”'),
+ U('Meaning and focus','Active/passive usually describe the same core event but organise information differently. “The company recalled the product” foregrounds company; “The product was recalled” foregrounds product and may omit company.'),
+ U('Passage application','In consumer protection: “The agency recalled unsafe goods” (active). “Unsafe goods were recalled after testing” (passive). Identify the subject, verb phrase and agent/receiver before naming the voice.'),
+ U('Common errors','Using past tense instead of past participle: “was wrote” → was written. Dropping BE: “The road repaired yesterday” when a finite passive is intended. Changing tense during transformation. Forcing intransitive verbs into passive.'),
+ U('Mastery checkpoint','You can identify voice from structure, transform common tenses without changing time, decide whether an agent is needed, handle pronouns, and explain why a writer chooses passive focus.')
+ ]},
+ questions:makeQs('j3e-voice',[
+ ['In “The prefect closed the gate”, the voice is…',['active','passive','modal only','reported speech'],'active','The subject performs the action.'],
+ ['Passive core form uses…',['BE + past participle','have + infinitive only','verb + adjective only','will + noun'],'BE + past participle','This forms the passive verb phrase.'],
+ ['Passive of “The prefect closed the gate” is…',['The gate was closed by the prefect','The gate closed the prefect','The prefect was gate','The gate is close yesterday'],'The gate was closed by the prefect','Object becomes subject and tense is preserved.'],
+ ['Why omit a by-agent?',['the doer may be unknown/unimportant/obvious','passives cannot have agents','grammar forbids names','to change tense'],'the doer may be unknown/unimportant/obvious','Agent omission is often purposeful.'],
+ ['“The road is being repaired” is…',['present progressive passive','simple present active','past passive','future active'],'present progressive passive','is being + past participle.'],
+ ['“The work has been completed” is…',['present perfect passive','simple past active','future only','a question tag'],'present perfect passive','has been + past participle.'],
+ ['Passive with a modal: “The sign ___ obeyed.”',['must be','must being','is must','must been'],'must be','Modal + be + past participle.'],
+ ['Which cannot normally form an equivalent passive?',['The baby slept','The boy kicked the ball','Ada wrote the letter','They repaired the road'],'The baby slept','There is no object to promote.'],
+ ['“She helped him” becomes…',['He was helped by her','Him was helped by she','He helped by she','Her was helped'],'He was helped by her','Pronoun case changes with role.'],
+ ['Which is wrong?',['The letter was wrote','The letter was written','The road was repaired','The work has been done'],'The letter was wrote','Passive requires the past participle written.'],
+ ['Active voice often foregrounds…',['the doer/agent','only the receiver','punctuation','a preposition'],'the doer/agent','Subject-agent is prominent.'],
+ ['Passive often foregrounds…',['the receiver/result','only the writer','a conjunction','the title'],'the receiver/result','The former object becomes subject.'],
+ ['Transforming voice should preserve…',['core event and tense','word order exactly','subject position exactly','every optional agent'],'core event and tense','Focus changes, not the underlying event/time.'],
+ ['“Unsafe goods were recalled” is…',['passive','active','a question','a modal only'],'passive','were + recalled (past participle).'],
+ ['The “by” phrase identifies…',['agent/doer when included','tense only','object always','adverb degree'],'agent/doer when included','It can state who performed the action.'],
+ ['A transitive verb is relevant because it…',['can take an object that may be promoted','has no object by definition','is always passive','is always past'],'can take an object that may be promoted','Normal passivisation promotes the object.'],
+ ['“Workers are repairing the road” →…',['The road is being repaired by workers','The road was repaired by workers','The road being repair','Workers were road'],'The road is being repaired by workers','Present progressive is preserved.'],
+ ['Which error drops the passive auxiliary?',['The road repaired yesterday','The road was repaired yesterday','The road is repaired regularly','The road has been repaired'],'The road repaired yesterday','A finite passive needs the appropriate BE auxiliary.'],
+ ['Voice choice should depend partly on…',['information focus','letter count','font','paragraph number'],'information focus','Writers choose what to foreground.'],
+ ['NERDC expects learners to…',['identify and make active/passive sentences','memorise one definition only','avoid passages','use passive everywhere'],'identify and make active/passive sentences','Both recognition and production are required.')
+ ])};
+
+export const jss3Modals:Jss3EnglishLesson={
+ topic:'Modal Forms, Question Tags, Direct and Indirect Forms',strand:'Grammatical Accuracy',authority:'Official NERDC JSS1–JSS3 English Studies curriculum — JSS3 prior-cycle authority',
+ objectives:['Identify and use modal forms.','Express ability, permission, possibility, obligation, advice and prediction appropriately.','Form question tags accurately.','Distinguish and transform direct and indirect/reported speech while preserving meaning and viewpoint.'],
+ plan:{topic:'Modal Forms, Question Tags, Direct and Indirect Forms',objective:'Use modal meaning, confirmation tags and reported speech accurately in context.',units:[
+ U('What modals do','Modal auxiliaries such as can, could, may, might, must, shall, should, will and would add meanings including ability, permission, possibility, obligation, advice, willingness and prediction. Form: modal + base verb: “She can swim,” not “can swims.”'),
+ U('Ability and permission','Can commonly expresses present ability: “He can solve it.” Could can express past/general ability or polite request. May/can can request permission depending on register: “May I enter?” Do not treat every modal as interchangeable; meaning and politeness differ.'),
+ U('Possibility and certainty','May/might/could can express possibility: “It may rain.” Must can express strong logical conclusion in some contexts: “The lights are off and the gate is locked; they must have left.” Distinguish obligation “You must wear a helmet” from deduction.'),
+ U('Obligation and advice','Must expresses strong obligation; have to often expresses necessity; should/ought to commonly express advice or expectation. “You must submit today” is stronger than “You should revise tonight.”'),
+ U('Future and willingness','Will can express prediction, decision or willingness; would can express hypothetical meaning, polite requests or future-in-the-past. Interpret from context rather than attaching one definition permanently.'),
+ U('Modal negatives','Cannot/can’t = inability/prohibition depending on context. Mustn’t = prohibition, not lack of necessity. “You mustn’t enter” means do not enter; “You don’t have to enter” means entry is not necessary. This distinction is important.'),
+ U('Question tags: principle','A tag turns a statement into a short checking question. Positive statement usually takes negative tag: “She is ready, isn’t she?” Negative statement takes positive tag: “She isn’t ready, is she?” Match auxiliary and subject pronoun.'),
+ U('Tags with auxiliaries','“They have arrived, haven’t they?” “He can swim, can’t he?” “We should leave, shouldn’t we?” Reuse the auxiliary/modal already present.'),
+ U('Tags with ordinary verbs','If there is no auxiliary in a simple present/past statement, use do/does/did: “Ada likes rice, doesn’t she?” “They left early, didn’t they?”'),
+ U('Direct speech','Direct speech presents the speaker’s actual words and normally uses quotation marks in writing: Ada said, “I am tired.” Preserve the speaker’s wording rather than silently editing it.'),
+ U('Indirect/reported speech','Indirect speech reports the message: Ada said that she was tired. Pronouns, time/place expressions and tense may shift according to reporting viewpoint and time. Do not apply “backshift” blindly when the fact remains current or reporting context does not require it.'),
+ U('Pronoun and time shifts','“I will finish this tomorrow,” Musa said → Musa said that he would finish it the next day (in a later reporting context). I→he because reporter differs; this→it/that as appropriate; tomorrow→the next day; will→would. Each shift follows viewpoint.'),
+ U('Reported questions','Direct: She asked, “Where are you going?” Reported: She asked where I was going. Do not retain question inversion: not “where was I going?” after the reporting clause. Yes/no: “Are you ready?” → She asked whether/if I was ready.'),
+ U('Reported commands','“Close the gate,” the teacher said → The teacher told the pupil to close the gate. Negative: “Do not run” → The teacher told them not to run. Choose reporting verb that matches function.'),
+ U('Common errors','Modal + -s (“can goes”); confusing mustn’t with don’t have to; wrong tag polarity; mismatched tag subject; keeping question word order in reported questions; changing pronouns mechanically without considering who is speaking.'),
+ U('Mastery checkpoint','You can choose a modal by intended meaning, form tags from polarity/auxiliary/subject, convert statements/questions/commands between direct and reported forms, and explain necessary viewpoint changes.')
+ ]},
+ questions:makeQs('j3e-modal',[
+ ['A modal is normally followed by…',['base form of the verb','-s form always','past tense always','a noun only'],'base form of the verb','Example: can go, should read.'],
+ ['Which expresses strong obligation?',['must','might','perhaps','very'],'must','Must commonly marks strong obligation.'],
+ ['Which commonly gives advice?',['should','mustn’t always','did','at'],'should','Should often expresses recommendation.'],
+ ['“It might rain” expresses…',['possibility','past action only','command','certainty always'],'possibility','Might marks uncertain possibility.'],
+ ['“You mustn’t enter” means…',['entry is prohibited','entry is optional','entry is unnecessary but allowed','you entered yesterday'],'entry is prohibited','Mustn’t expresses prohibition.'],
+ ['“You don’t have to enter” means…',['entry is not necessary','entry is forbidden','you cannot enter physically','you must enter'],'entry is not necessary','Lack of necessity differs from prohibition.'],
+ ['Positive statement normally takes…',['negative tag','positive tag always','no auxiliary','a heading'],'negative tag','She is ready, isn’t she?'],
+ ['“They have arrived, ___?”',['haven’t they','don’t they','isn’t it','didn’t he'],'haven’t they','Reuse have and plural subject pronoun.'],
+ ['“Ada likes rice, ___?”',['doesn’t she','isn’t she','hasn’t it','didn’t they'],'doesn’t she','Simple present ordinary verb uses does.'],
+ ['“They left early, ___?”',['didn’t they','don’t they','aren’t they','haven’t he'],'didn’t they','Simple past uses did.'],
+ ['Direct speech normally presents…',['the speaker’s actual words','only a summary','a heading','a preposition'],'the speaker’s actual words','Quotation marks normally mark the words in writing.'],
+ ['Reported speech…',['reports the message from a reporting viewpoint','must copy quotation marks','never changes pronouns','is always present tense'],'reports the message from a reporting viewpoint','Form adapts to context.'],
+ ['Reported “Where are you going?” becomes…',['She asked where I was going','She asked where was I going','She asked where am I going?','She said where you go'],'She asked where I was going','Reported questions use statement order.'],
+ ['A reported yes/no question commonly uses…',['if/whether','because','although','very'],'if/whether','These introduce the reported question.'],
+ ['“Close the gate” may be reported as…',['He told me to close the gate','He asked where gate','He said me close','He told that closing'],'He told me to close the gate','Commands commonly use tell + object + to-infinitive.'],
+ ['“Do not run” may become…',['She told them not to run','She told them to not ran yesterday always','She asked did they run','She said them no run'],'She told them not to run','Negative command uses not to + base verb.'],
+ ['Which is wrong?',['He can goes','He can go','He might come','He should read'],'He can goes','Modal takes base verb without -s.'],
+ ['Pronoun changes in reported speech depend on…',['speaker/reporter viewpoint','a fixed replacement table only','sentence length','punctuation only'],'speaker/reporter viewpoint','Reference determines the correct pronoun.'],
+ ['Backshift should be…',['guided by reporting context and meaning','applied blindly in every case','never used','used only in letters'],'guided by reporting context and meaning','Current truths/context may affect tense choice.'],
+ ['NERDC’s modal-form evaluation also includes…',['question tags and direct/indirect forms','only modal spelling','only poetry','only letter addresses'],'question tags and direct/indirect forms','The official evaluation row explicitly includes them.')
+ ])};
+
+export const jss3EnglishLessons: Jss3EnglishLesson[]=[jss3CriticalEvaluation,jss3ReadingSpeed,jss3ReadingSummary,jss3Composition,jss3LetterWriting,jss3SummaryWriting,jss3Phonemes,jss3Prosody,jss3AdverbialsTenses,jss3AdverbsConjunctionsPrepositions,jss3Voice,jss3Modals];
