@@ -9,8 +9,9 @@ function words(v:string){return [...new Set(String(v||'').toLowerCase().replace(
 export function segmentTypedAssignment(raw:string):AssignmentSegment[]{
  const text=String(raw||'').replace(/\r/g,'').trim();
  if(!text)return [];
- const numbered=[...text.matchAll(/(?:^|\n)\s*(\d{1,3})[.)]\s+([\s\S]*?)(?=(?:\n\s*\d{1,3}[.)]\s+)|$)/g)];
- if(numbered.length>1)return numbered.map((m,i)=>({index:i+1,originalText:m[2].trim()})).filter(x=>x.originalText);
+ const numbered=[...text.matchAll(/(?:^|\n)\s*(?:q(?:uestion)?\s*)?(\d{1,3})[.):\-]?\s+([\s\S]*?)(?=(?:\n\s*(?:q(?:uestion)?\s*)?\d{1,3}[.):\-]?\s+)|$)/gi)];
+ if(numbered.length>=1)return numbered.map((m,i)=>({index:i+1,originalText:m[2].trim()})).filter(x=>x.originalText);
+ const lineQuestions=text.split(/\n+/).map(x=>x.trim()).filter(Boolean);if(lineQuestions.length>1&&lineQuestions.every(x=>/[?.!]$/.test(x)))return lineQuestions.map((originalText,i)=>({index:i+1,originalText}));
  return text.split(/\n{2,}/).map(x=>x.trim()).filter(Boolean).map((originalText,i)=>({index:i+1,originalText}));
 }
 
@@ -33,6 +34,7 @@ export function assignmentQuestionKind(text:string):'MULTIPLE_CHOICE'|'THEORY'{
  const value=String(text||'');
  if(/(?:^|\n)\s*[A-D][.)]\s+/m.test(value))return 'MULTIPLE_CHOICE';
  if(/\b(explain|describe|discuss|justify|compare|outline|in your own words|give reasons?)\b/i.test(value))return 'THEORY';
+ if(/\b(find|calculate|evaluate|simplify|solve|convert|identify|choose|select|name|state|write|give)\b/i.test(value))return 'MULTIPLE_CHOICE';
  return 'THEORY';
 }
 
