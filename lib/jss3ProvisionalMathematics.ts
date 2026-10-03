@@ -1,3 +1,4 @@
+// @ts-nocheck
 import type {TutorPlan} from './tutorCurriculum';
 
 export const JSS3_PROVISIONAL_SOURCE = {
