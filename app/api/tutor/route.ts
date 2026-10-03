@@ -7,6 +7,7 @@ import {assessmentAliases} from '@/lib/masterTopicAliases';
 import {isNerdc2025Class} from '@/lib/nerdc2025Official';
 import {publicNerdc2025ExerciseQuestions} from '@/lib/nerdc2025Exercises';
 import {jss3EnglishLessonByTopic,publicJss3EnglishExerciseQuestions} from '@/lib/jss3EnglishTeaching';
+import {jss3MathExerciseCount,jss3MathExerciseQuestions} from '@/lib/jss3ProvisionalMathematics';
 
 export const dynamic='force-dynamic';
 export const revalidate=0;
@@ -83,7 +84,8 @@ export async function GET(req:Request){
    const lower=name.toLowerCase();
    const jss2Calibrated=['whole numbers','square root of numbers','fractions','commercial arithmetic','approximation','multiplication and division of directed numbers','algebraic expressions','simple equations','linear inequalities','graph','plane figure/ shapes','angles','bearing','construction','data presentation','probability'].includes(lower); const nerdcCount=classLevel==='JSS1'&&subject==='Mathematics'?(lower==='whole numbers'?10:(lower==='lcm'||lower.includes('lowest common multiple')?25:15)):classLevel==='JSS2'&&subject==='Mathematics'&&jss2Calibrated?(lower==='whole numbers'?20:lower==='algebraic expressions'?35:lower==='linear inequalities'?30:25):15;
    const jss3EnglishCount=classLevel==='JSS3'&&subject==='English Language'?(jss3EnglishLessonByTopic(name)?.questions.length||0):0;
-   return {name,questions:jss3EnglishCount||(currentNerdc?nerdcCount:legacyQuestions)};
+   const jss3MathCount=classLevel==='JSS3'&&subject==='Mathematics'?jss3MathExerciseCount(name):0;
+   return {name,questions:jss3EnglishCount||jss3MathCount||(currentNerdc?nerdcCount:legacyQuestions)};
   });
 
   if(!requestedTopic)return json({exam,subject,classLevel,topics,questions:[],exerciseQuestions:[],plan:null});
@@ -110,7 +112,7 @@ export async function GET(req:Request){
 
   const requestedLower=requestedTopic.toLowerCase();
   const jss2CalibratedExercise=['whole numbers','square root of numbers','fractions','commercial arithmetic','approximation','multiplication and division of directed numbers','algebraic expressions','simple equations','linear inequalities','graph','plane figure/ shapes','angles','bearing','construction','data presentation','probability'].includes(requestedLower); const exerciseCount=classLevel==='JSS1'&&subject==='Mathematics'&&(requestedLower==='lcm'||requestedLower.includes('lowest common multiple'))?25:classLevel==='JSS1'&&subject==='Mathematics'&&requestedLower==='simplification of algebraic expressions'?30:classLevel==='JSS2'&&subject==='Mathematics'&&jss2CalibratedExercise?(requestedLower==='whole numbers'?20:requestedLower==='algebraic expressions'?35:requestedLower==='linear inequalities'?30:25):15;
-  const exerciseQuestions=classLevel==='JSS3'&&subject==='English Language'?publicJss3EnglishExerciseQuestions(requestedTopic,20):(currentNerdc?publicNerdc2025ExerciseQuestions(classLevel,subject,requestedTopic,exerciseCount):[]);
+  const exerciseQuestions=classLevel==='JSS3'&&subject==='English Language'?publicJss3EnglishExerciseQuestions(requestedTopic,20):classLevel==='JSS3'&&subject==='Mathematics'?jss3MathExerciseQuestions(requestedTopic,25):(currentNerdc?publicNerdc2025ExerciseQuestions(classLevel,subject,requestedTopic,exerciseCount):[]);
   return json({exam,subject,classLevel,topics,questions:questionRows.map(shapeQuestion),exerciseQuestions,plan});
  }catch(error){
   console.error('tutor GET',error);
