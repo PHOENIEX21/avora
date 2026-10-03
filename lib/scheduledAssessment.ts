@@ -47,11 +47,8 @@ export async function buildScheduledAssessment(args:{studentId:string;classLevel
   mix:{fresh:freshPicked.length,older:olderPicked.length,assignment:assignment.length}};
 }
 
-export async function currentScheduledTopic(classLevel:string,subject:string){
- const now=new Date();const month=now.getUTCMonth()+1;
- const term=month>=9?1:month>=4&&month<=7?3:2;
- const termStart=term===1?8:term===2?0:3;
- const week=Math.max(1,Math.min(20,Math.floor((now.getUTCMonth()-termStart)*4.345+now.getUTCDate()/7)+1));
- const rows=await withDbRetry(()=>sql`SELECT curriculum_topic_id,term,week_number FROM term_topic_schedule WHERE class_level=${classLevel} AND subject_name=${subject} AND term=${term} AND week_number<=${week} ORDER BY week_number DESC LIMIT 1`);
+export async function scheduledTopic(classLevel:string,subject:string,term:number,weekNumber:number){
+ if(![1,2,3].includes(term)||weekNumber<1||weekNumber>20)return null;
+ const rows=await withDbRetry(()=>sql`SELECT curriculum_topic_id,term,week_number FROM term_topic_schedule WHERE class_level=${classLevel} AND subject_name=${subject} AND term=${term} AND week_number=${weekNumber} LIMIT 1`);
  return rows[0]||null;
 }
