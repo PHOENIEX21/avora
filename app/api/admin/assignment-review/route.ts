@@ -24,7 +24,7 @@ export async function GET(req:Request){
  if(studentId){
   questions=await withDbRetry(()=>sql`
    SELECT aq.id,aq.original_text,aq.curriculum_topic_id,aq.classification_confidence,aq.question_type,
-          aq.needs_confirmation,aq.last_resurfaced_at,aq.resurfaced_count,aq.next_review_at,aq.active_for_review,
+          aq.options,aq.correct_answer,aq.rubric,aq.max_marks,aq.model_solution,aq.needs_confirmation,aq.last_resurfaced_at,aq.resurfaced_count,aq.next_review_at,aq.active_for_review,
           ua.id assignment_id,ua.label,ua.subject_name,ua.class_level,ua.uploaded_at,
           COALESCE(stats.attempt_count,0)::int attempt_count,stats.latest_score,stats.latest_attempt_at
    FROM assignment_questions aq
@@ -41,4 +41,25 @@ export async function GET(req:Request){
    ORDER BY CASE WHEN aq.next_review_at IS NULL THEN 0 ELSE 1 END,aq.next_review_at,ua.uploaded_at DESC`);
  }
  return NextResponse.json({students,questions});
+}
+
+
+export async function PATCH(req:Request){
+ const session=await getSession();
+ if(!session||session.role!=='ADMIN')return NextResponse.json({error:'Forbidden'},{status:403});
+ const body=await req.json();
+ const id=String(body.questionId||''),topic=String(body.curriculumTopicId||'').trim(),type=body.questionType;
+ if(!id||!topic||!['MULTIPLE_CHOICE','THEORY'].includes(type))return NextResponse.json({error:'Question, curriculum topic and valid question type are required.'},{status:400});
+ const original=await withDbRetry(()=>sql`SELECT original_text FROM assignment_questions WHERE id=${id}`);
+ if(!original.length)return NextResponse.json({error:'Question not found.'},{status:404});
+ const options=type==='MULTIPLE_CHOICE'&&Array.isArray(body.options)?body.options.map((x:any)=>String(x).trim()).filter(Boolean):null;
+ const correct=type==='MULTIPLE_CHOICE'?String(body.correctAnswer||'').trim():null;
+ const rubric=type==='THEORY'&&Array.isArray(body.rubric)?body.rubric:null;
+ const maxMarks=type==='THEORY'?Number(body.maxMarks||0):null;
+ const solution=String(body.modelSolution||'').trim();
+ if(type==='MULTIPLE_CHOICE'&&(!options||options.length!==4||new Set(options.map((x:string)=>x.toLowerCase())).size!==4||!options.includes(correct||'')))return NextResponse.json({error:'MCQ review requires four distinct options and the correct answer must be one of them.'},{status:400});
+ if(type==='THEORY'&&(!rubric?.length||!maxMarks||rubric.reduce((n:number,r:any)=>n+Number(r.marks||0),0)!==maxMarks))return NextResponse.json({error:'Theory rubric marks must add up exactly to the maximum marks.'},{status:400});
+ if(!solution)return NextResponse.json({error:'A reviewed model solution is required.'},{status:400});
+ await withDbRetry(()=>sql`UPDATE assignment_questions SET curriculum_topic_id=${topic},classification_confidence='HIGH',question_type=${type},options=${options?JSON.stringify(options):null}::jsonb,correct_answer=${correct},rubric=${rubric?JSON.stringify(rubric):null}::jsonb,max_marks=${maxMarks},model_solution=${solution},needs_confirmation=true,active_for_review=false WHERE id=${id}`);
+ return NextResponse.json({questionId:id,saved:true,originalTextPreserved:true,requiresConfirmation:true});
 }
