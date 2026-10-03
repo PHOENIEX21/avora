@@ -69,11 +69,11 @@ export const jss3WholeNumbersPlan:TutorPlan={
     {
       title:'Multiplication and division in base two',
       terms:[['partial product','one intermediate row produced during multiplication'],['binary long division','division carried out using base-two place values']],
-      outcomes:['multiply binary numerals','divide binary numerals','verify binary products and quotients in decimal'],
-      explain:'Binary multiplication is based on 0×0=0, 0×1=0, 1×0=0 and 1×1=1. Shift each new partial product one binary place to the left, just as decimal long multiplication shifts by place value. Binary long division follows the same structural idea as ordinary long division, but all quantities remain in base two.',
-      example:'101₂×11₂ = 1111₂ because 5×3=15. Also 1100₂÷10₂ = 110₂ because 12÷2=6.',
-      check:'Calculate 110₂×101₂ and verify the answer in decimal.',
-      commonMistakes:['forgetting the place-value shift in the second partial product','converting halfway and then mixing decimal digits into binary working','accepting a quotient without multiplying back to check']
+      outcomes:['multiply binary numerals using standard vertical partial products','divide binary numerals using binary long division','explain every shift, quotient bit and subtraction','verify binary products and quotients in decimal'],
+      explain:'Binary multiplication is the familiar written algorithm with only 0 and 1 as multiplier digits. Work from the right. A multiplier bit 1 copies the multiplicand; a bit 0 produces zeros. Shift each new partial-product row one binary place left because its place value has doubled. Binary long division follows divide → write quotient bit → multiply back → subtract → bring down. Keep the actual algorithm in base two; decimal conversion comes afterwards only as an independent check.',
+      example:'EXAMPLE 1 — MULTIPLICATION\\nCalculate 101₂ × 11₂.\\n\\n      101₂\\n    ×  11₂\\n    ------\\n      101     ← rightmost 1 × 101\\n+    1010     ← next 1 is one binary place left\\n    ------\\n     1111₂\\n\\nThe second row shifts left because that 1 represents 10₂, not 1₂. Check afterwards: 101₂=5 and 11₂=3; 5×3=15=1111₂.\\n\\nEXAMPLE 2 — LONG DIVISION\\nCalculate 1100₂ ÷ 10₂.\\n\\n          110₂\\n       --------\\n10₂ ) 1100₂\\n      10\\n      --\\n       10\\n       10\\n       --\\n        0\\n\\n10₂ fits into 11₂ once; subtract 10₂ and bring down the next 0. The new 10₂ fits once. Bring down the final 0, giving the final quotient bit 0. Therefore 1100₂÷10₂=110₂. Multiply back: 110₂×10₂=1100₂.',
+      check:'Set out vertically and calculate (a) 110₂×101₂, (b) 101₂×101₂ and (c) 1010₂÷10₂. Explain the shifted rows and quotient bits before using decimal to check.',
+      commonMistakes:['writing only a horizontal answer without demonstrating the algorithm','forgetting the place-value shift in a later partial product','writing digit 2 in binary working','converting to decimal first and never learning the required binary algorithm','accepting a quotient without multiplying back to check']
     },
     {
       title:'Quantitative reasoning with binary numbers',
