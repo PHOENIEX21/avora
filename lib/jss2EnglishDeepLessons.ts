@@ -726,305 +726,293 @@ export const jss2EnglishDeepLessons:DeepJss2EnglishLesson[]=[
     "mastery":{"criterion":"Learner identifies and uses adverbs, conjunctions and prepositions by function and relationship, including ambiguous forms, with at least85% accuracy in unseen contexts.","status":"DEEP_WHEN_PASSED"},"boardReady":true
   },
   {
-    "topicId": "nerdc-jss2-english-grammatical-accuracy-3",
-    "classLevel": "JSS2",
-    "subject": "English Language",
-    "strand": "Grammatical Accuracy",
-    "topic": "Adverbials and Tenses",
-    "source": {
-      "authority": "NERDC",
-      "url": "https://nerdc.gov.ng/content_manager/jss/jss1-3_english_studies.pdf",
-      "page": 40
-    },
-    "objectives": [
-      "Identify adverbials and the information they add",
-      "Recognise and use major tense forms appropriately",
-      "Construct sentences combining accurate tense with adverbial information"
+    "topicId":"nerdc-jss2-english-grammatical-accuracy-3","classLevel":"JSS2","subject":"English Language","strand":"Grammatical Accuracy","topic":"Adverbials and Tenses",
+    "source":{"authority":"NERDC","url":"https://nerdc.gov.ng/content_manager/jss/jss1-3_english_studies.pdf","page":40},
+    "objectives":["Identify adverbials and the information they add","Recognise and use major tense forms appropriately","Construct sentences combining accurate tense with adverbial information"],
+    "prerequisites":["verbs","adverbs","time expressions"],
+    "teaching":[
+      "AN ADVERBIAL is a word, phrase or clause that adds information such as when, where, how, why, how often, to what degree or under what condition.",
+      "A SINGLE-WORD ADVERBIAL may be an adverb such as yesterday, outside, carefully or often.",
+      "A PHRASE ADVERBIAL may be a prepositional phrase such as in the morning, at school or with great care.",
+      "A CLAUSE ADVERBIAL contains its own subject and verb, as in when the bell rang, because it was raining or if you revise.",
+      "TIME ADVERBIALS locate or frame events: yesterday, now, since Monday, for two hours, by noon, before the lesson.",
+      "PLACE ADVERBIALS answer where or direction: at home, outside, into the hall, beside the river.",
+      "MANNER ADVERBIALS answer how: carefully, with confidence, without delay.",
+      "FREQUENCY ADVERBIALS answer how often: always, often, twice a week, rarely.",
+      "REASON/PURPOSE adverbials explain why: because the road flooded, to save time, due to heavy rain.",
+      "CONDITION adverbials state circumstances: if you study, unless it rains, provided that everyone agrees.",
+      "TENSE locates a situation in time, while ASPECT shows whether it is ongoing, completed, repeated or connected to another time.",
+      "SIMPLE PRESENT commonly expresses habits, routines, facts and stable states.",
+      "PRESENT PROGRESSIVE expresses an activity happening around now or a temporary situation.",
+      "SIMPLE PAST presents a completed past event.",
+      "PAST PROGRESSIVE presents an activity in progress at a past time and is often interrupted by a simple-past event.",
+      "PRESENT PERFECT links past and present: unfinished time, life experience or a past event with present relevance.",
+      "PAST PERFECT places one past event earlier than another past event.",
+      "FUTURE MEANING can be expressed with will, be going to, present progressive or simple present depending on intention, plan or schedule.",
+      "TIME ADVERBIAL AND TENSE MUST AGREE WITH MEANING. Finished past times such as yesterday normally do not combine with present perfect.",
+      "TENSE CONSISTENCY means staying within a time frame unless the meaning requires a shift.",
+      "PERMANENT METHOD: identify time frame→choose tense/aspect→add the right adverbial→check whether the whole sentence matches the intended timeline."
     ],
-    "prerequisites": [
-      "verbs",
-      "adverbs",
-      "time expressions"
+    "workedExamples":[
+      "“She walks to school every day.” Simple present + frequency adverbial for routine.",
+      "“She is walking to school now.” Present progressive + now for current action.",
+      "“She walked to school yesterday.” Simple past + finished past time.",
+      "“She was walking to school when the rain started.” Ongoing past action interrupted by simple past.",
+      "“She has lived here since 2024.” Present perfect + since links past starting point to now.",
+      "“She has lived here for two years.” for gives duration continuing to present.",
+      "Wrong: “She has visited us yesterday.” Better: “She visited us yesterday.”",
+      "“By the time we arrived, the bus had left.” Past perfect marks earlier past event.",
+      "“At 8 p.m. yesterday, we were studying.” Past progressive fits action in progress at stated past time.",
+      "“I will call you tomorrow.” Future with will + future time.",
+      "“We are meeting the principal at 10 a.m. tomorrow.” Present progressive can express arranged future.",
+      "“The train leaves at 6:30 tomorrow morning.” Simple present can express fixed schedule.",
+      "“Because the road was flooded, the bus arrived late.” Cause adverbial clause explains reason.",
+      "“If you revise consistently, you will improve.” Condition clause + likely future result.",
+      "“He answered with confidence.” Phrase adverbial of manner.",
+      "“After the meeting, the teachers returned to class.” Time phrase frames event.",
+      "“They rarely arrive late.” Frequency adverbial commonly comes before the main verb.",
+      "Narrative control: “I entered the room, looked around and sat down.” Consistent simple past keeps the sequence clear."
     ],
-    "teaching": [
-      "An adverbial may be a single adverb, phrase or clause that adds information such as when, where, how, why, how often or under what condition.",
-      "Tense locates a situation in time, while aspect shows how the speaker views its internal timing, such as ongoing or completed relative to another point.",
-      "Time adverbials and tense must cooperate: “yesterday” normally supports past reference; “since 2024” often requires a form connecting past and present.",
-      "Maintain tense consistency unless the time frame genuinely changes. Narratives can shift tense, but the shift should have a reason.",
-      "Move adverbials carefully: some positions alter emphasis or naturalness even when grammar remains possible."
-    ],
-    "workedExamples": [
-      "“She has lived here since 2024” combines present perfect with a duration extending to now.",
-      "“When the bell rang, we were writing” uses simple past for the interrupting event and past progressive for the ongoing action."
-    ],
-    "misconceptions": [
-      "matching tense by one time word only",
-      "switching tense randomly",
-      "calling every prepositional phrase an adverbial regardless of function",
-      "using present perfect with a finished past time such as “yesterday”"
-    ],
-    "guidedPractice": [
-      "Complete a timeline-based tense exercise and identify the adverbial function in each sentence."
-    ],
-    "independentPractice": [
-      "Write a 200-word narrative with controlled tense choices and at least eight varied adverbials."
-    ],
-    "mastery": {
-      "criterion": "At least 80% overall, with accurate application on an unfamiliar task and correction of any major misconception before progression.",
-      "status": "DEEP_WHEN_PASSED"
-    },
-    "boardReady": true
+    "misconceptions":["calling every prepositional phrase an adverbial without checking function","using present perfect with finished past time such as yesterday","random tense switching","thinking tense is chosen by one keyword alone","confusing since and for","using past progressive for every past event","misplacing frequency adverbs","forgetting earlier/later relationship in past perfect","changing tense when paraphrasing without reason"],
+    "guidedPractice":["Classify twelve adverbials by time/place/manner/frequency/reason/condition.","Change single-word adverbials into phrase adverbials.","Identify simple/progressive/perfect forms in ten sentences.","Choose correct tense for finished vs continuing time.","Correct present-perfect errors with yesterday/last week.","Complete five interrupted-action sentences using past progressive+simple past.","Use since/for correctly in eight sentences.","Build three past-perfect timelines.","Rewrite a paragraph to maintain tense consistency.","Move adverbials to different positions and discuss emphasis.","Write condition+result sentences.","Explain tense choice in six examples."],
+    "independentPractice":["Write three sentences for each major adverbial type.","Write five routine sentences in simple present.","Write five current-action sentences in present progressive.","Write five completed past events.","Write five interrupted past-action sentences.","Write five present-perfect sentences with since/for.","Write three past-perfect sequences.","Write five future sentences using different future forms.","Correct ten tense/adverbial errors.","Edit a paragraph with random tense shifts.","Write a 200-word narrative using at least eight varied adverbials.","Explain why each tense shift in the narrative is necessary."],
+    "mastery":{"criterion":"Learner identifies varied adverbials and selects/controls simple, progressive and perfect tense-aspect forms consistently in context with at least85% accuracy.","status":"DEEP_WHEN_PASSED"},"boardReady":true
   },
   {
-    "topicId": "nerdc-jss2-english-grammatical-accuracy-4",
-    "classLevel": "JSS2",
-    "subject": "English Language",
-    "strand": "Grammatical Accuracy",
-    "topic": "Active and Passive verbs",
-    "source": {
-      "authority": "NERDC",
-      "url": "https://nerdc.gov.ng/content_manager/jss/jss1-3_english_studies.pdf",
-      "page": 41
-    },
-    "objectives": [
-      "Identify active and passive constructions",
-      "Transform suitable active sentences to passive and vice versa",
-      "Choose voice according to focus and context"
+    "topicId":"nerdc-jss2-english-grammatical-accuracy-4","classLevel":"JSS2","subject":"English Language","strand":"Grammatical Accuracy","topic":"Active and Passive verbs",
+    "source":{"authority":"NERDC","url":"https://nerdc.gov.ng/content_manager/jss/jss1-3_english_studies.pdf","page":41},
+    "objectives":["Identify active and passive constructions","Transform suitable active sentences to passive and vice versa","Choose voice according to focus and context"],
+    "prerequisites":["subject/object","auxiliary be","past participles"],
+    "teaching":[
+      "ACTIVE VOICE usually places the doer/agent as subject: “The committee approved the plan.”",
+      "PASSIVE VOICE places the receiver/result as subject: “The plan was approved by the committee.”",
+      "PASSIVE FORM is an appropriate form of BE + past participle. The tense is carried mainly by BE.",
+      "SIMPLE PRESENT PASSIVE: am/is/are + past participle, e.g. “Rice is grown here.”",
+      "SIMPLE PAST PASSIVE: was/were + past participle, e.g. “The road was repaired.”",
+      "PRESENT PERFECT PASSIVE: has/have been + past participle, e.g. “The work has been completed.”",
+      "FUTURE PASSIVE: will be + past participle.",
+      "MODAL PASSIVE: modal + be + past participle, e.g. “The form must be submitted.”",
+      "TO TRANSFORM ACTIVE→PASSIVE: identify subject, verb, object; move object to subject position; preserve tense; use past participle; include by-agent only if useful.",
+      "TO TRANSFORM PASSIVE→ACTIVE: identify receiver subject, passive verb and agent if given; make agent the active subject and restore correct tense.",
+      "ONLY TRANSITIVE VERBS normally form straightforward passives because an object is needed to become the new subject.",
+      "INTRANSITIVE verbs such as arrive, sleep, occur do not normally form passives in their ordinary uses.",
+      "AGENT OMISSION is natural when the doer is unknown, obvious or unimportant.",
+      "USE PASSIVE when result/process is more important than agent, common in reports, procedures and formal descriptions.",
+      "USE ACTIVE when directness, responsibility or the actor is important.",
+      "MEANING MUST STAY THE SAME during transformation. Do not change tense, participants or time reference.",
+      "PERMANENT CHECK: receiver identified? correct BE tense? correct past participle? agent necessary? meaning preserved?"
     ],
-    "prerequisites": [
-      "subject/object",
-      "auxiliary be",
-      "past participles"
-    ],
-    "teaching": [
-      "In active voice, the grammatical subject typically performs the action: “The committee approved the plan.” In passive voice, the receiver becomes subject: “The plan was approved by the committee.”",
-      "The passive is formed with an appropriate form of be plus a past participle; tense is carried by be: is written, was written, has been written.",
-      "Only verbs that can take an object normally form straightforward passives. “He arrived” cannot naturally become “Was arrived by him.”",
-      "Use passive voice when the receiver/result is the focus or the agent is unknown/unimportant; use active when the agent/action should be direct.",
-      "Transformation must preserve meaning, tense and participants rather than merely move words."
-    ],
-    "workedExamples": [
+    "workedExamples":[
       "Active: “The storm damaged the roof.” Passive: “The roof was damaged by the storm.”",
-      "Active: “Someone has stolen the phone.” Passive: “The phone has been stolen.” The unknown agent can be omitted."
+      "Active: “The teacher marks the scripts.” Passive: “The scripts are marked by the teacher.”",
+      "Active: “They repaired the bridge.” Passive: “The bridge was repaired.”",
+      "Active: “Someone has stolen the phone.” Passive: “The phone has been stolen.”",
+      "Active: “The team will complete the project.” Passive: “The project will be completed by the team.”",
+      "Active: “You must submit the form today.” Passive: “The form must be submitted today.”",
+      "Active: “Workers are painting the hall.” Passive: “The hall is being painted by workers.”",
+      "Active: “The police arrested the suspect.” Passive: “The suspect was arrested by the police.”",
+      "Passive: “The prize was won by Amina.” Active: “Amina won the prize.”",
+      "Passive: “The food is prepared every morning.” Active: “The cooks prepare the food every morning.”",
+      "Agent unnecessary: “English is spoken in many countries.” The sentence does not need a by-agent.",
+      "Agent important: “The final design was approved by the principal.” Agent matters because responsibility is relevant.",
+      "Intransitive: “The baby slept.” No object exists, so a normal passive cannot be formed.",
+      "Intransitive: “The accident occurred yesterday.” “Was occurred” is incorrect.",
+      "Process style: “The mixture is heated for five minutes.” Passive suits procedure focus.",
+      "Direct responsibility: “The technician installed the software.” Active clearly names who acted.",
+      "Tense check: “They had finished the work”→“The work had been finished.”",
+      "Meaning check: “The dog chased the boy” does NOT become “The dog was chased by the boy”; that reverses participants."
     ],
-    "misconceptions": [
-      "forgetting the past participle",
-      "changing tense during transformation",
-      "forcing intransitive verbs into passive",
-      "assuming passive is always better or worse"
-    ],
-    "guidedPractice": [
-      "Transform 12 sentences both ways and explain whether the agent should be included."
-    ],
-    "independentPractice": [
-      "Edit a short report choosing active/passive voice deliberately for clarity and focus."
-    ],
-    "mastery": {
-      "criterion": "At least 80% overall, with accurate application on an unfamiliar task and correction of any major misconception before progression.",
-      "status": "DEEP_WHEN_PASSED"
-    },
-    "boardReady": true
+    "misconceptions":["forgetting past participle","changing tense","forcing intransitive verbs into passive","always adding by-agent","omitting be","using wrong form of be","changing who did what","assuming passive is always formal/better","assuming active is always preferable"],
+    "guidedPractice":["Transform five simple-present actives to passive.","Transform five simple-past actives.","Transform three perfect forms.","Transform three modal sentences.","Convert five passives back to active.","Decide whether agent should be kept/omitted.","Identify four intransitive sentences that cannot passivise.","Correct wrong BE+participle forms.","Check meaning preservation in six transformations.","Rewrite a short procedure mainly in passive.","Rewrite a report sentence in active to make responsibility clear.","Explain why one voice is better in four contexts."],
+    "independentPractice":["Transform twenty mixed-tense sentences.","Convert ten passives to active.","Write five examples where agent is omitted naturally.","Write five where agent should be retained.","Identify ten transitive/intransitive uses.","Correct ten faulty passive constructions.","Write a short scientific procedure using passive appropriately.","Write a short incident report mixing active/passive deliberately.","Compare two versions of same paragraph for focus.","Explain three cases where passive improves focus.","Explain three cases where active improves clarity.","Self-check tense, participle, agent and meaning in all answers."],
+    "mastery":{"criterion":"Learner identifies, forms and transforms active/passive constructions across major tenses and modals, rejects impossible passives and chooses voice by focus with at least85% accuracy.","status":"DEEP_WHEN_PASSED"},"boardReady":true
   },
   {
-    "topicId": "nerdc-jss2-english-grammatical-accuracy-5",
-    "classLevel": "JSS2",
-    "subject": "English Language",
-    "strand": "Grammatical Accuracy",
-    "topic": "Direct and indirect speech",
-    "source": {
-      "authority": "NERDC",
-      "url": "https://nerdc.gov.ng/content_manager/jss/jss1-3_english_studies.pdf",
-      "page": 42
-    },
-    "objectives": [
-      "Recognise direct and reported speech",
-      "Report statements, commands and requests accurately",
-      "Adjust pronouns, time/place expressions and tense where context requires"
+    "topicId":"nerdc-jss2-english-grammatical-accuracy-5","classLevel":"JSS2","subject":"English Language","strand":"Grammatical Accuracy","topic":"Direct and indirect speech",
+    "source":{"authority":"NERDC","url":"https://nerdc.gov.ng/content_manager/jss/jss1-3_english_studies.pdf","page":42},
+    "objectives":["Recognise direct and reported speech","Report statements, questions, commands and requests accurately","Adjust pronouns, time/place expressions and tense where context requires"],
+    "prerequisites":["quotation punctuation","pronouns","verb tense"],
+    "teaching":[
+      "DIRECT SPEECH gives a speaker’s actual words inside quotation marks; INDIRECT/REPORTED SPEECH gives the message without preserving exact wording.",
+      "DIRECT SPEECH punctuation normally uses quotation marks, comma/full stop/question mark and a reporting clause.",
+      "REPORTED STATEMENTS often use said that/told + object that, depending structure.",
+      "PRONOUNS change according to speaker and listener viewpoint, not by a memorised mechanical table.",
+      "TENSE BACKSHIFT is common after a past reporting verb: present→past, present perfect→past perfect, will→would, can→could.",
+      "BACKSHIFT IS NOT ALWAYS REQUIRED when the fact remains true or reporting verb is present.",
+      "TIME/PLACE EXPRESSIONS may shift: today→that day, yesterday→the previous day, tomorrow→the next day, here→there, now→then.",
+      "REPORTED YES/NO QUESTIONS use if/whether and statement word order: “Are you ready?”→He asked if I was ready.",
+      "REPORTED WH-QUESTIONS keep the wh-word but use statement word order: “Where are you going?”→She asked where I was going.",
+      "DO NOT keep question inversion in reported questions.",
+      "COMMANDS commonly use told/ordered + object + to-infinitive.",
+      "NEGATIVE COMMANDS use not to: “Don’t run”→The teacher told them not to run.",
+      "REQUESTS commonly use asked + object + to-infinitive, with please reflected in the reporting verb rather than copied mechanically.",
+      "WARNINGS/ADVICE can use warned/advised + object + to-infinitive when appropriate.",
+      "REPORTING VERB should match function: said, told, asked, warned, advised, promised, explained.",
+      "MEANING AND REFERENCE must remain clear after changes.",
+      "PERMANENT METHOD: identify sentence type→speaker/listener→reporting time→pronoun changes→tense/time/place changes→correct reported structure."
     ],
-    "prerequisites": [
-      "quotation punctuation",
-      "pronouns",
-      "verb tense"
+    "workedExamples":[
+      "Direct: Musa said, “I am tired.” Reported later: Musa said that he was tired.",
+      "Direct: Amina said, “I have finished.”→Amina said that she had finished.",
+      "Direct: Musa said, “I will return tomorrow.”→Musa said that he would return the next day.",
+      "Direct: “I can swim,” Tayo said.→Tayo said that he could swim.",
+      "Still-true fact: Teacher said, “Water boils at100°C.”→Teacher said that water boils at100°C can remain present because it is a general truth.",
+      "Direct: “Are you ready?” he asked.→He asked if I was ready.",
+      "Direct: “Did she come?” he asked.→He asked whether she had come.",
+      "Direct: “Where are you going?” she asked.→She asked where I was going.",
+      "Direct: “Why did you leave?”→He asked why I had left.",
+      "Direct: “Close the door,” teacher said.→The teacher told us to close the door.",
+      "Direct: “Do not touch it,” teacher said.→The teacher warned/told the pupils not to touch it.",
+      "Direct: “Please sit down,” he said.→He asked me to sit down.",
+      "Direct: “You should rest,” doctor said.→The doctor advised me to rest.",
+      "Direct: “I will help you,” she said.→She promised that she would help me.",
+      "Today shift: “I am busy today.” reported later→He said he was busy that day.",
+      "Here shift: “I left it here.” reported elsewhere→She said she had left it there.",
+      "Pronoun viewpoint: Ada told Bisi, “I will call you.”→Ada told Bisi that she would call her.",
+      "Wrong reported question: “He asked where was I going.” Correct: “He asked where I was going.”"
     ],
-    "teaching": [
-      "Direct speech presents a speaker’s exact words with quotation conventions. Indirect speech reports the message without necessarily preserving exact wording.",
-      "Reporting may require pronoun and reference changes: “I am tired,” Ada said → Ada said that she was tired, when reported from a later viewpoint.",
-      "Backshift of tense is common after past reporting verbs but is not mechanical when the statement remains universally true or the reporting time/context differs.",
-      "Commands and requests are often reported with to-infinitives: “Please sit down,” he said → He asked me to sit down.",
-      "Time/place words may shift: today→that day, here→there, tomorrow→the next day, depending on viewpoint."
-    ],
-    "workedExamples": [
-      "Direct: Musa said, “I will return tomorrow.” Reported later: Musa said that he would return the next day.",
-      "Direct: “Do not touch it,” the teacher said. Indirect: The teacher warned the pupils not to touch it."
-    ],
-    "misconceptions": [
-      "changing every tense even when context does not require it",
-      "forgetting pronoun reference",
-      "keeping quotation marks in indirect speech",
-      "reporting commands as ordinary statements"
-    ],
-    "guidedPractice": [
-      "Convert 15 statements/questions/commands with explicit discussion of each required change."
-    ],
-    "independentPractice": [
-      "Write a short dialogue, then report the conversation accurately in a narrative paragraph."
-    ],
-    "mastery": {
-      "criterion": "At least 80% overall, with accurate application on an unfamiliar task and correction of any major misconception before progression.",
-      "status": "DEEP_WHEN_PASSED"
-    },
-    "boardReady": true
+    "misconceptions":["keeping quotation marks in indirect speech","changing every tense mechanically","forgetting pronoun viewpoint","retaining question word order","using said me instead of told me","reporting commands as statements","forgetting not to in negative commands","changing time words even when reporting context has not changed","choosing reporting verb that changes meaning"],
+    "guidedPractice":["Convert five statements with backshift.","Convert three general truths without unnecessary backshift.","Report five yes/no questions.","Report five wh-questions.","Report five commands.","Report five requests/advice examples.","Change pronouns in speaker-listener scenarios.","Change time/place expressions where necessary.","Correct ten faulty reported sentences.","Choose said/told/asked/warned/advised/promised appropriately.","Punctuate five direct-speech sentences.","Turn a short dialogue into reported paragraph."],
+    "independentPractice":["Convert twenty mixed direct sentences to indirect speech.","Convert five reported sentences back to direct speech.","Report five yes/no questions.","Report five wh-questions.","Report five commands/requests.","Write five cases where time/place words must change.","Write two cases where they need not change.","Write two cases where backshift is unnecessary.","Correct ten errors in pronouns/tense/order.","Write a six-line dialogue.","Report the dialogue in one coherent paragraph.","Explain each major transformation made."],
+    "mastery":{"criterion":"Learner reports statements, questions, commands, requests and advice accurately, controlling pronouns, tense, word order and time/place reference with at least85% accuracy.","status":"DEEP_WHEN_PASSED"},"boardReady":true
   },
   {
-    "topicId": "nerdc-jss2-english-literature-1",
-    "classLevel": "JSS2",
-    "subject": "English Language",
-    "strand": "Literature",
-    "topic": "Prose: short stories and novelettes",
-    "source": {
-      "authority": "NERDC",
-      "url": "https://nerdc.gov.ng/content_manager/jss/jss1-3_english_studies.pdf",
-      "page": 43
-    },
-    "objectives": [
-      "Read and understand short stories and novelettes",
-      "Identify and distinguish prose types",
-      "Analyse plot, characterisation, setting, theme, style and language",
-      "Respond to questions and create a coherent short narrative"
+    "topicId":"nerdc-jss2-english-literature-1","classLevel":"JSS2","subject":"English Language","strand":"Literature","topic":"Prose: short stories and novelettes",
+    "source":{"authority":"NERDC","url":"https://nerdc.gov.ng/content_manager/jss/jss1-3_english_studies.pdf","page":43},
+    "objectives":["Read and understand short stories and novelettes","Identify and distinguish prose types","Analyse plot, characterisation, setting, theme, style and language","Respond to questions and create a coherent short narrative"],
+    "prerequisites":["JSS1 prose basics","main idea","character and setting"],
+    "teaching":[
+      "PROSE FICTION tells imagined or fictionalised events mainly through sentences and paragraphs.",
+      "A SHORT STORY is compressed: few characters, limited setting, one central conflict or event and economical development.",
+      "A NOVELETTE is longer than a short story and allows more development of plot, setting and character while remaining shorter than a full novel.",
+      "PLOT is not merely a list of events; it is the organised sequence of conflict, development, climax and resolution.",
+      "EXPOSITION introduces setting/characters/problem; RISING ACTION develops conflict; CLIMAX is a major turning point; FALLING ACTION leads toward resolution; RESOLUTION closes or reframes conflict.",
+      "CONFLICT may be person vs person, self, society, nature or circumstance.",
+      "SETTING includes place, time, social conditions and atmosphere.",
+      "CHARACTERISATION is how the writer reveals character through action, speech, thoughts, appearance, reactions and what others say.",
+      "DIRECT CHARACTERISATION tells us a trait; INDIRECT CHARACTERISATION lets evidence reveal it.",
+      "THEME is a full idea about life or experience, not a one-word topic.",
+      "POINT OF VIEW shapes what readers know. First person is limited to “I”; third-person narration may be limited or more all-knowing.",
+      "STYLE includes diction, sentence pattern, imagery, symbolism, dialogue, humour, irony and narrative pace.",
+      "MOOD is the feeling created for reader; TONE is narrator/writer attitude.",
+      "EVIDENCE-BASED ANALYSIS uses feature→evidence/event→explanation of significance.",
+      "RETELLING is useful for plot recall but analysis must explain why events/choices matter.",
+      "WRITING PROSE requires coherent conflict, believable cause/effect, controlled point of view and purposeful details.",
+      "PERMANENT METHOD: what happens? who changes? where/when? what central idea? how does language/narration create effect?"
     ],
-    "prerequisites": [
-      "JSS1 prose basics",
-      "main idea",
-      "character and setting"
+    "workedExamples":[
+      "A boy finds lost money and debates returning it: central conflict may be internal honesty vs temptation.",
+      "If he returns the money despite hardship, a theme statement might be “Integrity can require sacrifice but preserves trust.”",
+      "Topic “honesty” alone is not a complete theme.",
+      "Direct characterisation: “Bola was impatient.”",
+      "Indirect characterisation: Bola taps her foot, interrupts others and leaves before instructions finish; evidence suggests impatience.",
+      "Setting “a crowded Lagos bus at rush hour” includes place, time and social atmosphere, not place alone.",
+      "First-person “I hid the letter” means reader knows only what narrator reveals.",
+      "Third-person limited follows one character’s thoughts while describing others externally.",
+      "A sudden discovery that a trusted friend caused the problem may serve as climax.",
+      "Resolution may be open: conflict may not be fully solved, but story can still end meaningfully.",
+      "Person vs society: a learner challenges an unfair rule.",
+      "Person vs self: a character struggles between fear and duty.",
+      "Dialogue can reveal relationships without direct explanation.",
+      "Short sentences during a chase can quicken pace and create tension.",
+      "Repeated image of a locked gate can symbolise restriction if the story supports that reading.",
+      "Evidence answer: “Tunde is responsible because he admits his mistake and returns to repair the damage.”",
+      "Weak analysis: “The story is about a boy and money.” This only retells topic.",
+      "Strong analysis links choice/consequence to theme and character growth."
     ],
-    "teaching": [
-      "Prose fiction presents narrative through sentences and paragraphs rather than verse lines. Short stories are highly compressed; novelettes allow more development while remaining shorter than full novels.",
-      "Plot is the organised sequence of events and conflict; setting establishes time/place/social context; characterisation is how characters are revealed through actions, speech, thoughts and description.",
-      "Theme is a central idea explored by the text, not merely a one-word topic. “Honesty” is a topic; “honesty can preserve trust even when truth is costly” is a theme statement.",
-      "Style and language include narrative viewpoint, diction, imagery, dialogue and sentence pattern. These choices affect meaning and reader response.",
-      "Evidence-based literary answers identify a feature, cite or paraphrase a relevant event/detail, then explain its significance."
-    ],
-    "workedExamples": [
-      "A story about two friends disagreeing over found money may explore honesty through conflict, choices and consequences.",
-      "A first-person narrator limits the reader to what “I” knows, which can shape suspense and reliability."
-    ],
-    "misconceptions": [
-      "retelling plot instead of analysing theme",
-      "calling setting only the physical place",
-      "describing a character with no evidence",
-      "treating moral and theme as identical in every story"
-    ],
-    "guidedPractice": [
-      "Map plot stages and character evidence from a short story, then write one theme statement."
-    ],
-    "independentPractice": [
-      "Read an unfamiliar short story and answer analysis questions on type, plot, character, setting, theme and style."
-    ],
-    "mastery": {
-      "criterion": "At least 80% overall, with accurate application on an unfamiliar task and correction of any major misconception before progression.",
-      "status": "DEEP_WHEN_PASSED"
-    },
-    "boardReady": true
+    "misconceptions":["retelling instead of analysing","theme as one word","setting only place","character trait without evidence","assuming narrator=author","calling every exciting moment climax","confusing mood/tone","forcing symbolism without textual support","believing every story must have happy resolution"],
+    "guidedPractice":["Map exposition/rising action/climax/resolution from a short story.","Identify two conflicts.","Find three indirect character clues.","Write one evidence-based character paragraph.","Describe setting as place+time+social atmosphere.","Turn a one-word topic into a full theme statement.","Compare first-person and third-person effect.","Identify one style feature and explain effect.","Separate plot summary from analysis.","Find dialogue that reveals relationship.","Create a five-stage plot plan.","Write a 150-word scene with one clear conflict."],
+    "independentPractice":["Read an unseen short story and identify prose type.","Summarise plot in six stages.","Identify main/secondary conflict.","Analyse two characters with evidence.","Describe setting fully.","Write two possible theme statements and defend stronger one.","Identify point of view.","Analyse two style/language features.","Explain climax significance.","Compare beginning/end character state.","Write a short evidence-based literature response.","Plan and write a 500-word original short story using the studied elements."],
+    "mastery":{"criterion":"Learner distinguishes short story/novelette and analyses plot, conflict, characterisation, setting, theme, viewpoint and style with textual evidence at at least85% standard.","status":"DEEP_WHEN_PASSED"},"boardReady":true
   },
   {
-    "topicId": "nerdc-jss2-english-literature-2",
-    "classLevel": "JSS2",
-    "subject": "English Language",
-    "strand": "Literature",
-    "topic": "Nigerian and African folktales",
-    "source": {
-      "authority": "NERDC",
-      "url": "https://nerdc.gov.ng/content_manager/jss/jss1-3_english_studies.pdf",
-      "page": 44
-    },
-    "objectives": [
-      "Identify features of Nigerian and African folktales",
-      "Retell and explain folktales accurately",
-      "Identify themes, moral lessons and cultural values",
-      "Narrate a folktale and interpret embedded riddles where present"
+    "topicId":"nerdc-jss2-english-literature-2","classLevel":"JSS2","subject":"English Language","strand":"Literature","topic":"Nigerian and African folktales",
+    "source":{"authority":"NERDC","url":"https://nerdc.gov.ng/content_manager/jss/jss1-3_english_studies.pdf","page":44},
+    "objectives":["Identify features of Nigerian and African folktales","Retell and explain folktales accurately","Identify themes, moral lessons and cultural values","Narrate a folktale and interpret embedded riddles where present"],
+    "prerequisites":["folktale basics","oral storytelling"],
+    "teaching":[
+      "FOLKTALES are traditional narratives passed through generations, often orally, for entertainment, teaching, cultural memory and social reflection.",
+      "ORAL PERFORMANCE matters: voice, repetition, song, audience response and formulaic openings/closings may be part of the tale.",
+      "COMMON CHARACTERS include humans, animals and supernatural beings, but no single feature appears in every African folktale.",
+      "TRICKSTER CHARACTERS may win through intelligence, greed or deception; consequences determine how the story judges their behaviour.",
+      "FORMULAIC OPENINGS/CLOSINGS help mark storytelling frame and audience participation.",
+      "REPETITION can aid memory, rhythm, suspense and emphasis.",
+      "SONGS/CHANTS may advance plot, reveal emotion or invite audience response.",
+      "RIDDLES/PROVERBS may test wisdom, encode cultural knowledge or move action forward.",
+      "SETTING often reflects community life, farms, forests, markets, households or imagined supernatural spaces.",
+      "CULTURAL VALUES should be inferred from choices, rewards, punishments and communal reactions.",
+      "MORAL is a lesson drawn from events; THEME is a broader idea explored by the narrative. They may overlap but are not identical.",
+      "RETELLING must preserve central sequence, conflict and ending even when wording changes.",
+      "COMPARE TALES respectfully: identify shared structures and distinct cultural details without claiming all African traditions are the same.",
+      "SUPERNATURAL ELEMENTS are studied as literary/cultural features, not automatically as historical evidence.",
+      "PERMANENT METHOD: identify tale type/features→retell sequence→trace action/consequence→infer theme/moral→explain cultural function."
     ],
-    "prerequisites": [
-      "folktale basics",
-      "oral storytelling"
+    "workedExamples":[
+      "A tortoise repeatedly deceives neighbours and finally loses community trust: consequences may criticise greed/deception.",
+      "A clever hare escapes danger through wit: theme may involve intelligence overcoming strength, depending on details.",
+      "Opening such as “Once upon a time…” signals movement into traditional story world.",
+      "Audience response after a repeated line shows oral participation, not unnecessary repetition.",
+      "A song sung before each dangerous act may build suspense and predict consequence.",
+      "A riddle that must be solved before a character enters a village moves the plot forward.",
+      "A proverb spoken by an elder may summarise communal wisdom.",
+      "Animal characters behaving like humans can represent human strengths/weaknesses.",
+      "If a generous child is rewarded after helping a stranger, the tale may value hospitality.",
+      "If disobedience brings harm, the moral may caution against ignoring wise advice—but only if events support it.",
+      "Theme “greed destroys trust” is more analytical than topic “greed”.",
+      "Retelling should preserve cause: character steals→community discovers→consequence; omitting the theft breaks logic.",
+      "Two tales may both use tricksters but one praises cleverness while another condemns selfishness.",
+      "A supernatural forest may function as testing space for courage or character.",
+      "Comparing Yoruba and Akan tales should focus on evidence from the actual stories, not stereotypes.",
+      "A moral can be debated if the ending is ambiguous; defend interpretation with events."
     ],
-    "teaching": [
-      "Folktales are traditional narratives transmitted across generations, often orally, and may explain behaviour, entertain, teach values or preserve cultural memory.",
-      "Common features can include formulaic openings/closings, repetition, songs, animal characters, tricksters, communal settings and clear consequences, but not every tale contains every feature.",
-      "Interpret cultural values carefully. A tale can reflect a community’s historical worldview without every element being a universal rule today.",
-      "Moral lessons should arise from actions and consequences in the tale rather than being imposed from outside.",
-      "Retelling preserves the central sequence and meaning while allowing the learner’s own wording and expressive narration."
-    ],
-    "workedExamples": [
-      "A tortoise trickster tale may use repeated deception and consequences to explore greed or cleverness; the lesson depends on the actual ending.",
-      "A riddle within a folktale can test wit and may move the plot forward rather than serve as decoration."
-    ],
-    "misconceptions": [
-      "assuming all African folktales are the same",
-      "forcing one moral onto every tale",
-      "retelling without sequence",
-      "treating supernatural features as factual claims"
-    ],
-    "guidedPractice": [
-      "Retell a supplied folktale in six stages, identify three features and justify one moral lesson."
-    ],
-    "independentPractice": [
-      "Compare two folktales from different communities, noting shared features, differences and values without stereotyping."
-    ],
-    "mastery": {
-      "criterion": "At least 80% overall, with accurate application on an unfamiliar task and correction of any major misconception before progression.",
-      "status": "DEEP_WHEN_PASSED"
-    },
-    "boardReady": true
+    "misconceptions":["all African folktales are the same","every animal is a symbol with one fixed meaning","forcing one moral on every tale","retelling out of sequence","confusing theme and moral","ignoring performance features","stereotyping communities","treating supernatural events as historical proof"],
+    "guidedPractice":["Retell a supplied tale in six stages.","Identify four oral-performance features.","Identify one repeated pattern and its effect.","Analyse trickster behaviour with evidence.","Find a song/riddle/proverb function.","Write one theme statement.","Write one moral supported by ending.","Compare moral vs theme.","Identify cultural values cautiously.","Compare two tales for shared/different features.","Perform one section with audience response.","Explain why one interpretation is stronger than another."],
+    "independentPractice":["Read a Nigerian folktale and map plot.","Read another African folktale and map plot.","Identify oral features in each.","Analyse main character choices.","State one theme per tale.","State one moral per tale with evidence.","Compare consequences.","Compare use of animals/supernatural elements.","Analyse one proverb/riddle/song.","Write a respectful comparison paragraph.","Retell one tale in your own words.","Create an original folktale using repetition and a clear consequence without copying an existing story."],
+    "mastery":{"criterion":"Learner recognises folktale/oral features, retells coherently, interprets theme/moral/cultural values from evidence and compares traditions without stereotyping at at least85% standard.","status":"DEEP_WHEN_PASSED"},"boardReady":true
   },
   {
-    "topicId": "nerdc-jss2-english-literature-3",
-    "classLevel": "JSS2",
-    "subject": "English Language",
-    "strand": "Literature",
-    "topic": "Popular myths/legends",
-    "source": {
-      "authority": "NERDC",
-      "url": "https://nerdc.gov.ng/content_manager/jss/jss1-3_english_studies.pdf",
-      "page": 45
-    },
-    "objectives": [
-      "Identify features of myths and legends",
-      "Retell and explain their themes",
-      "Identify lessons or cultural meanings",
-      "Distinguish myth/legend from other narrative forms"
+    "topicId":"nerdc-jss2-english-literature-3","classLevel":"JSS2","subject":"English Language","strand":"Literature","topic":"Popular myths/legends",
+    "source":{"authority":"NERDC","url":"https://nerdc.gov.ng/content_manager/jss/jss1-3_english_studies.pdf","page":45},
+    "objectives":["Identify features of myths and legends","Retell and explain their themes","Identify lessons or cultural meanings","Distinguish myth/legend from other narrative forms"],
+    "prerequisites":["folktales","prose narrative"],
+    "teaching":[
+      "MYTHS are traditional narratives often connected with origins, supernatural beings, deities, cosmic order or explanations of natural/social phenomena.",
+      "LEGENDS are traditional narratives associated more closely with remembered people, places or events, often enlarged through oral transmission.",
+      "FOLKTALE, MYTH and LEGEND can overlap, so classification should use dominant function/features rather than one rigid label.",
+      "ORIGIN/EXPLANATORY FUNCTION is a strong myth feature: why a river exists, how a custom began, why a natural pattern occurs within a tradition.",
+      "HEROIC/HISTORICAL ANCHOR is common in legends: a remembered warrior, ruler, founder, migration or place linked to tradition.",
+      "SUPERNATURAL ELEMENTS may occur in both; their presence alone does not classify the narrative.",
+      "CULTURAL FUNCTION may include identity, warning, moral reflection, explanation, memory or celebration.",
+      "THEME should be expressed as a statement about an idea, not simply “courage”, “power” or “obedience”.",
+      "RETELLING keeps chronology and central events; analysis asks what the narrative means/functions within culture.",
+      "EVIDENCE matters: identify the feature or event that supports calling a narrative myth or legend.",
+      "DO NOT use myth to mean “a lie” in literary analysis; that everyday meaning is different from literary/cultural classification.",
+      "DO NOT treat legends as verified history automatically. Traditional memory and historical evidence are different questions.",
+      "COMPARE narratives by purpose, hero/supernatural role, setting, plot structure, cultural values and explanatory function.",
+      "PERMANENT METHOD: classify cautiously→identify evidence→retell core sequence→state theme/cultural function→separate literature from historical verification."
     ],
-    "prerequisites": [
-      "folktales",
-      "prose narrative"
+    "workedExamples":[
+      "A story explaining the origin of thunder through supernatural action functions mythically.",
+      "A story explaining why a particular river is sacred may function as origin/cultural myth depending on tradition.",
+      "A narrative about a remembered warrior whose strength grows larger in retelling is more legendary.",
+      "A story about a town founder linked to a real place can be legend even if details are embellished.",
+      "Supernatural event alone does not prove myth; a legend may contain supernatural additions.",
+      "A tale of an unnamed clever tortoise teaching greed may be better classified as folktale than legend.",
+      "Theme statement: “Leadership without restraint can endanger a community.”",
+      "Weak theme: “leadership.” This is only topic.",
+      "Cultural function: a legend about a founder may strengthen communal identity.",
+      "Origin function: a myth may explain why a festival is observed.",
+      "Retelling error: leaving out the hero’s broken promise can remove cause of later punishment.",
+      "Evidence-based classification: “This is legendary because it centres on a named founder tied to a specific town and remembered migration.”",
+      "Evidence-based myth classification: “This is mythic because it explains the origin of seasons through actions of supernatural beings.”",
+      "Compare two narratives: both value courage, but one explains origins while the other remembers a hero.",
+      "A narrative can contain moral lesson without being a folktale if its dominant function is mythic/legendary.",
+      "Respectful analysis describes what a tradition presents without mocking belief."
     ],
-    "teaching": [
-      "Myths are traditional narratives often connected with origins, deities, supernatural forces or explanations of the world; legends are traditional stories linked more closely to remembered people, places or events, often with exaggeration.",
-      "The categories can overlap in oral traditions, so classification should use features and function rather than rigid labels.",
-      "Analyse who or what the story explains, the cultural values it reflects, and how supernatural or heroic elements operate in the narrative.",
-      "Retelling requires chronological coherence and preservation of central events; analysis then moves beyond retelling to meaning.",
-      "Treat myths/legends respectfully as cultural literature while distinguishing literary study from claims about historical proof."
-    ],
-    "workedExamples": [
-      "An origin story explaining why a natural feature exists functions mythically; a story centred on a famous historical warrior enlarged by tradition is more legendary.",
-      "A legend may communicate courage or communal identity even when some episodes are impossible to verify historically."
-    ],
-    "misconceptions": [
-      "using “myth” to mean simply “false” in literary analysis",
-      "calling every old story a legend",
-      "retelling without explaining theme",
-      "confusing cultural respect with historical verification"
-    ],
-    "guidedPractice": [
-      "Classify four traditional narratives by features and defend each choice."
-    ],
-    "independentPractice": [
-      "Analyse one myth and one legend for features, theme, cultural function and narrative structure."
-    ],
-    "mastery": {
-      "criterion": "At least 80% overall, with accurate application on an unfamiliar task and correction of any major misconception before progression.",
-      "status": "DEEP_WHEN_PASSED"
-    },
-    "boardReady": true
+    "misconceptions":["myth simply means false","every old story is legend","supernatural automatically means myth","retelling without theme","confusing cultural respect with historical proof","claiming one classification with no evidence","forcing modern judgement instead of literary analysis"],
+    "guidedPractice":["Classify six short narrative descriptions as likely myth/legend/folktale and justify.","Identify origin-function clues.","Identify historical-anchor clues.","Retell one myth in six stages.","Retell one legend in six stages.","Write theme statement for each.","Identify cultural function.","Separate literary claim from historical claim.","Compare hero roles.","Compare supernatural roles.","Defend one ambiguous classification.","Correct misuse of word myth in literary response."],
+    "independentPractice":["Analyse one myth for features.","Analyse one legend for features.","Write evidence-based classification paragraphs.","Summarise central events.","State themes.","Explain cultural functions.","Compare myth and legend structure.","Compare relationship to place/history.","Explain role of supernatural elements.","Identify one overlap that makes classification difficult.","Write a respectful critical response.","Create a short original legend-like narrative tied to an imagined place while clearly labelling it fictional."],
+    "mastery":{"criterion":"Learner distinguishes myths, legends and folktales using evidence, retells coherently and analyses theme/cultural function while separating literary tradition from historical verification at at least85% standard.","status":"DEEP_WHEN_PASSED"},"boardReady":true
   },
   {
     "topicId": "nerdc-jss2-english-literature-4",
