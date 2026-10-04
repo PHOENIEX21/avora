@@ -167,6 +167,28 @@ function buildEvents(unit:any,topic:string,subject:string,classLevel:string):Boa
     lines:['Required subtopics / forms:',...unit.teachingTypes.map((x:string)=>`• ${x}`)]
    });
   }
+  if(Array.isArray(unit.teachingTypeExamples)&&unit.teachingTypeExamples.length){
+   unit.teachingTypeExamples.forEach((sub:any,subIndex:number)=>{
+    enriched.push({
+     stepId:`subtopic-${subIndex+1}-foundation`,
+     kind:'idea',
+     label:`SUBTOPIC ${subIndex+1} — ${String(sub.name||'').toUpperCase()}`,
+     spoken:`${sub.name}. ${sub.description} We will meet this idea in more than one form so that changing the numbers or wording does not make it look like a new topic.`,
+     lines:[String(sub.name||''),String(sub.description||''),'Several different forms must make sense, not only one memorised example.']
+    });
+    (sub.examples||[]).slice(0,3).forEach((example:string,exampleIndex:number)=>enriched.push({
+     stepId:`subtopic-${subIndex+1}-variation-${exampleIndex+1}`,
+     kind:'check',
+     label:`SUBTOPIC ${subIndex+1} · DIVERSE EXAMPLE ${exampleIndex+1}`,
+     spoken:`Try this version of the same subtopic: ${example}`,
+     question:example,
+     expectation:'Show the method and the reason for each important step. Do not give only the final answer.',
+     lines:['Practice variation',example,'Show working + explain why.'],
+     boardAction:'ASK',
+     pauseAfterMs:0
+    }));
+   });
+  }
   enriched.push(...cleaned);
 
   // Rebuild the authored Mathematics examples as genuine worked demonstrations. This is the
