@@ -751,255 +751,251 @@ export const jss3EnglishDeepLessons:DeepJss3EnglishLesson[]=[
   "mastery":{"criterion":"Learner selects modal forms by meaning, strength and register, distinguishes prohibition from lack of necessity, uses modal-perfect structures and reports modal statements accurately with at least85% success.","status":"DEEP_WHEN_PASSED"},"boardReady":true
 },
 {
-  "topicId": "nerdc-jss3-english-literature-1",
-  "classLevel": "JSS3",
-  "subject": "English Language",
-  "strand": "Literature",
-  "topic": "Non-African folktales",
-  "source": {
-    "authority": "NERDC",
-    "url": "https://nerdc.gov.ng/content_manager/jss/jss1-3_english_studies.pdf",
-    "page": 61
-  },
-  "objectives": [
-    "Identify features of non-African folktales",
-    "Analyse plot, character, setting, values and lessons in selected tales",
-    "Compare folktale traditions without stereotyping cultures"
+  "topicId":"nerdc-jss3-english-literature-1",
+  "classLevel":"JSS3","subject":"English Language","strand":"Literature","topic":"Non-African folktales",
+  "source":{"authority":"NERDC","url":"https://nerdc.gov.ng/content_manager/jss/jss1-3_english_studies.pdf","page":61},
+  "objectives":["Identify common features of non-African folktales","Analyse plot, character, setting, conflict, values and lessons","Compare folktales across traditions using textual evidence rather than stereotypes","Explain how repetition, archetypes, supernatural elements and narrative patterns shape meaning"],
+  "prerequisites":["JSS2 African folktales","plot and character","theme","comparison"],
+  "teaching":[
+    "A FOLKTALE is a traditional story transmitted within a community, often orally before being written down. It may entertain, explain, warn, teach or preserve cultural memory.",
+    "NON-AFRICAN FOLKTALES should be studied as specific texts, not as proof of what an entire culture is like.",
+    "COMMON FEATURES may include repeated actions, magical helpers, talking animals, tricksters, tests, patterned numbers, clear consequences and memorable openings/endings.",
+    "PLOT should be traced through exposition, conflict, rising action, climax and resolution where applicable.",
+    "CHARACTER TYPES may include trickster, helper, fool, ruler, youngest child, jealous rival or wise elder, but labels must be supported by actions.",
+    "ARCHETYPAL CHARACTERS are recurring character patterns, not stereotypes about real people.",
+    "SETTING can be realistic or magical. Place and social customs may affect what choices are possible in the story.",
+    "SUPERNATURAL ELEMENTS may function symbolically, structurally or morally; do not treat them as random decoration.",
+    "REPETITION often aids oral memory and builds expectation: repeated tasks, phrases or sets of three may structure the tale.",
+    "CONFLICT may be person vs person, self, community, nature or supernatural force.",
+    "LESSONS emerge from consequences. A character rewarded for generosity may support a lesson about kindness; a punished trickster may complicate admiration for cleverness.",
+    "ONE TALE CAN SUPPORT MORE THAN ONE LESSON if each interpretation is tied to evidence.",
+    "COMPARE TALES BY FEATURES, not vague claims: compare type of hero, conflict, repetition, ending, supernatural role, humour and moral pattern.",
+    "SIMILARITY DOES NOT MEAN SAME MESSAGE. Two stories can use talking animals but communicate different values.",
+    "CULTURAL DETAILS should be interpreted cautiously and textually. Avoid statements such as “all people from X believe…”.",
+    "PERMANENT ANALYSIS METHOD: plot pattern→character choices→conflict→special features→consequences→lesson/theme→comparison."
   ],
-  "prerequisites": [
-    "JSS2 African folktales",
-    "plot and character",
-    "theme"
+  "workedExamples":[
+    "A trickster repeatedly wins through clever speech, but the final trick harms a friend. The tale may admire intelligence while criticising selfishness.",
+    "A youngest child succeeds where older siblings fail because the child listens carefully. This may support a lesson about humility and attentiveness rather than age itself.",
+    "Three repeated tasks can build suspense because each repetition raises expectation before the final outcome.",
+    "A magical helper may reward kindness shown earlier, linking supernatural action to the tale’s moral structure.",
+    "A talking animal is a literary device; it should not be read as a literal claim about animals in the culture.",
+    "A greedy ruler who loses everything after ignoring warnings develops conflict through repeated poor choices.",
+    "If a hero receives help only after sharing food with a stranger, generosity is supported by action/consequence evidence.",
+    "A fool character who accidentally solves a problem may create humour while also exposing the pride of supposedly wiser characters.",
+    "A supernatural forest may function as a testing place where the hero’s courage or honesty is revealed.",
+    "A repeated phrase such as “Again he refused” can intensify stubbornness and prepare the reader for consequences.",
+    "One tale ends with reconciliation; another with punishment. Their moral structures differ even if both involve deception.",
+    "An African trickster tale and a non-African trickster tale may both use wit, but one may reward communal loyalty while the other warns against overconfidence.",
+    "Two tales may both use the number three structurally without sharing the same cultural meaning.",
+    "A character’s label “lazy” is weak analysis unless supported by missed duties, avoidance and resulting conflict.",
+    "A lesson “be kind” is too vague if the text specifically shows kindness to strangers leading to unexpected help; the evidence should be stated.",
+    "A comparison sentence can read: “Both tales use repetition to build anticipation, but Tale A rewards patience whereas Tale B punishes greed.”"
   ],
-  "teaching": [
-    "Folktales are traditional narratives passed through communities and often use memorable plots, repeated patterns, archetypal characters, humour or moral instruction.",
-    "Study a non-African tale as literature first: trace exposition, conflict, climax and resolution and identify how characters’ choices drive events.",
-    "Cultural details should be interpreted from the text and reliable context, not from assumptions about an entire people.",
-    "Compare with African folktales by specific features such as trickster roles, supernatural elements, repetition, setting or moral function.",
-    "A lesson should arise from events and consequences in the tale rather than being imposed regardless of evidence."
-  ],
-  "workedExamples": [
-    "A trickster who repeatedly succeeds through wit may reveal admiration for cleverness but the ending may also criticise selfishness.",
-    "Two tales from different regions may both use talking animals while teaching different social values."
-  ],
-  "misconceptions": [
-    "assuming all folktales have one explicit moral",
-    "stereotyping non-African cultures",
-    "retelling without analysis",
-    "confusing author with traditional narrator"
-  ],
-  "guidedPractice": [
-    "Read a selected tale and map plot, character choices, cultural features and possible lessons."
-  ],
-  "independentPractice": [
-    "Compare one African and one non-African folktale in a structured literary response supported by textual details."
-  ],
-  "mastery": {
-    "criterion": "At least 80% overall, with accurate application on an unfamiliar task and correction of any major misconception before progression.",
-    "status": "DEEP_WHEN_PASSED"
-  },
-  "boardReady": true
+  "misconceptions":["retelling instead of analysing","assuming all folktales have one explicit moral","stereotyping cultures","confusing narrator with known individual author","calling every animal tale a folktale automatically","treating supernatural elements as meaningless","using character labels without evidence","assuming similar devices mean identical themes"],
+  "guidedPractice":["Map exposition, conflict, climax and resolution in one tale.","Identify two character traits with evidence.","Find one repeated pattern and explain its effect.","Identify one supernatural element and explain its function.","State two possible lessons with evidence.","Distinguish theme from moral slogan.","Compare one African and one non-African tale by three features.","Compare two endings and explain how each shapes the lesson.","Identify one archetypal character and justify.","Rewrite one stereotypical cultural statement into a cautious text-based observation.","Build an evidence table for plot, character, setting and values.","Write one comparative paragraph using both similarity and difference."],
+  "independentPractice":["Analyse an unfamiliar folktale in250 words.","Compare two folktales from different traditions in300 words.","Identify five recurring folktale features in an unseen text.","Explain how repetition affects one tale.","Explain how a supernatural element contributes to meaning.","Analyse a trickster or helper character with three pieces of evidence.","Write two defensible lessons from one tale.","Compare two moral outcomes.","Separate cultural detail from unsupported stereotype in six statements.","Retell a tale in120 words, then write a separate120-word analysis to show the difference.","Create a short original folktale using one repeated pattern and clear consequence.","Annotate your original tale to show which traditional features you deliberately used."],
+  "mastery":{"criterion":"Learner analyses unfamiliar folktales through plot, character, conflict, repetition, supernatural elements, values and lessons, and compares traditions with evidence and without stereotyping at at least85% standard.","status":"DEEP_WHEN_PASSED"},"boardReady":true
 },
 {
-  "topicId": "nerdc-jss3-english-literature-2",
-  "classLevel": "JSS3",
-  "subject": "English Language",
-  "strand": "Literature",
-  "topic": "Lessons from myths/legends",
-  "source": {
-    "authority": "NERDC",
-    "url": "https://nerdc.gov.ng/content_manager/jss/jss1-3_english_studies.pdf",
-    "page": 62
-  },
-  "objectives": [
-    "Distinguish myths and legends and identify their characteristic features",
-    "Infer lessons, values and explanations embedded in selected narratives",
-    "Support interpretations with events, characters and consequences from the text"
+  "topicId":"nerdc-jss3-english-literature-2",
+  "classLevel":"JSS3","subject":"English Language","strand":"Literature","topic":"Lessons from myths/legends",
+  "source":{"authority":"NERDC","url":"https://nerdc.gov.ng/content_manager/jss/jss1-3_english_studies.pdf","page":62},
+  "objectives":["Distinguish myths and legends","Identify explanatory, symbolic and cultural functions","Infer lessons and values from character choices and consequences","Support interpretations with textual evidence","Compare multiple possible interpretations"],
+  "prerequisites":["JSS2 myths and legends","theme","inference","symbolism"],
+  "teaching":[
+    "A MYTH is a traditional narrative often connected with origins, sacred ideas, natural phenomena, gods/supernatural beings or foundational explanations.",
+    "A LEGEND is a traditional narrative commonly linked to a named person, place or event remembered as historically meaningful, though details may be shaped by storytelling.",
+    "THE DISTINCTION IS USEFUL, NOT ABSOLUTE. Some narratives combine features of myth and legend.",
+    "MYTH SHOULD NOT BE DEFINED AS 'A LIE'. In literature, the important question is what the narrative explains, symbolises or communicates.",
+    "EXPLANATORY FUNCTION may address why something exists, how a custom began or how a natural feature is understood within a tradition.",
+    "SYMBOLIC FUNCTION allows characters, objects or journeys to represent larger ideas such as pride, sacrifice, courage, disobedience or renewal.",
+    "LEGENDARY HEROES may be remembered for exceptional courage, leadership or failure; analysis must still examine choices and consequences.",
+    "CHARACTER DESIRE drives action. Ask what the central figure wants and what that desire causes.",
+    "CONSEQUENCES often reveal values or warnings more reliably than a stated moral.",
+    "A LESSON is defensible when events consistently support it. Avoid adding a proverb merely because it sounds wise.",
+    "MULTIPLE LESSONS can coexist: pride may be criticised while courage is admired.",
+    "SYMBOLS gain meaning from repeated use and context. Do not assign symbolic meaning to every object.",
+    "ORIGIN STORIES may perform both explanatory and moral functions at the same time.",
+    "COMPARE MYTHS/LEGENDS by function, hero pattern, supernatural role, conflict, consequence and social value.",
+    "EVIDENCE-BASED INTERPRETATION allows disagreement when each reading is grounded in the text.",
+    "PERMANENT METHOD: classify cautiously→identify function→trace desire/choice/consequence→identify symbols→state lesson→support with events."
   ],
-  "prerequisites": [
-    "JSS2 myths and legends",
-    "theme",
-    "inference"
+  "workedExamples":[
+    "A story explaining why a river is sacred may function as an origin myth if supernatural events explain the river’s significance.",
+    "A story about a remembered warrior linked to a real region may operate as legend even when miraculous details appear.",
+    "A proud hero ignores repeated warnings and falls from power. Humility is a defensible lesson because consequence follows pride.",
+    "A heroine sacrifices personal safety to protect a community. The narrative may value courage and communal responsibility.",
+    "A forbidden object may symbolise temptation if repeated references connect it to disobedience and consequence.",
+    "A long journey may symbolise maturity when each stage changes the hero’s understanding.",
+    "A storm sent after an oath is broken may connect supernatural consequence with the value of keeping promises.",
+    "An origin story that explains fire may also teach that knowledge should be used responsibly.",
+    "A legend may preserve communal memory even when exact historical details cannot be verified.",
+    "A character who defeats an enemy through patience rather than force may support a lesson about wisdom over impulsiveness.",
+    "Two readers may disagree whether the strongest lesson is obedience or humility; both need plot evidence.",
+    "A single decorative necklace is not automatically a symbol unless the story gives it repeated or meaningful significance.",
+    "If a myth ends with restoration after sacrifice, the ending may reinforce themes of renewal and responsibility.",
+    "If a hero’s courage saves others but reckless pride causes loss, the text may both admire and criticise the same character.",
+    "A comparison: one myth explains a natural feature, while one legend preserves memory of a leader; both can communicate values.",
+    "A careful answer distinguishes: “The tale presents…” from “This culture believes every detail literally.”"
   ],
-  "teaching": [
-    "Myths often explain origins, natural phenomena, sacred beliefs or foundational ideas; legends are traditionally linked to persons, places or events that communities regard as historically meaningful.",
-    "Both forms can mix imagination, symbolism and cultural memory, so literary analysis should not reduce them to a simple true/false test.",
-    "Trace what characters desire, what choices they make and what consequences follow; these patterns often reveal values or warnings.",
-    "Separate a text-supported lesson from a personal slogan. Cite the event or pattern that justifies the interpretation.",
-    "Different readers may propose different lessons when each interpretation is supported by the narrative."
-  ],
-  "workedExamples": [
-    "A legend in which pride leads a hero to ignore wise counsel may support a lesson about humility if the consequence is central to the plot.",
-    "An origin myth may explain a feature of the world while also communicating community values."
-  ],
-  "misconceptions": [
-    "treating myth as merely a lie",
-    "claiming a moral without evidence",
-    "confusing myth and legend completely",
-    "ignoring symbolism"
-  ],
-  "guidedPractice": [
-    "Annotate a myth/legend for explanatory purpose, character choices, consequences and two possible lessons."
-  ],
-  "independentPractice": [
-    "Write a literary response explaining the strongest lesson in an unfamiliar myth or legend with three pieces of evidence."
-  ],
-  "mastery": {
-    "criterion": "At least 80% overall, with accurate application on an unfamiliar task and correction of any major misconception before progression.",
-    "status": "DEEP_WHEN_PASSED"
-  },
-  "boardReady": true
+  "misconceptions":["myth means lie","legend means verified history","one moral must fit all readers","claiming lessons without evidence","assigning symbols randomly","ignoring consequences","confusing plot summary with theme","stereotyping cultural belief","forcing a rigid myth/legend boundary"],
+  "guidedPractice":["Classify six narratives as myth, legend or mixed and justify.","Identify explanatory function in three extracts.","Trace desire→choice→consequence in one narrative.","Identify one possible symbol and test it against context.","Write two lessons with evidence.","Compare two interpretations and judge which is better supported.","Find one example where a hero is both admirable and flawed.","Compare a myth and legend by supernatural role.","Rewrite “myths are lies” into a literary definition.","Separate historical claim from narrative significance.","Build an evidence table for values/warnings.","Write one paragraph on how ending reinforces a lesson."],
+  "independentPractice":["Analyse an unfamiliar myth in250 words.","Analyse an unfamiliar legend in250 words.","Compare one myth and one legend in300 words.","Identify three possible lessons from one narrative and rank them by evidence.","Analyse one symbol across a passage.","Explain one origin/explanatory function.","Explain how a consequence reveals a value.","Write a response on a flawed hero.","Challenge an unsupported interpretation with evidence.","Produce two different but defensible readings of one event.","Create a short origin myth with symbolic element.","Annotate your story to explain its lesson and symbol."],
+  "mastery":{"criterion":"Learner distinguishes and analyses myths/legends by function, symbolism, choices, consequences and lessons, supports multiple interpretations with evidence, and avoids simplistic true/false or stereotype treatment at at least85% standard.","status":"DEEP_WHEN_PASSED"},"boardReady":true
 },
 {
-  "topicId": "nerdc-jss3-english-literature-3",
-  "classLevel": "JSS3",
-  "subject": "English Language",
-  "strand": "Literature",
-  "topic": "Prose Revision",
-  "source": {
-    "authority": "NERDC",
-    "url": "https://nerdc.gov.ng/content_manager/jss/jss1-3_english_studies.pdf",
-    "page": 63
-  },
-  "objectives": [
-    "Analyse prose using plot, setting, characterisation, theme, point of view and style",
-    "Explain how prose elements interact to create meaning",
-    "Support literary interpretations with relevant textual evidence"
+  "topicId":"nerdc-jss3-english-literature-3",
+  "classLevel":"JSS3","subject":"English Language","strand":"Literature","topic":"Prose Revision",
+  "source":{"authority":"NERDC","url":"https://nerdc.gov.ng/content_manager/jss/jss1-3_english_studies.pdf","page":63},
+  "objectives":["Analyse plot, setting, conflict, characterisation, theme, point of view and style","Explain how prose elements interact","Distinguish summary from analysis","Support interpretations with precise textual evidence"],
+  "prerequisites":["JSS2 prose","literary elements","evidence-based interpretation"],
+  "teaching":[
+    "PROSE ANALYSIS asks how a text works, not only what happens.",
+    "PLOT is a chain of causally connected events. Exposition, complication, climax and resolution are useful when they fit the story.",
+    "CONFLICT drives much prose: character vs character, self, society, environment or circumstance.",
+    "CHARACTERISATION can be direct or indirect through speech, action, thought, appearance, decisions and other characters’ responses.",
+    "A CHARACTER TRAIT needs evidence. Instead of saying “Bola is brave,” show the decision or action that supports bravery.",
+    "SETTING includes place, time and social environment. Setting can create pressure, limit choices or shape mood.",
+    "POINT OF VIEW determines what the reader can know. First-person may offer intimacy but limited knowledge; third-person narration can vary in range.",
+    "UNRELIABLE OR LIMITED NARRATION can create uncertainty, surprise or irony when readers recognise gaps in the narrator’s understanding.",
+    "THEME is a developed statement about life, society or human behaviour, not a one-word topic.",
+    "MOTIF is a recurring element that contributes to meaning; SYMBOL is an element that carries significance beyond its literal role.",
+    "STYLE includes diction, syntax, imagery, dialogue, humour, irony, pacing, description and narrative structure.",
+    "DIALOGUE can reveal relationships, social position, conflict and hidden motives.",
+    "PACING changes through scene, summary, sentence length and detail. A writer may slow a climax or compress unimportant years.",
+    "FORESHADOWING gives clues to later events; FLASHBACK moves narrative attention to earlier events.",
+    "IRONY can arise when outcomes, words or reader knowledge contrast with expectations.",
+    "INTEGRATED ANALYSIS connects elements: setting may intensify conflict; point of view may shape sympathy; dialogue may reveal character and advance plot.",
+    "PERMANENT PARAGRAPH METHOD: claim about element→specific evidence→explain effect→connect to wider meaning/theme."
   ],
-  "prerequisites": [
-    "JSS2 prose",
-    "literary elements",
-    "evidence-based interpretation"
+  "workedExamples":[
+    "Plot summary: “A boy loses money and returns home.” Analysis asks why the loss changes his choices and what consequence follows.",
+    "A character returns a lost wallet despite needing money; the action supports honesty more strongly than a narrator simply calling him honest.",
+    "A crowded one-room home can shape conflict by removing privacy; setting becomes functional, not decorative.",
+    "First-person narration may make fear immediate because readers receive events through the frightened character’s perception.",
+    "A first-person narrator who misreads another person may create dramatic or situational irony when readers see more than the narrator does.",
+    "Third-person limited narration can stay close to one character while withholding others’ thoughts.",
+    "Theme topic “greed” becomes a theme statement: unchecked greed can destroy trust and relationships.",
+    "A recurring locked door may become a motif of exclusion if it repeatedly appears at moments of rejection.",
+    "Rain is not automatically symbolic; it becomes meaningful only if the text repeatedly connects it to change, danger or renewal.",
+    "Short abrupt sentences during a chase can accelerate pacing.",
+    "A long descriptive paragraph before a revelation can slow pacing and build suspense.",
+    "Dialogue “You came back?” followed by silence may reveal surprise and tension without narrator explanation.",
+    "Foreshadowing: an early warning about weak bridge supports later collapse.",
+    "Flashback can explain why a present conflict matters emotionally.",
+    "Verbal irony occurs if a character calls a disastrous plan “brilliant” in a clearly mocking context.",
+    "Setting and character interaction: strict school rules may force a rebellious character into conflict with authority.",
+    "Point of view and theme: a child narrator may expose adult hypocrisy because the child reports contradictions innocently.",
+    "Integrated paragraph: “The author uses the cramped setting to intensify family conflict; because every argument is overheard, characters cannot escape tension, reinforcing the theme that poverty can strain relationships.”"
   ],
-  "teaching": [
-    "Prose revision should integrate literary elements rather than list definitions. Ask how setting affects conflict, how characterisation advances plot and how point of view shapes what the reader knows.",
-    "Plot is the organised sequence of events and causal relationships, not merely a list of everything that happens.",
-    "Characterisation may be direct or inferred from speech, actions, thoughts, appearance and other characters’ responses.",
-    "Theme is a developed idea about life or society emerging from the whole text; a one-word topic such as “love” is not yet a theme statement.",
-    "Style includes diction, imagery, sentence patterns, dialogue, humour, irony and other choices that shape effect."
-  ],
-  "workedExamples": [
-    "If a first-person narrator misunderstands another character, point of view can create limited knowledge and irony.",
-    "“Greed” is a topic; “unchecked greed can destroy relationships” is a defensible theme when events support it."
-  ],
-  "misconceptions": [
-    "retelling plot instead of analysing",
-    "theme as one word",
-    "unsupported character labels",
-    "ignoring point of view"
-  ],
-  "guidedPractice": [
-    "Use a prose extract to build an evidence table for character, setting, conflict, theme and style."
-  ],
-  "independentPractice": [
-    "Write a 250-word response explaining how two prose elements work together in an unfamiliar extract."
-  ],
-  "mastery": {
-    "criterion": "At least 80% overall, with accurate application on an unfamiliar task and correction of any major misconception before progression.",
-    "status": "DEEP_WHEN_PASSED"
-  },
-  "boardReady": true
+  "misconceptions":["retelling instead of analysing","theme as one word","unsupported character labels","setting treated as mere place name","point of view confused with author","calling every repeated object a symbol","device spotting without effect","using quotation/evidence without explanation","analysing elements separately with no connection"],
+  "guidedPractice":["Map plot and identify turning point in an extract.","Identify conflict type and stakes.","Find three character traits with evidence.","Explain how setting shapes one event.","Identify point of view and information limits.","Turn three topic words into theme statements.","Find one motif and test whether it is meaningful.","Identify one style choice and effect.","Explain one pacing shift.","Distinguish foreshadowing from flashback.","Build an integrated evidence table.","Write one full claim→evidence→effect→theme paragraph."],
+  "independentPractice":["Analyse an unfamiliar prose extract in300 words.","Write a characterisation paragraph with three pieces of evidence.","Write a setting-and-conflict paragraph.","Write a point-of-view paragraph.","Write a theme paragraph based on multiple events.","Analyse one symbol or motif only if evidence supports it.","Analyse pacing in a tense scene.","Explain one use of dialogue.","Compare two characters’ choices.","Compare first-person and third-person effects in sample passages.","Rewrite a plot-summary paragraph into analysis.","Produce a full prose response linking at least three elements."],
+  "mastery":{"criterion":"Learner analyses unfamiliar prose through plot, conflict, characterisation, setting, point of view, theme and style, integrates elements and supports claims with evidence at at least85% standard.","status":"DEEP_WHEN_PASSED"},"boardReady":true
 },
 {
-  "topicId": "nerdc-jss3-english-literature-4",
-  "classLevel": "JSS3",
-  "subject": "English Language",
-  "strand": "Literature",
-  "topic": "Poetry: Revision",
-  "source": {
-    "authority": "NERDC",
-    "url": "https://nerdc.gov.ng/content_manager/jss/jss1-3_english_studies.pdf",
-    "page": 64
-  },
-  "objectives": [
-    "Read poems for literal meaning, voice, mood, theme and structure",
-    "Identify and explain the effect of relevant poetic devices",
-    "Support interpretation with precise evidence from the poem"
+  "topicId":"nerdc-jss3-english-literature-4",
+  "classLevel":"JSS3","subject":"English Language","strand":"Literature","topic":"Poetry: Revision",
+  "source":{"authority":"NERDC","url":"https://nerdc.gov.ng/content_manager/jss/jss1-3_english_studies.pdf","page":64},
+  "objectives":["Read poems for literal meaning, speaker, structure, tone, mood and theme","Analyse imagery, figurative language, sound and lineation","Explain effects rather than merely name devices","Support interpretations with precise evidence"],
+  "prerequisites":["JSS2 written poetry","figures of speech","tone and mood","rhythm"],
+  "teaching":[
+    "BEGIN WITH THE SPEAKING SITUATION: who appears to speak, to whom, about what and under what circumstances.",
+    "THE SPEAKER IS NOT AUTOMATICALLY THE POET. Treat the voice as a created speaker unless evidence requires otherwise.",
+    "PARAPHRASE difficult lines before deeper interpretation. If literal meaning is unclear, device analysis becomes guesswork.",
+    "THEME is a developed idea, not a single topic word.",
+    "TONE is the speaker’s attitude; MOOD is the atmosphere or feeling created for the reader.",
+    "IMAGERY appeals to senses and should be linked to the scene or emotional effect it creates.",
+    "SIMILE uses like/as; METAPHOR makes an implied comparison; PERSONIFICATION gives human qualities to non-human things.",
+    "SYMBOLISM requires contextual significance beyond literal meaning. Do not label every noun a symbol.",
+    "REPETITION can create emphasis, rhythm, urgency, insistence or structural unity.",
+    "ALLITERATION, ASSONANCE and ONOMATOPOEIA are sound devices only where actual sound pattern supports the claim.",
+    "RHYME is based on sound, not spelling alone. Some poems use no regular rhyme scheme.",
+    "RHYTHM arises from stress, repetition, syntax, pauses and line movement.",
+    "ENJAMBMENT carries syntax across a line break; it can speed movement, create suspense or connect ideas.",
+    "CAESURA is a strong pause within a line and can create hesitation, contrast or emphasis.",
+    "CONTRAST/JUXTAPOSITION can place images or ideas side by side to sharpen difference.",
+    "STRUCTURE includes stanza pattern, progression of ideas, repeated refrains and shifts in voice/time/tone.",
+    "A STRONG ANALYSIS uses device→evidence→effect→meaning rather than listing labels.",
+    "PERMANENT METHOD: literal situation→speaker→structure→key images/sounds→tone/mood→theme→evidence-based interpretation."
   ],
-  "prerequisites": [
-    "JSS2 written poetry",
-    "figures of speech",
-    "tone and mood"
+  "workedExamples":[
+    "Speaker says “I wait beside the empty road”; this identifies a first-person voice but not necessarily the poet.",
+    "Theme topic “poverty” becomes: hardship can limit opportunity without destroying dignity.",
+    "Words “still”, “rise” and “again” repeated across stanzas may create determined tone.",
+    "Visual image “orange roofs burned beneath evening sun” creates vivid heat and colour.",
+    "Auditory image “drums rolled across the valley” creates sound and distance.",
+    "Tactile image “dust scratched my throat” makes drought physically uncomfortable.",
+    "Simile “The moon hung like a silver coin” emphasises roundness/brightness.",
+    "Metaphor “Time is a thief” suggests loss of moments.",
+    "Personification “The wind knocked angrily at the door” gives weather human force.",
+    "Repetition “Run, run, run” can intensify urgency.",
+    "Alliteration in “soft sand sighed” repeats /s/ and may create a soft sound effect.",
+    "Onomatopoeia such as “clang” can imitate harsh metallic sound.",
+    "Enjambment in “I carried the news / across the sleeping town” keeps movement flowing across the line.",
+    "Caesura in “I called—no answer came” emphasises the silence after the call.",
+    "A poem may deliberately avoid rhyme to create conversational or unsettled movement.",
+    "Contrast between a bright celebration and a grieving speaker can sharpen emotional isolation.",
+    "A repeated final line can function as refrain, creating structural unity and emphasis.",
+    "Analysis: naming “metaphor” earns little unless the response explains what comparison contributes to theme or tone."
   ],
-  "teaching": [
-    "Begin with the speaking situation: who appears to speak, about what, to whom and under what circumstances. Do not automatically call the speaker the poet.",
-    "Paraphrase difficult lines before interpreting deeper meaning; figurative language must still connect to the poem’s context.",
-    "Study sound, imagery, repetition, contrast, lineation, rhyme and rhythm only where they genuinely contribute to effect.",
-    "Mood is the atmosphere created for the reader; tone is the speaker’s or writer’s attitude. They may be related but are not identical.",
-    "A strong response uses device → evidence → effect → meaning, rather than merely naming devices."
-  ],
-  "workedExamples": [
-    "Repeating a warning at the start of successive lines may create urgency and reinforce the poem’s central concern.",
-    "A metaphor comparing time to a thief suggests loss or disappearance; its effect depends on surrounding lines."
-  ],
-  "misconceptions": [
-    "speaker equals poet",
-    "device spotting without effect",
-    "theme based on one line only",
-    "forcing rhyme schemes that are not present"
-  ],
-  "guidedPractice": [
-    "Annotate a poem for speaker, literal situation, imagery, sound, tone, mood and theme."
-  ],
-  "independentPractice": [
-    "Analyse an unfamiliar poem in a structured response using at least four well-explained textual details."
-  ],
-  "mastery": {
-    "criterion": "At least 80% overall, with accurate application on an unfamiliar task and correction of any major misconception before progression.",
-    "status": "DEEP_WHEN_PASSED"
-  },
-  "boardReady": true
+  "misconceptions":["speaker equals poet","theme is one word","device spotting without effect","forcing rhyme scheme","every repeated object is symbol","tone and mood identical","paraphrase alone equals analysis","quoting without explanation","calling any line break enjambment without checking syntax"],
+  "guidedPractice":["Identify speaker/situation in four short poems.","Paraphrase one difficult stanza.","Turn five topic words into theme statements.","Find five sensory images and explain effects.","Distinguish simile/metaphor/personification.","Identify repetition/refrain and effect.","Identify one genuine sound device.","Mark enjambment and caesura.","Identify a structural shift.","Support one tone with three diction clues.","Compare tone and mood in one poem.","Write one device→evidence→effect→meaning paragraph."],
+  "independentPractice":["Analyse an unseen poem in300 words.","Write a speaker/situation paragraph.","Write a theme paragraph using multiple details.","Analyse imagery with three examples.","Analyse one sound pattern.","Explain one enjambment effect.","Explain one caesura effect.","Analyse a contrast or structural shift.","Distinguish tone from mood using evidence.","Compare two poems on a shared theme.","Rewrite a weak device-list response into analysis.","Produce a full BECE-style poetry response with at least four explained textual details."],
+  "mastery":{"criterion":"Learner analyses unfamiliar poetry through speaker, structure, imagery, sound, lineation, tone, mood and theme, explaining effects with precise evidence rather than device listing at at least85% standard.","status":"DEEP_WHEN_PASSED"},"boardReady":true
 },
 {
-  "topicId": "nerdc-jss3-english-literature-5",
-  "classLevel": "JSS3",
-  "subject": "English Language",
-  "strand": "Literature",
-  "topic": "Drama: Revision",
-  "source": {
-    "authority": "NERDC",
-    "url": "https://nerdc.gov.ng/content_manager/jss/jss1-3_english_studies.pdf",
-    "page": 64
-  },
-  "objectives": [
-    "Analyse drama through plot, character, dialogue, conflict, setting and stagecraft",
-    "Explain how performance features contribute to meaning",
-    "Interpret themes using dramatic evidence rather than plot summary alone"
+  "topicId":"nerdc-jss3-english-literature-5",
+  "classLevel":"JSS3","subject":"English Language","strand":"Literature","topic":"Drama: Revision",
+  "source":{"authority":"NERDC","url":"https://nerdc.gov.ng/content_manager/jss/jss1-3_english_studies.pdf","page":64},
+  "objectives":["Analyse plot, conflict, character, dialogue, setting and stagecraft","Explain performance choices and audience effects","Identify dramatic irony, suspense, climax and theme","Support dramatic interpretation with evidence from words and stage directions"],
+  "prerequisites":["JSS2 drama","dialogue","stage directions","theme"],
+  "teaching":[
+    "DRAMA IS WRITTEN FOR PERFORMANCE. Analysis must consider what an audience sees and hears, not dialogue alone.",
+    "DIALOGUE reveals relationships, information, conflict, social position and hidden motives.",
+    "STAGE DIRECTIONS guide movement, gesture, tone, pause, lighting, setting, entrances, exits and action.",
+    "CONFLICT may occur between characters, within a character, against society or another force. Identify what each side wants.",
+    "CHARACTERISATION emerges from speech, actions, reactions, decisions and how others respond.",
+    "SETTING includes physical place, historical time and social environment; it can shape conflict.",
+    "PLOT in drama often moves through exposition, rising action, climax and resolution, but use these terms only where they fit.",
+    "CLIMAX is a decisive turning point of highest pressure, not simply the loudest scene.",
+    "SUSPENSE grows when the audience anticipates danger, uncertainty or revelation.",
+    "DRAMATIC IRONY occurs when the audience knows relevant information that a character does not.",
+    "A MONOLOGUE is extended speech by one character; an ASIDE gives the audience/selected listener information others on stage conventionally do not hear.",
+    "PROPS should be analysed when they perform dramatic work, such as carrying evidence, triggering conflict or symbolising power.",
+    "BLOCKING means actor movement and position. Distance, approach, turning away and levels can shape audience perception.",
+    "PAUSE, VOLUME, PACE and FACIAL EXPRESSION can change the meaning of identical words.",
+    "LIGHTING/SOUND can establish mood, signal change or intensify tension where indicated or sensibly interpreted.",
+    "THEME emerges from repeated conflicts, choices and consequences across scenes.",
+    "PERFORMANCE INTERPRETATION can vary; a strong answer explains why a choice fits textual evidence.",
+    "PERMANENT METHOD: situation→conflict/stakes→character choices→dialogue/stagecraft→turning point→audience effect→theme."
   ],
-  "prerequisites": [
-    "JSS2 drama",
-    "dialogue",
-    "stage directions",
-    "theme"
+  "workedExamples":[
+    "Stage direction “[hesitates before answering]” may suggest fear, uncertainty or concealment.",
+    "Dialogue “Give it back!” immediately reveals conflict over possession and urgency.",
+    "A character returning stolen money despite danger reveals integrity through action.",
+    "Character vs self: a student wants to confess but fears punishment.",
+    "Character vs society: a young person resists an unfair communal rule.",
+    "A blackout setting can intensify vulnerability and suspense.",
+    "Climax may occur when hidden evidence is revealed and power between characters reverses.",
+    "Audience knows a letter is forged while the hero trusts it: dramatic irony.",
+    "Monologue may expose private thoughts that ordinary dialogue conceals.",
+    "Aside can reveal a secret plan to the audience while another character remains unaware.",
+    "A sealed envelope used repeatedly as evidence functions as a meaningful prop.",
+    "Two arguing characters moving farther apart can visually reinforce emotional separation.",
+    "A character stepping close during a threat can increase pressure without extra words.",
+    "Whispering “I warned you” may sound more menacing than shouting depending on context.",
+    "A long pause before “yes” can imply reluctance, conflict or fear.",
+    "Fast pacing with overlapping dialogue can create panic.",
+    "Dim lighting before an entrance can prepare an atmosphere of danger.",
+    "Performance comparison: “Fine.” spoken warmly suggests agreement; spoken through clenched teeth suggests resentment."
   ],
-  "teaching": [
-    "Drama is written for performance, so analysis includes what an audience sees and hears as well as the printed dialogue.",
-    "Dialogue reveals character, relationships and conflict; stage directions can guide movement, tone, setting, pause and action.",
-    "Dramatic conflict may occur between characters, within a character or between a character and wider social forces.",
-    "Consider scene structure, entrances/exits, props, gesture, suspense and dramatic irony when they affect audience response.",
-    "Theme should be inferred from repeated conflicts, choices and consequences across the play."
-  ],
-  "workedExamples": [
-    "A character saying “I trust you” while secretly hiding evidence can create dramatic irony if the audience knows the truth.",
-    "A long pause before an answer may communicate fear, hesitation or tension even though no extra words are spoken."
-  ],
-  "misconceptions": [
-    "reading drama exactly like prose",
-    "ignoring stage directions",
-    "retelling instead of analysing",
-    "calling every disagreement the main conflict"
-  ],
-  "guidedPractice": [
-    "Perform and annotate a short scene, then explain how dialogue and stage directions create tension."
-  ],
-  "independentPractice": [
-    "Write a 250-word analysis of an unfamiliar scene focusing on conflict, character and one performance feature."
-  ],
-  "mastery": {
-    "criterion": "At least 80% overall, with accurate application on an unfamiliar task and correction of any major misconception before progression.",
-    "status": "DEEP_WHEN_PASSED"
-  },
-  "boardReady": true
-},
+  "misconceptions":["reading drama exactly like prose","ignoring stage directions","retelling plot instead of analysing","calling every disagreement the main conflict","calling any audience knowledge dramatic irony","treating props as automatically symbolic","assuming one performance is the only correct one","theme as one word","analysing dialogue without audience effect"],
+  "guidedPractice":["Label dialogue/stage directions in a scene.","Identify main conflict and stakes.","Infer three character traits from evidence.","Explain how setting shapes conflict.","Locate climax or turning point.","Identify one suspense technique.","Identify a true dramatic-irony situation.","Explain function of one prop.","Plan blocking for an argument.","Perform one line in two ways and explain meaning difference.","Write one theme statement from consequences.","Write one evidence-based drama-analysis paragraph."],
+  "independentPractice":["Analyse an unfamiliar scene in300 words.","Write a characterisation paragraph using three pieces of evidence.","Write a conflict-and-stakes paragraph.","Analyse one stage direction in detail.","Analyse one prop only where dramatically important.","Explain one example of suspense.","Explain one dramatic-irony effect.","Plan entrances/exits/blocking for a short scene.","Annotate pause, pace, volume and gesture choices.","Compare two possible performances of one exchange.","Write a one-page original scene with meaningful stage directions.","Reflect on how three performance choices change audience response."],
+  "mastery":{"criterion":"Learner analyses unfamiliar drama through conflict, character, dialogue, setting, stage directions, stagecraft, suspense, irony and theme, and justifies performance choices with evidence at at least85% standard.","status":"DEEP_WHEN_PASSED"},"boardReady":true
+}
+
 ];
 export function getJss3EnglishDeepLesson(topicId:string){return jss3EnglishDeepLessons.find(x=>x.topicId===topicId)}
