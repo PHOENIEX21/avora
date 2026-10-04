@@ -376,6 +376,7 @@ export default function TutorClient(){
  const visualSpec=useMemo(()=>subject==='Mathematics'&&event?visualFor(topic,event.label,event.lines):{kind:'none' as const,title:'',caption:''},[subject,topic,event]);
  const topicKey=String(topic||'').trim().toLowerCase().replace(/\s+/g,' ');
  const unitKey=String(unit?.title||'').trim().toLowerCase().replace(/\s+/g,' ');
+ const useCanonicalCoreLesson=['JSS1','JSS2','JSS3'].includes(classLevel)&&['Mathematics','English Language'].includes(subject)&&Boolean(plan?.units?.length);
  const useAuthoredWholeNumbers=classLevel==='JSS1'&&subject==='Mathematics'&&topic.toLowerCase()==='whole numbers';
  const requestedTopicKey=String(requestedTopic||'').trim().toLowerCase().replace(/\s+/g,' ');
  const jss2RouteTopicKey=requestedTopicKey||topicKey;
@@ -598,107 +599,107 @@ AVORA's worked solution:\n${d.solution||'No worked solution was returned.'}`;set
   {phase==='probe'&&!probeQ&&<article className="teacher-turn-card"><span className="teacher-kicker">FULL LESSON AVAILABLE</span><h2>We can teach this topic even before its question bank is complete.</h2><p className="teacher-copy">AVORA will never leave a curriculum lesson blank merely because a reviewed diagnostic question is missing. We teach first, then attach reviewed assessment as it becomes available.</p><div className="teacher-actions"><button className="primary" onClick={beginLesson}>Start the complete lesson →</button></div></article>}
   {phase==='probe'&&probeQ&&<article className="teacher-turn-card"><span className="teacher-kicker">BEFORE I TEACH</span><h2>Show me what you already know.</h2><p className="teacher-copy">This only sets the pace. One answer will never make AVORA skip the rest of the required topic.</p><Question q={probeQ} answer={answer} setAnswer={x=>{setAnswer(x);setFeedback(null);setError('')}}/>{checking&&<p className="answer-status" role="status">AVORA is checking your answer…</p>}{error&&<p className="answer-status error" role="alert">{error}</p>}{feedback&&<div className={feedback.correct?'persistent-feedback good':'persistent-feedback'}><b>{feedback.correct?'Correct — I can build from that.':'Not yet — this shows me where to begin.'}</b><p>{feedback.correct?(feedback.explanation||'That answer is correct.'):(feedback.feedback||feedback.hint||'I will teach the missing idea before asking you again.')}</p></div>}<div className="teacher-actions">{!feedback?<button type="button" className="primary" disabled={!answer||checking} onClick={()=>check('probe')}>{checking?'Checking…':'Check my answer'}</button>:<button type="button" className="primary" onClick={beginLesson}>Start teaching me →</button>}</div></article>}
 
-  {phase==='teach'&&useAuthoredWholeNumbers&&<WholeNumbersLesson onExercise={startExercise}/>}
+  {phase==='teach'&&!useCanonicalCoreLesson&&useAuthoredWholeNumbers&&<WholeNumbersLesson onExercise={startExercise}/>}
 
-  {phase==='teach'&&useJSS2WholeNumbers&&<JSS2WholeNumbersLesson onExercise={startExercise}/>}
+  {phase==='teach'&&!useCanonicalCoreLesson&&useJSS2WholeNumbers&&<JSS2WholeNumbersLesson onExercise={startExercise}/>}
 
-  {phase==='teach'&&useJSS2PremiumMath&&<JSS2PremiumMathLesson topic={jss2PremiumTopic||topic} onExercise={startExercise}/>}
+  {phase==='teach'&&!useCanonicalCoreLesson&&useJSS2PremiumMath&&<JSS2PremiumMathLesson topic={jss2PremiumTopic||topic} onExercise={startExercise}/>}
 
-  {phase==='teach'&&useJSS1SpeechSounds&&<JSS1SpeechSoundsLesson onExercise={startExercise}/>}
+  {phase==='teach'&&!useCanonicalCoreLesson&&useJSS1SpeechSounds&&<JSS1SpeechSoundsLesson onExercise={startExercise}/>}
 
-  {phase==='teach'&&useJSS2Debate&&<JSS2DebateLesson onExercise={startExercise}/>}
+  {phase==='teach'&&!useCanonicalCoreLesson&&useJSS2Debate&&<JSS2DebateLesson onExercise={startExercise}/>}
 
-  {phase==='teach'&&useJSS2OralComprehension&&<JSS2OralComprehensionLesson onExercise={startExercise}/>}
+  {phase==='teach'&&!useCanonicalCoreLesson&&useJSS2OralComprehension&&<JSS2OralComprehensionLesson onExercise={startExercise}/>}
 
-  {phase==='teach'&&useJSS2OralSummary&&<JSS2OralSummaryLesson onExercise={startExercise}/>}
+  {phase==='teach'&&!useCanonicalCoreLesson&&useJSS2OralSummary&&<JSS2OralSummaryLesson onExercise={startExercise}/>}
 
-  {phase==='teach'&&useJSS2ReadingFluency&&<JSS2ReadingFluencyLesson onExercise={startExercise}/>}
+  {phase==='teach'&&!useCanonicalCoreLesson&&useJSS2ReadingFluency&&<JSS2ReadingFluencyLesson onExercise={startExercise}/>}
 
-  {phase==='teach'&&useJSS2WritersPurpose&&<JSS2WritersPurposeLesson onExercise={startExercise}/>}
+  {phase==='teach'&&!useCanonicalCoreLesson&&useJSS2WritersPurpose&&<JSS2WritersPurposeLesson onExercise={startExercise}/>}
 
-  {phase==='teach'&&useJSS2ContextMeaning&&<JSS2ContextMeaningLesson onExercise={startExercise}/>}
+  {phase==='teach'&&!useCanonicalCoreLesson&&useJSS2ContextMeaning&&<JSS2ContextMeaningLesson onExercise={startExercise}/>}
 
-  {phase==='teach'&&useJSS2CriticalReading&&<JSS2CriticalReadingLesson onExercise={startExercise}/>}
+  {phase==='teach'&&!useCanonicalCoreLesson&&useJSS2CriticalReading&&<JSS2CriticalReadingLesson onExercise={startExercise}/>}
 
-  {phase==='teach'&&useJSS2ReadingForSummary&&<JSS2ReadingForSummaryLesson onExercise={startExercise}/>}
+  {phase==='teach'&&!useCanonicalCoreLesson&&useJSS2ReadingForSummary&&<JSS2ReadingForSummaryLesson onExercise={startExercise}/>}
 
-  {phase==='teach'&&useJSS2PartsOfSpeechCore&&<JSS2PartsOfSpeechCoreLesson onExercise={startExercise}/>}
+  {phase==='teach'&&!useCanonicalCoreLesson&&useJSS2PartsOfSpeechCore&&<JSS2PartsOfSpeechCoreLesson onExercise={startExercise}/>}
 
-  {phase==='teach'&&useJSS2PartsOfSpeechExtended&&<JSS2PartsOfSpeechExtendedLesson onExercise={startExercise}/>}
+  {phase==='teach'&&!useCanonicalCoreLesson&&useJSS2PartsOfSpeechExtended&&<JSS2PartsOfSpeechExtendedLesson onExercise={startExercise}/>}
 
-  {phase==='teach'&&useJSS2DirectIndirectSpeech&&<JSS2DirectIndirectSpeechLesson onExercise={startExercise}/>}
+  {phase==='teach'&&!useCanonicalCoreLesson&&useJSS2DirectIndirectSpeech&&<JSS2DirectIndirectSpeechLesson onExercise={startExercise}/>}
 
-  {phase==='teach'&&useJSS2FunctionalSentenceTypes&&<JSS2FunctionalSentenceTypesLesson onExercise={startExercise}/>}
+  {phase==='teach'&&!useCanonicalCoreLesson&&useJSS2FunctionalSentenceTypes&&<JSS2FunctionalSentenceTypesLesson onExercise={startExercise}/>}
 
-  {phase==='teach'&&useJSS2StructuralSentenceTypes&&<JSS2StructuralSentenceTypesLesson onExercise={startExercise}/>}
+  {phase==='teach'&&!useCanonicalCoreLesson&&useJSS2StructuralSentenceTypes&&<JSS2StructuralSentenceTypesLesson onExercise={startExercise}/>}
 
-  {phase==='teach'&&useJSS2Tenses&&<JSS2TensesLesson onExercise={startExercise}/>}
+  {phase==='teach'&&!useCanonicalCoreLesson&&useJSS2Tenses&&<JSS2TensesLesson onExercise={startExercise}/>}
 
-  {phase==='teach'&&useJSS2CompositionWriting&&<JSS2CompositionWritingLesson onExercise={startExercise}/>}
+  {phase==='teach'&&!useCanonicalCoreLesson&&useJSS2CompositionWriting&&<JSS2CompositionWritingLesson onExercise={startExercise}/>}
 
-  {phase==='teach'&&useJSS2LetterWriting&&<JSS2LetterWritingLesson onExercise={startExercise}/>}
+  {phase==='teach'&&!useCanonicalCoreLesson&&useJSS2LetterWriting&&<JSS2LetterWritingLesson onExercise={startExercise}/>}
 
-  {phase==='teach'&&useJSS2ReadingPlays&&<JSS2ReadingPlaysLesson onExercise={startExercise}/>}
+  {phase==='teach'&&!useCanonicalCoreLesson&&useJSS2ReadingPlays&&<JSS2ReadingPlaysLesson onExercise={startExercise}/>}
 
-  {phase==='teach'&&useJSS2AppreciatingActingPlays&&<JSS2AppreciatingActingPlaysLesson onExercise={startExercise}/>}
+  {phase==='teach'&&!useCanonicalCoreLesson&&useJSS2AppreciatingActingPlays&&<JSS2AppreciatingActingPlaysLesson onExercise={startExercise}/>}
 
-  {phase==='teach'&&useJSS2SkitMaking&&<JSS2SkitMakingLesson onExercise={startExercise}/>}
+  {phase==='teach'&&!useCanonicalCoreLesson&&useJSS2SkitMaking&&<JSS2SkitMakingLesson onExercise={startExercise}/>}
 
-  {phase==='teach'&&useJSS2WritingDialogues&&<JSS2WritingDialoguesLesson onExercise={startExercise}/>}
+  {phase==='teach'&&!useCanonicalCoreLesson&&useJSS2WritingDialogues&&<JSS2WritingDialoguesLesson onExercise={startExercise}/>}
 
-  {phase==='teach'&&useCleanLCM&&<LCMLesson onExercise={startExercise}/>}
+  {phase==='teach'&&!useCanonicalCoreLesson&&useCleanLCM&&<LCMLesson onExercise={startExercise}/>}
 
-  {phase==='teach'&&useCleanHCF&&<HCFLesson onExercise={startExercise}/>}
+  {phase==='teach'&&!useCanonicalCoreLesson&&useCleanHCF&&<HCFLesson onExercise={startExercise}/>}
 
-  {phase==='teach'&&useCleanAdditionSubtraction&&<AdditionSubtractionLesson onExercise={startExercise}/>}
+  {phase==='teach'&&!useCanonicalCoreLesson&&useCleanAdditionSubtraction&&<AdditionSubtractionLesson onExercise={startExercise}/>}
 
   {phase==='teach'&&useCleanCountingBaseTwo&&unit&&<CountingBaseTwoLesson unit={unit} onExercise={startExercise}/>}
 
   {phase==='teach'&&useCleanBaseTenToBinary&&unit&&<BaseTenToBinaryLesson unit={unit} onExercise={startExercise}/>}
 
-  {phase==='teach'&&useCleanFractions&&<FractionsLesson onExercise={startExercise}/>}
+  {phase==='teach'&&!useCanonicalCoreLesson&&useCleanFractions&&<FractionsLesson onExercise={startExercise}/>}
 
-  {phase==='teach'&&useCleanFractionAddSubtract&&<FractionAddSubtractLesson onExercise={startExercise}/>}
+  {phase==='teach'&&!useCanonicalCoreLesson&&useCleanFractionAddSubtract&&<FractionAddSubtractLesson onExercise={startExercise}/>}
 
-  {phase==='teach'&&useCleanFractionMultiplyDivide&&<FractionMultiplyDivideLesson onExercise={startExercise}/>}
+  {phase==='teach'&&!useCanonicalCoreLesson&&useCleanFractionMultiplyDivide&&<FractionMultiplyDivideLesson onExercise={startExercise}/>}
 
-  {phase==='teach'&&useCleanEstimation&&<EstimationLesson onExercise={startExercise}/>}
+  {phase==='teach'&&!useCanonicalCoreLesson&&useCleanEstimation&&<EstimationLesson onExercise={startExercise}/>}
 
-  {phase==='teach'&&useCleanApproximation&&<ApproximationLesson onExercise={startExercise}/>}
+  {phase==='teach'&&!useCanonicalCoreLesson&&useCleanApproximation&&<ApproximationLesson onExercise={startExercise}/>}
 
-  {phase==='teach'&&useCleanBinaryAddition&&<BinaryAdditionLesson onExercise={startExercise}/>}
+  {phase==='teach'&&!useCanonicalCoreLesson&&useCleanBinaryAddition&&<BinaryAdditionLesson onExercise={startExercise}/>}
 
-  {phase==='teach'&&useCleanBinarySubtraction&&<BinarySubtractionLesson onExercise={startExercise}/>}
+  {phase==='teach'&&!useCanonicalCoreLesson&&useCleanBinarySubtraction&&<BinarySubtractionLesson onExercise={startExercise}/>}
 
-  {phase==='teach'&&useCleanBinaryMultiplication&&<BinaryMultiplicationLesson onExercise={startExercise}/>}
+  {phase==='teach'&&!useCanonicalCoreLesson&&useCleanBinaryMultiplication&&<BinaryMultiplicationLesson onExercise={startExercise}/>}
 
-  {phase==='teach'&&useCleanUseOfSymbols&&<UseOfSymbolsLesson onExercise={startExercise}/>}
+  {phase==='teach'&&!useCanonicalCoreLesson&&useCleanUseOfSymbols&&<UseOfSymbolsLesson onExercise={startExercise}/>}
 
-  {phase==='teach'&&useCleanSimplificationAlgebra&&<SimplificationAlgebraLesson onExercise={startExercise}/>}
+  {phase==='teach'&&!useCanonicalCoreLesson&&useCleanSimplificationAlgebra&&<SimplificationAlgebraLesson onExercise={startExercise}/>}
 
-  {phase==='teach'&&useCleanSimpleEquations&&<SimpleEquationsLesson onExercise={startExercise}/>}
+  {phase==='teach'&&!useCanonicalCoreLesson&&useCleanSimpleEquations&&<SimpleEquationsLesson onExercise={startExercise}/>}
 
-  {phase==='teach'&&useCleanPlaneShapes&&<PlaneShapesLesson onExercise={startExercise}/>}
+  {phase==='teach'&&!useCanonicalCoreLesson&&useCleanPlaneShapes&&<PlaneShapesLesson onExercise={startExercise}/>}
 
-  {phase==='teach'&&useCleanThreeDimensionalFigures&&<ThreeDimensionalFiguresLesson onExercise={startExercise}/>}
+  {phase==='teach'&&!useCanonicalCoreLesson&&useCleanThreeDimensionalFigures&&<ThreeDimensionalFiguresLesson onExercise={startExercise}/>}
 
-  {phase==='teach'&&useCleanConstruction&&<ConstructionLesson onExercise={startExercise}/>}
+  {phase==='teach'&&!useCanonicalCoreLesson&&useCleanConstruction&&<ConstructionLesson onExercise={startExercise}/>}
 
-  {phase==='teach'&&useCleanAngles&&<AnglesLesson onExercise={startExercise}/>}
+  {phase==='teach'&&!useCanonicalCoreLesson&&useCleanAngles&&<AnglesLesson onExercise={startExercise}/>}
 
-  {phase==='teach'&&useCleanNeedForStatistics&&<NeedForStatisticsLesson onExercise={startExercise}/>}
+  {phase==='teach'&&!useCanonicalCoreLesson&&useCleanNeedForStatistics&&<NeedForStatisticsLesson onExercise={startExercise}/>}
 
-  {phase==='teach'&&useCleanDataCollection&&<DataCollectionLesson onExercise={startExercise}/>}
+  {phase==='teach'&&!useCanonicalCoreLesson&&useCleanDataCollection&&<DataCollectionLesson onExercise={startExercise}/>}
 
-  {phase==='teach'&&useCleanDataPresentation&&<DataPresentationLesson onExercise={startExercise}/>}
+  {phase==='teach'&&!useCanonicalCoreLesson&&useCleanDataPresentation&&<DataPresentationLesson onExercise={startExercise}/>}
 
-  {phase==='teach'&&!useJSS1SpeechSounds&&!useAuthoredWholeNumbers&&!useJSS2WholeNumbers&&!useJSS2PremiumMath&&!useJSS2Debate&&!useJSS2OralComprehension&&!useJSS2OralSummary&&!useJSS2ReadingFluency&&!useJSS2WritersPurpose&&!useJSS2ContextMeaning&&!useJSS2CriticalReading&&!useJSS2ReadingForSummary&&!useJSS2PartsOfSpeechCore&&!useJSS2PartsOfSpeechExtended&&!useJSS2DirectIndirectSpeech&&!useJSS2FunctionalSentenceTypes&&!useJSS2StructuralSentenceTypes&&!useJSS2Tenses&&!useJSS2CompositionWriting&&!useJSS2LetterWriting&&!useJSS2ReadingPlays&&!useJSS2AppreciatingActingPlays&&!useJSS2SkitMaking&&!useJSS2WritingDialogues&&!useCleanLCM&&!useCleanHCF&&!useCleanAdditionSubtraction&&!useCleanCountingBaseTwo&&!useCleanBaseTenToBinary&&!useCleanFractions&&!useCleanFractionAddSubtract&&!useCleanFractionMultiplyDivide&&!useCleanEstimation&&!useCleanApproximation&&!useCleanBinaryAddition&&!useCleanBinarySubtraction&&!useCleanBinaryMultiplication&&!useCleanUseOfSymbols&&!useCleanSimplificationAlgebra&&!useCleanSimpleEquations&&!useCleanPlaneShapes&&!useCleanThreeDimensionalFigures&&!useCleanConstruction&&!useCleanAngles&&!useCleanNeedForStatistics&&!useCleanDataCollection&&!useCleanDataPresentation&&Boolean(plan?.units?.length)&&<article ref={lessonStageRef} className="live-teacher-stage lesson-slide-deck-v1492 authored-premium-lesson" tabIndex={0}>
+  {phase==='teach'&&useCanonicalCoreLesson&&Boolean(plan?.units?.length)&&<article ref={lessonStageRef} className="live-teacher-stage lesson-slide-deck-v1492 authored-premium-lesson" tabIndex={0}>
    <div className="teacher-stage-title authored-premium-title"><div><span className="teacher-kicker">{classLevel} · {subject}</span><h2>{topic}</h2></div>{exerciseQuestions.length>0&&<span className="authored-exercise-count">{exerciseQuestions.length} questions</span>}</div>
    <div className="lesson-scroll-view approved-lesson-scroll authored-premium-scroll">
     {!!plan?.outcomes?.length&&<section className="authored-premium-objectives"><span>WHAT YOU WILL LEARN</span><ul>{plan.outcomes.map((x:string,i:number)=><li key={i}>{x}</li>)}</ul></section>}
     {!!plan?.goal&&<section className="authored-premium-overview"><b>LESSON OVERVIEW</b><p>{plan.goal}</p></section>}
     {exerciseQuestions.length>0&&<div className="tutor-top-actions authored-exercise-after-objectives"><button type="button" className="exercise-top-button" onClick={startExercise}>Exercise · {exerciseQuestions.length} questions →</button></div>}
-    {plan?.units?.map((lessonUnit:any,lessonIndex:number)=><section key={lessonIndex} className="authored-premium-section"><div className="authored-section-number">{String(lessonIndex+1).padStart(2,'0')}</div><div className="authored-section-content"><h3>{learnerTopicTitle(lessonUnit.title)}</h3>{!!lessonUnit.outcomes?.length&&<div className="authored-unit-outcomes"><b>In this section</b><ul>{lessonUnit.outcomes.map((x:string,i:number)=><li key={i}>{x}</li>)}</ul></div>}{classLevel==='JSS3'&&subject==='English Language'&&topic==='Speech / Phonemes'&&<div className="authored-pronunciation-practice"><b>LISTEN • REPEAT • CONTRAST</b><p>Hear the model, repeat it, then compare the contrasting words. Playback uses an English voice installed on this device, so pronunciation quality can vary by browser/device.</p><div className="authored-pronunciation-actions"><button type="button" onClick={()=>playPronunciation(String(lessonUnit.example||lessonUnit.explain||lessonUnit.title).replace(/\/[^/]+\//g,' '))}>▶ Hear this section</button><button type="button" onClick={()=>playPronunciation(String(lessonUnit.check||lessonUnit.title).replace(/\/[^/]+\//g,' '))}>▶ Hear the practice</button></div></div>}{!!lessonUnit.terms?.length&&<div className="authored-definition-grid">{lessonUnit.terms.map(([term,meaning]:[string,string],i:number)=><div key={i} className="authored-definition"><b>{term}</b><p>{meaning}</p></div>)}</div>}<div className="authored-explanation">{splitSentences(lessonUnit.explain||'').map((x:string,i:number)=><p key={i}>{x}</p>)}</div><AuthoredGeometryDiagram topic={topic} title={lessonUnit.title} example={lessonUnit.example}/>{lessonUnit.why&&<div className="authored-reason"><b>WHY THIS WORKS</b><p>{lessonUnit.why}</p></div>}{lessonUnit.example&&<div className="authored-worked-example"><span>WORKED EXAMPLE</span><pre className="authored-math-working">{lessonUnit.example}</pre></div>}{!!lessonUnit.workedExamples?.length&&<div className="authored-example-stack">{lessonUnit.workedExamples.map((ex:any,i:number)=><div key={i} className="authored-worked-example"><span>WORKED EXAMPLE {i+1}</span><pre className="authored-math-working">{typeof ex==='string'?ex:(ex?.working||ex?.solution||ex?.example||JSON.stringify(ex,null,2))}</pre></div>)}</div>}{!!lessonUnit.commonMistakes?.length&&<div className="authored-mistakes"><b>WATCH OUT FOR</b><ul>{lessonUnit.commonMistakes.map((x:string,i:number)=><li key={i}>{x}</li>)}</ul></div>}{lessonUnit.check&&<div className="authored-check"><b>CHECK YOUR UNDERSTANDING</b><p>{lessonUnit.check}</p></div>}</div></section>)}
+    {plan?.units?.map((lessonUnit:any,lessonIndex:number)=><section key={lessonIndex} className="authored-premium-section"><div className="authored-section-number">{String(lessonIndex+1).padStart(2,'0')}</div><div className="authored-section-content"><h3>{learnerTopicTitle(lessonUnit.title)}</h3>{!!lessonUnit.outcomes?.length&&<div className="authored-unit-outcomes"><b>In this section</b><ul>{lessonUnit.outcomes.map((x:string,i:number)=><li key={i}>{x}</li>)}</ul></div>}{classLevel==='JSS3'&&subject==='English Language'&&topic==='Speech / Phonemes'&&<div className="authored-pronunciation-practice"><b>LISTEN • REPEAT • CONTRAST</b><p>Hear the model, repeat it, then compare the contrasting words. Playback uses an English voice installed on this device, so pronunciation quality can vary by browser/device.</p><div className="authored-pronunciation-actions"><button type="button" onClick={()=>playPronunciation(String(lessonUnit.example||lessonUnit.explain||lessonUnit.title).replace(/\/[^/]+\//g,' '))}>▶ Hear this section</button><button type="button" onClick={()=>playPronunciation(String(lessonUnit.check||lessonUnit.title).replace(/\/[^/]+\//g,' '))}>▶ Hear the practice</button></div></div>}{!!lessonUnit.terms?.length&&<div className="authored-definition-grid">{lessonUnit.terms.map(([term,meaning]:[string,string],i:number)=><div key={i} className="authored-definition"><b>{term}</b><p>{meaning}</p></div>)}</div>}<div className="authored-explanation">{splitSentences(lessonUnit.explain||'').map((x:string,i:number)=><p key={i}>{x}</p>)}</div><AuthoredGeometryDiagram topic={topic} title={lessonUnit.title} example={lessonUnit.example}/>{lessonUnit.why&&<div className="authored-reason"><b>WHY THIS WORKS</b><p>{lessonUnit.why}</p></div>}{lessonUnit.example&&<div className="authored-worked-example"><span>WORKED MODEL / SOLUTION</span><pre className="authored-math-working">{lessonUnit.example}</pre></div>}{!!lessonUnit.workedExamples?.length&&<div className="authored-example-stack">{lessonUnit.workedExamples.map((ex:any,i:number)=><div key={i} className="authored-worked-example"><span>WORKED MODEL {i+1}</span><pre className="authored-math-working">{typeof ex==='string'?ex:(ex?.working||ex?.solution||ex?.example||JSON.stringify(ex,null,2))}</pre></div>)}</div>}{!!lessonUnit.commonMistakes?.length&&<div className="authored-mistakes"><b>WATCH OUT FOR</b><ul>{lessonUnit.commonMistakes.map((x:string,i:number)=><li key={i}>{x}</li>)}</ul></div>}{lessonUnit.check&&<div className="authored-check"><b>NOW YOU TRY — YOUR QUESTION</b><p>{lessonUnit.check}</p></div>}</div></section>)}
     <div className="authored-premium-finish"><b>You have reached the end of the teaching.</b><p>Use the exercise to prove that you can apply what you have learned independently.</p>{exerciseQuestions.length>0?<button type="button" className="primary" onClick={startExercise}>Go to Exercise →</button>:<span>Exercise bank is being prepared for this topic.</span>}</div>
    </div>
   </article>}
