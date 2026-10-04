@@ -1,3 +1,4 @@
+import {jss1MathematicsTeachingMaps} from './jss1MathematicsTeachingMaps';
 export type DeepMathLesson={
 topicId:string; classLevel:'JSS1';
 subject:'Mathematics'; topic:string;
@@ -1405,3 +1406,148 @@ independentPractice:[
 mastery:{criterion:'Learner correctly orders data before finding the median, uses the correct middle-position rule for odd datasets and correctly averages the two middle values for even datasets, and can explain why the median resists distortion from extreme values.',status:'DEEP_WHEN_PASSED'},boardReady:true
 }
 ];
+
+/** GOLDEN RULE ENRICHMENT — JSS1 MATHEMATICS */
+const jss1MathGoldenWorked:Record<string,string[]>={
+'Whole Numbers':[
+'PLACE VALUE. In 508,074,216, the digit 8 is in the millions place, so its value is 8,000,000. The digit 7 is in the ten-thousands place, so its value is 70,000. Always name the place before giving the value.',
+'WRITING FROM WORDS. Four billion, thirty-two million, seven thousand and five gives periods 4 | 032 | 007 | 005, hence 4,032,007,005. Zero-filled periods preserve places that were not spoken.',
+'ORDERING. Compare 905,040,300 and 905,400,030. The first differing high place is hundred-thousands: 0<4, so 905,040,300<905,400,030.'
+],
+'LCM':[
+'LISTING METHOD. LCM(8,12): multiples of8 are 8,16,24,... and multiples of12 are 12,24,36,... . The first common positive multiple is24, so LCM=24.',
+'PRIME FACTORS. 18=2×3² and24=2³×3. Take greatest powers:2³×3²=72, so LCM=72.',
+'REPEATING EVENTS. Bells every6 and8 minutes meet again after LCM(6,8)=24 minutes.'
+],
+'HCF':[
+'LISTING METHOD. Common factors of24 and36 include1,2,3,4,6,12; greatest is12, so HCF=12.',
+'PRIME FACTORS. 72=2³×3² and96=2⁵×3. Keep common primes at smaller powers:2³×3=24.',
+'EQUAL GROUPS. 48 red and60 blue beads form the greatest number of identical groups: HCF(48,60)=12, giving4 red and5 blue per group.'
+],
+'Counting in Base 2':[
+'PLACE VALUE. 10110₂=16+4+2=22₁₀. Binary positions are powers of2.',
+'COUNTING. After111₂ comes1000₂ because7₁₀+1=8₁₀.',
+'GROUPING. 13 counters=8+4+1, so13₁₀=1101₂.'
+],
+'Conversion of base 10 numerals to binary numbers':[
+'POWERS OF TWO. 19=16+2+1, so19₁₀=10011₂.',
+'REPEATED DIVISION. 26÷2 gives remainders 0,1,0,1,1 from top to bottom; read upward to get11010₂.',
+'VERIFY. 11010₂=16+8+2=26₁₀.'
+],
+'Fractions':[
+'SIMPLIFY. 42/56÷14/14=3/4; numerator and denominator change by the same non-zero factor, so value stays equal.',
+'COMPARE. 5/8 versus2/3: cross-products15 and16 show5/8<2/3.',
+'CONVERT. 7/20=35/100=35%=0.35.'
+],
+'Addition and Subtraction of fractions':[
+'UNLIKE DENOMINATORS. 2/3+5/8=16/24+15/24=31/24=1 7/24.',
+'MIXED SUBTRACTION. 4 1/5−2 3/4=21/5−11/4=(84−55)/20=29/20=1 9/20.',
+'CONTEXT. 3/5+1/4=12/20+5/20=17/20 of the tank.'
+],
+'Multiplications and Divisions of fractions':[
+'FRACTION OF WHOLE. 5/8 of32=5/8×32=20.',
+'FRACTION PRODUCT. 7/9×3/14 simplifies by cancellation to1/6.',
+'DIVISION. 2 1/4÷3/5=9/4×5/3=15/4=3 3/4.'
+],
+'Estimation':[
+'SUM. 4,982+3,067≈5,000+3,000=8,000; exact8,049 is reasonable.',
+'PRODUCT. 198×51≈200×50=10,000.',
+'QUOTIENT. 1,494÷49≈1,500÷50=30.'
+],
+'Approximation':[
+'NEAREST HUNDRED. 48,763→48,800 because the next digit is6.',
+'TWO DECIMAL PLACES. 7.846→7.85 because the third decimal digit is6.',
+'TWO SIGNIFICANT FIGURES. 0.006784→0.0068; leading zeros are not significant.'
+],
+'Addition of numbers in base 2 numerals':[
+'101₂+11₂=1000₂ after carrying whenever a column reaches2.',
+'1101₂+101₂=10010₂.',
+'VERIFY. 13₁₀+5₁₀=18₁₀ and10010₂=18₁₀.'
+],
+'Subtraction of numbers in base 2 numerals':[
+'1000₂−1₂=111₂; borrowing one higher unit gives10₂ in the next lower place.',
+'1010₂−11₂=111₂.',
+'VERIFY. 111₂+11₂=1010₂.'
+],
+'Multiplication of numbers in base 2 numerals':[
+'101₂×10₂=1010₂ because multiplying by10₂ shifts left one binary place.',
+'11₂×11₂ uses partial products011 and110; sum=1001₂.',
+'VERIFY. 3×3=9 and1001₂=9₁₀.'
+],
+'Use of symbols':[
+'TRANSLATE. Seven more than n means n+7.',
+'TERMS. In5x−3y+8, terms are5x,−3y,8; coefficients5,−3; constant8.',
+'SUBSTITUTE. 3m−2n for m=5,n=4 gives15−8=7.'
+],
+'Simplification of algebraic expressions':[
+'LIKE TERMS. 7x+3−2x+5=5x+8.',
+'BRACKETS. 3(2a−5)+a=6a−15+a=7a−15.',
+'TWO VARIABLES. 5x+2y−3x+y=2x+3y.'
+],
+'Simple equations':[
+'BALANCE. x+9=21→x=12 by subtracting9 from both sides; check12+9=21.',
+'TWO STEP. 4x−7=21→4x=28→x=7.',
+'BOTH SIDES. 3x+2=x+10→2x+2=10→2x=8→x=4; both sides then equal14.'
+],
+'Three dimensional figures':[
+'CUBE has6 square faces,12 edges and8 vertices.',
+'CYLINDER has two flat circular faces and one curved surface, with no vertices.',
+'NET CHECK. A valid cube net has six equal squares that fold without overlap.'
+],
+'Construction':[
+'LINE BISECTOR. Equal-radius arcs from endpoints of8cm segment intersect; joining them crosses the segment at4cm and90°.',
+'ANGLE BISECTOR. Equal arcs from points on both arms locate a line that divides the angle equally.',
+'45°. Construct90° first, then bisect it.'
+],
+'Angles':[
+'STRAIGHT LINE. x+137°=180°→x=43°.',
+'AROUND A POINT. 90°+110°+x=360°→x=160°.',
+'PARALLEL LINES. Corresponding65° stays65°; its co-interior partner is115°.'
+],
+'Need for statistics':[
+'PLANNING. Enrolment600→720 is an increase120; data can guide desk planning but do not guarantee next year repeats the increase.',
+'PREDICTION. Attendance around90% suggests a pattern, not certainty for the next day.',
+'CHANCE. On a fair die,7 is impossible,1–6 is certain, and6 is possible but not certain.'
+],
+'Data collection':[
+'TALLY. bus,bus,walk,car,bus,walk gives bus3,walk2,car1; total frequency6 matches observations.',
+'MEASUREMENT. Heights need units such as1.42m; numbers without units are ambiguous.',
+'QUALITY. If30 learners were surveyed but frequencies total31, find duplicate or miscount before analysis.'
+],
+'Data presentation':[
+'FREQUENCY. Data2,3,2,5,3,2 gives2→3,3→2,5→1.',
+'ODD MEDIAN. 9,3,7,5,1→1,3,5,7,9, so median5.',
+'EVEN MEDIAN. 8,2,6,4→2,4,6,8, so median=(4+6)/2=5.'
+]
+};
+function jss1MathGoldenMapFor(topic:string){
+ const direct=jss1MathematicsTeachingMaps[topic]; if(direct)return direct;
+ const aliases:Record<string,string>={
+  'LCM':'LCM (Least Common Multiple)','HCF':'HCF (Highest Common Factor)',
+  'Conversion of base 10 numerals to binary numbers':'Conversion of Base 10 Numerals to Binary Numbers',
+  'Fractions':'Fractions: Types, Simplification and Equivalent Fractions',
+  'Addition and Subtraction':'Basic Operations on Whole Numbers',
+  'Addition and Subtraction of fractions':'Addition and Subtraction of Fractions',
+  'Multiplications and Divisions of fractions':'Multiplication and Division of Fractions',
+  'Estimation':'Estimation and Approximation','Approximation':'Estimation and Approximation',
+  'Addition of numbers in base 2 numerals':'Binary Addition','Subtraction of numbers in base 2 numerals':'Binary Subtraction','Multiplication of numbers in base 2 numerals':'Binary Multiplication',
+  'Use of symbols':'Use of Symbols and Algebraic Expressions','Plane shapes':'Plane Shapes','Three dimensional figures':'Three-Dimensional Figures','Construction':'Geometric Constructions'
+ }; return jss1MathematicsTeachingMaps[aliases[topic]||''];
+}
+for(const lesson of jss1MathematicsDeepLessons){
+ if(lesson.workedExamples.some(x=>x.startsWith('GOLDEN RULE EXTRA')))continue;
+ const extras=jss1MathGoldenWorked[lesson.topic]||[];
+ lesson.workedExamples.push(...extras.map((x,i)=>'GOLDEN RULE EXTRA '+(i+1)+' — '+x));
+ const map=jss1MathGoldenMapFor(lesson.topic);
+ if(map){ for(const type of map.types){ for(const example of (type.examples||[]).slice(0,3)){
+  lesson.guidedPractice.push('GOLDEN RULE GUIDED — '+type.name+': '+example+'. Show every important working step, name the rule or idea used, explain why it applies, and perform a reasonableness or reverse check where possible.');
+ } } }
+ if(lesson.independentPractice.length<15){
+  const source=(map?.types||[]).flatMap(t=>t.examples||[]);
+  while(lesson.independentPractice.length<15 && source.length){
+   const n=lesson.independentPractice.length; const ex=source[n%source.length];
+   lesson.independentPractice.push('GOLDEN RULE INDEPENDENT — '+ex+'. Give the answer, complete method, and one check or explanation.');
+  }
+ }
+}
+

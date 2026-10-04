@@ -1,3 +1,4 @@
+import {jss1EnglishTeachingMaps} from './jss1EnglishTeachingMaps';
 export type DeepJss1EnglishLesson={
  topicId:string; classLevel:'JSS1'; subject:'English Language'; strand:'Reading'|'Writing'|'Listening and Speaking'|'Grammatical Accuracy'|'Literature'; topic:string;
  source:{authority:'NERDC';url:string;page:number}; objectives:string[]; prerequisites:string[];
@@ -1201,5 +1202,56 @@ export const jss1EnglishDeepLessons:DeepJss1EnglishLesson[]=[
     "boardReady": true
   }
 ];
+
+/** GOLDEN RULE ENRICHMENT — JSS1 ENGLISH */
+function normalizeJss1EnglishTopic(value:string){return String(value||'').toLowerCase().replace(/[–—]/g,'-').replace(/[^a-z0-9]+/g,' ').trim().replace(/\s+/g,' ');}
+const jss1EnglishGoldenAliases:Record<string,string>={
+[normalizeJss1EnglishTopic('Reading for maximum retention and recall (Intensive Reading)')]:'Reading Passages for Meaning',
+[normalizeJss1EnglishTopic('Reading for main and supporting ideas')]:'Reading Passages for Meaning',
+[normalizeJss1EnglishTopic('Reading to answer specific questions')]:'Literal, Inferential and Critical Questions',
+[normalizeJss1EnglishTopic('Reading to understand the author’s mood')]:'Author’s Mood, Attitude and Overall Impression',
+[normalizeJss1EnglishTopic('Reading to interpret diagrams, maps and sketches')]:'Interpreting Diagrams, Maps, Sketches and Spatial Description',
+[normalizeJss1EnglishTopic('Reading to follow direction in written communication')]:'Interpreting Diagrams, Maps, Sketches and Spatial Description',
+[normalizeJss1EnglishTopic('Writing to highlight main and supporting ideas')]:'Reading for Summary',
+[normalizeJss1EnglishTopic('Composition writing: narrative and descriptive')]:'Narrative and Descriptive Composition',
+[normalizeJss1EnglishTopic('Letter writing: Features of informal and formal letters')]:'Informal and Formal Letters',
+[normalizeJss1EnglishTopic('Speeches: Production of vowel and consonant sounds in passages')]:'Speech Sounds: Vowels and Consonants',
+[normalizeJss1EnglishTopic('Listening to and producing different speeches with reference to vowel sounds, consonant clusters, diphthongs, word boundaries, compound words, etc.')]:'Syllables, Consonant Clusters and Word Boundaries',
+[normalizeJss1EnglishTopic('Listening comprehension')]:'Oral Comprehension',
+[normalizeJss1EnglishTopic('Parts of speech: Nouns, Verbs, and Adjectives')]:'Nouns, Verbs and Adjectives',
+[normalizeJss1EnglishTopic('Parts of speech: Adverbs, Conjunctions and Prepositions')]:'Adverbs, Conjunctions, Prepositions and Interjections',
+[normalizeJss1EnglishTopic('Adverbials and Tenses')]:'Adverbials and Tenses',
+[normalizeJss1EnglishTopic('Active and Passive verbs')]:'Active and Passive Voice',
+[normalizeJss1EnglishTopic('Introduction to literature')]:'Introduction to Literature',
+[normalizeJss1EnglishTopic('Introduction to Folktales')]:'Folktales',
+[normalizeJss1EnglishTopic('Introduction to Myths and legends')]:'Myths and Legends',
+[normalizeJss1EnglishTopic('Prose: Types and features')]:'Introduction to Prose Fiction',
+[normalizeJss1EnglishTopic('Poetry: Types and features')]:'Poetry: Types and Features',
+[normalizeJss1EnglishTopic('Drama: Types and features')]:'Drama: Types and Features',
+[normalizeJss1EnglishTopic('Figures of speech: similes and metaphors')]:'Figures of Speech: Simile, Metaphor and Irony'
+};
+function jss1EnglishGoldenMapFor(topic:string){const direct=jss1EnglishTeachingMaps[topic];if(direct)return direct;return jss1EnglishTeachingMaps[jss1EnglishGoldenAliases[normalizeJss1EnglishTopic(topic)]||''];}
+function goldenEnglishModel(typeName:string,description:string,example:string,index:number){
+ const label=index===0?'MODEL RECOGNITION':index===1?'MODEL CONTRAST':'MODEL APPLICATION';
+ const task=index===0?'Identify the target feature and point to the exact grammatical, textual, listening or structural clue that proves it.':index===1?'Show a correct form beside a tempting wrong or weaker alternative, then explain the boundary of the rule.':'Apply the same skill in a fresh complete sentence, response or mini-passage, then explain why the choice fits.';
+ return typeName.toUpperCase()+' · GOLDEN RULE EXAMPLE '+(index+1)+' — '+label+': '+example+'. '+description+' '+task;
+}
+for(const lesson of jss1EnglishDeepLessons){
+ if(lesson.workedExamples.some(x=>x.includes('GOLDEN RULE EXAMPLE')))continue;
+ const map=jss1EnglishGoldenMapFor(lesson.topic); if(!map)continue;
+ for(const type of map.types){
+  const examples=(type.examples||[]).slice(0,3);
+  examples.forEach((example,index)=>{
+   lesson.workedExamples.push(goldenEnglishModel(type.name,type.description,example,index));
+   lesson.guidedPractice.push('GOLDEN RULE GUIDED — '+type.name+': work with “'+example+'”. '+type.description+' Give an answer/product, point to evidence or form that proves it, and explain why a plausible alternative would be weaker or wrong.');
+  });
+  lesson.independentPractice.push(
+   'GOLDEN RULE INDEPENDENT — '+type.name+': complete three fresh examples of this subskill without copying the models. Give the answer/product and a brief reason or evidence for each.',
+   'GOLDEN RULE TRANSFER — '+type.name+': apply the same skill to an unfamiliar sentence, passage, oral prompt or writing situation and explain what changed from the model.'
+  );
+ }
+ for(const check of map.noJumpChecks.slice(0,4)){lesson.guidedPractice.push('GOLDEN RULE CHECK — '+check+'. Demonstrate this requirement on one fresh example before moving on.');}
+ while(lesson.independentPractice.length<12){const n=lesson.independentPractice.length+1;lesson.independentPractice.push('GOLDEN RULE MASTERY '+n+' — complete a fresh mixed application of '+lesson.topic+', then justify the answer with textual, grammatical, listening or writing evidence as appropriate.');}
+}
 
 export function getJss1EnglishDeepLesson(topicId:string){return jss1EnglishDeepLessons.find(x=>x.topicId===topicId)}
