@@ -28,35 +28,81 @@ export const jss2EnglishDeepLessons:DeepJss2EnglishLesson[]=[
       "Use textual clues and relevant prior knowledge to infer a writer’s intention"
     ],
     "prerequisites": [
-      "JSS1 main/supporting ideas",
+      "JSS1 main and supporting ideas",
       "author mood and attitude",
-      "context clues"
+      "context clues",
+      "basic distinction between fact and opinion"
     ],
     "teaching": [
-      "A writer’s purpose is the result the writer wants the text to achieve. Topic tells what a text is about; purpose tells why the writer presents it.",
-      "Purpose is inferred from evidence: choice of verbs, repeated appeals, facts, warnings, emotional language, examples and the action the reader is encouraged to take.",
-      "Informative writing usually explains or reports; persuasive writing presents reasons to influence belief or action; entertaining writing mainly creates interest or enjoyment, though one text can have more than one purpose.",
-      "Prior knowledge may help interpretation, but the final claim must be anchored in the passage. AVORA uses purpose → clue → explanation, not unsupported guessing.",
-      "When a passage mixes purposes, identify the dominant one and explain how secondary purposes support it."
+      "START WITH TOPIC VERSUS PURPOSE. The topic answers “What is this text about?” The writer’s purpose answers “What does the writer want this text to achieve?” A passage about malaria may be written to inform, warn, persuade readers to use mosquito nets, criticise poor sanitation, or combine several purposes.",
+      "PURPOSE IS INFERRED FROM EVIDENCE. Do not guess from the topic alone. Look at the writer’s verbs, facts, examples, warnings, questions, commands, emotional words, repeated ideas, tone and any action the reader is encouraged to take.",
+      "TO INFORM OR EXPLAIN. Informative writing mainly gives facts, descriptions, causes, effects, processes or explanations so that the reader understands something better. It often uses factual language, definitions, examples, statistics or sequence.",
+      "TO PERSUADE. Persuasive writing tries to influence belief, opinion or action. Look for recommendations, commands, reasons, benefits, consequences, direct address and calls such as “should”, “must”, “support”, “choose” or “act now”.",
+      "TO WARN OR CAUTION. A warning draws attention to danger, risk or harmful consequences. Signal language may include “danger”, “avoid”, “do not”, “risk”, “unsafe”, “may lead to” or descriptions of serious consequences.",
+      "TO ENTERTAIN. Entertaining writing mainly seeks to interest, amuse, move or engage the reader through story, humour, suspense, vivid description, character or imaginative situations. Entertainment may still contain a lesson or information.",
+      "TO CRITICISE. Critical writing points out faults, weaknesses or unacceptable behaviour, often with evaluative language and supporting reasons. Criticism is not the same as insult; a strong critical passage explains what is wrong and why.",
+      "TO STIMULATE THOUGHT OR REFLECTION. Some texts ask questions, present contrasting views or describe an issue in a way that encourages the reader to think deeply rather than accept one immediate answer.",
+      "MIXED PURPOSES ARE COMMON. A text may inform and persuade at the same time. The task is usually to identify the DOMINANT purpose — the purpose that best explains the overall structure and final effect — then mention secondary purposes where relevant.",
+      "HOW TO IDENTIFY DOMINANT PURPOSE. Ask: What does most of the passage do? What is repeated? What does the ending ask the reader to think, feel or do? Which purpose best explains the supporting details?",
+      "KEY WORDS HELP BUT DO NOT DECIDE ALONE. One command does not automatically make a whole passage persuasive, and one fact does not make a passage purely informative. Read the whole text.",
+      "PURPOSE AND AUDIENCE CONNECT. Writers choose language according to who they are addressing. A health leaflet for pupils may use simple direct instructions; a formal report may use neutral technical language. Audience can therefore strengthen a purpose inference.",
+      "PURPOSE AND TONE CONNECT BUT ARE NOT THE SAME. Purpose is what the writer wants to achieve; tone is the writer’s attitude or manner, such as serious, urgent, humorous, critical or hopeful. An urgent tone may support a warning or persuasive purpose.",
+      "EVIDENCE PATTERN. A strong answer uses PURPOSE → TEXTUAL CLUE → EXPLANATION. Example: “The writer’s dominant purpose is to persuade because the passage gives reasons for recycling and ends by asking every household to separate waste.”",
+      "PERMANENT CHECK. Before finalising a purpose answer, reject any label that cannot explain the writer’s choices across most of the passage."
     ],
     "workedExamples": [
-      "“Vaccination protects communities; visit the clinic this week.” The health facts inform, but the call to visit the clinic shows a persuasive purpose.",
-      "An article listing causes, symptoms and prevention of heat exhaustion without asking the reader to act is primarily informative."
+      "INFORM. “Malaria is caused by parasites transmitted through the bites of infected female Anopheles mosquitoes. Common symptoms include fever, headache and weakness.” The passage mainly gives factual explanation; its dominant purpose is to inform.",
+      "PERSUADE. “Our school should plant more trees. They provide shade, reduce heat and make the environment healthier. Every class should adopt one tree this term.” The reasons plus the call to action show persuasion.",
+      "WARN. “Do not swim in the flooded canal. Fast currents may pull a swimmer under, and broken objects hidden in the water can cause serious injury.” The direct prohibition and consequences show a warning purpose.",
+      "ENTERTAIN. “The goat stared at Musa’s lunch as if it had paid school fees too. Before he could blink, it snatched the bread and raced across the field.” Humorous personification and action mainly entertain.",
+      "CRITICISE. “The market drainage has been left blocked for months despite repeated complaints. This neglect exposes traders and customers to avoidable flooding.” The writer identifies a fault and explains its consequence; purpose is to criticise negligence.",
+      "STIMULATE THOUGHT. “Should every school ban mobile phones completely, or can they be used responsibly for learning? The answer may depend on how schools manage distraction and access.” The text presents a question and competing considerations to provoke reflection.",
+      "MIXED PURPOSE — INFORM + PERSUADE. “Vaccination trains the body to recognise certain diseases. It also reduces the spread of infection in communities. Parents should ensure children receive recommended vaccines on time.” The first sentences inform; the final recommendation reveals persuasion as the dominant purpose.",
+      "MIXED PURPOSE — ENTERTAIN + TEACH. A folktale tells an amusing story about a greedy tortoise whose trick fails. The narrative entertains, but the consequence also teaches a moral. If most of the text is narrative, entertainment may remain the dominant purpose.",
+      "AUDIENCE CLUE. A poster addressed to “Dear Parents” lists school-safety rules and repeatedly uses “please ensure your child…”. The audience and directive language support an instructive/persuasive purpose.",
+      "TONE CLUE. “Act now. Each day of delay increases the risk.” The urgent tone strengthens a persuasive/warning purpose, but the purpose must still be confirmed from the whole passage.",
+      "DISTRACTOR CHECK. A passage contains many facts about road accidents and ends “Use the pedestrian bridge every time.” Choosing only “to inform” misses the final call to action; persuasion/warning better explains the complete text.",
+      "DOMINANT PURPOSE. A 300-word article spends 250 words explaining water pollution and only one sentence asking readers to care. The dominant purpose is likely to inform, with a minor persuasive element, because explanation occupies most of the text."
     ],
     "misconceptions": [
       "confusing topic with purpose",
-      "choosing “to inform” for every factual passage",
-      "inferring intention from one isolated word",
+      "choosing “to inform” for every passage that contains facts",
+      "choosing “to persuade” merely because one command appears",
+      "inferring purpose from one isolated word instead of the whole passage",
+      "confusing tone with purpose",
+      "confusing audience with purpose",
+      "assuming a text can have only one purpose",
+      "failing to identify the dominant purpose in a mixed-purpose passage",
+      "using personal agreement or disagreement instead of textual evidence",
+      "calling criticism an insult without examining reasons and evidence",
       "using prior knowledge instead of passage evidence"
     ],
     "guidedPractice": [
-      "Classify six short texts by dominant purpose and underline two clues for each."
+      "Classify six short extracts as mainly informing, persuading, warning, entertaining, criticising or stimulating thought. Underline two clues for each.",
+      "For three mixed-purpose passages, identify the dominant purpose and one secondary purpose, then explain why the dominant one is stronger.",
+      "Rewrite one informative sentence as persuasive writing without changing the topic, then explain what language changed the purpose.",
+      "Compare two passages on the same topic: one informative and one persuasive. List the language features that make their purposes different.",
+      "Given five possible purpose labels for one passage, eliminate four using evidence from the text.",
+      "Identify the intended audience of two short texts and explain how the audience influences wording and purpose.",
+      "Identify tone and purpose separately in four excerpts, then explain how the tone supports the purpose.",
+      "For one warning notice, use the PURPOSE → CLUE → EXPLANATION structure to write a full answer."
     ],
     "independentPractice": [
-      "Analyse three longer passages with mixed purposes and justify the dominant purpose in two evidence-based sentences."
+      "Read an unfamiliar health passage and identify topic, dominant purpose, two clues and one secondary purpose if present.",
+      "Analyse a school advert and explain how its language tries to persuade the reader.",
+      "Analyse a safety notice and distinguish its warning purpose from simple information.",
+      "Read a humorous narrative and explain whether entertainment is the only purpose.",
+      "Read a critical paragraph about community sanitation and identify the fault being criticised plus the evidence used.",
+      "Read a reflective passage containing rhetorical questions and explain how it stimulates thought.",
+      "Choose the dominant purpose of a mixed-purpose passage and justify why another plausible purpose is secondary.",
+      "Rewrite a persuasive paragraph as a neutral informative paragraph and explain the changes in language.",
+      "Write a 120-word informative paragraph on keeping water safe, then write a second 120-word persuasive version on the same topic.",
+      "Create a short warning notice for a school laboratory and identify the language features that show its purpose.",
+      "Write a two-sentence purpose analysis using the pattern PURPOSE → CLUE → EXPLANATION for each of three unseen extracts.",
+      "Explain why identifying purpose from only one keyword can lead to a wrong answer."
     ],
     "mastery": {
-      "criterion": "At least 80% overall, with accurate application on an unfamiliar task and correction of any major misconception before progression.",
+      "criterion": "At least 85% across informative, persuasive, warning, entertaining, critical, reflective and mixed-purpose texts, with dominant purpose justified through multiple textual clues and clear separation of purpose, audience and tone.",
       "status": "DEEP_WHEN_PASSED"
     },
     "boardReady": true
