@@ -1015,157 +1015,154 @@ export const jss2EnglishDeepLessons:DeepJss2EnglishLesson[]=[
     "mastery":{"criterion":"Learner distinguishes myths, legends and folktales using evidence, retells coherently and analyses theme/cultural function while separating literary tradition from historical verification at at least85% standard.","status":"DEEP_WHEN_PASSED"},"boardReady":true
   },
   {
-    "topicId": "nerdc-jss2-english-literature-4",
-    "classLevel": "JSS2",
-    "subject": "English Language",
-    "strand": "Literature",
-    "topic": "Poetry (written)",
-    "source": {
-      "authority": "NERDC",
-      "url": "https://nerdc.gov.ng/content_manager/jss/jss1-3_english_studies.pdf",
-      "page": 46
-    },
-    "objectives": [
-      "Read selected poems with appropriate rhythm",
-      "Explain the meaning/content of poems",
-      "Identify features and language of poetry",
-      "Write simple poems"
+    "topicId":"nerdc-jss2-english-literature-4","classLevel":"JSS2","subject":"English Language","strand":"Literature","topic":"Poetry (written)",
+    "source":{"authority":"NERDC","url":"https://nerdc.gov.ng/content_manager/jss/jss1-3_english_studies.pdf","page":46},
+    "objectives":["Read selected poems with appropriate rhythm","Explain meaning/content","Identify features and language of poetry","Write simple poems"],
+    "prerequisites":["JSS1 poetry","figurative language","rhythm"],
+    "teaching":[
+      "POETRY is language arranged for concentrated meaning, sound, rhythm and imagery. A poem may rhyme, but rhyme is not compulsory.",
+      "FIRST UNDERSTAND THE LITERAL SITUATION: who is speaking, to whom, about what, where and what happens.",
+      "THE SPEAKER is the voice in the poem and should not automatically be treated as the poet.",
+      "THEME is the larger idea explored by the poem, not simply one topic word. “Poverty” is a topic; “poverty can limit opportunity but not dignity” is a theme statement.",
+      "TONE is the speaker’s attitude, such as joyful, bitter, reflective, hopeful, mocking or mournful. It must be supported by diction and imagery.",
+      "MOOD is the feeling created in the reader; tone and mood can be related but are not identical.",
+      "IMAGERY appeals to the senses: sight, sound, touch, smell and taste. Explain what the image helps the reader experience.",
+      "SIMILE compares using like/as; METAPHOR makes an implied/direct comparison; PERSONIFICATION gives human qualities to non-human things.",
+      "REPETITION can create emphasis, rhythm, urgency, insistence or emotional intensity.",
+      "SOUND DEVICES include alliteration, assonance and onomatopoeia where present. Name a device only when its sound pattern is actually evident.",
+      "RHYTHM comes from stressed/unstressed patterns, pauses, repetition and line movement. Read aloud to hear it.",
+      "RHYME is repetition of similar end or internal sounds. Do not force a rhyme scheme where none exists.",
+      "ENJAMBMENT occurs when a sentence or phrase continues beyond a line ending without a strong stop; it can create flow or suspense.",
+      "CAESURA is a noticeable pause within a line, often marked by punctuation, which can slow or emphasise thought.",
+      "NARRATIVE POEMS tell events; lyrical poems foreground feeling/thought; descriptive poems create scenes. A poem may combine forms.",
+      "BALLADS often narrate events using repetition and strong rhythm, but classification should follow the poem actually given.",
+      "PARAPHRASE proves literal understanding, but analysis must also explain HOW language creates effect.",
+      "WRITING A SIMPLE POEM should begin with one experience/image, choose precise concrete words, use line breaks deliberately and revise for sound and meaning.",
+      "PERMANENT ANALYSIS METHOD: literal situation→speaker→key images/diction→sound/rhythm→tone→theme→evidence."
     ],
-    "prerequisites": [
-      "JSS1 poetry",
-      "figurative language",
-      "rhythm"
+    "workedExamples":[
+      "Speaker vs poet: “I wait beside the empty road” identifies a first-person speaker; there is no evidence the event happened to the poet personally.",
+      "Theme: a poem showing a child studying by lantern despite hardship may support a theme about persistence in difficult conditions.",
+      "Tone: repeated words such as “still we rise” plus confident verbs can create a determined/hopeful tone.",
+      "Imagery: “dust scratched my throat” creates tactile/physical discomfort and makes drought vivid.",
+      "Visual imagery: “orange roofs burned under evening sun” helps the reader picture colour/light.",
+      "Auditory imagery: “drums rolled across the valley” creates sound and distance.",
+      "Simile: “The moon hung like a silver coin.” The comparison makes shape/brightness concrete.",
+      "Metaphor: “Time is a thief.” Time is presented as stealing moments, suggesting loss.",
+      "Personification: “The wind knocked angrily at the door.” Wind receives human action/mood.",
+      "Repetition: “Run, run, run” can intensify urgency.",
+      "Alliteration: repeated /s/ in “soft sand sighed” creates a noticeable sound pattern.",
+      "Onomatopoeia: “buzz”, “clang” or “crash” imitates associated sound.",
+      "Enjambment: “I carried the news / across the sleeping town” flows across the line break, helping movement continue.",
+      "Caesura: “I called—no answer came.” The pause can dramatise silence.",
+      "Rhyme: cat/hat share end sound; rhyme should be identified by sound, not spelling alone.",
+      "Narrative poem: a poem recounting a hunter’s journey still requires analysis of theme, imagery and tone, not only plot summary.",
+      "Paraphrase vs analysis: paraphrase says “rain started”; analysis explains how “the sky burst open” makes rainfall sudden and forceful.",
+      "Original writing: replace vague “the place was nice” with concrete image “cool rain silvered the zinc roofs.”"
     ],
-    "teaching": [
-      "Poetry compresses meaning through line arrangement, sound, imagery, rhythm, figurative language and deliberate word choice. Not every poem rhymes.",
-      "Begin with literal situation: who speaks, what happens, where and to whom. Then examine images, tone and figurative choices to infer deeper meaning.",
-      "Narrative poems tell events; ballads often tell stories with strong rhythm/repetition. Other poems may be lyrical, descriptive or reflective.",
-      "Rhythm comes from patterns of stress, pause and repetition. Reading aloud helps reveal emphasis and emotional movement.",
-      "Writing a simple poem should focus on one clear image/experience and revise for precise language rather than forcing rhyme at the expense of meaning."
-    ],
-    "workedExamples": [
-      "A poem repeating “again, again” may use repetition to convey persistence or frustration depending on context.",
-      "A narrative poem about a journey should still be analysed for speaker, events, imagery and theme, not only retold."
-    ],
-    "misconceptions": [
-      "assuming poetry must rhyme",
-      "paraphrasing every line without interpreting effect",
-      "calling the poet and speaker automatically the same person",
-      "adding decorative words with no purpose"
-    ],
-    "guidedPractice": [
-      "Read a short poem aloud, annotate speaker/images/repetition/theme, then rewrite one stanza in prose to test understanding."
-    ],
-    "independentPractice": [
-      "Analyse two unseen poems and write one original 12–20 line poem with deliberate imagery and rhythm."
-    ],
-    "mastery": {
-      "criterion": "At least 80% overall, with accurate application on an unfamiliar task and correction of any major misconception before progression.",
-      "status": "DEEP_WHEN_PASSED"
-    },
-    "boardReady": true
+    "misconceptions":["poetry must rhyme","speaker always equals poet","theme is one-word topic","paraphrase alone is analysis","naming devices without evidence","confusing tone and mood","calling every comparison metaphor","forcing rhyme scheme","ignoring line breaks","using decorative vocabulary without purpose"],
+    "guidedPractice":["Identify speaker/situation in four short poems.","Write theme statements rather than topic words.","Find evidence for three tones.","Identify five sensory images.","Distinguish simile/metaphor/personification.","Identify repetition and explain effect.","Find one sound device and explain effect.","Mark enjambment/caesura in supplied lines.","Read a poem aloud and mark pauses/stress.","Paraphrase one stanza then add analysis.","Compare two possible theme statements.","Draft eight lines from one concrete image and revise."],
+    "independentPractice":["Analyse an unseen poem for speaker,situation,theme,tone.","Identify and explain six language devices in context.","Write evidence-based paragraph on imagery.","Write paragraph on rhythm/repetition.","Compare two poems on a shared theme.","Explain one example of enjambment.","Explain one caesura effect.","Distinguish poet from speaker in an unseen poem.","Paraphrase one stanza accurately.","Write a12–20 line original poem with deliberate imagery.","Revise poem to remove vague words/forced rhyme.","Read final poem aloud and annotate intended sound/rhythm choices."],
+    "mastery":{"criterion":"Learner reads and analyses unseen poems through speaker, theme, tone, imagery, sound, rhythm and figurative language with evidence, and writes/revises an original poem at at least85% standard.","status":"DEEP_WHEN_PASSED"},"boardReady":true
   },
   {
-    "topicId": "nerdc-jss2-english-literature-5",
-    "classLevel": "JSS2",
-    "subject": "English Language",
-    "strand": "Literature",
-    "topic": "Drama: kinds and features",
-    "source": {
-      "authority": "NERDC",
-      "url": "https://nerdc.gov.ng/content_manager/jss/jss1-3_english_studies.pdf",
-      "page": 47
-    },
-    "objectives": [
-      "Read and dramatise a play",
-      "Identify major kinds and features of drama",
-      "Explain plot, character, dialogue, stage direction, conflict, setting and theme",
-      "Participate in performance and interpretation"
+    "topicId":"nerdc-jss2-english-literature-5","classLevel":"JSS2","subject":"English Language","strand":"Literature","topic":"Drama: kinds and features",
+    "source":{"authority":"NERDC","url":"https://nerdc.gov.ng/content_manager/jss/jss1-3_english_studies.pdf","page":47},
+    "objectives":["Read and dramatise a play","Identify major kinds and features of drama","Explain plot, character, dialogue, stage direction, conflict, setting and theme","Participate in performance and interpretation"],
+    "prerequisites":["JSS1 drama","dialogue","prose analysis"],
+    "teaching":[
+      "DRAMA is literature written mainly for performance. Meaning comes from dialogue, action, gesture, movement, stage directions, setting and interaction.",
+      "A CAST LIST names characters; ACTS and SCENES organise longer plays where used.",
+      "DIALOGUE is spoken interaction between characters and reveals conflict, relationships, information and personality.",
+      "A MONOLOGUE is extended speech by one character; an aside is intended for audience/selected hearing within dramatic convention.",
+      "STAGE DIRECTIONS guide movement, tone, gesture, setting, entrances, exits, lighting or action and are not usually spoken as dialogue.",
+      "PLOT in drama develops through action on stage: exposition, rising conflict, climax, falling action and resolution where applicable.",
+      "CONFLICT can be character vs character, self, society, environment or another force. Identify what each side wants.",
+      "CHARACTERISATION comes from what characters say, do, choose, how others respond and stage directions.",
+      "SETTING includes place, time and social environment and can shape what actions are possible.",
+      "THEME is the larger idea explored through conflict and choices, not simply a plot event.",
+      "COMEDY generally uses humorous situations and tends toward less destructive resolution, but can address serious themes.",
+      "TRAGEDY centres serious conflict and significant suffering/downfall; one sad event alone does not automatically make a play a tragedy.",
+      "TRAGICOMEDY or mixed drama combines serious and comic elements; classify by dominant structure/features rather than isolated moments.",
+      "DRAMATIC IRONY occurs when the audience knows important information a character does not, creating tension or humour.",
+      "PERFORMANCE CHOICES matter: pause, volume, movement and facial expression can change how a line is understood.",
+      "BLOCKING means planned actor movement/position on stage. Good blocking supports relationships and focus.",
+      "PROPS and SETTING details should serve the scene rather than distract from it.",
+      "PERMANENT ANALYSIS METHOD: situation→conflict→character choices→dialogue/stage directions→turning point→theme→performance effect."
     ],
-    "prerequisites": [
-      "JSS1 drama",
-      "dialogue",
-      "prose analysis"
+    "workedExamples":[
+      "Stage direction “[hesitates before answering]” may suggest fear, uncertainty or concealment.",
+      "Dialogue “Give it back!” reveals an immediate conflict over possession.",
+      "Characterisation: a character who returns lost money despite poverty is shown through action, not merely description.",
+      "Conflict character vs self: a learner wants to confess but fears punishment.",
+      "Conflict character vs society: a character challenges an unfair community rule.",
+      "Setting: a scene during a blackout changes visibility and may intensify tension.",
+      "Theme: repeated conflict over bribery may develop a theme about integrity and corruption.",
+      "Comedy can expose greed through humorous consequences without making greed itself harmless.",
+      "A death in one scene does not by itself prove the whole play is tragedy; examine overall structure and consequences.",
+      "Dramatic irony: audience knows a letter is fake while the character trusts it.",
+      "Monologue can reveal thoughts a character does not share in ordinary dialogue.",
+      "Aside may let audience hear a private intention while another character remains unaware.",
+      "Blocking: moving two arguing characters farther apart can visually reinforce emotional distance.",
+      "Pause: “I thought you knew… [pause] the truth.” Pause creates suspense/emphasis.",
+      "Volume choice: whispering a threat can be more menacing than shouting depending context.",
+      "Prop: a sealed envelope can become central evidence driving the plot.",
+      "Climax: the moment the hidden evidence is revealed may reverse power between characters.",
+      "Performance comparison: one actor says “Fine” cheerfully, another bitterly; identical word gains different meaning through delivery."
     ],
-    "teaching": [
-      "Drama is written primarily for performance. Meaning comes from spoken dialogue, action, stage directions, movement, setting and interaction between characters.",
-      "Key features include cast/characters, acts/scenes where applicable, dialogue, stage directions, conflict, plot and performance space.",
-      "Common kinds include comedy and tragedy, while many plays combine serious and humorous elements. Classification should follow dominant features.",
-      "Stage directions are not dialogue; they guide movement, tone, setting or action and can change how a line is understood.",
-      "Drama analysis should connect conflict and character choices to theme, then test interpretation through performance."
-    ],
-    "workedExamples": [
-      "The direction “[hesitates before answering]” may suggest fear, uncertainty or concealment and changes how the spoken line is interpreted.",
-      "A comic scene can still address a serious theme such as dishonesty; genre and theme are different concepts."
-    ],
-    "misconceptions": [
-      "reading stage directions aloud as character speech",
-      "calling every sad event tragedy",
-      "summarising plot without analysing conflict",
-      "ignoring performance choices"
-    ],
-    "guidedPractice": [
-      "Read a short scene, label dramatic features, then perform it twice with different stage-direction choices and compare meaning."
-    ],
-    "independentPractice": [
-      "Analyse an unseen scene and prepare a short group performance with justified acting/staging decisions."
-    ],
-    "mastery": {
-      "criterion": "At least 80% overall, with accurate application on an unfamiliar task and correction of any major misconception before progression.",
-      "status": "DEEP_WHEN_PASSED"
-    },
-    "boardReady": true
+    "misconceptions":["reading stage directions aloud as dialogue","calling every sad event tragedy","plot summary without analysis","theme as one topic word","ignoring performance choices","assuming comedy has no serious message","confusing monologue and dialogue","calling any audience knowledge dramatic irony","using props with no dramatic function"],
+    "guidedPractice":["Label dialogue/stage directions in a short scene.","Identify conflict and what each character wants.","Infer character traits from actions.","Identify setting clues.","Map scene events to plot stages.","Write a theme statement with evidence.","Classify comedy/tragedy/mixed with reasons.","Identify a dramatic-irony situation.","Perform one line with two different meanings.","Plan blocking for a disagreement scene.","Rewrite stage directions to change mood.","Compare two performances and explain which choices fit text better."],
+    "independentPractice":["Analyse an unseen scene for conflict,character,setting,theme.","Identify five stage directions and effects.","Write paragraph on characterisation with evidence.","Write paragraph on climax/turning point.","Classify dramatic kind and justify.","Explain one possible dramatic irony.","Create a one-page scene with clear conflict.","Include dialogue and meaningful stage directions.","Use one prop deliberately.","Plan entrances/exits/blocking.","Perform/rehearse scene and revise unclear lines.","Write reflection explaining three performance choices."],
+    "mastery":{"criterion":"Learner analyses and performs drama through conflict, characterisation, setting, dialogue, stage directions, genre, theme and performance choices with evidence at at least85% standard.","status":"DEEP_WHEN_PASSED"},"boardReady":true
   },
   {
-    "topicId": "nerdc-jss2-english-literature-6",
-    "classLevel": "JSS2",
-    "subject": "English Language",
-    "strand": "Literature",
-    "topic": "More on figures of speech: irony and Hyperbole",
-    "source": {
-      "authority": "NERDC",
-      "url": "https://nerdc.gov.ng/content_manager/jss/jss1-3_english_studies.pdf",
-      "page": 48
-    },
-    "objectives": [
-      "Explain irony and hyperbole",
-      "Identify both figures in sentences and literary passages",
-      "Construct meaningful original examples and explain their effects"
+    "topicId":"nerdc-jss2-english-literature-6","classLevel":"JSS2","subject":"English Language","strand":"Literature","topic":"More on figures of speech: irony and Hyperbole",
+    "source":{"authority":"NERDC","url":"https://nerdc.gov.ng/content_manager/jss/jss1-3_english_studies.pdf","page":48},
+    "objectives":["Explain irony and hyperbole","Identify both figures in sentences and literary passages","Construct meaningful original examples and explain effects"],
+    "prerequisites":["simile/metaphor","literal/figurative meaning","tone"],
+    "teaching":[
+      "HYPERBOLE is deliberate exaggeration for emphasis, humour, emotional force or dramatic effect. It is not intended as literal measurement.",
+      "A useful hyperbole keeps the real idea understandable even though the wording is impossible or extreme.",
+      "VERBAL IRONY occurs when a speaker’s literal words contrast with the intended meaning, often signalled by context/tone.",
+      "SITUATIONAL IRONY occurs when an outcome sharply contrasts with a reasonable expectation created by the situation.",
+      "DRAMATIC IRONY occurs when an audience knows important information that one or more characters do not.",
+      "IRONY IS NOT JUST ANY OPPOSITE. Identify the expectation/literal surface and the contrasting intended or actual meaning.",
+      "IRONY IS NOT THE SAME AS COINCIDENCE. A surprising event becomes ironic only when the contrast with expectation is meaningful.",
+      "SARCASM may use verbal irony to mock or criticise, but not all irony is sarcastic.",
+      "CONTEXT is essential. “Wonderful!” could be sincere praise or ironic frustration depending what happened and how it is said.",
+      "HYPERBOLE VS METAPHOR. “I waited a thousand years” exaggerates duration; “Time is a thief” metaphorically compares time to a thief.",
+      "HYPERBOLE VS LIE. A lie aims to deceive about fact; obvious hyperbole signals exaggeration for effect.",
+      "EFFECT matters. Name the figure and explain what it emphasises, criticises, makes humorous or reveals.",
+      "In literature, irony can expose hypocrisy, create humour, build suspense or deepen tragedy.",
+      "Dramatic irony often increases tension because readers anticipate consequences that the character cannot yet see.",
+      "PERMANENT METHOD: identify literal/expected meaning→identify contrast/exaggeration→name figure→explain effect with context."
     ],
-    "prerequisites": [
-      "simile/metaphor",
-      "literal/figurative meaning",
-      "tone"
+    "workedExamples":[
+      "Hyperbole: “I have told you a million times.” The impossible count emphasises repeated warning/frustration.",
+      "Hyperbole: “This bag weighs a ton.” It emphasises heaviness rather than giving literal mass.",
+      "Hyperbole: “I am so hungry I could eat a horse.” It intensifies hunger.",
+      "Hyperbole: “The queue stretched to the moon.” It exaggerates length.",
+      "Hyperbole: “She cried a river.” It exaggerates amount of crying to stress sadness.",
+      "Verbal irony: after rain ruins a picnic, someone says, “Lovely weather.” Context makes praise mean dissatisfaction.",
+      "Verbal irony: after a power cut stops a technology presentation, “Perfect timing.” Literal praise contrasts with frustration.",
+      "Situational irony: a fire station catches fire; an institution expected to fight fires becomes the victim.",
+      "Situational irony: a professional alarm installer forgets to set his own alarm and oversleeps.",
+      "Dramatic irony: audience knows the visitor is an impostor while the host trusts him.",
+      "Dramatic irony: audience sees a hidden letter that the hero continues searching for.",
+      "Not irony: meeting your teacher unexpectedly at a market is coincidence unless a meaningful expectation is reversed.",
+      "Not hyperbole: “The stadium holds50,000 people” may be literal fact.",
+      "Hyperbole vs metaphor: “My homework mountain is waiting” is metaphor; “I have a million pages of homework” is hyperbole.",
+      "Sarcastic irony: after someone breaks a plate, “Brilliant job.” Tone/context turn praise into criticism.",
+      "Effect: verbal irony can make criticism sharper without direct statement.",
+      "Effect: situational irony can create humour when the reversal is harmless.",
+      "Effect: dramatic irony can create suspense because audience anticipates danger."
     ],
-    "teaching": [
-      "Hyperbole is deliberate exaggeration for emphasis or effect, not a statement intended to be taken literally.",
-      "Irony involves a contrast between literal wording/expectation and intended or actual meaning. At this level, verbal/situational contrasts are most useful to recognise.",
-      "Context is essential. “I’ve told you a million times” is hyperbole because the extreme number intensifies frustration; it is not a factual count.",
-      "Irony should not be reduced to “the opposite” mechanically; identify the expectation or literal surface and the contrasting intended/actual meaning.",
-      "When creating examples, the figure should serve an effect—humour, criticism, emphasis, surprise—not merely sound unusual."
-    ],
-    "workedExamples": [
-      "Hyperbole: “The bag weighs a ton.” Effect: emphasises heaviness.",
-      "Irony: after a power outage interrupts a technology presentation, a speaker says, “Perfect timing.” The literal praise contrasts with frustration."
-    ],
-    "misconceptions": [
-      "calling every exaggeration a lie",
-      "using “irony” for any coincidence",
-      "missing context that signals non-literal meaning",
-      "creating hyperbole so extreme that intended meaning becomes unclear"
-    ],
-    "guidedPractice": [
-      "Identify and explain ten examples, stating the literal surface and intended effect."
-    ],
-    "independentPractice": [
-      "Write six original examples of each figure and analyse two examples from a short literary passage."
-    ],
-    "mastery": {
-      "criterion": "At least 80% overall, with accurate application on an unfamiliar task and correction of any major misconception before progression.",
-      "status": "DEEP_WHEN_PASSED"
-    },
-    "boardReady": true
-  },
+    "misconceptions":["every exaggeration is a lie","every coincidence is irony","irony simply means opposite","sarcasm equals all irony","missing context","calling literal large numbers hyperbole automatically","identifying figure without explaining effect","confusing hyperbole and metaphor"],
+    "guidedPractice":["Classify twelve examples as hyperbole/verbal irony/situational irony/dramatic irony/neither.","Explain literal vs intended meaning in verbal irony.","State expectation vs outcome in situational irony.","State audience knowledge vs character knowledge in dramatic irony.","Rewrite three literal statements as hyperbole.","Tone-test the word “Wonderful!” in two contexts.","Separate hyperbole from metaphor in six examples.","Explain effects of four examples.","Identify one non-ironic coincidence and explain why.","Create two sarcastic verbal-irony examples without insults.","Create a dramatic-irony mini-scenario.","Correct five wrongly labelled examples."],
+    "independentPractice":["Write six original hyperboles and explain real meaning.","Write four verbal-irony examples with context.","Write three situational-irony scenarios.","Write two dramatic-irony scenarios.","Analyse irony in an unseen scene.","Analyse hyperbole in an unseen paragraph.","Distinguish sarcasm from neutral verbal irony.","Find three literal statements that are not hyperbole.","Explain why one coincidence is not irony.","Compare effect of hyperbole and metaphor.","Rewrite one flat sentence using effective hyperbole.","Write an evidence-based paragraph on how irony creates humour or tension."],
+    "mastery":{"criterion":"Learner distinguishes hyperbole, verbal/situational/dramatic irony and non-examples, explains contextual effects, and creates controlled original examples at at least85% accuracy.","status":"DEEP_WHEN_PASSED"},"boardReady":true
+  }
+
 ];
 
 export function getJss2EnglishDeepLesson(topicId:string){return jss2EnglishDeepLessons.find(x=>x.topicId===topicId)}
