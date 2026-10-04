@@ -144,7 +144,8 @@ function buildEvents(unit:any,topic:string,subject:string,classLevel:string):Boa
    chunks.forEach((spoken,index)=>sourceEvents.push({...base,stepId:`${moment.id}-slide-${index+1}`,label:index===0?moment.label:`${moment.label} · CONTINUED`,spoken,lines:slideBoardLines(spoken),pauseAfterMs:index===chunks.length-1?moment.pauseAfterMs:500}));
   }
   return sourceEvents.filter(e=>{
-   if(e.kind==='check')return false;
+   // Authored curriculum checks are learner-facing teaching checkpoints. They must remain
+   // visible inside the lesson; only the end-of-topic CBT is separated into Exercise mode.
    const learnerText=[e.label,e.spoken,...(e.lines||[])].join(' ').toLowerCase();
    if(/nerdc source provenance|curriculum page|source provenance/.test(learnerText))return false;
    if(/what this topic must cover before avora can call the teaching complete/.test(learnerText))return false;
