@@ -456,304 +456,299 @@ export const jss3EnglishDeepLessons:DeepJss3EnglishLesson[]=[
   "boardReady":true
 },
 {
-  "topicId": "nerdc-jss3-english-listening-and-speaking-1",
-  "classLevel": "JSS3",
-  "subject": "English Language",
-  "strand": "Listening and Speaking",
-  "topic": "Speeches: phonemes",
-  "source": {
-    "authority": "NERDC",
-    "url": "https://nerdc.gov.ng/content_manager/jss/jss1-3_english_studies.pdf",
-    "page": 55
-  },
-  "objectives": [
-    "Identify and produce English vowel and consonant phonemes accurately in words and connected speech",
-    "Distinguish minimal pairs and problematic sound contrasts",
-    "Use phonemic awareness to improve pronunciation and listening discrimination"
+  "topicId":"nerdc-jss3-english-listening-and-speaking-1",
+  "classLevel":"JSS3","subject":"English Language","strand":"Listening and Speaking","topic":"Speeches: phonemes",
+  "source":{"authority":"NERDC","url":"https://nerdc.gov.ng/content_manager/jss/jss1-3_english_studies.pdf","page":55},
+  "objectives":["Identify and produce English vowel and consonant phonemes accurately","Distinguish minimal pairs and difficult contrasts","Maintain sound distinctions in connected speech","Relate phonemes to spelling patterns without assuming one-to-one correspondence"],
+  "prerequisites":["JSS2 vowel/consonant revision","diphthongs","consonant clusters"],
+  "teaching":[
+    "A PHONEME is a sound unit that can distinguish meaning. Changing one phoneme can produce a different word, as in ship/sheep or fan/van.",
+    "LETTERS AND SOUNDS ARE DIFFERENT. English spelling does not map perfectly to pronunciation; the same letter may represent several sounds and the same sound may have different spellings.",
+    "PURE VOWELS are produced with a relatively steady tongue position; DIPHTHONGS glide from one vowel quality toward another.",
+    "VOWEL LENGTH/QUALITY contrasts matter in words such as ship/sheep, full/fool and pull/pool.",
+    "VOICED consonants involve vocal-fold vibration while VOICELESS consonants do not. Pairs include p/b, t/d, k/g, f/v, s/z and the two th sounds.",
+    "PLACE OF ARTICULATION helps explain difficult consonants: lips, teeth, alveolar ridge, palate or velum may be involved.",
+    "MANNER describes how airflow is shaped: stops, fricatives, affricates, nasals, approximants and laterals.",
+    "MINIMAL PAIRS isolate one sound contrast and help train both listening and production.",
+    "CONSONANT CLUSTERS require every consonant to remain sufficiently audible. Do not insert extra vowels into street, school, asked or texts.",
+    "FINAL CONSONANTS can carry grammar: plural -s, possessive forms and past-tense -ed may depend on final sound distinctions.",
+    "TH SPELLING represents different sounds in thin and this; pronunciation must come from the word, not letters alone.",
+    "SILENT LETTERS show spelling-pronunciation mismatch, as in know, write and lamb.",
+    "STRESS can affect vowel quality in connected speech; unstressed vowels may become weaker.",
+    "SOUND IN CONTEXT matters. Accurate isolated production is not enough if contrast disappears in phrases or sentences.",
+    "LISTENING DISCRIMINATION should come before production when a contrast is difficult.",
+    "PERMANENT METHOD: hear→identify→contrast→produce→place in phrase/sentence→record and self-check."
   ],
-  "prerequisites": [
-    "JSS2 vowel/consonant revision",
-    "diphthongs",
-    "consonant clusters"
+  "workedExamples":[
+    "ship/sheep: one vowel contrast changes meaning.",
+    "full/fool contrasts vowel quality/length.",
+    "fan/van contrasts voiceless /f/ with voiced /v/.",
+    "sip/zip contrasts /s/ and /z/.",
+    "coat/goat contrasts /k/ and /g/.",
+    "pat/bat contrasts /p/ and /b/.",
+    "thin/then shows two different th sounds despite identical spelling.",
+    "rice/rise contrasts final /s/ and /z/.",
+    "cap/cab contrasts final voiceless/voiced stops.",
+    "street begins with /str/; inserting a vowel changes pronunciation.",
+    "school begins with a consonant cluster; it should not be pronounced with an inserted vowel.",
+    "asked ends with a complex cluster; practise slowly before natural-speed reading.",
+    "text/texts shows how an extra plural consonant changes the final cluster.",
+    "know begins with silent k, showing spelling does not equal sound sequence.",
+    "write begins with silent w.",
+    "day contains a diphthong glide.",
+    "boy contains a different diphthong glide.",
+    "Played ends with a voiced past-tense sound; final sound carries grammatical information."
   ],
-  "teaching": [
-    "A phoneme is a sound unit that can distinguish meaning; changing one sound may change the word.",
-    "Revise pure vowels, diphthongs and consonants through mouth position, voicing and place/manner of articulation rather than spelling alone.",
-    "English spelling is not a reliable one-to-one guide to sound, so pronunciation must be learned from sound patterns and examples.",
-    "Minimal pairs isolate one contrasting phoneme and train both listening and production.",
-    "Transfer accurate sounds from isolated words into phrases and sentences so pronunciation remains clear in real speech."
-  ],
-  "workedExamples": [
-    "ship/sheep contrasts vowel quality; fan/van contrasts voiceless and voiced consonants.",
-    "The letters “th” represent different sounds in thin and this, showing why spelling alone is insufficient."
-  ],
-  "misconceptions": [
-    "pronouncing from spelling only",
-    "adding vowels inside consonant clusters",
-    "confusing letter names with sounds",
-    "mastering isolated words but losing contrast in sentences"
-  ],
-  "guidedPractice": [
-    "Listen to and classify minimal pairs, then produce each contrast in short sentences."
-  ],
-  "independentPractice": [
-    "Record/read a phoneme-rich passage and complete a discrimination test with at least 80% accuracy."
-  ],
-  "mastery": {
-    "criterion": "At least 80% overall, with accurate application on an unfamiliar task and correction of any major misconception before progression.",
-    "status": "DEEP_WHEN_PASSED"
-  },
-  "boardReady": true
+  "misconceptions":["letter names are phonemes","spelling always predicts pronunciation","adding vowels into clusters","dropping final consonants","treating all th spellings the same","memorising IPA symbols without listening","accurate isolated words guarantee connected-speech accuracy","forcing one accent rather than intelligibility"],
+  "guidedPractice":["Sort sixteen words into minimal-pair sets.","Identify voiced/voiceless pairs by throat vibration.","Classify target consonants by place/manner.","Produce eight vowel contrast pairs.","Produce eight consonant contrast pairs.","Read six initial clusters.","Read six final clusters.","Identify silent letters in ten words.","Mark diphthongs in a word list.","Read plural forms while preserving final sounds.","Read past-tense forms while preserving final sounds.","Record a phoneme-rich paragraph and self-correct three sounds."],
+  "independentPractice":["Create ten minimal-pair pairs.","Write sentences containing both members of five pairs.","Record twenty vowel targets.","Record twenty consonant targets.","Read one minute of cluster-rich text.","Identify ten words where spelling may mislead pronunciation.","Classify twelve consonants by voicing.","Classify eight consonants by place/manner.","Read ten plural/past forms clearly.","Compare first and second recording after correction.","Complete an unseen discrimination exercise.","Write a short reflection identifying three pronunciation targets and evidence of improvement."],
+  "mastery":{"criterion":"Learner discriminates and produces key English phoneme contrasts, preserves clusters/final sounds in connected speech and explains major spelling-sound mismatches with at least85% accuracy/intelligibility.","status":"DEEP_WHEN_PASSED"},"boardReady":true
 },
 {
-  "topicId": "nerdc-jss3-english-listening-and-speaking-2",
-  "classLevel": "JSS3",
-  "subject": "English Language",
-  "strand": "Listening and Speaking",
-  "topic": "Speeches: Intonation, stress and Rhythm",
-  "source": {
-    "authority": "NERDC",
-    "url": "https://nerdc.gov.ng/content_manager/jss/jss1-3_english_studies.pdf",
-    "page": 56
-  },
-  "objectives": [
-    "Use word and sentence stress to convey meaning clearly",
-    "Recognise and produce appropriate intonation patterns",
-    "Maintain intelligible English rhythm in connected speech"
+  "topicId":"nerdc-jss3-english-listening-and-speaking-2",
+  "classLevel":"JSS3","subject":"English Language","strand":"Listening and Speaking","topic":"Speeches: Intonation, stress and Rhythm",
+  "source":{"authority":"NERDC","url":"https://nerdc.gov.ng/content_manager/jss/jss1-3_english_studies.pdf","page":56},
+  "objectives":["Use word and sentence stress accurately","Recognise and produce appropriate intonation patterns","Use rhythm and pausing to organise connected speech","Manipulate contrastive stress to change meaning"],
+  "prerequisites":["JSS2 stress/rhythm/intonation","phonemes","connected speech"],
+  "teaching":[
+    "WORD STRESS makes one syllable more prominent within a word. Stress can distinguish or clarify word families and longer words.",
+    "STRESS SHIFT can occur across related words, so learners should not assume one fixed syllable position across a word family.",
+    "SENTENCE STRESS normally highlights information-bearing words while many grammatical words are less prominent.",
+    "CONTRASTIVE STRESS deliberately shifts prominence to the item being corrected or contrasted.",
+    "NEW INFORMATION usually receives stronger focus than information already given in the conversation.",
+    "INTONATION is pitch movement over an utterance; it can signal completion, uncertainty, attitude, politeness, contrast or question type.",
+    "FALLING INTONATION often accompanies complete statements, commands and wh-questions.",
+    "RISING INTONATION often accompanies genuine yes/no questions or checking, though context can alter this.",
+    "FALL-RISE can suggest reservation, partial agreement or implied contrast.",
+    "TAG QUESTIONS change attitude with intonation: rising can show genuine uncertainty, falling can seek confirmation.",
+    "LISTS often use continuing pitch on non-final items and a final fall on the last item.",
+    "RHYTHM depends on alternation of prominent and less prominent syllables, not on stressing every word equally.",
+    "SENSE GROUPS organise speech into meaning units. Pauses should support syntax and meaning.",
+    "WEAK FORMS of common grammatical words contribute to natural rhythm, but clarity remains the priority.",
+    "SPEED is not rhythm. Speaking rapidly with misplaced stress can reduce intelligibility.",
+    "PERMANENT METHOD: decide intended meaning→mark focus→choose pitch movement→group into sense units→deliver→listen back."
   ],
-  "prerequisites": [
-    "JSS2 stress/rhythm/intonation",
-    "phonemes",
-    "connected speech"
+  "workedExamples":[
+    "I wanted the BLUE pen: colour is corrected.",
+    "I WANTED the blue pen: desire/action is contrasted.",
+    "I wanted the blue PEN: object is contrasted.",
+    "PHOtograph vs phoTOGraphy demonstrates word-family stress shift.",
+    "PREsent as noun/adjective versus preSENT as verb can differ in stress.",
+    "Are you ready? commonly rises when genuinely asking.",
+    "Where are you going? commonly falls as a wh-question.",
+    "Sit down. commonly falls as a complete command.",
+    "You finished, didn’t you↗? can show uncertainty.",
+    "You finished, didn’t you↘? can show expected confirmation.",
+    "I like rice↗, beans↗, yam↗ and plantain↘: list continuation then closure.",
+    "It is useful…but expensive can use a fall-rise-like contour to signal reservation.",
+    "Who won? MARY won: Mary receives focus as new information.",
+    "No, she came on THURSDAY: Thursday receives contrastive correction.",
+    "After the meeting / the prefects returned to class / quietly: sense-group pausing.",
+    "The principal of the school / announced the result: better pause than splitting principal / of the school.",
+    "Equal heavy stress on every word sounds unnatural and obscures focus.",
+    "A pause before the final word can create emphasis, suspense or contrast depending context."
   ],
-  "teaching": [
-    "Word stress makes one syllable more prominent; incorrect stress can make familiar words difficult to recognise.",
-    "Sentence stress normally highlights important content words, while many grammatical words become less prominent in neutral speech.",
-    "Intonation is pitch movement across an utterance and can signal completion, uncertainty, attitude, contrast or question type.",
-    "Rhythm grows from patterns of stressed and unstressed syllables; natural speech is not produced with equal force on every word.",
-    "Meaning can change when contrastive stress moves: “I wanted the BLUE pen” corrects the colour, while “I WANTED the blue pen” corrects the action or intention."
-  ],
-  "workedExamples": [
-    "A neutral yes/no question often has rising intonation, while a completed statement commonly falls, though context can alter patterns.",
-    "Stress in PHOtograph shifts in phoTOGraphy, illustrating word-family stress change."
-  ],
-  "misconceptions": [
-    "shouting instead of stressing",
-    "assuming every question rises",
-    "equal stress on every word",
-    "ignoring meaning when practising rhythm"
-  ],
-  "guidedPractice": [
-    "Mark stress and intonation on ten utterances, then perform them with different intended meanings."
-  ],
-  "independentPractice": [
-    "Deliver a one-minute spoken passage assessed for intelligibility, stress, rhythm and purposeful intonation."
-  ],
-  "mastery": {
-    "criterion": "At least 80% overall, with accurate application on an unfamiliar task and correction of any major misconception before progression.",
-    "status": "DEEP_WHEN_PASSED"
-  },
-  "boardReady": true
+  "misconceptions":["stress means shouting","every question rises","every statement must fall regardless of context","equal stress on every word","pausing at random","rhythm means speed","word stress never changes in related words","intonation has no effect on attitude"],
+  "guidedPractice":["Mark primary stress in twelve multi-syllable words.","Compare stress in six word families.","Read one sentence with three different contrastive meanings.","Mark rise/fall/fall-rise on twelve utterances.","Practise list intonation.","Practise tag questions with rising and falling meanings.","Mark sense groups in a paragraph.","Read paragraph using planned pauses.","Identify content words likely to carry stress.","Reduce prominence on grammatical words while retaining clarity.","Record a45-second speech.","Replay and identify one stress, one pitch and one rhythm correction."],
+  "independentPractice":["Prepare a one-minute speech with stress markings.","Mark intonation arrows for key sentences.","Mark sense-group boundaries.","Record slow and natural versions.","Create six contrastive-stress examples.","Create six yes/no and six wh-question examples.","Perform five tag questions with two attitudes each.","Read a list naturally.","Analyse stress shift in five word families.","Explain meaning differences in four stress pairs.","Self-assess intelligibility rather than accent imitation.","Deliver a final revised one-minute speech."],
+  "mastery":{"criterion":"Learner uses word/sentence/contrastive stress, purposeful intonation, sense-group pausing and intelligible rhythm to convey intended meaning with at least85% accuracy.","status":"DEEP_WHEN_PASSED"},"boardReady":true
 },
 {
-  "topicId": "nerdc-jss3-english-grammatical-accuracy-1",
-  "classLevel": "JSS3",
-  "subject": "English Language",
-  "strand": "Grammatical Accuracy",
-  "topic": "Adverbials and Tenses",
-  "source": {
-    "authority": "NERDC",
-    "url": "https://nerdc.gov.ng/content_manager/jss/jss1-3_english_studies.pdf",
-    "page": 57
-  },
-  "objectives": [
-    "Identify and use adverbials of time, place, manner, reason and frequency",
-    "Select tense forms appropriate to time relationships and context",
-    "Maintain tense consistency while expressing sequence and duration"
+  "topicId":"nerdc-jss3-english-grammatical-accuracy-1",
+  "classLevel":"JSS3","subject":"English Language","strand":"Grammatical Accuracy","topic":"Adverbials and Tenses",
+  "source":{"authority":"NERDC","url":"https://nerdc.gov.ng/content_manager/jss/jss1-3_english_studies.pdf","page":57},
+  "objectives":["Identify and use adverbials of time, place, manner, reason and frequency","Select tense/aspect forms according to time relationships","Maintain tense consistency","Use perfect and progressive forms accurately in narrative and explanation"],
+  "prerequisites":["JSS2 adverbials/tenses","clauses","time expressions"],
+  "teaching":[
+    "AN ADVERBIAL can be a single word, phrase or clause that gives circumstance such as time, place, manner, reason, frequency, condition or purpose.",
+    "SIMPLE PRESENT often expresses habits, routines, general truths and stable situations.",
+    "PRESENT PROGRESSIVE highlights an activity happening around now or a temporary situation.",
+    "PRESENT PERFECT connects past action/state to present relevance; present perfect progressive emphasises continuing duration/activity.",
+    "SIMPLE PAST locates a completed event in a finished past time.",
+    "PAST PROGRESSIVE presents an event as ongoing around another past point/event.",
+    "PAST PERFECT marks an event completed before another past event.",
+    "FUTURE MEANING can use will, be going to, present progressive or simple present depending prediction, intention, arrangement or timetable.",
+    "TIME MARKERS guide interpretation but meaning matters more than mechanical matching.",
+    "NARRATIVE TENSE CONSISTENCY usually keeps main events in past, with past perfect for earlier background and present for general truths when needed.",
+    "ADVERBIAL POSITION can affect clarity/emphasis. Keep modifiers close to what they describe.",
+    "FRONTED ADVERBIALS can organise discourse: After the meeting, Because the road flooded, In the morning.",
+    "DANGLING MODIFIERS occur when an introductory phrase has no logical subject match.",
+    "FREQUENCY ADVERBIALS such as often, usually, rarely generally occupy conventional positions around the verb phrase.",
+    "REASON/PURPOSE CLAUSES use connectors such as because, since, so that and in order to.",
+    "PERMANENT METHOD: locate time relationship→choose tense/aspect→place adverbial clearly→check sequence and consistency."
   ],
-  "prerequisites": [
-    "JSS2 adverbials and tenses",
-    "clauses",
-    "time expressions"
+  "workedExamples":[
+    "She usually studies in the library after school: frequency + place + time.",
+    "I am staying with my aunt this week: present progressive for temporary current situation.",
+    "They have completed the project: present perfect links completed action to current relevance.",
+    "She has been studying for three hours: continuing duration to present.",
+    "We visited Kano last year: simple past with finished past time.",
+    "I was reading when the light went out: ongoing past interrupted by completed past event.",
+    "By the time we arrived, the match had started: past perfect marks earlier event.",
+    "I will call you tonight: future prediction/intention depending context.",
+    "We are meeting the principal tomorrow: present progressive for arranged future.",
+    "The bus leaves at6:30 tomorrow: simple present for timetable.",
+    "After the rain stopped, the children returned outside: fronted time adverbial.",
+    "Because the bridge was flooded, the trip was cancelled: reason adverbial clause.",
+    "She spoke carefully during the interview: manner + time/context.",
+    "He rarely arrives late: frequency adverbial in natural position.",
+    "Wrong: Walking to school, the rain soaked Tunde. Correct: Walking to school, Tunde was soaked by the rain.",
+    "Narrative: She opened the door, looked inside and froze because someone had entered earlier.",
+    "General truth inside past narrative: The teacher explained that water boils at100°C; universal truth may remain present.",
+    "Ambiguous: She almost drove the children to school every day. Position of almost changes intended meaning; place modifier carefully."
   ],
-  "teaching": [
-    "An adverbial is a word, phrase or clause that adds information about circumstances such as when, where, how, why or how often.",
-    "Tense and aspect work together: simple forms present events as wholes or habits; progressive forms foreground ongoing activity; perfect forms connect one time to another.",
-    "Time markers guide but do not mechanically determine tense; meaning and sequence matter.",
-    "Keep narrative time consistent unless there is a reason to shift, such as referring to an earlier event or a general truth.",
-    "Place adverbials where their meaning is clear and avoid dangling or ambiguous modification."
-  ],
-  "workedExamples": [
-    "“By the time we arrived, the match had started” uses past perfect for the earlier past event.",
-    "“She usually studies in the library after school” contains frequency, place and time adverbials."
-  ],
-  "misconceptions": [
-    "tense chosen only from one signal word",
-    "random tense switching",
-    "confusing adverb with adverbial",
-    "misplacing modifiers"
-  ],
-  "guidedPractice": [
-    "Complete a timeline exercise and expand simple clauses with different adverbial types."
-  ],
-  "independentPractice": [
-    "Edit a passage containing tense and adverbial errors, then write a coherent 150-word narrative using varied forms."
-  ],
-  "mastery": {
-    "criterion": "At least 80% overall, with accurate application on an unfamiliar task and correction of any major misconception before progression.",
-    "status": "DEEP_WHEN_PASSED"
-  },
-  "boardReady": true
+  "misconceptions":["choosing tense from one signal word only","random tense switching","confusing adverb with adverbial","using present perfect with finished past time carelessly","forgetting earlier-past function of past perfect","misplacing frequency adverbs","dangling modifiers","treating every future sentence as will","ignoring difference between temporary and habitual action"],
+  "guidedPractice":["Classify fifteen adverbials by function.","Choose correct tense in twelve contextual sentences.","Build timelines for past/past-perfect contrasts.","Contrast simple vs progressive forms.","Contrast present perfect vs simple past.","Rewrite a paragraph for tense consistency.","Add time/place/manner adverbials to plain clauses.","Create reason/purpose adverbial clauses.","Correct five dangling modifiers.","Place frequency adverbs correctly.","Choose suitable future forms in six contexts.","Write a coherent narrative paragraph using at least four tense/aspect forms correctly."],
+  "independentPractice":["Edit an unseen passage with fifteen tense/adverbial errors.","Write a150-word narrative using past, past progressive and past perfect.","Write a120-word routine description using simple present and frequency adverbials.","Write a temporary-situation paragraph using present progressive.","Write five present-perfect examples with current relevance.","Write five future contexts using different suitable forms.","Correct ten modifier-placement errors.","Create ten adverbial phrases/clauses of different types.","Explain tense choice in ten sentences.","Compare two versions where tense changes meaning.","Revise your narrative for consistency.","Complete a mixed BECE-style grammar exercise."],
+  "mastery":{"criterion":"Learner selects and explains tense/aspect according to time relationships, uses varied adverbials clearly, maintains consistency and corrects modifier errors with at least85% accuracy.","status":"DEEP_WHEN_PASSED"},"boardReady":true
 },
 {
-  "topicId": "nerdc-jss3-english-grammatical-accuracy-2",
-  "classLevel": "JSS3",
-  "subject": "English Language",
-  "strand": "Grammatical Accuracy",
-  "topic": "Adverbs, Conjunctions and Prepositions",
-  "source": {
-    "authority": "NERDC",
-    "url": "https://nerdc.gov.ng/content_manager/jss/jss1-3_english_studies.pdf",
-    "page": 58
-  },
-  "objectives": [
-    "Identify adverbs, conjunctions and prepositions by grammatical function",
-    "Use different conjunctions to express logical relationships",
-    "Choose appropriate prepositions and adverb forms in context"
+  "topicId":"nerdc-jss3-english-grammatical-accuracy-2",
+  "classLevel":"JSS3","subject":"English Language","strand":"Grammatical Accuracy","topic":"Adverbs, Conjunctions and Prepositions",
+  "source":{"authority":"NERDC","url":"https://nerdc.gov.ng/content_manager/jss/jss1-3_english_studies.pdf","page":58},
+  "objectives":["Identify adverbs, conjunctions and prepositions by function","Use connectors to express precise logical relationships","Choose appropriate prepositions and collocations","Avoid common double-connector and modifier errors"],
+  "prerequisites":["JSS2 parts of speech","clauses","sentence relationships"],
+  "teaching":[
+    "ADVERBS modify verbs, adjectives, other adverbs or sometimes whole clauses. Identify what the adverb changes.",
+    "ADVERB TYPES include manner, time, place, frequency, degree, focusing and comment/viewpoint.",
+    "NOT EVERY -LY WORD IS AN ADVERB: friendly, lovely and costly can be adjectives; fast can function as adjective or adverb.",
+    "ADVERB POSITION can alter meaning: Only Ada answered differs from Ada only answered.",
+    "COORDINATING CONJUNCTIONS join equal units: and, but, or, so, yet.",
+    "SUBORDINATING CONJUNCTIONS introduce dependent clauses expressing time, reason, condition, concession, purpose, result and comparison.",
+    "CORRELATIVE CONJUNCTIONS come in pairs: either…or, neither…nor, both…and, not only…but also.",
+    "CONNECTOR CHOICE must match logic. because gives reason; although concession; if condition; unless negative condition; so that purpose.",
+    "DOUBLE CONNECTORS such as although…but or because…so are generally avoided in standard formal structures.",
+    "PREPOSITIONS express relationships of time, place, movement, means, cause and abstract association.",
+    "TIME: at for precise times, on for days/dates, in for months/years/longer periods in common uses.",
+    "PLACE: at, in and on differ by point, enclosed area and surface/contextual convention.",
+    "MOVEMENT: into, onto, through, across, towards and along carry different spatial meanings.",
+    "PREPOSITIONAL COLLOCATIONS are conventional: interested in, responsible for, depend on, afraid of.",
+    "PREPOSITION VS CONJUNCTION depends on what follows: after lunch (preposition+noun), after we ate (conjunction+clause).",
+    "PERMANENT METHOD: identify grammatical job→identify relationship→choose form→check idiomatic/collocational fit."
   ],
-  "prerequisites": [
-    "JSS2 parts of speech",
-    "clauses",
-    "sentence relationships"
+  "workedExamples":[
+    "She spoke remarkably softly: softly modifies spoke; remarkably modifies softly.",
+    "Fortunately, no one was injured: fortunately comments on whole clause.",
+    "He almost finished the work can mean he did not quite finish; placement matters.",
+    "She is friendly: friendly is adjective despite -ly.",
+    "He runs fast: fast is adverb without -ly.",
+    "Amina studied and passed: and coordinates equal verb ideas.",
+    "He was tired but continued: but marks contrast.",
+    "We stayed inside because it rained: reason.",
+    "Although it rained, they played: concession.",
+    "If you revise, you may improve: condition.",
+    "Unless you leave now, you will be late: negative condition.",
+    "Either Musa or Tunde will present: correlative alternative.",
+    "Both reading and writing matter: paired coordination.",
+    "We met at6p.m.; on Monday; in October: common time-preposition contrasts.",
+    "The bag is on the table, the books are in the bag, the guard waits at the gate.",
+    "They walked through the gate but across the field: different movement paths.",
+    "She is interested in science; he is responsible for equipment: collocation.",
+    "After lunch, we left: preposition. After we ate, we left: conjunction."
   ],
-  "teaching": [
-    "Adverbs can modify verbs, adjectives, other adverbs or whole clauses; identify function rather than assuming every -ly word is an adverb.",
-    "Coordinating conjunctions join units of equal grammatical status; subordinating conjunctions introduce dependent clauses and show relationships such as cause, time, condition or contrast.",
-    "Prepositions express relationships involving place, time, direction and other abstract connections, and many choices are conventional collocations.",
-    "Choose connectors according to logic: because gives reason, although contrast, if condition, therefore result in appropriate structures.",
-    "Proofread for unnecessary duplication such as “although...but” in standard constructions."
-  ],
-  "workedExamples": [
-    "“She spoke remarkably softly”: softly modifies spoke; remarkably modifies softly.",
-    "“Although it rained, we played” shows concession; “We stayed inside because it rained” shows cause."
-  ],
-  "misconceptions": [
-    "every -ly word is an adverb",
-    "using conjunctions without logical fit",
-    "literal translation of prepositions",
-    "double connectors"
-  ],
-  "guidedPractice": [
-    "Label functions in a passage and combine sentence pairs using specified relationships."
-  ],
-  "independentPractice": [
-    "Write a short explanatory passage using at least six accurate conjunction/preposition patterns and annotate them."
-  ],
-  "mastery": {
-    "criterion": "At least 80% overall, with accurate application on an unfamiliar task and correction of any major misconception before progression.",
-    "status": "DEEP_WHEN_PASSED"
-  },
-  "boardReady": true
+  "misconceptions":["every -ly word is adverb","all adverbs end -ly","using conjunctions without logical fit","although…but double marking","because…so double marking","literal translation of prepositions","wrong time/place prepositions","misplacing only/almost","mismatched correlative pairs","ignoring collocations"],
+  "guidedPractice":["Classify twelve adverbs by type/function.","Identify what each adverb modifies.","Move only/almost and discuss meaning changes.","Join sentence pairs with coordinating conjunctions.","Join clauses using because/although/if/unless/so that.","Complete correlative pairs.","Choose at/on/in in time contexts.","Choose at/in/on in place contexts.","Distinguish movement prepositions.","Complete common prepositional collocations.","Distinguish after/before/since as preposition vs conjunction.","Edit a paragraph containing double connectors and preposition errors."],
+  "independentPractice":["Analyse an unseen paragraph for twenty targets.","Classify twelve adverbs by function.","Rewrite six sentences for clearer adverb placement.","Combine twelve clause pairs with suitable conjunctions.","Write six complex sentences showing reason,condition,concession,purpose,time,result.","Complete eight correlative constructions.","Fill fifteen preposition gaps with justification.","Correct ten collocation errors.","Distinguish preposition vs conjunction in ten examples.","Edit a paragraph with twelve mixed errors.","Write a coherent paragraph containing varied adverbs/connectors/prepositions.","Complete a mixed BECE-style objective exercise."],
+  "mastery":{"criterion":"Learner identifies and uses adverbs, conjunctions and prepositions by grammatical function and logical relationship, including collocations and ambiguous forms, with at least85% accuracy.","status":"DEEP_WHEN_PASSED"},"boardReady":true
 },
 {
-  "topicId": "nerdc-jss3-english-grammatical-accuracy-3",
-  "classLevel": "JSS3",
-  "subject": "English Language",
-  "strand": "Grammatical Accuracy",
-  "topic": "Active and Passive verbs",
-  "source": {
-    "authority": "NERDC",
-    "url": "https://nerdc.gov.ng/content_manager/jss/jss1-3_english_studies.pdf",
-    "page": 59
-  },
-  "objectives": [
-    "Transform sentences between active and passive voice accurately",
-    "Preserve tense and core meaning during transformation",
-    "Choose active or passive voice according to communicative purpose"
+  "topicId":"nerdc-jss3-english-grammatical-accuracy-3",
+  "classLevel":"JSS3","subject":"English Language","strand":"Grammatical Accuracy","topic":"Active and Passive verbs",
+  "source":{"authority":"NERDC","url":"https://nerdc.gov.ng/content_manager/jss/jss1-3_english_studies.pdf","page":59},
+  "objectives":["Transform active and passive sentences accurately","Preserve tense/aspect/modal meaning","Recognise when passive is impossible or unnatural","Choose voice according to communicative focus"],
+  "prerequisites":["JSS2 active/passive voice","verb forms","objects"],
+  "teaching":[
+    "ACTIVE VOICE usually makes the doer the grammatical subject. PASSIVE VOICE makes the receiver/result more prominent.",
+    "PASSIVE FORM = suitable form of BE + PAST PARTICIPLE. The form of be carries the tense/aspect information.",
+    "SIMPLE PRESENT: writes→is written; SIMPLE PAST: wrote→was written.",
+    "PRESENT PROGRESSIVE: is writing→is being written; PAST PROGRESSIVE: was writing→was being written.",
+    "PRESENT PERFECT: has written→has been written; PAST PERFECT: had written→had been written.",
+    "FUTURE/MODAL: will write→will be written; can solve→can be solved; must complete→must be completed.",
+    "THE OBJECT of active sentence usually becomes subject of passive sentence.",
+    "THE AGENT may be introduced with by when important; omit it when unknown, obvious or deliberately backgrounded.",
+    "INTRANSITIVE VERBS that take no object do not normally form straightforward passives: sleep, arrive, happen.",
+    "TWO-OBJECT VERBS may permit more than one passive: They gave Ada a prize→Ada was given a prize / A prize was given to Ada.",
+    "QUESTIONS retain question structure in passive: Did they repair the road?→Was the road repaired?",
+    "NEGATIVES retain negation: They did not finish the work→The work was not finished.",
+    "VOICE CHOICE changes focus, not basic factual content.",
+    "SCIENCE/REPORTING often uses passive when process/result matters more than agent; narrative often prefers active for directness.",
+    "PERMANENT METHOD: identify subject/verb/object→preserve tense→promote object→choose be form→past participle→decide whether agent is needed."
   ],
-  "prerequisites": [
-    "JSS2 active/passive voice",
-    "verb forms",
-    "objects"
+  "workedExamples":[
+    "The committee approves the plan→The plan is approved by the committee.",
+    "The committee approved the plan→The plan was approved by the committee.",
+    "They are repairing the road→The road is being repaired.",
+    "They were repairing the road→The road was being repaired.",
+    "She has completed the form→The form has been completed.",
+    "They had closed the gate→The gate had been closed.",
+    "They will announce the result→The result will be announced.",
+    "Students can solve the problem→The problem can be solved by students.",
+    "You must submit the form today→The form must be submitted today.",
+    "Someone stole my bag→My bag was stolen; agent can be omitted because unknown.",
+    "The chef cooked the meal→The meal was cooked by the chef; agent may be relevant.",
+    "They gave Ada a prize→Ada was given a prize.",
+    "They gave Ada a prize→A prize was given to Ada.",
+    "Did they repair the bridge?→Was the bridge repaired?",
+    "They did not complete the work→The work was not completed.",
+    "The baby slept soundly has no direct object, so no normal passive transformation.",
+    "The accident happened yesterday cannot be passivised straightforwardly.",
+    "Report focus: Samples were tested in the laboratory backgrounds the tester and foregrounds procedure."
   ],
-  "teaching": [
-    "In active voice the grammatical subject normally performs the action; in passive voice the receiver becomes subject.",
-    "Form the passive with an appropriate form of be plus the past participle, preserving the original tense or aspect.",
-    "The agent may be included with by when relevant, but it can be omitted when unknown, obvious or deliberately backgrounded.",
-    "Only verbs that can take an object normally form straightforward passives.",
-    "Voice is a choice of focus, not a measure of correctness: active is often direct; passive is useful when process or receiver matters more."
-  ],
-  "workedExamples": [
-    "“The committee approved the plan” → “The plan was approved by the committee.”",
-    "“They are repairing the road” → “The road is being repaired.”"
-  ],
-  "misconceptions": [
-    "changing tense during transformation",
-    "using past tense instead of past participle",
-    "forcing intransitive verbs into passive",
-    "thinking passive always means past tense"
-  ],
-  "guidedPractice": [
-    "Transform twelve sentences across simple, progressive, perfect and modal constructions."
-  ],
-  "independentPractice": [
-    "Rewrite a short report twice, once favouring active and once passive voice, and explain two purposeful choices."
-  ],
-  "mastery": {
-    "criterion": "At least 80% overall, with accurate application on an unfamiliar task and correction of any major misconception before progression.",
-    "status": "DEEP_WHEN_PASSED"
-  },
-  "boardReady": true
+  "misconceptions":["changing tense","using simple past instead of past participle","passive always means past","forcing intransitive verbs into passive","keeping object as object after passivisation","adding by-agent when unnecessary","forgetting being/been in progressive/perfect forms","breaking modal structure","ignoring question/negative syntax"],
+  "guidedPractice":["Transform five simple-present/past sentences.","Transform four progressive sentences.","Transform four perfect sentences.","Transform four future/modal sentences.","Transform two questions.","Transform two negatives.","Create both passive options for a two-object verb.","Identify four sentences that cannot form normal passive.","Decide whether agent should be included in six examples.","Rewrite a process paragraph using appropriate passive voice.","Rewrite a narrative paragraph to make active voice more direct.","Explain focus difference in three active/passive pairs."],
+  "independentPractice":["Transform twenty mixed-tense sentences.","Correct ten faulty passives.","Classify verbs as transitive/intransitive in context.","Create five modal passives.","Create five perfect/progressive passives.","Transform five questions.","Transform five negatives.","Write a science procedure using passive appropriately.","Write a short news paragraph using active/passive deliberately.","Explain two cases where agent omission is useful.","Compare two versions of same paragraph for focus.","Complete a BECE-style transformation exercise."],
+  "mastery":{"criterion":"Learner transforms and selects active/passive forms accurately across simple, progressive, perfect, modal, negative and interrogative structures while preserving meaning and recognising non-passivisable verbs at at least85%.","status":"DEEP_WHEN_PASSED"},"boardReady":true
 },
 {
-  "topicId": "nerdc-jss3-english-grammatical-accuracy-4",
-  "classLevel": "JSS3",
-  "subject": "English Language",
-  "strand": "Grammatical Accuracy",
-  "topic": "Modal forms",
-  "source": {
-    "authority": "NERDC",
-    "url": "https://nerdc.gov.ng/content_manager/jss/jss1-3_english_studies.pdf",
-    "page": 60
-  },
-  "objectives": [
-    "Identify common modal auxiliaries and explain meanings they express",
-    "Use modals appropriately for ability, permission, possibility, obligation, advice and prediction",
-    "Report modal statements accurately where forms change in indirect speech"
+  "topicId":"nerdc-jss3-english-grammatical-accuracy-4",
+  "classLevel":"JSS3","subject":"English Language","strand":"Grammatical Accuracy","topic":"Modal forms",
+  "source":{"authority":"NERDC","url":"https://nerdc.gov.ng/content_manager/jss/jss1-3_english_studies.pdf","page":60},
+  "objectives":["Identify common modal auxiliaries and meanings","Use modals for ability, permission, possibility, obligation, advice, deduction and prediction","Distinguish degrees of certainty/politeness","Report modal statements accurately where viewpoint changes"],
+  "prerequisites":["auxiliary verbs","tense","reported speech"],
+  "teaching":[
+    "MODAL AUXILIARIES include can, could, may, might, must, shall, should, will, would and others such as ought to in school grammar.",
+    "MODALS are followed by the base form: should go, can speak, must finish—not should goes.",
+    "CAN commonly expresses present ability or informal permission; COULD can express past ability, possibility or more polite request.",
+    "MAY and MIGHT express possibility, with might often sounding less certain in many contexts. May can also express formal permission.",
+    "MUST expresses strong obligation or strong deduction depending context.",
+    "HAVE TO can express external necessity; MUST often foregrounds speaker-imposed or strong necessity, though real usage overlaps.",
+    "SHOULD/OUGHT TO commonly express advice, expectation or weaker obligation.",
+    "WILL can express prediction, willingness or habitual future-related meaning; WOULD can express polite request, hypothetical result or past habit.",
+    "SHALL may express suggestions/offers in questions such as Shall we begin? and formal future/obligation in limited contexts.",
+    "NEGATIVE MODALS differ in meaning. must not=prohibition; do not have to=no necessity. These are NOT the same.",
+    "MODAL PERFECT forms such as should have gone, might have missed and must have forgotten refer to past possibility, criticism, deduction or unrealised expectation.",
+    "DEGREES OF CERTAINTY matter: must be is stronger deduction than may/might be.",
+    "POLITENESS changes with form: Could you…? or Would you…? often sounds more polite than Can you…?",
+    "REPORTED SPEECH may shift can→could, may→might, will→would when viewpoint/time changes, but backshift is not always mechanical.",
+    "CURRENT OR STILL-TRUE MODAL MEANING can sometimes remain unchanged in reporting.",
+    "PERMANENT METHOD: identify intended meaning→choose modal strength/register→use base verb→check negative meaning→preserve viewpoint in reporting."
   ],
-  "prerequisites": [
-    "JSS2 direct/indirect speech",
-    "auxiliary verbs",
-    "tense"
+  "workedExamples":[
+    "She can swim: present ability.",
+    "Can I leave early? informal permission/request.",
+    "Could you open the window? polite request.",
+    "When he was ten, he could swim well: past general ability.",
+    "It may rain later: possibility.",
+    "It might rain later: possibility, often weaker.",
+    "You may enter now: formal permission.",
+    "You must wear a helmet: strong obligation.",
+    "She must be home; the lights are on: strong deduction.",
+    "You should rest: advice.",
+    "The train should arrive by6: expectation.",
+    "I will help you: willingness.",
+    "Would you help me? polite request.",
+    "If I had time, I would travel: hypothetical result.",
+    "You must not enter=prohibition.",
+    "You do not have to come=no necessity; attendance is optional.",
+    "He should have apologised: past criticism/unfulfilled expectation.",
+    "She might have missed the bus: past possibility.",
+    "He must have forgotten: strong past deduction.",
+    "Direct: Ada said, “I may come tomorrow.” Reported: Ada said she might come the next day, if viewpoint shifts."
   ],
-  "teaching": [
-    "Modal auxiliaries such as can, could, may, might, must, shall, should, will and would add meanings including possibility, ability, permission, obligation and prediction.",
-    "Meaning depends on context: “can” may express ability or informal permission; “must” can express strong obligation or confident deduction.",
-    "Modals are followed by the base form of the main verb in ordinary constructions: “should go”, not “should goes”.",
-    "In reported speech some modal forms may shift with viewpoint and time, for example can → could and may → might when appropriate.",
-    "Do not apply backshift mechanically when the meaning remains current or the reporting context does not require it."
-  ],
-  "workedExamples": [
-    "“You must wear a helmet” expresses obligation; “She must be home” can express strong deduction.",
-    "Direct: Ada said, “I may come tomorrow.” Reported: Ada said that she might come the following day."
-  ],
-  "misconceptions": [
-    "adding -s after a modal",
-    "treating all modals as interchangeable",
-    "confusing obligation with probability",
-    "automatic backshift without context"
-  ],
-  "guidedPractice": [
-    "Choose and justify modals in ten situations, then convert selected direct statements to reported speech."
-  ],
-  "independentPractice": [
-    "Write a dialogue and reported version demonstrating at least six modal meanings accurately."
-  ],
-  "mastery": {
-    "criterion": "At least 80% overall, with accurate application on an unfamiliar task and correction of any major misconception before progression.",
-    "status": "DEEP_WHEN_PASSED"
-  },
-  "boardReady": true
+  "misconceptions":["modal + -s","must not means no necessity","can/could always same meaning","may/might identical in every context","must always obligation","backshifting every modal mechanically","ignoring politeness","using would in every past sentence","forgetting base verb after modal","confusing should have with should"],
+  "guidedPractice":["Classify modal meanings in fifteen sentences.","Choose between can/could in six contexts.","Choose may/might in six certainty contexts.","Distinguish must obligation vs deduction.","Contrast must not vs do not have to.","Use should/ought to for advice.","Use will/would for willingness/politeness/hypothesis.","Complete modal-perfect sentences.","Rank modal deductions from stronger to weaker.","Rewrite requests to change politeness level.","Convert six direct modal statements to reported speech.","Explain why backshift is optional/unnecessary in selected current-truth cases."],
+  "independentPractice":["Write three examples each of ability,permission,possibility,obligation,advice,deduction,prediction.","Correct fifteen faulty modal sentences.","Write five prohibitions and five no-necessity statements.","Create five polite requests with could/would.","Create five modal-perfect examples.","Interpret six ambiguous modal sentences from context.","Report ten direct statements containing modals.","Compare may/might/must in one evidence scenario.","Write a short dialogue using at least eight distinct modal meanings.","Rewrite dialogue in reported speech.","Complete a mixed BECE-style modal exercise.","Explain three cases where choosing a different modal changes strength or politeness."],
+  "mastery":{"criterion":"Learner selects modal forms by meaning, strength and register, distinguishes prohibition from lack of necessity, uses modal-perfect structures and reports modal statements accurately with at least85% success.","status":"DEEP_WHEN_PASSED"},"boardReady":true
 },
 {
   "topicId": "nerdc-jss3-english-literature-1",
