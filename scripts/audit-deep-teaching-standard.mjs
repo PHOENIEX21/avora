@@ -20,6 +20,9 @@ const checks=[
  ['simultaneous-equation type map exists',architecture.includes('Both equations must be multiplied')&&architecture.includes('Graphs')&&architecture.includes('Word problems')],
  ['Tutor board exposes topic types',client.includes('THE TYPES YOU MUST BE ABLE TO HANDLE')],
  ['Tutor runtime enforces no-jump contract without exposing author notes',client.includes('Terms first — no unexplained vocabulary')&&client.includes('Internal authoring/no-jump notes guide the runtime')],
+ ['authored lesson checkpoints remain visible',!client.includes("if(e.kind==='check')return false")&&client.includes('Authored curriculum checks are learner-facing checkpoints')],
+ ['source-backed maths rebuilds worked examples step by step',client.includes('WORKED EXAMPLE ${ei+1} · STEP ${si+1}')&&client.includes('WHY IT WORKS')&&client.includes('CHECK THE RESULT')],
+ ['every mapped subtopic exposes diverse examples',curriculumTutor.includes('teachingTypeExamples')&&client.includes('DIVERSE EXAMPLE')&&architecture.includes('minimumRepresentativeExamples:3')],
  ['source-backed factorisation foundation is wired to the master algebra topic',sourceRuntime.includes('FOIL may be mentioned only as a memory label')&&sourceRuntime.includes('AVORA must explain why x×x=x²')&&sourceRuntime.includes('Algebraic Expressions: expansion/simplification')],
 ];
 let failed=0;
