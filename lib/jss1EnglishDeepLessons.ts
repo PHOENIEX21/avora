@@ -79,34 +79,66 @@ export const jss1EnglishDeepLessons:DeepJss1EnglishLesson[]=[
       "Differentiate main ideas from supporting details"
     ],
     "prerequisites": [
-      "paragraph meaning",
-      "simple comprehension"
+      "understanding what a paragraph is",
+      "basic sentence comprehension",
+      "ability to identify who or what a paragraph is about"
     ],
     "teaching": [
-      "The main idea is the central message a paragraph or passage is communicating. Supporting ideas explain, prove, illustrate or develop that central message.",
-      "A topic is only what the paragraph is about; a main idea is what the writer says about that topic. “Road safety” is a topic, while “seat belts reduce serious injuries” is a main idea.",
-      "Look for repeated concepts, topic sentences, examples and explanations. Ask: if I could keep only one sentence or thought, which one would preserve the paragraph’s meaning?",
-      "Supporting details may be examples, reasons, facts, descriptions or consequences. Remove a detail mentally: if the central message still stands, it is likely supporting rather than main.",
-      "Some paragraphs place the main idea at the beginning, middle or end, while others imply it; learners must use the whole paragraph, not position alone."
+      "START WITH THE DIFFERENCE BETWEEN TOPIC AND MAIN IDEA. The topic is the general subject: usually a word or short phrase such as “road safety” or “school gardens”. The main idea is the most important complete thought the writer communicates about that topic. “Road safety” is only a topic; “wearing seat belts reduces serious injuries” is a main idea because it makes a complete claim.",
+      "A SUPPORTING IDEA develops the main idea. It may give a reason, fact, example, explanation, description, comparison, cause, consequence or evidence. Supporting ideas matter, but each one is narrower than the main idea.",
+      "HOW TO FIND THE MAIN IDEA. First ask, “What is this paragraph mostly about?” Then ask, “What is the writer saying about it?” Finally test your answer against all or most of the important sentences. A good main idea should cover the paragraph broadly without being so broad that it could fit almost any paragraph.",
+      "TOPIC SENTENCE AT THE BEGINNING. Some paragraphs announce the main idea first and then explain it. In this structure, the first sentence is a strong candidate, but it is still checked against the rest of the paragraph.",
+      "TOPIC SENTENCE AT THE END. Some paragraphs present examples or reasons first and state the main point at the end. Therefore the first sentence must never be chosen automatically.",
+      "MAIN IDEA IN THE MIDDLE. A writer may begin with background, state the main claim in the middle, then develop it. Position alone cannot decide the answer.",
+      "IMPLIED MAIN IDEA. Sometimes no single sentence states the complete main idea. The learner must combine the repeated or connected details into one accurate statement. This is not guessing; the statement must be supported by the details.",
+      "HOW TO TEST A SUPPORTING DETAIL. Ask whether removing the detail would destroy the whole message or merely remove one example/reason. If the central message still remains, the removed sentence is probably supporting detail.",
+      "DO NOT CHOOSE AN INTERESTING DETAIL JUST BECAUSE IT IS MEMORABLE. A statistic, name, unusual event or vivid description can attract attention while still being only evidence for a broader point.",
+      "MAIN IDEA OF A WHOLE PASSAGE. In a multi-paragraph passage, first identify the main idea of each paragraph. Then ask what larger idea connects those paragraph ideas. The overall main idea should cover the whole passage, not one section only.",
+      "USE EVIDENCE. When explaining your answer, point to the sentences, repeated ideas or examples that support the main idea. A strong response is MAIN IDEA + EVIDENCE, not only a label.",
+      "PERMANENT CHECK. A proposed main idea should pass three tests: it is a complete thought; it covers the important details; and it is neither too broad nor too narrow."
     ],
     "workedExamples": [
-      "Paragraph: “Trees cool streets, reduce erosion and provide shade. Communities should protect urban trees.” Main idea: communities benefit from and should protect trees; the listed benefits support it.",
-      "“Three buses left late because of heavy rain, a flooded junction and poor visibility.” Main idea: bad weather delayed the buses; the three conditions are supporting details."
+      "EXAMPLE 1 — TOPIC VS MAIN IDEA. Paragraph: “Many pupils cross a busy road on their way to school. The safest place to cross is at the pedestrian bridge because vehicles do not pass through it. Pupils should use the bridge even when it takes a little longer.” Topic: road crossing. Main idea: pupils should use the pedestrian bridge because it is safer. Supporting ideas: many pupils cross the road; using the bridge may take longer.",
+      "EXAMPLE 2 — MAIN IDEA FIRST. “Regular exercise keeps the body healthy. It strengthens the heart, helps control body weight and improves stamina.” The first sentence states the main idea: regular exercise keeps the body healthy. The remaining sentences explain ways exercise helps the body, so they are supporting details.",
+      "EXAMPLE 3 — MAIN IDEA LAST. “The classroom windows were broken. Several desks were damaged, and books were scattered on the floor after the storm. The school needed urgent repairs before lessons could continue.” The final sentence states the main idea: the school needed urgent repairs. The earlier damage details support it.",
+      "EXAMPLE 4 — IMPLIED MAIN IDEA. “Aisha checks the expiry date before buying packaged food. She washes fruits before eating them and keeps cooked food covered. She also washes her hands before meals.” No single sentence states the whole message. The details support the implied main idea: Aisha practises safe food hygiene.",
+      "EXAMPLE 5 — INTERESTING DETAIL IS NOT MAIN IDEA. “The new school library has 2,000 books, quiet reading tables and a digital catalogue. More importantly, pupils now spend more time reading because books are easier to find and borrow.” The figure 2,000 is memorable, but it is supporting detail. Main idea: the improved library encourages pupils to read more.",
+      "EXAMPLE 6 — TOO BROAD VS JUST RIGHT. Paragraph describes three ways trees help a town: shade, erosion control and cleaner air. “Trees are useful” is too broad. “Trees provide shade” is too narrow. “Trees improve the town environment in several important ways” is the best main idea because it covers all the details.",
+      "EXAMPLE 7 — CAUSE SUPPORTS MAIN IDEA. “Three buses arrived late because heavy rain flooded the junction and reduced visibility. Several passengers therefore reached work after opening time.” Main idea: heavy rain caused serious transport delays. Flooding, poor visibility and late arrival are supporting consequences/details.",
+      "EXAMPLE 8 — MULTI-PARAGRAPH PASSAGE. Paragraph 1 explains that plastic waste blocks drains. Paragraph 2 explains that blocked drains increase flooding. Paragraph 3 suggests proper disposal and recycling. Overall main idea: poor plastic-waste disposal contributes to flooding, so better waste management is necessary."
     ],
     "misconceptions": [
       "choosing the first sentence automatically",
       "confusing the broad topic with the writer’s main point",
-      "treating an interesting example as the main idea",
-      "selecting a detail too narrow to cover the paragraph"
+      "treating an interesting example, number or name as the main idea",
+      "selecting a detail too narrow to cover the paragraph",
+      "giving an answer so broad that it could fit many unrelated passages",
+      "assuming the main idea must be copied word-for-word from the paragraph",
+      "calling an unsupported guess an implied main idea",
+      "giving a main-idea answer without evidence when asked to justify it"
     ],
     "guidedPractice": [
-      "Read four short paragraphs; underline candidate topic sentences, state each main idea in your own words, then label two supporting details for each."
+      "Paragraph A: identify the topic, then write a complete-sentence main idea and two supporting details.",
+      "Paragraph B: the topic sentence appears at the end. Identify it and explain how the earlier details prepare for it.",
+      "Paragraph C: no topic sentence states the full idea. Write the implied main idea and cite two clues.",
+      "For four candidate statements about one paragraph, label each as TOO BROAD, TOO NARROW or JUST RIGHT, and explain your choice.",
+      "Given a paragraph with one vivid statistic, explain why the statistic is evidence rather than the main idea.",
+      "Read two paragraphs on the same general topic and state each paragraph’s main idea before writing one overall passage idea."
     ],
     "independentPractice": [
-      "Analyse a multi-paragraph passage, write one main idea per paragraph and one overall main idea, then justify every choice with textual evidence."
+      "Read a paragraph about school punctuality. State the topic, main idea and three supporting details.",
+      "Read a paragraph whose first sentence is background rather than the main idea. Identify the true main idea and justify it.",
+      "Read a paragraph whose main idea is implied. Write the best complete-sentence main idea and cite two clues.",
+      "From five statements, select the best main idea for a paragraph and explain why two distractors are too broad or too narrow.",
+      "Identify which of six sentences are supporting reasons, examples, facts or consequences.",
+      "Remove one supporting sentence from a paragraph and explain why the main idea still survives.",
+      "Rewrite a copied topic sentence in your own words without changing its meaning.",
+      "Analyse a three-paragraph passage and state the main idea of each paragraph.",
+      "Write one overall main idea that connects the three paragraph ideas without becoming too broad.",
+      "Write a short paragraph of your own with one clear main idea and at least three different kinds of support: a reason, an example and a fact."
     ],
     "mastery": {
-      "criterion": "At least 85% accuracy distinguishing main from supporting ideas across explicit and implied paragraphs.",
+      "criterion": "At least 85% accuracy across explicit, final-position, middle-position and implied main ideas, with correct distinction between topic, main idea and supporting detail and evidence-based justification.",
       "status": "DEEP_WHEN_PASSED"
     },
     "boardReady": true
