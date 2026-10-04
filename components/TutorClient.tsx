@@ -129,7 +129,12 @@ function buildEvents(unit:any,topic:string,subject:string,classLevel:string):Boa
  // and treat only authored checks[] as learner questions.
  if(Array.isArray(unit.structuredSteps)&&unit.structuredSteps.length){
   const sourceEvents:BoardEvent[]=[];
+  const replaceRawMathExamples=Boolean(mathPack?.workedExamples?.length);
   for(const moment of composeLearnerSourceMoments(unit.structuredSteps)){
+   // Mathematics worked examples are rebuilt below into problem → reasoning steps → why →
+   // verification → learner check. Keeping the raw one-line copy as well would duplicate the
+   // same example and recreate the "scrolling notes" problem.
+   if(replaceRawMathExamples&&moment.kind==='example')continue;
    const base:BoardEvent={
     stepId:moment.id,kind:moment.kind,label:moment.label,spoken:moment.spoken,
     question:moment.requiresLearnerResponse?moment.lines.slice(1).join(' '):undefined,
@@ -137,21 +142,81 @@ function buildEvents(unit:any,topic:string,subject:string,classLevel:string):Boa
     expectation:moment.requiresLearnerResponse?'Attempt the authored curriculum check. Show the reasoning or working the question asks for.':undefined,
     lines:moment.lines,boardAction:moment.boardAction,pauseAfterMs:moment.pauseAfterMs
    };
-   // Deep authored paragraphs are preserved in full, but presented as readable lesson slides.
-   // Checks and explicit visual-only moments remain single slides so their interaction is not fragmented.
    if(moment.requiresLearnerResponse||moment.kind==='check'||!moment.spoken||moment.spoken.length<=520){sourceEvents.push(base);continue}
    const chunks=lessonSlideChunks(moment.spoken);
    chunks.forEach((spoken,index)=>sourceEvents.push({...base,stepId:`${moment.id}-slide-${index+1}`,label:index===0?moment.label:`${moment.label} · CONTINUED`,spoken,lines:slideBoardLines(spoken),pauseAfterMs:index===chunks.length-1?moment.pauseAfterMs:500}));
   }
-  return sourceEvents.filter(e=>{
-   // Authored curriculum checks are learner-facing teaching checkpoints. They must remain
-   // visible inside the lesson; only the end-of-topic CBT is separated into Exercise mode.
+
+  const cleaned=sourceEvents.filter(e=>{
+   // Authored curriculum checks are learner-facing checkpoints. They stay inside the lesson.
+   // Only the separate end-of-topic CBT remains in Exercise mode.
    const learnerText=[e.label,e.spoken,...(e.lines||[])].join(' ').toLowerCase();
    if(/nerdc source provenance|curriculum page|source provenance/.test(learnerText))return false;
    if(/what this topic must cover before avora can call the teaching complete/.test(learnerText))return false;
    if(/learning objective|learning objectives|nerdc objective|nerdc objectives/.test(learnerText))return false;
    return true;
   });
+
+  const enriched:BoardEvent[]=[];
+  if(Array.isArray(unit.teachingTypes)&&unit.teachingTypes.length){
+   enriched.push({
+    stepId:'required-subtopics',
+    kind:'idea',
+    label:'SUBTOPICS YOU MUST REALLY LEARN',
+    spoken:'This topic contains several distinct skills. We will not treat one easy example as the whole lesson. Each form below must be understood and practised.',
+    lines:['Required subtopics / forms:',...unit.teachingTypes.map((x:string)=>`• ${x}`)]
+   });
+  }
+  enriched.push(...cleaned);
+
+  // Rebuild the authored Mathematics examples as genuine worked demonstrations. This is the
+  // same reviewed lesson content, but the learner sees the problem, each legal step, the reason,
+  // a verification and then a similar checkpoint instead of a compressed answer line.
+  if(mathPack?.workedExamples?.length){
+   mathPack.workedExamples.forEach((ex,ei)=>{
+    enriched.push({
+     stepId:`authored-rich-example-${ei+1}-problem`,
+     kind:'example',
+     label:`WORKED EXAMPLE ${ei+1} — UNDERSTAND THE QUESTION`,
+     spoken:`Let us work this carefully. ${ex.problem} Before calculating, identify what is given, what is required and which idea controls the method.`,
+     lines:[ex.title,ex.problem,'GIVEN → REQUIRED → METHOD']
+    });
+    ex.steps.forEach((step,si)=>enriched.push({
+     stepId:`authored-rich-example-${ei+1}-step-${si+1}`,
+     kind:'example',
+     label:`WORKED EXAMPLE ${ei+1} · STEP ${si+1}`,
+     spoken:`${step} ${exampleReasoningPrompt(step,si,subject)}`,
+     lines:[`Step ${si+1}`,step,'What rule allows this step? Why this operation?']
+    }));
+    enriched.push({
+     stepId:`authored-rich-example-${ei+1}-why`,
+     kind:'idea',
+     label:`WORKED EXAMPLE ${ei+1} — WHY IT WORKS`,
+     spoken:ex.why,
+     lines:['Why the method works',ex.why]
+    });
+    if(ex.verification)enriched.push({
+     stepId:`authored-rich-example-${ei+1}-verify`,
+     kind:'idea',
+     label:`WORKED EXAMPLE ${ei+1} — CHECK THE RESULT`,
+     spoken:ex.verification,
+     lines:['Verification',ex.verification]
+    });
+    enriched.push({
+     stepId:`authored-rich-example-${ei+1}-check`,
+     kind:'check',
+     label:`NOW YOU TRY — EXAMPLE ${ei+1}`,
+     spoken:`Now attempt this related question before moving on: ${ex.check}`,
+     question:ex.check,
+     expectation:'Show the working and explain the rule or relationship you used.',
+     lines:['Your turn',ex.check],
+     boardAction:'ASK',
+     pauseAfterMs:0
+    });
+   });
+  }
+
+  return enriched;
  }
  events.push({kind:'intro',label:'WHY THIS MATTERS',spoken:unit.why||`We are going to understand ${unit.title}, not just memorize a rule.`,lines:[unit.title,unit.why||`This is a required part of ${topic}.`]});
  events.push({kind:'idea',label:'WHAT YOU WILL UNDERSTAND',spoken:`By the end of this section, you should be able to explain the idea, apply it and justify your reasoning.`,lines:['By the end, you should be able to:',...depth.outcomes.map((x:string)=>`• ${x}`)]});
