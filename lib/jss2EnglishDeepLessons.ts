@@ -273,153 +273,40 @@ export const jss2EnglishDeepLessons:DeepJss2EnglishLesson[]=[
     "boardReady": true
   },
   {
-    "topicId": "nerdc-jss2-english-reading-4",
-    "classLevel": "JSS2",
-    "subject": "English Language",
-    "strand": "Reading",
-    "topic": "Reading for speed",
-    "source": {
-      "authority": "NERDC",
-      "url": "https://nerdc.gov.ng/content_manager/jss/jss1-3_english_studies.pdf",
-      "page": 28
-    },
-    "objectives": [
-      "Read at an appropriate speed for purpose and text difficulty",
-      "Use surveying, skimming and scanning effectively",
-      "Maintain comprehension while reducing unnecessary regressions and word-by-word reading"
-    ],
-    "prerequisites": [
-      "fluent sentence reading",
-      "main idea recognition"
-    ],
-    "teaching": [
-      "Reading speed is useful only when comprehension remains adequate. The goal is flexible speed: slow down for difficult ideas and move faster through familiar or less important material.",
-      "Surveying gives a quick overview from titles, headings and layout. Skimming seeks general meaning; scanning searches for a specific name, date, figure or fact.",
-      "Phrase reading groups meaningful words instead of processing every word separately. This increases eye span and supports fluency.",
-      "Repeatedly going backward without reason slows reading. Regress only when meaning genuinely breaks down.",
-      "Measure both time and comprehension. A faster time with poor answers is not progress."
-    ],
-    "workedExamples": [
-      "To find the departure time on a timetable, scan for the destination and time rather than read every entry.",
-      "To preview a newspaper article before deciding whether to study it closely, skim the headline, first paragraph and topic sentences."
-    ],
-    "misconceptions": [
-      "equating speed with rushing",
-      "subvocalisation treated as a moral failure rather than a fluency habit",
-      "scanning when full understanding is required",
-      "ignoring comprehension scores"
-    ],
-    "guidedPractice": [
-      "Time a 300-word passage, answer five questions, then repeat with phrase-reading and compare speed plus accuracy."
-    ],
-    "independentPractice": [
-      "Complete three tasks requiring survey, skim and scan; record which technique was appropriate and why."
-    ],
-    "mastery": {
-      "criterion": "At least 80% overall, with accurate application on an unfamiliar task and correction of any major misconception before progression.",
-      "status": "DEEP_WHEN_PASSED"
-    },
-    "boardReady": true
+    "topicId":"nerdc-jss2-english-reading-4","classLevel":"JSS2","subject":"English Language","strand":"Reading","topic":"Reading for speed",
+    "source":{"authority":"NERDC","url":"https://nerdc.gov.ng/content_manager/jss/jss1-3_english_studies.pdf","page":28},
+    "objectives":["Read at an appropriate speed for purpose and text difficulty","Use surveying, skimming and scanning effectively","Maintain comprehension while reducing unnecessary regressions and word-by-word reading"],
+    "prerequisites":["fluent sentence reading","main idea recognition"],
+    "teaching":["READING SPEED means flexible efficiency, not rushing. Change speed according to purpose, difficulty and required accuracy.","SURVEY title, headings, pictures, captions and layout before close reading.","SKIMMING seeks general meaning through headline/opening/topic sentences/repeated words/conclusion.","SCANNING searches for a specific name, date, figure, price or fact using visual cues.","INTENSIVE READING is slower because the goal is detailed understanding or inference.","PHRASE READING groups meaningful words rather than processing every word separately.","REGRESSION is useful only when meaning breaks; unnecessary backward movement reduces fluency.","PURPOSE FIRST: overview, one fact, detailed explanation or evidence? Technique follows purpose.","TEXT TYPE matters: timetable→scan; overview article→skim; difficult instructions→intensive.","KEYWORD SEARCH guides scanning to relevant columns or words.","COMPREHENSION must remain strong; time alone is not progress.","WPM=words read÷minutes, but pair it with comprehension score.","Do not stop for every unfamiliar word when broad meaning remains clear.","EXAM STRATEGY: survey questions/structure, scan for targets, then read relevant parts intensively.","PERMANENT RULE: use the fastest method that still achieves required understanding."],
+    "workedExamples":["Timetable: scan destination/time instead of every row.","News article: skim headline, first paragraph, topic sentences, ending.","Textbook chapter: survey headings/diagrams before study.","Directory/list: scan for one surname.","Story overview: skim key events, then read closely for theme.","Science procedure requires intensive reading.","Phrase reading: “After the heavy rainfall / the narrow road / became difficult to use.”","Repeatedly rereading an easy sentence without meaning loss is unnecessary regression.","Rereading after a contrast marker such as although can be useful.","300 words in2min=150wpm; with4/5 comprehension this is a useful baseline.","300 words in1min with1/5 comprehension is not improvement.","Question asks year bridge built: scan for four-digit years, then read surrounding sentence."],
+    "misconceptions":["speed means rushing","one technique fits all texts","scanning gives full understanding","skimming is random skipping","all regression is bad","wpm alone measures quality","stopping at every unknown word","ignoring comprehension"],
+    "guidedPractice":["Survey a page and predict three sections.","Skim500 words and state main idea.","Scan timetable for six facts.","Scan price list for four figures.","Read paragraph in phrase groups.","Time300 words and answer five questions.","Repeat with phrase reading and compare.","Choose survey/skim/scan/intensive for eight tasks.","Mark useful vs unnecessary rereading.","Calculate wpm for two attempts.","Use exam questions to locate sections needing close reading.","Explain why faster reading with poor comprehension fails."],
+    "independentPractice":["Survey an unfamiliar textbook page and write outline.","Skim article and state main idea.","Scan advert for date/venue/price/contact.","Scan timetable for route/time.","Read400-word passage under timing.","Answer questions and calculate accuracy.","Repeat with phrase reading.","Compare speed/accuracy.","Classify ten tasks by best technique.","Explain when intensive reading is necessary.","Rewrite word-by-word sentence into phrase groups.","Set a personal speed-comprehension target based on evidence."],
+    "mastery":{"criterion":"Learner selects surveying, skimming, scanning or intensive reading appropriately and improves efficiency while maintaining at least80% comprehension.","status":"DEEP_WHEN_PASSED"},"boardReady":true
   },
   {
-    "topicId": "nerdc-jss2-english-reading-5",
-    "classLevel": "JSS2",
-    "subject": "English Language",
-    "strand": "Reading",
-    "topic": "Reading for summary",
-    "source": {
-      "authority": "NERDC",
-      "url": "https://nerdc.gov.ng/content_manager/jss/jss1-3_english_studies.pdf",
-      "page": 29
-    },
-    "objectives": [
-      "Identify topic sentences and key ideas in paragraphs",
-      "Recognise words or expressions that redirect attention to a main point",
-      "Restate key ideas concisely in the learner’s own words"
-    ],
-    "prerequisites": [
-      "main/supporting ideas",
-      "paragraph structure",
-      "paraphrasing"
-    ],
-    "teaching": [
-      "Summary reading removes repetition, examples and minor details while preserving the writer’s essential meaning.",
-      "First identify each paragraph’s topic sentence or implied key idea. Then combine related ideas across paragraphs.",
-      "Signal words such as however, therefore, most importantly, in contrast and in conclusion may redirect attention to a central point or relationship.",
-      "A summary should normally be shorter and reworded. Copying whole sentences may show selection but not genuine summarising skill.",
-      "Check coverage and distortion: every major idea should appear, and no new opinion should be introduced."
-    ],
-    "workedExamples": [
-      "Paragraphs on unemployment give causes, effects and solutions. A strong summary keeps those three ideas and removes repeated examples.",
-      "“Many students walk, some cycle, and a few use buses; therefore transport planning must consider several modes.” The summary preserves the transport diversity and planning implication."
-    ],
-    "misconceptions": [
-      "copying topic sentences word-for-word",
-      "including every example",
-      "adding personal opinion",
-      "omitting a major paragraph idea"
-    ],
-    "guidedPractice": [
-      "Reduce a five-paragraph passage to five key points, then to a coherent 80-word summary."
-    ],
-    "independentPractice": [
-      "Summarise two passages independently and self-check against a checklist for coverage, brevity, own words and accuracy."
-    ],
-    "mastery": {
-      "criterion": "At least 80% overall, with accurate application on an unfamiliar task and correction of any major misconception before progression.",
-      "status": "DEEP_WHEN_PASSED"
-    },
-    "boardReady": true
+    "topicId":"nerdc-jss2-english-reading-5","classLevel":"JSS2","subject":"English Language","strand":"Reading","topic":"Reading for summary",
+    "source":{"authority":"NERDC","url":"https://nerdc.gov.ng/content_manager/jss/jss1-3_english_studies.pdf","page":29},
+    "objectives":["Identify topic sentences and key ideas in paragraphs","Recognise words or expressions that redirect attention to a main point","Restate key ideas concisely in the learner’s own words"],
+    "prerequisites":["main/supporting ideas","paragraph structure","paraphrasing"],
+    "teaching":["A SUMMARY preserves essential meaning in fewer words.","Read for whole meaning before shortening.","Identify main idea of each paragraph.","Separate essential ideas from examples/repetition.","Group related details under broader points.","Paraphrase in your own wording without changing meaning.","Signal words show cause, contrast, result and emphasis.","Preserve relationships such as cause-effect or comparison.","Do not add personal opinion.","Remove examples unless essential.","Remove repeated statements.","Connect points coherently unless task asks for notes.","Respect word limit by planning and editing.","Check coverage: every major idea appears.","Check distortion: no idea reversed/exaggerated.","Permanent method: understand→select→group→paraphrase→connect→check."],
+    "workedExamples":["Flooding damages roads, homes, farms→summary: flooding damages infrastructure/property.","Three repeated exercise-health sentences→state once.","Blocked drains prevent flow, therefore streets flood→preserve cause-effect.","Private cars convenient; however buses carry more→retain contrast.","Programme reduced absenteeism→Attendance improved after programme.","Changing only one word in copied sentence is weak paraphrase.","Solar/wind/hydro examples can compress to several forms of renewable energy.","A central statistic may remain if it carries the main claim.","Causes/effects/solutions passage summary must cover all three.","120-word notes can reduce to60 by combining repeated causes.","Adding “This is terrible” introduces opinion.","Use because/however/therefore only where source relationships support them."],
+    "misconceptions":["copying whole topic sentences","including every example","adding opinion","omitting a major idea","changing cause/effect","writing fragments","exceeding limit through repetition","paraphrasing so loosely meaning changes"],
+    "guidedPractice":["Underline main idea in five paragraphs.","Cross out examples/repetition.","Combine four details into one general sentence.","Paraphrase six sentences.","Identify signal words and relationships.","Reduce one paragraph to one sentence.","Reduce five paragraphs to five points.","Turn points into80-word summary.","Edit a summary containing opinion/copied sentences.","Compare two summaries and choose better.","Check word limit.","Use coverage checklist to find missing idea."],
+    "independentPractice":["Summarise unseen three-paragraph passage in70 words.","Summarise cause-effect passage in60 words.","Summarise compare-contrast passage.","Write five key points before prose summary.","Paraphrase ten selected sentences.","Remove nonessential examples and justify.","Identify when a statistic is essential.","Correct a distorted summary.","Reduce100-word draft to70 without losing major idea.","Self-check coverage/brevity/own words/accuracy.","Compare summary to source for accidental opinion.","Write final revised summary."],
+    "mastery":{"criterion":"Learner identifies major ideas, removes supporting detail appropriately, paraphrases accurately and produces coherent summaries within limits with at least85% content accuracy.","status":"DEEP_WHEN_PASSED"},"boardReady":true
   },
   {
-    "topicId": "nerdc-jss2-english-writing-1",
-    "classLevel": "JSS2",
-    "subject": "English Language",
-    "strand": "Writing",
-    "topic": "Writing an outline",
-    "source": {
-      "authority": "NERDC",
-      "url": "https://nerdc.gov.ng/content_manager/jss/jss1-3_english_studies.pdf",
-      "page": 30
-    },
-    "objectives": [
-      "Read through a topic and identify relevant main/supporting ideas",
-      "Arrange ideas in a logical sequence",
-      "Plan an appropriate introduction and effective conclusion"
-    ],
-    "prerequisites": [
-      "main/supporting ideas",
-      "paragraphing",
-      "basic composition"
-    ],
-    "teaching": [
-      "An outline is the plan behind a composition. It prevents random ideas and helps each paragraph perform a clear function.",
-      "Begin by interpreting the topic: identify the subject, purpose, audience and any command such as explain, argue or describe.",
-      "Brainstorm freely, then group related ideas. Promote broad ideas to main points and place examples or explanations under them as supporting points.",
-      "Choose a logical order: chronological, cause–effect, problem–solution, general-to-specific or strongest-to-weakest depending on purpose.",
-      "The introduction should orient the reader; the conclusion should close the argument or explanation without merely repeating the first sentence."
-    ],
-    "workedExamples": [
-      "Topic: “Effects of indiscriminate waste disposal.” Outline: introduction → blocked drainage → disease risk → environmental damage → solutions → conclusion.",
-      "For “A memorable journey,” chronological order is usually clearer than grouping by abstract categories."
-    ],
-    "misconceptions": [
-      "writing paragraphs before planning",
-      "listing unrelated points",
-      "using examples as main headings",
-      "introducing a new major argument in the conclusion"
-    ],
-    "guidedPractice": [
-      "Build an outline from a supplied passage, then reconstruct the likely paragraph order."
-    ],
-    "independentPractice": [
-      "Create full outlines for three unseen topics, each with introduction, at least three main points, supports and conclusion."
-    ],
-    "mastery": {
-      "criterion": "At least 80% overall, with accurate application on an unfamiliar task and correction of any major misconception before progression.",
-      "status": "DEEP_WHEN_PASSED"
-    },
-    "boardReady": true
+    "topicId":"nerdc-jss2-english-writing-1","classLevel":"JSS2","subject":"English Language","strand":"Writing","topic":"Writing an outline",
+    "source":{"authority":"NERDC","url":"https://nerdc.gov.ng/content_manager/jss/jss1-3_english_studies.pdf","page":30},
+    "objectives":["Read through a topic and identify relevant main/supporting ideas","Arrange ideas in a logical sequence","Plan an appropriate introduction and effective conclusion"],
+    "prerequisites":["main/supporting ideas","paragraphing","basic composition"],
+    "teaching":["AN OUTLINE is a writing plan showing what each part will do before full paragraphs.","Interpret topic: subject, command word, purpose and audience.","Brainstorm freely, then select relevant ideas.","Group related ideas: broad controlling ideas become main points; reasons/examples become supports.","Remove irrelevant ideas that do not answer exact topic.","Choose logical order: chronological, cause-effect, problem-solution, general-specific, spatial or argumentative strength.","Introduction plan establishes focus without every detail.","Body plan gives one controlling idea per paragraph with supports.","Plan transitions that express relationship.","Conclusion closes discussion without new major point.","Useful outline is specific enough to guide but shorter than essay.","Use consistent numbering/bullets.","Check logical flow between paragraphs.","Check balance among main points.","Permanent flow: interpret→brainstorm→select→group→order→plan→check."],
+    "workedExamples":["Waste disposal: intro→blocked drains/flooding→disease→environmental damage→solutions→conclusion.","Memorable journey: departure→unexpected event→climax→arrival/reflection.","Why students should read daily: vocabulary→knowledge→concentration→counterpoint→conclusion.","Yam porridge process: ingredients→preparation→cooking→serving.","Exam malpractice: issue→pressure→poor preparation→weak supervision→effects/solutions.","Irrelevant football-team idea removed from flooding outline.","Blocked drains/heavy rain/building on waterways grouped under causes.","Reading improves vocabulary supported by exposure/context/repetition.","Introduction plan defines scope; it does not list every paragraph fully.","Argument conclusion restates position/strongest reason, no new fifth reason.","Three balanced body points with supports are stronger than random ten-point list.","Cause paragraph can transition to effects with Consequently."],
+    "misconceptions":["writing essay before planning","listing unrelated points","using examples as main headings","copying topic as only outline","no logical order","new argument in conclusion","outline becomes full essay","outline too thin to guide"],
+    "guidedPractice":["Interpret five prompts by subject/command/purpose/audience.","Brainstorm then remove irrelevant ideas.","Group twelve ideas under three headings.","Arrange events chronologically.","Arrange cause/effect ideas.","Outline waste disposal.","Outline school uniforms argument.","Add two supports under each point.","Plan transitions.","Repair duplicate outline.","Remove new conclusion point.","Check balance."],
+    "independentPractice":["Outline benefits of clean school environment.","Outline a day I will never forget.","Outline causes/effects of road accidents.","Outline how to prepare for examination.","Outline argument on phones in school.","Outline importance of trees.","For each include intro,3+ body points,supports,conclusion.","Choose organisation pattern for six prompts and justify.","Convert brainstorm list into hierarchical outline.","Remove irrelevant ideas from sample.","Reorder bad outline.","Use best outline to predict paragraph topic sentences."],
+    "mastery":{"criterion":"Learner interprets prompts accurately and produces relevant, logically ordered, balanced outlines with clear introduction, supported body points and conclusion in at least85% of tasks.","status":"DEEP_WHEN_PASSED"},"boardReady":true
   },
   {
     "topicId": "nerdc-jss2-english-writing-2",
