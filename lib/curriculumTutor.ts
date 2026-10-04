@@ -51,6 +51,11 @@ function applyTeachingMap(units:TutorUnit[],classLevel:string,topic:string){
  return units.map(unit=>({
   ...unit,
   teachingTypes:unit.teachingTypes?.length?unit.teachingTypes:map?.types.map(type=>`${type.name}: ${type.description}`),
+  teachingTypeExamples:unit.teachingTypeExamples?.length?unit.teachingTypeExamples:map?.types.map(type=>({
+   name:type.name,
+   description:type.description,
+   examples:(type.examples||[]).slice(0,Math.max(3,map.minimumRepresentativeExamples||3))
+  })),
   noJumpChecks:[...(unit.noJumpChecks||[]),...(mapped.noJumpChecks||[])],
   outcomes:[...(unit.outcomes||[]),map.governingIdea],
  }));
