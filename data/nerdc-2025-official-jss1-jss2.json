@@ -1,0 +1,1613 @@
+{
+  "version": "NERDC_NEW_REVISED_BEC_SEPTEMBER_2025",
+  "authority": "NERDC",
+  "records": [
+    {
+      "classLevel": "JSS1",
+      "subject": "Mathematics",
+      "theme": "Number and Numeration",
+      "topic": "Whole numbers",
+      "tableTopic": "Whole Numbers",
+      "objectives": [
+        "count, read and write numbers in millions and billions",
+        "counts and write numbers in trillions",
+        "apply the counting, reading and writing large numbers in everyday life",
+        "solve problems on quantitative aptitude tasks involving large numbers."
+      ],
+      "content": "Knowledge 1. Counting numbers in millions, billions and trillions. 2. Reading numbers in millions, billions and trillions. 3. Writing numbers in millions, billions and trillions. 4. Quantitative Aptitude. Skills 1. Counting, reading and writing of large numbers 2. Computational",
+      "evaluation": "Students to: 1. count, read and write large numbers (millions and billions); 2. count, read and write in trillions; 3. apply the reading and writing large numbers in real life situations; 4. solve problems on quantitative aptitude involving large numbers.",
+      "sourceFile": "NERDC_JSS1_Mathematics_From_First_Table.docx",
+      "pages": [
+        1
+      ],
+      "sourceVersion": "NERDC New Revised Basic Education Curriculum, September 2025",
+      "authority": "Nigerian Educational Research and Development Council (NERDC)",
+      "official": true
+    },
+    {
+      "classLevel": "JSS1",
+      "subject": "Mathematics",
+      "theme": "Number and Numeration",
+      "topic": "Lowest Common Multiples (LCM)",
+      "tableTopic": "Lowest Common Multiples (LCM)",
+      "objectives": [
+        "identify multiples and common multiples of two or more whole numbers",
+        "find the LCM of two or more whole numbers.",
+        "Determines common multiples of whole numbers."
+      ],
+      "content": "Knowledge 1. Multiple of whole numbers. 2. LCM of whole numbers Skill Determining of common multiples of two or more whole numbers.",
+      "evaluation": "Students to use: 1. factor method to find LCM; 2. multiple method to find LCM; 3. index method to find LCM.",
+      "sourceFile": "NERDC_JSS1_Mathematics_From_First_Table.docx",
+      "pages": [
+        2
+      ],
+      "sourceVersion": "NERDC New Revised Basic Education Curriculum, September 2025",
+      "authority": "Nigerian Educational Research and Development Council (NERDC)",
+      "official": true
+    },
+    {
+      "classLevel": "JSS1",
+      "subject": "Mathematics",
+      "theme": "Number and Numeration",
+      "topic": "Highest Common Factor (HCF)",
+      "tableTopic": "Highest Common Factor (HCF)",
+      "objectives": [
+        "Identify factors and common factors of whole number",
+        "find the HCF of whole numbers",
+        "identify the differences between LCM and HCF",
+        "apply the concept of HCF to real life",
+        "solve problems on quantitative aptitude tasks involving LCM and HCF of whole numbers."
+      ],
+      "content": "Knowledge 1. Factors and 2. HCF of whole numbers. 3. Differences between LCM and HCF. 4. Quantitative Aptitude involving HCF. Skill Calculating of LCH and HCF.",
+      "evaluation": "Students to: 1. find HCF of given whole numbers; 2. express given whole numbers as products of their prime factors; 3. apply the concept of HCF to simplify fractions; 4. solve problems on quantitative aptitude involving LCM and HCF.",
+      "sourceFile": "NERDC_JSS1_Mathematics_From_First_Table.docx",
+      "pages": [
+        3
+      ],
+      "sourceVersion": "NERDC New Revised Basic Education Curriculum, September 2025",
+      "authority": "Nigerian Educational Research and Development Council (NERDC)",
+      "official": true
+    },
+    {
+      "classLevel": "JSS1",
+      "subject": "Mathematics",
+      "theme": "Number and Numeration",
+      "topic": "Counting in twos",
+      "tableTopic": "Counting in twos Student should be",
+      "objectives": [
+        "able to count in group of twos."
+      ],
+      "content": "Knowledge Counting in group of twos",
+      "evaluation": "Students are to: 1. count a bottle-tops of 20 pieces in group of twos; 2. form bundles of two-two objects from a total object of 30 pieces.",
+      "sourceFile": "NERDC_JSS1_Mathematics_From_First_Table.docx",
+      "pages": [
+        4
+      ],
+      "sourceVersion": "NERDC New Revised Basic Education Curriculum, September 2025",
+      "authority": "Nigerian Educational Research and Development Council (NERDC)",
+      "official": true
+    },
+    {
+      "classLevel": "JSS1",
+      "subject": "Mathematics",
+      "theme": "Number and Numeration",
+      "topic": "Conversion of Base-ten numerals to Binary numbers",
+      "tableTopic": "Conversion of Base-ten numerals to Binary numbers",
+      "objectives": [
+        "convert base-ten numerals to binary numbers.",
+        "Identify patterns in binary representation.",
+        "Identify computing binary digits (bits)."
+      ],
+      "content": "Knowledge 1. Converting numbers from Base-ten to Binary. 2. logic gates (0 and 1). 4. Place value in binary numbers. Skill 1. Identifying patterns in binary representation 2. Familiarizing with how computing/basic programming works by first converting everything to binary for",
+      "evaluation": "Students to: 1. convert 810 to base 2; 2. convert numbers in base 10 to binary. 3. describe computer binary bits. and how they work.",
+      "sourceFile": "NERDC_JSS1_Mathematics_From_First_Table.docx",
+      "pages": [
+        5
+      ],
+      "sourceVersion": "NERDC New Revised Basic Education Curriculum, September 2025",
+      "authority": "Nigerian Educational Research and Development Council (NERDC)",
+      "official": true
+    },
+    {
+      "classLevel": "JSS1",
+      "subject": "Mathematics",
+      "theme": "Number and Numeration",
+      "topic": "Fractions",
+      "tableTopic": "Fractions Students should be",
+      "objectives": [
+        "find equivalent fractions of any given fractions",
+        "arrange given fractions either in ascending or descending order of magnitude",
+        "Convert: fractions to decimals decimals to fractions fractions to percentages percentages to fractions",
+        "apply equivalent fractions in sharing of items",
+        "solve problems on quantitative aptitude involving fractions."
+      ],
+      "content": "Knowledge 1. Equivalent fractions. 2. Ordering of fractions. 3. Conversion of fractions to decimals and vise-versa. 4. Conversion of fractions to percentages and vise-versa. 5. Quantitative aptitude involving fractions.",
+      "evaluation": "Students to: 1. form equivalents fractions from given fractions; 2. order fractions in either ascending or descending order; 3. convert fractions to decimals and vice versa; 4. convert fractions to percentages and vice versa; 5. Solve quantitative aptitude problems involving fractions.",
+      "sourceFile": "NERDC_JSS1_Mathematics_From_First_Table.docx",
+      "pages": [
+        6
+      ],
+      "sourceVersion": "NERDC New Revised Basic Education Curriculum, September 2025",
+      "authority": "Nigerian Educational Research and Development Council (NERDC)",
+      "official": true
+    },
+    {
+      "classLevel": "JSS1",
+      "subject": "Mathematics",
+      "theme": "Basic Operations",
+      "topic": "Addition and Subtraction",
+      "tableTopic": "Addition and Subtraction",
+      "objectives": [
+        "add and subtract given numbers correctly",
+        "state the place value of each number in the sum or difference",
+        "draw and use number line to illustrate directed numbers",
+        "add and subtract positive and negative integers correctly on the number line",
+        "interpret and relate positive and negative numbers to everyday activities."
+      ],
+      "content": "Knowledge 1. Addition and subtraction of numbers. 2. P lace value. 3. Use of number line. 4. Addition and subtraction of positive and. negative integers. 5. Everyday application of positive and negative integers. Skills Subtraction and addition of numbers.",
+      "evaluation": "Students to: 1. add and subtract numbers; 2. read the place values of digits; 3. use number line to find the sum of integers; 4. solve problems related the applications of positive and negative integers e.g. temperature.",
+      "sourceFile": "NERDC_JSS1_Mathematics_From_First_Table.docx",
+      "pages": [
+        7
+      ],
+      "sourceVersion": "NERDC New Revised Basic Education Curriculum, September 2025",
+      "authority": "Nigerian Educational Research and Development Council (NERDC)",
+      "official": true
+    },
+    {
+      "classLevel": "JSS1",
+      "subject": "Mathematics",
+      "theme": "Basic Operations",
+      "topic": "Addition and Subtraction of fractions",
+      "tableTopic": "Addition and Subtraction of Fractions",
+      "objectives": [
+        "solve given problems on addition and subtraction of fractions",
+        "solve word problems involving addition and subtraction of fractions."
+      ],
+      "content": "Knowledge 1. Adding and Subtracting fractions. 2. Word-problems on addition and subtraction of fractions. Skill Solving Addition and Subtraction of fraction’s problems. .",
+      "evaluation": "Students to: 1. add and subtract fractions; 2. solve word problems involving fractions.",
+      "sourceFile": "NERDC_JSS1_Mathematics_From_First_Table.docx",
+      "pages": [
+        8
+      ],
+      "sourceVersion": "NERDC New Revised Basic Education Curriculum, September 2025",
+      "authority": "Nigerian Educational Research and Development Council (NERDC)",
+      "official": true
+    },
+    {
+      "classLevel": "JSS1",
+      "subject": "Mathematics",
+      "theme": "Basic Operations",
+      "topic": "Multiplication and Division of Fractions",
+      "tableTopic": "Multiplication and Division of Fractions",
+      "objectives": [
+        "solve problems on multiplication of fractions",
+        "solve problems on division of fractions",
+        "solve word problems involving multiplication and division of fractions."
+      ],
+      "content": "Knowledge 1. Multiplication of fractions. 2. Division of fractions. 3. Word-problems involving multiplication and division of fractions. Skill Solving multiplication and division of fraction’s problems.",
+      "evaluation": "Students to: 1. solve problems on multiplication and division of fractions; 2. solve word problems involving multiplication and division of fractions.",
+      "sourceFile": "NERDC_JSS1_Mathematics_From_First_Table.docx",
+      "pages": [
+        9
+      ],
+      "sourceVersion": "NERDC New Revised Basic Education Curriculum, September 2025",
+      "authority": "Nigerian Educational Research and Development Council (NERDC)",
+      "official": true
+    },
+    {
+      "classLevel": "JSS1",
+      "subject": "Mathematics",
+      "theme": "Basic Operations",
+      "topic": "Estimation",
+      "tableTopic": "Estimation Students should be",
+      "objectives": [
+        "estimate the dimensions of objects and distances within the school environment",
+        "estimate capacity and mass of some familiar objects",
+        "estimate time for some day-to-day activities",
+        "solve quantitative aptitude problems involving estimation."
+      ],
+      "content": "Knowledge 1. Estimating dimensions of objects and distances. 2. Estimating capacity and mass of objects. 3. Estimating age and time. 4. Quantitative aptitude problems involving estimation. Skills Estimating dimension and distance, capacity and mass of objects.",
+      "evaluation": "Students to: 1. estimate dimensions of objects in the environment; 2. estimate length; 3. estimate distances; 4. estimate capacity of common objects; 5. estimate time of day and night; 6. solve quantitative aptitude problems involving estimation.",
+      "sourceFile": "NERDC_JSS1_Mathematics_From_First_Table.docx",
+      "pages": [
+        10
+      ],
+      "sourceVersion": "NERDC New Revised Basic Education Curriculum, September 2025",
+      "authority": "Nigerian Educational Research and Development Council (NERDC)",
+      "official": true
+    },
+    {
+      "classLevel": "JSS1",
+      "subject": "Mathematics",
+      "theme": "Basic Operations",
+      "topic": "Approximation",
+      "tableTopic": "Approximation Students should be",
+      "objectives": [
+        "approximate answers to addition and subtraction problems to a given degree of accuracy.",
+        "approximate answers to multiplication and division problems to a given degree of accuracy",
+        "rounding numbers to the nearest 10, 100 and 1,000",
+        "apply approximation involving basic operations in everyday life activities.",
+        "solve problems on quantitative aptitude involving approximation."
+      ],
+      "content": "Knowledge 1. Approximating values of addition and subtraction. 2. Approximating the results of multiplication and division of numbers. 3. Rounding up of numbers to the nearest 10, 100 and 1,000. 4. Applying approximation in everyday life. 5. Quantitative Aptitude involving approximation. Skills Approximating numbers to the nearest 10,100 and 1,000.",
+      "evaluation": "Students to: 1. approximate numbers from a given operation to the nearest • 10 • 100 • 1000 2. apply approximation to everyday life. 3. solve quantitative aptitude problems involving approximation.",
+      "sourceFile": "NERDC_JSS1_Mathematics_From_First_Table.docx",
+      "pages": [
+        11
+      ],
+      "sourceVersion": "NERDC New Revised Basic Education Curriculum, September 2025",
+      "authority": "Nigerian Educational Research and Development Council (NERDC)",
+      "official": true
+    },
+    {
+      "classLevel": "JSS1",
+      "subject": "Mathematics",
+      "theme": "Basic Operations",
+      "topic": "Addition of numbers in base 2.",
+      "tableTopic": "Addition of numbers in base 2.",
+      "objectives": [
+        "add two- or three-digits binary numbers."
+      ],
+      "content": "Knowledge Adding two- or three-digits binary numbers. Skill Using number blocks or binary charts to add two- or three-digit numbers.",
+      "evaluation": "Students to: 1. add two digits binary numbers e.g 102+112 =?; 2. add two or three-digits binary numbers.",
+      "sourceFile": "NERDC_JSS1_Mathematics_From_First_Table.docx",
+      "pages": [
+        12
+      ],
+      "sourceVersion": "NERDC New Revised Basic Education Curriculum, September 2025",
+      "authority": "Nigerian Educational Research and Development Council (NERDC)",
+      "official": true
+    },
+    {
+      "classLevel": "JSS1",
+      "subject": "Mathematics",
+      "theme": "Basic Operations",
+      "topic": "Subtraction of numbers in base 2.",
+      "tableTopic": "Subtraction of numbers in base 2.",
+      "objectives": [
+        "subtract two- or three-digits binary numbers."
+      ],
+      "content": "Knowledge subtracting two- or three-digits binary numbers. Skill Using number blocks or binary charts to subtract two- or three-digit numbers.",
+      "evaluation": "Students to: 1. subtract two digits binary numbers e.g 11 -2 012 =?; 2. subtract two or three-digits binary numbers.",
+      "sourceFile": "NERDC_JSS1_Mathematics_From_First_Table.docx",
+      "pages": [
+        13
+      ],
+      "sourceVersion": "NERDC New Revised Basic Education Curriculum, September 2025",
+      "authority": "Nigerian Educational Research and Development Council (NERDC)",
+      "official": true
+    },
+    {
+      "classLevel": "JSS1",
+      "subject": "Mathematics",
+      "theme": "Basic Operations",
+      "topic": "Multiplication of numbers in base 2.",
+      "tableTopic": "Multiplication of numbers in base 2.",
+      "objectives": [
+        "multiply two- or three-digits binary numbers."
+      ],
+      "content": "Knowledge multiply two- or three-digits binary numbers. Skill Using number blocks or binary charts to multiply two- or three-digit numbers.",
+      "evaluation": "Students to: 1. multiply two digits binary numbers eg. 102 x 112 =?; 2. multiply two or three-digits binary numbers.",
+      "sourceFile": "NERDC_JSS1_Mathematics_From_First_Table.docx",
+      "pages": [
+        14
+      ],
+      "sourceVersion": "NERDC New Revised Basic Education Curriculum, September 2025",
+      "authority": "Nigerian Educational Research and Development Council (NERDC)",
+      "official": true
+    },
+    {
+      "classLevel": "JSS1",
+      "subject": "Mathematics",
+      "theme": "Algebraic Processes",
+      "topic": "Use of Symbols",
+      "tableTopic": "Use of Symbols Students should be",
+      "objectives": [
+        "state the meaning the of open sentences",
+        "solve problems expressed in open sentences",
+        "identify relationship between addition and subtraction in open sentences",
+        "identify relationship between multiplication and division in open sentences",
+        "use letters to represent symbols in open sentences.",
+        "6. solve open sentences problems involving two arithmetic operations; 7. solve word problems involving use of symbols; 8. solve quantitative aptitude problems on the use of symbols."
+      ],
+      "content": "Knowledge 1. Meaning of Open sentences. 2. Finding solutions to open sentences. 3. Use of letters to represent symbols or shapes in open sentences. Critical thinking as students critically analyse the sequence in open statement to figure out the missing number for the statement to be completed. Knowledge 1. Solving open sentences with two arithmetic operations. 2. Word-problems involving use of symbols. 3. Quantitative aptitude problems. Skill Recognizing symbols and numbers.",
+      "evaluation": "Students to: 1. find the missing numbers in open sentences; 2. identify the relationship between: • addition and subtraction in open sentences; • multiplication and division in open sentences. 3. represent symbols with letters in open sentences. Students to: 1. solve open sentences problems involving two arithmetic operations; 2. solve word problems involving use of symbols; 3. solve quantitative aptitude problems involving the use of symbols.",
+      "sourceFile": "NERDC_JSS1_Mathematics_From_First_Table.docx",
+      "pages": [
+        15,
+        16
+      ],
+      "sourceVersion": "NERDC New Revised Basic Education Curriculum, September 2025",
+      "authority": "Nigerian Educational Research and Development Council (NERDC)",
+      "official": true
+    },
+    {
+      "classLevel": "JSS1",
+      "subject": "Mathematics",
+      "theme": "Algebraic Processes",
+      "topic": "Simplification of Algebraic Expressions",
+      "tableTopic": "Simplificati on of Algebraic Expressions",
+      "objectives": [
+        "identify and collect like and unlike terms of given algebraic expressions",
+        "identify coefficients of given algebraic terms",
+        "identify the positive and negative coefficients of given algebraic terms",
+        "perform basic arithmetic operations on algebraic expressions of similar terms",
+        "solve word problems involving algebraic expressions",
+        "inserting and removing of brackets in simplifying algebraic expressions",
+        "solve quantitative aptitude problems involving algebraic expressions."
+      ],
+      "content": "Knowledge 1. Identifying and collecting like and unlike terms of given algebraic expressions. 2. Identifying the coefficients of algebraic terms. 3. Performing arithmetic operations with algebraic expressions. 4. Simplifying algebraic expressions. 5. Use of brackets to simplify algebraic expressions. 6. Quantitative aptitude involving algebraic expressions. Skill Solving for like terms and the positive and negative coefficients in algebraic expression Communicatio n as students correctly communicate their ideas, finding, and arguments with others to simplify an algebraic expression.",
+      "evaluation": "Students to: 1. identify like and unlike terms of algebraic expressions; 2. identify coefficients of algebraic expressions; 3. simplify algebraic expressions; 4. open brackets to simplify algebraic expressions; 5. solve quantitative aptitude problems.",
+      "sourceFile": "NERDC_JSS1_Mathematics_From_First_Table.docx",
+      "pages": [
+        17
+      ],
+      "sourceVersion": "NERDC New Revised Basic Education Curriculum, September 2025",
+      "authority": "Nigerian Educational Research and Development Council (NERDC)",
+      "official": true
+    },
+    {
+      "classLevel": "JSS1",
+      "subject": "Mathematics",
+      "theme": "Algebraic Processes",
+      "topic": "Simple Equations",
+      "tableTopic": "Simple Equations",
+      "objectives": [
+        "translate word expressions or statements in to mathematical equations",
+        "use mathematical equations to represent worded sentences or statements",
+        "solve simple equations and verify the solutions."
+      ],
+      "content": "Knowledge 1. Translate word sentences/ expressions/ statements in to mathematical equations and vise-versa. 2. Simple equations. Skill Selecting and using relevant symbols and notations in solving algebraic equations.",
+      "evaluation": "Students to: 1. translate word expressions in mathematical expressions; 2. translate from mathematical expressions to worded expressions; 3. solve simple equation problems.",
+      "sourceFile": "NERDC_JSS1_Mathematics_From_First_Table.docx",
+      "pages": [
+        18
+      ],
+      "sourceVersion": "NERDC New Revised Basic Education Curriculum, September 2025",
+      "authority": "Nigerian Educational Research and Development Council (NERDC)",
+      "official": true
+    },
+    {
+      "classLevel": "JSS1",
+      "subject": "Mathematics",
+      "theme": "Mensuration and Geometry",
+      "topic": "Plane Shapes",
+      "tableTopic": "Plane Shapes",
+      "objectives": [
+        "state the similarities and differences between shapes",
+        "find the perimeter of regular polygons",
+        "find the area of regular polygons",
+        "find the area of real plane objects by physical measurement."
+      ],
+      "content": "Knowledge 1. Similarities and differences between the following shapes: • square • rectangle • triangle • trapezium • parallelogram • circle. 2. Perimeter of regular polygons: square, rectangle, triangle, trapezium parallelogram and circle. 3. Area of regular polygons: square, rectangle, circle parallelogram. Skills 1. Manipulation of measuring instruments in finding perimeters and areas of regular plane shapes. 2. Accuracy in computation involving plane shapes.",
+      "evaluation": "Students to: 1. state the similarities and differences between the following shapes: • square • rectangle • triangle • trapezium • parallelogra m • circle 2. find the perimeter of common regular plane shapes; 3. find the area of common regular plane shapes.",
+      "sourceFile": "NERDC_JSS1_Mathematics_From_First_Table.docx",
+      "pages": [
+        19
+      ],
+      "sourceVersion": "NERDC New Revised Basic Education Curriculum, September 2025",
+      "authority": "Nigerian Educational Research and Development Council (NERDC)",
+      "official": true
+    },
+    {
+      "classLevel": "JSS1",
+      "subject": "Mathematics",
+      "theme": "Mensuration and Geometry",
+      "topic": "Three dimensional Figures",
+      "tableTopic": "Three dimensional Figures",
+      "objectives": [
+        "identify the properties of cubes and cuboids",
+        "identify the properties of pyramids and cones",
+        "identify the properties of cylinders and spheres",
+        "find the volumes of cubes and cuboids."
+      ],
+      "content": "Knowledge 1. Properties of cubes and cuboids. 2. Properties of pyramids and cones. 3. Properties of cylinders and spheres. 4. Volumes of cubes and cuboids. Skills 1. Manipulation of measuring instruments in finding volumes of 3- D shapes. 2. Accuracy in computation. 3. Spatial ability.",
+      "evaluation": "Students to: 1. state properties in terms of edges, faces and vertices of cubes, cuboids pyramids, cones, cylinders and spheres; 2. find the volumes cubes and cuboids by the use of the formula.",
+      "sourceFile": "NERDC_JSS1_Mathematics_From_First_Table.docx",
+      "pages": [
+        20
+      ],
+      "sourceVersion": "NERDC New Revised Basic Education Curriculum, September 2025",
+      "authority": "Nigerian Educational Research and Development Council (NERDC)",
+      "official": true
+    },
+    {
+      "classLevel": "JSS1",
+      "subject": "Mathematics",
+      "theme": "Mensuration and Geometry",
+      "topic": "Construction",
+      "tableTopic": "Construction Students should",
+      "objectives": [
+        "be able to:",
+        "construct parallel and perpendicular lines",
+        "construct special angles: 600, and 900",
+        "bisect a given line segment."
+      ],
+      "content": "Knowledge 1. Construction of parallel lanes. 2. Construction of perpendicular lines. 3. Construction of special angles: 600, and 900 4. Bisecting of given line segment Skills 1. Manipulating mathematical instruments in constructing and bisecting line segments and angles. 2. Accuracy in constructions. 3. Spatial ability.",
+      "evaluation": "Students to: 1. Construct parallel lines; 2. Construct perpendicular lines; 3. Construct special angles: 600, and 900 4. Bisect of given line segments.",
+      "sourceFile": "NERDC_JSS1_Mathematics_From_First_Table.docx",
+      "pages": [
+        21
+      ],
+      "sourceVersion": "NERDC New Revised Basic Education Curriculum, September 2025",
+      "authority": "Nigerian Educational Research and Development Council (NERDC)",
+      "official": true
+    },
+    {
+      "classLevel": "JSS1",
+      "subject": "Mathematics",
+      "theme": "Mensuration and Geometry",
+      "topic": "Angles",
+      "tableTopic": "Angles Students should",
+      "objectives": [
+        "be able to:",
+        "measure angles.",
+        "identify vertically opposite, adjacent, alternate and corresponding angles",
+        "identify angles at a point and angles on a straight line and state their properties",
+        "relate angles with real life situation."
+      ],
+      "content": "Knowledge 1. Measuring angles. 2. Identification and properties of: vertically opposite, adjacent, alternate and corresponding angles. 3. Identification and properties of angles at a point and angles on a straight line. Skills 1. Manipulation of mathematical instruments in measuring angles. 2. Accuracy in measurement. 3. Creativity.",
+      "evaluation": "Students to: 1. measure given angle by using protractor; 2. identify angles in terms of being: • vertically opposite, • adjacent, alternate and • corresponding; 3. state situations where angles relate with real life.",
+      "sourceFile": "NERDC_JSS1_Mathematics_From_First_Table.docx",
+      "pages": [
+        22
+      ],
+      "sourceVersion": "NERDC New Revised Basic Education Curriculum, September 2025",
+      "authority": "Nigerian Educational Research and Development Council (NERDC)",
+      "official": true
+    },
+    {
+      "classLevel": "JSS1",
+      "subject": "Mathematics",
+      "theme": "Everyday Statistics",
+      "topic": "Needs for statistics",
+      "tableTopic": "Needs for statistics",
+      "objectives": [
+        "list the purposes of statistics",
+        "collect data",
+        "recognize the uses of statistics for planning purposes",
+        "apply the chance events or probability in everyday life",
+        "recognize the uses of statistics for prediction purposes",
+        "perform a simple experiment with dice."
+      ],
+      "content": "Knowledge 1. Purposes of statistics 2. Data collection strategy. 3. Data for planning purposes. Skills 1. Data collection 2. Decision making of collected data 3. Simplification of collected data etc.",
+      "evaluation": "Students to: 1. list purposes of statistics; 2. browse and download data from NECO on mathematics results for further analysis; 3. provide examples of the application of probability in everyday life; 4. state situations where statistics is used for prediction. 5. collect data from simple experiment by casting dice and record the outcome.",
+      "sourceFile": "NERDC_JSS1_Mathematics_From_First_Table.docx",
+      "pages": [
+        23
+      ],
+      "sourceVersion": "NERDC New Revised Basic Education Curriculum, September 2025",
+      "authority": "Nigerian Educational Research and Development Council (NERDC)",
+      "official": true
+    },
+    {
+      "classLevel": "JSS1",
+      "subject": "Mathematics",
+      "theme": "Everyday Statistics",
+      "topic": "Data representation",
+      "tableTopic": "Data representation",
+      "objectives": [
+        "determine the median of a given data set."
+      ],
+      "content": "Knowledge Median of data set Skills Logical thinking and weighing evidence.",
+      "evaluation": "Students to: 1. identify the median of a given odd number data set; 2. determine the median of a given even number data set.",
+      "sourceFile": "NERDC_JSS1_Mathematics_From_First_Table.docx",
+      "pages": [
+        24
+      ],
+      "sourceVersion": "NERDC New Revised Basic Education Curriculum, September 2025",
+      "authority": "Nigerian Educational Research and Development Council (NERDC)",
+      "official": true
+    },
+    {
+      "classLevel": "JSS1",
+      "subject": "English Language",
+      "theme": "Listening and Speaking",
+      "topic": "Oral Comprehension",
+      "tableTopic": "Oral Comprehension",
+      "objectives": [
+        "listen attentively to oral texts",
+        "orally answer literal, inferential and critical questions on oral texts."
+      ],
+      "content": "Knowledge 1. Listening strategies. 2. Decoding literal, critical and inferential meaning from oral texts (short passages/stories read by the teacher or contained in Audio/Video Clips). Skill Listening effectively",
+      "evaluation": "Students to orally answer literal, inferential and critical questions on oral texts.",
+      "sourceFile": "NERDC_JSS1_English_From_First_Table.docx",
+      "pages": [
+        1
+      ],
+      "sourceVersion": "NERDC New Revised Basic Education Curriculum, September 2025",
+      "authority": "Nigerian Educational Research and Development Council (NERDC)",
+      "official": true
+    },
+    {
+      "classLevel": "JSS1",
+      "subject": "English Language",
+      "theme": "Listening and Speaking",
+      "topic": "Conversation on Various Issues",
+      "tableTopic": "Conversation on Various Issues",
+      "objectives": [
+        "discuss current national and global issues relating to climate change, economy, security, education, etc",
+        "use appropriate registers on various issues."
+      ],
+      "content": "Knowledge 1. Conversation using appropriate words and language structures on various issues such as: • Economy • Security • Out-of-school children • Climate change Skills Using a wide range of registers",
+      "evaluation": "Students to converse on current national and global issues relating to climate change, economy, security, education, drug abuse, out-of- school children, etc.",
+      "sourceFile": "NERDC_JSS1_English_From_First_Table.docx",
+      "pages": [
+        2
+      ],
+      "sourceVersion": "NERDC New Revised Basic Education Curriculum, September 2025",
+      "authority": "Nigerian Educational Research and Development Council (NERDC)",
+      "official": true
+    },
+    {
+      "classLevel": "JSS1",
+      "subject": "English Language",
+      "theme": "Listening and Speaking",
+      "topic": "Speech Sounds (Vowels and Consonants)",
+      "tableTopic": "Speech Sounds (Vowels and Consonants)",
+      "objectives": [
+        "Identify and classify English speech sounds",
+        "Produce correct speech sounds."
+      ],
+      "content": "Knowledge 1. Vowels: Monophthongs (single, pure sounds) and Diphthongs (gliding sounds) 2. Consonants: Stops, Fricatives, Nasals, Liquids, and Semi- vowels Skills Pronouncing words appropriately",
+      "evaluation": "Students to: 1. identify and classify English speech sounds; 2. produce correct speech sounds.",
+      "sourceFile": "NERDC_JSS1_English_From_First_Table.docx",
+      "pages": [
+        3
+      ],
+      "sourceVersion": "NERDC New Revised Basic Education Curriculum, September 2025",
+      "authority": "Nigerian Educational Research and Development Council (NERDC)",
+      "official": true
+    },
+    {
+      "classLevel": "JSS1",
+      "subject": "English Language",
+      "theme": "Reading",
+      "topic": "Reading Short passages with fluency",
+      "tableTopic": "Reading Short passages with fluency",
+      "objectives": [
+        "read fluently with speed, accuracy, comprehension and prosody (good pronunciation)",
+        "give correct answers to questions on passages read."
+      ],
+      "content": "Knowledge 1. Fluency skills: Speed, accuracy, comprehension and prosody (good pronunciation). 2. Conditions for Speed Reading: Good eyesight, avoiding word vocalisation during reading, avoiding regressive reading, increasing eye span while reading and reading phrases instead of words. Skills Reading fluently",
+      "evaluation": "Students to: 1. read at the right speed; 2. meet conditions for fluency in reading; and 3. answer comprehension questions that demonstrate improvement in reading speed.",
+      "sourceFile": "NERDC_JSS1_English_From_First_Table.docx",
+      "pages": [
+        4
+      ],
+      "sourceVersion": "NERDC New Revised Basic Education Curriculum, September 2025",
+      "authority": "Nigerian Educational Research and Development Council (NERDC)",
+      "official": true
+    },
+    {
+      "classLevel": "JSS1",
+      "subject": "English Language",
+      "theme": "Reading",
+      "topic": "Reading passages for meaning",
+      "tableTopic": "Reading passages for meaning",
+      "objectives": [
+        "read and identify main and supporting ideas from given passages; and",
+        "differentiate between main and supporting ideas from given passages."
+      ],
+      "content": "Knowledge 1. Meaning of main and supporting ideas 2. Reading and identifying main and supporting ideas in given passages on: • Artificial Intelligence • Information literacy • Patriotism, • Peaceful- coexistence, • Road safety, • Disaster Risk Reduction, • Human Trafficking, • Cyber security • Mental health, etc. Skill Reading and comprehending texts",
+      "evaluation": "Students to: 1. differentiate between main and supporting ideas; 2. read and accurately identify main and supporting ideas.",
+      "sourceFile": "NERDC_JSS1_English_From_First_Table.docx",
+      "pages": [
+        5
+      ],
+      "sourceVersion": "NERDC New Revised Basic Education Curriculum, September 2025",
+      "authority": "Nigerian Educational Research and Development Council (NERDC)",
+      "official": true
+    },
+    {
+      "classLevel": "JSS1",
+      "subject": "English Language",
+      "theme": "Reading",
+      "topic": "Reading Passages to Answer Literal, Inferential and Critical Questions",
+      "tableTopic": "Reading Passages to Answer Literal, Inferential and Critical Questions",
+      "objectives": [
+        "read passages and provide correct answers to literal, inferential and critical questions."
+      ],
+      "content": "Knowledge Reading to answers literal, critical and inferential questions Skill Reading and comprehending texts",
+      "evaluation": "Students to accurately answer questions covering all levels of comprehension.",
+      "sourceFile": "NERDC_JSS1_English_From_First_Table.docx",
+      "pages": [
+        6
+      ],
+      "sourceVersion": "NERDC New Revised Basic Education Curriculum, September 2025",
+      "authority": "Nigerian Educational Research and Development Council (NERDC)",
+      "official": true
+    },
+    {
+      "classLevel": "JSS1",
+      "subject": "English Language",
+      "theme": "Reading",
+      "topic": "Reading for Summary",
+      "tableTopic": "Reading for Summary",
+      "objectives": [
+        "identify topic sentences from paragraphs/passages",
+        "identify words and expressions that redirect attention to the main points",
+        "summarize paragraphs /passages by identifying key ideas"
+      ],
+      "content": "Knowledge 1. Reading for summary. 2. Identifying topic sentences and key ideas in paragraphs. 3. Identifying words and expressions that redirect attention to the main points. 4. Summarizing paragraphs /passages by identifying key ideas Skill Reading and summarizing texts appropriately",
+      "evaluation": "Students to read and summarize passages.",
+      "sourceFile": "NERDC_JSS1_English_From_First_Table.docx",
+      "pages": [
+        7
+      ],
+      "sourceVersion": "NERDC New Revised Basic Education Curriculum, September 2025",
+      "authority": "Nigerian Educational Research and Development Council (NERDC)",
+      "official": true
+    },
+    {
+      "classLevel": "JSS1",
+      "subject": "English Language",
+      "theme": "Grammatical Accuracy",
+      "topic": "Parts of speech: Nouns, Verbs and Adjectives",
+      "tableTopic": "Parts of speech: Nouns, Verbs and Adjectives",
+      "objectives": [
+        "explain the meaning and features of nouns, verbs and adjectives",
+        "list the functions of nouns, verbs and adjectives",
+        "identify the nouns, verbs and adjectives in texts",
+        "use nouns, verbs and adjectives appropriately in sentences."
+      ],
+      "content": "1. Noun: Meaning, features, types and uses 2. Verb: Meaning, features, types and uses 3. Adjectives: Meaning, features, types and uses. Skills Identifying nouns, verbs and adjectives in texts",
+      "evaluation": "Students to: 1. identify correctly the features of nouns, verbs and adjectives; 2. write correctly the functions of nouns, verbs and adjectives in a given passage; and 3. generate appropriate sentences using nouns, verbs and adjectives.",
+      "sourceFile": "NERDC_JSS1_English_From_First_Table.docx",
+      "pages": [
+        8
+      ],
+      "sourceVersion": "NERDC New Revised Basic Education Curriculum, September 2025",
+      "authority": "Nigerian Educational Research and Development Council (NERDC)",
+      "official": true
+    },
+    {
+      "classLevel": "JSS1",
+      "subject": "English Language",
+      "theme": "Grammatical Accuracy",
+      "topic": "Parts of speech: Adverbs, Conjunctions, Prepositions and Interjections",
+      "tableTopic": "Parts of speech: Adverbs, Conjunctions, Prepositions and Interjections",
+      "objectives": [
+        "Explain the meaning and features of Adverbs, Conjunctions and Prepositions",
+        "list the functions of Adverbs, Conjunctions and Prepositions",
+        "identify the Adverbs, Conjunctions and Prepositions in texts",
+        "Use Adverbs, Conjunctions and Prepositions appropriately in sentences."
+      ],
+      "content": "Knowledge 1. Adverbs: Meaning, types and uses 2. Conjunctions: Meaning, types and uses. 3. Prepositions: Meaning, types and uses 4. Interjections; Meaning, types and uses Skills Identifying adverbs, conjunctions, prepositions and interjections in texts.",
+      "evaluation": "Students to: 1. Explain the meaning and features of Adverbs, Conjunctions and Prepositions; 2. list the functions of Adverbs, Conjunctions and Prepositions 3. identify the Adverbs, Conjunctions and Prepositions in texts 4. Use Adverbs, Conjunctions and Prepositions appropriately in sentences.",
+      "sourceFile": "NERDC_JSS1_English_From_First_Table.docx",
+      "pages": [
+        9
+      ],
+      "sourceVersion": "NERDC New Revised Basic Education Curriculum, September 2025",
+      "authority": "Nigerian Educational Research and Development Council (NERDC)",
+      "official": true
+    },
+    {
+      "classLevel": "JSS1",
+      "subject": "English Language",
+      "theme": "Grammatical Accuracy",
+      "topic": "Subject-Verb Agreement",
+      "tableTopic": "Subject-Verb Agreement",
+      "objectives": [
+        "define subject- verb agreement and identify the subject and verb in a sentence",
+        "differentiate between singular and plural subjects and their corresponding verb forms",
+        "explain the basic rules of subject-verb agreement",
+        "write sentences that show correct subject- verb agreement."
+      ],
+      "content": "Knowledge 1. Meaning of subject-verb agreement 2. Differences between singular and plural subjects and their corresponding verb forms 3. Some basic rules of subject-verb agreement Skills Applying basic rules of subject-verb agreement",
+      "evaluation": "Students to: 1. explain subject- verb agreement and identify the subject and verb in a sentence; 2. differentiate between singular and plural subjects and their corresponding verb forms; 3. explain 4 basic rules of subject- verb agreement; 4. apply basic rules of subject-verb agreement in constructing 4 sentences.",
+      "sourceFile": "NERDC_JSS1_English_From_First_Table.docx",
+      "pages": [
+        10
+      ],
+      "sourceVersion": "NERDC New Revised Basic Education Curriculum, September 2025",
+      "authority": "Nigerian Educational Research and Development Council (NERDC)",
+      "official": true
+    },
+    {
+      "classLevel": "JSS1",
+      "subject": "English Language",
+      "theme": "Grammatical Accuracy",
+      "topic": "Use of Prefixes, Suffixes and Compounds",
+      "tableTopic": "Use of Prefixes, Suffixes and Compounds",
+      "objectives": [
+        "explain prefixes and suffixes with examples",
+        "Form words with prefixes and suffixes",
+        "explain the meaning of compound words",
+        "form compound words",
+        "Identify compound words in texts."
+      ],
+      "content": "Knowledge 1. Meaning of prefixes and suffixes. 2. Common prefixes: Un- (unhappy), re- (rewrite), de- (decode), etc. 3. Common suffixes: - ful (hopeful), -less (helpless), -ness (happiness) 4. Compound words e.g. blackboard, ice-cream, swimming pool, lifelong, age old, teapot, classroom, night flight, return ticket, return journey, return flight, sister-in-law, dining room, market square.",
+      "evaluation": "Students to: 1. explain prefixes and suffixes; 2. Give examples of prefixes and suffixes; 3. form words with prefixes and suffixes; 4. explain the meaning of compound words; 5. Form compound words; 6. Identify compound words in texts.",
+      "sourceFile": "NERDC_JSS1_English_From_First_Table.docx",
+      "pages": [
+        11
+      ],
+      "sourceVersion": "NERDC New Revised Basic Education Curriculum, September 2025",
+      "authority": "Nigerian Educational Research and Development Council (NERDC)",
+      "official": true
+    },
+    {
+      "classLevel": "JSS1",
+      "subject": "English Language",
+      "theme": "Writing",
+      "topic": "Writing Informal and Formal Letters",
+      "tableTopic": "Writing Informal and Formal Letters",
+      "objectives": [
+        "Identify types of letters",
+        "identify the features of informal and formal letters; and",
+        "write informal and formal letters."
+      ],
+      "content": "Knowledge Letter Writing: 1. Types • Formal • Informal 2. Features Formal Letters: They have conventional forms of two addresses, opening salutation, adequate heading, body of the letter, closing and signature. Informal Letter: One address, opening salutation, body of the letter and closing. Skills Writing letters",
+      "evaluation": "Students to: 1. identify types and formats of letters; and 2. write different types of letters (formal and informal) to suit different situations.",
+      "sourceFile": "NERDC_JSS1_English_From_First_Table.docx",
+      "pages": [
+        12
+      ],
+      "sourceVersion": "NERDC New Revised Basic Education Curriculum, September 2025",
+      "authority": "Nigerian Educational Research and Development Council (NERDC)",
+      "official": true
+    },
+    {
+      "classLevel": "JSS1",
+      "subject": "English Language",
+      "theme": "Writing",
+      "topic": "Introduction to Creative writing",
+      "tableTopic": "Introduction to Creative writing",
+      "objectives": [
+        "discuss the meaning of creative writing",
+        "describe the elements of a story",
+        "explain creative forms",
+        "explain writing techniques",
+        "do creative writing"
+      ],
+      "content": "Knowledge 1. Meaning of creative writing 2. Elements of a story e.g. plot, characterisation, style, setting, theme and language. 3. Creative forms e.g. stories, poems, plays/drama and biographies 4. Writing techniques e.g. dialogue, descriptive writing, figurative use of language 5. Creative writing Skill Doing creative writing",
+      "evaluation": "Students to: 1. discuss the meaning of creative writing; 2. describe the elements of a story; 3. explain creative forms; 4. explain writing techniques; 5. do creative writing",
+      "sourceFile": "NERDC_JSS1_English_From_First_Table.docx",
+      "pages": [
+        13
+      ],
+      "sourceVersion": "NERDC New Revised Basic Education Curriculum, September 2025",
+      "authority": "Nigerian Educational Research and Development Council (NERDC)",
+      "official": true
+    },
+    {
+      "classLevel": "JSS1",
+      "subject": "English Language",
+      "theme": "Literature",
+      "topic": "Introduction to Literature",
+      "tableTopic": "Introduction to Literature",
+      "objectives": [
+        "explain the meaning of literature as well as the genres (prose, drama and poetry)",
+        "identify types of literature (oral & written)",
+        "explain ways literature reflects different aspects of life."
+      ],
+      "content": "Knowledge 1. Meaning of literature. 2. Types of literature (oral & written). 3. Ways literature reflects different aspects of life.",
+      "evaluation": "Students to: 1. explain the meaning of literature and identify the two major categories(oral and written); 2. explain ways literature reflects different aspects of life.",
+      "sourceFile": "NERDC_JSS1_English_From_First_Table.docx",
+      "pages": [
+        14
+      ],
+      "sourceVersion": "NERDC New Revised Basic Education Curriculum, September 2025",
+      "authority": "Nigerian Educational Research and Development Council (NERDC)",
+      "official": true
+    },
+    {
+      "classLevel": "JSS1",
+      "subject": "English Language",
+      "theme": "Literature",
+      "topic": "Folktales",
+      "tableTopic": "Folktales",
+      "objectives": [
+        "identify features of folktales",
+        "retell folktales.",
+        "explain the themes of folktales",
+        "identify the moral lessons in folktales; and",
+        "narrate folktales."
+      ],
+      "content": "Knowledge 1. Identification of features and themes. 2. African and Non- African tales. 3. Purpose: didactic lessons, entertainment, etc. Skills Telling/narrating stories",
+      "evaluation": "Students to: 1. tell folktales; 2. present documented folktales; 3. draw lessons from folktales.",
+      "sourceFile": "NERDC_JSS1_English_From_First_Table.docx",
+      "pages": [
+        15
+      ],
+      "sourceVersion": "NERDC New Revised Basic Education Curriculum, September 2025",
+      "authority": "Nigerian Educational Research and Development Council (NERDC)",
+      "official": true
+    },
+    {
+      "classLevel": "JSS1",
+      "subject": "English Language",
+      "theme": "Literature",
+      "topic": "Myths and Legends",
+      "tableTopic": "Myths and Legends",
+      "objectives": [
+        "identify features of myths/legends",
+        "explain the themes of myths/legends",
+        "retell myths/legends",
+        "identify the moral lesson to be learnt from myths/legends; and",
+        "narrate any myths/legends"
+      ],
+      "content": "Knowledge 1. African and Non- African tales comprising myths and legends. 2. Features/Themes of myths and legends. - Supernatural figures - Superstitious beliefs Skills Telling/narrating myths and legends",
+      "evaluation": "Students to: 1. identify two features of myths/legends; 2. retell and explain the themes of myths and legends; 3. identify moral lesson learnt; and 4. narrate any myths and legends in their communities",
+      "sourceFile": "NERDC_JSS1_English_From_First_Table.docx",
+      "pages": [
+        16
+      ],
+      "sourceVersion": "NERDC New Revised Basic Education Curriculum, September 2025",
+      "authority": "Nigerian Educational Research and Development Council (NERDC)",
+      "official": true
+    },
+    {
+      "classLevel": "JSS1",
+      "subject": "English Language",
+      "theme": "Literature",
+      "topic": "Introduction to Prose Fiction",
+      "tableTopic": "Introduction to Prose Fiction",
+      "objectives": [
+        "explain the meaning of prose fiction",
+        "discuss types and features of prose",
+        "read and appreciate class- appropriate prose texts."
+      ],
+      "content": "Knowledge 1. Definition of prose fiction 2. Functions of prose fiction 3. Types: Narrative & Descriptive 4. Features: Plot, Characterization, Style, Setting, Theme, etc Skills Reading and appreciating prose texts",
+      "evaluation": "Students to: 1. explain the meaning of prose fiction 2. identify types of prose; 3. explain the features of prose; 4. differentiate the two types of prose; and 5. read and appreciate class- appropriate prose texts xviii",
+      "sourceFile": "NERDC_JSS1_English_From_First_Table.docx",
+      "pages": [
+        17
+      ],
+      "sourceVersion": "NERDC New Revised Basic Education Curriculum, September 2025",
+      "authority": "Nigerian Educational Research and Development Council (NERDC)",
+      "official": true
+    },
+    {
+      "classLevel": "JSS2",
+      "subject": "Mathematics",
+      "theme": "Number and Numeration",
+      "topic": "Whole Numbers",
+      "tableTopic": "Whole Numbers",
+      "objectives": [
+        "express any whole number in standard form and vice versa",
+        "express a decimal number in standard form and vice versa",
+        "find the prime factors not greater than 200",
+        "express numbers as a product of its prime factors",
+        "find the Least Common Multiples (LCM) of numbers",
+        "find the Highest Common Factor (HCF) of numbers."
+      ],
+      "content": "Knowledge 1. Whole numbers in Standard form. 2. Decimal numbers in standard form. 3. Prime factors. 4. Prime factorization. 5. LCM. 6. HCF. Skill Computing LCM and HCF",
+      "evaluation": "Students to: 1. express whole numbers in standard form and vice versa; 2. express decimal numbers in standard form and vice-versa; 3. express numbers as products of their prime factors. 4. find the Least Common Multiple (LCM) of numbers; 5. find the highest common factors of numbers.",
+      "sourceFile": "NERDC_JSS2_Mathematics_from_Roman_X_Complete_Tables.docx",
+      "pages": [
+        1
+      ],
+      "sourceVersion": "NERDC New Revised Basic Education Curriculum, September 2025",
+      "authority": "Nigerian Educational Research and Development Council (NERDC)",
+      "official": true
+    },
+    {
+      "classLevel": "JSS2",
+      "subject": "Mathematics",
+      "theme": "Number and Numeration",
+      "topic": "Square root of numbers",
+      "tableTopic": "Square root of numbers",
+      "objectives": [
+        "Identify numbers that are perfect squares",
+        "Find squares of any given numbers",
+        "find the square root of perfect squares using the factors method",
+        "find square root of any given number",
+        "solve quantitative reasoning problems involving square roots."
+      ],
+      "content": "1. Square and square roots 2. Quantitative aptitude Skill Calculating roots of numbers accurately.",
+      "evaluation": "Students to: 1. find the square of given numbers 2. find the square root of perfect squares using the factor method; 3. find the square root of any given number; 4. solve quantitative reasoning problems related to content iiv above.",
+      "sourceFile": "NERDC_JSS2_Mathematics_from_Roman_X_Complete_Tables.docx",
+      "pages": [
+        2
+      ],
+      "sourceVersion": "NERDC New Revised Basic Education Curriculum, September 2025",
+      "authority": "Nigerian Educational Research and Development Council (NERDC)",
+      "official": true
+    },
+    {
+      "classLevel": "JSS2",
+      "subject": "Mathematics",
+      "theme": "Number and Numeration",
+      "topic": "Fractions",
+      "tableTopic": "Fractions Students should be",
+      "objectives": [
+        "convert simple fractions to ratios, decimal and percentages and vice-versa",
+        "solve quantitative aptitude problems related to conversion of fractions to ratios, decimals and percentages."
+      ],
+      "content": "Knowledge Express fractions as ratios, decimals and percentages. Skill Computing fractionrelated issues accurately.",
+      "evaluation": "Students to: 1. convert fractions to ratios, decimals and percentages and vice versa; 2. solve quantitative aptitude problems involving the conversion of fractions to ratios, decimal and percentages.",
+      "sourceFile": "NERDC_JSS2_Mathematics_from_Roman_X_Complete_Tables.docx",
+      "pages": [
+        3
+      ],
+      "sourceVersion": "NERDC New Revised Basic Education Curriculum, September 2025",
+      "authority": "Nigerian Educational Research and Development Council (NERDC)",
+      "official": true
+    },
+    {
+      "classLevel": "JSS2",
+      "subject": "Mathematics",
+      "theme": "Basic Operations",
+      "topic": "Commercial Arithmetic",
+      "tableTopic": "Commercial Arithmetic",
+      "objectives": [
+        "Solve problems related to the office and household arithmetic",
+        "Solve problems in commercial arithmetic relating to profit and loss, interest, discount and commission."
+      ],
+      "content": "Knowledge Household, office and market arithmetic. Skill Solving simple Bookkeeping related arithmetic.",
+      "evaluation": "Students to: 1. solve problems with household and office arithmetic; 2. solve given problems on commercial arithmetic.",
+      "sourceFile": "NERDC_JSS2_Mathematics_from_Roman_X_Complete_Tables.docx",
+      "pages": [
+        4
+      ],
+      "sourceVersion": "NERDC New Revised Basic Education Curriculum, September 2025",
+      "authority": "Nigerian Educational Research and Development Council (NERDC)",
+      "official": true
+    },
+    {
+      "classLevel": "JSS2",
+      "subject": "Mathematics",
+      "theme": "Basic Operations",
+      "topic": "Approximation",
+      "tableTopic": "Approximation Students should be",
+      "objectives": [
+        "Approximate numbers to any given degree of accuracy",
+        "Solve quantitative aptitude problems related to approximation of numbers."
+      ],
+      "content": "Knowledge Approximation of numbers: • Decimal places • Significant figures • Quantitative aptitude Skill Approximating accurately to a given degree or significant figure",
+      "evaluation": "Students to: 1. solve simple problems relating to: • approximation of numbers to given decimal places; • approximation of numbers to certain significant figures. 2. solve quantitative aptitude problems involving approximation.",
+      "sourceFile": "NERDC_JSS2_Mathematics_from_Roman_X_Complete_Tables.docx",
+      "pages": [
+        5
+      ],
+      "sourceVersion": "NERDC New Revised Basic Education Curriculum, September 2025",
+      "authority": "Nigerian Educational Research and Development Council (NERDC)",
+      "official": true
+    },
+    {
+      "classLevel": "JSS2",
+      "subject": "Mathematics",
+      "theme": "Basic Operations",
+      "topic": "Multiplication and division of directed numbers",
+      "tableTopic": "Multiplication and division of directed numbers",
+      "objectives": [
+        "obtain the square and square roots of numbers using square root tables",
+        "interpret and use information from tables, charts, records and schedules of numbers",
+        "carry out multiplication and division involving directed numbers."
+      ],
+      "content": "Knowledge 1. Square and square roots tables. 2. Interpret information obtained from charts and tables 3. Multiplication and division involving directed numbers. Skills Computing multiplication and division of directed numbers",
+      "evaluation": "Students to: 1. find the squares and square roots of given numbers from the table; 2. interpret information obtained from tables, charts, records and schedules; 3. find the product of any given directed numbers. 4. find the quotient of any two given directed numbers.",
+      "sourceFile": "NERDC_JSS2_Mathematics_from_Roman_X_Complete_Tables.docx",
+      "pages": [
+        6
+      ],
+      "sourceVersion": "NERDC New Revised Basic Education Curriculum, September 2025",
+      "authority": "Nigerian Educational Research and Development Council (NERDC)",
+      "official": true
+    },
+    {
+      "classLevel": "JSS2",
+      "subject": "Mathematics",
+      "theme": "Algebraic Processes",
+      "topic": "Algebraic Expressions",
+      "tableTopic": "Algebraic Expressions",
+      "objectives": [
+        "expand the given algebraic expression",
+        "factorise simple algebraic expressions",
+        "apply the use of the quadratic equation box in expanding and factorising algebraic expressions",
+        "simplify algebraic expressions involving fractions with monomial denominators",
+        "interpret and solve word problems involving algebraic fractions",
+        "solve quantitative aptitude problems."
+      ],
+      "content": "Knowledge 1. Expansion of algebraic expressions; 2. Factorization of simple algebraic expressions; 3. Factorisations algebraic expressions; 4. Quantitative aptitude problems; 5. Algebraic expressions involving fractions with monomial denominators; 6. Word problems involving algebraic fractions. Skill Paying attention to detail and precision.",
+      "evaluation": "Students to: 1. Work in groups to brainstorm and discover strategies for solving problems involving algebraic expressions. 2. Expand algebraic expressions of the form a(b + c) and (a + b) x (c + d). 3. Use a quadratic equation box in expanding and factorising quadratic expressions. 4. Simplify fractional algebraic expressions. Example: • Flash cards • Quadratic Equation Box • Algebra tiles Students to: 1. expand algebraic expressions; 2. factorize algebraic expressions; 3. expand and factorize quadratic equations; 4. simplify fractional algebraic expressions with monomial denominators 5. solve word problems involving algebraic fractions; 6. solve quantitative aptitude problems.",
+      "sourceFile": "NERDC_JSS2_Mathematics_from_Roman_X_Complete_Tables.docx",
+      "pages": [
+        7
+      ],
+      "sourceVersion": "NERDC New Revised Basic Education Curriculum, September 2025",
+      "authority": "Nigerian Educational Research and Development Council (NERDC)",
+      "official": true
+    },
+    {
+      "classLevel": "JSS2",
+      "subject": "Mathematics",
+      "theme": "Algebraic Processes",
+      "topic": "Simple Equations",
+      "tableTopic": "Simple Equations",
+      "objectives": [
+        "solve problems on simple equations."
+      ],
+      "content": "Knowledge Solving problems on simple equations. Skills 1. Modeling realworld situations in equation form. 2. Representation of real-life situations in equation form.",
+      "evaluation": "Students to: 1. solve for the unknown number of oranges added: \" If Ade kept 7 oranges in his locker/bag after returning from break, he found 22 oranges even when his teacher told him 6 oranges had been taken from his locker/bag by him; 2. generate and solve problems on simple equations.",
+      "sourceFile": "NERDC_JSS2_Mathematics_from_Roman_X_Complete_Tables.docx",
+      "pages": [
+        8
+      ],
+      "sourceVersion": "NERDC New Revised Basic Education Curriculum, September 2025",
+      "authority": "Nigerian Educational Research and Development Council (NERDC)",
+      "official": true
+    },
+    {
+      "classLevel": "JSS2",
+      "subject": "Mathematics",
+      "theme": "Algebraic Processes",
+      "topic": "Linear Inequalities",
+      "tableTopic": "Linear Inequalities",
+      "objectives": [
+        "identify linear inequality in one variable",
+        "solve linear inequality in one variable",
+        "represent solutions of linear inequality in one variable on the number line graphically",
+        "solve word problems involving linear inequality in one variable."
+      ],
+      "content": "Knowledge 1. linear inequality in one variable; 2. Graphic representations of solutions of linear inequality in one variable. 3. Word problems",
+      "evaluation": "Students to: 1. identify the given linear inequality; 2. solve given problems on linear inequality in one variable; 3. interpret and solve word problems involving linear inequalities in one variable.",
+      "sourceFile": "NERDC_JSS2_Mathematics_from_Roman_X_Complete_Tables.docx",
+      "pages": [
+        9
+      ],
+      "sourceVersion": "NERDC New Revised Basic Education Curriculum, September 2025",
+      "authority": "Nigerian Educational Research and Development Council (NERDC)",
+      "official": true
+    },
+    {
+      "classLevel": "JSS2",
+      "subject": "Mathematics",
+      "theme": "Algebraic Processes",
+      "topic": "Graph",
+      "tableTopic": "Graph Students should be",
+      "objectives": [
+        "identify the x-axis and y-axis",
+        "plot points on the Cartesian plane",
+        "prepare table of values",
+        "plot and interpret the graph of linear equations in two variables",
+        "plot and interpret linear graphs from real-life situations",
+        "solve quantitative aptitude problems on graph-related issues."
+      ],
+      "content": "Knowledge 1. Plotting points on the Cartesian plane; 2. Graph of linear equations in two variables; 3. Interpret the plotted graph; 4. Linear graphs from real-life situations; 5. Quantitative aptitude. Skill Generating and interpreting linear graphs.",
+      "evaluation": "Students to: 1. identify the x-axis and y-axis on the Cartesian plane; 2. plots graphs on the Cartesian plane; 3. compile tables of values of given linear equations in two variables; 4. plot the graph of given linear equations in two variables; 5. plot graphs from real-life situations; 6. solve quantitative aptitude problems related to graph issues.",
+      "sourceFile": "NERDC_JSS2_Mathematics_from_Roman_X_Complete_Tables.docx",
+      "pages": [
+        10
+      ],
+      "sourceVersion": "NERDC New Revised Basic Education Curriculum, September 2025",
+      "authority": "Nigerian Educational Research and Development Council (NERDC)",
+      "official": true
+    },
+    {
+      "classLevel": "JSS2",
+      "subject": "Mathematics",
+      "theme": "Measurement And Geometry",
+      "topic": "Plane Figure/ Shapes",
+      "tableTopic": "Plane Figure/ Shapes",
+      "objectives": [
+        "state the properties of parallelogram, rhombus and kits",
+        "identify these shapes in their environment",
+        "draw plane objects to scale",
+        "convert actual length to scales and vice versa",
+        "apply scale drawing to solve measurement problem",
+        "solve problems on quantitative aptitude related to plane shapes/ figures and scale drawing."
+      ],
+      "content": "Knowledge 1. Properties of parallelogram, rhombus and kits. 2. Scale drawing.",
+      "evaluation": "Students to: 1. state the properties of plane shapes/figures; 2. draw shapes/figures to given the scale to use; 3. convert actual length to scale; 4. solve measurement problems using the idea of scale drawing; 5. solve quantitative aptitude problems involving plane shapes/figures and scale drawing.",
+      "sourceFile": "NERDC_JSS2_Mathematics_from_Roman_X_Complete_Tables.docx",
+      "pages": [
+        11
+      ],
+      "sourceVersion": "NERDC New Revised Basic Education Curriculum, September 2025",
+      "authority": "Nigerian Educational Research and Development Council (NERDC)",
+      "official": true
+    },
+    {
+      "classLevel": "JSS2",
+      "subject": "Mathematics",
+      "theme": "Measurement And Geometry",
+      "topic": "Angles",
+      "tableTopic": "Angles Students should be",
+      "objectives": [
+        "Find the sum of the angles of triangles",
+        "Find the sum of angles in a quadrilateral",
+        "Find the sum of the interior angles of a polygon",
+        "Distinguish between angles of elevation and angles of depression",
+        "Use angles of elevation and depression in calculating distances and heights using scale drawing",
+        "Identify the relationship between angles of elevation and depression",
+        "Solve quantitative aptitude problems related to angles"
+      ],
+      "content": "Knowledge 1. Sum of angles of a polygon. 2. Angles of elevation and depression. Skill Measuring angles.",
+      "evaluation": "Students to: 1. find the sum of angles of triangles; 2. find the sum of angles in a quadrilateral; 3. find the sum of interior angles of a given polygon; 4. distinguish between angles elevation and angles of depression; 5. use angles of elevation and depression in calculating distances and heights using scaling drawing; 6. solve problems on quantitative aptitude related to angles. elevation and depression; 7. solve problems on quantitative aptitude related to angles. heights using scaling drawing. 6. Identify the relationship between angles of elevation and depression. 7. Solve problems on quantitative aptitude related to angles.",
+      "sourceFile": "NERDC_JSS2_Mathematics_from_Roman_X_Complete_Tables.docx",
+      "pages": [
+        12
+      ],
+      "sourceVersion": "NERDC New Revised Basic Education Curriculum, September 2025",
+      "authority": "Nigerian Educational Research and Development Council (NERDC)",
+      "official": true
+    },
+    {
+      "classLevel": "JSS2",
+      "subject": "Mathematics",
+      "theme": "Measurement And Geometry",
+      "topic": "Bearing",
+      "tableTopic": "Bearing Students should be",
+      "objectives": [
+        "identify the cardinal points",
+        "locate the position of objects",
+        "measure distances between objects using scale drawing."
+      ],
+      "content": "Knowledge Bearing of objects Skill Measuring distance between two points using scale drawing.",
+      "evaluation": "Students to: 1. identify major and minor cardinal points; 2. locate position of objects; 3. find distances between points using scale drawing.",
+      "sourceFile": "NERDC_JSS2_Mathematics_from_Roman_X_Complete_Tables.docx",
+      "pages": [
+        14
+      ],
+      "sourceVersion": "NERDC New Revised Basic Education Curriculum, September 2025",
+      "authority": "Nigerian Educational Research and Development Council (NERDC)",
+      "official": true
+    },
+    {
+      "classLevel": "JSS2",
+      "subject": "Mathematics",
+      "theme": "Measurement And Geometry",
+      "topic": "Construction",
+      "tableTopic": "Construction Students should be",
+      "objectives": [
+        "Construct triangles given two sides and an included angle",
+        "Construct triangles given two angles and the side between them",
+        "Construct triangles given all three sides",
+        "Bisect any given angle"
+      ],
+      "content": "Knowledge and skills: construction of triangles from sufficient side/angle information and bisection of angles using appropriate geometric instruments.",
+      "evaluation": "",
+      "sourceFile": "NERDC_JSS2_Mathematics_from_Roman_X_Complete_Tables.docx",
+      "pages": [
+        15
+      ],
+      "sourceVersion": "NERDC New Revised Basic Education Curriculum, September 2025",
+      "authority": "Nigerian Educational Research and Development Council (NERDC)",
+      "official": true
+    },
+    {
+      "classLevel": "JSS2",
+      "subject": "Mathematics",
+      "theme": "Everyday Statistics",
+      "topic": "Data Presentation",
+      "tableTopic": "Data Presentation",
+      "objectives": [
+        "present data in an ordered form",
+        "construct frequency tables from any given data set from familiar events",
+        "read information from pie charts",
+        "calculate the Interquartile Range of a set of data, compare and interpret the data distribution trends and make judgments",
+        "use box plots (via computer or other information means) to organise, represent data, compare and interpret the data distribution trends and make judgments."
+      ],
+      "content": "Knowledge 1. Ordered presentation of data set. 2. Construction of frequency tables and Pie charts. 3. Interquartile range 4. Box plots. Skill Using box plots and interquartile ranges to compare and interpret data distribution trends.",
+      "evaluation": "Students to: 1. present data in an ordered form; 2. construct frequency tables from any given data; 3. read information from pie chats; 4. calculate and interpret the Interquartile Range of a set of data and make judgments; 5. use box plots (via computer or other information means) to organise, represent data, and make judgments.",
+      "sourceFile": "NERDC_JSS2_Mathematics_from_Roman_X_Complete_Tables.docx",
+      "pages": [
+        16
+      ],
+      "sourceVersion": "NERDC New Revised Basic Education Curriculum, September 2025",
+      "authority": "Nigerian Educational Research and Development Council (NERDC)",
+      "official": true
+    },
+    {
+      "classLevel": "JSS2",
+      "subject": "Mathematics",
+      "theme": "Everyday Statistics",
+      "topic": "Probability",
+      "tableTopic": "Probability Students should be",
+      "objectives": [
+        "discuss the occurrence of chance events in everyday life",
+        "determine the probability of certain events",
+        "apply the occurrence/ probability to consider and represent uncertain events in everyday life."
+      ],
+      "content": "Knowledge 1. Occurrence of chance events in everyday life; 2. Probability of certain events; Skills 1. Prediction of events or occurrences 2. Making accurate inferences based on events.",
+      "evaluation": "Students to: 1. give the occurrence of chance events; 2. calculate the probability of certain chance events; 3. give examples of the application of probability in everyday life. 18",
+      "sourceFile": "NERDC_JSS2_Mathematics_from_Roman_X_Complete_Tables.docx",
+      "pages": [
+        17
+      ],
+      "sourceVersion": "NERDC New Revised Basic Education Curriculum, September 2025",
+      "authority": "Nigerian Educational Research and Development Council (NERDC)",
+      "official": true
+    },
+    {
+      "classLevel": "JSS2",
+      "subject": "English Language",
+      "theme": "Listening and Speaking",
+      "topic": "Debate",
+      "tableTopic": "Debate",
+      "objectives": [
+        "discuss the elements of debate",
+        "engage in debate on different topics using appropriate word register"
+      ],
+      "content": "Knowledge 1. Debate: • Meaning • Procedure • Elements: appropriateness of words, sentences, tenses, gestures, postures. 2. Engagement in debates on different topics e.g. “The Use of Artificial Intelligence does more harm than good in our educational system”",
+      "evaluation": "Students to:",
+      "sourceFile": "NERDC_JSS2_English_Studies_from_Roman_X.docx",
+      "pages": [
+        1
+      ],
+      "sourceVersion": "NERDC New Revised Basic Education Curriculum, September 2025",
+      "authority": "Nigerian Educational Research and Development Council (NERDC)",
+      "official": true
+    },
+    {
+      "classLevel": "JSS2",
+      "subject": "English Language",
+      "theme": "Listening and Speaking",
+      "topic": "Oral Comprehension",
+      "tableTopic": "Oral Comprehension",
+      "objectives": [
+        "listen attentively to a short oral passage",
+        "identify the main ideas of the passage",
+        "Infer the meaning of unfamiliar words from context",
+        "interpret the speaker’s mood, tone and purpose",
+        "generate comprehension questions from a given passage."
+      ],
+      "content": "Knowledge Oral passages (read aloud by the teacher or played as an audio) on various issues such as: 1. Religious tolerance 2. Purpose of Human Trafficking: - Prostitution - Begging - Hawking - House help - Labour, etc. 3. Budgeting for better savings and spending decisions. 3. Discipline in the School 5. Peaceful co-existence 6. Why citizens should pay tax.",
+      "evaluation": "Students to:",
+      "sourceFile": "NERDC_JSS2_English_Studies_from_Roman_X.docx",
+      "pages": [
+        2
+      ],
+      "sourceVersion": "NERDC New Revised Basic Education Curriculum, September 2025",
+      "authority": "Nigerian Educational Research and Development Council (NERDC)",
+      "official": true
+    },
+    {
+      "classLevel": "JSS2",
+      "subject": "English Language",
+      "theme": "Listening and Speaking",
+      "topic": "Oral Summary",
+      "tableTopic": "Oral Summary",
+      "objectives": [
+        "listen attentively to a short oral passage",
+        "Summarize the short oral passages."
+      ],
+      "content": "Knowledge 1. Oral passages (read aloud by the teacher or played as an audio). 2. Oral summary.",
+      "evaluation": "",
+      "sourceFile": "NERDC_JSS2_English_Studies_from_Roman_X.docx",
+      "pages": [
+        3
+      ],
+      "sourceVersion": "NERDC New Revised Basic Education Curriculum, September 2025",
+      "authority": "Nigerian Educational Research and Development Council (NERDC)",
+      "official": true
+    },
+    {
+      "classLevel": "JSS2",
+      "subject": "English Language",
+      "theme": "Reading",
+      "topic": "Reading with Fluency",
+      "tableTopic": "Reading with Fluency",
+      "objectives": [
+        "read fluently with speed, accuracy, comprehension and prosody (good pronunciation)",
+        "give correct answers to questions on passages read."
+      ],
+      "content": "Knowledge 1. Fluency skills: • Accurate word recognition • Proper pronunciation • Appropriate reading speed • Observance of punctuation • expression and intonation • Reading with confidence • Reading with understanding 2. Conditions for fluent reading: good eyesight, speed, avoiding word vocalization during reading, avoiding regressive reading, increasing eye span while reading and reading phrases instead of words. Skills Reading fluently",
+      "evaluation": "Students to:",
+      "sourceFile": "NERDC_JSS2_English_Studies_from_Roman_X.docx",
+      "pages": [
+        4
+      ],
+      "sourceVersion": "NERDC New Revised Basic Education Curriculum, September 2025",
+      "authority": "Nigerian Educational Research and Development Council (NERDC)",
+      "official": true
+    },
+    {
+      "classLevel": "JSS2",
+      "subject": "English Language",
+      "theme": "Reading",
+      "topic": "Reading to Understand the Writer’s Purpose",
+      "tableTopic": "Reading to Understand the Writer’s Purpose",
+      "objectives": [
+        "identify the use of certain expressions/key words that point to the intention of writers",
+        "recount prior experience to infer the author’s intention in a passage."
+      ],
+      "content": "Knowledge 1. Understanding the writer’s purpose(s) in a passage e.g. to persuade, inform, convince, irritate, annoy, please, entertain, dissuade, stimulate thought or indoctrinate 2. Identifying the purpose of the writers in selected passages on contemporary issues; e.g. inflation, HIV/AIDS, risk factors in human trafficking, risk factors in food, first aid, environmental issues, mobile communication, electronic banking (ebanking), corruption, road safety, etc.",
+      "evaluation": "Students to:",
+      "sourceFile": "NERDC_JSS2_English_Studies_from_Roman_X.docx",
+      "pages": [
+        5
+      ],
+      "sourceVersion": "NERDC New Revised Basic Education Curriculum, September 2025",
+      "authority": "Nigerian Educational Research and Development Council (NERDC)",
+      "official": true
+    },
+    {
+      "classLevel": "JSS2",
+      "subject": "English Language",
+      "theme": "Reading",
+      "topic": "Reading to Identify the Meanings of Words in Various Contexts",
+      "tableTopic": "Reading to Identify the Meanings of Words in Various Contexts",
+      "objectives": [
+        "use clues provided by surrounding words to arrive at the meanings of certain words",
+        "list other possible words that can fit into the context. Reading for meanings of words in various contexts through: - clues provided by surrounding words. - alternative words that can fit into the context."
+      ],
+      "content": "Knowledge and skills: reading for meanings of words in various contexts through clues provided by surrounding words and through alternative words or phrases that can fit into the context. Learners explain target words using surrounding words, phrases and sentences, and propose alternatives that preserve the context.",
+      "evaluation": "Students to:",
+      "sourceFile": "NERDC_JSS2_English_Studies_from_Roman_X.docx",
+      "pages": [
+        6
+      ],
+      "sourceVersion": "NERDC New Revised Basic Education Curriculum, September 2025",
+      "authority": "Nigerian Educational Research and Development Council (NERDC)",
+      "official": true
+    },
+    {
+      "classLevel": "JSS2",
+      "subject": "English Language",
+      "theme": "Reading",
+      "topic": "Critical Reading",
+      "tableTopic": "Critical Reading",
+      "objectives": [
+        "explain the meaning and steps of critical reading",
+        "read a passage and identify facts and opinions.",
+        "Meaning and steps of critical reading",
+        "The critical reading process—surveying, skimming, line-byline reading, recalling and re-reading.",
+        "Reading to identify facts and opinions."
+      ],
+      "content": "Knowledge and skills: meaning and steps of critical reading; the critical reading process of surveying, skimming, line-by-line reading, recalling and re-reading; reading to identify facts and opinions, including evaluating social-media information, fake news and scam messages.",
+      "evaluation": "Students to:",
+      "sourceFile": "NERDC_JSS2_English_Studies_from_Roman_X.docx",
+      "pages": [
+        7
+      ],
+      "sourceVersion": "NERDC New Revised Basic Education Curriculum, September 2025",
+      "authority": "Nigerian Educational Research and Development Council (NERDC)",
+      "official": true
+    },
+    {
+      "classLevel": "JSS2",
+      "subject": "English Language",
+      "theme": "Reading",
+      "topic": "Reading for Summary",
+      "tableTopic": "Reading for Summary",
+      "objectives": [
+        "identify topic sentences from paragraphs/passage s",
+        "identify the key ideas from different paragraphs",
+        "identify words and expressions that redirect attention to the main point."
+      ],
+      "content": "Knowledge Techniques for Summary Reading: 1. Identifying topic sentences from paragraphs and passages on topical issues e.g. entrepreneurship, youth unemployment, combating drug counterfeiting , poverty and inequality, Robotics, human rights, disability and inclusion, online learning, etc. 2. Identifying key ideas in different paragraphs/passages 3. Identifying words and expressions that signal or redirect attention to the main point.",
+      "evaluation": "Students to:",
+      "sourceFile": "NERDC_JSS2_English_Studies_from_Roman_X.docx",
+      "pages": [
+        8
+      ],
+      "sourceVersion": "NERDC New Revised Basic Education Curriculum, September 2025",
+      "authority": "Nigerian Educational Research and Development Council (NERDC)",
+      "official": true
+    },
+    {
+      "classLevel": "JSS2",
+      "subject": "English Language",
+      "theme": "Grammatical Accuracy",
+      "topic": "Parts of Speech: Noun, Pronoun, Verb and Adjective",
+      "tableTopic": "Parts of Speech: Noun, Pronoun, Verb and Adjective",
+      "objectives": [
+        "identify the features of a noun, pronoun, verb and adjective",
+        "state the functions of nouns, pronouns, verbs and adjectives",
+        "classify words into appropriate categories",
+        "make sentences with nouns, pronouns, verbs and adjectives."
+      ],
+      "content": "Knowledge 1. Meaning of noun, pronoun, verb and adjective. 2. Functions of nouns, pronouns, verbs and adjectives. 3. Making sentences with nouns, pronouns, verbs and adjectives",
+      "evaluation": "Students to:",
+      "sourceFile": "NERDC_JSS2_English_Studies_from_Roman_X.docx",
+      "pages": [
+        9
+      ],
+      "sourceVersion": "NERDC New Revised Basic Education Curriculum, September 2025",
+      "authority": "Nigerian Educational Research and Development Council (NERDC)",
+      "official": true
+    },
+    {
+      "classLevel": "JSS2",
+      "subject": "English Language",
+      "theme": "Grammatical Accuracy",
+      "topic": "Parts of Speech: Adverbs, Conjunctions, Prepositions and interjections",
+      "tableTopic": "Parts of Speech: Adverbs, Conjunctions, Prepositions and interjections",
+      "objectives": [
+        "identify the features of adverbs, conjunctions, preposition and interjection",
+        "list the functions of adverbs, conjunctions, preposition and interjection",
+        "make sentences with adverbs, conjunctions, preposition and interjection."
+      ],
+      "content": "Knowledge 1. Meaning of adverbs, conjunctions, prepositions and interjections. 2. Functions of adverbs, conjunctions, prepositions and interjections. 3. Making sentences with adverbs, conjunctions, prepositions and interjections. Skill Classifying words appropriately",
+      "evaluation": "Students to:",
+      "sourceFile": "NERDC_JSS2_English_Studies_from_Roman_X.docx",
+      "pages": [
+        10
+      ],
+      "sourceVersion": "NERDC New Revised Basic Education Curriculum, September 2025",
+      "authority": "Nigerian Educational Research and Development Council (NERDC)",
+      "official": true
+    },
+    {
+      "classLevel": "JSS2",
+      "subject": "English Language",
+      "theme": "Grammatical Accuracy",
+      "topic": "Direct and Indirect Speeches",
+      "tableTopic": "Direct and Indirect Speeches",
+      "objectives": [
+        "Explain the meaning of direct and indirect speeches",
+        "change direct speeches to indirect speeches."
+      ],
+      "content": "Knowledge 1. Meaning and examples of direct and indirect speeches. • Direct speeches e.g. - “I am no longer a child”, he said; - “Aminu, catch the ball”, John commanded - “Can I close the door, please?”, Janelle requested. • Indirect speeches e.g. - He said that he was no longer a child; - John ordered Aminu to catch the ball; - Janelle asked if she could close the door. 2. changing direct speeches to indirect speeches",
+      "evaluation": "Students to:",
+      "sourceFile": "NERDC_JSS2_English_Studies_from_Roman_X.docx",
+      "pages": [
+        11
+      ],
+      "sourceVersion": "NERDC New Revised Basic Education Curriculum, September 2025",
+      "authority": "Nigerian Educational Research and Development Council (NERDC)",
+      "official": true
+    },
+    {
+      "classLevel": "JSS2",
+      "subject": "English Language",
+      "theme": "Grammatical Accuracy",
+      "topic": "Sentence Types (function): Declarative, Interrogative, Imperative (command) and Exclamatory",
+      "tableTopic": "Sentence Types (function): Declarative, Interrogative, Imperative (command) and Exclamatory",
+      "objectives": [
+        "explain the various sentence types with examples",
+        "Make sentences involving the various sentence types."
+      ],
+      "content": "Knowledge 1. Meaning and examples of declarative, interrogative, imperative and exclamatory sentences. 2. Constructing various sentence types.",
+      "evaluation": "Students to:",
+      "sourceFile": "NERDC_JSS2_English_Studies_from_Roman_X.docx",
+      "pages": [
+        12
+      ],
+      "sourceVersion": "NERDC New Revised Basic Education Curriculum, September 2025",
+      "authority": "Nigerian Educational Research and Development Council (NERDC)",
+      "official": true
+    },
+    {
+      "classLevel": "JSS2",
+      "subject": "English Language",
+      "theme": "Grammatical Accuracy",
+      "topic": "Structural Sentence Types (simple, compound and complex)",
+      "tableTopic": "Structural Sentence Types (simple, compound and complex)",
+      "objectives": [
+        "explain the meanings of simple, compound and complex sentences",
+        "construct simple, compound and complex sentences",
+        "identify simple, compound and complex sentences in passages."
+      ],
+      "content": "Knowledge 1. Meanings of simple, compound and complex sentences 2. Construction of simple, compound and complex sentences. 3. Identification of simple, compound and complex sentences in texts.",
+      "evaluation": "Students to:",
+      "sourceFile": "NERDC_JSS2_English_Studies_from_Roman_X.docx",
+      "pages": [
+        13
+      ],
+      "sourceVersion": "NERDC New Revised Basic Education Curriculum, September 2025",
+      "authority": "Nigerian Educational Research and Development Council (NERDC)",
+      "official": true
+    },
+    {
+      "classLevel": "JSS2",
+      "subject": "English Language",
+      "theme": "Grammatical Accuracy",
+      "topic": "Tenses",
+      "tableTopic": "Tenses",
+      "objectives": [
+        "describe various tenses",
+        "appropriately construct sentences in various tenses."
+      ],
+      "content": "Knowledge 1. Tenses: Present, present continuous, past, past continuous, future, future continuous, perfect tense, etc 2. Construction of sentences in various tenses.",
+      "evaluation": "Students to:",
+      "sourceFile": "NERDC_JSS2_English_Studies_from_Roman_X.docx",
+      "pages": [
+        14
+      ],
+      "sourceVersion": "NERDC New Revised Basic Education Curriculum, September 2025",
+      "authority": "Nigerian Educational Research and Development Council (NERDC)",
+      "official": true
+    },
+    {
+      "classLevel": "JSS2",
+      "subject": "English Language",
+      "theme": "Writing",
+      "topic": "Composition Writing: Expository and Argumentative Essays",
+      "tableTopic": "Composition Writing: Expository and Argumentative Essays",
+      "objectives": [
+        "identify various types of composition writing",
+        "list the elements of a composition",
+        "write expository and argumentative compositions",
+        "Types of Composition: - Narrative - Descriptive - Argumentative - Expository",
+        "Elements of Composition: - Introduction: - Body - Conclusion",
+        "Arrangement of ideas in logical sequence.",
+        "Writing expository and argumentative compositions on given topics e.g . The effects of climate change on Nigerian Agriculture; Is social media a distraction for students? Should boys and girls attend the same school?"
+      ],
+      "content": "Knowledge and skills: types of composition—narrative, descriptive, argumentative and expository; elements of composition—introduction, body and conclusion; arranging ideas in logical sequence; writing expository and argumentative compositions on appropriate topical issues.",
+      "evaluation": "Students to:",
+      "sourceFile": "NERDC_JSS2_English_Studies_from_Roman_X.docx",
+      "pages": [
+        15
+      ],
+      "sourceVersion": "NERDC New Revised Basic Education Curriculum, September 2025",
+      "authority": "Nigerian Educational Research and Development Council (NERDC)",
+      "official": true
+    },
+    {
+      "classLevel": "JSS2",
+      "subject": "English Language",
+      "theme": "Writing",
+      "topic": "Letter Writing: Informal and Formal",
+      "tableTopic": "Letter Writing: Informal and Formal",
+      "objectives": [
+        "identify the types and formats of letters",
+        "write different types of letters to suit different situations."
+      ],
+      "content": "Knowledge 1. Types of Letters: - Formal - Informal 2. Features of informal and formal letters: • Formal Letters: have conventional forms of two addresses, opening salutation, correct heading, body of the letter, closing and signature. • Informal Letters: One address, opening salutation, body of the letter and closing.",
+      "evaluation": "Students to:",
+      "sourceFile": "NERDC_JSS2_English_Studies_from_Roman_X.docx",
+      "pages": [
+        16
+      ],
+      "sourceVersion": "NERDC New Revised Basic Education Curriculum, September 2025",
+      "authority": "Nigerian Educational Research and Development Council (NERDC)",
+      "official": true
+    },
+    {
+      "classLevel": "JSS2",
+      "subject": "English Language",
+      "theme": "Literature",
+      "topic": "Reading class-appropriate plays",
+      "tableTopic": "Reading class-appropriate plays",
+      "objectives": [
+        "Read classappropriate plays",
+        "identify the features of a play such as: plot, characterisation, dialogue, etc,"
+      ],
+      "content": "Knowledge 1. Reading recommended plays 2. Features of a play: plot, characterisation, dialogue, acts, scenes, etc.",
+      "evaluation": "Students to:",
+      "sourceFile": "NERDC_JSS2_English_Studies_from_Roman_X.docx",
+      "pages": [
+        17
+      ],
+      "sourceVersion": "NERDC New Revised Basic Education Curriculum, September 2025",
+      "authority": "Nigerian Educational Research and Development Council (NERDC)",
+      "official": true
+    },
+    {
+      "classLevel": "JSS2",
+      "subject": "English Language",
+      "theme": "Literature",
+      "topic": "Skit-making",
+      "tableTopic": "Skit-making",
+      "objectives": [
+        "explain the meaning and functions of skits",
+        "Create good skits"
+      ],
+      "content": "Knowledge 1. Meaning and functions of skits 2. Creating skits on various issues such as: • The dangers of cultism • The danger of bullying in school • The danger of examination malpractice • Respect for elders • The importance of community service Skill Creating good skits",
+      "evaluation": "Students to:",
+      "sourceFile": "NERDC_JSS2_English_Studies_from_Roman_X.docx",
+      "pages": [
+        19
+      ],
+      "sourceVersion": "NERDC New Revised Basic Education Curriculum, September 2025",
+      "authority": "Nigerian Educational Research and Development Council (NERDC)",
+      "official": true
+    },
+    {
+      "classLevel": "JSS2",
+      "subject": "English Language",
+      "theme": "Literature",
+      "topic": "Writing dialogues",
+      "tableTopic": "Writing dialogues",
+      "objectives": [
+        "write conversations between two or more characters."
+      ],
+      "content": "Knowledge Writing Dialogues",
+      "evaluation": "Students to write conversations between two or more characters. 21",
+      "sourceFile": "NERDC_JSS2_English_Studies_from_Roman_X.docx",
+      "pages": [
+        20
+      ],
+      "sourceVersion": "NERDC New Revised Basic Education Curriculum, September 2025",
+      "authority": "Nigerian Educational Research and Development Council (NERDC)",
+      "official": true
+    }
+  ]
+}

@@ -1,0 +1,2 @@
+import {requireAdmin} from '@/lib/admin/access';import LiveAssessmentCreator from '@/components/LiveAssessmentCreator';
+export default async function New(){await requireAdmin();return <main className="shell admin-v103"><header className="admin-section-head"><div><span className="eyebrow">CREATE LIVE ASSESSMENT</span><h1>Build the session around what students have actually learned.</h1><p>Use covered-topic intelligence or select the exact topics yourself.</p></div></header><LiveAssessmentCreator/></main>}

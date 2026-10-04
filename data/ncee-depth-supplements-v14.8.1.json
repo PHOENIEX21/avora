@@ -1,0 +1,1846 @@
+{
+  "version": "14.8.1",
+  "supplements": {
+    "ncee-source-p5-english-studies-first-term-nouns-pronouns-verbs": {
+      "concepts": [
+        "A part of speech describes the job a word is doing in a sentence. The same word can sometimes do different jobs in different sentences, so use context.",
+        "Nouns name people, places, animals, things or ideas; pronouns replace nouns; verbs express actions or states.",
+        "Identify the word’s job by asking what it names, replaces or tells about the subject."
+      ],
+      "workedExamples": [
+        "“Ada carried her bag.” Ada and bag are nouns; carried is a verb; her is a pronoun/determiner referring to Ada.",
+        "“The play was fun.” Play is a noun here, but in “They play daily,” play is a verb."
+      ],
+      "practiceQuestions": [
+        "Identify the nouns and verb in “The pupils opened their books.”",
+        "Replace repeated nouns with suitable pronouns in a short sentence.",
+        "Use “play” once as a noun and once as a verb."
+      ],
+      "basis": "AVORA-authored depth supplement derived from the supplied topic scope; used only to fill missing teaching phases, examples or checks."
+    },
+    "ncee-source-p5-english-studies-first-term-adjectives": {
+      "concepts": [
+        "Adjectives describe or give more information about nouns. Comparatives compare two; superlatives compare three or more.",
+        "Many comparatives use -er and superlatives use -est, but longer adjectives often use more/most and irregular forms must be learned in context.",
+        "Plural forms show more than one; regular nouns often add -s/-es, while some are irregular."
+      ],
+      "workedExamples": [
+        "tall → taller → tallest; beautiful → more beautiful → most beautiful.",
+        "child → children and tooth → teeth are irregular plurals."
+      ],
+      "practiceQuestions": [
+        "Write the comparative and superlative of “bright.”",
+        "Give the plural of “knife” and “child.”",
+        "Choose correctly: This is the (more difficult / most difficult) of the two questions."
+      ],
+      "basis": "AVORA-authored depth supplement derived from the supplied topic scope; used only to fill missing teaching phases, examples or checks."
+    },
+    "ncee-source-p5-english-studies-first-term-simple-and-compound-sentences": {
+      "concepts": [
+        "A complete sentence expresses a complete thought and normally contains a subject and a verb.",
+        "A simple sentence has one main independent clause; a compound sentence joins two independent ideas with a suitable coordinator such as and, but, or, so.",
+        "Punctuation and conjunction choice must match the relationship between the ideas."
+      ],
+      "workedExamples": [
+        "“I finished my work.” is simple. “I finished my work, so I went outside.” is compound.",
+        "“It was raining, but we played.” uses but to show contrast."
+      ],
+      "practiceQuestions": [
+        "Write one simple sentence.",
+        "Join “She studied. She passed.” into a compound sentence.",
+        "Explain why “Because I was late.” is incomplete on its own in normal use."
+      ],
+      "basis": "AVORA-authored depth supplement derived from the supplied topic scope; used only to fill missing teaching phases, examples or checks."
+    },
+    "ncee-source-p5-english-studies-first-term-reading-comprehension": {
+      "concepts": [
+        "Read a comprehension passage for meaning before answering. First identify the main idea, then locate details and clues for inference.",
+        "A detail answer should be supported by exact information from the passage; an inference combines passage clues with logical reasoning without inventing new facts.",
+        "For vocabulary in context, replace the word with a possible meaning and reread the sentence to see whether the meaning still fits."
+      ],
+      "workedExamples": [
+        "If a passage says “Amina carried an umbrella because dark clouds gathered,” we can infer she expected rain, although the passage may not state that exact sentence.",
+        "If the question asks for two barriers and the passage names cost and poor network, both must appear in the answer."
+      ],
+      "practiceQuestions": [
+        "State the main idea of a short paragraph in one sentence.",
+        "Find one stated detail and one reasonable inference from a passage.",
+        "Explain how you would work out the meaning of an unfamiliar word from context."
+      ],
+      "basis": "AVORA-authored depth supplement derived from the supplied topic scope; used only to fill missing teaching phases, examples or checks."
+    },
+    "ncee-source-p5-english-studies-first-term-vocabulary": {
+      "concepts": [
+        "Vocabulary means understanding and using words accurately in context. A word’s meaning can change with the sentence around it.",
+        "Synonyms are close in meaning; antonyms are opposites. Always test the proposed word in the sentence.",
+        "Prefixes, suffixes, roots, examples and contrasts can provide clues to unfamiliar words."
+      ],
+      "workedExamples": [
+        "In “The rapid car passed us,” rapid means fast.",
+        "Generous and selfish contrast strongly in the context of sharing."
+      ],
+      "practiceQuestions": [
+        "Give a synonym for “rapid.”",
+        "Give an antonym for “scarce.”",
+        "Use context to explain “bright” in two different sentences."
+      ],
+      "basis": "AVORA-authored depth supplement derived from the supplied topic scope; used only to fill missing teaching phases, examples or checks."
+    },
+    "ncee-source-p5-english-studies-first-term-writing": {
+      "concepts": [
+        "Good writing begins with a clear purpose and audience. Plan the main idea before drafting.",
+        "Organise ideas in a sensible order, use complete sentences and connect related ideas into paragraphs.",
+        "Revise after writing: check meaning, grammar, spelling, punctuation and whether every sentence supports the purpose."
+      ],
+      "workedExamples": [
+        "Plan three points before writing a paragraph about your school.",
+        "Improve “My school is nice. It is nice. I like it.” by adding specific details and removing repetition."
+      ],
+      "practiceQuestions": [
+        "Write a topic sentence about a memorable day.",
+        "List three checks to make during revision.",
+        "Reorder three ideas into a logical paragraph plan."
+      ],
+      "basis": "AVORA-authored depth supplement derived from the supplied topic scope; used only to fill missing teaching phases, examples or checks."
+    },
+    "ncee-source-p5-english-studies-first-term-spelling-and-dictation": {
+      "concepts": [
+        "Spelling is the conventional letter pattern used to write words. Dictation checks careful listening, word boundaries, spelling and punctuation.",
+        "Break unfamiliar words into syllables or meaningful parts and compare them with known patterns, but verify irregular words because sound alone is not always enough.",
+        "After dictation, reread the whole sentence for missing words, capitals and punctuation as well as spelling."
+      ],
+      "workedExamples": [
+        "necessary can be checked by syllables and visual pattern: nec-es-sar-y.",
+        "In dictation, “They’re going home.” requires understanding that they’re means they are."
+      ],
+      "practiceQuestions": [
+        "Spell “beautiful” and “necessary.”",
+        "Write a dictated sentence with correct capitalisation and punctuation.",
+        "Give one strategy for checking an unfamiliar spelling."
+      ],
+      "basis": "AVORA-authored depth supplement derived from the supplied topic scope; used only to fill missing teaching phases, examples or checks."
+    },
+    "ncee-source-p5-english-studies-second-term-adverbs-prepositions-conjunctions": {
+      "concepts": [
+        "Adverbs add information about verbs, adjectives or other adverbs; prepositions show relationships such as place or time; conjunctions join words, phrases or clauses.",
+        "Ask what job the word performs in the sentence instead of judging only by its spelling.",
+        "Conjunctions show relationships such as addition, contrast, cause or choice, so choose one that matches the meaning."
+      ],
+      "workedExamples": [
+        "“She ran quickly across the field because she was late.” quickly is an adverb, across is a preposition, because is a conjunction.",
+        "“Although he was tired, he finished.” Although signals contrast."
+      ],
+      "practiceQuestions": [
+        "Identify the adverb and preposition in “The dog slept quietly under the table.”",
+        "Join two sentences with “because.”",
+        "Choose a conjunction that shows contrast."
+      ],
+      "basis": "AVORA-authored depth supplement derived from the supplied topic scope; used only to fill missing teaching phases, examples or checks."
+    },
+    "ncee-source-p5-english-studies-second-term-subject-verb-agreement": {
+      "concepts": [
+        "Subject–verb agreement means the verb form must match the subject in number and person.",
+        "Find the true subject before choosing the verb; words between subject and verb can distract you.",
+        "With present-tense third-person singular subjects, the verb often takes -s, while plural subjects use the base form."
+      ],
+      "workedExamples": [
+        "“The boy runs.” but “The boys run.”",
+        "“The box of books is heavy.” The true subject is box, not books."
+      ],
+      "practiceQuestions": [
+        "Choose: The list of names (is/are) on the desk.",
+        "Correct: She walk to school every day.",
+        "Explain why “The dogs barks” is wrong."
+      ],
+      "basis": "AVORA-authored depth supplement derived from the supplied topic scope; used only to fill missing teaching phases, examples or checks."
+    },
+    "ncee-source-p5-english-studies-second-term-reading-comprehension": {
+      "concepts": [
+        "Read a comprehension passage for meaning before answering. First identify the main idea, then locate details and clues for inference.",
+        "A detail answer should be supported by exact information from the passage; an inference combines passage clues with logical reasoning without inventing new facts.",
+        "For vocabulary in context, replace the word with a possible meaning and reread the sentence to see whether the meaning still fits."
+      ],
+      "workedExamples": [
+        "If a passage says “Amina carried an umbrella because dark clouds gathered,” we can infer she expected rain, although the passage may not state that exact sentence.",
+        "If the question asks for two barriers and the passage names cost and poor network, both must appear in the answer."
+      ],
+      "practiceQuestions": [
+        "State the main idea of a short paragraph in one sentence.",
+        "Find one stated detail and one reasonable inference from a passage.",
+        "Explain how you would work out the meaning of an unfamiliar word from context."
+      ],
+      "basis": "AVORA-authored depth supplement derived from the supplied topic scope; used only to fill missing teaching phases, examples or checks."
+    },
+    "ncee-source-p5-english-studies-second-term-vocabulary": {
+      "concepts": [
+        "Vocabulary means understanding and using words accurately in context. A word’s meaning can change with the sentence around it.",
+        "Synonyms are close in meaning; antonyms are opposites. Always test the proposed word in the sentence.",
+        "Prefixes, suffixes, roots, examples and contrasts can provide clues to unfamiliar words."
+      ],
+      "workedExamples": [
+        "In “The rapid car passed us,” rapid means fast.",
+        "Generous and selfish contrast strongly in the context of sharing."
+      ],
+      "practiceQuestions": [
+        "Give a synonym for “rapid.”",
+        "Give an antonym for “scarce.”",
+        "Use context to explain “bright” in two different sentences."
+      ],
+      "basis": "AVORA-authored depth supplement derived from the supplied topic scope; used only to fill missing teaching phases, examples or checks."
+    },
+    "ncee-source-p5-english-studies-second-term-writing": {
+      "concepts": [
+        "Good writing begins with a clear purpose and audience. Plan the main idea before drafting.",
+        "Organise ideas in a sensible order, use complete sentences and connect related ideas into paragraphs.",
+        "Revise after writing: check meaning, grammar, spelling, punctuation and whether every sentence supports the purpose."
+      ],
+      "workedExamples": [
+        "Plan three points before writing a paragraph about your school.",
+        "Improve “My school is nice. It is nice. I like it.” by adding specific details and removing repetition."
+      ],
+      "practiceQuestions": [
+        "Write a topic sentence about a memorable day.",
+        "List three checks to make during revision.",
+        "Reorder three ideas into a logical paragraph plan."
+      ],
+      "basis": "AVORA-authored depth supplement derived from the supplied topic scope; used only to fill missing teaching phases, examples or checks."
+    },
+    "ncee-source-p5-english-studies-second-term-punctuation": {
+      "concepts": [
+        "Punctuation shows sentence boundaries, pauses, ownership, quotation and other relationships in writing.",
+        "A full stop ends a statement; a comma separates suitable elements but cannot normally join two complete sentences by itself.",
+        "Apostrophes can show possession or omitted letters, but they are not used simply to make ordinary plurals."
+      ],
+      "workedExamples": [
+        "Wrong: “It was late, we went home.” Better: “It was late, so we went home.”",
+        "“The boy’s book” means the book belongs to one boy; “the boys’ books” refers to more than one boy."
+      ],
+      "practiceQuestions": [
+        "Correct: She was hungry she ate quickly.",
+        "Add the correct apostrophe: the girls bags.",
+        "Explain why a comma alone cannot join two complete statements."
+      ],
+      "basis": "AVORA-authored depth supplement derived from the supplied topic scope; used only to fill missing teaching phases, examples or checks."
+    },
+    "ncee-source-p5-english-studies-third-term-direct-and-indirect-speech-introductory": {
+      "concepts": [
+        "Direct speech gives the speaker’s exact words; indirect speech reports the message without quoting the exact wording.",
+        "When changing to indirect speech, pronouns, time words and verb tense may change to keep the meaning correct from the reporter’s viewpoint.",
+        "Questions in indirect speech use statement word order and normally lose quotation marks and the direct question mark."
+      ],
+      "workedExamples": [
+        "Direct: She said, “I am tired.” Indirect: She said that she was tired.",
+        "Direct: She asked, “Where are you going?” Indirect: She asked where I was going."
+      ],
+      "practiceQuestions": [
+        "Change to indirect speech: He said, “I will come tomorrow.”",
+        "Change to direct speech: Ada said that she was ready.",
+        "Explain one change made when reporting a question."
+      ],
+      "basis": "AVORA-authored depth supplement derived from the supplied topic scope; used only to fill missing teaching phases, examples or checks."
+    },
+    "ncee-source-p5-english-studies-third-term-plurals-and-comparatives-superlatives": {
+      "concepts": [
+        "Adjectives describe or give more information about nouns. Comparatives compare two; superlatives compare three or more.",
+        "Many comparatives use -er and superlatives use -est, but longer adjectives often use more/most and irregular forms must be learned in context.",
+        "Plural forms show more than one; regular nouns often add -s/-es, while some are irregular."
+      ],
+      "workedExamples": [
+        "tall → taller → tallest; beautiful → more beautiful → most beautiful.",
+        "child → children and tooth → teeth are irregular plurals."
+      ],
+      "practiceQuestions": [
+        "Write the comparative and superlative of “bright.”",
+        "Give the plural of “knife” and “child.”",
+        "Choose correctly: This is the (more difficult / most difficult) of the two questions."
+      ],
+      "basis": "AVORA-authored depth supplement derived from the supplied topic scope; used only to fill missing teaching phases, examples or checks."
+    },
+    "ncee-source-p5-english-studies-third-term-reading-comprehension": {
+      "concepts": [
+        "Read a comprehension passage for meaning before answering. First identify the main idea, then locate details and clues for inference.",
+        "A detail answer should be supported by exact information from the passage; an inference combines passage clues with logical reasoning without inventing new facts.",
+        "For vocabulary in context, replace the word with a possible meaning and reread the sentence to see whether the meaning still fits."
+      ],
+      "workedExamples": [
+        "If a passage says “Amina carried an umbrella because dark clouds gathered,” we can infer she expected rain, although the passage may not state that exact sentence.",
+        "If the question asks for two barriers and the passage names cost and poor network, both must appear in the answer."
+      ],
+      "practiceQuestions": [
+        "State the main idea of a short paragraph in one sentence.",
+        "Find one stated detail and one reasonable inference from a passage.",
+        "Explain how you would work out the meaning of an unfamiliar word from context."
+      ],
+      "basis": "AVORA-authored depth supplement derived from the supplied topic scope; used only to fill missing teaching phases, examples or checks."
+    },
+    "ncee-source-p5-english-studies-third-term-vocabulary": {
+      "concepts": [
+        "Vocabulary means understanding and using words accurately in context. A word’s meaning can change with the sentence around it.",
+        "Synonyms are close in meaning; antonyms are opposites. Always test the proposed word in the sentence.",
+        "Prefixes, suffixes, roots, examples and contrasts can provide clues to unfamiliar words."
+      ],
+      "workedExamples": [
+        "In “The rapid car passed us,” rapid means fast.",
+        "Generous and selfish contrast strongly in the context of sharing."
+      ],
+      "practiceQuestions": [
+        "Give a synonym for “rapid.”",
+        "Give an antonym for “scarce.”",
+        "Use context to explain “bright” in two different sentences."
+      ],
+      "basis": "AVORA-authored depth supplement derived from the supplied topic scope; used only to fill missing teaching phases, examples or checks."
+    },
+    "ncee-source-p5-english-studies-third-term-writing": {
+      "concepts": [
+        "Good writing begins with a clear purpose and audience. Plan the main idea before drafting.",
+        "Organise ideas in a sensible order, use complete sentences and connect related ideas into paragraphs.",
+        "Revise after writing: check meaning, grammar, spelling, punctuation and whether every sentence supports the purpose."
+      ],
+      "workedExamples": [
+        "Plan three points before writing a paragraph about your school.",
+        "Improve “My school is nice. It is nice. I like it.” by adding specific details and removing repetition."
+      ],
+      "practiceQuestions": [
+        "Write a topic sentence about a memorable day.",
+        "List three checks to make during revision.",
+        "Reorder three ideas into a logical paragraph plan."
+      ],
+      "basis": "AVORA-authored depth supplement derived from the supplied topic scope; used only to fill missing teaching phases, examples or checks."
+    },
+    "ncee-source-p5-english-studies-third-term-verbal-reasoning-foundations": {
+      "concepts": [
+        "Verbal reasoning uses relationships between word meanings, categories, letters or sentence logic.",
+        "State the relationship before selecting an answer; this makes distractors easier to reject.",
+        "Check the relationship on both sides of an analogy or across every member of a group."
+      ],
+      "workedExamples": [
+        "Teacher:student describes who teaches whom; doctor:patient matches the same relationship.",
+        "Hot:cold is an opposite relationship, so day:night follows the same pattern."
+      ],
+      "practiceQuestions": [
+        "Complete an analogy and state the relationship.",
+        "Find an odd word out and state the group rule.",
+        "Give an antonym for a word and explain the contrast."
+      ],
+      "basis": "AVORA-authored depth supplement derived from the supplied topic scope; used only to fill missing teaching phases, examples or checks."
+    },
+    "ncee-source-p6-english-studies-first-term-full-tense-review": {
+      "concepts": [
+        "Tense locates an action or state in time and can also show whether it is ongoing or completed.",
+        "Identify time clues and the verb phrase together; do not choose a tense from one word alone.",
+        "Perfect forms use have/has/had + past participle; continuous forms use be + -ing."
+      ],
+      "workedExamples": [
+        "“They have finished” is present perfect: have + finished.",
+        "“She was reading when I arrived” uses past continuous for the ongoing action and simple past for the interrupting event."
+      ],
+      "practiceQuestions": [
+        "Identify the tense in “We had left before noon.”",
+        "Change “She walks” to present continuous.",
+        "Explain the difference between “I ate” and “I have eaten.”"
+      ],
+      "basis": "AVORA-authored depth supplement derived from the supplied topic scope; used only to fill missing teaching phases, examples or checks."
+    },
+    "ncee-source-p6-english-studies-first-term-parts-of-speech-consolidated": {
+      "concepts": [
+        "A part of speech describes the job a word is doing in a sentence. The same word can sometimes do different jobs in different sentences, so use context.",
+        "Nouns name people, places, animals, things or ideas; pronouns replace nouns; verbs express actions or states.",
+        "Identify the word’s job by asking what it names, replaces or tells about the subject."
+      ],
+      "workedExamples": [
+        "“Ada carried her bag.” Ada and bag are nouns; carried is a verb; her is a pronoun/determiner referring to Ada.",
+        "“The play was fun.” Play is a noun here, but in “They play daily,” play is a verb."
+      ],
+      "practiceQuestions": [
+        "Identify the nouns and verb in “The pupils opened their books.”",
+        "Replace repeated nouns with suitable pronouns in a short sentence.",
+        "Use “play” once as a noun and once as a verb."
+      ],
+      "basis": "AVORA-authored depth supplement derived from the supplied topic scope; used only to fill missing teaching phases, examples or checks."
+    },
+    "ncee-source-p6-english-studies-first-term-subject-verb-agreement-extended": {
+      "concepts": [
+        "Subject–verb agreement means the verb form must match the subject in number and person.",
+        "Find the true subject before choosing the verb; words between subject and verb can distract you.",
+        "With present-tense third-person singular subjects, the verb often takes -s, while plural subjects use the base form."
+      ],
+      "workedExamples": [
+        "“The boy runs.” but “The boys run.”",
+        "“The box of books is heavy.” The true subject is box, not books."
+      ],
+      "practiceQuestions": [
+        "Choose: The list of names (is/are) on the desk.",
+        "Correct: She walk to school every day.",
+        "Explain why “The dogs barks” is wrong."
+      ],
+      "basis": "AVORA-authored depth supplement derived from the supplied topic scope; used only to fill missing teaching phases, examples or checks."
+    },
+    "ncee-source-p6-english-studies-first-term-reading-comprehension": {
+      "concepts": [
+        "Read a comprehension passage for meaning before answering. First identify the main idea, then locate details and clues for inference.",
+        "A detail answer should be supported by exact information from the passage; an inference combines passage clues with logical reasoning without inventing new facts.",
+        "For vocabulary in context, replace the word with a possible meaning and reread the sentence to see whether the meaning still fits."
+      ],
+      "workedExamples": [
+        "If a passage says “Amina carried an umbrella because dark clouds gathered,” we can infer she expected rain, although the passage may not state that exact sentence.",
+        "If the question asks for two barriers and the passage names cost and poor network, both must appear in the answer."
+      ],
+      "practiceQuestions": [
+        "State the main idea of a short paragraph in one sentence.",
+        "Find one stated detail and one reasonable inference from a passage.",
+        "Explain how you would work out the meaning of an unfamiliar word from context."
+      ],
+      "basis": "AVORA-authored depth supplement derived from the supplied topic scope; used only to fill missing teaching phases, examples or checks."
+    },
+    "ncee-source-p6-english-studies-first-term-vocabulary": {
+      "concepts": [
+        "Vocabulary means understanding and using words accurately in context. A word’s meaning can change with the sentence around it.",
+        "Synonyms are close in meaning; antonyms are opposites. Always test the proposed word in the sentence.",
+        "Prefixes, suffixes, roots, examples and contrasts can provide clues to unfamiliar words."
+      ],
+      "workedExamples": [
+        "In “The rapid car passed us,” rapid means fast.",
+        "Generous and selfish contrast strongly in the context of sharing."
+      ],
+      "practiceQuestions": [
+        "Give a synonym for “rapid.”",
+        "Give an antonym for “scarce.”",
+        "Use context to explain “bright” in two different sentences."
+      ],
+      "basis": "AVORA-authored depth supplement derived from the supplied topic scope; used only to fill missing teaching phases, examples or checks."
+    },
+    "ncee-source-p6-english-studies-first-term-writing": {
+      "concepts": [
+        "Good writing begins with a clear purpose and audience. Plan the main idea before drafting.",
+        "Organise ideas in a sensible order, use complete sentences and connect related ideas into paragraphs.",
+        "Revise after writing: check meaning, grammar, spelling, punctuation and whether every sentence supports the purpose."
+      ],
+      "workedExamples": [
+        "Plan three points before writing a paragraph about your school.",
+        "Improve “My school is nice. It is nice. I like it.” by adding specific details and removing repetition."
+      ],
+      "practiceQuestions": [
+        "Write a topic sentence about a memorable day.",
+        "List three checks to make during revision.",
+        "Reorder three ideas into a logical paragraph plan."
+      ],
+      "basis": "AVORA-authored depth supplement derived from the supplied topic scope; used only to fill missing teaching phases, examples or checks."
+    },
+    "ncee-source-p6-english-studies-first-term-grammar-accuracy-articles": {
+      "concepts": [
+        "Articles come before nouns. “a” and “an” introduce one non-specific countable noun; “the” points to a specific or already-known noun.",
+        "Choose a or an by sound, not simply by the first written letter: an hour, a university.",
+        "Some plural or uncountable nouns take no article when speaking generally."
+      ],
+      "workedExamples": [
+        "“She is an honest girl” because honest begins with a vowel sound.",
+        "“I saw a dog. The dog followed me.” The second mention is specific."
+      ],
+      "practiceQuestions": [
+        "Choose: a/an hour.",
+        "Choose: a/an university.",
+        "Explain why “the” is used in the second sentence of “I bought a book. The book is new.”"
+      ],
+      "basis": "AVORA-authored depth supplement derived from the supplied topic scope; used only to fill missing teaching phases, examples or checks."
+    },
+    "ncee-source-p6-english-studies-second-term-direct-indirect-speech-full": {
+      "concepts": [
+        "Direct speech gives the speaker’s exact words; indirect speech reports the message without quoting the exact wording.",
+        "When changing to indirect speech, pronouns, time words and verb tense may change to keep the meaning correct from the reporter’s viewpoint.",
+        "Questions in indirect speech use statement word order and normally lose quotation marks and the direct question mark."
+      ],
+      "workedExamples": [
+        "Direct: She said, “I am tired.” Indirect: She said that she was tired.",
+        "Direct: She asked, “Where are you going?” Indirect: She asked where I was going."
+      ],
+      "practiceQuestions": [
+        "Change to indirect speech: He said, “I will come tomorrow.”",
+        "Change to direct speech: Ada said that she was ready.",
+        "Explain one change made when reporting a question."
+      ],
+      "basis": "AVORA-authored depth supplement derived from the supplied topic scope; used only to fill missing teaching phases, examples or checks."
+    },
+    "ncee-source-p6-english-studies-second-term-active-and-passive-voice-introductory": {
+      "concepts": [
+        "In active voice, the subject performs the action; in passive voice, the receiver of the action becomes the grammatical subject.",
+        "To form a basic passive sentence, use an appropriate form of be + past participle, preserving the original tense.",
+        "Use passive voice when the action or receiver is more important than the doer, but do not change the underlying meaning."
+      ],
+      "workedExamples": [
+        "Active: “The boy kicked the ball.” Passive: “The ball was kicked by the boy.”",
+        "Active: “The teacher teaches English.” Passive: “English is taught by the teacher.”"
+      ],
+      "practiceQuestions": [
+        "Change to passive: The chef cooked the meal.",
+        "Identify whether a sentence is active or passive.",
+        "Explain what happens to the object of an active sentence in the passive form."
+      ],
+      "basis": "AVORA-authored depth supplement derived from the supplied topic scope; used only to fill missing teaching phases, examples or checks."
+    },
+    "ncee-source-p6-english-studies-second-term-conjunctions-and-linking-words": {
+      "concepts": [
+        "Adverbs add information about verbs, adjectives or other adverbs; prepositions show relationships such as place or time; conjunctions join words, phrases or clauses.",
+        "Ask what job the word performs in the sentence instead of judging only by its spelling.",
+        "Conjunctions show relationships such as addition, contrast, cause or choice, so choose one that matches the meaning."
+      ],
+      "workedExamples": [
+        "“She ran quickly across the field because she was late.” quickly is an adverb, across is a preposition, because is a conjunction.",
+        "“Although he was tired, he finished.” Although signals contrast."
+      ],
+      "practiceQuestions": [
+        "Identify the adverb and preposition in “The dog slept quietly under the table.”",
+        "Join two sentences with “because.”",
+        "Choose a conjunction that shows contrast."
+      ],
+      "basis": "AVORA-authored depth supplement derived from the supplied topic scope; used only to fill missing teaching phases, examples or checks."
+    },
+    "ncee-source-p6-english-studies-second-term-reading-comprehension": {
+      "concepts": [
+        "Read a comprehension passage for meaning before answering. First identify the main idea, then locate details and clues for inference.",
+        "A detail answer should be supported by exact information from the passage; an inference combines passage clues with logical reasoning without inventing new facts.",
+        "For vocabulary in context, replace the word with a possible meaning and reread the sentence to see whether the meaning still fits."
+      ],
+      "workedExamples": [
+        "If a passage says “Amina carried an umbrella because dark clouds gathered,” we can infer she expected rain, although the passage may not state that exact sentence.",
+        "If the question asks for two barriers and the passage names cost and poor network, both must appear in the answer."
+      ],
+      "practiceQuestions": [
+        "State the main idea of a short paragraph in one sentence.",
+        "Find one stated detail and one reasonable inference from a passage.",
+        "Explain how you would work out the meaning of an unfamiliar word from context."
+      ],
+      "basis": "AVORA-authored depth supplement derived from the supplied topic scope; used only to fill missing teaching phases, examples or checks."
+    },
+    "ncee-source-p6-english-studies-second-term-vocabulary": {
+      "concepts": [
+        "Vocabulary means understanding and using words accurately in context. A word’s meaning can change with the sentence around it.",
+        "Synonyms are close in meaning; antonyms are opposites. Always test the proposed word in the sentence.",
+        "Prefixes, suffixes, roots, examples and contrasts can provide clues to unfamiliar words."
+      ],
+      "workedExamples": [
+        "In “The rapid car passed us,” rapid means fast.",
+        "Generous and selfish contrast strongly in the context of sharing."
+      ],
+      "practiceQuestions": [
+        "Give a synonym for “rapid.”",
+        "Give an antonym for “scarce.”",
+        "Use context to explain “bright” in two different sentences."
+      ],
+      "basis": "AVORA-authored depth supplement derived from the supplied topic scope; used only to fill missing teaching phases, examples or checks."
+    },
+    "ncee-source-p6-english-studies-second-term-formal-letter": {
+      "concepts": [
+        "A formal letter is written for an official purpose and uses respectful, clear language.",
+        "Its structure normally includes sender’s address, date, recipient’s title/address where required, salutation, heading/subject, organised body, closing and name/signature.",
+        "Each paragraph should have one purpose: introduce the reason, give needed details, and close with the requested action or thanks."
+      ],
+      "workedExamples": [
+        "A request to a headteacher should clearly state what is requested and why, without slang.",
+        "“Dear Madam … Yours faithfully” is an appropriate formal pair when the recipient’s personal name is not used."
+      ],
+      "practiceQuestions": [
+        "List the main parts of a formal letter.",
+        "Write a suitable heading for a letter requesting library books.",
+        "Rewrite an informal sentence in formal style."
+      ],
+      "basis": "AVORA-authored depth supplement derived from the supplied topic scope; used only to fill missing teaching phases, examples or checks."
+    },
+    "ncee-source-p6-english-studies-second-term-expository-composition": {
+      "concepts": [
+        "Expository writing explains a topic or process clearly rather than telling a fictional story.",
+        "Organise the explanation in a logical order, using topic sentences and linking words such as first, next, because and finally.",
+        "Use precise details and examples; remove unrelated opinions that do not help explain the topic."
+      ],
+      "workedExamples": [
+        "To explain how to plant a seed, present materials and steps in order from preparing soil to watering.",
+        "A paragraph on “Why clean water matters” can explain cause and effect using facts and examples."
+      ],
+      "practiceQuestions": [
+        "Write an outline for “How to prepare for school.”",
+        "Give three linking words useful in expository writing.",
+        "Explain why random events should not be added to an expository paragraph."
+      ],
+      "basis": "AVORA-authored depth supplement derived from the supplied topic scope; used only to fill missing teaching phases, examples or checks."
+    },
+    "ncee-source-p6-english-studies-second-term-verbal-reasoning-integration": {
+      "concepts": [
+        "Verbal reasoning uses relationships between word meanings, categories, letters or sentence logic.",
+        "State the relationship before selecting an answer; this makes distractors easier to reject.",
+        "Check the relationship on both sides of an analogy or across every member of a group."
+      ],
+      "workedExamples": [
+        "Teacher:student describes who teaches whom; doctor:patient matches the same relationship.",
+        "Hot:cold is an opposite relationship, so day:night follows the same pattern."
+      ],
+      "practiceQuestions": [
+        "Complete an analogy and state the relationship.",
+        "Find an odd word out and state the group rule.",
+        "Give an antonym for a word and explain the contrast."
+      ],
+      "basis": "AVORA-authored depth supplement derived from the supplied topic scope; used only to fill missing teaching phases, examples or checks."
+    },
+    "ncee-source-p6-english-studies-third-term-grammar-full-punctuation-and-error-correction": {
+      "concepts": [
+        "Punctuation shows sentence boundaries, pauses, ownership, quotation and other relationships in writing.",
+        "A full stop ends a statement; a comma separates suitable elements but cannot normally join two complete sentences by itself.",
+        "Apostrophes can show possession or omitted letters, but they are not used simply to make ordinary plurals."
+      ],
+      "workedExamples": [
+        "Wrong: “It was late, we went home.” Better: “It was late, so we went home.”",
+        "“The boy’s book” means the book belongs to one boy; “the boys’ books” refers to more than one boy."
+      ],
+      "practiceQuestions": [
+        "Correct: She was hungry she ate quickly.",
+        "Add the correct apostrophe: the girls bags.",
+        "Explain why a comma alone cannot join two complete statements."
+      ],
+      "basis": "AVORA-authored depth supplement derived from the supplied topic scope; used only to fill missing teaching phases, examples or checks."
+    },
+    "ncee-source-p6-english-studies-third-term-sentence-transformation": {
+      "concepts": [
+        "Sentence transformation changes the form of a sentence while preserving the intended meaning.",
+        "The required connector or structure controls how clauses are rearranged; check pronouns, tense and punctuation after transforming.",
+        "A correct transformed sentence must be grammatical and keep the same logical relationship such as cause, contrast or result."
+      ],
+      "workedExamples": [
+        "He is poor. He is happy. → Although he is poor, he is happy.",
+        "She studied hard. She passed. → She studied hard, so she passed."
+      ],
+      "practiceQuestions": [
+        "Combine two sentences using although.",
+        "Rewrite two cause-and-effect sentences using because.",
+        "Check whether a transformed sentence changed the original meaning."
+      ],
+      "basis": "AVORA-authored depth supplement derived from the supplied topic scope; used only to fill missing teaching phases, examples or checks."
+    },
+    "ncee-source-p6-english-studies-third-term-reading-comprehension-full-ncee-style-practice": {
+      "concepts": [
+        "Read a comprehension passage for meaning before answering. First identify the main idea, then locate details and clues for inference.",
+        "A detail answer should be supported by exact information from the passage; an inference combines passage clues with logical reasoning without inventing new facts.",
+        "For vocabulary in context, replace the word with a possible meaning and reread the sentence to see whether the meaning still fits."
+      ],
+      "workedExamples": [
+        "If a passage says “Amina carried an umbrella because dark clouds gathered,” we can infer she expected rain, although the passage may not state that exact sentence.",
+        "If the question asks for two barriers and the passage names cost and poor network, both must appear in the answer."
+      ],
+      "practiceQuestions": [
+        "State the main idea of a short paragraph in one sentence.",
+        "Find one stated detail and one reasonable inference from a passage.",
+        "Explain how you would work out the meaning of an unfamiliar word from context."
+      ],
+      "basis": "AVORA-authored depth supplement derived from the supplied topic scope; used only to fill missing teaching phases, examples or checks."
+    },
+    "ncee-source-p6-english-studies-third-term-vocabulary-comprehensive-review": {
+      "concepts": [
+        "Vocabulary means understanding and using words accurately in context. A word’s meaning can change with the sentence around it.",
+        "Synonyms are close in meaning; antonyms are opposites. Always test the proposed word in the sentence.",
+        "Prefixes, suffixes, roots, examples and contrasts can provide clues to unfamiliar words."
+      ],
+      "workedExamples": [
+        "In “The rapid car passed us,” rapid means fast.",
+        "Generous and selfish contrast strongly in the context of sharing."
+      ],
+      "practiceQuestions": [
+        "Give a synonym for “rapid.”",
+        "Give an antonym for “scarce.”",
+        "Use context to explain “bright” in two different sentences."
+      ],
+      "basis": "AVORA-authored depth supplement derived from the supplied topic scope; used only to fill missing teaching phases, examples or checks."
+    },
+    "ncee-source-p6-english-studies-third-term-writing-summary-and-full-composition-practice": {
+      "concepts": [
+        "A summary keeps the central meaning while removing repetition, examples and unnecessary detail.",
+        "Read the full passage first, identify the main point and essential supporting ideas, then restate them briefly in your own words.",
+        "A summary should not introduce a new opinion or information that was not in the passage."
+      ],
+      "workedExamples": [
+        "“Chidi trained daily despite tiredness and won the race.” can be summarised as “Chidi’s consistent training led to his victory.”",
+        "Three sentences listing repeated examples of saving money can often be reduced to one sentence about consistent saving."
+      ],
+      "practiceQuestions": [
+        "Summarise a three-sentence paragraph in one sentence.",
+        "Identify one detail that can be removed from a summary.",
+        "Explain why a summary should not include your opinion."
+      ],
+      "basis": "AVORA-authored depth supplement derived from the supplied topic scope; used only to fill missing teaching phases, examples or checks."
+    },
+    "ncee-source-p6-english-studies-third-term-full-ncee-style-objective-practice-combined": {
+      "concepts": [
+        "Read the sentence or passage for meaning before choosing a language rule.",
+        "Name the grammar or meaning relationship being tested, then compare options in context.",
+        "Check the final answer by rereading the complete sentence naturally and explaining why alternatives fail."
+      ],
+      "workedExamples": [
+        "Work one example in context and identify the exact clue.",
+        "Work a contrasting example and explain what changed."
+      ],
+      "practiceQuestions": [
+        "Answer a fresh example.",
+        "Explain one distractor.",
+        "Use the target form in your own sentence."
+      ],
+      "basis": "AVORA-authored depth supplement derived from the supplied topic scope; used only to fill missing teaching phases, examples or checks."
+    },
+    "ncee-source-p5-basic-science-and-technology-all-living-and-non-living-things": {
+      "concepts": [
+        "Living things carry out life processes such as feeding, respiration, growth, response, reproduction and removal of wastes; non-living things do not carry out these processes by themselves.",
+        "Movement alone does not prove that something is living: a car moves because an external system powers it.",
+        "Classify by testing several life characteristics rather than relying on appearance."
+      ],
+      "workedExamples": [
+        "A fish grows, feeds, respires and reproduces, so it is living.",
+        "A car moves but does not grow or reproduce by itself, so it is non-living."
+      ],
+      "practiceQuestions": [
+        "Classify a mushroom and explain two life characteristics.",
+        "Why is movement alone not enough to classify something as living?",
+        "Classify a stone, seedling and bicycle."
+      ],
+      "basis": "AVORA-authored depth supplement derived from the supplied topic scope; used only to fill missing teaching phases, examples or checks."
+    },
+    "ncee-source-p5-basic-science-and-technology-all-human-body-major-organs-introductory": {
+      "concepts": [
+        "An organ is a body part made of tissues that performs a particular job. A body system is a group of organs working together.",
+        "The heart pumps blood, lungs exchange gases, brain coordinates body activities, and digestive organs break down and absorb food.",
+        "Systems depend on one another: for example, lungs supply oxygen that blood carries to cells."
+      ],
+      "workedExamples": [
+        "During exercise, breathing and heartbeat increase because muscles need more oxygen and nutrients.",
+        "Food is broken down by the digestive system and absorbed nutrients are transported by the blood."
+      ],
+      "practiceQuestions": [
+        "State the function of the heart and lungs.",
+        "Explain one way two body systems work together.",
+        "Which organ coordinates thinking and body actions?"
+      ],
+      "basis": "AVORA-authored depth supplement derived from the supplied topic scope; used only to fill missing teaching phases, examples or checks."
+    },
+    "ncee-source-p5-basic-science-and-technology-all-plants-parts-and-functions": {
+      "concepts": [
+        "Roots anchor plants and absorb water/minerals; stems support and transport materials; leaves make food using light; flowers aid reproduction.",
+        "A structure’s function explains why damage to that part affects the whole plant.",
+        "Plants need suitable water, air, light and nutrients for healthy growth."
+      ],
+      "workedExamples": [
+        "If roots are badly damaged, water uptake falls and the plant may wilt.",
+        "Leaves receive light and contain structures used in food production."
+      ],
+      "practiceQuestions": [
+        "State two functions of roots.",
+        "What may happen if most leaves are removed?",
+        "Match stem, leaf and flower to their main functions."
+      ],
+      "basis": "AVORA-authored depth supplement derived from the supplied topic scope; used only to fill missing teaching phases, examples or checks."
+    },
+    "ncee-source-p5-basic-science-and-technology-all-states-of-matter": {
+      "concepts": [
+        "Solids have fixed shape and volume; liquids have fixed volume but take the container’s shape; gases have neither fixed shape nor fixed volume.",
+        "Heating or cooling can change state without creating a new substance, such as melting ice or condensing water vapour.",
+        "Classify matter by observable properties and state changes, not by everyday names alone."
+      ],
+      "workedExamples": [
+        "Ice melts from solid to liquid when heated.",
+        "Water vapour cools and condenses into liquid water."
+      ],
+      "practiceQuestions": [
+        "Classify air, milk and wood by state.",
+        "Name the change from liquid to gas.",
+        "Explain why water takes the shape of its container."
+      ],
+      "basis": "AVORA-authored depth supplement derived from the supplied topic scope; used only to fill missing teaching phases, examples or checks."
+    },
+    "ncee-source-p5-national-values-education-all-nigeria-s-states-and-geopolitical-zones": {
+      "concepts": [
+        "Nigeria has 36 states and the Federal Capital Territory. Geopolitical zones are six broad regional groupings used to organise states for discussion and administration.",
+        "The six zones are North West, North East, North Central, South West, South East and South South.",
+        "A state belongs to one geopolitical zone; the zone is not another tier of government."
+      ],
+      "workedExamples": [
+        "Lagos State belongs to the South West geopolitical zone.",
+        "Abuja is in the Federal Capital Territory and is associated geographically with the North Central region."
+      ],
+      "practiceQuestions": [
+        "Name the six geopolitical zones.",
+        "Which zone contains Lagos State?",
+        "Explain the difference between a state and a geopolitical zone."
+      ],
+      "basis": "AVORA-authored depth supplement derived from the supplied topic scope; used only to fill missing teaching phases, examples or checks."
+    },
+    "ncee-source-p5-national-values-education-all-family-and-community-roles": {
+      "concepts": [
+        "Identify the value, right, duty or community principle involved before choosing an action.",
+        "Consider how the action affects other people, public property and peaceful community life.",
+        "Choose a responsible action and explain its likely consequence."
+      ],
+      "workedExamples": [
+        "Use a home or school situation to identify a responsibility.",
+        "Compare a responsible choice with a harmful choice and explain the consequences."
+      ],
+      "practiceQuestions": [
+        "Name the principle involved.",
+        "Choose a responsible action in a new situation.",
+        "Explain one likely consequence."
+      ],
+      "basis": "AVORA-authored depth supplement derived from the supplied topic scope; used only to fill missing teaching phases, examples or checks."
+    },
+    "ncee-source-p5-national-values-education-all-citizenship-rights-and-responsibilities-introductory": {
+      "concepts": [
+        "Identify the value, right, duty or community principle involved before choosing an action.",
+        "Consider how the action affects other people, public property and peaceful community life.",
+        "Choose a responsible action and explain its likely consequence."
+      ],
+      "workedExamples": [
+        "Use a home or school situation to identify a responsibility.",
+        "Compare a responsible choice with a harmful choice and explain the consequences."
+      ],
+      "practiceQuestions": [
+        "Name the principle involved.",
+        "Choose a responsible action in a new situation.",
+        "Explain one likely consequence."
+      ],
+      "basis": "AVORA-authored depth supplement derived from the supplied topic scope; used only to fill missing teaching phases, examples or checks."
+    },
+    "ncee-source-p6-basic-science-and-technology-all-human-body-systems-introductory": {
+      "concepts": [
+        "An organ is a body part made of tissues that performs a particular job. A body system is a group of organs working together.",
+        "The heart pumps blood, lungs exchange gases, brain coordinates body activities, and digestive organs break down and absorb food.",
+        "Systems depend on one another: for example, lungs supply oxygen that blood carries to cells."
+      ],
+      "workedExamples": [
+        "During exercise, breathing and heartbeat increase because muscles need more oxygen and nutrients.",
+        "Food is broken down by the digestive system and absorbed nutrients are transported by the blood."
+      ],
+      "practiceQuestions": [
+        "State the function of the heart and lungs.",
+        "Explain one way two body systems work together.",
+        "Which organ coordinates thinking and body actions?"
+      ],
+      "basis": "AVORA-authored depth supplement derived from the supplied topic scope; used only to fill missing teaching phases, examples or checks."
+    },
+    "ncee-source-p6-basic-science-and-technology-all-plants-and-animals-classification-basics": {
+      "concepts": [
+        "Classification groups organisms using shared observable features. A useful rule must fit every member of the group.",
+        "Animals can be grouped by features such as body covering, habitat or backbone; plants can be grouped by observable structures and growth forms.",
+        "Use more than one characteristic when a single feature could place very different organisms together."
+      ],
+      "workedExamples": [
+        "Birds have feathers, while mammals have hair/fur and feed their young with milk.",
+        "A mango tree and grass are both plants but differ in stem structure and growth form."
+      ],
+      "practiceQuestions": [
+        "Give one feature used to classify animals.",
+        "Place fish and goat into different groups and state your rule.",
+        "Why is one vague feature sometimes not enough for classification?"
+      ],
+      "basis": "AVORA-authored depth supplement derived from the supplied topic scope; used only to fill missing teaching phases, examples or checks."
+    },
+    "ncee-source-p6-basic-science-and-technology-all-simple-machines-and-everyday-technology": {
+      "concepts": [
+        "A simple machine makes work easier by changing the size or direction of a force; common examples include lever, pulley, wheel and axle, inclined plane, screw and wedge.",
+        "Machines do not remove work completely; they trade force for distance or change how the force is applied.",
+        "Use tools safely for their intended purpose and identify the simple-machine principle involved."
+      ],
+      "workedExamples": [
+        "A ramp is an inclined plane that lets a load be raised with less force over a longer distance.",
+        "A bottle opener acts as a lever."
+      ],
+      "practiceQuestions": [
+        "Name the simple machine in a ramp.",
+        "Give one everyday example of a lever.",
+        "Explain why using the correct tool improves safety."
+      ],
+      "basis": "AVORA-authored depth supplement derived from the supplied topic scope; used only to fill missing teaching phases, examples or checks."
+    },
+    "ncee-source-p6-basic-science-and-technology-all-energy-and-forces-introductory": {
+      "concepts": [
+        "A force is a push or pull that can change motion, direction or shape.",
+        "Energy is the ability to cause change or do work and appears in forms such as light, heat, sound, electrical and movement energy.",
+        "Energy can be transferred or changed from one form to another, while friction and other forces affect motion."
+      ],
+      "workedExamples": [
+        "A battery-powered torch changes chemical energy in the battery to electrical energy and then light/heat.",
+        "Pushing a stationary toy car applies a force that can make it move."
+      ],
+      "practiceQuestions": [
+        "Give two effects a force can have.",
+        "Describe one energy change in an everyday device.",
+        "What effect does friction have on moving objects?"
+      ],
+      "basis": "AVORA-authored depth supplement derived from the supplied topic scope; used only to fill missing teaching phases, examples or checks."
+    },
+    "ncee-source-p6-basic-science-and-technology-all-health-and-hygiene": {
+      "concepts": [
+        "Health depends on habits that support the body and reduce disease risk. Hygiene includes clean hands, body, food, water and surroundings.",
+        "Germs can spread through contaminated hands, food/water, droplets and dirty surfaces, so breaking these routes reduces infection.",
+        "Balanced food, safe water, exercise and adequate rest support healthy growth and body function."
+      ],
+      "workedExamples": [
+        "Wash hands with soap and clean running water before eating and after using the toilet.",
+        "A meal with grain, beans and vegetables provides a wider range of nutrients than grain alone."
+      ],
+      "practiceQuestions": [
+        "Name two ways germs can spread.",
+        "Give two hygiene practices and explain their purpose.",
+        "What makes a meal more balanced?"
+      ],
+      "basis": "AVORA-authored depth supplement derived from the supplied topic scope; used only to fill missing teaching phases, examples or checks."
+    },
+    "ncee-source-p6-national-values-education-all-nigeria-s-government-structure-introductory": {
+      "concepts": [
+        "Nigeria operates three tiers of government: federal, state and local government.",
+        "The federal tier deals with matters for the whole country, state governments govern individual states, and local governments handle local areas within states.",
+        "The tiers have different responsibilities but must cooperate because some public needs overlap."
+      ],
+      "workedExamples": [
+        "National defence is a federal responsibility because it concerns the whole country.",
+        "Local sanitation and community markets may involve local government responsibilities."
+      ],
+      "practiceQuestions": [
+        "Name the three tiers.",
+        "Which tier governs an individual state?",
+        "Give one reason the tiers need to cooperate."
+      ],
+      "basis": "AVORA-authored depth supplement derived from the supplied topic scope; used only to fill missing teaching phases, examples or checks."
+    },
+    "ncee-source-p6-national-values-education-all-national-symbols-and-their-meaning": {
+      "concepts": [
+        "National symbols represent shared identity and values and should be treated with respect.",
+        "The Nigerian flag is green-white-green; the green is commonly taught as representing natural wealth/agriculture and the white as peace.",
+        "Symbols such as the coat of arms, anthem and pledge communicate national identity, unity and civic ideals."
+      ],
+      "workedExamples": [
+        "Recognising the flag is not enough; explain what its colours are intended to represent.",
+        "During a national anthem, respectful behaviour shows regard for the shared symbol."
+      ],
+      "practiceQuestions": [
+        "Describe the Nigerian flag.",
+        "Name two national symbols.",
+        "Explain why national symbols matter."
+      ],
+      "basis": "AVORA-authored depth supplement derived from the supplied topic scope; used only to fill missing teaching phases, examples or checks."
+    },
+    "ncee-source-p6-national-values-education-all-rights-and-responsibilities-of-citizens": {
+      "concepts": [
+        "Identify the value, right, duty or community principle involved before choosing an action.",
+        "Consider how the action affects other people, public property and peaceful community life.",
+        "Choose a responsible action and explain its likely consequence."
+      ],
+      "workedExamples": [
+        "Use a home or school situation to identify a responsibility.",
+        "Compare a responsible choice with a harmful choice and explain the consequences."
+      ],
+      "practiceQuestions": [
+        "Name the principle involved.",
+        "Choose a responsible action in a new situation.",
+        "Explain one likely consequence."
+      ],
+      "basis": "AVORA-authored depth supplement derived from the supplied topic scope; used only to fill missing teaching phases, examples or checks."
+    },
+    "ncee-source-p6-national-values-education-all-nigeria-s-history-key-milestones": {
+      "concepts": [
+        "Historical milestones are important events used to organise a country’s story through time.",
+        "Nigeria gained independence from British colonial rule on 1 October 1960.",
+        "A date should be connected to what happened and why it mattered, rather than memorised as an isolated number."
+      ],
+      "workedExamples": [
+        "1 October 1960 marks Nigeria’s independence.",
+        "Place independence on a timeline before later constitutional or democratic milestones studied in class."
+      ],
+      "practiceQuestions": [
+        "In what year did Nigeria gain independence?",
+        "What happened on 1 October 1960?",
+        "Why is a timeline useful in history?"
+      ],
+      "basis": "AVORA-authored depth supplement derived from the supplied topic scope; used only to fill missing teaching phases, examples or checks."
+    },
+    "ncee-source-p6-national-values-education-all-current-affairs-and-general-knowledge-ncee-relevant": {
+      "concepts": [
+        "Identify the value, right, duty or community principle involved before choosing an action.",
+        "Consider how the action affects other people, public property and peaceful community life.",
+        "Choose a responsible action and explain its likely consequence."
+      ],
+      "workedExamples": [
+        "Use a home or school situation to identify a responsibility.",
+        "Compare a responsible choice with a harmful choice and explain the consequences."
+      ],
+      "practiceQuestions": [
+        "Name the principle involved.",
+        "Choose a responsible action in a new situation.",
+        "Explain one likely consequence."
+      ],
+      "basis": "AVORA-authored depth supplement derived from the supplied topic scope; used only to fill missing teaching phases, examples or checks."
+    },
+    "ncee-source-p5-mathematics-first-term-whole-numbers": {
+      "concepts": [
+        "A digit has a value because of its place. Moving one place to the left makes its place value ten times as large; moving one place to the right makes it ten times as small.",
+        "Read large numbers by grouping digits into periods such as ones, thousands and millions. Expanded form shows the value contributed by each non-zero digit.",
+        "Before calculating, estimate the size of the answer so an impossible result can be noticed quickly."
+      ],
+      "workedExamples": [
+        "In 4,582,731 the digit 8 is in the ten-thousands place, so its value is 80,000.",
+        "Write 3,405,020 in expanded form: 3,000,000 + 400,000 + 5,000 + 20."
+      ],
+      "practiceQuestions": [
+        "What is the value of 7 in 2,734,105?",
+        "Write 6,090,402 in expanded form.",
+        "Which is greater: 4,508,999 or 4,580,099? Explain using place value."
+      ],
+      "basis": "AVORA-authored depth supplement derived from the supplied topic scope; used only to fill missing teaching phases, examples or checks."
+    },
+    "ncee-source-p5-mathematics-first-term-addition-and-subtraction-of-large-whole-numbers": {
+      "concepts": [
+        "Addition combines quantities; subtraction finds what remains or the difference between quantities.",
+        "Align digits by place value before using the written method, so ones are combined with ones, tens with tens, and so on.",
+        "Use the inverse operation to check: an addition answer can be checked by subtraction, and a subtraction answer by addition."
+      ],
+      "workedExamples": [
+        "48,765 + 6,908 = 55,673 after aligning places and regrouping where needed.",
+        "92,004 − 38,756 = 53,248; check by adding 53,248 + 38,756 = 92,004."
+      ],
+      "practiceQuestions": [
+        "Find 67,845 + 9,786.",
+        "Find 80,000 − 46,729.",
+        "Explain how you would check a subtraction answer."
+      ],
+      "basis": "AVORA-authored depth supplement derived from the supplied topic scope; used only to fill missing teaching phases, examples or checks."
+    },
+    "ncee-source-p5-mathematics-first-term-multiplication-of-whole-numbers": {
+      "concepts": [
+        "Multiplication is repeated equal grouping and can be broken apart using place value.",
+        "The distributive idea lets us multiply a number by parts, then add the partial products.",
+        "Estimate first so you can detect a misplaced zero or regrouping error."
+      ],
+      "workedExamples": [
+        "326 × 24 = 326×20 + 326×4 = 6,520 + 1,304 = 7,824.",
+        "48 × 305 = 48×300 + 48×5 = 14,400 + 240 = 14,640."
+      ],
+      "practiceQuestions": [
+        "Find 214 × 36.",
+        "Find 507 × 18.",
+        "Estimate 398 × 21 before calculating exactly."
+      ],
+      "basis": "AVORA-authored depth supplement derived from the supplied topic scope; used only to fill missing teaching phases, examples or checks."
+    },
+    "ncee-source-p5-mathematics-first-term-division-of-whole-numbers": {
+      "concepts": [
+        "Division asks how many equal groups can be made or how large each equal share is.",
+        "Long division works by dividing one place-value part at a time, multiplying back, subtracting, and bringing down the next digit.",
+        "A remainder must be smaller than the divisor. Check a division using divisor × quotient + remainder = dividend."
+      ],
+      "workedExamples": [
+        "4,872 ÷ 24 = 203 because 24×203 = 4,872.",
+        "1,003 ÷ 8 = 125 remainder 3; check: 8×125 + 3 = 1,003."
+      ],
+      "practiceQuestions": [
+        "Find 3,696 ÷ 12.",
+        "Find 725 ÷ 6 and state the remainder.",
+        "How do you check a division with a remainder?"
+      ],
+      "basis": "AVORA-authored depth supplement derived from the supplied topic scope; used only to fill missing teaching phases, examples or checks."
+    },
+    "ncee-source-p5-mathematics-first-term-factors-and-multiples-introductory": {
+      "concepts": [
+        "A factor divides a number exactly; a multiple is produced by multiplying the number by a whole number.",
+        "HCF is the greatest factor shared by the numbers; LCM is the smallest positive multiple shared by them.",
+        "Prime factorization helps compare numbers systematically and prevents guessing."
+      ],
+      "workedExamples": [
+        "Factors of 18 include 1,2,3,6,9,18; multiples of 18 begin 18,36,54.",
+        "For 12 and 18: 12=2²×3 and 18=2×3², so HCF=2×3=6 and LCM=2²×3²=36."
+      ],
+      "practiceQuestions": [
+        "List all factors of 24.",
+        "Find the HCF of 20 and 30.",
+        "Find the LCM of 8 and 12."
+      ],
+      "basis": "AVORA-authored depth supplement derived from the supplied topic scope; used only to fill missing teaching phases, examples or checks."
+    },
+    "ncee-source-p5-mathematics-first-term-fractions": {
+      "concepts": [
+        "A fraction represents equal parts of a whole or of a quantity. The denominator tells how many equal parts make the whole; the numerator tells how many parts are considered.",
+        "Equivalent fractions name the same quantity with different-sized equal parts. Multiply or divide numerator and denominator by the same non-zero number to create an equivalent fraction.",
+        "Compare fractions by using a common denominator, a benchmark such as 1/2, or another valid representation."
+      ],
+      "workedExamples": [
+        "3/4 means 3 of 4 equal parts. 6/8 is equivalent because both numerator and denominator were doubled.",
+        "Compare 2/3 and 3/5: 10/15 > 9/15, so 2/3 > 3/5."
+      ],
+      "practiceQuestions": [
+        "Write an equivalent fraction for 5/6.",
+        "Which is larger: 3/4 or 5/8?",
+        "Convert 11/4 to a mixed number."
+      ],
+      "basis": "AVORA-authored depth supplement derived from the supplied topic scope; used only to fill missing teaching phases, examples or checks."
+    },
+    "ncee-source-p5-mathematics-second-term-addition-and-subtraction-of-fractions": {
+      "concepts": [
+        "Addition combines quantities; subtraction finds what remains or the difference between quantities.",
+        "Align digits by place value before using the written method, so ones are combined with ones, tens with tens, and so on.",
+        "Use the inverse operation to check: an addition answer can be checked by subtraction, and a subtraction answer by addition."
+      ],
+      "workedExamples": [
+        "48,765 + 6,908 = 55,673 after aligning places and regrouping where needed.",
+        "92,004 − 38,756 = 53,248; check by adding 53,248 + 38,756 = 92,004."
+      ],
+      "practiceQuestions": [
+        "Find 67,845 + 9,786.",
+        "Find 80,000 − 46,729.",
+        "Explain how you would check a subtraction answer."
+      ],
+      "basis": "AVORA-authored depth supplement derived from the supplied topic scope; used only to fill missing teaching phases, examples or checks."
+    },
+    "ncee-source-p5-mathematics-second-term-multiplication-and-division-of-fractions": {
+      "concepts": [
+        "To multiply fractions, multiply the numerators and denominators because you are taking a part of another part.",
+        "Dividing by a fraction asks how many of those fractional groups fit, which is equivalent to multiplying by its reciprocal.",
+        "Cancel common factors before multiplying when possible, then simplify the result."
+      ],
+      "workedExamples": [
+        "2/3 × 3/5 = 6/15 = 2/5.",
+        "3/4 ÷ 2/5 = 3/4 × 5/2 = 15/8 = 1 7/8."
+      ],
+      "practiceQuestions": [
+        "Find 4/7 × 3/8.",
+        "Find 5/6 ÷ 1/3.",
+        "Explain why dividing by 1/2 makes a positive number twice as large."
+      ],
+      "basis": "AVORA-authored depth supplement derived from the supplied topic scope; used only to fill missing teaching phases, examples or checks."
+    },
+    "ncee-source-p5-mathematics-second-term-decimals": {
+      "concepts": [
+        "Decimals extend place value to tenths, hundredths and thousandths. A digit’s value depends on its position relative to the decimal point.",
+        "When adding or subtracting decimals, align decimal points so equal place values are combined.",
+        "Fractions, decimals and percentages can describe the same quantity, so converting between forms helps check answers."
+      ],
+      "workedExamples": [
+        "3.47 + 0.8 = 3.47 + 0.80 = 4.27.",
+        "0.75 = 75/100 = 3/4 = 75%."
+      ],
+      "practiceQuestions": [
+        "Find 8.5 − 2.76.",
+        "Write 0.625 as a fraction in simplest form.",
+        "Which is larger: 0.7 or 0.67? Explain by place value."
+      ],
+      "basis": "AVORA-authored depth supplement derived from the supplied topic scope; used only to fill missing teaching phases, examples or checks."
+    },
+    "ncee-source-p5-mathematics-second-term-percentages-introductory": {
+      "concepts": [
+        "Percent means “out of 100.” A percentage can be converted to a fraction over 100 or to a decimal by dividing by 100.",
+        "To find a percentage of a quantity, multiply the quantity by the percentage written as a fraction or decimal.",
+        "To find what percentage one quantity is of another, divide the part by the whole and multiply by 100%."
+      ],
+      "workedExamples": [
+        "25% of 80 = 0.25×80 = 20.",
+        "18 out of 60 is 18/60×100% = 30%."
+      ],
+      "practiceQuestions": [
+        "Find 15% of 240.",
+        "What percentage of 50 is 35?",
+        "Convert 62.5% to a decimal."
+      ],
+      "basis": "AVORA-authored depth supplement derived from the supplied topic scope; used only to fill missing teaching phases, examples or checks."
+    },
+    "ncee-source-p5-mathematics-second-term-money-nigerian-currency": {
+      "concepts": [
+        "Money problems require identifying the starting amount, money added or received, and money spent or removed.",
+        "In Nigerian currency, 100 kobo = ₦1. Align naira and kobo or use decimal notation consistently.",
+        "Estimate purchases before calculating exactly so you can check whether change is reasonable."
+      ],
+      "workedExamples": [
+        "₦5,000 − (₦1,250 + ₦800) = ₦2,950 remaining.",
+        "If three books cost ₦1,450 each, total cost = 3×₦1,450 = ₦4,350."
+      ],
+      "practiceQuestions": [
+        "A child has ₦7,500 and spends ₦2,875. How much remains?",
+        "Find the cost of 6 items at ₦725 each.",
+        "A customer pays ₦10,000 for goods costing ₦8,640. Find the change."
+      ],
+      "basis": "AVORA-authored depth supplement derived from the supplied topic scope; used only to fill missing teaching phases, examples or checks."
+    },
+    "ncee-source-p5-mathematics-third-term-measurement-length-mass-capacity": {
+      "concepts": [
+        "Measurement uses agreed units. Before converting, identify the quantity: length, mass, capacity, time, area or volume.",
+        "A conversion changes the unit name without changing the actual quantity. Multiply when moving to smaller units and divide when moving to larger units, using the correct conversion factor.",
+        "Keep compound and square units distinct: 1 m = 100 cm, but 1 m² = 10,000 cm²."
+      ],
+      "workedExamples": [
+        "3.5 m = 350 cm because 1 m = 100 cm.",
+        "2.4 kg = 2,400 g because 1 kg = 1,000 g."
+      ],
+      "practiceQuestions": [
+        "Convert 4.75 m to cm.",
+        "Convert 3,250 mL to litres.",
+        "Explain why 2 m² is not 200 cm²."
+      ],
+      "basis": "AVORA-authored depth supplement derived from the supplied topic scope; used only to fill missing teaching phases, examples or checks."
+    },
+    "ncee-source-p5-mathematics-third-term-time": {
+      "concepts": [
+        "Time can be expressed with clocks, minutes, hours, days and calendar units. Conversion factors must be used carefully: 60 minutes = 1 hour.",
+        "Elapsed time is the duration between a start and finish; it can be found by counting forward in manageable steps.",
+        "When crossing noon or midnight, keep track of a.m./p.m. or use 24-hour time to avoid reversing the interval."
+      ],
+      "workedExamples": [
+        "From 9:35 a.m. to 11:10 a.m. is 1 hour 35 minutes.",
+        "150 minutes = 2 hours 30 minutes."
+      ],
+      "practiceQuestions": [
+        "Find the elapsed time from 1:45 p.m. to 4:20 p.m.",
+        "Convert 3 hours 25 minutes to minutes.",
+        "A journey starts at 22:50 and lasts 1 h 30 min. When does it end?"
+      ],
+      "basis": "AVORA-authored depth supplement derived from the supplied topic scope; used only to fill missing teaching phases, examples or checks."
+    },
+    "ncee-source-p5-mathematics-third-term-perimeter-and-area": {
+      "concepts": [
+        "Perimeter measures the boundary around a flat shape, area measures the surface covered, and volume measures space occupied by a solid. They are different quantities and use different units.",
+        "For rectangles, perimeter = 2(length+width) and area = length×width. For rectangular prisms, volume = length×width×height.",
+        "Always write the correct unit: length units for perimeter, square units for area, cubic units for volume."
+      ],
+      "workedExamples": [
+        "Rectangle 8 cm by 5 cm: perimeter=2(8+5)=26 cm; area=8×5=40 cm².",
+        "Cuboid 4 cm×3 cm×2 cm has volume 24 cm³."
+      ],
+      "practiceQuestions": [
+        "Find the area and perimeter of a 12 cm by 7 cm rectangle.",
+        "Find the volume of a 5 cm by 4 cm by 3 cm cuboid.",
+        "Explain why an area answer should not be written in cm."
+      ],
+      "basis": "AVORA-authored depth supplement derived from the supplied topic scope; used only to fill missing teaching phases, examples or checks."
+    },
+    "ncee-source-p5-mathematics-third-term-basic-shapes-and-angles": {
+      "concepts": [
+        "An angle measures turn and is measured in degrees. Acute angles are less than 90°, right angles equal 90°, obtuse angles lie between 90° and 180°.",
+        "Shapes are classified by properties such as number of sides, equal sides, parallel sides and angle sizes, not merely by how a drawing looks.",
+        "The angles on a straight line add to 180°, and the interior angles of a triangle add to 180°."
+      ],
+      "workedExamples": [
+        "If one angle on a straight line is 65°, the other is 180°−65°=115°.",
+        "A triangle with angles 50° and 60° has third angle 70°."
+      ],
+      "practiceQuestions": [
+        "Classify an angle of 135°.",
+        "Find the missing angle in a triangle with 48° and 72°.",
+        "State two properties of a rectangle."
+      ],
+      "basis": "AVORA-authored depth supplement derived from the supplied topic scope; used only to fill missing teaching phases, examples or checks."
+    },
+    "ncee-source-p5-mathematics-third-term-simple-data-handling": {
+      "concepts": [
+        "Data are values collected to answer a question. Read headings, labels and units before using a table or chart.",
+        "The mean is total ÷ number of values. The mode is the most frequent value. The median is the middle value after ordering the data.",
+        "A good data answer includes the correct value and the unit or category represented."
+      ],
+      "workedExamples": [
+        "For 4, 6, 6, 8: mean=24/4=6, mode=6, median=(6+6)/2=6.",
+        "If a bar chart scale is 1 square = 5 pupils, a bar 6 squares high represents 30 pupils."
+      ],
+      "practiceQuestions": [
+        "Find the mean of 5,7,8,10.",
+        "Find the mode of 2,3,3,4,5,5,5.",
+        "A chart scale is 2 cm = 10 items. What does 7 cm represent?"
+      ],
+      "basis": "AVORA-authored depth supplement derived from the supplied topic scope; used only to fill missing teaching phases, examples or checks."
+    },
+    "ncee-source-p5-mathematics-third-term-word-problems-multi-step-revision": {
+      "concepts": [
+        "A word problem must be translated before it is calculated: identify what is known, what is asked, and the relationship between the quantities.",
+        "Underline clue relationships but do not rely on one keyword alone; decide whether the situation describes combining, comparing, equal groups, rates, fractions or another structure.",
+        "For multi-step problems, write each intermediate result with its meaning, then check the final answer against the story."
+      ],
+      "workedExamples": [
+        "A shop has 240 bottles, sells 85 in the morning and 67 later. Total sold=152; remaining=240−152=88.",
+        "A bus carries 48 pupils on each of 6 trips. Total pupils carried=48×6=288."
+      ],
+      "practiceQuestions": [
+        "A farmer packs 1,260 oranges equally into 9 baskets. How many per basket?",
+        "A school buys 25 books at ₦1,200 each and pays ₦30,000. Is the payment enough?",
+        "Explain the steps you use before calculating a multi-step word problem."
+      ],
+      "basis": "AVORA-authored depth supplement derived from the supplied topic scope; used only to fill missing teaching phases, examples or checks."
+    },
+    "ncee-source-p6-mathematics-first-term-whole-numbers-place-value-to-millions-billions-standard-form-introductory": {
+      "concepts": [
+        "A digit has a value because of its place. Moving one place to the left makes its place value ten times as large; moving one place to the right makes it ten times as small.",
+        "Read large numbers by grouping digits into periods such as ones, thousands and millions. Expanded form shows the value contributed by each non-zero digit.",
+        "Before calculating, estimate the size of the answer so an impossible result can be noticed quickly."
+      ],
+      "workedExamples": [
+        "In 4,582,731 the digit 8 is in the ten-thousands place, so its value is 80,000.",
+        "Write 3,405,020 in expanded form: 3,000,000 + 400,000 + 5,000 + 20."
+      ],
+      "practiceQuestions": [
+        "What is the value of 7 in 2,734,105?",
+        "Write 6,090,402 in expanded form.",
+        "Which is greater: 4,508,999 or 4,580,099? Explain using place value."
+      ],
+      "basis": "AVORA-authored depth supplement derived from the supplied topic scope; used only to fill missing teaching phases, examples or checks."
+    },
+    "ncee-source-p6-mathematics-first-term-approximation-and-estimation": {
+      "concepts": [
+        "Approximation replaces a number with a nearby simpler value according to a stated place value or number of significant figures.",
+        "To round, look at the digit immediately to the right of the place being kept: 5 or more rounds up; below 5 stays.",
+        "Estimation gives a sensible prediction and helps check whether an exact answer is reasonable."
+      ],
+      "workedExamples": [
+        "48,763 rounded to the nearest thousand is 49,000.",
+        "Estimate 398×21 as 400×20=8,000, so the exact answer should be near 8,000."
+      ],
+      "practiceQuestions": [
+        "Round 6,748 to the nearest hundred.",
+        "Estimate 5,982÷31.",
+        "Why is estimation useful after an exact calculation?"
+      ],
+      "basis": "AVORA-authored depth supplement derived from the supplied topic scope; used only to fill missing teaching phases, examples or checks."
+    },
+    "ncee-source-p6-mathematics-first-term-factors-multiples-lcm-and-hcf-full-method": {
+      "concepts": [
+        "A factor divides a number exactly; a multiple is produced by multiplying the number by a whole number.",
+        "HCF is the greatest factor shared by the numbers; LCM is the smallest positive multiple shared by them.",
+        "Prime factorization helps compare numbers systematically and prevents guessing."
+      ],
+      "workedExamples": [
+        "Factors of 18 include 1,2,3,6,9,18; multiples of 18 begin 18,36,54.",
+        "For 12 and 18: 12=2²×3 and 18=2×3², so HCF=2×3=6 and LCM=2²×3²=36."
+      ],
+      "practiceQuestions": [
+        "List all factors of 24.",
+        "Find the HCF of 20 and 30.",
+        "Find the LCM of 8 and 12."
+      ],
+      "basis": "AVORA-authored depth supplement derived from the supplied topic scope; used only to fill missing teaching phases, examples or checks."
+    },
+    "ncee-source-p6-mathematics-first-term-fractions-full-operations-and-word-problems": {
+      "concepts": [
+        "A fraction represents equal parts of a whole or of a quantity. The denominator tells how many equal parts make the whole; the numerator tells how many parts are considered.",
+        "Equivalent fractions name the same quantity with different-sized equal parts. Multiply or divide numerator and denominator by the same non-zero number to create an equivalent fraction.",
+        "Compare fractions by using a common denominator, a benchmark such as 1/2, or another valid representation."
+      ],
+      "workedExamples": [
+        "3/4 means 3 of 4 equal parts. 6/8 is equivalent because both numerator and denominator were doubled.",
+        "Compare 2/3 and 3/5: 10/15 > 9/15, so 2/3 > 3/5."
+      ],
+      "practiceQuestions": [
+        "Write an equivalent fraction for 5/6.",
+        "Which is larger: 3/4 or 5/8?",
+        "Convert 11/4 to a mixed number."
+      ],
+      "basis": "AVORA-authored depth supplement derived from the supplied topic scope; used only to fill missing teaching phases, examples or checks."
+    },
+    "ncee-source-p6-mathematics-first-term-ratio-and-proportion-introductory": {
+      "concepts": [
+        "A ratio compares quantities using equal-sized parts. Simplify a ratio by dividing every term by the same common factor.",
+        "In direct proportion, quantities change by the same scale factor; if one doubles, the corresponding quantity doubles.",
+        "For ratio sharing, add the ratio parts, find the value of one part, then multiply by each person’s number of parts."
+      ],
+      "workedExamples": [
+        "Share ₦1,000 in ratio 2:3. Total parts=5; one part=₦200; shares are ₦400 and ₦600.",
+        "If 4 books cost ₦1,200 at the same rate, 8 books cost ₦2,400."
+      ],
+      "practiceQuestions": [
+        "Simplify 18:24.",
+        "Share 720 in ratio 5:3.",
+        "If 6 pens cost ₦900, what do 10 pens cost at the same rate?"
+      ],
+      "basis": "AVORA-authored depth supplement derived from the supplied topic scope; used only to fill missing teaching phases, examples or checks."
+    },
+    "ncee-source-p6-mathematics-second-term-decimals-full-operations-and-word-problems": {
+      "concepts": [
+        "Decimals extend place value to tenths, hundredths and thousandths. A digit’s value depends on its position relative to the decimal point.",
+        "When adding or subtracting decimals, align decimal points so equal place values are combined.",
+        "Fractions, decimals and percentages can describe the same quantity, so converting between forms helps check answers."
+      ],
+      "workedExamples": [
+        "3.47 + 0.8 = 3.47 + 0.80 = 4.27.",
+        "0.75 = 75/100 = 3/4 = 75%."
+      ],
+      "practiceQuestions": [
+        "Find 8.5 − 2.76.",
+        "Write 0.625 as a fraction in simplest form.",
+        "Which is larger: 0.7 or 0.67? Explain by place value."
+      ],
+      "basis": "AVORA-authored depth supplement derived from the supplied topic scope; used only to fill missing teaching phases, examples or checks."
+    },
+    "ncee-source-p6-mathematics-second-term-percentages-full-treatment": {
+      "concepts": [
+        "Percent means “out of 100.” A percentage can be converted to a fraction over 100 or to a decimal by dividing by 100.",
+        "To find a percentage of a quantity, multiply the quantity by the percentage written as a fraction or decimal.",
+        "To find what percentage one quantity is of another, divide the part by the whole and multiply by 100%."
+      ],
+      "workedExamples": [
+        "25% of 80 = 0.25×80 = 20.",
+        "18 out of 60 is 18/60×100% = 30%."
+      ],
+      "practiceQuestions": [
+        "Find 15% of 240.",
+        "What percentage of 50 is 35?",
+        "Convert 62.5% to a decimal."
+      ],
+      "basis": "AVORA-authored depth supplement derived from the supplied topic scope; used only to fill missing teaching phases, examples or checks."
+    },
+    "ncee-source-p6-mathematics-second-term-simple-interest-introductory": {
+      "concepts": [
+        "Simple interest is the extra money paid or earned on an original principal for a stated time at a stated rate.",
+        "For simple interest, SI = P×R×T/100, where P is principal, R is annual rate percent, and T is time in years.",
+        "The amount after simple interest is principal plus interest. Keep the rate and time units consistent."
+      ],
+      "workedExamples": [
+        "For ₦20,000 at 5% per year for 2 years: SI=20,000×5×2/100=₦2,000; amount=₦22,000.",
+        "For ₦8,000 at 10% for 6 months, use T=0.5 year: SI=8,000×10×0.5/100=₦400."
+      ],
+      "practiceQuestions": [
+        "Find the simple interest on ₦15,000 at 4% for 3 years.",
+        "Find the amount on ₦6,000 at 5% for 2 years.",
+        "Why must 6 months be written as 0.5 year when the rate is per year?"
+      ],
+      "basis": "AVORA-authored depth supplement derived from the supplied topic scope; used only to fill missing teaching phases, examples or checks."
+    },
+    "ncee-source-p6-mathematics-second-term-algebra-introductory": {
+      "concepts": [
+        "A letter in algebra can represent an unknown number. An equation states that two expressions have the same value.",
+        "To solve an equation, keep the balance: whatever operation is done to one side must be done to the other side.",
+        "Undo operations in reverse order and check by substituting the answer into the original equation."
+      ],
+      "workedExamples": [
+        "2x+5=17 → 2x=12 → x=6; check 2(6)+5=17.",
+        "3y−4=20 → 3y=24 → y=8."
+      ],
+      "practiceQuestions": [
+        "Solve x+9=23.",
+        "Solve 4x−7=21.",
+        "Check whether x=5 satisfies 3x+2=17."
+      ],
+      "basis": "AVORA-authored depth supplement derived from the supplied topic scope; used only to fill missing teaching phases, examples or checks."
+    },
+    "ncee-source-p6-mathematics-second-term-directed-numbers-introductory": {
+      "concepts": [
+        "Directed numbers include positive numbers, zero and negative numbers. A number line shows their order clearly.",
+        "Moving right on a number line increases value; moving left decreases value. A negative number closer to zero is greater than one farther left.",
+        "Everyday contexts include temperatures below zero, floors below ground level and debts/credits."
+      ],
+      "workedExamples": [
+        "−3 is greater than −7 because −3 lies to the right of −7 on the number line.",
+        "Starting at 2 and moving 5 units left gives −3, so 2−5=−3."
+      ],
+      "practiceQuestions": [
+        "Order −5,2,0,−1 from least to greatest.",
+        "Find −3+7 using a number line.",
+        "Which is greater: −2 or −8? Explain."
+      ],
+      "basis": "AVORA-authored depth supplement derived from the supplied topic scope; used only to fill missing teaching phases, examples or checks."
+    },
+    "ncee-source-p6-mathematics-third-term-measurement-full-conversions-and-word-problems": {
+      "concepts": [
+        "Measurement uses agreed units. Before converting, identify the quantity: length, mass, capacity, time, area or volume.",
+        "A conversion changes the unit name without changing the actual quantity. Multiply when moving to smaller units and divide when moving to larger units, using the correct conversion factor.",
+        "Keep compound and square units distinct: 1 m = 100 cm, but 1 m² = 10,000 cm²."
+      ],
+      "workedExamples": [
+        "3.5 m = 350 cm because 1 m = 100 cm.",
+        "2.4 kg = 2,400 g because 1 kg = 1,000 g."
+      ],
+      "practiceQuestions": [
+        "Convert 4.75 m to cm.",
+        "Convert 3,250 mL to litres.",
+        "Explain why 2 m² is not 200 cm²."
+      ],
+      "basis": "AVORA-authored depth supplement derived from the supplied topic scope; used only to fill missing teaching phases, examples or checks."
+    },
+    "ncee-source-p6-mathematics-third-term-perimeter-area-and-volume": {
+      "concepts": [
+        "Perimeter measures the boundary around a flat shape, area measures the surface covered, and volume measures space occupied by a solid. They are different quantities and use different units.",
+        "For rectangles, perimeter = 2(length+width) and area = length×width. For rectangular prisms, volume = length×width×height.",
+        "Always write the correct unit: length units for perimeter, square units for area, cubic units for volume."
+      ],
+      "workedExamples": [
+        "Rectangle 8 cm by 5 cm: perimeter=2(8+5)=26 cm; area=8×5=40 cm².",
+        "Cuboid 4 cm×3 cm×2 cm has volume 24 cm³."
+      ],
+      "practiceQuestions": [
+        "Find the area and perimeter of a 12 cm by 7 cm rectangle.",
+        "Find the volume of a 5 cm by 4 cm by 3 cm cuboid.",
+        "Explain why an area answer should not be written in cm."
+      ],
+      "basis": "AVORA-authored depth supplement derived from the supplied topic scope; used only to fill missing teaching phases, examples or checks."
+    },
+    "ncee-source-p6-mathematics-third-term-angles-and-basic-geometry": {
+      "concepts": [
+        "An angle measures turn and is measured in degrees. Acute angles are less than 90°, right angles equal 90°, obtuse angles lie between 90° and 180°.",
+        "Shapes are classified by properties such as number of sides, equal sides, parallel sides and angle sizes, not merely by how a drawing looks.",
+        "The angles on a straight line add to 180°, and the interior angles of a triangle add to 180°."
+      ],
+      "workedExamples": [
+        "If one angle on a straight line is 65°, the other is 180°−65°=115°.",
+        "A triangle with angles 50° and 60° has third angle 70°."
+      ],
+      "practiceQuestions": [
+        "Classify an angle of 135°.",
+        "Find the missing angle in a triangle with 48° and 72°.",
+        "State two properties of a rectangle."
+      ],
+      "basis": "AVORA-authored depth supplement derived from the supplied topic scope; used only to fill missing teaching phases, examples or checks."
+    },
+    "ncee-source-p6-mathematics-third-term-data-handling-and-statistics": {
+      "concepts": [
+        "Data are values collected to answer a question. Read headings, labels and units before using a table or chart.",
+        "The mean is total ÷ number of values. The mode is the most frequent value. The median is the middle value after ordering the data.",
+        "A good data answer includes the correct value and the unit or category represented."
+      ],
+      "workedExamples": [
+        "For 4, 6, 6, 8: mean=24/4=6, mode=6, median=(6+6)/2=6.",
+        "If a bar chart scale is 1 square = 5 pupils, a bar 6 squares high represents 30 pupils."
+      ],
+      "practiceQuestions": [
+        "Find the mean of 5,7,8,10.",
+        "Find the mode of 2,3,3,4,5,5,5.",
+        "A chart scale is 2 cm = 10 items. What does 7 cm represent?"
+      ],
+      "basis": "AVORA-authored depth supplement derived from the supplied topic scope; used only to fill missing teaching phases, examples or checks."
+    },
+    "ncee-source-p6-mathematics-third-term-speed-distance-and-time-introductory": {
+      "concepts": [
+        "Speed compares distance travelled with time taken: speed = distance ÷ time.",
+        "The three related formulas are distance = speed×time, speed = distance÷time, and time = distance÷speed.",
+        "Convert time units before substituting into a formula; for example 30 minutes = 0.5 hour if speed is in km/h."
+      ],
+      "workedExamples": [
+        "At 60 km/h for 2.5 h, distance=60×2.5=150 km.",
+        "A car travels 90 km in 1.5 h, so speed=90÷1.5=60 km/h."
+      ],
+      "practiceQuestions": [
+        "Find the distance travelled at 80 km/h for 45 minutes.",
+        "Find the speed for 150 km in 3 hours.",
+        "Why must 30 minutes be converted before using km/h?"
+      ],
+      "basis": "AVORA-authored depth supplement derived from the supplied topic scope; used only to fill missing teaching phases, examples or checks."
+    },
+    "ncee-source-p6-mathematics-third-term-full-revision-ncee-style-mixed-word-problems": {
+      "concepts": [
+        "A word problem must be translated before it is calculated: identify what is known, what is asked, and the relationship between the quantities.",
+        "Underline clue relationships but do not rely on one keyword alone; decide whether the situation describes combining, comparing, equal groups, rates, fractions or another structure.",
+        "For multi-step problems, write each intermediate result with its meaning, then check the final answer against the story."
+      ],
+      "workedExamples": [
+        "A shop has 240 bottles, sells 85 in the morning and 67 later. Total sold=152; remaining=240−152=88.",
+        "A bus carries 48 pupils on each of 6 trips. Total pupils carried=48×6=288."
+      ],
+      "practiceQuestions": [
+        "A farmer packs 1,260 oranges equally into 9 baskets. How many per basket?",
+        "A school buys 25 books at ₦1,200 each and pays ₦30,000. Is the payment enough?",
+        "Explain the steps you use before calculating a multi-step word problem."
+      ],
+      "basis": "AVORA-authored depth supplement derived from the supplied topic scope; used only to fill missing teaching phases, examples or checks."
+    },
+    "ncee-source-p5-quantitative-and-vocational-aptitude-all-number-patterns-and-sequences": {
+      "concepts": [
+        "A number pattern is controlled by a rule. Test differences, ratios or alternating operations rather than guessing from the last two numbers only.",
+        "For changing-difference patterns, calculate consecutive differences and inspect how those differences change.",
+        "Confirm a proposed rule on more than one step before using it to predict the next term."
+      ],
+      "workedExamples": [
+        "1,2,4,7,11 has differences 1,2,3,4, so next difference is 5 and next term is 16.",
+        "100,50,25,12.5 halves each time, so next is 6.25."
+      ],
+      "practiceQuestions": [
+        "Find the next term: 3,6,11,18,27,...",
+        "Find the next term: 81,27,9,3,...",
+        "Explain how you confirmed your rule."
+      ],
+      "basis": "AVORA-authored depth supplement derived from the supplied topic scope; used only to fill missing teaching phases, examples or checks."
+    },
+    "ncee-source-p5-quantitative-and-vocational-aptitude-all-relationships-between-numbers": {
+      "concepts": [
+        "A coded-number puzzle hides a rule connecting inputs to outputs.",
+        "Test each candidate rule against every given example; a rule that fits only one example may be coincidence.",
+        "Once confirmed, apply exactly the same order of operations to the new input."
+      ],
+      "workedExamples": [
+        "If 3☆4=10 and 5☆2=12, rule 2a+b fits both: 6+4=10 and 10+2=12.",
+        "If rule is “double then add 3,” input 6 gives 15."
+      ],
+      "practiceQuestions": [
+        "Test a rule against two examples before using it.",
+        "Create a rule that fits two given input-output pairs.",
+        "Explain why one fitting example is not enough."
+      ],
+      "basis": "AVORA-authored depth supplement derived from the supplied topic scope; used only to fill missing teaching phases, examples or checks."
+    },
+    "ncee-source-p5-quantitative-and-vocational-aptitude-all-simple-logical-number-puzzles": {
+      "concepts": [
+        "A coded-number puzzle hides a rule connecting inputs to outputs.",
+        "Test each candidate rule against every given example; a rule that fits only one example may be coincidence.",
+        "Once confirmed, apply exactly the same order of operations to the new input."
+      ],
+      "workedExamples": [
+        "If 3☆4=10 and 5☆2=12, rule 2a+b fits both: 6+4=10 and 10+2=12.",
+        "If rule is “double then add 3,” input 6 gives 15."
+      ],
+      "practiceQuestions": [
+        "Test a rule against two examples before using it.",
+        "Create a rule that fits two given input-output pairs.",
+        "Explain why one fitting example is not enough."
+      ],
+      "basis": "AVORA-authored depth supplement derived from the supplied topic scope; used only to fill missing teaching phases, examples or checks."
+    },
+    "ncee-source-p5-quantitative-and-vocational-aptitude-all-word-based-number-problems-pattern-recognition": {
+      "concepts": [
+        "A number pattern is controlled by a rule. Test differences, ratios or alternating operations rather than guessing from the last two numbers only.",
+        "For changing-difference patterns, calculate consecutive differences and inspect how those differences change.",
+        "Confirm a proposed rule on more than one step before using it to predict the next term."
+      ],
+      "workedExamples": [
+        "1,2,4,7,11 has differences 1,2,3,4, so next difference is 5 and next term is 16.",
+        "100,50,25,12.5 halves each time, so next is 6.25."
+      ],
+      "practiceQuestions": [
+        "Find the next term: 3,6,11,18,27,...",
+        "Find the next term: 81,27,9,3,...",
+        "Explain how you confirmed your rule."
+      ],
+      "basis": "AVORA-authored depth supplement derived from the supplied topic scope; used only to fill missing teaching phases, examples or checks."
+    },
+    "ncee-source-p6-quantitative-and-vocational-aptitude-all-number-sequences-full-range-arithmetic-geometric-mixed-rule": {
+      "concepts": [
+        "A number pattern is controlled by a rule. Test differences, ratios or alternating operations rather than guessing from the last two numbers only.",
+        "For changing-difference patterns, calculate consecutive differences and inspect how those differences change.",
+        "Confirm a proposed rule on more than one step before using it to predict the next term."
+      ],
+      "workedExamples": [
+        "1,2,4,7,11 has differences 1,2,3,4, so next difference is 5 and next term is 16.",
+        "100,50,25,12.5 halves each time, so next is 6.25."
+      ],
+      "practiceQuestions": [
+        "Find the next term: 3,6,11,18,27,...",
+        "Find the next term: 81,27,9,3,...",
+        "Explain how you confirmed your rule."
+      ],
+      "basis": "AVORA-authored depth supplement derived from the supplied topic scope; used only to fill missing teaching phases, examples or checks."
+    },
+    "ncee-source-p6-quantitative-and-vocational-aptitude-all-relationships-disguised-as-puzzles": {
+      "concepts": [
+        "A coded-number puzzle hides a rule connecting inputs to outputs.",
+        "Test each candidate rule against every given example; a rule that fits only one example may be coincidence.",
+        "Once confirmed, apply exactly the same order of operations to the new input."
+      ],
+      "workedExamples": [
+        "If 3☆4=10 and 5☆2=12, rule 2a+b fits both: 6+4=10 and 10+2=12.",
+        "If rule is “double then add 3,” input 6 gives 15."
+      ],
+      "practiceQuestions": [
+        "Test a rule against two examples before using it.",
+        "Create a rule that fits two given input-output pairs.",
+        "Explain why one fitting example is not enough."
+      ],
+      "basis": "AVORA-authored depth supplement derived from the supplied topic scope; used only to fill missing teaching phases, examples or checks."
+    },
+    "ncee-source-p6-quantitative-and-vocational-aptitude-all-fractions-decimals-percentages-in-reasoning-puzzles": {
+      "concepts": [
+        "A coded-number puzzle hides a rule connecting inputs to outputs.",
+        "Test each candidate rule against every given example; a rule that fits only one example may be coincidence.",
+        "Once confirmed, apply exactly the same order of operations to the new input."
+      ],
+      "workedExamples": [
+        "If 3☆4=10 and 5☆2=12, rule 2a+b fits both: 6+4=10 and 10+2=12.",
+        "If rule is “double then add 3,” input 6 gives 15."
+      ],
+      "practiceQuestions": [
+        "Test a rule against two examples before using it.",
+        "Create a rule that fits two given input-output pairs.",
+        "Explain why one fitting example is not enough."
+      ],
+      "basis": "AVORA-authored depth supplement derived from the supplied topic scope; used only to fill missing teaching phases, examples or checks."
+    },
+    "ncee-source-p6-quantitative-and-vocational-aptitude-all-algebraic-reasoning-puzzles": {
+      "concepts": [
+        "A coded-number puzzle hides a rule connecting inputs to outputs.",
+        "Test each candidate rule against every given example; a rule that fits only one example may be coincidence.",
+        "Once confirmed, apply exactly the same order of operations to the new input."
+      ],
+      "workedExamples": [
+        "If 3☆4=10 and 5☆2=12, rule 2a+b fits both: 6+4=10 and 10+2=12.",
+        "If rule is “double then add 3,” input 6 gives 15."
+      ],
+      "practiceQuestions": [
+        "Test a rule against two examples before using it.",
+        "Create a rule that fits two given input-output pairs.",
+        "Explain why one fitting example is not enough."
+      ],
+      "basis": "AVORA-authored depth supplement derived from the supplied topic scope; used only to fill missing teaching phases, examples or checks."
+    },
+    "ncee-source-p6-quantitative-and-vocational-aptitude-all-time-speed-measurement-reasoning": {
+      "concepts": [
+        "Identify the quantities and units before calculating.",
+        "Convert units first when the formula uses a different unit, such as minutes to hours for km/h.",
+        "Use the relationship distance=speed×time and rearrange it only after identifying what is unknown."
+      ],
+      "workedExamples": [
+        "40 km/h for 45 min = 40×0.75=30 km.",
+        "80 km/h for 30 min = 80×0.5=40 km."
+      ],
+      "practiceQuestions": [
+        "Find distance at 60 km/h for 20 minutes.",
+        "Convert 90 minutes to hours.",
+        "Explain why unit conversion comes before multiplication."
+      ],
+      "basis": "AVORA-authored depth supplement derived from the supplied topic scope; used only to fill missing teaching phases, examples or checks."
+    },
+    "ncee-source-p5-verbal-aptitude-all-odd-one-out-word-groups": {
+      "concepts": [
+        "Odd-one-out questions depend on a grouping rule shared by most items.",
+        "Test more than one possible rule and choose the one that creates the clearest consistent group.",
+        "State why the odd item fails the group rule; do not stop at naming it."
+      ],
+      "workedExamples": [
+        "Triangle, square and pentagon have straight sides; circle does not, so circle is odd.",
+        "Novel, poem and play are forms of writing; author is a person, so author is odd."
+      ],
+      "practiceQuestions": [
+        "Find the odd one out: swim, run, jump, strong.",
+        "State the group rule for cat, goat, lion, chair.",
+        "Explain why a tempting alternative grouping is weaker."
+      ],
+      "basis": "AVORA-authored depth supplement derived from the supplied topic scope; used only to fill missing teaching phases, examples or checks."
+    },
+    "ncee-source-p5-verbal-aptitude-all-word-analogies": {
+      "concepts": [
+        "Understand every word first.",
+        "Identify the relationship or rule.",
+        "Check that the rule fits all items before choosing."
+      ],
+      "workedExamples": [
+        "Work one example and name the relationship.",
+        "Work a contrasting example and reject a distractor."
+      ],
+      "practiceQuestions": [
+        "Solve a fresh item.",
+        "State the relationship.",
+        "Explain one wrong option."
+      ],
+      "basis": "AVORA-authored depth supplement derived from the supplied topic scope; used only to fill missing teaching phases, examples or checks."
+    },
+    "ncee-source-p5-verbal-aptitude-all-word-classification-and-grouping": {
+      "concepts": [
+        "Classification groups words by a shared meaning, function, grammar or other clear property.",
+        "The rule must fit every member of the group; advanced questions may contain two hidden group rules.",
+        "Name the group rule and perform a reverse check by asking why an item from the other group would not fit."
+      ],
+      "workedExamples": [
+        "Rose, lily, tulip are flowers; carrot, cabbage, spinach are vegetables.",
+        "Whisper, shout, murmur concern speech/sound; elephant, mouse, giant are strongly associated with size."
+      ],
+      "practiceQuestions": [
+        "Sort six words into two named groups.",
+        "Explain why one word does not fit a proposed group.",
+        "Create your own two-group classification."
+      ],
+      "basis": "AVORA-authored depth supplement derived from the supplied topic scope; used only to fill missing teaching phases, examples or checks."
+    },
+    "ncee-source-p5-verbal-aptitude-all-basic-coding-letter-number-substitution": {
+      "concepts": [
+        "Coding replaces letters or words according to a rule. Decode by identifying and reversing the same rule.",
+        "Keep repeated letters consistent and track shifts carefully through the alphabet.",
+        "Test the rule on a known part before applying it to the whole word."
+      ],
+      "workedExamples": [
+        "Shift each letter forward by 3: CAT → FDW.",
+        "If D→B is a backward shift of 2, decoding B requires moving forward 2 to D."
+      ],
+      "practiceQuestions": [
+        "Code DOG by shifting each letter forward 2.",
+        "Decode ECV if it was made by shifting forward 2.",
+        "Explain how you handle repeated letters in a substitution code."
+      ],
+      "basis": "AVORA-authored depth supplement derived from the supplied topic scope; used only to fill missing teaching phases, examples or checks."
+    },
+    "ncee-source-p6-verbal-aptitude-all-word-analogies-full-range": {
+      "concepts": [
+        "Understand every word first.",
+        "Identify the relationship or rule.",
+        "Check that the rule fits all items before choosing."
+      ],
+      "workedExamples": [
+        "Work one example and name the relationship.",
+        "Work a contrasting example and reject a distractor."
+      ],
+      "practiceQuestions": [
+        "Solve a fresh item.",
+        "State the relationship.",
+        "Explain one wrong option."
+      ],
+      "basis": "AVORA-authored depth supplement derived from the supplied topic scope; used only to fill missing teaching phases, examples or checks."
+    },
+    "ncee-source-p6-verbal-aptitude-all-odd-one-out-advanced": {
+      "concepts": [
+        "Odd-one-out questions depend on a grouping rule shared by most items.",
+        "Test more than one possible rule and choose the one that creates the clearest consistent group.",
+        "State why the odd item fails the group rule; do not stop at naming it."
+      ],
+      "workedExamples": [
+        "Triangle, square and pentagon have straight sides; circle does not, so circle is odd.",
+        "Novel, poem and play are forms of writing; author is a person, so author is odd."
+      ],
+      "practiceQuestions": [
+        "Find the odd one out: swim, run, jump, strong.",
+        "State the group rule for cat, goat, lion, chair.",
+        "Explain why a tempting alternative grouping is weaker."
+      ],
+      "basis": "AVORA-authored depth supplement derived from the supplied topic scope; used only to fill missing teaching phases, examples or checks."
+    },
+    "ncee-source-p6-verbal-aptitude-all-coding-and-decoding-full": {
+      "concepts": [
+        "Coding replaces letters or words according to a rule. Decode by identifying and reversing the same rule.",
+        "Keep repeated letters consistent and track shifts carefully through the alphabet.",
+        "Test the rule on a known part before applying it to the whole word."
+      ],
+      "workedExamples": [
+        "Shift each letter forward by 3: CAT → FDW.",
+        "If D→B is a backward shift of 2, decoding B requires moving forward 2 to D."
+      ],
+      "practiceQuestions": [
+        "Code DOG by shifting each letter forward 2.",
+        "Decode ECV if it was made by shifting forward 2.",
+        "Explain how you handle repeated letters in a substitution code."
+      ],
+      "basis": "AVORA-authored depth supplement derived from the supplied topic scope; used only to fill missing teaching phases, examples or checks."
+    },
+    "ncee-source-p6-verbal-aptitude-all-sentence-and-word-sequencing": {
+      "concepts": [
+        "Sequencing arranges words or events according to a logical relationship such as time, cause and effect, size or process.",
+        "Look for an event that must happen first and another that can only happen after something else.",
+        "After arranging, read the full sequence to check for impossible jumps or reversed cause and effect."
+      ],
+      "workedExamples": [
+        "Clouds gather → rain starts → rain stops → sun appears is a sensible time sequence.",
+        "Seed planted → seed watered → plant grows → flower blooms follows a growth process."
+      ],
+      "practiceQuestions": [
+        "Arrange four morning activities logically.",
+        "Explain which event must come first in a short process.",
+        "Find one sequence that is impossible and explain why."
+      ],
+      "basis": "AVORA-authored depth supplement derived from the supplied topic scope; used only to fill missing teaching phases, examples or checks."
+    },
+    "ncee-source-p6-verbal-aptitude-all-word-classification-and-grouping-advanced": {
+      "concepts": [
+        "Classification groups words by a shared meaning, function, grammar or other clear property.",
+        "The rule must fit every member of the group; advanced questions may contain two hidden group rules.",
+        "Name the group rule and perform a reverse check by asking why an item from the other group would not fit."
+      ],
+      "workedExamples": [
+        "Rose, lily, tulip are flowers; carrot, cabbage, spinach are vegetables.",
+        "Whisper, shout, murmur concern speech/sound; elephant, mouse, giant are strongly associated with size."
+      ],
+      "practiceQuestions": [
+        "Sort six words into two named groups.",
+        "Explain why one word does not fit a proposed group.",
+        "Create your own two-group classification."
+      ],
+      "basis": "AVORA-authored depth supplement derived from the supplied topic scope; used only to fill missing teaching phases, examples or checks."
+    }
+  },
+  "minimumLearnerLesson": {
+    "concepts": 3,
+    "workedExamples": 2,
+    "practiceQuestions": 3
+  }
+}

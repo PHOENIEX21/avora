@@ -1,0 +1,2 @@
+import {ForgotPasswordForm} from '@/components/PasswordRecoveryForm';
+export default function ForgotPassword(){return <main className="shell page"><div className="form-card"><span className="eyebrow">ACCOUNT RECOVERY</span><h2 style={{fontSize:34,marginTop:14}}>Forgot your password?</h2><p style={{color:'#697386'}}>Enter the email on your AVORA account. Reset links expire after 30 minutes.</p><ForgotPasswordForm/></div></main>}

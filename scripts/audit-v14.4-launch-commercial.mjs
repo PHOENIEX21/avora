@@ -1,0 +1,11 @@
+import fs from 'node:fs';
+let p=0,f=0;const ok=(n,v)=>{console.log(`${v?'PASS':'FAIL'} ${n}`);v?p++:f++};
+const pkg=JSON.parse(fs.readFileSync('package.json','utf8')),bill=fs.readFileSync('lib/billing.ts','utf8'),prem=fs.readFileSync('lib/premiumAccess.ts','utf8'),ai=fs.readFileSync('lib/aiCostGuard.ts','utf8'),support=fs.readFileSync('app/api/support/route.ts','utf8'),tutor=fs.readFileSync('app/api/tutor/chat/route.ts','utf8'),practice=fs.readFileSync('app/api/practice/explain/route.ts','utf8'),migration=fs.readFileSync('database/migrations/031_launch_commercial_hardening.sql','utf8');
+const live=fs.readdirSync('app/api/live-assessment',{recursive:true}).filter(x=>String(x).endsWith('route.ts')).map(x=>fs.readFileSync(`app/api/live-assessment/${x}`,'utf8')).join('\n');
+ok('version 14.4.0',/^14\.(?:[4-9]|[1-9]\d)\./.test(pkg.version));ok('FREE tier exists',bill.includes("'FREE'"));ok('premium gate exists',prem.includes('PREMIUM_REQUIRED'));
+ok('human support premium',support.includes('Human Academic Support'));ok('weekly live premium',live.includes('Weekly Live Exam'));ok('interactive Tutor premium',tutor.includes('Interactive AVORA Tutor'));
+ok('practice AI premium',practice.includes('Personalized AI Practice Guidance'));ok('daily AI ceiling',ai.includes('AI_DAILY_REQUEST_LIMIT_PER_USER'));ok('global AI ceiling',ai.includes('AI_MONTHLY_REQUEST_LIMIT_GLOBAL'));
+ok('$5 pilot budget default',ai.includes("AI_MONTHLY_BUDGET_USD||5"));ok('token accounting',ai.includes('input_tokens')&&ai.includes('output_tokens'));ok('cost accounting',ai.includes('estimated_cost_usd'));
+ok('Tutor AI guarded',tutor.includes('TUTOR_CHAT'));ok('Practice AI guarded',practice.includes('PRACTICE_EXPLAIN'));ok('AI migration',migration.includes('estimated_cost_usd'));
+ok('free usage ledger',migration.includes('free_learning_usage'));ok('Cloudflare audit script',!!pkg.scripts['audit:cloudflare-portability']);ok('Vercel testing path preserved',pkg.scripts.dev==='next dev'&&pkg.scripts.build==='next build');
+console.log(`V14.4 launch/commercial audit: ${p}/${p+f} PASS`);if(f)process.exit(1);

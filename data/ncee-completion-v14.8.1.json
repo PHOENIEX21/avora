@@ -1,0 +1,193 @@
+{
+  "version": "14.8.1",
+  "verifiedAt": "2026-09-14",
+  "overrides": {
+    "ncee-source-p6-english-studies-second-term-verbal-reasoning-integration": {
+      "concepts": [
+        "Verbal reasoning asks you to notice a relationship between words, not merely remember a definition. Before choosing an option, name the relationship you are using.",
+        "For sentence completion, read the whole sentence first. Decide what meaning is missing, then test each option in the sentence. Grammar and meaning must both fit.",
+        "For opposites, an antonym must reverse the important meaning of the target word. A word that is merely different is not automatically an opposite.",
+        "For analogies, read the first pair as a sentence that states the relationship, such as “a teacher teaches a student.” Apply that same relationship to the second pair.",
+        "A reliable verbal-reasoning answer survives a check: you can state the relationship in words and explain why the distractors do not fit it."
+      ],
+      "workedExamples": [
+        "Sentence completion: “The opposite of generous is ___: kind, selfish, happy.” Generous means willing to give. Selfish describes being mainly concerned with oneself, so it reverses the important idea. “Kind” is close to generous, while “happy” is unrelated. Answer: selfish.",
+        "Analogy: “Teacher is to Student as Doctor is to ___.” State the relationship first: a teacher teaches a student. A doctor treats a patient. Therefore the missing word is patient.",
+        "Analogy check: “Bird is to Nest as Bee is to ___.” The relationship is animal to its home. A bee lives in a hive, so hive completes the same relationship."
+      ],
+      "practiceQuestions": [
+        "Complete and explain: The opposite of “ancient” is ___ (modern / old / historic).",
+        "State the relationship first, then complete: Author is to Book as Composer is to ___.",
+        "Complete the sentence using meaning and grammar: “Because the road was flooded, the driver moved very ___.” (carefully / yesterday / blue)",
+        "Explain why “selfish” is a better opposite of “generous” than “happy”."
+      ],
+      "completionBasis": "AVORA-authored completion from the supplied Primary 6 English source, aligned to the NCEE verbal-aptitude relationship skills already present in AVORA."
+    },
+    "ncee-source-p6-english-studies-third-term-vocabulary-comprehensive-review": {
+      "concepts": [
+        "Vocabulary questions test meaning in context. The safest method is to identify the meaning needed in the sentence or expression before looking at the options.",
+        "A synonym has the same or nearly the same meaning in the given context. Two words can be related without being synonyms, so test them in a sentence.",
+        "An antonym expresses the opposite meaning. Check the exact sense being used: the opposite of “generous” is “selfish” or “stingy,” not simply any negative word.",
+        "A one-word substitution replaces a longer description with one precise word. The replacement must preserve the whole meaning, not only part of it.",
+        "An idiom has a meaning that cannot always be obtained by reading each word literally. Use the situation around the idiom to infer the intended meaning.",
+        "During review, compare close words and explain why one fits. This prevents guessing from familiarity."
+      ],
+      "workedExamples": [
+        "Synonym: “The examination was difficult.” In this sentence, “hard” can replace “difficult” without changing the main meaning. Therefore “hard” is a suitable synonym.",
+        "Antonym: “Ada is generous with her food.” The opposite idea is being unwilling to share. “Selfish” or “stingy” fits; “happy” does not reverse the meaning.",
+        "One-word substitution: “a person who loves books” can be called a bibliophile. For Primary 6, AVORA first teaches the meaning before expecting the label.",
+        "Idiom: “break the ice” does not mean breaking frozen water. In a social situation it means doing or saying something that makes people feel more comfortable and starts interaction."
+      ],
+      "practiceQuestions": [
+        "Give a synonym for “difficult” and use it in a sentence.",
+        "Give an antonym for “generous” and explain the contrast.",
+        "What does “break the ice” mean in this sentence: “The teacher told a funny story to break the ice on the first day”?",
+        "Choose the closest meaning of “rapid”: slow / quick / weak / quiet, and explain your choice."
+      ],
+      "completionBasis": "AVORA-authored completion from the supplied Primary 6 English review source; expands the source questions into explicit synonym, antonym, substitution and idiom teaching."
+    },
+    "ncee-source-p5-national-values-education-all-family-and-community-roles": {
+      "concepts": [
+        "A family is a group of people connected by birth, marriage, adoption or care who support one another. A community is a group of people who live, learn or work in the same area or share common institutions.",
+        "A role is the part a person plays in a group. A responsibility is a duty that the person is expected to carry out. Roles can differ, but every member should contribute responsibly.",
+        "Children have age-appropriate responsibilities such as respecting others, keeping personal and shared spaces tidy, caring for school materials and completing assigned chores safely.",
+        "Adults and community leaders also have responsibilities, such as caring for children, providing guidance, maintaining order, supporting community development and protecting public property.",
+        "Communities work well through cooperation, respect for rules, peaceful problem-solving, sanitation, honesty and participation in useful communal activities.",
+        "A responsible action should be judged by its effect on other people and on shared property. Good citizenship begins with everyday choices at home, school and in the community."
+      ],
+      "workedExamples": [
+        "A class is preparing for clean-up day. One learner sweeps only his desk while rubbish remains around the shared classroom. His personal area is clean, but his community role also includes helping protect the shared environment. A responsible action is to join the agreed class clean-up.",
+        "A younger child cannot safely carry a heavy water container. Responsibility does not mean doing unsafe work. The child can take an age-appropriate role, such as arranging light items or informing an adult that help is needed.",
+        "Neighbours organise a monthly sanitation exercise. Joining the exercise, disposing of waste properly and protecting the drainage are examples of cooperation for community wellbeing."
+      ],
+      "practiceQuestions": [
+        "Name two age-appropriate responsibilities a child can carry out at home and explain why each matters.",
+        "Give two ways members of a community can work together to improve their environment.",
+        "A child sees someone damaging a public tap. What responsible action should the child take?",
+        "Explain the difference between a role and a responsibility using a school example."
+      ],
+      "completionBasis": "AVORA-authored completion from the supplied Primary 5 General Paper source and NERDC National Values themes on family, community, rules and responsibilities."
+    },
+    "ncee-source-p6-basic-science-and-technology-all-health-and-hygiene": {
+      "concepts": [
+        "Health is a state of physical and mental wellbeing. Hygiene means habits that help keep the body and surroundings clean and reduce the spread of disease.",
+        "Germs are tiny disease-causing organisms or agents that can spread through dirty hands, contaminated food or water, droplets from coughing and sneezing, and unclean surroundings. We cannot usually see them, so prevention depends on good habits.",
+        "Handwashing works best when hands are washed with clean running water and soap, including palms, backs of hands, between fingers and around nails, then rinsed and dried cleanly.",
+        "Respiratory hygiene means covering a cough or sneeze with a tissue or the inside of the elbow, disposing of the tissue safely and cleaning the hands afterwards.",
+        "A balanced diet contains appropriate amounts from different food groups so the body receives energy, body-building nutrients, vitamins, minerals, fibre and water. Eating only one type of food repeatedly is not balanced.",
+        "Safe food and water practices include using clean water, washing foods that should be washed, keeping utensils clean, cooking food properly where necessary and protecting food from flies and dirt.",
+        "Regular exercise, enough rest, personal cleanliness and a clean environment work together with good nutrition to support health."
+      ],
+      "workedExamples": [
+        "Before eating, Chika has visible dirt on her hands after playing outside. Rinsing quickly without soap may leave germs behind. A safer routine is to wash thoroughly with soap and clean running water before touching food.",
+        "A meal contains rice only. Rice provides useful energy, but a balanced meal needs other nutrients too. Adding beans or another protein source and vegetables or fruit gives a wider range of nutrients.",
+        "Tunde coughs directly into his palm and then holds a shared classroom ruler. Germs can move from his hand to the ruler. Coughing into the elbow or a tissue and cleaning the hands reduces this route of spread."
+      ],
+      "practiceQuestions": [
+        "Name two ways to reduce the spread of germs and explain how each works.",
+        "Why is a balanced diet better than eating only one favourite food every day?",
+        "What should you do after coughing into a tissue?",
+        "Give one food-safety habit and one environmental-hygiene habit."
+      ],
+      "completionBasis": "AVORA-authored completion from the supplied Primary 6 General Paper source; expands the two source questions into age-appropriate health, hygiene and prevention teaching."
+    },
+    "ncee-source-p6-national-values-education-all-rights-and-responsibilities-of-citizens": {
+      "concepts": [
+        "A right is a freedom or protection a person is entitled to under the law and society. A responsibility is a duty a person should carry out toward other people, the community and the country.",
+        "Rights and responsibilities belong together. Having a right does not mean a person may harm other people or prevent them from enjoying their own rights.",
+        "Examples of civic rights discussed at this level include access to education, freedom of expression within the law, fair treatment and protection of life and dignity.",
+        "Examples of responsibilities include obeying lawful rules, respecting the rights of others, protecting public property, keeping the environment clean, helping maintain peace and participating responsibly in community life.",
+        "Public property belongs to everyone collectively. Damaging a public school desk, road sign, water facility or health-centre property harms the whole community and is irresponsible.",
+        "Responsible citizenship also requires peaceful disagreement. A person can express an opinion without insulting, threatening or attacking others.",
+        "When a right appears to conflict with another person’s safety or rights, AVORA asks: What is the right? What is the duty? Who could be affected? What action respects both as far as possible?"
+      ],
+      "workedExamples": [
+        "A learner has a right to learn in school. The learner also has a responsibility not to disrupt the lesson so that classmates can enjoy the same right to learn.",
+        "Citizens may express opinions, but spreading a dangerous false alarm that causes panic can harm others. Responsible expression means using the freedom without violating other people’s safety and rights.",
+        "A public tap is damaged deliberately. Because it serves many people, protecting and reporting damage to it is a responsibility toward the community."
+      ],
+      "practiceQuestions": [
+        "Name one right and one responsibility of a citizen, then explain how they can support each other.",
+        "Why is protecting public property a civic responsibility?",
+        "A learner disagrees with a class rule. Give a peaceful and responsible way to raise the concern.",
+        "Explain why having a right does not mean ignoring the rights of other people."
+      ],
+      "completionBasis": "AVORA-authored completion from the supplied Primary 6 General Paper source and NERDC National Values/Civic Education themes on rights, duties and responsible citizenship."
+    },
+    "ncee-source-p6-national-values-education-all-current-affairs-and-general-knowledge-ncee-relevant": {
+      "concepts": [
+        "General knowledge includes important facts about Nigeria and the world that are relatively stable, while current affairs concerns important events and office-holders that can change with time.",
+        "For a fact that can change, always attach a date and verify it from a reliable current source. A current office-holder should never be treated as a fact that can never change.",
+        "As of 14 September 2026, the President of the Federal Republic of Nigeria is Bola Ahmed Tinubu. This is a dated current-affairs fact and must be re-verified in a later release before it is taught as current.",
+        "Nigeria is in West Africa. Its land neighbours are Benin to the west, Niger to the north, Chad to the north-east and Cameroon to the east. Nigeria also has a southern coastline on the Gulf of Guinea.",
+        "Abuja is Nigeria’s Federal Capital Territory and seat of the federal government. Stable national facts should be distinguished from changing facts such as the names of current office-holders.",
+        "In an exam, read the wording carefully: a question asking for a current office-holder requires up-to-date knowledge, while a question about a capital, neighbour or historical date may be stable."
+      ],
+      "workedExamples": [
+        "Question: “Name one country that shares a land border with Nigeria.” Benin, Niger, Chad and Cameroon are all valid examples. Ghana is in West Africa but does not share a land border with Nigeria.",
+        "Question: “Who is the current President of Nigeria?” AVORA checks the date first. For this release, verified 14 September 2026, the answer is Bola Ahmed Tinubu. The date matters because the office-holder can change.",
+        "Question: “What is the capital of Nigeria?” Abuja is a stable general-knowledge answer. This is different from a current-affairs office-holder question because the capital is not expected to change frequently."
+      ],
+      "practiceQuestions": [
+        "Name two countries that share a land border with Nigeria.",
+        "Explain the difference between a current-affairs fact and a stable general-knowledge fact.",
+        "What is Nigeria’s capital?",
+        "Why should the name of a current office-holder be checked with a date before an exam?"
+      ],
+      "completionBasis": "AVORA-authored completion from the supplied Primary 6 General Paper source. Current President verified against the Nigerian State House on 14 September 2026; geography is treated as stable general knowledge."
+    },
+    "ncee-source-p6-verbal-aptitude-all-word-classification-and-grouping-advanced": {
+      "concepts": [
+        "Word classification means placing words into groups because they share a clear property. The important skill is not merely making groups; it is stating the rule that makes every member belong.",
+        "Start by looking for possible dimensions such as meaning, function, size, sound, part of speech, place, category or degree. Do not assume the first similarity you notice is the intended one.",
+        "A valid grouping rule must fit every word placed in that group. If one word does not fit, either the rule is wrong or the word belongs elsewhere.",
+        "Advanced classification may contain two different hidden dimensions. Name both groups explicitly before sorting the words.",
+        "Some words can fit more than one broad category, so prefer the grouping that explains all the words cleanly and creates balanced, meaningful sets.",
+        "After grouping, perform a reverse check: choose one word from each group and explain why swapping them would break the rule."
+      ],
+      "workedExamples": [
+        "Sort: Whisper, Shout, Elephant, Mouse, Murmur, Giant. First search for dimensions. Whisper, shout and murmur describe ways or volumes of speaking/sound. Elephant, mouse and giant relate to beings described strongly by size. The two rules explain all six words.",
+        "Sort: Rose, Lily, Carrot, Cabbage, Tulip, Spinach. Rose, lily and tulip are flowers; carrot, cabbage and spinach are vegetables. The category rule is consistent for every word.",
+        "Sort: Run, Swim, Happy, Angry, Jump, Sad. Run, swim and jump are actions; happy, angry and sad describe feelings or states. The grammatical/meaning distinction separates the sets."
+      ],
+      "practiceQuestions": [
+        "Sort into two groups and name each rule: Whisper, Shout, Elephant, Mouse, Murmur, Giant.",
+        "Group these words and explain your rule: Mango, Orange, Lion, Goat, Banana, Cow.",
+        "Which word would break this group and why: run, jump, swim, beautiful?",
+        "Create six words that can be sorted into two groups of three, then state both group rules."
+      ],
+      "completionBasis": "AVORA-authored completion from the supplied Primary 6 Verbal Reasoning source; explicitly teaches rule discovery, consistency testing and explanation."
+    }
+  },
+  "assessmentOnlyIds": [
+    "ncee-source-p6-quantitative-and-vocational-aptitude-all-full-ncee-style-timed-practice-set",
+    "ncee-source-p6-verbal-aptitude-all-full-ncee-style-timed-practice-set",
+    "ncee-source-p6-english-studies-third-term-full-ncee-style-objective-practice-combined"
+  ],
+  "policy": {
+    "learnerCatalogueRequiresCompleteTeaching": true,
+    "practiceOnlyNeverLearnerVisible": true,
+    "timedPracticeSetsAreAssessmentsNotLessons": true,
+    "dynamicCurrentAffairsRequireDatedVerification": true
+  },
+  "externalVerification": [
+    {
+      "authority": "NERDC",
+      "purpose": "Primary 4-6 Basic Education curriculum availability and National Values/BST scope",
+      "url": "https://www.nerdc.gov.ng/content_manager/pri4-6.html",
+      "checkedAt": "2026-09-14"
+    },
+    {
+      "authority": "NECO",
+      "purpose": "2026 NCEE official paper/domain structure",
+      "url": "https://neco.gov.ng/2026%20NATIONAL%20COMMON%20ENTRANCE%20EXAMINATION%20TIMETABLE-1.pdf",
+      "checkedAt": "2026-09-14"
+    },
+    {
+      "authority": "State House Nigeria",
+      "purpose": "Current President fact used in dated current-affairs lesson",
+      "url": "https://statehouse.gov.ng/people/",
+      "checkedAt": "2026-09-14"
+    }
+  ]
+}

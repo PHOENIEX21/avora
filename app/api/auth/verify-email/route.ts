@@ -14,5 +14,6 @@ export async function GET(req:Request){
     await tx`DELETE FROM email_verification_tokens WHERE user_id=${row.user_id}`;
   });
   await createSession({userId:row.user_id,email:row.email,role:row.role,name:row.full_name||undefined});
-  return NextResponse.redirect(new URL('/home?verified=1',url));
+  const destination=row.role==='PARENT'?'/parent?verified=1':row.role==='ADMIN'?'/admin':'/home?verified=1';
+  return NextResponse.redirect(new URL(destination,url));
 }

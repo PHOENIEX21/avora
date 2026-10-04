@@ -1,0 +1,63 @@
+export const jss1WordFormationDeepLessons=[{
+ topicId:'revised2025-jss1-english-word-formation-deep',classLevel:'JSS1',subject:'English Language',topic:'Use of Prefixes, Suffixes and Compounds',
+ objectives:['Explain prefixes and suffixes with examples','Form words with prefixes and suffixes','Explain and form compound words','Identify compound words in texts','Explain changes in meaning and word class','Recognise closed, open and hyphenated compounds'],
+ prerequisites:['basic vocabulary','parts of speech','basic spelling'],
+ teaching:[
+ 'Word formation builds vocabulary from meaningful parts. A BASE is the form to which an affix is attached. A PREFIX comes before a base; a SUFFIX comes after it.',
+ 'NERDC examples are un-, re- and de-. happy→unhappy: un- commonly gives a negative/opposite meaning. write→rewrite: re- commonly means again. code→decode: de- forms decode. Learn the meaning of the complete word instead of forcing one meaning onto a prefix everywhere.',
+ 'Prefixes often change meaning without changing word class: happy/unhappy are adjectives; write/rewrite are verbs.',
+ 'NERDC suffix examples are -ful, -less and -ness: hope→hopeful; help→helpless; happy→happiness.',
+ '-ful commonly forms adjectives expressing possession of a quality: hopeful, careful. The suffix is spelled -ful, not -full. -less commonly expresses absence: helpless, careless. -ness commonly forms abstract nouns: kindness, happiness.',
+ 'Suffixes can change word class. Happy is an adjective while happiness is a noun. Hope can be a noun or verb while hopeful is an adjective.',
+ 'Spelling can change during suffixation: happy→happiness changes y to i. Do not attach letters mechanically; verify the conventional spelling.',
+ 'Do not split a word merely because its first or final letters resemble an affix. A valid analysis must identify a meaningful base and explain the real word.',
+ 'A COMPOUND WORD combines meaningful words/bases into an established lexical unit. Compounds are not all written in the same way.',
+ 'CLOSED compounds are written together. NERDC examples include blackboard, lifelong, teapot and classroom.',
+ 'OPEN compounds are written separately but function as established units. NERDC examples include swimming pool, night flight, return ticket, return journey, return flight, dining room and market square.',
+ 'HYPHENATED compounds use a hyphen. NERDC lists ice-cream and sister-in-law. Published spelling can vary for some compounds, so follow the prescribed school text or an accepted dictionary.',
+ 'NERDC also lists age old. Modern edited usage often uses age-old before a noun. AVORA preserves the curriculum example while teaching learners to check accepted contextual spelling.',
+ 'Not every neighbouring pair is a compound. “red bag” is ordinary description, while “school bag” is an established expression naming a type of bag.',
+ 'A compound can have a specialised conventional meaning. Blackboard names a type of board; sister-in-law names a family relationship; return ticket has a recognised travel meaning.',
+ 'PREFIX/SUFFIX ROUTINE: BASE → AFFIX → POSITION → NEW WORD → MEANING → WORD CLASS → SENTENCE. COMPOUND ROUTINE: PARTS → ESTABLISHED UNIT → SPELLING → MEANING → SENTENCE.',
+ 'Word families grow vocabulary efficiently: help→helpful→helpless; care→careful→careless; happy→unhappy→happiness. Not every imaginable combination is an established English word.',
+ 'When identifying forms in a passage, explain why the letters form a real affix or why the words function as one compound unit. Identification without meaning is incomplete.'
+ ],
+ workedExamples:[
+ 'happy→unhappy: un- is a prefix; unhappy means not happy and remains an adjective.',
+ 'write→rewrite: re- forms a verb meaning write again.',
+ 'code→decode: de- forms the NERDC example decode.',
+ 'hope→hopeful: -ful forms an adjective.',
+ 'help→helpless: -less forms an adjective expressing lack.',
+ 'happy→happiness: -ness forms an abstract noun and y changes to i.',
+ 'kind→kindness: adjective kind becomes noun kindness.',
+ 'care→careful/careless: contrasting suffixes create different adjectives.',
+ 'black+board→blackboard: closed compound.',
+ 'tea+pot→teapot: closed compound.',
+ 'class+room→classroom: closed compound.',
+ 'swimming pool: NERDC open compound.',
+ 'return ticket: open compound with an established travel meaning.',
+ 'night flight: open compound naming a flight at night.',
+ 'sister-in-law: NERDC hyphenated compound.',
+ 'ice-cream: preserved as the form printed in the NERDC source.',
+ '“The unhappy pupil reread the notice beside the classroom before buying a return ticket.” un- and re- are prefixes; classroom is closed; return ticket is open.',
+ '“red bag” versus “school bag”: ordinary description versus an established compound expression.'
+ ],
+ misconceptions:['putting prefixes after bases','putting suffixes before bases','assuming prefixes always change word class','assuming one prefix has one meaning everywhere','splitting words into fake bases','ignoring spelling changes','writing -full instead of -ful','thinking all compounds are one word','thinking open compounds cannot be compounds','assuming adjacent words automatically form compounds','inventing compound spellings','identifying parts without explaining meaning'],
+ guidedPractice:[
+ 'Match happy, write and code to NERDC prefixes un-, re- and de-; form real words and explain meanings.',
+ 'Build established words from hope, help, care, kind and happy with -ful, -less and -ness; identify spelling and word-class changes.',
+ 'Build word-family trees such as help/helpful/helpless and care/careful/careless.',
+ 'Sort NERDC compound examples into closed, open and hyphenated groups.',
+ 'Distinguish established compounds from ordinary word combinations using meaning and accepted usage.',
+ 'Find prefixes, suffixes and compounds in a paragraph; mark bases and explain each formation.',
+ 'Combine base/affix and compound-part cards, explain each valid word and use it in a sentence.'
+ ],
+ independentPractice:[
+ 'Analyse fifteen derived words into meaningful base and affix; state meaning and any word-class change.',
+ 'Classify fifteen compounds, including NERDC examples, as closed, open or hyphenated and use six in sentences.',
+ 'Analyse a short travel paragraph containing careless, helpful, sister-in-law, reread, dining room and return ticket.',
+ 'Create a word-building chart with at least four prefixes, four suffixes and six compounds; include NERDC examples and give meanings and sentences.'
+ ],
+ source:{authority:'NERDC Revised BEC 2025',url:'https://nerdc.gov.ng',verified:'OFFICIAL_SCOPE_AND_EXAMPLES_PRESERVED_WITH_REFERENCE_CROSSCHECK'},
+ mastery:{criterion:'Learner explains and forms prefixed/suffixed words and compounds, identifies them in unfamiliar text, explains meaning/spelling/function, and achieves at least 80% mastery.',status:'DEEP_WHEN_PASSED'}
+}];

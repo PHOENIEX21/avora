@@ -1,7 +1,11 @@
 import { SignJWT, jwtVerify } from "jose";
 import { cookies } from "next/headers";
 
-const key = new TextEncoder().encode(process.env.AUTH_SECRET || "dev-only-change-me");
+const secret=(process.env.AUTH_SECRET||"").trim();
+if(process.env.NODE_ENV==="production" && secret.length<32){
+  throw new Error("Refusing to create or verify production sessions: AUTH_SECRET must be at least 32 characters.");
+}
+const key = new TextEncoder().encode(secret || "dev-only-change-me");
 const COOKIE = "avora_session";
 
 export type Session = { userId: string; role: string; email: string; name?: string };

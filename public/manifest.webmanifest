@@ -29,5 +29,51 @@
   "categories": [
     "education"
   ],
-  "orientation": "portrait-primary"
+  "orientation": "portrait-primary",
+  "id": "/",
+  "scope": "/",
+  "display_override": [
+    "window-controls-overlay",
+    "standalone",
+    "minimal-ui"
+  ],
+  "prefer_related_applications": false,
+  "shortcuts": [
+    {
+      "name": "Learn with AVORA",
+      "short_name": "Tutor",
+      "url": "/tutor",
+      "icons": [
+        {
+          "src": "/icons/avora-192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "Practice",
+      "short_name": "Practice",
+      "url": "/practice",
+      "icons": [
+        {
+          "src": "/icons/avora-192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "Exam",
+      "short_name": "Exam",
+      "url": "/exam",
+      "icons": [
+        {
+          "src": "/icons/avora-192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    }
+  ]
 }

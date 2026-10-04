@@ -1,0 +1,52 @@
+'use client';
+import React from 'react';
+
+const objectives=[
+'arrange a set of data in ascending or descending order',
+'explain the median as the middle value of an ordered data set',
+'find the median when the number of observations is odd',
+'find the median when the number of observations is even',
+'explain why ordering the data is necessary before selecting the middle',
+'check that every original observation is still present after ordering',
+'use the median to describe the central position of a simple data set'
+];
+
+function Chips({v,mid=[]}:{v:number[];mid?:number[]}){return <div className="median-chips">{v.map((x,i)=><span key={i} className={mid.includes(i)?'median-hit':''}>{x}</span>)}</div>}
+function Work({q,children}:{q:string;children:React.ReactNode}){return <div className="fraction-working"><div className="example-question"><span>WORKED EXAMPLE</span><strong>{q}</strong></div><div className="math-stack">{children}</div></div>}
+function Line({children,strong=false}:{children:React.ReactNode;strong?:boolean}){return <div className={strong?'math-line math-result':'math-line'}>{children}</div>}
+
+export default function DataPresentationLesson({onExercise}:{onExercise:()=>void}){return <article className="wn-lesson fractions-premium-lesson statistics-premium-lesson median-premium-lesson">
+<header className="wn-hero"><span>JSS1 MATHEMATICS · EVERYDAY STATISTICS</span><h1>Data Presentation: Median</h1><p>Take the data you collected, put the values in order, locate the centre correctly and explain what the median tells you.</p></header>
+<section className="wn-objectives"><h2>Learning Objectives</h2><ul>{objectives.map(x=><li key={x}>{x}.</li>)}</ul></section>
+
+<section className="wn-section"><h3>1. From Collected Data to Useful Information</h3><p>In the previous lesson, we collected and checked raw data. A raw list can be difficult to read. One useful way to begin making sense of numerical data is to arrange the values in order and locate the <b>median</b>.</p><div className="lesson-rule"><span><b>Raw data:</b> values as originally collected.</span><span><b>Ascending order:</b> smallest to largest.</span><span><b>Descending order:</b> largest to smallest.</span><span><b>Median:</b> the middle value or central position after the data have been ordered.</span></div></section>
+
+<section className="wn-section"><h3>2. The Most Important Rule: Order First</h3><p>Never pick the middle-looking number from an unordered list. The median is based on <b>position after ordering</b>.</p><div className="stats-card"><h4>Raw data</h4><Chips v={[9,4,7,2,6]}/><p>There are five values, but 7 is merely sitting in the third written position. That does not yet prove it is the median.</p><h4>Arrange from smallest to largest</h4><Chips v={[2,4,6,7,9]} mid={[2]}/><p>Now the central value is clearly <b>6</b>.</p></div><div className="lesson-rule"><span><b>Wrong:</b> choose the middle item before ordering.</span><span><b>Correct:</b> order → count → locate the middle.</span></div></section>
+
+<section className="wn-section"><h3>3. Median When the Number of Values Is Odd</h3><p>When there is an odd number of observations, one value sits exactly in the middle after ordering.</p><div className="median-position"><span>1st</span><span>2nd</span><span className="median-label">3rd<br/><b>MIDDLE</b></span><span>4th</span><span>5th</span></div><Chips v={[2,4,6,7,9]} mid={[2]}/><Work q="Find the median of 9, 4, 7, 2, 6."><Line>Step 1: arrange the data in ascending order.</Line><Line>2, 4, 6, 7, 9</Line><Line>Step 2: count the observations. There are 5 values.</Line><Line>Step 3: because 5 is odd, there is one middle position.</Line><Line>The 3rd value is 6.</Line><Line strong>Median = 6</Line><Line>Check: two observations lie below 6 and two lie above 6. ✓</Line></Work></section>
+
+<section className="wn-section"><h3>4. A Faster Way to Locate the Odd Middle Position</h3><p>For an odd number <b>n</b> of observations, the middle position can be found using:</p><div className="formula-card"><span>Middle position</span><strong>(n + 1) ÷ 2</strong></div><Work q="There are 9 ordered observations. Which position contains the median?"><Line>n = 9</Line><Line>Middle position = (9 + 1) ÷ 2</Line><Line>= 10 ÷ 2</Line><Line strong>= 5th position</Line><Line>The median is therefore the value occupying the 5th position—not the number 5 automatically.</Line></Work></section>
+
+<section className="wn-section"><h3>5. Median When the Number of Values Is Even</h3><p>With an even number of observations, no single observation occupies the exact centre. Two values sit equally close to the centre. We therefore find their average.</p><div className="median-position six"><span>1st</span><span>2nd</span><span className="median-label">3rd<br/><b>MIDDLE</b></span><span className="median-label">4th<br/><b>MIDDLE</b></span><span>5th</span><span>6th</span></div><Chips v={[3,5,7,9,11,14]} mid={[2,3]}/><div className="formula-card"><span>Median for an even data set</span><strong>(first middle value + second middle value) ÷ 2</strong></div></section>
+
+<section className="wn-section"><h3>6. Fully Worked Even-Number Example</h3><Work q="Find the median of 11, 5, 14, 7, 3, 9."><Line>Step 1: arrange the values from smallest to largest.</Line><Line>3, 5, 7, 9, 11, 14</Line><Line>Step 2: count them. There are 6 observations.</Line><Line>Step 3: 6 is even, so use the two middle values.</Line><Line>The middle positions are 3rd and 4th.</Line><Line>The middle values are 7 and 9.</Line><Line>Median = (7 + 9) ÷ 2</Line><Line>Median = 16 ÷ 2</Line><Line strong>Median = 8</Line><Line>Notice that 8 was not one of the original observations. That is perfectly possible for the median of an even data set. ✓</Line></Work></section>
+
+<section className="wn-section"><h3>7. Do Not Make This Even-Data Mistake</h3><div className="stats-card"><h4>Ordered data: 4, 6, 8, 12</h4><Chips v={[4,6,8,12]} mid={[1,2]}/><p>The middle values are <b>6 and 8</b>. Do not choose 6 just because it is the first of the two, and do not choose 8 just because it is the second.</p></div><Work q="Find the median of 4, 6, 8, 12."><Line>There are 4 observations, so there are two middle values.</Line><Line>Middle values = 6 and 8</Line><Line>Median = (6 + 8) ÷ 2</Line><Line>= 14 ÷ 2</Line><Line strong>Median = 7</Line></Work></section>
+
+<section className="wn-section"><h3>8. Repeated Values Still Count</h3><p>If a number appears more than once, every occurrence is an observation and must keep its place in the ordered list.</p><Work q="Find the median of 4, 2, 4, 7, 4, 9, 2."><Line>Arrange: 2, 2, 4, 4, 4, 7, 9</Line><Line>There are 7 observations.</Line><Line>Middle position = (7 + 1) ÷ 2 = 4th.</Line><Line>The 4th value is 4.</Line><Line strong>Median = 4</Line><Line>Do not delete repeated 2s or 4s; they are genuine observations. ✓</Line></Work></section>
+
+<section className="wn-section"><h3>9. Median From Classroom Data</h3><Work q="Seven learners recorded the number of books they read this term: 3, 1, 5, 2, 4, 2, 6. Find the median."><Line>Order the data: 1, 2, 2, 3, 4, 5, 6</Line><Line>Number of observations = 7</Line><Line>Middle position = 4th</Line><Line>The 4th value = 3</Line><Line strong>Median = 3 books</Line><Line>Interpretation: the central observation in the ordered data is 3 books. ✓</Line></Work></section>
+
+<section className="wn-section"><h3>10. Why the Median Can Be Useful</h3><p>The median tells us about the centre of an ordered data set. It is especially useful for describing a typical central position when one or two values are much larger or smaller than the rest.</p><div className="stats-card"><h4>Example</h4><Chips v={[2,3,3,4,30]} mid={[2]}/><p>The median is <b>3</b>. The unusually large value 30 does not move the median away from the middle position because median depends on order and position.</p></div></section>
+
+<section className="wn-section"><h3>11. Always Check Your Ordered List</h3><p>Ordering must not accidentally remove, duplicate or alter an observation.</p><div className="lesson-rule"><span>Count the raw values.</span><span>Count the ordered values.</span><span>The two counts must agree.</span><span>Check that repeated values remain repeated.</span><span>Check that no value changed while copying.</span></div></section>
+
+<section className="wn-section"><h3>12. Odd or Even? Decide Before Calculating</h3><div className="geometry-table-wrap"><table className="geometry-table"><thead><tr><th>Number of observations</th><th>Centre</th><th>What to do</th></tr></thead><tbody><tr><td>Odd: 3, 5, 7, 9, ...</td><td>One middle value</td><td>Select that middle ordered value</td></tr><tr><td>Even: 2, 4, 6, 8, ...</td><td>Two middle values</td><td>Add them and divide by 2</td></tr></tbody></table></div></section>
+
+<section className="wn-section"><h3>13. Common Mistakes</h3><div className="lesson-rule"><span><b>Not ordering:</b> the written middle is not necessarily the median.</span><span><b>Deleting repeats:</b> repeated observations still count.</span><span><b>Even set:</b> do not select only one of the two middle values.</span><span><b>Wrong operation:</b> for two middle values, add them and divide by 2.</span><span><b>Position/value confusion:</b> “5th position” tells you where to look; it does not mean the median equals 5.</span><span><b>Lost unit:</b> if the data are measured in cm, kg, books, etc., state the appropriate unit with the interpretation.</span></div></section>
+
+<section className="wn-section"><h3>14. AVORA Median Routine</h3><div className="lesson-rule"><span><b>ORDER:</b> smallest to largest.</span><span><b>COUNT:</b> how many observations?</span><span><b>DECIDE:</b> odd or even?</span><span><b>LOCATE:</b> one middle value or two?</span><span><b>CALCULATE:</b> for two middles, add and divide by 2.</span><span><b>ANSWER:</b> state the median clearly.</span><span><b>CHECK:</b> confirm no observation was lost or changed.</span></div></section>
+
+<section className="wn-section"><h3>15. Mastery Check</h3><p>You have mastered this lesson when you can correctly order an unfamiliar numerical data set and find its median whether it contains an odd or even number of observations, explain why ordering comes first, preserve repeated observations, and show every step when averaging two middle values.</p></section>
+<div className="lesson-action"><button type="button" className="primary-btn" onClick={onExercise}>Go to Exercise →</button></div>
+</article>}

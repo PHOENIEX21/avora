@@ -48,6 +48,8 @@ export default function PracticeClient() {
   const [stepAnswer, setStepAnswer] = useState('');
   const [stepFeedback, setStepFeedback] = useState<any>(null);
   const [stepHints, setStepHints] = useState(0);
+  const [exerciseHelp, setExerciseHelp] = useState<any>(null);
+  const [explainingExercise, setExplainingExercise] = useState(false);
 
   const sessionTarget = mode === 'DIAGNOSTIC' ? (context?.minimumEvidence || 5) : 5;
 
@@ -61,6 +63,7 @@ export default function PracticeClient() {
     setStepAnswer('');
     setStepFeedback(null);
     setStepHints(0);
+    setExerciseHelp(null);
     try {
       const r = await fetch(`/api/questions?mode=${mode.toLowerCase()}${requestedTopic ? '&topic=' + encodeURIComponent(requestedTopic) : ''}`, { cache: 'no-store' });
       const d = await readJson<any>(r);
@@ -89,8 +92,8 @@ export default function PracticeClient() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [requestedTopic, mode]);
 
-  async function submit(v: string) {
-    if (!q || result || submitting) return;
+  async function submit(v: string, retrySave = false) {
+    if (!q || (result && !retrySave) || submitting) return;
     setAnswer(v);
     setSubmitting(true);
     setError('');
@@ -103,7 +106,7 @@ export default function PracticeClient() {
       const d = await readJson<any>(r);
       if (!r.ok) throw new Error(d.error || 'Could not save this answer.');
       setResult(d);
-      setCount(c => c + 1);
+      if (d.saved !== false && !d.assisted) setCount(c => c + 1);
     } catch (e: any) {
       setError(e.message || 'Could not save this answer.');
     } finally {
@@ -143,6 +146,33 @@ export default function PracticeClient() {
     }
   }
 
+
+  async function explainExercise() {
+    if (!q || !result || result.correct || !answer.trim() || explainingExercise) return;
+    setExplainingExercise(true);
+    setError('');
+    try {
+      const r = await fetch('/api/practice/explain', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ questionId: q.id, answer }),
+      });
+      const d = await readJson<any>(r);
+      if (!r.ok) throw new Error(d.error || 'Could not explain this exercise.');
+      setExerciseHelp(d);
+      setStepHints(h => h + 1);
+    } catch (e: any) {
+      setError(e.message || 'Could not explain this exercise.');
+    } finally {
+      setExplainingExercise(false);
+    }
+  }
+
+  function retryAfterHelp() {
+    setResult(null);
+    setExerciseHelp(null);
+  }
+
   async function finishDiagnostic() {
     setError('');
     setSubmitting(true);
@@ -150,7 +180,8 @@ export default function PracticeClient() {
       const r = await fetch('/api/diagnostic/complete', { method: 'POST' });
       const d = await readJson<any>(r);
       if (!r.ok) throw new Error(d.error || 'Could not finish diagnostic.');
-      window.location.assign('/welcome?diagnostic=complete');
+      router.replace('/welcome?diagnostic=complete');
+      router.refresh();
     } catch (e: any) {
       setError(e.message || 'Could not finish diagnostic.');
       setSubmitting(false);
@@ -176,7 +207,8 @@ export default function PracticeClient() {
   </div>;
 
   if (!q) return null;
-  const guided = mode === 'PRACTICE' && q.guided && q.steps?.length;
+  // Answer-first contract: guided teaching is unlocked only after AVORA has seen the learner's own attempt.
+  const guided = false;
   const shownCount = Math.min(sessionTarget, count);
   const sessionFinished = mode === 'PRACTICE' && count >= sessionTarget;
 
@@ -201,18 +233,19 @@ export default function PracticeClient() {
       <div className="step-entry"><input value={stepAnswer} onChange={e => setStepAnswer(e.target.value)} onKeyDown={e => { if (e.key === 'Enter') checkStep(); }} autoFocus /><button disabled={submitting} onClick={checkStep}>{submitting ? 'Checking…' : 'Check step'}</button></div>
       {stepFeedback && <div className={stepFeedback.correct ? 'step-feedback correct' : 'step-feedback'}><strong>{stepFeedback.correct ? 'That step works.' : 'Look again.'}</strong><p>{stepFeedback.feedback}</p>{!stepFeedback.correct && stepFeedback.hint && <button className="hint-action" onClick={() => { setStepHints(h => h + 1); setStepFeedback({ ...stepFeedback, showHint: true }); }}>Give me a clue</button>}{stepFeedback.showHint && <p className="guided-hint">{stepFeedback.hint}</p>}</div>}
     </div> : !result && <>
-      {Array.isArray(q.options) && q.options.length ? <div className="answer-lines">{q.options.map(o => <button key={o} disabled={submitting} onClick={() => submit(o)} className={answer === o ? 'answer-line chosen' : 'answer-line'}><span>{o}</span></button>)}</div> : <form onSubmit={e => { e.preventDefault(); submit(answer); }} className="short-answer"><label>Work it out, then enter your answer.</label><input value={answer} onChange={e => setAnswer(e.target.value)} autoFocus /><button className="primary-action" disabled={!answer.trim() || submitting}>{submitting ? 'Checking…' : 'Check my thinking'}</button></form>}
-      {mode === 'PRACTICE' && <button className="hint-action" onClick={() => setHint(true)}>I need a small hint</button>}
-      {hint && <p className="guided-hint">{q.hint || 'Break the problem into one small change at a time. What can you simplify first?'}</p>}
+      {Array.isArray(q.options) && q.options.length ? <div className="answer-lines">{q.options.map(o => <button key={o} disabled={submitting} onClick={() => submit(o)} className={answer === o ? 'answer-line chosen' : 'answer-line'}><span>{o}</span></button>)}</div> : <form onSubmit={e => { e.preventDefault(); submit(answer); }} className="short-answer"><label>Show your answer or working. AVORA checks what you actually tried.</label><textarea rows={5} value={answer} onChange={e => setAnswer(e.target.value)} autoFocus placeholder="Type your answer or show the steps you have reached so far…"/><button className="primary-action" disabled={!answer.trim() || submitting}>{submitting ? 'Checking…' : 'Check my thinking'}</button></form>}
+      {mode === 'PRACTICE' && <p className="attempt-first-note">Attempt first. AVORA unlocks targeted teaching after it has seen your own thinking.</p>}
     </>}
 
     {error && <p className="flow-error">{error}</p>}
     {result && <div className="thinking-response">
-      <span className={result.correct ? 'response-state good' : 'response-state'}>{result.correct ? 'EVIDENCE ADDED' : 'LET’S LOCATE THE CHANGE'}</span>
-      <h3>{result.correct ? 'Good reasoning. Now prove the skill again.' : 'Not yet. Keep the problem — change the thinking.'}</h3>
+      <span className={result.correct ? 'response-state good' : 'response-state'}>{result.correct ? '✓ CORRECT' : '✗ NOT CORRECT YET'}</span>
+      <h3>{result.correct ? 'Correct answer. Now prove the skill again.' : 'This answer is not correct yet. Keep the problem — change the thinking.'}</h3>
       <p>{result.diagnosis}</p>
-      {!result.correct && mode === 'PRACTICE' && <div className="remediation-note"><strong>We won’t reveal the whole answer yet.</strong><p>Use the next guided question to locate the exact step that changed.</p></div>}
-      {sessionFinished ? <button className="primary-action" onClick={()=>requestedTopic?router.push('/tutor?topic='+encodeURIComponent(context?.topic||requestedTopic)):finishPracticeSession()}>{requestedTopic ? 'Finish practice & continue to lesson →' : 'Finish practice'}</button> : <button className="primary-action" onClick={load}>{mode === 'DIAGNOSTIC' ? 'Next question' : result.correct ? 'Next question' : 'Target this weakness'}</button>}
+      {result.saved === false && <div className="evidence-save-warning"><strong>Your answer was marked, but the evidence was not saved.</strong><p>{result.saveMessage || 'AVORA could not save this attempt yet.'}</p><button className="secondary-practice-action" disabled={submitting} onClick={() => submit(answer, true)}>{submitting ? 'Saving…' : 'Retry saving evidence'}</button></div>}
+      {!result.correct && mode === 'PRACTICE' && <div className="remediation-note"><strong>Your attempt comes first.</strong><p>AVORA will keep every correct part, locate the first meaningful gap, and teach from there without dumping the final answer.</p><button className="explain-exercise-action" disabled={explainingExercise} onClick={explainExercise}>{explainingExercise ? 'AVORA is studying your attempt…' : 'Explain this exercise from my attempt'}</button></div>}
+      {exerciseHelp && !result.correct && <div className="exercise-help-panel"><span>{exerciseHelp.state === 'PARTIAL' ? 'PARTLY RIGHT — KEEP GOING' : exerciseHelp.state === 'INCOMPLETE' ? 'RIGHT DIRECTION — NOT FINISHED' : 'FIRST GAP FOUND'}</span><h4>{exerciseHelp.message}</h4>{Array.isArray(exerciseHelp.board)&&exerciseHelp.board.length>0&&<div className="exercise-help-board">{exerciseHelp.board.map((line:string,i:number)=><div key={i}>{line}</div>)}</div>}<p><strong>Your next move:</strong> {exerciseHelp.nextPrompt}</p><button className="primary-action" onClick={retryAfterHelp}>Let me continue my own answer</button></div>}
+      {result.saved === false ? null : sessionFinished ? <button className="primary-action" onClick={()=>requestedTopic?router.push('/tutor?topic='+encodeURIComponent(context?.topic||requestedTopic)):finishPracticeSession()}>{requestedTopic ? 'Finish practice & continue to lesson →' : 'Finish practice'}</button> : result.correct ? <button className="primary-action" onClick={load}>{mode === 'DIAGNOSTIC' ? 'Next question' : 'Next question'}</button> : !exerciseHelp && <button className="secondary-practice-action" onClick={load}>{mode === 'DIAGNOSTIC' ? 'Next question' : 'Try a different question instead'}</button>}
     </div>}
 
     <div className="practice-foot">{mode === 'DIAGNOSTIC' ? `${count} answered · mistakes help AVORA choose where to begin` : 'This counter tracks only this practice set. Older attempts remain in your mastery history, but never inflate the on-screen question count.'}</div>

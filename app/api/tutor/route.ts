@@ -2,7 +2,12 @@ import {NextResponse} from 'next/server';
 import {getSession} from '@/lib/auth';
 import {sql,withDbRetry} from '@/lib/db';
 import {subjectLabel,subjectSlug} from '@/lib/subjects';
-import {getTutorTopicNames} from '@/lib/tutorCurriculum';
+import {getOfficialTopicNames,getCurriculumTutorPlan} from '@/lib/curriculumTutor';
+import {assessmentAliases} from '@/lib/masterTopicAliases';
+import {isNerdc2025Class} from '@/lib/nerdc2025Official';
+import {publicNerdc2025ExerciseQuestions} from '@/lib/nerdc2025Exercises';
+import {jss3EnglishLessonByTopic,publicJss3EnglishExerciseQuestions} from '@/lib/jss3EnglishTeaching';
+import {jss3MathExerciseCount,jss3MathExerciseQuestions} from '@/lib/jss3ProvisionalMathematics';
 
 export const dynamic='force-dynamic';
 export const revalidate=0;
@@ -41,14 +46,19 @@ function shapeQuestion(row:any){
 export async function GET(req:Request){
  const session=await getSession();
  if(!session)return json({error:'Please sign in again.'},{status:401});
+ 
  try{
-  const requestedTopic=new URL(req.url).searchParams.get('topic')?.trim()||'';
+  const url=new URL(req.url);
+  const requestedTopic=url.searchParams.get('topic')?.trim()||'';
+  const requestedSubject=url.searchParams.get('subject')?.trim()||'';
+  const previewClass=url.searchParams.get('previewClass')?.trim()||'';
   const [profile]=await withDbRetry(()=>sql`SELECT class_level,target_exam,preferred_subject FROM student_profiles WHERE user_id=${session.userId}`);
   const exam=String(profile?.target_exam||'BECE');
   const preferred=String(profile?.preferred_subject||'Mathematics');
-  const subject=subjectLabel(preferred);
-  const subSlug=subjectSlug(preferred);
-  const classLevel=String(profile?.class_level||(exam==='BECE'?'JSS3':'Primary 6'));
+  const subject=requestedSubject==='English Language'||requestedSubject==='Mathematics'?requestedSubject:subjectLabel(preferred);
+  const subSlug=subjectSlug(subject);
+  const profileClassLevel=String(profile?.class_level||(exam==='BECE'?'JSS3':'Primary 6'));
+  const classLevel=['JSS1','JSS2','JSS3'].includes(previewClass)?previewClass:profileClassLevel;
 
   // Keep the picker fast: one grouped query returns only topics that really have reviewed content.
   const topicRows=await withDbRetry(()=>sql`
@@ -66,10 +76,23 @@ export async function GET(req:Request){
   `);
   const bankTopics=topicRows.map((r:any)=>({name:String(r.name),questions:Number(r.questions||0)}));
   const counts=new Map(bankTopics.map((t:any)=>[String(t.name).toLowerCase(),Number(t.questions||0)]));
-  const academicTopics=getTutorTopicNames(exam,subject);
-  const topics=[...academicTopics.map(name=>({name,questions:counts.get(name.toLowerCase())||0})),...bankTopics.filter((t:any)=>!academicTopics.some(name=>name.toLowerCase()===String(t.name).toLowerCase()))];
+  const academicTopics=getOfficialTopicNames(classLevel,subject);
+  const currentNerdc=isNerdc2025Class(classLevel);
+  const topics=academicTopics.map(name=>{
+   const aliases=assessmentAliases(classLevel,subject,name);
+   const legacyQuestions=aliases.reduce((n,a)=>n+(counts.get(a.toLowerCase())||0),0);
+   const lower=name.toLowerCase();
+   const jss2Calibrated=['whole numbers','square root of numbers','fractions','commercial arithmetic','approximation','multiplication and division of directed numbers','algebraic expressions','simple equations','linear inequalities','graph','plane figure/ shapes','angles','bearing','construction','data presentation','probability'].includes(lower); const nerdcCount=classLevel==='JSS1'&&subject==='Mathematics'?(lower==='whole numbers'?10:(lower==='lcm'||lower.includes('lowest common multiple')?25:15)):classLevel==='JSS2'&&subject==='Mathematics'&&jss2Calibrated?(lower==='whole numbers'?20:lower==='algebraic expressions'?35:lower==='linear inequalities'?30:25):15;
+   const jss3EnglishCount=classLevel==='JSS3'&&subject==='English Language'?(jss3EnglishLessonByTopic(name)?.questions.length||0):0;
+   const jss3MathCount=classLevel==='JSS3'&&subject==='Mathematics'?jss3MathExerciseCount(name):0;
+   return {name,questions:jss3EnglishCount||jss3MathCount||(currentNerdc?nerdcCount:legacyQuestions)};
+  });
 
-  if(!requestedTopic)return json({exam,subject,classLevel,topics,questions:[]});
+  if(!requestedTopic)return json({exam,subject,classLevel,topics,questions:[],exerciseQuestions:[],plan:null});
+
+  const plan=getCurriculumTutorPlan(classLevel,subject,requestedTopic);
+  if(!plan)return json({error:'This topic is not part of the selected class curriculum.'},{status:404});
+  const requestedAliases=assessmentAliases(classLevel,subject,requestedTopic).map(x=>x.toLowerCase());
 
   const questionRows=await withDbRetry(()=>sql`
    SELECT q.id,q.prompt,q.question_type,q.options,q.hint_text,q.explanation,q.difficulty,
@@ -82,12 +105,15 @@ export async function GET(req:Request){
      AND char_length(trim(q.prompt))>=8
      AND sub.slug=${subSlug}
      AND (q.exam_name=${exam} OR q.exam_name IS NULL)
-     AND (lower(COALESCE(NULLIF(trim(q.exam_topic),''),t.name))=lower(${requestedTopic}) OR lower(t.name)=lower(${requestedTopic}))
+     AND (lower(COALESCE(NULLIF(trim(q.exam_topic),''),t.name))=ANY(${requestedAliases}) OR lower(t.name)=ANY(${requestedAliases}))
    ORDER BY q.curriculum_order,q.difficulty,q.created_at
    LIMIT 4
   `);
 
-  return json({exam,subject,classLevel,topics,questions:questionRows.map(shapeQuestion)});
+  const requestedLower=requestedTopic.toLowerCase();
+  const jss2CalibratedExercise=['whole numbers','square root of numbers','fractions','commercial arithmetic','approximation','multiplication and division of directed numbers','algebraic expressions','simple equations','linear inequalities','graph','plane figure/ shapes','angles','bearing','construction','data presentation','probability'].includes(requestedLower); const exerciseCount=classLevel==='JSS1'&&subject==='Mathematics'&&(requestedLower==='lcm'||requestedLower.includes('lowest common multiple'))?25:classLevel==='JSS1'&&subject==='Mathematics'&&requestedLower==='simplification of algebraic expressions'?30:classLevel==='JSS2'&&subject==='Mathematics'&&jss2CalibratedExercise?(requestedLower==='whole numbers'?20:requestedLower==='algebraic expressions'?35:requestedLower==='linear inequalities'?30:25):15;
+  const exerciseQuestions=classLevel==='JSS3'&&subject==='English Language'?publicJss3EnglishExerciseQuestions(requestedTopic,20):classLevel==='JSS3'&&subject==='Mathematics'?jss3MathExerciseQuestions(requestedTopic,100):(currentNerdc?publicNerdc2025ExerciseQuestions(classLevel,subject,requestedTopic,exerciseCount):[]);
+  return json({exam,subject,classLevel,topics,questions:questionRows.map(shapeQuestion),exerciseQuestions,plan});
  }catch(error){
   console.error('tutor GET',error);
   return json({error:'AVORA Tutor could not prepare this lesson just now. Please retry.'},{status:503});
