@@ -113,47 +113,78 @@ export const jss2EnglishDeepLessons:DeepJss2EnglishLesson[]=[
     "subject": "English Language",
     "strand": "Reading",
     "topic": "Reading to identify the meanings of words in various contexts",
-    "source": {
-      "authority": "NERDC",
-      "url": "https://nerdc.gov.ng/content_manager/jss/jss1-3_english_studies.pdf",
-      "page": 26
-    },
-    "objectives": [
-      "Use surrounding words and sentences as context clues to infer a target word’s meaning",
-      "Suggest alternative words that can fit the same context without changing the intended sense"
+    "source": {"authority":"NERDC","url":"https://nerdc.gov.ng/content_manager/jss/jss1-3_english_studies.pdf","page":26},
+    "objectives":["Use surrounding words and sentences as context clues to infer a target word’s meaning","Suggest alternative words that can fit the same context without changing the intended sense"],
+    "prerequisites":["dictionary skills","synonyms and antonyms","parts of speech","literal sentence meaning"],
+    "teaching":[
+      "A word does not carry one fixed meaning into every sentence. Context controls which sense is active. The learner must read the whole sentence and often the sentences around it before deciding.",
+      "DEFINITION OR RESTATEMENT CLUE. The writer may explain the word immediately: “The terrain was arid, that is, extremely dry.” The phrase after the comma defines arid.",
+      "EXAMPLE CLUE. A general word may be followed by examples: “Nocturnal animals, such as bats and owls, are active at night.” The examples help infer nocturnal.",
+      "SYNONYM CLUE. A nearby word or phrase may express nearly the same meaning. “The child was timid and shy around strangers.” Shy supports timid.",
+      "ANTONYM OR CONTRAST CLUE. Words such as but, unlike, although, however or instead can show an opposite: “Unlike his reckless brother, Tunde was cautious.” Reckless helps reveal cautious as careful.",
+      "CAUSE-AND-EFFECT CLUE. Consequences can reveal meaning. “The road was treacherous; loose stones made every step dangerous.” The danger explains treacherous.",
+      "GENERAL-SENSE CLUE. Sometimes no single clue defines the word, so combine the whole situation. The meaning chosen must make the entire sentence sensible.",
+      "PART OF SPEECH HELPS. Grammar restricts possible meanings. A word used after “to” may be a verb; a word before a noun may function as an adjective. A proposed substitute should fit both meaning and grammar.",
+      "MULTIPLE-MEANING WORDS. “Bank” in “river bank” differs from “bank” where money is kept. “Light” can mean illumination, not heavy, or ignite. Context selects the intended sense.",
+      "SUBSTITUTION TEST. Replace the target word with a candidate synonym and reread the sentence. If grammar and meaning remain sensible, the substitute may be valid.",
+      "NOT EVERY SYNONYM IS INTERCHANGEABLE. Words can be close in meaning but differ in tone, strength or grammar. “Angry” and “furious” are related, but furious is stronger.",
+      "MORPHOLOGY CAN HELP. Prefixes, suffixes and roots may give clues: unhappy contains un- meaning not; careless uses -less meaning without. But word parts must be checked against context.",
+      "INFER → SUBSTITUTE → VERIFY. First infer a likely meaning from clues, next insert a candidate substitute, then verify it against the whole sentence or paragraph.",
+      "PERMANENT EVIDENCE RULE. A correct answer should name the meaning and point to the contextual clue that supports it, rather than merely guessing a familiar synonym."
     ],
-    "prerequisites": [
-      "dictionary skills",
-      "synonyms and antonyms",
-      "literal sentence meaning"
+    "workedExamples":[
+      "DEFINITION. “The medicine is administered orally, meaning through the mouth.” Orally means through the mouth because the writer directly defines it.",
+      "EXAMPLE. “Aquatic animals such as fish, crabs and dolphins live in water.” Aquatic means living in or connected with water.",
+      "SYNONYM. “The old bridge was fragile and weak after years of neglect.” Weak supports fragile.",
+      "ANTONYM. “Mariam is usually reserved, but her sister is very talkative.” The contrast shows reserved means quiet or not very talkative.",
+      "CAUSE. “The path was treacherous; loose stones made every step dangerous.” Treacherous means dangerous.",
+      "EFFECT. “After walking for hours under the sun, he was exhausted and could barely stand.” The effect shows exhausted means extremely tired.",
+      "GENERAL SENSE. “The principal commended Tayo for returning the lost wallet.” Praised fits the positive situation, so commended means praised.",
+      "MULTIPLE MEANING — BANK. “The fishermen sat on the bank of the river.” Bank means the land beside the river, not a financial institution.",
+      "MULTIPLE MEANING — LIGHT. “This bag is light enough for a child to carry.” Light means not heavy.",
+      "PART OF SPEECH. “They will conduct the experiment tomorrow.” Conduct functions as a verb meaning carry out; the noun pronunciation/meaning would not fit.",
+      "SUBSTITUTION. “The coach reprimanded the player for arriving late.” Reprimanded≈scolded. Substitution gives “The coach scolded the player…”, which preserves meaning and grammar.",
+      "STRENGTH. “The crowd was furious.” Angry is related, but furious suggests stronger anger. A good answer notices degree.",
+      "PREFIX. “His response was inaccurate.” Prefix in- signals not; inaccurate means not accurate or incorrect, confirmed by context.",
+      "SUFFIX. “The child was fearless during the rescue drill.” -less means without; fearless means without fear, or brave in context.",
+      "WHOLE-PARAGRAPH CLUE. If one sentence says a farmer was reluctant and later says he hesitated repeatedly before agreeing, the repeated hesitation supports reluctant=unwilling or hesitant."
     ],
-    "teaching": [
-      "Words can change meaning with context. Do not choose the first dictionary meaning you remember; test the word against the whole sentence and paragraph.",
-      "Useful clues include definitions, examples, contrasts, causes, consequences, synonyms, antonyms and the general situation described around the target word.",
-      "Replace the target word with a possible synonym and reread the sentence. If grammar and meaning remain sensible, the substitution may be valid.",
-      "Context can also indicate part of speech. A word after “to” may function as a verb; a word naming a quality before a noun may function as an adjective.",
-      "AVORA teaches infer → substitute → verify: infer from clues, substitute a candidate meaning, then verify against the wider passage."
+    "misconceptions":[
+      "choosing the first dictionary meaning remembered",
+      "using sound similarity as evidence",
+      "ignoring sentences around the target word",
+      "substituting a word that breaks grammar",
+      "assuming one word has only one meaning",
+      "treating any related word as an exact synonym",
+      "ignoring contrast markers such as but or however",
+      "forcing a prefix/root meaning even when context disagrees",
+      "giving a meaning without citing the clue"
     ],
-    "workedExamples": [
-      "“The path was treacherous; loose stones made every step dangerous.” Treacherous means dangerous because the following clause explains the risk.",
-      "“The coach commended Tayo for his honesty.” Praised can replace commended; condemned cannot because it reverses the context."
+    "guidedPractice":[
+      "Infer the meaning of eight underlined words, and identify the clue type for each.",
+      "For five words with two possible dictionary meanings, choose the sense that fits the sentence and explain why.",
+      "Replace six target words with a synonym that preserves both meaning and grammar.",
+      "Find one example each of definition, example, contrast, synonym and cause-effect clues in a short passage.",
+      "Compare angry, annoyed and furious in three contexts and explain the strength difference.",
+      "Use part of speech to reject one wrong substitute in each of four sentences.",
+      "Use prefixes/suffixes to suggest a meaning, then verify with context.",
+      "Explain a target word using the full pattern: meaning → clue → substitution check."
     ],
-    "misconceptions": [
-      "choosing a meaning from sound similarity",
-      "ignoring the paragraph beyond the target sentence",
-      "substituting a synonym that breaks grammar",
-      "assuming one word has only one meaning"
+    "independentPractice":[
+      "Read an unseen passage and infer ten underlined words with evidence.",
+      "For each inferred word, supply one acceptable substitute where possible.",
+      "Identify three multiple-meaning words and explain the sense used in context.",
+      "Write two sentences using the same word in different meanings.",
+      "Create one sentence containing a definition clue.",
+      "Create one sentence containing a contrast clue.",
+      "Create one sentence containing a cause-effect clue.",
+      "Choose the best synonym from four options for six context sentences and justify each choice.",
+      "Explain why a tempting synonym is wrong in three sentences because of grammar, tone or strength.",
+      "Analyse five words containing prefixes/suffixes and decide whether morphology plus context supports the meaning.",
+      "Rewrite a short paragraph by replacing five target words with accurate context-sensitive alternatives.",
+      "Explain why context is more reliable than choosing the first dictionary meaning."
     ],
-    "guidedPractice": [
-      "Infer ten underlined words from short passages and explain the exact clue used."
-    ],
-    "independentPractice": [
-      "Complete two unfamiliar passages, infer eight target words and propose one valid substitute for each."
-    ],
-    "mastery": {
-      "criterion": "At least 80% overall, with accurate application on an unfamiliar task and correction of any major misconception before progression.",
-      "status": "DEEP_WHEN_PASSED"
-    },
+    "mastery":{"criterion":"At least 85% across definition, example, synonym, contrast, cause-effect, general-sense, morphology and multiple-meaning contexts, with evidence and valid substitution.","status":"DEEP_WHEN_PASSED"},
     "boardReady": true
   },
   {
