@@ -6,6 +6,8 @@ import {teachingMapFor} from './deepTeachingArchitecture';
 import {getNerdc2025DeepUnits} from './nerdc2025Teaching';
 import {officialNerdc2025Topic,isNerdc2025Class} from './nerdc2025Official';
 import {jss3EnglishLessons,jss3EnglishTutorPlan} from './jss3EnglishTeaching';
+import {jss3MathematicsDeepLessons} from './jss3MathematicsDeepLessons';
+import {jss3EnglishDeepLessons} from './jss3EnglishDeepLessons';
 
 export function getOfficialTopicNames(classLevel:string,subject:string):string[]{
  if(classLevel==='JSS3'&&subject==='English Language')return jss3EnglishLessons.map(x=>x.topic);
@@ -61,13 +63,67 @@ function applyTeachingMap(units:TutorUnit[],classLevel:string,topic:string){
  }));
 }
 
+function runtimeTopicKey(value:string){
+ return String(value||'').toLowerCase().replace(/[–—/]/g,' ').replace(/[^a-z0-9]+/g,' ').trim().replace(/\s+/g,' ');
+}
+
+const jss3EnglishDeepAliases:Record<string,string>={
+ [runtimeTopicKey('Revision of Composition Writing — Narrative, Descriptive, Expository and Argumentative')]:runtimeTopicKey('Revision: various types of composition writing – Narrative, Descriptive, Expository, Argumentative'),
+ [runtimeTopicKey('Revision of Informal and Formal Letter Writing')]:runtimeTopicKey('Revision: Letter writing: informal and formal'),
+ [runtimeTopicKey('Speech / Phonemes')]:runtimeTopicKey('Speeches: phonemes'),
+ [runtimeTopicKey('Intonation, Stress and Rhythm')]:runtimeTopicKey('Speeches: Intonation, stress and Rhythm'),
+ [runtimeTopicKey('Active and Passive Verbs')]:runtimeTopicKey('Active and Passive verbs'),
+ [runtimeTopicKey('Modal Forms, Question Tags, Direct and Indirect Forms')]:runtimeTopicKey('Modal forms'),
+ [runtimeTopicKey('Lessons from Myths and Legends')]:runtimeTopicKey('Lessons from myths/legends'),
+ [runtimeTopicKey('Poetry Revision')]:runtimeTopicKey('Poetry: Revision'),
+ [runtimeTopicKey('Drama Revision')]:runtimeTopicKey('Drama: Revision')
+};
+
+function enrichJss3AuthoredPlan(plan:TutorPlan,subject:string,topic:string):TutorPlan{
+ const wanted=runtimeTopicKey(topic);
+ const deep=subject==='Mathematics'
+  ? jss3MathematicsDeepLessons.find(x=>runtimeTopicKey(x.topic)===wanted)
+  : jss3EnglishDeepLessons.find(x=>{
+      const target=jss3EnglishDeepAliases[wanted]||wanted;
+      return runtimeTopicKey(x.topic)===target;
+    });
+ if(!deep)return plan;
+
+ const examples=deep.workedExamples.filter(Boolean);
+ const guided=deep.guidedPractice.filter(Boolean);
+ return {
+  ...plan,
+  why:plan.why,
+  outcomes:Array.from(new Set([...(plan.outcomes||[]),...deep.objectives])),
+  units:plan.units.map((unit,index)=>{
+   const model=examples[index%Math.max(1,examples.length)]||'';
+   const practice=guided[index%Math.max(1,guided.length)]||unit.check;
+   const existing=String(unit.example||'').trim();
+   const worked=model
+    ? (existing
+      ? existing+'\n\nSECOND WORKED MODEL — '+model
+      : 'WORKED MODEL / SOLUTION — '+model)
+    : existing;
+   return {
+    ...unit,
+    why:unit.why||deep.teaching[index%Math.max(1,deep.teaching.length)],
+    outcomes:Array.from(new Set([...(unit.outcomes||[]),deep.objectives[index%Math.max(1,deep.objectives.length)]])),
+    example:worked,
+    check:practice||unit.check,
+    commonMistakes:Array.from(new Set([...(unit.commonMistakes||[]),...deep.misconceptions.slice(index%Math.max(1,deep.misconceptions.length),(index%Math.max(1,deep.misconceptions.length))+2)]))
+   };
+  })
+ };
+}
+
+
 export function getCurriculumTutorPlan(classLevel:string,subject:string,topic:string):TutorPlan|undefined{
- if(classLevel==='JSS3'&&subject==='English Language'){const authored=jss3EnglishTutorPlan(topic);return authored?{...authored,units:applyTeachingMap(authored.units,classLevel,topic)}:undefined;}
+ if(classLevel==='JSS3'&&subject==='English Language'){const authored=jss3EnglishTutorPlan(topic);if(!authored)return undefined;const enriched=enrichJss3AuthoredPlan(authored,subject,topic);return {...enriched,units:applyTeachingMap(enriched.units,classLevel,topic)};}
  // JSS3 Mathematics has a complete authored BECE bank. It is authoritative and must
  // win before legacy/sent curriculum sources.
  if(classLevel==='JSS3'&&subject==='Mathematics'){
   const authored=getTutorPlan('BECE',subject,topic);
-  if(authored)return {...authored,units:applyTeachingMap(authored.units,classLevel,topic)};
+  if(authored){const enriched=enrichJss3AuthoredPlan(authored,subject,topic);return {...enriched,units:applyTeachingMap(enriched.units,classLevel,topic)};}
  }
 
  const master=masterTopicByName(classLevel,subject,topic);
