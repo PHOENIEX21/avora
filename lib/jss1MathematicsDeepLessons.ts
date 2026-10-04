@@ -1531,7 +1531,7 @@ function jss1MathGoldenMapFor(topic:string){
   'Multiplications and Divisions of fractions':'Multiplication and Division of Fractions',
   'Estimation':'Estimation and Approximation','Approximation':'Estimation and Approximation',
   'Addition of numbers in base 2 numerals':'Binary Addition','Subtraction of numbers in base 2 numerals':'Binary Subtraction','Multiplication of numbers in base 2 numerals':'Binary Multiplication',
-  'Use of symbols':'Use of Symbols and Algebraic Expressions','Plane shapes':'Plane Shapes','Three dimensional figures':'Three-Dimensional Figures','Construction':'Geometric Constructions'
+  'Use of symbols':'Use of Symbols and Algebraic Expressions','Simplification of algebraic expressions':'Simplification of Algebraic Expressions','Simple equations':'Simple Equations','Plane shapes':'Plane Shapes','Three dimensional figures':'Three-Dimensional Figures','Construction':'Geometric Constructions','Need for statistics':'Need for Statistics','Data collection':'Data Collection','Data presentation':'Data Presentation'
  }; return jss1MathematicsTeachingMaps[aliases[topic]||''];
 }
 for(const lesson of jss1MathematicsDeepLessons){
