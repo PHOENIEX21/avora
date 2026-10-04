@@ -91,24 +91,26 @@ function enrichJss3AuthoredPlan(plan:TutorPlan,subject:string,topic:string):Tuto
 
  const examples=deep.workedExamples.filter(Boolean);
  const guided=deep.guidedPractice.filter(Boolean);
+ const teaching=deep.teaching.filter(Boolean);
  return {
   ...plan,
   why:plan.why,
   outcomes:Array.from(new Set([...(plan.outcomes||[]),...deep.objectives])),
   units:plan.units.map((unit,index)=>{
-   const model=examples[index%Math.max(1,examples.length)]||'';
    const practice=guided[index%Math.max(1,guided.length)]||unit.check;
+   const extraTeaching=teaching[index%Math.max(1,teaching.length)]||'';
+   const modelStart=(index*2)%Math.max(1,examples.length);
+   const modelExamples=examples.length
+    ? [examples[modelStart],examples[(modelStart+1)%examples.length],examples[(modelStart+2)%examples.length]].filter(Boolean)
+    : [];
    const existing=String(unit.example||'').trim();
-   const worked=model
-    ? (existing
-      ? existing+'\n\nSECOND WORKED MODEL — '+model
-      : 'WORKED MODEL / SOLUTION — '+model)
-    : existing;
    return {
     ...unit,
-    why:unit.why||deep.teaching[index%Math.max(1,deep.teaching.length)],
+    explain:[String(unit.explain||'').trim(),extraTeaching].filter(Boolean).join('\n\n'),
+    why:unit.why||extraTeaching,
     outcomes:Array.from(new Set([...(unit.outcomes||[]),deep.objectives[index%Math.max(1,deep.objectives.length)]])),
-    example:worked,
+    example:existing,
+    workedExamples:modelExamples,
     check:practice||unit.check,
     commonMistakes:Array.from(new Set([...(unit.commonMistakes||[]),...deep.misconceptions.slice(index%Math.max(1,deep.misconceptions.length),(index%Math.max(1,deep.misconceptions.length))+2)]))
    };
