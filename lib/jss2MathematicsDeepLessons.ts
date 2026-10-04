@@ -276,7 +276,7 @@ export const jss2MathematicsDeepLessons:DeepJss2MathLesson[]=[
   'Explain why a 20% discount and a 20% profit cannot automatically be cancelled when they are calculated on different base amounts.'
  ],
  mastery:{criterion:'At least 80% across household budgets, bills, profit/loss, simple interest, discount and commission, with every percentage base identified explicitly and final money answers interpreted correctly.',status:'DEEP_WHEN_PASSED'},boardReady:true
-}
+},
 {
  topicId:'nerdc-jss2-math-basic-operations-derived-operations-2',classLevel:'JSS2',subject:'Mathematics',topic:'Approximation',source:{authority:'NERDC',url:sourceUrl,page:20},
  objectives:['Approximate numbers to a stated degree of accuracy','Solve quantitative-reasoning problems involving approximation'],
