@@ -441,301 +441,289 @@ export const jss2EnglishDeepLessons:DeepJss2EnglishLesson[]=[
     "mastery":{"criterion":"Learner identifies the exact summary focus, extracts distinct major points, paraphrases accurately and writes concise grammatical summaries with no repetition or added opinion at at least85% standard.","status":"DEEP_WHEN_PASSED"},"boardReady":true
   },
   {
-    "topicId": "nerdc-jss2-english-listening-and-speaking-1",
-    "classLevel": "JSS2",
-    "subject": "English Language",
-    "strand": "Listening and Speaking",
-    "topic": "Revision of sounds: Vowels and Consonants",
-    "source": {
-      "authority": "NERDC",
-      "url": "https://nerdc.gov.ng/content_manager/jss/jss1-3_english_studies.pdf",
-      "page": 37
-    },
-    "objectives": [
-      "Identify English vowel and consonant sounds",
-      "Produce vowel and consonant sounds accurately in isolation and context",
-      "Articulate common consonant clusters clearly"
+    "topicId":"nerdc-jss2-english-listening-and-speaking-1","classLevel":"JSS2","subject":"English Language","strand":"Listening and Speaking","topic":"Revision of sounds: Vowels and Consonants",
+    "source":{"authority":"NERDC","url":"https://nerdc.gov.ng/content_manager/jss/jss1-3_english_studies.pdf","page":37},
+    "objectives":["Identify English vowel and consonant sounds","Produce vowel and consonant sounds accurately in isolation and context","Articulate common consonant clusters clearly"],
+    "prerequisites":["basic phonics","JSS1 oral English"],
+    "teaching":[
+      "ENGLISH SOUNDS ARE NOT THE SAME AS LETTERS. English has more speech sounds than alphabet letters, so one letter may represent different sounds and one sound may have several spellings.",
+      "VOWELS are produced with relatively open airflow. At this level learners should hear contrasts in vowel quality and length, not merely memorise symbols.",
+      "SHORT/LONG CONTRASTS matter because meaning can change: ship/sheep, full/fool, sit/seat, pull/pool.",
+      "CENTRAL VOWELS and weak vowels occur frequently in unstressed syllables. Learners should notice that every written vowel letter is not pronounced strongly.",
+      "DIPHTHONGS involve a glide from one vowel position toward another, as in words such as day, boy, house and go.",
+      "CONSONANTS involve partial or complete obstruction of airflow. They can differ by place, manner and voicing.",
+      "VOICED/VOICELESS contrasts are important: /f/ vs /v/, /s/ vs /z/, /t/ vs /d/, /k/ vs /g/, /p/ vs /b/.",
+      "MINIMAL PAIRS differ by one sound and train accurate listening: fan/van, sip/zip, coat/goat, pat/bat.",
+      "CONSONANT CLUSTERS contain two or more consonants together, such as /pl/ in play, /str/ in street and /kst/ in text.",
+      "DO NOT INSERT EXTRA VOWELS inside clusters. Street should not become sətreet; school should not become sukool.",
+      "FINAL CONSONANTS matter. Dropping final /t/, /d/, /s/ or /k/ can change meaning or grammatical information.",
+      "SPELLING IS NOT A PERFECT GUIDE. The same sound can appear in different spellings and the same letters can represent different sounds.",
+      "HEAR BEFORE PRODUCING. First discriminate the target sound, then imitate, then use it in words, phrases and full sentences.",
+      "MOUTH POSITION HELPS. Notice lip rounding, tongue height and whether the vocal cords vibrate for difficult contrasts.",
+      "CONTEXT PRACTICE is essential. Correct production in an isolated word is not enough if the sound disappears in normal speech.",
+      "PERMANENT METHOD: hear→contrast→produce→use in a sentence→self-check."
     ],
-    "prerequisites": [
-      "basic phonics",
-      "JSS1 oral English"
+    "workedExamples":[
+      "ship/sheep: the vowel changes and so does meaning.",
+      "full/fool: vowel quality and length distinguish the words.",
+      "sit/seat: a learner who merges the vowels may confuse two different words.",
+      "fan/van: /f/ is voiceless while /v/ is voiced; place the fingers on the throat to feel vibration for /v/.",
+      "sip/zip: /s/ is voiceless, /z/ voiced.",
+      "coat/goat: /k/ is voiceless, /g/ voiced.",
+      "pat/bat: /p/ is voiceless, /b/ voiced.",
+      "thin/then: the initial consonants differ in voicing and meaning.",
+      "street begins with /str/; inserting a vowel gives an inaccurate cluster.",
+      "play begins with /pl/; both consonants should remain audible.",
+      "text ends with a cluster; the final consonants should not simply disappear.",
+      "asked contains a difficult final cluster; practise slowly before connected speech.",
+      "day contains a vowel glide rather than one steady vowel quality.",
+      "boy contains a diphthong; the mouth moves during the vowel.",
+      "go contains a glide in many standard pronunciations.",
+      "Final /s/ distinguishes plural in cats from cat; dropping it can change grammar.",
+      "Final /d/ in played signals past tense; dropping it may obscure meaning.",
+      "Letter c is /k/ in cat but /s/ in city, showing spelling and sound do not map one-to-one."
     ],
-    "teaching": [
-      "English sound work is about speech sounds, not simply alphabet letters. One letter can represent different sounds and some sounds use more than one letter.",
-      "Vowels are produced with relatively open airflow; consonants involve some narrowing or closure. Learners should hear and produce contrasts, not memorise labels only.",
-      "Minimal pairs help perception: ship/sheep, full/fool, fan/van. Listen first, then imitate, then use the sound in words and sentences.",
-      "Consonant clusters such as /str/, /pl/ or /kst/ require keeping each component audible without inserting extra vowels.",
-      "AVORA uses hear → discriminate → produce → use in context, with replay and learner repetition points."
-    ],
-    "workedExamples": [
-      "“ship” and “sheep” differ mainly in vowel quality; meaning changes with the sound.",
-      "“street” begins with a cluster; pronouncing “sətreet” inserts an unnecessary vowel."
-    ],
-    "misconceptions": [
-      "confusing letters with sounds",
-      "adding vowels inside clusters",
-      "assuming spelling always predicts pronunciation",
-      "practising isolated sounds without context"
-    ],
-    "guidedPractice": [
-      "Listen-and-choose minimal pairs, then record/produce ten vowel and ten consonant targets in words."
-    ],
-    "independentPractice": [
-      "Read a short passage aloud and complete a sound-identification grid for selected words and clusters."
-    ],
-    "mastery": {
-      "criterion": "At least 80% overall, with accurate application on an unfamiliar task and correction of any major misconception before progression.",
-      "status": "DEEP_WHEN_PASSED"
-    },
-    "boardReady": true
+    "misconceptions":["confusing letters with sounds","assuming spelling always predicts pronunciation","adding vowels inside clusters","dropping final consonants","treating stress as sound identity","memorising symbols without listening","practising only isolated words","assuming all speakers must sound identical rather than aiming for intelligibility"],
+    "guidedPractice":["Sort twelve words into vowel-contrast pairs.","Listen and choose between ship/sheep style pairs.","Feel voicing difference in f/v,s/z,t/d,k/g,p/b.","Produce ten minimal pairs.","Read six words beginning with clusters.","Read six words ending with clusters.","Underline written letters that represent the same target sound in different spellings.","Identify diphthongs in eight words.","Read five plural forms clearly preserving final sounds.","Read five past-tense forms clearly preserving final sounds.","Record a short sentence containing three target contrasts.","Replay and self-correct one unclear sound."],
+    "independentPractice":["Create ten minimal-pair sets from lesson vocabulary.","Write and read a sentence for each pair.","Record twenty target vowel words.","Record twenty target consonant words.","Read a paragraph containing clusters aloud.","Mark five words where spelling may mislead pronunciation.","Classify ten consonants as voiced/voiceless pairs.","Practise six initial clusters.","Practise six final clusters.","Read one minute of connected speech and identify dropped sounds on replay.","Compare first and second recordings after correction.","Complete a sound-identification grid from an unseen passage."],
+    "mastery":{"criterion":"Learner discriminates and produces key vowel/consonant contrasts, maintains clusters and final sounds in connected speech, and reaches at least85% intelligibility/identification accuracy.","status":"DEEP_WHEN_PASSED"},"boardReady":true
   },
   {
-    "topicId": "nerdc-jss2-english-listening-and-speaking-2",
-    "classLevel": "JSS2",
-    "subject": "English Language",
-    "strand": "Listening and Speaking",
-    "topic": "Oral Comprehension",
-    "source": {
-      "authority": "NERDC",
-      "url": "https://nerdc.gov.ng/content_manager/jss/jss1-3_english_studies.pdf",
-      "page": 34
-    },
-    "objectives": [
-      "Identify and explain main ideas in spoken material",
-      "Accept, reject or qualify ideas using evidence and prior knowledge",
-      "Identify speaker mood/intention and plausible interpretations"
+    "topicId":"nerdc-jss2-english-listening-and-speaking-2","classLevel":"JSS2","subject":"English Language","strand":"Listening and Speaking","topic":"Oral Comprehension",
+    "source":{"authority":"NERDC","url":"https://nerdc.gov.ng/content_manager/jss/jss1-3_english_studies.pdf","page":34},
+    "objectives":["Identify and explain main ideas in spoken material","Accept, reject or qualify ideas using evidence and prior knowledge","Identify speaker mood/intention and plausible interpretations"],
+    "prerequisites":["active listening","main ideas","author mood/purpose"],
+    "teaching":[
+      "ORAL COMPREHENSION means constructing meaning while listening. Unlike reading, the words may pass only once, so attention must be selective and purposeful.",
+      "BEFORE LISTENING, predict likely topic from title/context and prepare to listen for who, what, where, when, why and how.",
+      "FIRST LISTEN for the overall message, not every detail.",
+      "SECOND LISTEN, when allowed, for key evidence, sequence, numbers, names and relationships.",
+      "SIGNPOSTS such as first, however, because, therefore, in contrast and finally reveal structure.",
+      "MAIN IDEA is the central message; supporting details explain, illustrate or prove it.",
+      "LITERAL QUESTIONS ask what was directly stated.",
+      "INFERENTIAL QUESTIONS require combining spoken clues with reasonable background knowledge.",
+      "CRITICAL QUESTIONS ask whether a claim is convincing, relevant or sufficiently supported.",
+      "TONE can be serious, excited, doubtful, angry, humorous, hopeful and more; infer it from word choice, pace, stress and pitch.",
+      "PURPOSE may be to inform, persuade, warn, entertain, instruct or criticise. Use the whole message, not one word.",
+      "NOTE-TAKING should be brief: keywords, arrows, figures, abbreviations. Writing full sentences while listening can make the learner miss later information.",
+      "SEQUENCE matters in instructions and narratives. Record first/next/finally or simple numbered stages.",
+      "FACT VS INFERENCE must remain separate. An inference should be supported by clues rather than imagination.",
+      "EVALUATION comes after understanding. Agree, reject or qualify with reasons and evidence.",
+      "PERMANENT ANSWER PATTERN: answer→evidence heard→short explanation."
     ],
-    "prerequisites": [
-      "active listening",
-      "main ideas",
-      "author mood/purpose"
+    "workedExamples":[
+      "“We postponed the trip because the bridge is flooded.” Main idea: trip postponed; reason: flooding.",
+      "Speaker lists rising prices, transport costs and food bills, then says families are cutting spending. Main idea: higher living costs are forcing reduced spending.",
+      "“First switch off the power, then remove the plug.” Sequence question requires power off before plug removal.",
+      "Literal: speaker says meeting begins at9:00; answer is9:00, not an inferred time.",
+      "Inference: speaker says road is flooded, buses stopped and pupils stayed home; infer transport/access was disrupted.",
+      "Unsupported inference: claiming the school closed permanently goes beyond evidence.",
+      "Tone: slow solemn delivery with words loss/regret supports sadness/seriousness.",
+      "Tone: quick energetic delivery with “excellent news” supports excitement.",
+      "Purpose: “Do not cross the stream during heavy rain…” mainly warns.",
+      "Purpose: facts about malaria transmission/symptoms mainly inform.",
+      "Critical: one speaker claims “all students learn better at night” but gives one personal example; evidence is insufficient for universal claim.",
+      "Qualify: “The suggestion may help some learners, but the speaker gives no evidence it works for everyone.”",
+      "Note-taking: “trip→Fri; bus7:30; bring ID+water” preserves key details efficiently.",
+      "Contrast marker: “The plan is affordable; however, maintenance is expensive.” Both sides matter.",
+      "Cause-effect marker: “Because rainfall increased, the river overflowed.” Rainfall is presented as cause.",
+      "Speaker repeats “safety” three times and ends with instructions; repetition signals emphasis."
     ],
-    "teaching": [
-      "Oral comprehension requires building meaning while listening. The learner cannot rely on repeatedly rereading, so attention and purposeful note-taking matter.",
-      "Listen for signposts: first, however, because, therefore, finally and repeated key words often reveal structure and emphasis.",
-      "Separate what the speaker explicitly states from what you infer. Inference should combine spoken clues with reasonable background knowledge.",
-      "Evaluate ideas after understanding them. Agreement or disagreement should be based on reasons, not immediate reaction.",
-      "Tone, pace, emphasis and word choice can reveal mood or intention; interpretation must cite the audible evidence."
-    ],
-    "workedExamples": [
-      "A speaker says, “We have postponed the trip because the bridge is flooded.” Main idea: the trip is postponed; reason: flooding.",
-      "A slow, solemn delivery with words such as “loss” and “regret” supports a serious/sad mood inference."
-    ],
-    "misconceptions": [
-      "taking notes so heavily that listening stops",
-      "confusing inference with imagination",
-      "judging before understanding",
-      "remembering examples but missing the main idea"
-    ],
-    "guidedPractice": [
-      "Listen to a two-minute passage once, record five key points, then answer factual, inferential and attitude questions."
-    ],
-    "independentPractice": [
-      "Complete two unseen audio-style scripts read aloud once/twice and produce a structured listening summary."
-    ],
-    "mastery": {
-      "criterion": "At least 80% overall, with accurate application on an unfamiliar task and correction of any major misconception before progression.",
-      "status": "DEEP_WHEN_PASSED"
-    },
-    "boardReady": true
+    "misconceptions":["trying to write every word","remembering examples but missing main idea","confusing inference with imagination","judging before understanding","ignoring tone clues","choosing purpose from one keyword","missing contrast markers","answering from personal opinion rather than audio evidence"],
+    "guidedPractice":["Listen to a short passage and state main idea.","List three supporting details.","Answer four literal questions.","Answer four inferential questions with evidence.","Answer two critical questions.","Identify tone from delivery clues.","Identify speaker purpose.","Take notes using keywords only.","Reconstruct a four-step sequence.","Distinguish three facts from three inferences.","Qualify one overgeneralised claim.","Summarise a two-minute passage in five points."],
+    "independentPractice":["Complete an unseen factual audio-style passage.","Complete an unseen persuasive audio-style passage.","Write main idea and four details for each.","Answer literal/inferential/critical questions.","Identify tone and purpose.","Record concise notes during one reading.","Compare notes with full script afterwards.","Explain one inference with two clues.","Reject one unsupported inference.","Evaluate one claim for evidence quality.","Produce a 60-word listening summary.","Reflect on which details were missed and why."],
+    "mastery":{"criterion":"Learner identifies main/supporting ideas, answers literal/inferential/critical questions, recognises tone/purpose and evaluates claims with evidence at at least85% accuracy.","status":"DEEP_WHEN_PASSED"},"boardReady":true
   },
   {
-    "topicId": "nerdc-jss2-english-listening-and-speaking-3",
-    "classLevel": "JSS2",
-    "subject": "English Language",
-    "strand": "Listening and Speaking",
-    "topic": "Speeches (Intonation, stress and Rhythms)",
-    "source": {
-      "authority": "NERDC",
-      "url": "https://nerdc.gov.ng/content_manager/jss/jss1-3_english_studies.pdf",
-      "page": 35
-    },
-    "objectives": [
-      "Recognise and produce appropriate sentence stress",
-      "Use rising/falling intonation to signal meaning",
-      "Maintain understandable English rhythm in connected speech"
+    "topicId":"nerdc-jss2-english-listening-and-speaking-3","classLevel":"JSS2","subject":"English Language","strand":"Listening and Speaking","topic":"Speeches (Intonation, stress and Rhythms)",
+    "source":{"authority":"NERDC","url":"https://nerdc.gov.ng/content_manager/jss/jss1-3_english_studies.pdf","page":35},
+    "objectives":["Recognise and produce appropriate sentence stress","Use rising/falling intonation to signal meaning","Maintain understandable English rhythm in connected speech"],
+    "prerequisites":["word stress","syllables","basic sentence types"],
+    "teaching":[
+      "STRESS makes a syllable or word more prominent through a combination of loudness, length and pitch movement; it is not simply shouting.",
+      "WORD STRESS belongs to particular syllables in multi-syllable words. Wrong stress may reduce intelligibility even when sounds are correct.",
+      "SENTENCE STRESS normally gives prominence to content words such as main nouns, verbs, adjectives and adverbs while many grammatical words are weaker.",
+      "CONTRASTIVE STRESS moves prominence to the word being corrected or contrasted.",
+      "NEW INFORMATION often receives stronger stress than information already known.",
+      "INTONATION is pitch movement across an utterance, not the pitch of one isolated word.",
+      "FALLING INTONATION commonly accompanies complete statements, commands and many wh-questions.",
+      "RISING INTONATION commonly occurs in neutral yes/no questions and can show uncertainty or checking.",
+      "FALL-RISE may signal reservation, partial agreement or implication depending on context; learners should understand function rather than memorise one rigid rule.",
+      "LISTS often use continuing/rising movement on non-final items and a fall on the final item.",
+      "RHYTHM comes from alternating prominent and less prominent syllables/words and grouping speech into sense units.",
+      "WEAK FORMS of common grammatical words help natural rhythm, but clarity is more important than forced imitation.",
+      "PAUSING should follow meaning groups, not break randomly inside a phrase.",
+      "Changing stress can change implied meaning even when words are identical.",
+      "SPEECH PRACTICE should move from marked script→slow rehearsal→natural delivery→self-recording.",
+      "PERMANENT METHOD: decide meaning→mark focus word(s)→choose pitch movement→group into sense units→deliver→listen back."
     ],
-    "prerequisites": [
-      "word stress",
-      "syllables",
-      "basic sentence types"
+    "workedExamples":[
+      "“I wanted the BLUE pen.” BLUE contrasts colour.",
+      "“I WANTED the blue pen.” WANTED contrasts desire with another action.",
+      "“I wanted the blue PEN.” PEN contrasts object.",
+      "“Are you ready?” often uses rising intonation for a genuine yes/no question.",
+      "“Where are you going?” commonly falls because it is a wh-question seeking information.",
+      "“Sit down.” commonly falls as a complete command.",
+      "List: “We bought rice↗, beans↗, oil↗ and bread↘.” Final item closes the list.",
+      "“It is good…but expensive.” A fall-rise-like contour on good can signal reservation.",
+      "“She bought a NEW bag” stresses new when newness is important.",
+      "Known/new: “Who won?” “MARY won.” Mary takes focus because it answers new information.",
+      "Correction: “Did Tunde go Tuesday?” “No, he went WEDNESDAY.” Wednesday receives contrastive stress.",
+      "Sense groups: “After the meeting / the students returned to class / quietly.”",
+      "Poor rhythm: stressing every small word equally makes speech heavy and unnatural.",
+      "Poor pausing: “The principal / of the school announced…” may split a noun phrase awkwardly; better “The principal of the school / announced…”",
+      "Falling confirmation: “You submitted it, didn’t you↘?” can show expectation of yes.",
+      "Rising checking: “You submitted it, didn’t you↗?” can show genuine uncertainty."
     ],
-    "teaching": [
-      "Stress makes one syllable or word more prominent. In sentences, content words often carry stronger stress while many grammatical words are weaker.",
-      "Intonation is the movement of pitch across an utterance. Falling intonation commonly signals completion or certainty; rising patterns may signal yes/no questions, incompleteness or checking, depending on context.",
-      "Changing stress can change implied meaning: “I wanted the BLUE pen” contrasts blue with another colour; “I WANTED the blue pen” contrasts desire with another action.",
-      "English rhythm depends on grouping speech into meaningful chunks rather than giving every syllable equal force.",
-      "AVORA’s board marks stressed words, pitch arrows and pause boundaries so learners can see and hear the pattern."
-    ],
-    "workedExamples": [
-      "“Are you ready?” normally uses a rising pattern in neutral yes/no questioning.",
-      "“She bought a NEW bag” stresses new when newness is the contrast."
-    ],
-    "misconceptions": [
-      "shouting instead of stressing",
-      "using one flat pitch for every sentence",
-      "stressing every word equally",
-      "thinking intonation has only one fixed rule"
-    ],
-    "guidedPractice": [
-      "Mark stress and pitch on eight sentences, then read them to express different meanings."
-    ],
-    "independentPractice": [
-      "Deliver a one-minute speech with planned stress, rhythm and intonation; self-evaluate clarity and meaning."
-    ],
-    "mastery": {
-      "criterion": "At least 80% overall, with accurate application on an unfamiliar task and correction of any major misconception before progression.",
-      "status": "DEEP_WHEN_PASSED"
-    },
-    "boardReady": true
+    "misconceptions":["shouting instead of stressing","stressing every word equally","flat pitch on every sentence","one intonation rule for all contexts","pausing randomly","ignoring meaning when marking stress","treating rhythm as speaking very fast","copying an accent rather than aiming for clarity"],
+    "guidedPractice":["Mark focus word in eight contrast sentences.","Read one sentence with three different focus meanings.","Mark rise/fall on ten sentence types.","Practise list intonation.","Mark sense groups in a short paragraph.","Read paragraph with planned pauses.","Identify stressed content words in six sentences.","Reduce stress on function words without losing clarity.","Perform wh-questions and yes/no questions.","Perform same tag question with rising and falling meanings.","Record a 30-second speech.","Replay and identify one stress, one pitch and one rhythm improvement."],
+    "independentPractice":["Prepare a one-minute speech and mark stress.","Mark pitch arrows for key sentences.","Mark pause boundaries.","Deliver once slowly, once naturally.","Record and compare versions.","Create five contrastive-stress pairs.","Write five yes/no and five wh-questions and perform them.","Read a short list with correct continuation/final movement.","Identify stress changes in ten supplied sentences.","Explain meaning difference caused by stress in three pairs.","Self-assess intelligibility/rhythm rather than accent similarity.","Give final one-minute delivery using planned focus and intonation."],
+    "mastery":{"criterion":"Learner uses sentence/contrastive stress, appropriate pitch movement, sense-group pausing and intelligible rhythm to express intended meaning at at least85% accuracy.","status":"DEEP_WHEN_PASSED"},"boardReady":true
   },
   {
-    "topicId": "nerdc-jss2-english-listening-and-speaking-4",
-    "classLevel": "JSS2",
-    "subject": "English Language",
-    "strand": "Listening and Speaking",
-    "topic": "Speeches: Question tags",
-    "source": {
-      "authority": "NERDC",
-      "url": "https://nerdc.gov.ng/content_manager/jss/jss1-3_english_studies.pdf",
-      "page": 36
-    },
-    "objectives": [
-      "Form grammatically correct question tags",
-      "Choose positive/negative polarity appropriately",
-      "Use intonation to distinguish genuine questions from confirmation-seeking tags"
+    "topicId":"nerdc-jss2-english-listening-and-speaking-4","classLevel":"JSS2","subject":"English Language","strand":"Listening and Speaking","topic":"Speeches: Question tags",
+    "source":{"authority":"NERDC","url":"https://nerdc.gov.ng/content_manager/jss/jss1-3_english_studies.pdf","page":36},
+    "objectives":["Form grammatically correct question tags","Choose positive/negative polarity appropriately","Use intonation to distinguish genuine questions from confirmation-seeking tags"],
+    "prerequisites":["auxiliary verbs","pronouns","positive/negative statements"],
+    "teaching":[
+      "A QUESTION TAG is a short question added to a statement to seek confirmation, check information or involve the listener.",
+      "BASIC POLARITY: positive statement usually takes negative tag; negative statement takes positive tag.",
+      "COPY THE AUXILIARY OR MODAL from the statement: is→isn’t, has→hasn’t, can→can’t, will→won’t.",
+      "If a simple present/past statement has no auxiliary, use DO/DOES/DID according to tense and subject.",
+      "TAG SUBJECT is normally a pronoun matching the statement subject.",
+      "BE forms must agree: I am→aren’t I? in standard tag usage; he is→isn’t he?; they were→weren’t they?",
+      "HAVE as auxiliary stays have/has/had in the tag; lexical have may use do-support in many standard school contexts.",
+      "MODALS remain the same modal in the tag: should→shouldn’t, must→mustn’t, could→couldn’t.",
+      "NEGATIVE WORDS such as never, nobody, nothing, hardly, scarcely give the statement negative meaning, so the tag is positive.",
+      "IMPERATIVE TAGS can use will you?/won’t you? depending tone; suggestions with Let’s commonly take shall we?",
+      "THIS/THAT usually becomes it in the tag; THESE/THOSE become they.",
+      "EVERYONE/SOMEONE/NOBODY commonly takes they in modern standard usage.",
+      "RISING INTONATION signals genuine uncertainty/checking; FALLING intonation often seeks confirmation of an expectation.",
+      "PUNCTUATION: comma before the tag and question mark at the end.",
+      "PERMANENT METHOD: identify polarity→find auxiliary/tense→choose pronoun→reverse polarity→choose intonation."
     ],
-    "prerequisites": [
-      "auxiliary verbs",
-      "pronouns",
-      "positive/negative statements"
+    "workedExamples":[
+      "She is ready, isn’t she?",
+      "They aren’t late, are they?",
+      "You can swim, can’t you?",
+      "He will come, won’t he?",
+      "Tunde plays football, doesn’t he?",
+      "Ada visited yesterday, didn’t she?",
+      "The boys have finished, haven’t they?",
+      "Musa had left, hadn’t he?",
+      "You should apologise, shouldn’t you?",
+      "Nobody called, did they? Nobody makes the statement negative.",
+      "She never complains, does she?",
+      "This is yours, isn’t it?",
+      "Those are ripe, aren’t they?",
+      "Everyone arrived, didn’t they?",
+      "Let’s begin, shall we?",
+      "Open the window, will you?",
+      "You submitted it, didn’t you↗? Rising can show uncertainty.",
+      "You submitted it, didn’t you↘? Falling can show expectation of confirmation."
     ],
-    "teaching": [
-      "A question tag is a short question attached to a statement, usually using the statement’s auxiliary verb and a pronoun subject.",
-      "A positive statement normally takes a negative tag: “She is ready, isn’t she?” A negative statement normally takes a positive tag: “They didn’t leave, did they?”",
-      "If there is no auxiliary in a simple present/past statement, use do/does/did: “Tunde plays, doesn’t he?”",
-      "The tag pronoun must match the subject, and tense/modal must remain consistent.",
-      "Rising intonation can indicate real uncertainty; falling intonation often asks for confirmation of something the speaker expects to be true."
-    ],
-    "workedExamples": [
-      "“You can swim, can’t you?” keeps modal can.",
-      "“Ada visited yesterday, didn’t she?” uses did because the statement has a simple-past lexical verb."
-    ],
-    "misconceptions": [
-      "copying the same polarity into the tag",
-      "using a noun instead of pronoun in the tag",
-      "changing tense",
-      "forgetting do-support"
-    ],
-    "guidedPractice": [
-      "Complete and read 15 question tags, explaining the auxiliary and polarity choice."
-    ],
-    "independentPractice": [
-      "Create ten original tagged statements and perform five with rising and five with falling intonation."
-    ],
-    "mastery": {
-      "criterion": "At least 80% overall, with accurate application on an unfamiliar task and correction of any major misconception before progression.",
-      "status": "DEEP_WHEN_PASSED"
-    },
-    "boardReady": true
+    "misconceptions":["same polarity in statement and tag","using noun instead of pronoun","changing tense","forgetting do-support","ignoring negative words like never/nobody","using wrong pronoun for this/that/everyone","assuming intonation never changes meaning","forgetting comma/question mark"],
+    "guidedPractice":["Add tags to five be-sentences.","Add tags to five modal sentences.","Add tags to five simple present/past lexical-verb sentences.","Add tags to sentences with never/nobody.","Practise this/that/these/those tags.","Practise everyone/someone tags.","Complete Let’s… tags.","Complete imperative tags.","Explain auxiliary choice in six examples.","Read five tags with rising intonation.","Read same five with falling intonation.","Explain meaning difference between rise and fall."],
+    "independentPractice":["Write ten positive statements with negative tags.","Write ten negative statements with positive tags.","Create five modal-tag examples.","Create five do-support examples.","Create three negative-word examples.","Create examples with this/that/these/those.","Create two Let’s examples.","Create two imperative examples.","Punctuate ten unpunctuated tag sentences.","Correct ten faulty tags.","Record five rising tags and five falling tags.","Explain one case where intonation changes speaker attitude."],
+    "mastery":{"criterion":"Learner forms tags accurately across auxiliaries, modals, do-support, negative words and special pronouns, and uses rising/falling intonation appropriately at at least85%.","status":"DEEP_WHEN_PASSED"},"boardReady":true
   },
   {
-    "topicId": "nerdc-jss2-english-grammatical-accuracy-1",
-    "classLevel": "JSS2",
-    "subject": "English Language",
-    "strand": "Grammatical Accuracy",
-    "topic": "Parts of speech: Nouns, Pronouns, verbs and Adjectives",
-    "source": {
-      "authority": "NERDC",
-      "url": "https://nerdc.gov.ng/content_manager/jss/jss1-3_english_studies.pdf",
-      "page": 38
-    },
-    "objectives": [
-      "Identify nouns, pronouns, verbs and adjectives in context",
-      "State their grammatical functions",
-      "Use each category accurately in original sentences"
+    "topicId":"nerdc-jss2-english-grammatical-accuracy-1","classLevel":"JSS2","subject":"English Language","strand":"Grammatical Accuracy","topic":"Parts of speech: Nouns, Pronouns, verbs and Adjectives",
+    "source":{"authority":"NERDC","url":"https://nerdc.gov.ng/content_manager/jss/jss1-3_english_studies.pdf","page":38},
+    "objectives":["Identify nouns, pronouns, verbs and adjectives in context","State their grammatical functions","Use each category accurately in original sentences"],
+    "prerequisites":["basic sentence parts","JSS1 parts of speech"],
+    "teaching":[
+      "PARTS OF SPEECH are identified by what a word does in a sentence, not by memorised word lists alone.",
+      "NOUNS can name people, places, things, events, qualities and ideas. Common types include common/proper, concrete/abstract and count/non-count.",
+      "NOUN FUNCTIONS include subject, object, complement and object of a preposition.",
+      "PRONOUNS replace or point to noun phrases. Types include personal, possessive, reflexive, demonstrative, relative, interrogative and indefinite.",
+      "PRONOUN REFERENCE should be clear. A reader must know which noun a pronoun refers to.",
+      "PRONOUN AGREEMENT should fit number/person and context.",
+      "VERBS express actions, events, processes or states. A complete clause normally needs a verb phrase.",
+      "LEXICAL/MAIN VERBS carry core meaning; AUXILIARY VERBS help express tense, aspect, voice, question formation or modality.",
+      "TRANSITIVE VERBS take objects; INTRANSITIVE VERBS do not take direct objects in that use.",
+      "LINKING VERBS connect the subject to a complement, as in “The soup tastes good.”",
+      "ADJECTIVES describe or classify nouns and pronouns. They may come before nouns or after linking verbs.",
+      "COMPARATIVE/SUPERLATIVE forms compare: taller/tallest, more careful/most careful.",
+      "THE SAME WORD CAN CHANGE CLASS by function: light is noun in “the light”, adjective in “a light bag”, verb in “light the lamp”.",
+      "WORD POSITION HELPS but meaning and grammatical behaviour must confirm classification.",
+      "ACCURATE USE matters more than labels: agreement, verb form, pronoun reference and adjective placement must produce a grammatical sentence.",
+      "PERMANENT METHOD: locate word→ask its job→test surrounding structure→classify→state function."
     ],
-    "prerequisites": [
-      "basic sentence parts",
-      "JSS1 parts of speech"
+    "workedExamples":[
+      "“Those diligent students completed it.” students=noun, diligent=adjective, completed=verb, it=pronoun.",
+      "“The teacher praised Musa.” teacher=subject noun; Musa=object noun.",
+      "“Honesty matters.” Honesty is an abstract noun functioning as subject.",
+      "“The bottle is on the table.” table is noun inside prepositional phrase.",
+      "“They helped us.” They=subject pronoun; us=object pronoun.",
+      "“Amina taught herself.” herself is reflexive pronoun referring to Amina.",
+      "“This is mine.” This is demonstrative pronoun; mine possessive pronoun.",
+      "“The boy who won smiled.” who is relative pronoun introducing a relative clause.",
+      "“She has finished.” finished is main verb; has is auxiliary.",
+      "“They are running.” are helps form progressive verb phrase.",
+      "“The baby slept.” slept is intransitive here; no direct object.",
+      "“She opened the door.” opened is transitive; door is direct object.",
+      "“The soup tastes delicious.” tastes is linking verb; delicious is adjective complement.",
+      "“a careful driver” places adjective before noun.",
+      "“The driver is careful” uses adjective after linking verb.",
+      "“This road is narrower than that one.” narrower is comparative adjective.",
+      "“She is the most careful student.” most careful is superlative form.",
+      "“Light the lamp.” light is verb; “a light bag” light is adjective; “turn on the light” light is noun."
     ],
-    "teaching": [
-      "Parts of speech are best identified by function in a sentence, not by memorised word lists. The same word may behave differently in different contexts.",
-      "Nouns typically name entities/ideas and may function as subject, object or complement. Pronouns substitute for noun phrases and must agree appropriately with their references.",
-      "Verbs express actions, events or states and carry tense/aspect information. Adjectives modify nouns or occur after linking verbs as complements.",
-      "Use position plus meaning and grammatical behaviour to classify a word. “Fast” is adjective in “a fast car” but adverb in “drive fast.”",
-      "Accurate writing requires agreement and suitable forms, not merely labelling categories."
-    ],
-    "workedExamples": [
-      "“Those diligent students completed it.” students=noun, those=determiner, diligent=adjective, completed=verb, it=pronoun.",
-      "“Light” is noun in “Turn on the light” and adjective in “a light bag.”"
-    ],
-    "misconceptions": [
-      "classifying only from dictionary labels",
-      "calling every -ly word an adverb",
-      "confusing pronouns and nouns",
-      "ignoring function in context"
-    ],
-    "guidedPractice": [
-      "Label target words in ten sentences and justify each by its function."
-    ],
-    "independentPractice": [
-      "Analyse a paragraph, classify 20 target words, then write four sentences deliberately using each category."
-    ],
-    "mastery": {
-      "criterion": "At least 80% overall, with accurate application on an unfamiliar task and correction of any major misconception before progression.",
-      "status": "DEEP_WHEN_PASSED"
-    },
-    "boardReady": true
+    "misconceptions":["classifying from dictionary label only","confusing noun with pronoun","calling every action-looking word a verb without checking use","assuming adjectives only appear before nouns","ignoring linking verbs","unclear pronoun reference","treating auxiliary and main verb as identical functions","forgetting same word can change class"],
+    "guidedPractice":["Classify target words in ten sentences.","Identify noun function in six sentences.","Identify pronoun type/reference in six sentences.","Separate auxiliary from main verbs.","Classify verbs as transitive/intransitive/linking in context.","Identify adjective positions.","Form comparative/superlative adjectives.","Rewrite unclear pronoun references.","Use one word as two different classes.","Analyse a short paragraph and justify twelve classifications.","Correct subject-pronoun agreement errors.","Write one sentence illustrating each major category."],
+    "independentPractice":["Analyse twenty target words in an unseen paragraph.","Identify six noun functions.","Identify eight pronoun types.","Correct five pronoun-reference errors.","Identify main/auxiliary verbs in ten clauses.","Classify ten verbs by use.","Identify twelve adjectives and nouns modified.","Write comparative/superlative sentences.","Use light,fast,round as different word classes in context.","Edit a paragraph with parts-of-speech errors.","Write eight original sentences combining noun+pronoun+verb+adjective accurately.","Explain why function in context is more reliable than memorised lists."],
+    "mastery":{"criterion":"Learner identifies and uses nouns, pronouns, verbs and adjectives by contextual function, including subtypes and sentence roles, with at least85% accuracy.","status":"DEEP_WHEN_PASSED"},"boardReady":true
   },
   {
-    "topicId": "nerdc-jss2-english-grammatical-accuracy-2",
-    "classLevel": "JSS2",
-    "subject": "English Language",
-    "strand": "Grammatical Accuracy",
-    "topic": "Parts of speech: Adverbs, Conjunctions and Prepositions",
-    "source": {
-      "authority": "NERDC",
-      "url": "https://nerdc.gov.ng/content_manager/jss/jss1-3_english_studies.pdf",
-      "page": 39
-    },
-    "objectives": [
-      "Identify adverbs, conjunctions and prepositions",
-      "Explain their functions in sentences",
-      "Use them accurately to create relationships of manner, time, place, reason and connection"
+    "topicId":"nerdc-jss2-english-grammatical-accuracy-2","classLevel":"JSS2","subject":"English Language","strand":"Grammatical Accuracy","topic":"Parts of speech: Adverbs, Conjunctions and Prepositions",
+    "source":{"authority":"NERDC","url":"https://nerdc.gov.ng/content_manager/jss/jss1-3_english_studies.pdf","page":39},
+    "objectives":["Identify adverbs, conjunctions and prepositions","Explain their functions in sentences","Use them accurately to create relationships of manner, time, place, reason and connection"],
+    "prerequisites":["verbs/adjectives","phrases and clauses"],
+    "teaching":[
+      "ADVERBS modify verbs, adjectives, other adverbs or sometimes whole clauses.",
+      "ADVERB TYPES include manner, time, place, frequency, degree and viewpoint/comment.",
+      "NOT EVERY -LY WORD IS AN ADVERB. Friendly and lovely are commonly adjectives; fast can be an adverb without -ly.",
+      "ADVERB POSITION can affect emphasis and sometimes meaning: “Only Ada answered” differs from “Ada only answered.”",
+      "COORDINATING CONJUNCTIONS join equal grammatical units, such as and, but, or, so, yet.",
+      "SUBORDINATING CONJUNCTIONS introduce dependent clauses showing relationships such as time, cause, condition, contrast and purpose.",
+      "CORRELATIVE PAIRS work together: either…or, neither…nor, both…and, not only…but also.",
+      "PREPOSITIONS introduce noun phrases and express relationships of place, time, direction, means, cause and more.",
+      "PLACE PREPOSITIONS distinguish at/in/on/under/between/among/through/towards etc.",
+      "TIME PREPOSITIONS often distinguish at for precise times, on for days/dates and in for longer periods, though actual usage must be learned in context.",
+      "MOVEMENT differs: at the gate is position, through the gate is movement across the opening, towards the gate is direction without necessarily reaching it.",
+      "PREPOSITION VS CONJUNCTION depends on what follows. “After lunch” has preposition+noun; “after we ate” uses subordinating conjunction+clause.",
+      "CONJUNCTION CHOICE expresses logic. because gives reason; although gives concession; if gives condition; when gives time.",
+      "AVOID DOUBLE MARKING such as “Although…but” in standard formal English.",
+      "PARALLEL STRUCTURE helps with conjunction pairs: “She likes reading and writing,” not mismatched forms.",
+      "PERMANENT METHOD: identify what the word connects/modifies→inspect what follows→state relationship→test sentence meaning."
     ],
-    "prerequisites": [
-      "verbs/adjectives",
-      "phrases and clauses"
+    "workedExamples":[
+      "“She spoke softly.” softly modifies verb spoke: manner adverb.",
+      "“The test is very difficult.” very modifies adjective difficult: degree adverb.",
+      "“He arrived yesterday.” yesterday gives time.",
+      "“They often practise.” often gives frequency.",
+      "“Come here.” here gives place.",
+      "“Fortunately, nobody was hurt.” fortunately comments on whole clause.",
+      "“Amina studied and passed.” and coordinates equal verbs/clauses.",
+      "“He was tired but continued.” but marks contrast.",
+      "“We stayed inside because it rained.” because introduces reason clause.",
+      "“Although it rained, they played.” although introduces concession.",
+      "“If you revise, you will improve.” if introduces condition.",
+      "“Either Musa or Tunde will present.” either…or correlates alternatives.",
+      "“The bag is under the table.” under is preposition of place.",
+      "“We met at 6 p.m.” at introduces precise time.",
+      "“The exam is on Monday.” on introduces day.",
+      "“School resumes in September.” in introduces month.",
+      "“They walked through the gate.” through shows movement across opening.",
+      "“They walked towards the gate.” towards shows direction.",
+      "“After lunch, we left.” after=preposition; “After we ate, we left.” after=conjunction.",
+      "“She is friendly.” friendly is adjective despite -ly ending; “She spoke kindly.” kindly is adverb."
     ],
-    "teaching": [
-      "Adverbs modify verbs, adjectives, other adverbs or whole clauses; they can express manner, time, place, frequency, degree and viewpoint.",
-      "Conjunctions join words, phrases or clauses. Coordinating conjunctions link equal units; subordinating conjunctions introduce dependent clauses.",
-      "Prepositions introduce phrases that show relationships such as time, place, direction, means or possession.",
-      "Meaning changes with choice: “at the gate,” “through the gate” and “towards the gate” describe different spatial relationships.",
-      "Avoid identifying by spelling alone. Function within the sentence is decisive."
-    ],
-    "workedExamples": [
-      "“She spoke very softly because the baby slept in the room.” very/softly are adverbs, because is a conjunction, in is a preposition.",
-      "“After lunch” begins with a preposition; “after we ate” uses after as a subordinating conjunction because a clause follows."
-    ],
-    "misconceptions": [
-      "assuming every -ly word is an adverb",
-      "confusing preposition with conjunction",
-      "using double conjunctions unnecessarily",
-      "choosing prepositions by direct translation from another language"
-    ],
-    "guidedPractice": [
-      "Sort 24 examples by category and explain ambiguous words in context."
-    ],
-    "independentPractice": [
-      "Edit a paragraph containing ten errors in adverbs/conjunctions/prepositions and explain each correction."
-    ],
-    "mastery": {
-      "criterion": "At least 80% overall, with accurate application on an unfamiliar task and correction of any major misconception before progression.",
-      "status": "DEEP_WHEN_PASSED"
-    },
-    "boardReady": true
+    "misconceptions":["every -ly word is adverb","every adverb ends -ly","confusing preposition and conjunction","using although…but together","using because…so together unnecessarily","direct translation of prepositions","wrong time preposition","ignoring adverb position","mismatched correlative conjunctions","forgetting conjunction meaning relationships"],
+    "guidedPractice":["Classify twelve adverbs by type.","Identify what each adverb modifies.","Move adverbs and discuss meaning/emphasis.","Join sentence pairs with coordinating conjunctions.","Join clauses with because/although/if/when.","Complete correlative pairs.","Choose correct place prepositions.","Choose at/on/in for time examples.","Distinguish after/before/since as preposition vs conjunction.","Correct although…but errors.","Correct mismatched either…or structures.","Write one sentence for each major adverb/conjunction/preposition use."],
+    "independentPractice":["Analyse an unseen paragraph for twenty targets.","Classify ten adverbs by function.","Rewrite five sentences with better adverb placement.","Combine ten clause pairs using suitable conjunctions.","Write five condition/concession/reason/time complex sentences.","Complete six correlative constructions.","Fill twelve preposition gaps with justification.","Contrast in/on/at place uses.","Contrast at/on/in time uses.","Identify preposition vs conjunction in ten ambiguous examples.","Edit a paragraph with ten errors.","Write a coherent paragraph using at least four adverb types, four conjunction relationships and six prepositions."],
+    "mastery":{"criterion":"Learner identifies and uses adverbs, conjunctions and prepositions by function and relationship, including ambiguous forms, with at least85% accuracy in unseen contexts.","status":"DEEP_WHEN_PASSED"},"boardReady":true
   },
   {
     "topicId": "nerdc-jss2-english-grammatical-accuracy-3",
