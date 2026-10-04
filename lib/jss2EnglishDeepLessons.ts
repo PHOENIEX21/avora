@@ -309,154 +309,136 @@ export const jss2EnglishDeepLessons:DeepJss2EnglishLesson[]=[
     "mastery":{"criterion":"Learner interprets prompts accurately and produces relevant, logically ordered, balanced outlines with clear introduction, supported body points and conclusion in at least85% of tasks.","status":"DEEP_WHEN_PASSED"},"boardReady":true
   },
   {
-    "topicId": "nerdc-jss2-english-writing-2",
-    "classLevel": "JSS2",
-    "subject": "English Language",
-    "strand": "Writing",
-    "topic": "Composition writing: expository and argumentative",
-    "source": {
-      "authority": "NERDC",
-      "url": "https://nerdc.gov.ng/content_manager/jss/jss1-3_english_studies.pdf",
-      "page": 31
-    },
-    "objectives": [
-      "Distinguish expository from argumentative writing",
-      "Identify the essential elements of both forms",
-      "Write coherent expository and argumentative essays with evidence and logical organisation"
+    "topicId":"nerdc-jss2-english-writing-2","classLevel":"JSS2","subject":"English Language","strand":"Writing","topic":"Composition writing: expository and argumentative",
+    "source":{"authority":"NERDC","url":"https://nerdc.gov.ng/content_manager/jss/jss1-3_english_studies.pdf","page":31},
+    "objectives":["Distinguish expository from argumentative writing","Identify essential elements of both forms","Write coherent expository and argumentative essays with evidence and logical organisation"],
+    "prerequisites":["outline writing","paragraphing","main/supporting ideas"],
+    "teaching":[
+      "EXPOSITORY WRITING explains or informs. It may define, describe a process, classify, compare or explain causes/effects.",
+      "ARGUMENTATIVE WRITING takes a position and supports it with reasons and evidence while addressing opposing views fairly.",
+      "PURPOSE decides form: “Explain causes of flooding” is expository; “Government should ban building on waterways” is argumentative.",
+      "INTRODUCTION establishes topic and controlling focus. Argumentative introduction should make the position clear.",
+      "BODY PARAGRAPH needs topic sentence, explanation, evidence/example and link to the main purpose.",
+      "EXPOSITORY evidence may include facts, examples, sequence, definitions and cause-effect relationships.",
+      "ARGUMENT evidence must support a claim rather than merely repeat it.",
+      "COUNTERARGUMENT states a plausible opposing view fairly; REBUTTAL answers it with reasoning/evidence rather than insult.",
+      "PARAGRAPH UNITY means one controlling idea per paragraph.",
+      "COHESION uses transitions and clear references to connect sentences/paragraphs.",
+      "FORMAL SCHOOL WRITING requires standard English; avoid texting abbreviations and vague fillers.",
+      "CONCLUSION synthesises explanation or reinforces argument; do not introduce a new major point.",
+      "REVISION order: relevance→organisation→support→cohesion→sentence accuracy→spelling/punctuation.",
+      "AVOID MEMORISED GENERIC INTRODUCTIONS that do not address the exact prompt.",
+      "GOLDEN WRITING METHOD: plan→draft→support→connect→revise."
     ],
-    "prerequisites": [
-      "outline writing",
-      "paragraphing",
-      "main/supporting ideas"
+    "workedExamples":[
+      "Expository prompt “Causes of flooding”: organise blocked drains, heavy rain, poor planning, then effects/solutions if requested.",
+      "Argument prompt “School uniforms should be compulsory”: position→identity/equality/discipline reasons→cost counterargument→rebuttal→conclusion.",
+      "Strong topic sentence: “Blocked drainage is a major cause of urban flooding.”",
+      "Weak paragraph: “Flooding is bad. It is very bad. Everyone knows it.” This repeats assertion without explanation.",
+      "Stronger paragraph: “Blocked drains prevent storm water from flowing away, causing water to spread onto roads and homes during heavy rain.”",
+      "Counterargument: “Critics argue uniforms can be expensive for families.”",
+      "Rebuttal: “However, a limited number of durable uniforms may reduce pressure to buy many fashionable outfits.”",
+      "Process exposition: handwashing should be explained in chronological sequence.",
+      "Compare-contrast exposition: public/private transport can be organised by cost, capacity and convenience.",
+      "Cause-effect: distinguish cause “blocked drains” from effect “street flooding”.",
+      "Evidence vs assertion: “Reading improves vocabulary because repeated exposure introduces new words in context” gives a mechanism; “Reading is best” does not.",
+      "Conclusion argument: restate position based on reasons, not a new unrelated issue.",
+      "Cohesion: “This problem” must clearly refer to the issue in preceding sentence.",
+      "Paragraph unity: a paragraph about transport cost should not suddenly discuss school uniforms.",
+      "Revision example: replace vague “things are bad” with precise “blocked drainage increases flood risk”."
     ],
-    "teaching": [
-      "Expository writing explains a subject clearly. It may define, describe a process, compare, classify or explain causes and effects without requiring the reader to adopt a position.",
-      "Argumentative writing takes a defensible position and supports it with reasons and evidence while acknowledging relevant opposing views.",
-      "Both need a focused introduction, logically ordered body paragraphs, transitions and a conclusion. The difference lies mainly in purpose and treatment of claims.",
-      "Each body paragraph should contain one controlling idea, explanation and relevant evidence/example. Avoid paragraph-long lists without reasoning.",
-      "In argument, distinguish evidence from assertion. A counterargument can be presented fairly and then answered rather than mocked."
-    ],
-    "workedExamples": [
-      "Expository prompt: “Explain how flooding affects a community.” Organise by causes/effects/solutions without taking a side.",
-      "Argumentative prompt: “School uniforms should be compulsory.” State a position, support it, address a counterpoint and conclude."
-    ],
-    "misconceptions": [
-      "turning exposition into a personal rant",
-      "arguing without evidence",
-      "mixing unrelated ideas in one paragraph",
-      "using insults instead of rebuttal"
-    ],
-    "guidedPractice": [
-      "Write one body paragraph for each form from supplied outlines and peer-check topic sentence, explanation and evidence."
-    ],
-    "independentPractice": [
-      "Write one 350-word expository and one 350-word argumentative essay, revise with a structure/evidence checklist."
-    ],
-    "mastery": {
-      "criterion": "At least 80% overall, with accurate application on an unfamiliar task and correction of any major misconception before progression.",
-      "status": "DEEP_WHEN_PASSED"
-    },
-    "boardReady": true
+    "misconceptions":["turning exposition into rant","arguing without evidence","one long paragraph","insulting opponents","confusing example with explanation","new argument in conclusion","memorised irrelevant introduction","weak cohesion","text-message language","claiming both sides equally without taking a position when prompt requires argument"],
+    "guidedPractice":["Classify ten prompts as expository/argumentative.","Write controlling sentence for six prompts.","Build expository paragraph from topic sentence+explanation+example.","Build argumentative paragraph from claim+reason+evidence.","Write counterargument+rebuttal.","Repair unrelated paragraph.","Add transitions to four-paragraph plan.","Compare weak vs strong evidence.","Draft flooding exposition introduction.","Draft school-uniform argument introduction.","Revise conclusion containing new point.","Revise300-word draft using checklist."],
+    "independentPractice":["Write350 words explaining causes/effects of littering.","Write350 words explaining effective exam preparation.","Write350 words arguing for/against school uniforms.","Write350 words arguing whether phones should be allowed for learning.","Create outline before each essay.","Underline each body topic sentence.","Label evidence/examples.","Include one counterargument/rebuttal in argument.","Revise for cohesion/unity.","Replace vague vocabulary.","Edit grammar/punctuation after content revision.","Self-assess using relevance,organisation,support,language checklist."],
+    "mastery":{"criterion":"Learner distinguishes exposition from argument and writes coherent, evidence-supported compositions with unified paragraphs, fair counterargument, effective conclusions and revision at at least85% standard.","status":"DEEP_WHEN_PASSED"},"boardReady":true
   },
   {
-    "topicId": "nerdc-jss2-english-writing-3",
-    "classLevel": "JSS2",
-    "subject": "English Language",
-    "strand": "Writing",
-    "topic": "Letter writing: informal and formal",
-    "source": {
-      "authority": "NERDC",
-      "url": "https://nerdc.gov.ng/content_manager/jss/jss1-3_english_studies.pdf",
-      "page": 32
-    },
-    "objectives": [
-      "Distinguish formal and informal letters by purpose, audience, layout and language",
-      "Select the correct format for a given situation",
-      "Write appropriate letters for different real-life purposes"
+    "topicId":"nerdc-jss2-english-writing-3","classLevel":"JSS2","subject":"English Language","strand":"Writing","topic":"Letter writing: informal and formal",
+    "source":{"authority":"NERDC","url":"https://nerdc.gov.ng/content_manager/jss/jss1-3_english_studies.pdf","page":32},
+    "objectives":["Distinguish formal and informal letters by purpose, audience, layout and language","Select correct format for a situation","Write appropriate letters for real-life purposes"],
+    "prerequisites":["JSS1 letter basics","punctuation","audience awareness"],
+    "teaching":[
+      "LETTER TYPE depends on relationship and purpose. Informal letters are to friends/relatives; formal letters are to institutions or people in official roles.",
+      "INFORMAL REGISTER can be warm, personal and conversational while still using clear standard sentences.",
+      "FORMAL REGISTER should be respectful, direct, precise and free from slang, emojis and casual abbreviations.",
+      "FORMAL FORMAT commonly includes writer’s address/date, recipient’s address where required by school convention, salutation, title/subject, organised body and formal closing.",
+      "INFORMAL FORMAT includes writer’s address/date, personal salutation, opening, main message, closing and personal sign-off according to school convention.",
+      "PURPOSE SHOULD APPEAR EARLY in a formal letter. Do not force the official to read several paragraphs before learning the request or complaint.",
+      "FORMAL BODY can follow problem→evidence/effect→requested action.",
+      "REQUEST LETTER should state exactly what action is requested and why it is reasonable.",
+      "COMPLAINT LETTER should describe facts accurately, dates/details where relevant, effects, and desired remedy without abusive language.",
+      "APPLICATION/ENQUIRY style should state reason for writing, relevant details and clear questions/request.",
+      "INFORMAL LETTER should maintain personal connection: ask/respond, share events and feelings, but remain organised.",
+      "PARAGRAPHING matters in both forms. Each paragraph should handle one stage or idea.",
+      "CLOSINGS must match register. Formal: Yours faithfully/sincerely according to salutation convention; informal: Yours affectionately/Your friend etc.",
+      "AUDIENCE CHECK: ask what the reader knows, what they need, and what tone suits the relationship.",
+      "EDIT FORMAT separately from content: address/date/salutation/title/body/closing, then grammar/spelling/punctuation."
     ],
-    "prerequisites": [
-      "JSS1 letter basics",
-      "sentence punctuation",
-      "audience awareness"
+    "workedExamples":[
+      "Formal request to local council for road repair: identify road, describe damage/effects, request inspection/repair.",
+      "Formal complaint to electricity office: state account/location, outage period, impact, request investigation.",
+      "Formal enquiry to school: ask clearly about admission deadline, required documents and fees without unnecessary story.",
+      "Formal letter to principal requesting library hours extension: reason, evidence of demand, practical suggestion.",
+      "Informal letter to cousin about new school: greeting, personal update, school experience, questions about cousin, warm closing.",
+      "Informal letter congratulating friend: acknowledge achievement, specific encouragement, personal connection.",
+      "Wrong register: “Dear Sir, what’s up? Please fix this thing ASAP 😂.” Inappropriate for formal audience.",
+      "Improved formal: “I am writing to request urgent repair of the damaged drainage channel beside…”",
+      "Weak complaint: “Your service is terrible.” Stronger: “Power supply has been unavailable for five consecutive days despite…”",
+      "Purpose placement: first paragraph says why writing; middle gives evidence/details; final states requested action.",
+      "Formal title example: REQUEST FOR REPAIR OF DAMAGED CLASSROOM ROOF.",
+      "Informal organisation: opening personal response→main event→reflection→questions→closing.",
+      "Salutation/closing match: Dear Sir/Madam→Yours faithfully; Dear Mr Adeyemi with named recipient may use Yours sincerely under common convention.",
+      "Editing: remove slang “gonna” from formal letter and replace with “going to/will”.",
+      "Audience adaptation: letter to friend may explain feelings; letter to official emphasises facts/action."
     ],
-    "teaching": [
-      "Informal letters are written to people with whom the writer has a personal relationship; formal letters address institutions, officials or people in an official capacity.",
-      "Register matters: an informal letter may sound warm and conversational, while a formal letter should be respectful, direct and precise.",
-      "Formal letters require clear subject/purpose, appropriate salutation, organised paragraphs and a suitable closing. Avoid slang, emojis and unnecessary storytelling.",
-      "Informal letters still need coherence: opening, main message, relevant detail and closing rather than a stream of unrelated remarks.",
-      "Before writing, identify sender, receiver, relationship and purpose; those four decisions determine format and tone."
-    ],
-    "workedExamples": [
-      "Formal: write to a local council requesting repair of a damaged road; state the problem, effects, evidence and requested action.",
-      "Informal: write to a cousin describing a new school experience; use personal but organised language."
-    ],
-    "misconceptions": [
-      "using “Dear Sir” with slang",
-      "turning an informal letter into an essay with no personal connection",
-      "omitting the purpose until the last paragraph",
-      "mixing formal and informal closings"
-    ],
-    "guidedPractice": [
-      "Correct the format/register errors in two model letters and rewrite one paragraph appropriately."
-    ],
-    "independentPractice": [
-      "Write one formal request/complaint letter and one informal personal letter from unseen prompts."
-    ],
-    "mastery": {
-      "criterion": "At least 80% overall, with accurate application on an unfamiliar task and correction of any major misconception before progression.",
-      "status": "DEEP_WHEN_PASSED"
-    },
-    "boardReady": true
+    "misconceptions":["mixing formal and informal register","using slang with official salutation","omitting purpose until end","one giant paragraph","abusive complaint language","wrong closing for salutation","forgetting addresses/date","turning informal letter into impersonal essay","copying memorised format without adapting to prompt"],
+    "guidedPractice":["Classify eight prompts formal/informal.","Match salutations and closings.","Correct format errors in a formal letter.","Rewrite slang paragraph into formal register.","Write opening paragraph for road-repair request.","Write evidence paragraph for complaint.","Write requested-action conclusion.","Write informal opening responding to cousin.","Organise five mixed paragraphs into correct order.","Compare formal vs informal versions of same news.","Edit punctuation/address/date errors.","Use audience checklist on one completed letter."],
+    "independentPractice":["Write formal complaint to service provider.","Write formal request to principal.","Write formal enquiry to organisation.","Write informal letter describing new school.","Write informal congratulatory letter.","Write informal advice letter to younger relative.","For each formal letter state purpose in first paragraph.","Use at least3 coherent body paragraphs where appropriate.","Check register and closing.","Revise one weak formal sample.","Convert an informal message into formal letter.","Self-check format/content/register/accuracy."],
+    "mastery":{"criterion":"Learner selects correct letter type, uses accurate format/register, states purpose clearly, organises evidence/request coherently and writes both formal and informal letters at at least85% standard.","status":"DEEP_WHEN_PASSED"},"boardReady":true
   },
   {
-    "topicId": "nerdc-jss2-english-writing-4",
-    "classLevel": "JSS2",
-    "subject": "English Language",
-    "strand": "Writing",
-    "topic": "Summary writing (passage on consumer and social influence)",
-    "source": {
-      "authority": "NERDC",
-      "url": "https://nerdc.gov.ng/content_manager/jss/jss1-3_english_studies.pdf",
-      "page": 33
-    },
-    "objectives": [
-      "Identify topic sentences and key ideas in a passage",
-      "Separate major points from illustrations and repetition",
-      "Write an accurate concise summary in the learner’s own words"
+    "topicId":"nerdc-jss2-english-writing-4","classLevel":"JSS2","subject":"English Language","strand":"Writing","topic":"Summary writing (passage on consumer and social influence)",
+    "source":{"authority":"NERDC","url":"https://nerdc.gov.ng/content_manager/jss/jss1-3_english_studies.pdf","page":33},
+    "objectives":["Identify topic sentences and key ideas in a passage","Separate major points from illustrations and repetition","Write an accurate concise summary in the learner’s own words"],
+    "prerequisites":["reading for summary","paraphrasing","sentence construction"],
+    "teaching":[
+      "SUMMARY WRITING answers a specific question using only essential ideas from the source.",
+      "READ THE QUESTION FOCUS FIRST. If asked for factors influencing buying, exclude unrelated effects or advice.",
+      "READ PASSAGE FOR WHOLE MEANING before extracting points.",
+      "LOCATE RELEVANT PARAGRAPHS and identify one core idea from each.",
+      "DISTINGUISH POINT FROM EXAMPLE. “Friends recommend brands, classmates copy one another…” may support one broader point: peer influence affects buying.",
+      "COMBINE OVERLAPPING DETAILS into one stronger point instead of counting repeated ideas separately.",
+      "PARAPHRASE accurately. Change structure and wording while preserving exact meaning.",
+      "COMPLETE SENTENCES are normally required unless task explicitly requests notes.",
+      "REMOVE illustrations, quotations, repetition, anecdotes and decorative wording unless essential to the requested point.",
+      "CONSUMER-INFLUENCE PASSAGES may include price, advertising, peer pressure, family influence, brand image, convenience, quality, income and social status. Only include those actually supported in the given passage.",
+      "DO NOT ADD ADVICE such as “students should be wise consumers” unless the passage/question requires it.",
+      "NUMBER OF POINTS matters. If question asks six points, identify six distinct ideas, not six examples of two ideas.",
+      "WORD ECONOMY means direct wording without losing meaning.",
+      "GRAMMATICAL INDEPENDENCE: each answer sentence should make sense on its own and avoid dangling pronouns copied from source.",
+      "FINAL CHECK: focus→number of points→own words→accuracy→grammar→no extra opinion."
     ],
-    "prerequisites": [
-      "reading for summary",
-      "paraphrasing",
-      "sentence construction"
+    "workedExamples":[
+      "Source details: discounts, low prices and affordable instalments. Summary point: Price and payment conditions influence buying decisions.",
+      "Source: friends praise a brand, classmates copy trends. Summary point: Peer pressure can shape consumer choice.",
+      "Source: repeated television, social-media and billboard promotions. Summary point: Advertising influences awareness and preference.",
+      "Source: parents choose certain products for children. Summary point: Family preferences can affect purchasing decisions.",
+      "Source: buyer selects nearby shop because it saves time. Summary point: Convenience or accessibility influences purchases.",
+      "Source: product lasts longer and performs better. Summary point: Perceived quality/durability affects choice.",
+      "Three examples of celebrity adverts should normally become one point about promotional influence.",
+      "Bad summary: “People buy things because adverts are everywhere and this is very bad.” Adds judgement. Better: “Advertising can influence consumer preferences.”",
+      "Copied: “Young people are frequently persuaded by their peers to purchase fashionable products.” Paraphrase: “Peer pressure can encourage youths to buy fashionable goods.”",
+      "Question asks causes but learner writes effects of overspending; those points are irrelevant despite being in passage.",
+      "Six requested points require six distinct influences, not price expressed three different ways.",
+      "Pronoun repair: replace copied “This makes them buy it” with clear “Repeated advertising can encourage consumers to purchase the product.”",
+      "Word economy: “Due to the fact that products are cheap in price”→“Low prices encourage purchases.”",
+      "Two overlapping points “friends influence them” and “classmates influence them” combine as peer influence.",
+      "Final verification: every summary statement can be traced to source evidence."
     ],
-    "teaching": [
-      "Summary writing converts selected key ideas into a concise new text. It is not note-copying and not personal commentary.",
-      "Read once for overall meaning, then identify the question focus. A summary about “factors influencing buying decisions” should exclude unrelated details even if interesting.",
-      "Underline one core idea per relevant paragraph, combine overlapping ideas, then paraphrase without changing meaning.",
-      "Use complete grammatical sentences unless the task explicitly requests notes. Remove examples, quotations, repetition and decorative wording.",
-      "Final editing checks number of required points, word economy, grammar and whether any new claim has been added."
-    ],
-    "workedExamples": [
-      "Original details about price, peer pressure and advertising can become: “Buying decisions are influenced by cost, social pressure and promotion.”",
-      "Three examples of brand advertising should normally become one broader point about advertising rather than three summary points."
-    ],
-    "misconceptions": [
-      "copying long clauses from the passage",
-      "summarising everything instead of the question focus",
-      "counting examples as separate main points",
-      "adding advice not in the passage"
-    ],
-    "guidedPractice": [
-      "Extract five main points from a consumer-awareness passage and paraphrase each in one sentence."
-    ],
-    "independentPractice": [
-      "Write two passage summaries under a word/point limit and verify every sentence against the source."
-    ],
-    "mastery": {
-      "criterion": "At least 80% overall, with accurate application on an unfamiliar task and correction of any major misconception before progression.",
-      "status": "DEEP_WHEN_PASSED"
-    },
-    "boardReady": true
+    "misconceptions":["copying long clauses","summarising whole passage instead of focus","counting examples as points","adding advice/opinion","repeating same idea as multiple points","changing meaning during paraphrase","using unclear copied pronouns","ignoring required number of points","writing fragments"],
+    "guidedPractice":["Identify question focus in five summary prompts.","Underline six relevant ideas in a consumer passage.","Separate point vs example for ten statements.","Combine overlapping details.","Paraphrase eight source sentences.","Turn six notes into complete concise sentences.","Remove opinion from a flawed summary.","Repair unclear pronouns.","Count distinct points in a draft.","Shorten wordy sentences without meaning loss.","Check each point against source.","Write final six-point summary under stated word limit."],
+    "independentPractice":["Summarise factors affecting consumer choice from unseen passage.","Summarise effects of advertising from another passage.","Extract six points only from relevant paragraphs.","Paraphrase ten selected ideas.","Combine repeated examples into broader points.","Write five complete summary sentences without copying.","Edit a draft containing two opinions.","Edit a draft with duplicated points.","Reduce a100-word draft to70 words.","Verify every sentence against source.","Check required point count.","Produce final revised summary using checklist."],
+    "mastery":{"criterion":"Learner identifies the exact summary focus, extracts distinct major points, paraphrases accurately and writes concise grammatical summaries with no repetition or added opinion at at least85% standard.","status":"DEEP_WHEN_PASSED"},"boardReady":true
   },
   {
     "topicId": "nerdc-jss2-english-listening-and-speaking-1",
