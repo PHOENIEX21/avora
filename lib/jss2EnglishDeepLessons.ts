@@ -193,48 +193,83 @@ export const jss2EnglishDeepLessons:DeepJss2EnglishLesson[]=[
     "subject": "English Language",
     "strand": "Reading",
     "topic": "Critical reading",
-    "source": {
-      "authority": "NERDC",
-      "url": "https://nerdc.gov.ng/content_manager/jss/jss1-3_english_studies.pdf",
-      "page": 27
-    },
-    "objectives": [
-      "Read a passage critically rather than accepting every claim automatically",
-      "Distinguish verifiable facts from opinions or judgements",
-      "Evaluate claims using evidence, logic and internal consistency"
+    "source": {"authority":"NERDC","url":"https://nerdc.gov.ng/content_manager/jss/jss1-3_english_studies.pdf","page":27},
+    "objectives":["Read a passage critically rather than accepting every claim automatically","Distinguish verifiable facts from opinions or judgements","Evaluate claims using evidence, logic and internal consistency"],
+    "prerequisites":["main ideas","writer’s purpose","fact and opinion basics","context clues"],
+    "teaching":[
+      "CRITICAL READING asks two questions together: “What is the writer saying?” and “How well is the writer supporting it?” Understanding comes first; evaluation comes next.",
+      "A CLAIM is a statement the writer wants the reader to accept. Claims may be factual, evaluative or predictive. A critical reader identifies the claim before judging it.",
+      "A FACT is a statement that can in principle be checked against reliable evidence. An OPINION expresses a judgement, preference or interpretation. Opinions are not automatically worthless; they may be well supported or poorly supported.",
+      "REASON VS EVIDENCE. A reason explains why a claim might be true. Evidence gives support such as data, observations, examples, records, expert findings or documented events.",
+      "EXAMPLE VS PROOF. One example can illustrate an idea but may be too limited to prove a general claim about everyone or every situation.",
+      "GENERALISATION. Statements using all, always, never, everyone or no one make very broad claims and therefore need strong evidence.",
+      "ASSUMPTION is an unstated idea that a writer takes for granted. Critical readers ask what must be true for the argument to work.",
+      "RELEVANCE. Evidence must actually support the claim. A true fact can still be irrelevant if it does not help prove the point being made.",
+      "SUFFICIENCY. One weak piece of evidence may not be enough. Ask whether the quantity and quality of evidence are sufficient for the strength of the claim.",
+      "SOURCE AWARENESS. Consider who produced the information, what expertise or interest they may have, and whether the passage provides enough basis to trust the evidence.",
+      "LANGUAGE CAN SIGNAL BIAS OR EMOTION. Words such as obviously, disgraceful, perfect, useless or everyone knows may try to influence reaction. Emotional language does not automatically make a claim false, but it should not replace evidence.",
+      "CAUSE VS COINCIDENCE. If two events occur together, one does not automatically cause the other. A passage must provide a reasonable causal link.",
+      "INTERNAL CONSISTENCY. Compare claims within the passage. If the writer says one thing early and contradicts it later without explanation, reliability is weakened.",
+      "BALANCED EVALUATION. A strong critical response states what is supported, what is uncertain, what is exaggerated and what further evidence would help.",
+      "EVIDENCE-BASED RESPONSE PATTERN. CLAIM → EVIDENCE → JUDGEMENT. Example: “The claim is only partly supported because one example is given, but no data show the pattern is common.”"
     ],
-    "prerequisites": [
-      "main ideas",
-      "author purpose",
-      "fact and opinion basics"
+    "workedExamples":[
+      "FACT. “The school library opens at 8:00 a.m.” can be checked against the timetable, so it is a verifiable factual claim.",
+      "OPINION. “This is the best school in Nigeria” is an opinion unless “best” is defined by measurable criteria and supported by evidence.",
+      "CLAIM + REASON. “School gardens can improve practical science learning because pupils observe plant growth directly.” The second part gives a reason, but stronger evidence would be needed to show improvement.",
+      "ONE EXAMPLE IS NOT UNIVERSAL PROOF. “My cousin studied at night and passed, therefore everyone learns best at night.” One case cannot prove a rule for everyone.",
+      "ABSOLUTE LANGUAGE. “Students who use phones never concentrate.” The word never makes an extremely strong claim requiring very strong evidence.",
+      "IRRELEVANT EVIDENCE. Claim: “The canteen food is nutritious.” Evidence: “The canteen was painted last month.” The evidence may be true but does not support nutritional quality.",
+      "RELEVANT EVIDENCE. Claim: “The new water filter improved water clarity.” Before/after test records showing lower turbidity are relevant evidence.",
+      "INSUFFICIENT EVIDENCE. “Three students preferred the new timetable, so all students prefer it.” Sample size and representativeness are too weak.",
+      "BIAS/EMOTIVE LANGUAGE. “Only a careless person would oppose this brilliant plan.” The wording attacks opponents but gives no evidence that the plan works.",
+      "CAUSE VS COINCIDENCE. “After the new uniform was introduced, exam scores rose; therefore the uniform caused the rise.” Other factors could explain the change.",
+      "ASSUMPTION. “Online homework will improve every learner’s result.” This assumes equal device access, connectivity and appropriate task design.",
+      "SOURCE. A product advertisement claims its own drink is “the healthiest choice”. The commercial interest means the evidence should be checked independently.",
+      "CONSISTENCY. A passage first says “all plastic should be banned” and later recommends continued plastic use in schools without explaining exceptions. The argument needs clarification.",
+      "BALANCED JUDGEMENT. “The article gives two useful examples of flooding caused by blocked drains, but it does not establish that blocked drains are the only cause of flooding.”",
+      "STRONGER EVIDENCE. For a claim that a reading programme improves scores, before/after results across many learners with clear comparison would be stronger than one testimonial."
     ],
-    "teaching": [
-      "Critical reading asks not only “What does this say?” but also “How well is this supported?” A critical reader identifies claims, reasons, evidence and assumptions.",
-      "A fact is a claim that can in principle be checked against evidence. An opinion expresses judgement, preference or interpretation; opinions may still be well or poorly supported.",
-      "Watch for absolute language such as always, never, everyone and best. Strong claims require strong evidence.",
-      "Separate evidence from examples. One example may illustrate a point but may not prove that the point is generally true.",
-      "A fair evaluation states what is supported, what is uncertain and what further evidence would be needed."
-    ],
-    "workedExamples": [
-      "“School gardens can improve practical science learning because pupils observe plant growth directly.” This is a claim supported by a reason; a reader can ask what evidence shows improved learning.",
-      "“This is the greatest school in Nigeria” is an opinion unless a clear measurable criterion and evidence are supplied."
-    ],
-    "misconceptions": [
+    "misconceptions":[
       "calling every statement an opinion",
-      "rejecting a claim only because you dislike it",
+      "assuming every fact is automatically relevant",
+      "rejecting a claim simply because you dislike it",
+      "accepting a claim simply because you agree with it",
       "treating one example as universal proof",
-      "ignoring missing evidence"
+      "confusing a reason with evidence",
+      "assuming emotional language is proof",
+      "assuming correlation automatically means causation",
+      "ignoring source interest or expertise",
+      "finding a weakness and then claiming the whole passage is false",
+      "giving a judgement without citing textual evidence"
     ],
-    "guidedPractice": [
-      "Mark claims in a passage as fact, opinion or unsupported generalisation and explain why."
+    "guidedPractice":[
+      "Classify ten statements as fact, opinion, claim or mixed, and justify each.",
+      "Underline the main claim, reasons and evidence in a short argumentative paragraph.",
+      "For five examples, decide whether the evidence is relevant and sufficient.",
+      "Identify two absolute generalisations and rewrite them more cautiously.",
+      "Find one unstated assumption in each of three short arguments.",
+      "Compare a neutral sentence with an emotionally loaded version and explain the effect.",
+      "Identify one case of correlation being presented as causation and state what extra evidence is needed.",
+      "Evaluate the reliability of an advert, a school notice and a newspaper-style report using source and evidence.",
+      "Find any internal contradiction in a supplied passage.",
+      "Write one balanced evaluation using CLAIM → EVIDENCE → JUDGEMENT."
     ],
-    "independentPractice": [
-      "Evaluate two short articles, identify their strongest and weakest claims, and write a brief evidence-based judgement."
+    "independentPractice":[
+      "Read an unfamiliar article and identify its main claim, two reasons and all evidence offered.",
+      "Label eight statements from a passage as fact or opinion with justification.",
+      "Identify one weak generalisation and explain why the evidence is insufficient.",
+      "Identify one irrelevant detail used as though it supported the main claim.",
+      "Find one assumption the writer does not state directly.",
+      "Evaluate whether the source described in a passage has a possible interest or bias.",
+      "Rewrite two emotionally loaded claims in more neutral language.",
+      "Explain why one example cannot establish a universal rule.",
+      "Analyse a cause-and-effect claim and list two alternative explanations.",
+      "Identify one strong claim and describe what stronger evidence would be needed.",
+      "Compare two short texts making opposite claims and decide which is better supported.",
+      "Write a 150-word critical response that states what is supported, uncertain and exaggerated without attacking the writer personally."
     ],
-    "mastery": {
-      "criterion": "At least 80% overall, with accurate application on an unfamiliar task and correction of any major misconception before progression.",
-      "status": "DEEP_WHEN_PASSED"
-    },
+    "mastery":{"criterion":"At least 85% across fact/opinion, claim/reason/evidence, relevance, sufficiency, assumption, source, bias, causation and consistency, with balanced evidence-based judgement.","status":"DEEP_WHEN_PASSED"},
     "boardReady": true
   },
   {
