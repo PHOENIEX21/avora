@@ -3,6 +3,53 @@ import {jss3WholeNumbersPlan,jss3WholeNumbersTopic,jss3RationalNonRationalPlan,j
 export type TutorUnit={title:string;terms:Array<[string,string]>;explain:string;example:string;check:string;why?:string;prerequisites?:string[];outcomes?:string[];commonMistakes?:string[];teachingTypes?:string[];teachingTypeExamples?:Array<{name:string;description:string;examples:string[]}>;noJumpChecks?:string[];sourceOrigin?:string;sourceSteps?:string[];sourceChecks?:string[];sourceSolutions?:string[];workedExamples?:string[];structuredSteps?:StructuredTeachingStep[]};
 export type TutorPlan={goal:string;why:string;units:TutorUnit[];examFocus?:string[];outcomes?:string[]};
 
+function normalizeAcademicText(value:string){
+ return String(value||'').replace(/\\n/g,'\n').replace(/\n{3,}/g,'\n\n').trim();
+}
+function mathReasoningLines(text:string){
+ const clean=normalizeAcademicText(text);
+ const pieces=clean.split(/(?:\s*→\s*|;\s+|\n+)/).map(x=>x.trim()).filter(Boolean);
+ if(pieces.length>1)return pieces;
+ const equals=clean.split(/(?==)/).map(x=>x.trim()).filter(Boolean);
+ return equals.length>1?equals:[clean];
+}
+export function deepenWorkedModel(subject:string,example:string,teachingIdea:string,practice?:string,index=0){
+ const raw=normalizeAcademicText(example);
+ if(!raw)return '';
+ const idea=normalizeAcademicText(teachingIdea);
+ if(subject==='Mathematics'){
+  const lines=mathReasoningLines(raw);
+  const hasReasoning=lines.length>1||/(because|therefore|so\b|hence|check|verify|multiply|divide|subtract|add|substitut|simplif)/i.test(raw);
+  if(hasReasoning&&raw.length>=140)return raw;
+  const numbered=lines.map((line,i)=>'Step '+(i+1)+': '+line).join('\n');
+  return [
+   'EXAMPLE '+(index+1),
+   raw,
+   '',
+   'IDEA TO USE',
+   idea||'Identify the quantities given, what is required, and the rule that connects them before calculating.',
+   '',
+   'WORKING AND REASONING',
+   numbered,
+   '',
+   'WHY THIS IS VALID',
+   'Each line must follow from the definition, formula or operation established in this section. Do not jump from the question to the final answer; explain the relationship that justifies the calculation.',
+   practice?'\nCHECK YOURSELF\n'+normalizeAcademicText(practice):''
+  ].filter(Boolean).join('\n');
+ }
+ if(raw.length>=180&&/(because|shows|means|evidence|therefore|for example|this|which)/i.test(raw))return raw;
+ return [
+  'MODEL '+(index+1),
+  raw,
+  '',
+  'WHAT TO NOTICE',
+  idea||'Identify the exact word, structure, evidence or language feature that makes the model correct.',
+  '',
+  'WHY IT WORKS',
+  'Do not memorise the sentence alone. Explain the language evidence, meaning or structural rule that makes the model fit this lesson.',
+  practice?'\nTRY THE SAME SKILL\n'+normalizeAcademicText(practice):''
+ ].filter(Boolean).join('\n');
+}
 export const topicAliases:Record<string,string>={
   'Geometry & Measurement':'Geometry & Mensuration',
   'Data & Statistics':'Statistics & Data',

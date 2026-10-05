@@ -1,5 +1,5 @@
 import {structureTeachingSteps} from './lessonStepEngine';
-import type {TutorUnit} from './tutorCurriculum';
+import {deepenWorkedModel,type TutorUnit} from './tutorCurriculum';
 import {officialNerdc2025Topic} from './nerdc2025Official';
 import {evidenceIdsForOfficialTopic} from './nerdc2025TopicMap';
 import {jss1MathematicsDeepLessons} from './jss1MathematicsDeepLessons';
@@ -274,7 +274,7 @@ function deepEvidenceUnit(item:NerdcDeepEvidence,officialTopic:string):TutorUnit
  return {
   title:item.topic,
   terms:[],why:'',prerequisites:item.prerequisites,outcomes:item.objectives,
-  explain:item.teaching.join(' '),example:item.workedExamples[0]||'',workedExamples:item.workedExamples,check:checks[0]||`Explain the governing idea in ${item.topic}.`,
+  explain:item.teaching.join('\n\n'),example:richExamples[0]||item.workedExamples[0]||'',workedExamples:richExamples,check:checks[0]||`Explain the governing idea in ${item.topic}.`,
   commonMistakes:item.misconceptions,sourceOrigin:`NERDC September 2025 alignment · ${item.topicId}`,
   sourceSteps:steps,sourceChecks:checks,structuredSteps:structureTeachingSteps(steps,checks),
   noJumpChecks:['define terms before using them','explain why each transformation is valid','work examples from simple to harder forms','teach misconceptions explicitly','require learner reasoning before mastery']

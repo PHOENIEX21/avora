@@ -1,4 +1,4 @@
-import {getTutorPlan,type TutorPlan,type TutorUnit} from './tutorCurriculum';
+import {getTutorPlan,deepenWorkedModel,type TutorPlan,type TutorUnit} from './tutorCurriculum';
 import {jss3WholeNumbersTopic,jss3RationalNonRationalTopic,jss3BaseTwoOperationsTopic,jss3FactorizationTopic,jss3FractionEquationsTopic,jss3SimultaneousLinearTopic,jss3SimilarShapesTopic,jss3TrigonometryTopic,jss3AreaPlaneFiguresTopic,jss3ConstructionTopic,jss3CentralTendencyTopic,jss3DataPresentationTopic,jss3VariationTopic,jss3ChangeSubjectTopic,jss3ElevationDepressionTopic} from './jss3ProvisionalMathematics';
 import {masterTopics,masterTopicByName} from './masterCurriculum';
 import {getSentCurriculumCourse,getSentCurriculumUnits} from './sentCurriculumRuntime';
@@ -101,9 +101,11 @@ function enrichJss3AuthoredPlan(plan:TutorPlan,subject:string,topic:string):Tuto
    const extraTeaching=teaching[index%Math.max(1,teaching.length)]||'';
    const modelStart=(index*2)%Math.max(1,examples.length);
    const modelExamples=examples.length
-    ? [examples[modelStart],examples[(modelStart+1)%examples.length],examples[(modelStart+2)%examples.length]].filter(Boolean)
+    ? [examples[modelStart],examples[(modelStart+1)%examples.length],examples[(modelStart+2)%examples.length]]
+       .filter(Boolean)
+       .map((example,exampleIndex)=>deepenWorkedModel(subject,example,teaching[(modelStart+exampleIndex)%Math.max(1,teaching.length)]||extraTeaching,guided[(modelStart+exampleIndex)%Math.max(1,guided.length)]||practice,exampleIndex))
     : [];
-   const existing=String(unit.example||'').trim();
+   const existing=unit.example?deepenWorkedModel(subject,String(unit.example||''),extraTeaching,practice,index):'';
    return {
     ...unit,
     explain:[String(unit.explain||'').trim(),extraTeaching].filter(Boolean).join('\n\n'),
