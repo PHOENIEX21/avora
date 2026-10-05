@@ -204,48 +204,140 @@ export const jss3MathematicsDeepLessons:DeepJss3MathLesson[]=[
  mastery:{criterion:'At least 85% correct classification across integers, fractions, terminating/recurring decimals and simplified roots, plus accurate exact-versus-approximate reasoning and a multi-object experimental estimate of π with measurement-error explanation.',status:'DEEP_WHEN_PASSED'},boardReady:true
 },
 {
- topicId:'nerdc-jss3-math-basic-operations-basic-operations-1',classLevel:'JSS3',subject:'Mathematics',topic:'Addition of numbers in base 2 numerals',source:{authority:'NERDC',url:sourceUrl,page:30},
- objectives:['Add two or three 3-digit binary numbers accurately'],
+ topicId:'nerdc-jss3-math-basic-operations-basic-operations-1',classLevel:'JSS3',subject:'Mathematics',
+ topic:'Addition of numbers in base 2 numerals',source:{authority:'NERDC',url:sourceUrl,page:30},
+ objectives:['Add two or three 3-digit binary numbers accurately','Show carries using binary place value','Verify answers by conversion to base ten'],
  prerequisites:['binary place value','base-ten addition and carrying'],
- teaching:['Binary addition follows place value exactly like ordinary addition, but regrouping occurs at 2 rather than 10. The basic facts are 0+0=0, 0+1=1, 1+1=10₂ and 1+1+1=11₂.','Work from right to left. When a column totals 2, write 0 and carry 1; when it totals 3, write 1 and carry 1. Align digits by place value before adding.','Check by converting the addends and answer to base ten. The base-ten sum should agree, but the working should still demonstrate binary addition.'],
- workedExamples:['BINARY ADDITION. Add 101₂+011₂.\n\nWrite the numbers in place-value columns:\n  101₂\n+ 011₂\n------\n\nUnits: 1+1=10₂, so write 0 and carry 1.\nTwos column: 0+1+carried1=10₂, so write 0 and carry 1.\nFours column: 1+0+carried1=10₂, so write 0 and carry 1 into the eights column.\n\nTherefore 101₂+011₂=1000₂.\n\nCheck in base ten: 101₂=5 and 011₂=3; 5+3=8=1000₂.','111₂+101₂+010₂=1110₂ because 7+5+2=14.'],
- misconceptions:['using decimal carrying rules','writing 2 as a binary digit','misaligning place-value columns','forgetting a carried 1 when adding three numerals'],
- guidedPractice:['Add 101₂+110₂, then 011₂+101₂+111₂; verify both in base ten.'],
- independentPractice:['Ten binary additions, including two- and three-addend examples; convert three answers to base ten as checks.'],
- mastery:{criterion:'At least 9 of 10 additions correct, with valid binary digits and correct carrying shown.',status:'DEEP_WHEN_PASSED'},boardReady:true
+ teaching:[
+  'Binary addition follows place value exactly like ordinary addition, but regrouping occurs at 2 rather than 10. The basic facts are 0+0=0, 0+1=1, 1+1=10₂ and 1+1+1=11₂.',
+  'Work from right to left. When a column totals 2, write 0 and carry 1; when it totals 3, write 1 and carry 1. Align digits by place value before adding.',
+  'When adding three binary numerals, a column total can be 0,1,2 or3. Translate the total into binary before writing the digit and carry.',
+  'A carried 1 represents one unit of the next binary place, not decimal ten. For example a carry from the units column contributes 1 two, and a carry from the twos column contributes 1 four.',
+  'Use vertical working for multi-column examples. After calculating, convert addends and result to base ten to verify that the values agree.'
+ ],
+ workedExamples:[
+  'EXAMPLE 1 — NO CARRY. Add 100₂+010₂.\n\n  100₂\n+ 010₂\n------\n  110₂\n\nUnits:0+0=0. Twos:0+1=1. Fours:1+0=1. Therefore 100₂+010₂=110₂. Check:4+2=6, and 110₂=6.',
+  'EXAMPLE 2 — ONE CARRY. Add 101₂+001₂.\n\n  101₂\n+ 001₂\n------\n\nUnits:1+1=10₂, write0 carry1. Twos:0+0+carry1=1. Fours:1+0=1. Therefore answer=110₂. Check:5+1=6.',
+  'EXAMPLE 3 — CARRY THROUGH MORE THAN ONE COLUMN. Add 111₂+001₂.\n\n  111₂\n+ 001₂\n------\n\nUnits:1+1=10₂, write0 carry1. Twos:1+0+1=10₂, write0 carry1. Fours:1+0+1=10₂, write0 carry1 into the eights place. Therefore 111₂+001₂=1000₂. Check:7+1=8.',
+  'EXAMPLE 4 — TWO 3-DIGIT NUMBERS. Add 101₂+011₂.\n\nUnits:1+1=10₂, write0 carry1. Twos:0+1+1=10₂, write0 carry1. Fours:1+0+1=10₂, write0 carry1. Therefore answer=1000₂. Check:5+3=8.',
+  'EXAMPLE 5 — THREE ADDENDS. Add 101₂+011₂+010₂.\n\nUnits:1+1+0=10₂, write0 carry1. Twos:0+1+1+carry1=11₂, write1 carry1. Fours:1+0+0+carry1=10₂, write0 carry1. Final carry gives 1010₂. Check:5+3+2=10.',
+  'EXAMPLE 6 — THREE 3-DIGIT ADDENDS. Add 111₂+101₂+010₂.\n\nUnits:1+1+0=10₂, write0 carry1. Twos:1+0+1+1=11₂, write1 carry1. Fours:1+1+0+1=11₂, write1 carry1. Bring down final carry:1110₂. Check:7+5+2=14.',
+  'EXAMPLE 7 — MISSING ADDEND. Find x if 101₂+x=1000₂.\n\nConvert only as a check after reasoning: the missing amount is the binary difference 1000₂−101₂=011₂. Verify by addition:101₂+011₂=1000₂. Therefore x=011₂.',
+  'EXAMPLE 8 — ERROR ANALYSIS. A learner writes 111₂+001₂=112₂. This cannot be correct because digit2 is illegal in base two. Regroup 1+1 as10₂ and carry through the columns to obtain1000₂.'
+ ],
+ misconceptions:['using decimal carrying rules','writing 2 as a binary digit','misaligning place-value columns','forgetting a carried 1 when adding three numerals','dropping the final carry'],
+ guidedPractice:[
+  'Add 010₂+101₂ and explain each column.',
+  'Add 110₂+001₂ and show the carry.',
+  'Add 111₂+001₂ and explain why the answer gains a fourth digit.',
+  'Add 101₂+110₂ and verify in base ten.',
+  'Add 011₂+101₂+111₂ with all carries shown.',
+  'Add 110₂+110₂+001₂.',
+  'Find the missing binary addend in 100₂+x=111₂.',
+  'Correct the invalid answer 101₂+011₂=120₂ and explain the mistake.'
+ ],
+ independentPractice:[
+  'Add 001₂+110₂.','Add 011₂+100₂.','Add 101₂+101₂.','Add 110₂+111₂.','Add 111₂+111₂.',
+  'Add 001₂+010₂+100₂.','Add 101₂+011₂+110₂.','Add 111₂+101₂+111₂.','Find x if 011₂+x=101₂.','Find x if 110₂+x=1001₂.',
+  'Verify 101₂+110₂ by converting both addends and the answer to base ten.','Explain why 111₂+1₂ cannot be written as112₂.','Write one three-addend binary question whose sum is1000₂.','Check whether 1010₂ is a possible answer to 111₂+011₂.','Create and solve a binary addition involving at least two carries.'
+ ],
+ mastery:{criterion:'At least 13 of 15 independent items correct, with carrying shown accurately and base-ten verification used correctly on checking items.',status:'DEEP_WHEN_PASSED'},boardReady:true
 },
 {
- topicId:'nerdc-jss3-math-basic-operations-basic-operations-2',classLevel:'JSS3',subject:'Mathematics',topic:'Subtraction of numbers in base 2 numerals',source:{authority:'NERDC',url:sourceUrl,page:30},
- objectives:['Subtract 3-digit binary numbers accurately'],
+ topicId:'nerdc-jss3-math-basic-operations-basic-operations-2',classLevel:'JSS3',subject:'Mathematics',
+ topic:'Subtraction of numbers in base 2 numerals',source:{authority:'NERDC',url:sourceUrl,page:30},
+ objectives:['Subtract 3-digit binary numbers accurately','Borrow correctly across one or more zero places','Verify subtraction by addition'],
  prerequisites:['binary place value','binary addition','borrowing in base ten'],
- teaching:['Binary subtraction uses 0−0=0, 1−0=1 and 1−1=0. When 0−1 occurs, borrow 1 from the next binary place; that borrowed 1 is worth 10₂, so 10₂−1₂=1₂.','If the next place is also zero, borrowing may pass across several places. Record each regrouping so the place-value change is visible.','Check by converting both numerals to base ten or by adding the difference back to the subtrahend.'],
- workedExamples:['BINARY SUBTRACTION. Subtract 011₂ from 110₂.\n\nWrite the numbers in columns:\n  110₂\n− 011₂\n------\n\nUnits: 0−1 cannot be done directly, so borrow 1 from the twos column. In base two, the borrowed 1 becomes 10₂ in the units column. Then 10₂−1₂=1₂.\nTwos column: after borrowing, 0−1 again requires borrowing from the fours column. This gives 10₂−1₂=1₂.\nFours column: the borrowed 1 leaves 0.\n\nTherefore 110₂−011₂=011₂.\n\nCheck: 6−3=3, and 3=011₂.','1000₂−0011₂=0101₂ because 8−3=5.'],
- misconceptions:['treating borrowed 1 as decimal ten','dropping leading place-value positions too early','subtracting the smaller digit from the larger regardless of order'],
- guidedPractice:['Subtract 101₂−011₂ and 1000₂−0110₂; check each by addition.'],
- independentPractice:['Ten subtraction problems with increasing borrowing complexity, plus three missing-number checks.'],
- mastery:{criterion:'At least 9 of 10 correct with borrowing shown and one independent verification method used.',status:'DEEP_WHEN_PASSED'},boardReady:true
+ teaching:[
+  'Binary subtraction uses 0−0=0,1−0=1 and1−1=0. When 0−1 occurs, borrow1 from the next binary place; the borrowed1 becomes10₂ in the current place.',
+  'Borrowing changes two places: the place borrowed from decreases by1, while the current place gains10₂. Record both changes.',
+  'If the next place is0, borrowing may need to pass across one or more zero places until a1 is found. This is the binary version of borrowing across zeros in decimal subtraction.',
+  'Keep minuend and subtrahend aligned by powers of2. Never subtract the larger visible digit from the smaller simply to avoid borrowing.',
+  'Verify by adding difference+subtrahend. The result must equal the original minuend.'
+ ],
+ workedExamples:[
+  'EXAMPLE 1 — NO BORROW. 111₂−010₂.\n\nUnits:1−0=1. Twos:1−1=0. Fours:1−0=1. Therefore111₂−010₂=101₂. Check:5+2=7.',
+  'EXAMPLE 2 — ONE BORROW. 110₂−001₂.\n\nUnits:0−1 requires borrowing from the twos place. Borrow1 two, which becomes10₂ in units. Then10₂−1₂=1₂. The twos digit becomes0. Fours:1−0=1. Therefore answer=101₂. Check:5+1=6.',
+  'EXAMPLE 3 — REPEATED BORROWING. 100₂−001₂.\n\nUnits0−1 needs a borrow, but the twos digit is0. Borrow from the fours place first: the fours1 becomes0 and the twos place receives10₂. From that twos amount, borrow1 into units. Units become10₂ and twos retain1. Now subtract:10₂−1₂=1₂, twos1−0=1, fours0−0=0. Therefore011₂. Check:3+1=4.',
+  'EXAMPLE 4 — 110₂−011₂.\n\nUnits: borrow to get10₂−1₂=1₂. Twos now0−1 requires borrowing from the fours place, giving10₂−1₂=1₂. Fours becomes0. Therefore011₂. Check:3+3=6.',
+  'EXAMPLE 5 — FOUR-DIGIT BORROW ACROSS ZEROS. 1000₂−0001₂. Borrow passes from the eights place across the zeros. The result is0111₂. Check:7+1=8.',
+  'EXAMPLE 6 — 1010₂−0011₂. Units0−1 requires borrowing:10₂−1₂=1₂. The twos column after borrowing must be tracked carefully, then the remaining columns subtract normally. Result0111₂. Check:7+3=10.',
+  'EXAMPLE 7 — MISSING SUBTRAHEND. If1101₂−x=1001₂, then x is the difference between1101₂ and1001₂:0100₂. Verify:1001₂+0100₂=1101₂.',
+  'EXAMPLE 8 — ERROR ANALYSIS. A learner writes1000₂−0001₂=0001₂ by subtracting1 from8 mentally and keeping only one bit. Correct binary place-value borrowing gives0111₂.'
+ ],
+ misconceptions:['treating borrowed1 as decimal ten','dropping leading place-value positions too early','subtracting the smaller digit from the larger regardless of order','forgetting changes caused by borrowing across zeros'],
+ guidedPractice:[
+  'Subtract101₂−011₂ and verify by addition.','Subtract111₂−010₂.','Subtract100₂−001₂ showing every borrow.','Subtract1000₂−0010₂.','Subtract1010₂−0101₂.','Subtract1111₂−0110₂.','Find x in1011₂−x=100₂.','Explain why1000₂−1₂=111₂.'
+ ],
+ independentPractice:[
+  '110₂−001₂','111₂−011₂','101₂−010₂','1000₂−0001₂','1000₂−0011₂','1010₂−0110₂','1101₂−0101₂','1110₂−0111₂',
+  'Find x if101₂−x=011₂.','Find x if1001₂−x=0101₂.','Verify1100₂−0101₂ using addition.','Correct the false result100₂−1₂=11₂ if necessary and justify.','Create one subtraction that requires borrowing across a zero.','Explain why a remainder-like negative digit should never appear in a final binary subtraction answer.','Solve one subtraction and verify it in base ten.'
+ ],
+ mastery:{criterion:'At least13 of15 independent items correct, including accurate borrowing across zeros and valid verification.',status:'DEEP_WHEN_PASSED'},boardReady:true
 },
 {
- topicId:'nerdc-jss3-math-basic-operations-basic-operations-3',classLevel:'JSS3',subject:'Mathematics',topic:'Multiplication of numbers in base 2 numerals',source:{authority:'NERDC',url:sourceUrl,page:30},
- objectives:['Multiply two 2-digit binary numbers accurately'],
+ topicId:'nerdc-jss3-math-basic-operations-basic-operations-3',classLevel:'JSS3',subject:'Mathematics',
+ topic:'Multiplication of numbers in base 2 numerals',source:{authority:'NERDC',url:sourceUrl,page:30},
+ objectives:['Multiply two 2-digit binary numbers accurately','Show shifted partial products','Verify products by conversion'],
  prerequisites:['binary place value','binary addition','ordinary long multiplication'],
- teaching:['Binary multiplication has only four digit facts: 0×0=0, 0×1=0, 1×0=0 and 1×1=1. The place-value shifts in long multiplication are the important part.','Multiply by each digit of the multiplier from right to left. A row produced by a 1 copies the multiplicand; a row produced by a 0 is zero. Shift each new row one binary place to the left.','Add the partial products using binary addition and check in base ten when learning the method.'],
- workedExamples:['BINARY MULTIPLICATION. Multiply 11₂×10₂.\n\nStep 1 — multiply 11₂ by the rightmost 0: the first partial product is 00₂.\nStep 2 — multiply 11₂ by the next digit 1, which is in the twos place. Write 11₂ shifted one place left: 110₂.\nStep 3 — add the partial products: 000₂+110₂=110₂.\n\nTherefore 11₂×10₂=110₂.\n\nCheck in base ten: 3×2=6 and 6=110₂.','11₂×11₂: partial products 11₂ and 110₂ sum to 1001₂, and 3×3=9.'],
- misconceptions:['forgetting the place-value shift','writing decimal multiplication facts into binary columns','using a digit 2 in a partial product'],
- guidedPractice:['Multiply 10₂×11₂ and 11₂×11₂, showing partial products.'],
- independentPractice:['Eight 2-digit-by-2-digit binary products and two contextual repeated-grouping problems.'],
- mastery:{criterion:'At least 8 of 10 correct with properly shifted partial products and valid binary addition.',status:'DEEP_WHEN_PASSED'},boardReady:true
+ teaching:[
+  'Binary multiplication uses0×0=0,0×1=0,1×0=0 and1×1=1. The main difficulty is place-value shifting, not the digit products.',
+  'Multiply by each multiplier bit from right to left. A1 copies the multiplicand; a0 gives a row of zeros.',
+  'Each move one place left in the multiplier means the partial product is shifted one binary place left, which multiplies its value by2.',
+  'After writing all partial products, add them using binary addition with correct carries.',
+  'Verify with base-ten values or by repeated addition where the multiplier is small.'
+ ],
+ workedExamples:[
+  'EXAMPLE1 — MULTIPLY BY1. 10₂×1₂=10₂ because multiplying by1 leaves the number unchanged. Check:2×1=2.',
+  'EXAMPLE2 — MULTIPLY BY10₂. 11₂×10₂. Rightmost multiplier bit0 gives000₂. Next bit1 gives11₂ shifted one place left=110₂. Sum=110₂. Check:3×2=6.',
+  'EXAMPLE3 — 11₂×11₂. First partial product=11₂. Second partial product=110₂. Add:011₂+110₂=1001₂. Check:3×3=9.',
+  'EXAMPLE4 — 10₂×11₂. Partial products:10₂ and100₂. Add010₂+100₂=110₂. Check:2×3=6.',
+  'EXAMPLE5 — 101₂×11₂. First row101₂. Second row1010₂. Add0101₂+1010₂=1111₂. Check:5×3=15.',
+  'EXAMPLE6 — MULTIPLIER WITHZERO BIT. 111₂×101₂. Partial products are111₂,0000₂ and11100₂. Add00111₂+00000₂+11100₂=100011₂. Check:7×5=35.',
+  'EXAMPLE7 — REPEATED-ADDITION CHECK. 100₂×11₂ should equal100₂+100₂+100₂=1100₂. Standard partial products also give1100₂. Check:4×3=12.',
+  'EXAMPLE8 — ERROR ANALYSIS. For11₂×10₂, writing11₂ as the second partial product without shifting gives11₂, which ignores that the1 is in the twos place. Correct shifted row is110₂.'
+ ],
+ misconceptions:['forgetting the place-value shift','writing decimal multiplication facts into binary columns','using a digit2 in a partial product','adding partial products incorrectly'],
+ guidedPractice:[
+  'Multiply10₂×11₂ with partial products.','Multiply11₂×11₂.','Multiply101₂×10₂.','Multiply101₂×11₂.','Multiply110₂×11₂.','Multiply111₂×101₂.','Check100₂×11₂ by repeated addition.','Explain why multiplying by10₂ shifts a binary numeral one place left.'
+ ],
+ independentPractice:[
+  '10₂×10₂','10₂×11₂','11₂×10₂','11₂×11₂','100₂×10₂','101₂×10₂','101₂×11₂','110₂×11₂','111₂×10₂','111₂×101₂',
+  'Verify101₂×11₂ in base ten.','Use repeated addition to check11₂×11₂.','Find x if10₂×x=110₂.','Explain the purpose of the left shift in the second partial product.','Create a binary multiplication with a zero middle multiplier bit and solve it.'
+ ],
+ mastery:{criterion:'At least13 of15 independent items correct with all partial-product shifts shown and checks correct.',status:'DEEP_WHEN_PASSED'},boardReady:true
 },
 {
- topicId:'nerdc-jss3-math-basic-operations-basic-operations-4',classLevel:'JSS3',subject:'Mathematics',topic:'Division of numbers in base 2 numerals',source:{authority:'NERDC',url:sourceUrl,page:30},
- objectives:['Divide two- to three-digit binary numbers by simple binary divisors'],
+ topicId:'nerdc-jss3-math-basic-operations-basic-operations-4',classLevel:'JSS3',subject:'Mathematics',
+ topic:'Division of numbers in base 2 numerals',source:{authority:'NERDC',url:sourceUrl,page:30},
+ objectives:['Divide two- to three-digit binary numbers by simple binary divisors','State quotient and remainder correctly','Verify using divisor×quotient+remainder'],
  prerequisites:['binary subtraction','binary multiplication','long division'],
- teaching:['Binary long division follows the same cycle as decimal long division: compare, place a quotient digit, multiply, subtract, and bring down. Quotient digits are only 0 or 1.','At each step ask whether the divisor fits into the current binary part. If yes, write 1; if no, write 0 and bring down the next digit.','A remainder must be smaller than the divisor. Verify by divisor×quotient+remainder=dividend.'],
- workedExamples:['BINARY DIVISION. Divide 110₂ by 10₂.\n\nThe divisor 10₂ equals 2 in base ten. We ask how many groups of 10₂ fit into 110₂.\n10₂ fits into the first two digits 11₂ once, so the first quotient digit is 1. Subtract 10₂ from 11₂ to leave 1₂, then bring down the final 0 to make 10₂.\n10₂ fits into 10₂ exactly once, so the next quotient digit is 1 and the remainder is 0.\n\nTherefore 110₂÷10₂=11₂.\n\nCheck: 11₂×10₂=110₂.','111₂÷11₂=10₂ remainder 1₂ because 7=3×2+1.'],
- misconceptions:['omitting a zero in the quotient when the divisor does not fit','using decimal division facts without binary place value','accepting a remainder equal to or larger than the divisor'],
- guidedPractice:['Divide 100₂ by 10₂ and 101₂ by 10₂; verify each.'],
- independentPractice:['Eight exact and remainder binary divisions; verify three using multiplication and addition.'],
- mastery:{criterion:'At least 8 of 10 division problems correct, including valid quotient-place zeros and remainder checks.',status:'DEEP_WHEN_PASSED'},boardReady:true
+ teaching:[
+  'Binary long division follows compare→write quotient bit→multiply→subtract→bring down. Quotient digits are only0 or1.',
+  'At each stage ask whether the divisor is less than or equal to the current partial dividend. If yes write1; if no write0.',
+  'A zero quotient bit may be essential to preserve place value. Do not skip it merely because nothing is subtracted in that step.',
+  'The final remainder must be smaller than the divisor.',
+  'Verify every non-trivial division with divisor×quotient+remainder=dividend.'
+ ],
+ workedExamples:[
+  'EXAMPLE1 — EXACT DIVISION. 100₂÷10₂. Since10₂ fits into100₂ exactly10₂ times, quotient=10₂. Check:10₂×10₂=100₂.',
+  'EXAMPLE2 — 110₂÷10₂. Compare10₂ with11₂: it fits once, subtract to leave1₂, bring down0 to make10₂, then it fits once again. Quotient=11₂, remainder0. Check:11₂×10₂=110₂.',
+  'EXAMPLE3 — REMAINDER. 101₂÷10₂. 10₂ fits into10₂ once; after subtraction bring down1, which is smaller than10₂, so final quotient=10₂ and remainder1₂. Check:10₂×10₂+1₂=101₂.',
+  'EXAMPLE4 — DIVIDE BY11₂. 111₂÷11₂. 11₂ fits into111₂ first as10₂ groups, leaving remainder1₂. Therefore quotient10₂ remainder1₂. Check:11₂×10₂+1₂=111₂.',
+  'EXAMPLE5 — 1000₂÷10₂. Dividing by10₂ shifts place value one position right for a whole-number result: quotient100₂. Check:100₂×10₂=1000₂.',
+  'EXAMPLE6 — QUOTIENT ZERO PLACE. 1010₂÷10₂. Quotient is101₂. The middle0 is necessary because10₂ does not create a1 in every quotient place. Check:101₂×10₂=1010₂.',
+  'EXAMPLE7 — FIND THE DIVIDEND. If divisor=11₂, quotient=10₂ and remainder=1₂, dividend=11₂×10₂+1₂=110₂+1₂=111₂.',
+  'EXAMPLE8 — ERROR ANALYSIS. If a learner gives remainder10₂ when dividing by10₂, the answer cannot be complete because a remainder must be smaller than the divisor. Continue the division or revise the quotient.'
+ ],
+ misconceptions:['omitting a zero in the quotient when the divisor does not fit','using decimal division facts without binary place value','accepting a remainder equal to or larger than the divisor','failing to verify quotient and remainder'],
+ guidedPractice:[
+  'Divide100₂ by10₂.','Divide101₂ by10₂ and state remainder.','Divide110₂ by10₂.','Divide111₂ by10₂.','Divide111₂ by11₂.','Divide1000₂ by10₂.','Use divisor×quotient+remainder to verify101₂÷10₂.','Explain why a remainder equal to the divisor is impossible.'
+ ],
+ independentPractice:[
+  '100₂÷10₂','101₂÷10₂','110₂÷10₂','111₂÷10₂','1000₂÷10₂','1001₂÷10₂','1010₂÷10₂','111₂÷11₂','1100₂÷11₂','1111₂÷11₂',
+  'Verify111₂÷10₂ using multiplication and addition.','Find the dividend when divisor10₂, quotient11₂, remainder1₂.','Find a missing quotient in110₂÷10₂=x.','Explain why quotient place zeros matter.','Create a binary division with a non-zero remainder and verify it.'
+ ],
+ mastery:{criterion:'At least13 of15 independent items correct, including quotient-place zeros and valid remainder checks.',status:'DEEP_WHEN_PASSED'},boardReady:true
 },
 {
  topicId:'nerdc-jss3-math-algebraic-processes-algebraic-operations-1',classLevel:'JSS3',subject:'Mathematics',topic:'Factorization',source:{authority:'NERDC',url:sourceUrl,page:31},
