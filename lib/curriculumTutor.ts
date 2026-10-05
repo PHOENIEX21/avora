@@ -95,15 +95,33 @@ function enrichJss3AuthoredPlan(plan:TutorPlan,subject:string,topic:string):Tuto
  return {
   ...plan,
   why:plan.why,
+  examFocus:Array.from(new Set([...(plan.examFocus||[]),
+   'JSS3 benchmark: move from foundation to multi-step application and exam-style transfer',
+   'Show complete working or textual evidence before the final answer',
+   'Use a second method, substitution, reasonableness check or evidence check where appropriate'
+  ])),
   outcomes:Array.from(new Set([...(plan.outcomes||[]),...deep.objectives])),
   units:plan.units.map((unit,index)=>{
    const practice=guided[index%Math.max(1,guided.length)]||unit.check;
    const extraTeaching=teaching[index%Math.max(1,teaching.length)]||'';
-   const modelStart=(index*2)%Math.max(1,examples.length);
+   // JSS3 is AVORA's exit/exam class. Give every section a wider worked-example
+   // progression than JSS1/JSS2: foundation, routine application, variation,
+   // reasoning/transfer and exam-style verification. Examples remain AVORA-authored
+   // but are benchmarked to the progression used by standard Nigerian JSS3 texts
+   // (New General Mathematics Book 3 / Essential & Effective Mathematics Book 3;
+   // New Oxford Secondary English Course 3 / New Concept English JSS 3).
+   const modelStart=(index*3)%Math.max(1,examples.length);
    const modelExamples=examples.length
-    ? [examples[modelStart],examples[(modelStart+1)%examples.length],examples[(modelStart+2)%examples.length]]
+    ? [0,1,2,3,4]
+       .map(offset=>examples[(modelStart+offset)%examples.length])
        .filter(Boolean)
-       .map((example,exampleIndex)=>deepenWorkedModel(subject,example,teaching[(modelStart+exampleIndex)%Math.max(1,teaching.length)]||extraTeaching,guided[(modelStart+exampleIndex)%Math.max(1,guided.length)]||practice,exampleIndex))
+       .map((example,exampleIndex)=>deepenWorkedModel(
+          subject,
+          example,
+          teaching[(modelStart+exampleIndex)%Math.max(1,teaching.length)]||extraTeaching,
+          guided[(modelStart+exampleIndex)%Math.max(1,guided.length)]||practice,
+          exampleIndex
+       ))
     : [];
    const existing=unit.example?deepenWorkedModel(subject,String(unit.example||''),extraTeaching,practice,index):'';
    return {
