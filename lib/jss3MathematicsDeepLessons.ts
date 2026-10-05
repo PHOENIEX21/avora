@@ -142,9 +142,9 @@ export const jss3MathematicsDeepLessons:DeepJss3MathLesson[]=[
   'PERMANENT CLASSIFICATION RULE. Before calling a number rational or irrational, ask: Can it be written exactly as p/q? Does a decimal terminate or recur? Can a square root simplify to an integer? Is the number exact or merely an approximation?'
  ],
  workedExamples:[
-  'INTEGER. Classify −7. Since −7=−7/1 and both −7 and 1 are integers with non-zero denominator, −7 is rational.',
+  'CLASSIFYING AN INTEGER. Is −7 rational or irrational?\n\nA rational number is any number that can be written as a/b where a and b are integers and b≠0.\nWrite −7 as a fraction: −7=−7/1.\nBoth −7 and 1 are integers and the denominator is not zero.\n\nTherefore −7 is rational.\n\nKey idea: every integer is rational because any integer n can be written as n/1.',
   'TERMINATING DECIMAL. Classify 0.125. 0.125=125/1000=1/8. Therefore it is rational.',
-  'RECURRING DECIMAL. Classify 0.333…. This equals 1/3, so it is rational.',
+  'RECURRING DECIMAL. Classify 0.333… .\n\nLet x=0.333… .\nMultiply by 10: 10x=3.333… .\nSubtract the original equation: 10x−x=3.333…−0.333… .\nSo 9x=3, hence x=3/9=1/3.\n\nBecause 0.333… can be written as the fraction 1/3, it is rational.\n\nThis demonstrates the general rule that recurring decimals are rational.',
   'RECURRING BLOCK. Let x=0.121212…. Then 100x=12.121212…. Subtract: 100x−x=12, so 99x=12 and x=12/99=4/33. Therefore the recurring decimal is rational.',
   'PERFECT-SQUARE ROOT. √81=9=9/1, so √81 is rational.',
   'NON-PERFECT ROOT. √20=√(4×5)=2√5. Since √5 is irrational, √20 is irrational.',
@@ -208,7 +208,7 @@ export const jss3MathematicsDeepLessons:DeepJss3MathLesson[]=[
  objectives:['Add two or three 3-digit binary numbers accurately'],
  prerequisites:['binary place value','base-ten addition and carrying'],
  teaching:['Binary addition follows place value exactly like ordinary addition, but regrouping occurs at 2 rather than 10. The basic facts are 0+0=0, 0+1=1, 1+1=10₂ and 1+1+1=11₂.','Work from right to left. When a column totals 2, write 0 and carry 1; when it totals 3, write 1 and carry 1. Align digits by place value before adding.','Check by converting the addends and answer to base ten. The base-ten sum should agree, but the working should still demonstrate binary addition.'],
- workedExamples:['101₂+011₂=1000₂ because 5+3=8.','111₂+101₂+010₂=1110₂ because 7+5+2=14.'],
+ workedExamples:['BINARY ADDITION. Add 101₂+011₂.\n\nWrite the numbers in place-value columns:\n  101₂\n+ 011₂\n------\n\nUnits: 1+1=10₂, so write 0 and carry 1.\nTwos column: 0+1+carried1=10₂, so write 0 and carry 1.\nFours column: 1+0+carried1=10₂, so write 0 and carry 1 into the eights column.\n\nTherefore 101₂+011₂=1000₂.\n\nCheck in base ten: 101₂=5 and 011₂=3; 5+3=8=1000₂.','111₂+101₂+010₂=1110₂ because 7+5+2=14.'],
  misconceptions:['using decimal carrying rules','writing 2 as a binary digit','misaligning place-value columns','forgetting a carried 1 when adding three numerals'],
  guidedPractice:['Add 101₂+110₂, then 011₂+101₂+111₂; verify both in base ten.'],
  independentPractice:['Ten binary additions, including two- and three-addend examples; convert three answers to base ten as checks.'],
@@ -219,7 +219,7 @@ export const jss3MathematicsDeepLessons:DeepJss3MathLesson[]=[
  objectives:['Subtract 3-digit binary numbers accurately'],
  prerequisites:['binary place value','binary addition','borrowing in base ten'],
  teaching:['Binary subtraction uses 0−0=0, 1−0=1 and 1−1=0. When 0−1 occurs, borrow 1 from the next binary place; that borrowed 1 is worth 10₂, so 10₂−1₂=1₂.','If the next place is also zero, borrowing may pass across several places. Record each regrouping so the place-value change is visible.','Check by converting both numerals to base ten or by adding the difference back to the subtrahend.'],
- workedExamples:['110₂−011₂=011₂ because 6−3=3.','1000₂−0011₂=0101₂ because 8−3=5.'],
+ workedExamples:['BINARY SUBTRACTION. Subtract 011₂ from 110₂.\n\nWrite the numbers in columns:\n  110₂\n− 011₂\n------\n\nUnits: 0−1 cannot be done directly, so borrow 1 from the twos column. In base two, the borrowed 1 becomes 10₂ in the units column. Then 10₂−1₂=1₂.\nTwos column: after borrowing, 0−1 again requires borrowing from the fours column. This gives 10₂−1₂=1₂.\nFours column: the borrowed 1 leaves 0.\n\nTherefore 110₂−011₂=011₂.\n\nCheck: 6−3=3, and 3=011₂.','1000₂−0011₂=0101₂ because 8−3=5.'],
  misconceptions:['treating borrowed 1 as decimal ten','dropping leading place-value positions too early','subtracting the smaller digit from the larger regardless of order'],
  guidedPractice:['Subtract 101₂−011₂ and 1000₂−0110₂; check each by addition.'],
  independentPractice:['Ten subtraction problems with increasing borrowing complexity, plus three missing-number checks.'],
@@ -230,7 +230,7 @@ export const jss3MathematicsDeepLessons:DeepJss3MathLesson[]=[
  objectives:['Multiply two 2-digit binary numbers accurately'],
  prerequisites:['binary place value','binary addition','ordinary long multiplication'],
  teaching:['Binary multiplication has only four digit facts: 0×0=0, 0×1=0, 1×0=0 and 1×1=1. The place-value shifts in long multiplication are the important part.','Multiply by each digit of the multiplier from right to left. A row produced by a 1 copies the multiplicand; a row produced by a 0 is zero. Shift each new row one binary place to the left.','Add the partial products using binary addition and check in base ten when learning the method.'],
- workedExamples:['11₂×10₂=110₂ because 3×2=6.','11₂×11₂: partial products 11₂ and 110₂ sum to 1001₂, and 3×3=9.'],
+ workedExamples:['BINARY MULTIPLICATION. Multiply 11₂×10₂.\n\nStep 1 — multiply 11₂ by the rightmost 0: the first partial product is 00₂.\nStep 2 — multiply 11₂ by the next digit 1, which is in the twos place. Write 11₂ shifted one place left: 110₂.\nStep 3 — add the partial products: 000₂+110₂=110₂.\n\nTherefore 11₂×10₂=110₂.\n\nCheck in base ten: 3×2=6 and 6=110₂.','11₂×11₂: partial products 11₂ and 110₂ sum to 1001₂, and 3×3=9.'],
  misconceptions:['forgetting the place-value shift','writing decimal multiplication facts into binary columns','using a digit 2 in a partial product'],
  guidedPractice:['Multiply 10₂×11₂ and 11₂×11₂, showing partial products.'],
  independentPractice:['Eight 2-digit-by-2-digit binary products and two contextual repeated-grouping problems.'],
@@ -241,7 +241,7 @@ export const jss3MathematicsDeepLessons:DeepJss3MathLesson[]=[
  objectives:['Divide two- to three-digit binary numbers by simple binary divisors'],
  prerequisites:['binary subtraction','binary multiplication','long division'],
  teaching:['Binary long division follows the same cycle as decimal long division: compare, place a quotient digit, multiply, subtract, and bring down. Quotient digits are only 0 or 1.','At each step ask whether the divisor fits into the current binary part. If yes, write 1; if no, write 0 and bring down the next digit.','A remainder must be smaller than the divisor. Verify by divisor×quotient+remainder=dividend.'],
- workedExamples:['110₂÷10₂=11₂ because 6÷2=3.','111₂÷11₂=10₂ remainder 1₂ because 7=3×2+1.'],
+ workedExamples:['BINARY DIVISION. Divide 110₂ by 10₂.\n\nThe divisor 10₂ equals 2 in base ten. We ask how many groups of 10₂ fit into 110₂.\n10₂ fits into the first two digits 11₂ once, so the first quotient digit is 1. Subtract 10₂ from 11₂ to leave 1₂, then bring down the final 0 to make 10₂.\n10₂ fits into 10₂ exactly once, so the next quotient digit is 1 and the remainder is 0.\n\nTherefore 110₂÷10₂=11₂.\n\nCheck: 11₂×10₂=110₂.','111₂÷11₂=10₂ remainder 1₂ because 7=3×2+1.'],
  misconceptions:['omitting a zero in the quotient when the divisor does not fit','using decimal division facts without binary place value','accepting a remainder equal to or larger than the divisor'],
  guidedPractice:['Divide 100₂ by 10₂ and 101₂ by 10₂; verify each.'],
  independentPractice:['Eight exact and remainder binary divisions; verify three using multiplication and addition.'],
@@ -269,12 +269,12 @@ export const jss3MathematicsDeepLessons:DeepJss3MathLesson[]=[
   'PERMANENT CHECK: multiply the factors back out. If the expansion does not reproduce the original expression exactly, the factorisation is wrong.'
  ],
  workedExamples:[
-  'COMMON FACTOR: 8x+12=4(2x+3). Check:4×2x+4×3=8x+12.',
+  'COMMON FACTOR. Factorise 8x+12.\n\nStep 1 — find the highest common factor of the coefficients 8 and 12. HCF=4.\nStep 2 — there is no common x in both terms because 12 has no x.\nStep 3 — divide each term by 4:\n8x÷4=2x and 12÷4=3.\n\nSo 8x+12=4(2x+3).\n\nCheck by expansion: 4×2x+4×3=8x+12, which returns the original expression.',
   'COMMON VARIABLE FACTOR: 12a²−18a=6a(2a−3).',
   'TWO VARIABLES: 15xy+20x²=5x(3y+4x).',
   'GROUPING: ax+ay+bx+by=a(x+y)+b(x+y)=(a+b)(x+y).',
   'GROUPING: 3m+3p+mq+pq=3(m+p)+q(m+p)=(m+p)(3+q).',
-  'DIFFERENCE OF SQUARES: x²−25=(x−5)(x+5).',
+  'DIFFERENCE OF TWO SQUARES. Factorise x²−25.\n\nStep 1 — recognise both terms as perfect squares: x²=(x)² and 25=5².\nStep 2 — use a²−b²=(a−b)(a+b).\nHere a=x and b=5.\n\nTherefore x²−25=(x−5)(x+5).\n\nCheck by expansion: (x−5)(x+5)=x²+5x−5x−25=x²−25. The middle terms cancel.',
   'DIFFERENCE OF SQUARES: 9a²−16b²=(3a−4b)(3a+4b).',
   'PERFECT SQUARE: x²+6x+9=(x+3)² because2×x×3=6x.',
   'PERFECT SQUARE: 4y²−12y+9=(2y−3)².',
@@ -361,10 +361,10 @@ export const jss3MathematicsDeepLessons:DeepJss3MathLesson[]=[
   'PERMANENT METHOD: identify denominators→LCM→multiply every term→simplify→solve→substitute back.'
  ],
  workedExamples:[
-  'x/4=7→multiply by4→x=28.',
+  'FRACTION EQUATION. Solve x/4=7.\n\nThe fraction x/4 means x is divided by 4. To undo division by 4, multiply both sides by 4:\n4×(x/4)=4×7.\nThe 4s cancel on the left, leaving x=28.\n\nCheck: substitute x=28 into the original equation: 28/4=7. The equation is true.',
   'x/3+2=7→multiply by3: x+6=21→x=15.',
   'x/5−3=9→x−15=45→x=60.',
-  'x/4+x/6=5→LCM12:3x+2x=60→5x=60→x=12.',
+  'FRACTION EQUATION WITH TWO DENOMINATORS. Solve x/4+x/6=5.\n\nStep 1 — find LCM(4,6)=12.\nStep 2 — multiply every term by 12 so the denominators disappear:\n12(x/4)+12(x/6)=12×5.\nThis gives 3x+2x=60.\nStep 3 — collect like terms: 5x=60.\nStep 4 — divide both sides by 5: x=12.\n\nCheck: 12/4+12/6=3+2=5, so the solution is correct.',
   'x/2−x/5=9→LCM10:5x−2x=90→3x=90→x=30.',
   'x/3+2=x/6+7→LCM6:2x+12=x+42→x=30.',
   '(x+3)/5=4→x+3=20→x=17.',
@@ -453,11 +453,11 @@ export const jss3MathematicsDeepLessons:DeepJss3MathLesson[]=[
   'PERMANENT METHOD: define equations→choose method→solve carefully→recover second variable→check both equations→interpret context.'
  ],
  workedExamples:[
-  'ELIMINATION EASY: x+y=7, x−y=1. Add→2x=8→x=4; then y=3.',
+  'SIMULTANEOUS EQUATIONS — ELIMINATION. Solve x+y=7 and x−y=1.\n\nStep 1 — write the equations one above the other. The y-coefficients are +1 and −1, so adding the equations eliminates y.\n(x+y)+(x−y)=7+1\n2x=8\nx=4.\nStep 2 — substitute x=4 into x+y=7:\n4+y=7\ny=3.\n\nTherefore x=4, y=3.\n\nCheck in both equations: 4+3=7 and 4−3=1.',
   'ELIMINATION SUBTRACT:2x+y=11,2x−y=5. Subtract second from first→2y=6→y=3; x=4.',
   'ELIMINATION SCALE ONE:2x+3y=12, x+y=5. Multiply second by2:2x+2y=10. Subtract→y=2, then x=3.',
   'ELIMINATION SCALE BOTH:2x+3y=13,3x−2y=4. Multiply first by2→4x+6y=26; second by3→9x−6y=12; add→13x=38→x=38/13; then substitute.',
-  'SUBSTITUTION: y=x+2 and2x+y=11→2x+x+2=11→x=3,y=5.',
+  'SIMULTANEOUS EQUATIONS — SUBSTITUTION. Solve y=x+2 and 2x+y=11.\n\nStep 1 — the first equation already gives y in terms of x. Substitute y=x+2 into the second equation:\n2x+(x+2)=11.\nStep 2 — simplify: 3x+2=11.\nSubtract 2 from both sides: 3x=9.\nDivide by 3: x=3.\nStep 3 — find y using y=x+2:\ny=3+2=5.\n\nTherefore x=3, y=5.\n\nCheck: 2(3)+5=11.',
   'SUBSTITUTION: x=2y−1 and x+y=8→2y−1+y=8→3y=9→y=3,x=5.',
   'SUBSTITUTION REARRANGE: x+y=10 and3x−y=6. y=10−x; substitute3x−(10−x)=6→4x=16→x=4,y=6.',
   'GRAPH TABLE: y=x+1 for x=0,1,2 gives1,2,3. y=−x+5 gives5,4,3. Intersection at(2,3).',
@@ -545,10 +545,10 @@ export const jss3MathematicsDeepLessons:DeepJss3MathLesson[]=[
   'PERMANENT CHECK: label correspondence, write ratio direction, then use k/k²/k³ according to dimension.'
  ],
  workedExamples:[
-  'Triangles sides3,4,5 and6,8,10 have scale factor2 and are similar.',
+  'SIMILAR TRIANGLES. Compare triangles with sides 3,4,5 and 6,8,10.\n\nStep 1 — match corresponding sides from smallest to smallest, middle to middle, largest to largest.\nStep 2 — calculate the ratios:\n6/3=2, 8/4=2, 10/5=2.\nAll corresponding sides have the same scale factor, 2.\n\nTherefore the triangles are similar.\n\nCheck: if even one corresponding-side ratio were different, similarity by side proportion would fail.',
   'Triangles sides4,6,8 and6,9,12 have common ratio1.5 and are similar.',
   'Rectangles2×5 and4×10 are similar because side ratios both double.',
-  'Rectangles3×5 and6×8 are not similar because ratios do not match.',
+  'NON-SIMILAR RECTANGLES. Compare rectangles 3×5 and 6×8.\n\nIf they were similar, the same scale factor would connect corresponding lengths and widths.\nLength scale factor: 6/3=2.\nWidth scale factor: 8/5=1.6.\nBecause 2≠1.6, there is no single scale factor.\n\nTherefore the rectangles are not similar.\n\nEquivalent check: 3/5=0.6 but 6/8=0.75, so their side ratios differ.',
   'Small side7cm corresponds to large side21cm→k=3.',
   'If k=2.5 and original side8cm, image side20cm.',
   'Reduction k=0.4 of15cm gives6cm.',
@@ -643,7 +643,7 @@ export const jss3MathematicsDeepLessons:DeepJss3MathLesson[]=[
   'If O=6,H=10, sinθ=6/10=0.6.',
   'If A=8,H=10, cosθ=0.8.',
   'If O=9,A=12, tanθ=9/12=0.75.',
-  'Find O when H=12,θ=30°: O=12sin30°=6.',
+  'TRIGONOMETRY — FINDING OPPOSITE. Given θ=30° and hypotenuse H=12 cm, find opposite side O.\n\nStep 1 — identify the side pair: opposite and hypotenuse. This points to sine.\nStep 2 — write the ratio before substituting: sinθ=O/H.\nStep 3 — substitute: sin30°=O/12.\nStep 4 — multiply both sides by 12: O=12sin30°.\nSince sin30°=0.5, O=12×0.5=6 cm.\n\nCheck: 30° is less than 45°, so the opposite side should be shorter than the adjacent side/hypotenuse; 6<12 is sensible.',
   'Find A when H=15,θ=40°: A=15cos40°≈11.49.',
   'Find O when A=20,θ=35°: O=20tan35°≈14.00.',
   'Find H when O=8,θ=25°: sin25°=8/H→H=8/sin25°≈18.93.',
@@ -732,11 +732,11 @@ export const jss3MathematicsDeepLessons:DeepJss3MathLesson[]=[
   'PERMANENT METHOD: identify shape→mark dimensions→choose formula→substitute with units→calculate→square units→reasonableness check.'
  ],
  workedExamples:[
-  'TRIANGLE: b=12cm,h=7cm. A=1/2×12×7=42cm².',
+  'AREA OF A TRIANGLE. Base b=12 cm and perpendicular height h=7 cm.\n\nUse A=1/2bh because a triangle with the same base and height occupies half the area of the corresponding parallelogram.\nSubstitute: A=1/2×12×7.\nHalf of 12 is 6, so A=6×7=42 cm².\n\nTherefore the area is 42 cm².\n\nCheck the unit: area must be in square centimetres, not centimetres.',
   'TRIANGLE UNKNOWN HEIGHT: A=54cm²,b=12cm. 54=1/2×12×h=6h→h=9cm.',
   'PARALLELOGRAM: b=15cm,h=8cm. A=15×8=120cm².',
   'PARALLELOGRAM UNKNOWN BASE: A=96cm²,h=8cm→b=12cm.',
-  'TRAPEZIUM: a=8cm,b=14cm,h=5cm. A=1/2(22)(5)=55cm².',
+  'AREA OF A TRAPEZIUM. Parallel sides are 8 cm and 14 cm; perpendicular height is 5 cm.\n\nUse A=1/2(a+b)h.\nStep 1 — add the parallel sides: 8+14=22.\nStep 2 — multiply by the height: 22×5=110.\nStep 3 — take half: 110/2=55.\n\nTherefore A=55 cm².\n\nWhy: the formula uses the average of the two parallel sides multiplied by the perpendicular height.',
   'TRAPEZIUM REVERSE: A=84cm², parallel sides10cm and18cm. 84=1/2(28)h=14h→h=6cm.',
   'CIRCLE r=7cm: A=π×49=49π≈154cm² using22/7.',
   'CIRCLE diameter14cm: r=7cm, so area154cm², notπ×14².',
@@ -818,7 +818,7 @@ export const jss3MathematicsDeepLessons:DeepJss3MathLesson[]=[
   'PERMANENT METHOD: plan dependencies→construct base→construct exact angles/lengths→keep arcs→join→label→verify.'
  ],
  workedExamples:[
-  '45°: construct90° at A on line AB, then bisect the right angle to obtain45°.',
+  'CONSTRUCTING 45°. Start with line AB and point A.\n\nStep 1 — construct a perpendicular to AB at A using equal compass arcs; this creates a 90° angle.\nStep 2 — with A as centre, draw an arc cutting both arms of the 90° angle.\nStep 3 — from those two cut points, draw equal-radius arcs that intersect inside the angle.\nStep 4 — join A to the intersection of the arcs. This bisects the 90° angle into two equal angles.\n\nTherefore each angle is 90°/2=45°. Keep the construction arcs visible as evidence of the method.',
   '30°: construct60° using equilateral triangle, then bisect.',
   'COPY 73°: arc from original vertex cuts arms at P,Q; same radius arc at new vertex; compass chord PQ transferred; join new vertex to transferred point.',
   'COPY 110° using same arc-and-chord procedure; no protractor needed during construction.',
@@ -899,7 +899,7 @@ export const jss3MathematicsDeepLessons:DeepJss3MathLesson[]=[
   'PERMANENT CHECK: ordered data for median, correct count for mean, frequency total check, and interpretation beyond calculation.'
  ],
  workedExamples:[
-  '2,4,4,5,10: mean=25/5=5, median4, mode4, range8.',
+  'CENTRAL TENDENCY FROM ONE DATA SET. For 2,4,4,5,10:\n\nMean: add all values, 2+4+4+5+10=25; divide by n=5, so mean=5.\nMedian: the data are already ordered; the middle (3rd) value is 4.\nMode: 4 occurs more often than any other value, so mode=4.\nRange: maximum−minimum=10−2=8.\n\nTherefore mean=5, median=4, mode=4 and range=8. Each measure answers a different question about the data.',
   '3,5,7,9: median=(5+7)/2=6.',
   '1,2,2,3,3 has two modes2 and3.',
   '2,4,6,8 has no mode because all occur once.',
@@ -991,11 +991,11 @@ export const jss3MathematicsDeepLessons:DeepJss3MathLesson[]=[
   'PERMANENT METHOD: verify total→convert carefully→construct from centre→label→check360°→interpret only supported evidence.'
  ],
  workedExamples:[
-  '12 of40 choose football: angle=12/40×360=108°.',
+  'PIE-CHART SECTOR FROM FREQUENCY. 12 out of 40 learners choose football. Find the sector angle.\n\nStep 1 — write the fraction of the whole: 12/40=3/10.\nStep 2 — a full circle is 360°, so sector angle=(12/40)×360°.\nStep 3 — simplify before multiplying: 360÷40=9, then 12×9=108°.\n\nTherefore the football sector is 108°.\n\nCheck: 12/40=30%, and 30% of 360° is also 108°.',
   '8 of40 choose basketball: angle72°.',
   '25% sector→90°.',
   '35% sector→126°.',
-  '72° sector=72/360×100=20%.',
+  'PIE-CHART SECTOR TO PERCENTAGE. A sector measures 72°. What percentage of the whole does it represent?\n\nStep 1 — compare the sector with the full circle: fraction=72/360=1/5.\nStep 2 — convert the fraction to a percentage: 1/5×100%=20%.\n\nTherefore 72° represents 20% of the whole.\n\nCheck: five sectors of 72° would fill 360°, so each must be one fifth, or 20%.',
   '144° sector=40%.',
   '72° sector in total250→50 people.',
   '126° sector in total200→70 people.',
