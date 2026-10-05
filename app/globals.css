@@ -1128,3 +1128,6 @@ main,section,article,aside,header,footer,nav,form,div{min-width:0}
 
 /* Visual worked examples for statistics and pie charts */
 .geo-sector{fill:rgba(188,146,55,.22);stroke:currentColor;stroke-width:3;vector-effect:non-scaling-stroke}.geo-bar{fill:rgba(11,31,58,.12);stroke:currentColor;stroke-width:2;vector-effect:non-scaling-stroke}.authored-worked-example .authored-geometry-figure{margin:16px 0 18px;background:#fffdf7}
+
+/* Additional academic diagrams */
+.geo-cell{fill:#fff;stroke:currentColor;stroke-width:2;rx:10}.geo-bit{font-size:24px;font-weight:900;fill:currentColor}
