@@ -171,8 +171,8 @@ export const jss1EnglishDeepLessons:DeepJss1EnglishLesson[]=[
       "Use the answer–evidence check: every non-personal claim should be traceable to the passage or to a clear inference from it."
     ],
     "workedExamples": [
-      "Question: “Why did Ada return home?” Passage states she saw dark clouds and heard thunder. Answer: she expected a storm, supported by the weather clues.",
-      "Question: “What might happen if the gate remains unlocked?” A valid prediction names a likely risk and cites the passage’s earlier concern about security."
+      "INFERENTIAL QUESTION. Question: “Why did Ada return home?” The passage does not directly say “Ada expected a storm,” but it says she saw dark clouds and heard thunder.\n\nStep 1 — identify the clues: dark clouds + thunder.\nStep 2 — connect the clues logically: these are common signs that a storm may be approaching.\nStep 3 — answer in a complete sentence: “Ada returned home because she expected a storm.”\n\nEvidence check: the answer is not a guess because the passage gives weather clues that support it.",
+      "PREDICTIVE QUESTION. Question: “What might happen if the gate remains unlocked?”\n\nStep 1 — identify what the passage already establishes about the gate and security.\nStep 2 — predict only an outcome that follows from those details.\nStep 3 — support the prediction with passage evidence.\n\nModel answer: “An unauthorised person might enter the compound because the passage shows that the unlocked gate creates a security risk.”\n\nA prediction must grow from the text; it should not introduce an unrelated event."
     ],
     "misconceptions": [
       "copying large sections without answering the question",
@@ -221,8 +221,8 @@ export const jss1EnglishDeepLessons:DeepJss1EnglishLesson[]=[
       "AVORA uses label → evidence → explanation: name the mood, quote or paraphrase a short clue, then explain how the clue creates that impression."
     ],
     "workedExamples": [
-      "“At last! The long-awaited bus rolled into view, and everyone cheered.” Mood: relief/excitement; “at last” and “cheered” provide evidence.",
-      "“He claimed the money vanished by itself. Convenient, isn’t it?” The wording signals suspicion/irony rather than neutral reporting."
+      "AUTHOR’S MOOD / ATTITUDE. Extract: “At last! The long-awaited bus rolled into view, and everyone cheered.”\n\nStep 1 — notice “At last!”, which suggests a difficult wait has ended.\nStep 2 — notice “long-awaited”, which shows expectation.\nStep 3 — notice “everyone cheered”, which signals a positive emotional response.\n\nThe mood is relief mixed with excitement.\n\nStrong answer format: mood → evidence → explanation. Do not write only “happy” without showing which words create that impression.",
+      "READING BETWEEN THE LINES. Extract: “He claimed the money vanished by itself. Convenient, isn’t it?”\n\nStep 1 — the verb claimed can suggest that the writer is not fully accepting the explanation.\nStep 2 — “Convenient, isn’t it?” is not a neutral request for information; it sounds doubtful and sarcastic.\n\nTherefore the writer’s attitude is suspicious and ironic.\n\nThe writer never says “I do not believe him,” but the wording allows the reader to infer that hidden attitude."
     ],
     "misconceptions": [
       "calling every sad event a sad authorial mood",
@@ -272,7 +272,7 @@ export const jss1EnglishDeepLessons:DeepJss1EnglishLesson[]=[
     ],
     "workedExamples": [
       "A school sketch places the library east of the hall and the clinic north of the library. Therefore the clinic is north-east of the hall, assuming the map’s orientation is standard.",
-      "A water-cycle diagram uses arrows from sea to cloud to land. The arrows clarify sequence and direction while the paragraph explains the process names."
+      "DIAGRAM INTERPRETATION. A water-cycle diagram shows arrows from the sea to clouds and from clouds to land.\n\nStep 1 — read the title so you know the process being represented.\nStep 2 — follow the arrows in order; arrows show movement or sequence, not decoration.\nStep 3 — match each stage to the accompanying labels or paragraph.\n\nThe visual helps the learner see direction and order quickly, while the prose explains the names and meaning of the stages.\n\nGood interpretation combines both sources instead of describing only the picture."
     ],
     "misconceptions": [
       "ignoring the map key or orientation",
@@ -321,8 +321,8 @@ export const jss1EnglishDeepLessons:DeepJss1EnglishLesson[]=[
       "Good directions are testable. After following them, another learner should arrive at the same destination without needing extra hidden information."
     ],
     "workedExamples": [
-      "“From the gate, walk past the office, turn right at the library and stop opposite the laboratory.” The learner identifies start, landmark order, turn and endpoint.",
-      "A DIY instruction says “before tightening the screw, align the two holes.” Reversing the sequence can make the task fail."
+      "FOLLOWING WRITTEN DIRECTIONS. Instruction: “From the gate, walk past the office, turn right at the library and stop opposite the laboratory.”\n\nStep 1 — starting point: the gate.\nStep 2 — first landmark passed: the office.\nStep 3 — turning point: the library.\nStep 4 — action at that point: turn right.\nStep 5 — endpoint: a position opposite the laboratory.\n\nIf one landmark or turn is skipped, the route changes. Good direction-reading therefore depends on both sequence words and spatial words.",
+      "SEQUENCE IN INSTRUCTIONS. Direction: “Before tightening the screw, align the two holes.”\n\nThe word before controls the order. First align the holes; only then tighten the screw.\n\nIf the learner tightens first, the pieces may become fixed in the wrong position and the holes may no longer line up.\n\nThis shows why sequence words such as before, after, first, next and finally carry essential meaning in instructional texts."
     ],
     "misconceptions": [
       "starting from the wrong reference point",
@@ -371,7 +371,7 @@ export const jss1EnglishDeepLessons:DeepJss1EnglishLesson[]=[
       "After drafting, compare each paragraph with the outline. Remove details that do not support the main idea and improve transitions between ideas."
     ],
     "workedExamples": [
-      "Topic “Why school gardens matter”: main points could be food education, responsibility and environment; each receives examples/support before drafting.",
+      "PLANNING MAIN AND SUPPORTING IDEAS. Topic: “Why school gardens matter.”\n\nStep 1 — identify possible main ideas: food education, responsibility and care for the environment.\nStep 2 — add support under each main idea. For food education, learners can see how crops grow and where food comes from. For responsibility, pupils can water, weed and care for shared plants. For environment, gardens can improve school surroundings and encourage care for green spaces.\nStep 3 — arrange the points in a logical order before drafting.\n\nThe main idea becomes the paragraph focus; the supporting ideas explain, prove or illustrate it.",
       "A disorganised outline [benefit, definition, unrelated joke, second benefit] becomes [introduction/definition, benefit 1 + evidence, benefit 2 + evidence, conclusion]."
     ],
     "misconceptions": [
@@ -421,7 +421,7 @@ export const jss1EnglishDeepLessons:DeepJss1EnglishLesson[]=[
       "Revise for relevance, chronology/position, sentence variety, punctuation and unnecessary repetition. Strong writing shows rather than merely labels when detail is useful."
     ],
     "workedExamples": [
-      "Narrative opening: establish when/where and the normal situation before the event changes. A sequence such as “first…later…suddenly…afterwards” must reflect real chronology.",
+      "NARRATIVE MODEL. Prompt: “The day everything changed.”\n\nOpening: “On a quiet Monday morning, I arrived at school earlier than usual and found the compound almost empty.” This establishes time, place and normal situation.\n\nDevelopment: first something unusual is noticed; later the tension grows; suddenly a turning event occurs; afterwards the consequences unfold.\n\nThe sequence words must match the real order of events. A narrative is not simply a list of actions; each event should lead naturally to the next and build toward a climax or important change.",
       "Instead of “The junction was very bad,” a description can specify buses edging forward, horns sounding and pedestrians waiting behind the barrier; concrete detail creates the scene."
     ],
     "misconceptions": [
@@ -472,7 +472,7 @@ export const jss1EnglishDeepLessons:DeepJss1EnglishLesson[]=[
     ],
     "workedExamples": [
       "Prompt: write to a friend about a school event → informal tone and personal detail. Prompt: write to the principal requesting permission → formal structure and respectful, precise request.",
-      "Weak formal sentence: “I wanna tell you guys our taps are bad.” Improved: “I am writing to report that the taps in our classroom block have been faulty for three days.”"
+      "FORMAL LETTER REGISTER. Weak sentence: “I wanna tell you guys our taps are bad.”\n\nProblems: “wanna” is informal, “you guys” is unsuitable for an official recipient, and “bad” is vague.\n\nImproved version: “I am writing to report that the taps in our classroom block have been faulty for three days.”\n\nWhy it is better: it is respectful, specific and direct. A formal letter should identify the problem clearly enough for the recipient to understand and act on it."
     ],
     "misconceptions": [
       "choosing letter type from topic rather than recipient",
@@ -676,8 +676,8 @@ export const jss1EnglishDeepLessons:DeepJss1EnglishLesson[]=[
       "AVORA teaches identify → function → manipulate: locate the word, name its grammatical job, then replace or transform it to prove understanding."
     ],
     "workedExamples": [
-      "“The careful driver stopped suddenly.” driver=noun subject; careful=adjective modifying driver; stopped=verb.",
-      "“They light the lamp” uses light as a verb; “the bright light” uses light as a noun."
+      "PARTS OF SPEECH IN CONTEXT. Sentence: “The careful driver stopped suddenly.”\n\nStep 1 — driver names the person performing the action, so it is a noun and the subject.\nStep 2 — careful describes the noun driver, so it is an adjective.\nStep 3 — stopped expresses the action, so it is a verb.\nStep 4 — suddenly tells how the stopping happened, so it is an adverb.\n\nThe same sentence can contain several parts of speech; classify each word by the job it performs in that sentence.",
+      "ONE WORD, DIFFERENT FUNCTIONS. Compare: “They light the lamp” and “The bright light filled the room.”\n\nIn “They light the lamp,” light expresses an action, so it functions as a verb.\nIn “The bright light filled the room,” light names a thing or phenomenon and is modified by bright, so it functions as a noun.\n\nLesson: do not classify a word only from memory. Its part of speech depends on how it functions in the sentence."
     ],
     "misconceptions": [
       "calling every -ing word a verb",
@@ -725,7 +725,7 @@ export const jss1EnglishDeepLessons:DeepJss1EnglishLesson[]=[
       "Use these categories to improve meaning: adverbs sharpen circumstances, conjunctions make logical links explicit and prepositions locate relationships."
     ],
     "workedExamples": [
-      "“She arrived early because the road was clear.” early=adverb of time; because=conjunction linking reason.",
+      "ADVERB + CONJUNCTION. Sentence: “She arrived early because the road was clear.”\n\nEarly modifies arrived by telling when she arrived, so it functions as an adverb of time.\nBecause joins the main clause to the reason clause “the road was clear,” so it functions as a conjunction.\n\nThe sentence therefore contains both an adverb and a conjunction, but they do different jobs: one modifies the verb; the other links ideas.",
       "“The bag is under the table.” under introduces the prepositional phrase “under the table” showing location."
     ],
     "misconceptions": [
@@ -775,7 +775,7 @@ export const jss1EnglishDeepLessons:DeepJss1EnglishLesson[]=[
       "AVORA uses timelines: place events on a line first, choose the tense, then add adverbials that make when/where/how explicit."
     ],
     "workedExamples": [
-      "“Every morning, Tola walks quickly to school.” Every morning=time adverbial; quickly=manner adverbial; walks=simple present for routine.",
+      "ADVERBIALS + TENSE. Sentence: “Every morning, Tola walks quickly to school.”\n\nEvery morning tells when/how often the action occurs, so it is a time/frequency adverbial. Quickly tells how Tola walks, so it is a manner adverbial. Walks is simple present because the sentence describes a regular routine.\n\nCompare: “Tola is walking quickly to school now.” The adverbial now changes the time meaning to an action in progress, so present progressive becomes more suitable.",
       "“We had finished before the rain started” distinguishes an earlier completed event from a later past event; the time relationship controls form."
     ],
     "misconceptions": [
@@ -825,7 +825,7 @@ export const jss1EnglishDeepLessons:DeepJss1EnglishLesson[]=[
       "Choose voice for purpose: active often makes agency clear; passive can focus on result, process or unknown/unimportant agent."
     ],
     "workedExamples": [
-      "Active: “The prefect locked the gate.” Passive: “The gate was locked by the prefect.” Past tense is preserved.",
+      "ACTIVE TO PASSIVE. Active: “The prefect locked the gate.”\n\nStep 1 — identify the object in the active sentence: the gate.\nStep 2 — move it to subject position: “The gate …”\nStep 3 — preserve the past tense using was + past participle: “was locked”.\nStep 4 — add the original doer if needed: “by the prefect”.\n\nPassive: “The gate was locked by the prefect.”\n\nThe tense and event remain the same; the grammatical focus changes from the doer to the receiver of the action.",
       "Active: “People speak English in many countries.” Passive: “English is spoken in many countries.” Agent can be omitted because it is general."
     ],
     "misconceptions": [
@@ -925,7 +925,7 @@ export const jss1EnglishDeepLessons:DeepJss1EnglishLesson[]=[
       "Narration is performance: clear voice, pacing, dialogue, repetition and audience awareness can make an oral retelling effective without changing the essential story."
     ],
     "workedExamples": [
-      "If a trickster repeatedly lies and finally loses everyone’s trust, possible theme is dishonesty and consequence; a moral might be “deceit destroys trust.”",
+      "FOLKTALE — THEME AND MORAL. Suppose a trickster repeatedly lies to neighbours and finally loses everyone’s trust.\n\nPlot event: the trickster lies and suffers a consequence.\nTheme: dishonesty and its consequences.\nPossible moral: deceit destroys trust.\n\nWhy: the lesson is supported by repeated actions and the final outcome. “The trickster is funny” may describe a character effect, but it is not the central theme unless the story develops that idea.",
       "A learner retells a tale in five stages: setting → problem → attempts → turning point → outcome, then explains the lesson with one event as evidence."
     ],
     "misconceptions": [
@@ -976,7 +976,7 @@ export const jss1EnglishDeepLessons:DeepJss1EnglishLesson[]=[
       "Compare myth, legend and folktale by purpose, relation to belief/history, characters and transmission rather than treating the labels as interchangeable."
     ],
     "workedExamples": [
-      "A story explaining how a natural feature came to exist may function as myth; a story centred on a remembered heroic founder may function as legend.",
+      "MYTH OR LEGEND? Story A explains how a river or mountain came into existence through supernatural events. Its main cultural function is to explain an origin, so it may function as a myth.\n\nStory B centres on a remembered founder connected with a real community, but later retellings add extraordinary deeds. Because it is tied to a remembered person/place and mixes history with tradition, it may function as a legend.\n\nClassification depends on function and relationship to belief/history, not merely on whether magic appears.",
       "Two narratives both contain supernatural events, but one explains cosmic origins while the other magnifies a historical hero; their functions differ."
     ],
     "misconceptions": [
@@ -1026,7 +1026,7 @@ export const jss1EnglishDeepLessons:DeepJss1EnglishLesson[]=[
       "Writing short prose applies the same principles: choose purpose, viewpoint, setting and details, then revise for unity and effect."
     ],
     "workedExamples": [
-      "In a story where a student chooses whether to return lost money, plot follows the decision, characterisation emerges through actions and theme may concern honesty.",
+      "PROSE FEATURES WORKING TOGETHER. Suppose a student finds lost money and must decide whether to return it.\n\nPlot: events develop from finding the money to the decision and its consequences.\nCharacterisation: the student’s actions, hesitation and final choice reveal personal qualities.\nConflict: the learner may face an internal struggle between need and honesty.\nTheme: the story may explore integrity, temptation or responsibility.\n\nA strong prose analysis does not merely list these features; it explains how one feature helps develop another.",
       "A paragraph lingering on heat, dust, traffic noise and crowded stalls is mainly descriptive even if one small action occurs."
     ],
     "misconceptions": [
