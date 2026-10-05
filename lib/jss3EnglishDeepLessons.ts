@@ -32,9 +32,9 @@ export const jss3EnglishDeepLessons:DeepJss3EnglishLesson[]=[
     "PERMANENT RULE: disagreement is not evaluation. Every judgement must point to something in the text."
   ],
   "workedExamples":[
-    "Claim: “All teenagers waste money.” Evidence: one teenager interviewed at a shopping mall. Evaluation: evidence is too narrow and cannot support “all”.",
+    "CRITICAL EVALUATION — SAMPLE SIZE. Claim: “All teenagers waste money.” Evidence: one teenager interviewed at a shopping mall.\n\nStep 1 — identify the strength of the claim: “all teenagers” is universal.\nStep 2 — identify the evidence: one teenager in one location.\nStep 3 — compare claim and evidence. One person cannot represent every teenager.\n\nJudgement: the evidence is too narrow to support the claim. A stronger argument would require a much larger and more representative sample.",
     "Claim: “School gardens improve nutrition.” Evidence: a report compares participating and non-participating schools and describes method. This is stronger than one anecdote, though methodology still matters.",
-    "A writer says “Everyone knows private schools are better.” “Everyone knows” is not evidence; it pressures agreement without proof.",
+    "CRITICAL EVALUATION — UNSUPPORTED ASSERTION. Statement: “Everyone knows private schools are better.”\n\nStep 1 — locate the phrase “everyone knows”.\nStep 2 — ask whether any measurable criterion or evidence is supplied. None is given.\nStep 3 — note that “better” is also undefined: better in results, facilities, safety, discipline or something else?\n\nJudgement: the sentence pressures agreement but does not prove the claim. A critical reader asks for criteria and evidence.",
     "A passage cites a national survey but gives no date or source. The statistic may be relevant, but source quality cannot yet be checked.",
     "A true fact about football attendance is irrelevant evidence in an argument about whether school libraries improve reading.",
     "A newspaper article uses “reckless, selfish drivers” repeatedly. These loaded words reveal a strongly critical tone.",
@@ -106,10 +106,10 @@ export const jss3EnglishDeepLessons:DeepJss3EnglishLesson[]=[
     "PERMANENT METHOD: define purpose→choose technique→read→answer→check comprehension→adjust speed."
   ],
   "workedExamples":[
-    "A timetable question asking departure time requires scanning, not paragraph-by-paragraph reading.",
+    "READING FOR SPEED — SCANNING. Question: “What time does the 8:00 a.m. Lagos bus arrive in Ibadan?”\n\nStep 1 — identify the exact information needed: one route and one arrival time.\nStep 2 — scan the timetable for the Lagos route and 8:00 a.m. departure.\nStep 3 — move directly across the same row to the Ibadan arrival column.\n\nDo not read every row or every heading in detail. Scanning is fast because the target information is already known.",
     "To identify an article’s overall argument, skim heading, introduction, topic sentences and conclusion first.",
     "A question asking why a writer is sarcastic needs intensive rereading of the relevant paragraph.",
-    "500 words read in2.5 minutes=200wpm.",
+    "READING RATE. A learner reads 500 words in 2.5 minutes.\n\nUse reading rate = number of words ÷ time in minutes.\nRate = 500 ÷ 2.5 = 200 words per minute.\n\nBut speed alone is not fluency. If comprehension falls sharply, the reading rate is not useful. A good speed-reading check therefore combines rate with accurate answers to comprehension questions.",
     "500 words in2 minutes with9/10 comprehension is better efficiency than500 words in1 minute with4/10.",
     "A learner scans a price list for ₦ symbols and item names to locate one cost.",
     "A four-digit year can be located rapidly by scanning for number patterns.",
@@ -180,9 +180,9 @@ export const jss3EnglishDeepLessons:DeepJss3EnglishLesson[]=[
     "PERMANENT METHOD: understand→select→group→paraphrase→connect→compare with source."
   ],
   "workedExamples":[
-    "Source gives five examples of sanitation failure. Summary can state one broader point: poor waste disposal and drainage practices create unhealthy conditions.",
+    "SUMMARY — GENERALISING DETAILS. Source gives several examples: refuse blocks gutters, stagnant water collects, drains overflow, streets smell badly and insects breed.\n\nStep 1 — identify the common idea behind the examples.\nStep 2 — remove repetition and minor detail.\nStep 3 — keep the central relationship.\n\nPossible summary: “Poor waste-disposal and drainage practices create unhealthy environmental conditions.”\n\nThe summary is shorter because it groups related details without losing the writer’s main point.",
     "Three paragraphs on causes, effects and solutions to flooding should normally retain all three functions.",
-    "“Because transport fares rose, some workers began walking.” Summary must preserve fare increase as cause and walking as response.",
+    "SUMMARY — PRESERVING CAUSE AND EFFECT. Source: “Because transport fares rose, some workers began walking.”\n\nA weak summary such as “Some workers walked” loses the cause.\nA stronger summary is: “Higher transport fares caused some workers to walk.”\n\nThe causal link is essential meaning. Summary writing removes excess wording, not the logical relationship between ideas.",
     "“Although the scheme is cheap, maintenance is difficult.” Summary must preserve concession rather than dropping “although”.",
     "Copied: “Many young people are influenced by social media advertisements.” Paraphrase: “Online advertising can shape young consumers’ choices.”",
     "Bad paraphrase that changes strength: “may increase risk”→“causes the problem” is inaccurate.",
@@ -254,10 +254,10 @@ export const jss3EnglishDeepLessons:DeepJss3EnglishLesson[]=[
     "PERMANENT GOLDEN WRITING RULE: specific development beats empty length. Every paragraph must do real work."
   ],
   "workedExamples":[
-    "Narrative “The mistake I will never repeat”: opening decision→consequence grows→turning point→lesson; not a general essay about mistakes.",
+    "NARRATIVE COMPOSITION MODEL. Prompt: “The mistake I will never repeat.”\n\nStep 1 — choose one specific mistake, not a general discussion of mistakes.\nStep 2 — establish the situation before the mistake.\nStep 3 — show the decision or action that caused the problem.\nStep 4 — develop consequences so tension grows.\nStep 5 — include a turning point where the character realises the seriousness of the mistake.\nStep 6 — end with a believable lesson connected to the events.\n\nThe essay must remain a story from beginning to consequence, not become an expository essay on bad behaviour.",
     "Narrative weak line “I was scared.” Stronger contextual development: “My hand froze on the gate as the siren sounded behind me.”",
     "Dialogue in narrative should reveal action/character, not fill pages with greetings.",
-    "Descriptive “A busy market”: organise perhaps entrance→central stalls→food area→sound/smell→overall impression.",
+    "DESCRIPTIVE COMPOSITION MODEL. Topic: “A Busy Market.”\n\nPossible organisation: entrance → central stalls → food section → sounds and smells → overall impression.\n\nAt the entrance, show movement and crowd density. In the central stalls, describe colour, arrangement and bargaining. In the food area, use sensory details such as smoke, spices and frying oil. Add sound through traders’ calls, engines and conversation.\n\nA strong description selects precise details and organises them spatially so the reader can mentally move through the scene.",
     "Weak description “The market was very very beautiful and nice.” Better: “Red pepper heaps glowed beneath patched umbrellas while traders called across the narrow aisle.”",
     "Spatial order prevents description from jumping randomly between unrelated parts.",
     "Expository “How flooding affects communities”: explain damaged roads, homes, health, business and schooling with cause/effect links.",
@@ -330,9 +330,9 @@ export const jss3EnglishDeepLessons:DeepJss3EnglishLesson[]=[
     "PERMANENT METHOD: identify audience→choose type→state purpose→organise details→use matching register→close appropriately→edit."
   ],
   "workedExamples":[
-    "Formal complaint about broken streetlights: identify location, duration, safety effect and request repair.",
+    "FORMAL LETTER MODEL — COMPLAINT ABOUT BROKEN STREETLIGHTS.\n\nOpening: state the exact street or area and the purpose of the letter.\nBody 1: explain how long the lights have been faulty and which sections are affected.\nBody 2: describe specific consequences such as poor visibility, increased accident risk or fear of crime.\nBody 3: request inspection and repair politely and directly.\nClosing: remain formal and respectful.\n\nThe letter becomes persuasive through specific facts and a practical request, not through insults or exaggeration.",
     "Formal request to principal for extended library hours: explain learner need, proposed time and expected benefit.",
-    "Formal enquiry about scholarship: ask deadline, eligibility, documents and submission method.",
+    "FORMAL ENQUIRY MODEL — SCHOLARSHIP.\n\nPurpose: obtain missing application information.\n\nA clear enquiry asks separate questions about: the closing date, eligibility conditions, required documents and how the application should be submitted.\n\nExample body: “I would be grateful if you could confirm the application deadline, state the academic requirements, list the documents to be attached and indicate whether applications should be submitted online or in person.”\n\nA formal enquiry should be concise, polite and specific enough to receive useful answers.",
     "Formal application for school prefect role: state interest, relevant responsibilities and qualities rather than vague praise of self.",
     "Formal recommendation to local authority on waste disposal: problem→evidence→practical proposal.",
     "Informal letter to cousin about changing schools: personal greeting→experience→feelings→questions→warm close.",
@@ -480,9 +480,9 @@ export const jss3EnglishDeepLessons:DeepJss3EnglishLesson[]=[
     "PERMANENT METHOD: hear→identify→contrast→produce→place in phrase/sentence→record and self-check."
   ],
   "workedExamples":[
-    "ship/sheep: one vowel contrast changes meaning.",
+    "PHONEME CONTRAST — ship / sheep. The words differ mainly in the vowel sound.\n\nStep 1 — listen to ship with the shorter/lax vowel /ɪ/.\nStep 2 — listen to sheep with the tenser/longer vowel /iː/.\nStep 3 — repeat the pair slowly, then in short sentences: “The ship arrived.” / “The sheep escaped.”\n\nThe sound contrast changes the word and therefore the meaning. Accurate pronunciation requires hearing and producing the vowel difference, not merely seeing different spellings.",
     "full/fool contrasts vowel quality/length.",
-    "fan/van contrasts voiceless /f/ with voiced /v/.",
+    "CONSONANT CONTRAST — fan / van. Both /f/ and /v/ are produced with the lower lip near the upper teeth, but they differ in voicing.\n\nStep 1 — say /f/ and feel little or no throat vibration.\nStep 2 — say /v/ and place fingers on the throat; vibration should be felt.\nStep 3 — practise fan/van, fine/vine, ferry/very in words and sentences.\n\nThe place of articulation is similar, but voicing distinguishes the consonants and can change meaning.",
     "sip/zip contrasts /s/ and /z/.",
     "coat/goat contrasts /k/ and /g/.",
     "pat/bat contrasts /p/ and /b/.",
@@ -529,10 +529,10 @@ export const jss3EnglishDeepLessons:DeepJss3EnglishLesson[]=[
     "PERMANENT METHOD: decide intended meaning→mark focus→choose pitch movement→group into sense units→deliver→listen back."
   ],
   "workedExamples":[
-    "I wanted the BLUE pen: colour is corrected.",
+    "CONTRASTIVE STRESS. Sentence: “I wanted the BLUE pen.”\n\nStress falls on BLUE because the speaker is correcting or contrasting the colour, perhaps against a red pen.\n\nCompare:\n“I WANTED the blue pen” contrasts the action or desire.\n“I wanted the blue PEN” contrasts the object.\n\nThe words stay the same, but moving the main stress changes the information the speaker emphasises.",
     "I WANTED the blue pen: desire/action is contrasted.",
     "I wanted the blue PEN: object is contrasted.",
-    "PHOtograph vs phoTOGraphy demonstrates word-family stress shift.",
+    "WORD STRESS IN A WORD FAMILY. Compare PHOtograph and phoTOGraphy.\n\nIn photograph, the strongest syllable is the first: PHO-to-graph.\nIn photography, the strongest stress shifts to the second syllable: pho-TOG-ra-phy.\n\nThe spelling connection does not guarantee identical stress placement. Learners should hear, mark and practise stress as part of pronunciation, especially when suffixes change the rhythm of the word.",
     "PREsent as noun/adjective versus preSENT as verb can differ in stress.",
     "Are you ready? commonly rises when genuinely asking.",
     "Where are you going? commonly falls as a wh-question.",
@@ -580,7 +580,7 @@ export const jss3EnglishDeepLessons:DeepJss3EnglishLesson[]=[
   "workedExamples":[
     "She usually studies in the library after school: frequency + place + time.",
     "I am staying with my aunt this week: present progressive for temporary current situation.",
-    "They have completed the project: present perfect links completed action to current relevance.",
+    "PRESENT PERFECT. Sentence: “They have completed the project.”\n\nForm: have/has + past participle. Here, have + completed.\nMeaning: the action is complete, but the result matters now — for example, the project is ready for submission.\n\nCompare: “They completed the project yesterday” uses simple past because a finished past time is stated.\n\nChoose tense from the time relationship, not from a memorised signal word alone.",
     "She has been studying for three hours: continuing duration to present.",
     "We visited Kano last year: simple past with finished past time.",
     "I was reading when the light went out: ongoing past interrupted by completed past event.",
@@ -627,7 +627,7 @@ export const jss3EnglishDeepLessons:DeepJss3EnglishLesson[]=[
     "PERMANENT METHOD: identify grammatical job→identify relationship→choose form→check idiomatic/collocational fit."
   ],
   "workedExamples":[
-    "She spoke remarkably softly: softly modifies spoke; remarkably modifies softly.",
+    "ADVERBS MODIFYING DIFFERENT ELEMENTS. Sentence: “She spoke remarkably softly.”\n\nSoftly modifies the verb spoke by telling HOW she spoke, so it is an adverb of manner.\nRemarkably modifies the adverb softly by telling TO WHAT DEGREE the softness was noticeable.\n\nThis shows that an adverb does not only modify verbs; it can also modify another adverb. Analyse what each word is doing in the actual sentence.",
     "Fortunately, no one was injured: fortunately comments on whole clause.",
     "He almost finished the work can mean he did not quite finish; placement matters.",
     "She is friendly: friendly is adjective despite -ly.",
@@ -676,7 +676,7 @@ export const jss3EnglishDeepLessons:DeepJss3EnglishLesson[]=[
   ],
   "workedExamples":[
     "The committee approves the plan→The plan is approved by the committee.",
-    "The committee approved the plan→The plan was approved by the committee.",
+    "ACTIVE TO PASSIVE — SIMPLE PAST. Active: “The committee approved the plan.”\n\nStep 1 — identify the object: the plan.\nStep 2 — move it into subject position: “The plan …”\nStep 3 — preserve simple past with was + past participle: “was approved”.\nStep 4 — add the original subject as the agent when useful: “by the committee”.\n\nPassive: “The plan was approved by the committee.”\n\nThe time and action stay the same; only the grammatical focus changes.",
     "They are repairing the road→The road is being repaired.",
     "They were repairing the road→The road was being repaired.",
     "She has completed the form→The form has been completed.",
@@ -724,7 +724,7 @@ export const jss3EnglishDeepLessons:DeepJss3EnglishLesson[]=[
     "PERMANENT METHOD: identify intended meaning→choose modal strength/register→use base verb→check negative meaning→preserve viewpoint in reporting."
   ],
   "workedExamples":[
-    "She can swim: present ability.",
+    "MODAL — ABILITY. Sentence: “She can swim.”\n\nCan is a modal auxiliary expressing present ability. It is followed by the base form swim, not “swims” or “to swim”.\n\nNegative: “She cannot/can’t swim.”\nQuestion: “Can she swim?”\n\nCompare with past general ability: “When she was six, she could swim.” The modal changes because the time reference changes.",
     "Can I leave early? informal permission/request.",
     "Could you open the window? polite request.",
     "When he was ten, he could swim well: past general ability.",
@@ -871,7 +871,7 @@ export const jss3EnglishDeepLessons:DeepJss3EnglishLesson[]=[
   ],
   "workedExamples":[
     "Plot summary: “A boy loses money and returns home.” Analysis asks why the loss changes his choices and what consequence follows.",
-    "A character returns a lost wallet despite needing money; the action supports honesty more strongly than a narrator simply calling him honest.",
+    "PROSE — CHARACTERISATION THROUGH ACTION. A character finds a lost wallet while struggling financially but still returns it to the owner.\n\nThe action provides evidence of honesty because the character chooses integrity even when keeping the money would benefit him.\n\nThis is stronger characterisation than simply writing “He was honest,” because the reader sees the trait demonstrated through a difficult choice.\n\nA good literary answer links character trait → action/evidence → explanation.",
     "A crowded one-room home can shape conflict by removing privacy; setting becomes functional, not decorative.",
     "First-person narration may make fear immediate because readers receive events through the frightened character’s perception.",
     "A first-person narrator who misreads another person may create dramatic or situational irony when readers see more than the narrator does.",
