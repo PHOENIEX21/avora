@@ -326,7 +326,7 @@ workedExamples:[
 'Show that 1/2, 2/4 and 3/6 are equivalent using a bar diagram.\n\n```\n 1/2: ██████████ | ░░░░░░░░░░ (1 part shaded of 2 equal parts)\n 2/4: █████ | █████ | ░░░░░ | ░░░░░ (2 parts shaded of 4 equal parts)\n 3/6: ███|███|███|░░░|░░░|░░░ (3 parts shaded of 6 equal parts)\n```\nAll three bars have exactly the same shaded LENGTH — the pieces are just cut differently — confirming 1/2=2/4=3/6.',
 'Find two equivalent fractions for 2/5. Multiply top and bottom by 2: (2×2)/(5×2)=4/10. Multiply top and bottom by 3: (2×3)/(5×3)=6/15. Check both represent the same value as 2/5 by converting all three to decimals: 2/5=0.4, 4/10=0.4, 6/15=0.4 — confirmed equal.',
 'Arrange 3/4, 5/8 and 1/2 in ascending order. LCM of denominators 4, 8, 2 is 8. Convert each: 3/4=6/8, 5/8 stays 5/8, 1/2=4/8. Comparing numerators over the same denominator: 4/8 < 5/8 < 6/8. So ascending order: 1/2, 5/8, 3/4.',
-'Convert 7/8 to a decimal and then to a percentage. Decimal: 7÷8=0.875. Percentage: 0.875×100=87.5%.',
+'Convert 7/8 to a decimal and then to a percentage. Decimal: 7÷8=0.875. Percentage: 0.875×100=87.5%.\n\nFOUNDATION CHECK: name numerator and denominator, explain what equal parts mean, and show why the operation preserves the value of the fraction. Finish by simplifying or comparing the result so the learner can see that the answer is reasonable.',
 'Convert 0.35 to a fraction in lowest terms. Two decimal places, so denominator is 100: 35/100. HCF(35,100)=5. Divide both by 5: 35÷5=7, 100÷5=20. Simplified fraction: 7/20.',
 'A trader shares ₦1,500 between three workers in the ratio described as "2/5 to the first, and the remainder split equally between the other two." Find each worker’s share. First worker: 2/5 of 1500 = (1500÷5)×2 = 300×2 = ₦600. Remainder: 1500−600=₦900, split equally between two workers: 900÷2=₦450 each. Final shares: ₦600, ₦450, ₦450.',
 'A student converts 60% to a fraction and writes 60/10, simplified to 6/1. Identify the error and give the correct answer. A percentage always converts by writing it over 100, not 10 — 60% = 60/100, not 60/10. Correct simplification: HCF(60,100)=20, so 60÷20=3 and 100÷20=5, giving 3/5.'
@@ -392,7 +392,7 @@ workedExamples:[
 'WORD PROBLEM — COMBINING. A school library had 1,875 books and received 968 more. Total books =1,875+968.\n\n      1 8 7 5\n    + 0 9 6 8\n    ---------\n      2 8 4 3\n\nSo the library now has 2,843 books.',
 'WORD PROBLEM — DIFFERENCE. Team A raised ₦8,450 and Team B raised ₦6,785. How much more did Team A raise? Difference=8,450−6,785=1,665. The phrase “how much more” asks for the gap between the two quantities, so subtraction is appropriate.',
 'DIRECTED NUMBER — ADD POSITIVE. Evaluate −2+5 on a number line. Start at −2. Adding +5 means move 5 units right: −1,0,1,2,3. Therefore −2+5=3.',
-'DIRECTED NUMBER — ADD NEGATIVE. Evaluate 3+(−5). Start at 3. Adding −5 means move 5 units left: 2,1,0,−1,−2. Therefore 3+(−5)=−2.',
+'DIRECTED NUMBER — ADD NEGATIVE. Evaluate 3+(−5). Start at 3. Adding −5 means move 5 units left: 2,1,0,−1,−2. Therefore 3+(−5)=−2.\n\nOPERATION CHECK: identify place values, align digits correctly, show carrying or borrowing one place at a time, and verify with the inverse operation or an estimate. Do not compress the working into a single jump.',
 'DIRECTED NUMBER — SUBTRACT POSITIVE. Evaluate 2−6. Start at 2 and move 6 units left because 6 is being subtracted. Landing point: −4. Therefore 2−6=−4.',
 'DIRECTED NUMBER — SUBTRACT NEGATIVE. Evaluate 4−(−3). Subtracting −3 means undoing a movement of 3 units left, so move 3 units right from 4 to 7. Therefore 4−(−3)=7.',
 'TEMPERATURE CONTEXT. The temperature is −4°C in the morning and rises by 9°C. Calculation: −4+9. Start at −4 and move 9 steps right to 5. New temperature=5°C.',
@@ -470,7 +470,7 @@ teaching:[
 'MASTERY TARGET. The learner can explain why common denominators are necessary; find the LCM; convert EACH fraction explicitly by LCM÷denominator then multiplying that result by the numerator; add/subtract; simplify with HCF; handle mixed numbers and exchanging; and solve word problems without unexplained jumps.'
 ],
 workedExamples:[
-'Add 3/8 and 2/8 (matching denominators). Denominators already match, so just add numerators: 3+2=5, keep denominator 8. Result: 5/8.',
+'Add 3/8 and 2/8 (matching denominators). Denominators already match, so just add numerators: 3+2=5, keep denominator 8. Result: 5/8.\n\nFRACTION-OPERATION CHECK: make the denominators equal before combining numerators, show the LCM or equivalent-fraction step, then simplify the result and check that the size of the answer is sensible.',
 'Add 2/3 and 1/4 (different denominators). LCM(3,4)=12. For 2/3: 12÷3=4, then 4×2=8, so 2/3=8/12. For 1/4: 12÷4=3, then 3×1=3, so 1/4=3/12. Now add: 8/12+3/12=11/12. Already in lowest terms (HCF of 11 and 12 is 1), so this is the final answer.',
 'Subtract 3/4 from 2½ (a mixed number minus a proper fraction). Convert 2½ to an improper fraction: (2×2+1)/2=5/2. Find a common denominator for 5/2 and 3/4: LCM(2,4)=4. Convert 5/2 explicitly: 4÷2=2, then 2×5=10, so 5/2=10/4. Subtract: 10/4−3/4=7/4. Convert back to a mixed number: 7/4=1¾.',
 'A tank is 5/6 full. After some water is used, it is 1/3 full. How much of the tank’s capacity was used, as a fraction? This is 5/6−1/3. LCM(6,3)=6. Convert 1/3 explicitly: 6÷3=2, then 2×1=2, so 1/3=2/6. Subtract: 5/6−2/6=3/6, which simplifies (HCF(3,6)=3) to 1/2. Half the tank’s capacity was used.',
@@ -536,7 +536,7 @@ workedExamples:[
 'Multiply 2/3 and 3/5 using cancellation. The 3 in the first denominator cancels with the 3 in the second numerator: 2/1 × 1/5 = 2/5. (Without cancelling first: 2×3=6 over 3×5=15, giving 6/15, which simplifies to 2/5 anyway — cancellation just gets there faster.)',
 'Find 2/3 of 24 (recognising "of" as multiplication). 2/3×24/1. Cancel: 24 and 3 share a factor of 3, so 24÷3=8, and 3÷3=1: 2/1×8/1=16. Result: 16.',
 'Divide 3/4 by 2/5, showing the reciprocal step. 3/4÷2/5 = 3/4×5/2 (flip the second fraction, the divisor). Multiply: (3×5)/(4×2)=15/8. Convert to a mixed number: 15/8=1 7/8.',
-'Multiply 1½ and 2⅓, converting each mixed number first. 1½=3/2. 2⅓=7/3. Multiply: 3/2×7/3. Cancel the 3s: 1/2×7/1=7/2=3½.',
+'Multiply 1½ and 2⅓, converting each mixed number first. 1½=3/2. 2⅓=7/3. Multiply: 3/2×7/3. Cancel the 3s: 1/2×7/1=7/2=3½.\n\nFRACTION PRODUCT/DIVISION CHECK: convert mixed numbers when necessary, cancel common factors before multiplying, and for division multiply by the reciprocal of the divisor. State why the reciprocal is used and simplify fully.',
 'A recipe uses 2/3 cup of oil per batch. How much oil is needed for 5 batches? This is 2/3×5/1 (5 whole batches). Multiply: (2×5)/(3×1)=10/3=3⅓ cups.',
 'A ribbon 3/4 metre long is to be cut into pieces each 1/8 metre long. How many complete pieces can be cut? This is asking "how many eighths fit into three-quarters," i.e. 3/4÷1/8. Flip and multiply: 3/4×8/1= (3×8)/(4×1)=24/4=6. Six complete pieces.'
 ],
@@ -602,7 +602,7 @@ workedExamples:[
 'Estimate the height of a classroom door. Using the benchmark that an average adult is about 1.6–1.8m tall, and a door is noticeably taller than a person, a sensible estimate is about 2 metres — not 2 centimetres (far too short) and not 20 metres (absurdly tall for a door).',
 'Estimate how many minutes it takes to walk from one end of a school compound to the other, given that a similar walk to the school gate (about 100m) usually takes about 2 minutes. If the compound is roughly twice that length (about 200m), a sensible estimate is about 4 minutes.',
 'Estimate the capacity of a bucket, given that a small bottled-water bottle (50cl = 0.5 litres) fills it about 16 times. Capacity ≈ 16×0.5=8 litres.',
-'A farmer estimates the length of a field by counting strides: 120 strides at roughly 0.75m per stride. Estimated length: 120×0.75=90m.',
+'A farmer estimates the length of a field by counting strides: 120 strides at roughly 0.75m per stride. Estimated length: 120×0.75=90m.\n\nESTIMATION CHECK: choose nearby convenient numbers, show the rounded values used, calculate the estimate, then compare it with the exact value or expected size. Estimation is for reasonableness, not a replacement for an exact answer unless requested.',
 
 'Estimate the mass of a bag of rice, given that it feels about 4 times heavier than a 1kg bag of sugar you are familiar with. Estimated mass: 4×1kg=4kg.',
 'A student estimates a tree’s height as "300 metres" by comparing it to a nearby 2-storey building they think is about 150m tall. Identify what is wrong with this estimate. A typical 2-storey building is closer to 6–8m tall, not 150m — the benchmark itself was wrong, which made the whole estimate unreasonable. Using a more realistic benchmark (a 2-storey building ≈ 7m, and the tree looks about twice as tall) gives a far more sensible estimate of roughly 14m.'
@@ -665,7 +665,7 @@ teaching:[
 'MASTERY TARGET. Learner explains “nearest”, the midpoint convention, rounding to nearest 10/100/1000, decimal-place rounding and carrying, uses ≈ correctly, distinguishes estimation from approximation, and uses approximation to check calculations.'
 ],
 workedExamples:[
-'Round 4,647 to the nearest 100. Decision digit (tens place) = 4, which is below 5. Hundreds digit (6) stays the same. Result: 4,600.',
+'Round 4,647 to the nearest 100. Decision digit (tens place) = 4, which is below 5. Hundreds digit (6) stays the same. Result: 4,600.\n\nAPPROXIMATION CHECK: identify the requested place or significant figure, locate the deciding digit immediately to its right, explain whether to round up or keep, and preserve placeholder zeros so place value stays correct.',
 'Round 37,486 to the nearest 10, then the nearest 100, then the nearest 1,000, showing the different decision digit each time. Nearest 10: decision digit is ones (6), which is 5 or more, so tens rounds up from 8 to 9: 37,490. Nearest 100: decision digit is tens (8), which is 5 or more, so hundreds rounds up from 4 to 5: 37,500. Nearest 1,000: decision digit is hundreds (4), which is below 5, so thousands digit (7) stays: 37,000.',
 'Estimate 398+603 by rounding each number to the nearest hundred first, then compare to the exact answer. Rounded: 400+600=1,000. Exact: 398+603=1,001. The estimate (1,000) is very close to the exact answer (1,001), confirming the exact calculation is very likely correct.',
 'Estimate 49×21 by rounding each number to the nearest ten first. Rounded: 50×20=1,000. (Exact answer: 49×21=1,029, which is reasonably close to the estimate, confirming no major error.)',
@@ -770,7 +770,7 @@ workedExamples:[
 'Subtract 001₂ from 101₂, a simpler case. Ones: 1−1=0. Twos: 0−0=0. Fours: 1−0=1. Result: 100₂. Verify: 101₂=5, 001₂=1, 5−1=4, and 100₂=4. Matches.',
 'Subtract 0011₂ from 1000₂, requiring a borrow chain across two zeros (exactly like 1000−1 in decimal). Ones: 0−1, needs borrowing, but the twos and fours columns are also 0, so the borrow must travel all the way to the eights column. Borrow one unit from the eights column (1→0), which becomes worth 10₂=2 in the fours column; the fours column lends its 1 (of that 2) onward to the twos column as a borrow, becoming worth 10₂=2 there; the twos column lends onward to ones, becoming 10₂=2 there. Now: ones=10₂−1=1, twos=1(remaining after lending)−1=0, fours=1(remaining after lending)−0=1, eights=0. Result: 0101₂. Verify: 1000₂=8, 0011₂=3, 8−3=5, and 0101₂=5. Matches.',
 'A student subtracts 010₂ from 100₂ and writes 112₂ by treating a borrow as decimal ten instead of binary two. Identify the exact error and give the correct answer. Ones: 0−0=0. Twos: 0−1, needs borrowing from fours (1→0), becoming 10₂=2 in twos: 2−1=1. Fours: 0−0=0. Correct result: 010₂, NOT 112₂ — the borrowed value is worth 2 in binary, never 10.',
-'Subtract 101₂ from 111₂. Ones: 1−1=0. Twos: 1−0=0. Fours: 1−1=0. Result: 010₂. Verify: 111₂=7, 101₂=5, 7−5=2, and 010₂=2. Matches.',
+'Subtract 101₂ from 111₂. Ones: 1−1=0. Twos: 1−0=0. Fours: 1−1=0. Result: 010₂. Verify: 111₂=7, 101₂=5, 7−5=2, and 010₂=2. Matches.\n\nBINARY SUBTRACTION CHECK: align powers of two, borrow in base two when0−1 occurs, show how the borrowed1 becomes10₂ in the next lower place, then verify by adding the difference back to the subtrahend.',
 'Verify a binary subtraction using the "add back" method: given 110₂−011₂=011₂, confirm this by adding the result back to the subtracted number. 011₂(result)+011₂(what was subtracted)=? Ones:1+1=10₂ write0 carry1. Twos:1+1+1=11₂ write1 carry1. Fours:0+0+1=1. Result: 110₂ — which matches the original starting number, confirming the subtraction was correct.'
 ],
 misconceptions:[
@@ -867,8 +867,8 @@ teaching:[
 'A word problem becomes an open sentence by carefully translating its wording into symbols, one phrase at a time, before attempting to solve anything: "eight more than a number is eleven" becomes □+8=11 (not 8+□=11 written the "wrong way round" in meaning, though mathematically both give the same equation here — the translation habit matters far more once problems get more complex).'
 ],
 workedExamples:[
-'Solve □−5=8. Undo subtraction of 5 by adding 5 to the other side: □=8+5=13. Check: 13−5=8. Correct.',
-'Solve 2+n=11. Undo addition of 2 by subtracting 2 from the other side: n=11−2=9. Check: 2+9=11. Correct.',
+'Solve □−5=8. Undo subtraction of 5 by adding 5 to the other side: □=8+5=13. Check: 13−5=8. Correct.\n\nALGEBRA-LANGUAGE CHECK: translate words into symbols carefully, identify terms/coefficients/constants, substitute values with brackets where needed, and verify that the symbolic expression matches the original verbal statement.',
+'Solve 2+n=11. Undo addition of 2 by subtracting 2 from the other side: n=11−2=9. Check: 2+9=11. Correct.\n\nALGEBRA-LANGUAGE CHECK: translate words into symbols carefully, identify terms/coefficients/constants, substitute values with brackets where needed, and verify that the symbolic expression matches the original verbal statement.',
 'Solve 16÷2=□... actually solve the missing-divisor form: 16÷□=8. This asks "16 divided by what equals 8?" Using the relationship 16=8×□, we get □=16÷8=2. Check: 16÷2=8. Correct.',
 
 'Solve the two-operation open sentence 2x−1=7. Operations applied to x, in order: multiply by 2, then subtract 1. Undo in reverse: first undo the subtraction (add 1 to both sides): 2x=8. Then undo the multiplication (divide both sides by 2): x=4. Check: 2(4)−1=8−1=7. Correct.',
@@ -918,7 +918,7 @@ teaching:[
 'The full method for simplifying any expression with brackets: first remove every bracket using the sign-in-front rule (distributing across every term inside), then collect and combine all resulting like terms into a single simplified expression, in whatever order is clearest (usually highest power or alphabetical).'
 ],
 workedExamples:[
-'Simplify 2x+3x+7x (all like terms, no brackets). All three terms share the variable part "x". Add coefficients: 2+3+7=12. Result: 12x.',
+'Simplify 2x+3x+7x (all like terms, no brackets). All three terms share the variable part "x". Add coefficients: 2+3+7=12. Result: 12x.\n\nSIMPLIFICATION CHECK: identify like terms before combining them, expand every term inside brackets correctly, preserve signs, and verify by substituting a small value into both the original and simplified expressions.',
 'Simplify 5a−2+3a+7, identifying each term’s coefficient first. Terms: +5a, −2, +3a, +7. Like terms: 5a and 3a (combine to 8a); −2 and +7 (combine to +5). Result: 8a+5.',
 'Simplify (14m−8)+(6m+5), where both brackets have a positive sign in front. Since both signs in front are positive, simply drop both brackets: 14m−8+6m+5. Collect like terms: (14m+6m)+ (−8+5)=20m−3.',
 'Simplify (10p+4)−(3p−2), where the second bracket has a NEGATIVE sign in front. Drop the first bracket normally (positive sign): 10p+4. For the second bracket, distribute the negative sign to BOTH terms inside: −(3p−2) becomes −3p+2 (note the sign of −2 flips to +2). Combine: 10p+4−3p+2. Collect like terms: (10p−3p)+ (4+2)=7p+6.',
@@ -971,7 +971,7 @@ teaching:[
 ],
 workedExamples:[
 'Translate and solve: "five times a number plus seven is twenty-two." Translate: 5k+7=22. Undo the addition: 5k=22−7=15. Undo the multiplication: k=15÷5=3. Check: 5(3)+7=15+7=22. Correct.',
-'Solve x/4=6. The operation on x is division by 4; undo with multiplication: x=6×4=24. Check: 24/4=6. Correct.',
+'Solve x/4=6. The operation on x is division by 4; undo with multiplication: x=6×4=24. Check: 24/4=6. Correct.\n\nBALANCE CHECK: explain what operation is being undone, perform the same inverse operation on both sides, isolate the unknown gradually, and substitute the final answer back into the original equation.',
 'Solve 3y−5=16. Undo the subtraction first (add 5 to both sides): 3y=21. Undo the multiplication (divide both sides by 3): y=7. Check: 3(7)−5=21−5=16. Correct.',
 
 'A student is given the EXPRESSION 4n+9 (no equals sign) and asked to "solve for n." Explain why this cannot be done as written, and what would be needed to make it solvable. There is no equals sign, so 4n+9 is not claiming to equal any specific value — there are infinitely many values n could take, each giving a different result. To solve for n, the expression would need to be set equal to something, e.g. 4n+9=25, which then CAN be solved (n=4).',
@@ -1046,7 +1046,7 @@ workedExamples:[
 'Rectangle 8cm by 5cm: perimeter means walk around all four sides, so 8+5+8+5=26cm, equivalently 2(8+5)=26cm. Area counts unit squares: 8 rows/columns by 5 gives 8×5=40cm².',
 'Parallelogram base 7cm, perpendicular height 4cm and slanted side 6cm: the SVG shows a 90° marker where the 4cm height meets the base. Area=base×perpendicular height=7×4=28cm². The 6cm slanted side is not used because it is not perpendicular to the base.',
 'Triangle base 10cm and perpendicular height 6cm: a matching rectangle/parallelogram visual demonstrates that the triangle occupies half of base×height. A=½×10×6. First 10×6=60, then half of 60=30. Area=30cm².',
-'Real floor: 9m long and 6m wide. Model the flat floor as a rectangle. Area=9×6=54m², so 54m² of tiling covers it if there is no wastage.'
+'Real floor: 9m long and 6m wide. Model the flat floor as a rectangle. Area=9×6=54m², so 54m² of tiling covers it if there is no wastage.\n\nGEOMETRY CHECK: name the shape from its defining properties, not from appearance alone. Mark equal sides, parallel sides, right angles or diagonals where relevant, and connect any calculation directly to the diagram or property used.'
 ],
 misconceptions:[
 'Classifying by appearance instead of marked properties. A rotated square remains a square because its four equal sides and four right angles are unchanged.',
@@ -1113,7 +1113,7 @@ teaching:[
 ],
 workedExamples:[
 'State the number of faces, edges and vertices of a cube, referencing the cube diagram. Faces: 6 (all square, all equal). Edges: 12. Vertices: 8.',
-'Find the volume of a cube with side length 4cm.\n\n```\n ┌───┐\n ╱ ╱│\n ┌───┐ │ 4cm\n │ │╱\n └───┘\n 4cm\n```\nVolume=4×4×4=64cm³.',
+'Find the volume of a cube with side length 4cm.\n\n```\n ┌───┐\n ╱ ╱│\n ┌───┐ │ 4cm\n │ │╱\n └───┘\n 4cm\n```\nVolume=4×4×4=64cm³.\n\nSOLID-SHAPE CHECK: distinguish faces, edges and vertices, identify curved versus flat surfaces, and use a net or labelled sketch where helpful. Verify the description against the actual structure of the solid.',
 'Find the volume of a cuboid measuring 5cm by 3cm by 2cm.\n\n```\n ┌───────┐\n ╱ ╱│\n ┌───────┐ │ 2cm\n │ │╱ 3cm (depth)\n └───────┘\n 5cm\n```\nVolume=5×3×2=30cm³.',
 'Describe the difference between a cone and a cylinder in terms of faces, referencing their diagrams. A cone has ONE flat circular face and one curved surface meeting at a single apex point. A cylinder has TWO flat circular faces (top and bottom) connected by one curved surface, with no apex point at all.',
 'A student says a cylinder has "2 edges" (the circular rims top and bottom). Using the terminology from the teaching diagram, explain why this is imprecise. Those rims are where the curved surface meets each flat circular face — a true "edge" (as used for the cube/cuboid) is where two FLAT faces meet in a straight line; a cylinder’s curved surface is its own distinct kind of feature, not a collection of straight edges.',
@@ -1372,7 +1372,7 @@ workedExamples:[
 'Find the median of 3, 8, 6, 4, 9. First order the data: 3, 4, 6, 8, 9. There are 5 values (odd), so the middle position is (5+1)/2=3rd position. The 3rd value in the ordered list is 6. Median=6.',
 'Find the median of 2, 4, 7, 9, using the diagram for an EVEN count (two middle values, not one).\n\n```\n Ordered: 2 [4] [7] 9\n Position: 1st 2nd 3rd 4th\n ↑ ↑\n two middle values — average them\n```\n4 values (even), middle positions=2nd and 3rd, which are 4 and 7. Median=(4+7)/2=5.5.',
 'Find the median of the unordered set 9, 3, 7, 5, 1. Order first: 1, 3, 5, 7, 9. 5 values (odd), middle position=(5+1)/2=3rd. The 3rd value is 5. Median=5.',
-'Find the median of 8, 2, 6, 4. Order first: 2, 4, 6, 8. 4 values (even), middle positions=2nd and 3rd, which are 4 and 6. Median=(4+6)/2=5.',
+'Find the median of 8, 2, 6, 4. Order first: 2, 4, 6, 8. 4 values (even), middle positions=2nd and 3rd, which are 4 and 6. Median=(4+6)/2=5.\n\nDATA CHECK: order or tally the data first, verify the total number of observations, then calculate frequency, median or another requested measure from the organised data. A chart/table should represent the same total as the raw data.',
 'A dataset of test scores is 10, 10, 11, 12, 40, where 40 is a clear outlier (perhaps an unusually gifted result). Find the median, and explain why it still represents the data well despite the outlier. Already ordered: 10,10,11,12,40. 5 values, middle position=3rd, which is 11. Median=11. Despite the extreme value of 40, the median (11) still reflects where most of the data actually sits, since the median only depends on POSITION, not on how extreme the highest or lowest value happens to be.',
 'A student finds the "middle value" of 7, 2, 9, 4, 5 by simply picking the middle number as it was originally listed (9, the 3rd number given), without reordering first. Identify the error and give the correct median. The data must be ordered before finding the middle position — the ORIGINAL order it was given in is irrelevant. Ordering first: 2,4,5,7,9. Middle position (3rd)=5. Correct median=5, not 9.'
 ],

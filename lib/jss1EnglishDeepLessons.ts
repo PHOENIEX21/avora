@@ -372,7 +372,7 @@ export const jss1EnglishDeepLessons:DeepJss1EnglishLesson[]=[
     ],
     "workedExamples": [
       "PLANNING MAIN AND SUPPORTING IDEAS. Topic: “Why school gardens matter.”\n\nStep 1 — identify possible main ideas: food education, responsibility and care for the environment.\nStep 2 — add support under each main idea. For food education, learners can see how crops grow and where food comes from. For responsibility, pupils can water, weed and care for shared plants. For environment, gardens can improve school surroundings and encourage care for green spaces.\nStep 3 — arrange the points in a logical order before drafting.\n\nThe main idea becomes the paragraph focus; the supporting ideas explain, prove or illustrate it.",
-      "A disorganised outline [benefit, definition, unrelated joke, second benefit] becomes [introduction/definition, benefit 1 + evidence, benefit 2 + evidence, conclusion]."
+      "A disorganised outline [benefit, definition, unrelated joke, second benefit] becomes [introduction/definition, benefit 1 + evidence, benefit 2 + evidence, conclusion].\n\nWRITING CHECK: identify the controlling main idea first, then choose supporting details that explain, prove or illustrate it. Remove unrelated details and arrange the support in a logical order so the paragraph stays focused."
     ],
     "misconceptions": [
       "brainstorming without selecting relevant ideas",
@@ -521,8 +521,8 @@ export const jss1EnglishDeepLessons:DeepJss1EnglishLesson[]=[
       "Pronunciation practice is intelligibility-focused: hear the target, compare, produce it in a word, then produce it naturally in a sentence or passage."
     ],
     "workedExamples": [
-      "After hearing a short passage about a market, learner retells the event, explains two key expressions and practises a selected vowel contrast in words from the passage.",
-      "For /p/ and /b/, compare “pack/back” in sentences, then check whether voicing changes the intended word."
+      "After hearing a short passage about a market, learner retells the event, explains two key expressions and practises a selected vowel contrast in words from the passage.\n\nPRONUNCIATION CHECK: identify the exact target sound, describe how it is produced or contrasted, practise it in several words, then read it naturally inside a sentence or short passage. Meaning can change when the sound changes.",
+      "For /p/ and /b/, compare “pack/back” in sentences, then check whether voicing changes the intended word.\n\nPRONUNCIATION CHECK: identify the exact target sound, describe how it is produced or contrasted, practise it in several words, then read it naturally inside a sentence or short passage. Meaning can change when the sound changes."
     ],
     "misconceptions": [
       "repeating sounds without understanding the passage",
@@ -576,9 +576,9 @@ export const jss1EnglishDeepLessons:DeepJss1EnglishLesson[]=[
       "AVORA cycles listen → discriminate → mark → produce → use in a meaningful exchange, so oral English stays communicative rather than mechanical."
     ],
     "workedExamples": [
-      "Cluster practice: “school”, “plants”, “strong”. Learner taps each consonant sequence and says the word without adding a vowel such as “səchool.”",
-      "Boundary practice: hear “an ice cream” versus a different segmentation; use grammar and context to decide the intended words.",
-      "Tag: “They are ready, aren’t they?” The auxiliary “are” and pronoun “they” match the statement; positive statement takes negative tag."
+      "Cluster practice: “school”, “plants”, “strong”. Learner taps each consonant sequence and says the word without adding a vowel such as “səchool.”\n\nSPEECH CHECK: isolate the sound, cluster, diphthong or word boundary first, practise it slowly, then blend it into natural speech. Explain what goes wrong if an extra vowel is inserted, a boundary is misplaced or a sound is dropped.",
+      "Boundary practice: hear “an ice cream” versus a different segmentation; use grammar and context to decide the intended words.\n\nSPEECH CHECK: isolate the sound, cluster, diphthong or word boundary first, practise it slowly, then blend it into natural speech. Explain what goes wrong if an extra vowel is inserted, a boundary is misplaced or a sound is dropped.",
+      "Tag: “They are ready, aren’t they?” The auxiliary “are” and pronoun “they” match the statement; positive statement takes negative tag.\n\nSPEECH CHECK: isolate the sound, cluster, diphthong or word boundary first, practise it slowly, then blend it into natural speech. Explain what goes wrong if an extra vowel is inserted, a boundary is misplaced or a sound is dropped."
     ],
     "misconceptions": [
       "inserting vowels inside consonant clusters",
@@ -627,8 +627,8 @@ export const jss1EnglishDeepLessons:DeepJss1EnglishLesson[]=[
       "AVORA varies contexts—family, school, transport, health, safety, environment and society—so the skill transfers beyond a memorised passage."
     ],
     "workedExamples": [
-      "Audio says several ways students conserve water and ends “small daily habits protect our supply.” Main idea: everyday conservation protects water; examples support it.",
-      "A speaker describes three road incidents before stating the cause. The main idea appears late, so choosing the first detail would be wrong."
+      "Audio says several ways students conserve water and ends “small daily habits protect our supply.” Main idea: everyday conservation protects water; examples support it.\n\nLISTENING CHECK: identify whether the question asks for a stated detail, main idea, reason, sequence, inference or attitude. Point to the exact spoken clue and explain how that clue supports the answer.",
+      "A speaker describes three road incidents before stating the cause. The main idea appears late, so choosing the first detail would be wrong.\n\nLISTENING CHECK: identify whether the question asks for a stated detail, main idea, reason, sequence, inference or attitude. Point to the exact spoken clue and explain how that clue supports the answer."
     ],
     "misconceptions": [
       "writing every word and missing later meaning",
@@ -726,7 +726,7 @@ export const jss1EnglishDeepLessons:DeepJss1EnglishLesson[]=[
     ],
     "workedExamples": [
       "ADVERB + CONJUNCTION. Sentence: “She arrived early because the road was clear.”\n\nEarly modifies arrived by telling when she arrived, so it functions as an adverb of time.\nBecause joins the main clause to the reason clause “the road was clear,” so it functions as a conjunction.\n\nThe sentence therefore contains both an adverb and a conjunction, but they do different jobs: one modifies the verb; the other links ideas.",
-      "“The bag is under the table.” under introduces the prepositional phrase “under the table” showing location."
+      "“The bag is under the table.” under introduces the prepositional phrase “under the table” showing location.\n\nFUNCTION CHECK: classify the word by what it does in the sentence. Explain what the adverb modifies, what relationship the conjunction links, or what time/place/movement relationship the preposition expresses."
     ],
     "misconceptions": [
       "thinking every word ending -ly is an adverb",
@@ -776,7 +776,7 @@ export const jss1EnglishDeepLessons:DeepJss1EnglishLesson[]=[
     ],
     "workedExamples": [
       "ADVERBIALS + TENSE. Sentence: “Every morning, Tola walks quickly to school.”\n\nEvery morning tells when/how often the action occurs, so it is a time/frequency adverbial. Quickly tells how Tola walks, so it is a manner adverbial. Walks is simple present because the sentence describes a regular routine.\n\nCompare: “Tola is walking quickly to school now.” The adverbial now changes the time meaning to an action in progress, so present progressive becomes more suitable.",
-      "“We had finished before the rain started” distinguishes an earlier completed event from a later past event; the time relationship controls form."
+      "“We had finished before the rain started” distinguishes an earlier completed event from a later past event; the time relationship controls form.\n\nTENSE-ADVERBIAL CHECK: identify the adverbial and the tense/aspect form, then explain why both match the time relationship. Compare with one nearby tense or word order to show how meaning would change."
     ],
     "misconceptions": [
       "calling only single adverbs adverbials",
@@ -826,7 +826,7 @@ export const jss1EnglishDeepLessons:DeepJss1EnglishLesson[]=[
     ],
     "workedExamples": [
       "ACTIVE TO PASSIVE. Active: “The prefect locked the gate.”\n\nStep 1 — identify the object in the active sentence: the gate.\nStep 2 — move it to subject position: “The gate …”\nStep 3 — preserve the past tense using was + past participle: “was locked”.\nStep 4 — add the original doer if needed: “by the prefect”.\n\nPassive: “The gate was locked by the prefect.”\n\nThe tense and event remain the same; the grammatical focus changes from the doer to the receiver of the action.",
-      "Active: “People speak English in many countries.” Passive: “English is spoken in many countries.” Agent can be omitted because it is general."
+      "Active: “People speak English in many countries.” Passive: “English is spoken in many countries.” Agent can be omitted because it is general.\n\nVOICE CHECK: identify subject, verb and object in the active form, move the object to passive subject position, preserve tense with the correct form of be + past participle, and explain what information becomes the focus."
     ],
     "misconceptions": [
       "changing word order without changing the verb form",
@@ -874,8 +874,8 @@ export const jss1EnglishDeepLessons:DeepJss1EnglishLesson[]=[
       "Study literature at three levels: what happens/what is said; how language/form creates meaning; what ideas, values or questions the work raises."
     ],
     "workedExamples": [
-      "A proverb performed in a story is oral-literary material; a published short story is written literature. Both can preserve cultural values through language.",
-      "A tale about communal farming can reveal vocabulary, customs and values while still being an imaginative story rather than a history record."
+      "A proverb performed in a story is oral-literary material; a published short story is written literature. Both can preserve cultural values through language.\n\nLITERATURE CHECK: identify whether the example belongs to prose, poetry or drama, cite the feature that proves the classification, and explain the purpose or effect of that feature rather than memorising a label.",
+      "A tale about communal farming can reveal vocabulary, customs and values while still being an imaginative story rather than a history record.\n\nLITERATURE CHECK: identify whether the example belongs to prose, poetry or drama, cite the feature that proves the classification, and explain the purpose or effect of that feature rather than memorising a label."
     ],
     "misconceptions": [
       "defining literature as only printed books",
@@ -926,7 +926,7 @@ export const jss1EnglishDeepLessons:DeepJss1EnglishLesson[]=[
     ],
     "workedExamples": [
       "FOLKTALE — THEME AND MORAL. Suppose a trickster repeatedly lies to neighbours and finally loses everyone’s trust.\n\nPlot event: the trickster lies and suffers a consequence.\nTheme: dishonesty and its consequences.\nPossible moral: deceit destroys trust.\n\nWhy: the lesson is supported by repeated actions and the final outcome. “The trickster is funny” may describe a character effect, but it is not the central theme unless the story develops that idea.",
-      "A learner retells a tale in five stages: setting → problem → attempts → turning point → outcome, then explains the lesson with one event as evidence."
+      "A learner retells a tale in five stages: setting → problem → attempts → turning point → outcome, then explains the lesson with one event as evidence.\n\nFOLKTALE CHECK: identify the traditional pattern, character choice, repeated event or consequence, then connect it to a lesson or cultural function. Support the lesson with what actually happens in the story."
     ],
     "misconceptions": [
       "calling any old story a folktale",
@@ -977,7 +977,7 @@ export const jss1EnglishDeepLessons:DeepJss1EnglishLesson[]=[
     ],
     "workedExamples": [
       "MYTH OR LEGEND? Story A explains how a river or mountain came into existence through supernatural events. Its main cultural function is to explain an origin, so it may function as a myth.\n\nStory B centres on a remembered founder connected with a real community, but later retellings add extraordinary deeds. Because it is tied to a remembered person/place and mixes history with tradition, it may function as a legend.\n\nClassification depends on function and relationship to belief/history, not merely on whether magic appears.",
-      "Two narratives both contain supernatural events, but one explains cosmic origins while the other magnifies a historical hero; their functions differ."
+      "Two narratives both contain supernatural events, but one explains cosmic origins while the other magnifies a historical hero; their functions differ.\n\nMYTH/LEGEND CHECK: identify whether the narrative mainly explains an origin/supernatural idea or preserves communal memory around a person/place/event. Support the classification and lesson with story evidence."
     ],
     "misconceptions": [
       "saying every supernatural story is a myth",
@@ -1027,7 +1027,7 @@ export const jss1EnglishDeepLessons:DeepJss1EnglishLesson[]=[
     ],
     "workedExamples": [
       "PROSE FEATURES WORKING TOGETHER. Suppose a student finds lost money and must decide whether to return it.\n\nPlot: events develop from finding the money to the decision and its consequences.\nCharacterisation: the student’s actions, hesitation and final choice reveal personal qualities.\nConflict: the learner may face an internal struggle between need and honesty.\nTheme: the story may explore integrity, temptation or responsibility.\n\nA strong prose analysis does not merely list these features; it explains how one feature helps develop another.",
-      "A paragraph lingering on heat, dust, traffic noise and crowded stalls is mainly descriptive even if one small action occurs."
+      "A paragraph lingering on heat, dust, traffic noise and crowded stalls is mainly descriptive even if one small action occurs.\n\nPROSE CHECK: identify plot, character, setting or point of view in the example, then explain how that feature shapes the reader’s understanding. Do not stop at retelling what happened."
     ],
     "misconceptions": [
       "thinking prose means only fiction",
@@ -1077,8 +1077,8 @@ export const jss1EnglishDeepLessons:DeepJss1EnglishLesson[]=[
       "Writing a simple poem begins with a clear image/idea, precise language and deliberate line breaks or rhythm; rhyme is optional unless the task requires it."
     ],
     "workedExamples": [
-      "A poem repeating “home” at the end of several lines may use repetition to emphasise belonging; the effect must be explained, not just named.",
-      "“The market wakes before the sun” personifies the market and creates an image of early activity without literally claiming a building wakes."
+      "A poem repeating “home” at the end of several lines may use repetition to emphasise belonging; the effect must be explained, not just named.\n\nPOETRY CHECK: identify the exact word, image, sound, repetition or line feature, explain its immediate effect, then connect that effect to meaning, mood or theme. Naming the device alone is incomplete.",
+      "“The market wakes before the sun” personifies the market and creates an image of early activity without literally claiming a building wakes.\n\nPOETRY CHECK: identify the exact word, image, sound, repetition or line feature, explain its immediate effect, then connect that effect to meaning, mood or theme. Naming the device alone is incomplete."
     ],
     "misconceptions": [
       "thinking every poem must rhyme",
@@ -1129,8 +1129,8 @@ export const jss1EnglishDeepLessons:DeepJss1EnglishLesson[]=[
       "Theme emerges through conflict and choices. Performance requires diction, pacing, movement and listening to other actors—not simply reading lines quickly."
     ],
     "workedExamples": [
-      "Stage direction: “[Amina places the sealed bottle on the table.]” It instructs action; it is not spoken dialogue.",
-      "A short play about unsafe food may use a missing label as a prop central to the conflict; the prop has narrative purpose."
+      "Stage direction: “[Amina places the sealed bottle on the table.]” It instructs action; it is not spoken dialogue.\n\nDRAMA CHECK: connect dialogue, stage direction, movement, prop or setting to what an audience sees or hears, then explain how it develops character, conflict, mood or theme. Drama must be analysed as performance.",
+      "A short play about unsafe food may use a missing label as a prop central to the conflict; the prop has narrative purpose.\n\nDRAMA CHECK: connect dialogue, stage direction, movement, prop or setting to what an audience sees or hears, then explain how it develops character, conflict, mood or theme. Drama must be analysed as performance."
     ],
     "misconceptions": [
       "calling any funny moment a comedy",
@@ -1180,8 +1180,8 @@ export const jss1EnglishDeepLessons:DeepJss1EnglishLesson[]=[
       "Transformations must preserve sense: “He is as brave as a lion” can become “He is a lion in battle,” but grammar/context may need adjustment rather than mechanical deletion of “like/as.”"
     ],
     "workedExamples": [
-      "Simile: “Her voice was as soft as rain.” Metaphor: “Her voice was soft rain in the quiet room.” Both suggest gentleness.",
-      "“The queue was a snake” is metaphor; the intended shared qualities may be length and winding shape, depending on context."
+      "Simile: “Her voice was as soft as rain.” Metaphor: “Her voice was soft rain in the quiet room.” Both suggest gentleness.\n\nFIGURATIVE-LANGUAGE CHECK: identify the two things being compared, state whether the comparison is explicit or implied, name the shared quality, and explain the effect created in the sentence or passage.",
+      "“The queue was a snake” is metaphor; the intended shared qualities may be length and winding shape, depending on context.\n\nFIGURATIVE-LANGUAGE CHECK: identify the two things being compared, state whether the comparison is explicit or implied, name the shared quality, and explain the effect created in the sentence or passage."
     ],
     "misconceptions": [
       "calling every sentence with “like” a simile even when “like” means preference",
