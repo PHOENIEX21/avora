@@ -1125,3 +1125,6 @@ main,section,article,aside,header,footer,nav,form,div{min-width:0}
  .authored-worked-example{padding:18px}
  .authored-math-working{font-size:13.5px;line-height:1.75;padding:15px}
 }
+
+/* Visual worked examples for statistics and pie charts */
+.geo-sector{fill:rgba(188,146,55,.22);stroke:currentColor;stroke-width:3;vector-effect:non-scaling-stroke}.geo-bar{fill:rgba(11,31,58,.12);stroke:currentColor;stroke-width:2;vector-effect:non-scaling-stroke}.authored-worked-example .authored-geometry-figure{margin:16px 0 18px;background:#fffdf7}
