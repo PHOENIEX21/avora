@@ -5,10 +5,10 @@ import ts from 'typescript';
 const read=p=>fs.readFileSync(new URL(`../${p}`,import.meta.url),'utf8');
 function loadCommonJs(source,filename,requireMap={}){
   const js=ts.transpileModule(source,{compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022,esModuleInterop:true}}).outputText;
-  const module={exports:{}};
+  const cjsModule={exports:{}};
   const localRequire=id=>{if(id in requireMap)return requireMap[id];throw new Error(`Audit cannot require ${id} from ${filename}`)};
-  vm.runInNewContext(`(function(require,module,exports){${js}\n})`,{console})(localRequire,module,module.exports);
-  return module.exports;
+  vm.runInNewContext(`(function(require,module,exports){${js}\n})`,{console})(localRequire,cjsModule,cjsModule.exports);
+  return cjsModule.exports;
 }
 
 const engine=loadCommonJs(read('lib/lessonStepEngine.ts'),'lessonStepEngine.ts');
