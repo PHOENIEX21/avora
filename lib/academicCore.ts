@@ -35,3 +35,22 @@ export function relativeAcademicDate(value:Date|string,now=new Date()){
  if(days===0)return 'Today';if(days===1)return 'Yesterday';
  return new Intl.DateTimeFormat('en-NG',{day:'numeric',month:'short',year:a.getFullYear()===b.getFullYear()?undefined:'numeric'}).format(date);
 }
+
+
+export async function getActiveAcademicPlan(classLevel:string){
+ return withDbRetry(async()=>{
+  try{
+   const rows=await sql`
+    SELECT o.id::text,o.day_index,o.title,o.objective_text,o.lesson_anchor,o.question_target,
+           t.subject_name,t.curriculum_topic_id,COALESCE(tp.name,t.curriculum_topic_id) AS topic_name,
+           t.term,t.week_number
+    FROM academic_daily_objectives o
+    JOIN term_topic_schedule t ON t.id=o.schedule_id
+    LEFT JOIN topics tp ON tp.id::text=t.curriculum_topic_id
+    WHERE t.class_level=${classLevel} AND o.status='LIVE'
+    ORDER BY t.term,t.week_number,o.day_index,o.sort_order,t.subject_name
+    LIMIT 80`;
+   return rows;
+  }catch{return [];}
+ },1);
+}
