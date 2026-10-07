@@ -27,4 +27,6 @@ jobs:
       - name: Curriculum audits
         run: npm run audit:curriculum
       - name: Next.js production build
-        run: npm run build
+        run: |
+          export AUTH_SECRET="$(node -e 'process.stdout.write(require("node:crypto").randomBytes(48).toString("hex"))')"
+          npm run build
