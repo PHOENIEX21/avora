@@ -44,7 +44,7 @@ export async function POST(req:Request){
    model_solution=${q.modelSolution},
    needs_confirmation=true
   WHERE id=${questionId}`);
- await withDbRetry(()=>sql`UPDATE uploaded_assignments SET solution_ready_at=now(),updated_at=now() WHERE id=(SELECT assignment_id FROM assignment_questions WHERE id=${questionId})`);
+ const [pending]=await withDbRetry(()=>sql`SELECT COUNT(*)::int n FROM assignment_questions WHERE assignment_id=(SELECT assignment_id FROM assignment_questions WHERE id=${questionId}) AND (model_solution='Pending academic conversion.' OR model_solution='')`);if(Number(pending?.n||0)===0)await withDbRetry(()=>sql`UPDATE uploaded_assignments SET solution_ready_at=now(),updated_at=now() WHERE id=(SELECT assignment_id FROM assignment_questions WHERE id=${questionId})`);
  return NextResponse.json({
   questionId,
   converted:q,
