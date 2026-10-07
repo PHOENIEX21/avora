@@ -12,3 +12,11 @@ export async function generateWeeklyPaper(args:{classLevel:string;term:number;we
  if(result.json.questions.some(q=>!allowed.has(q.topicId)||!allowed.get(q.topicId)!.has(q.objective)))return {ok:false as const,error:'WEEKLY_PAPER_FAILED_SCOPE_VALIDATION'};
  return result;
 }
+export async function regenerateWeeklyQuestion(args:{classLevel:string;subject:string;topicId:string;objective:string;difficulty:'FOUNDATION'|'STANDARD'|'CHALLENGE';originalPrompt:string;reviewerNote:string;adminInstruction:string}){
+ const instructions=['You are replacing exactly one rejected AVORA weekly-exam question.','Stay strictly inside the supplied class, subject, curriculum topic and exact objective. Do not broaden the scope.','Produce a genuinely different question from originalPrompt while measuring the same objective and difficulty.','For MULTIPLE_CHOICE return exactly four distinct plausible options and correctAnswer must exactly equal one option. For THEORY options must be empty.','Provide a worked, independently checkable solution. Address the reviewer concern where supplied.','Do not claim official examination provenance.'].join(' ');
+ const input=JSON.stringify(args);
+ const result=await aiStructured<WeeklyGeneratedQuestion>({instructions,input,schema:{type:'object',properties:(schema as any).properties.questions.items.properties,required:(schema as any).properties.questions.items.required,additionalProperties:false},name:'weekly_exam_replacement',maxOutputTokens:1800});
+ if(!result.ok)return result;
+ const q=result.json;if(!q||!valid(q)||q.subject!==args.subject||q.topicId!==args.topicId||q.objective!==args.objective||q.difficulty!==args.difficulty)return {ok:false as const,error:'WEEKLY_REPLACEMENT_FAILED_SCOPE_VALIDATION'};
+ return result;
+}
