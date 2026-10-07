@@ -61,22 +61,14 @@ export default async function Welcome(){
   {weeklyExams.length>0&&<section className="shell today-weekly-exam"><span className="section-kicker">AVORA WEEKLY</span>{weeklyExams.map((x:any)=><article key={x.id}><div><h2>{x.title}</h2><p>{x.submitted_at?'Submitted — result will follow the configured release time.':Date.now()<new Date(x.release_at).getTime()?'Your serious weekly assessment is scheduled.':'Your weekly assessment is open now.'}</p></div>{!x.submitted_at&&<Link href={'/weekly-exam/'+x.id}>{Date.now()<new Date(x.release_at).getTime()?'View assessment →':'Start weekly exam →'}</Link>}</article>)}</section>}
 
   {u.class_level==='JSS3'&&!diagnosticComplete&&<section className="shell diagnostic-home-callout"><div><span className="section-kicker">START HERE · ABOUT 5 QUESTIONS</span><h2>Help AVORA find your starting point.</h2><p>You can still explore Learn, Tutor and Exam. This short check simply makes your recommendations more personal.</p></div><Link href="/diagnostic" className="premium-primary">Start diagnostic <span>→</span></Link></section>}
-  <section className="shell premium-welcome">
-   <div className="welcome-main">
-    <div className="welcome-eyebrow"><span>TODAY · LEARN WHAT MATTERS</span><i></i><b>{exam} · {u.preferred_subject||'Mathematics'}</b></div>
-    <h1>Your learning plan, <span>{first}.</span></h1>
-    <p className="welcome-summary">AVORA connects what your class is learning, the school work you bring in, and what you need to remember. Learn today’s work, revisit weak areas, and build evidence that lasts.</p>
-    <div className="welcome-actions">
-     <Link href="/learn" className="premium-primary">Continue learning <span>→</span></Link>
-     <Link href="/learn" className="premium-secondary">Choose a subject</Link>
-    </div>
+  <section className="shell academic-hub" aria-label="Your learning workspace">
+   <div className="academic-hub-intro"><span className="section-kicker">YOUR AVORA WORKSPACE · {u.class_level||'JUNIOR SECONDARY'}</span><h2>Welcome back, {first}.</h2><p>One clear place for today’s lessons, questions, study groups and your learning evidence. Your target is {exam}.</p></div>
+   <div className="academic-hub-grid">
+    <Link href="/learn" className="academic-hub-tile"><span aria-hidden="true">📚</span><strong>Learn</strong><small>Verified topics and complete lessons</small><b>Explore subjects →</b></Link>
+    <Link href="/ask" className="academic-hub-tile"><span aria-hidden="true">✍️</span><strong>Ask AVORA</strong><small>Bring schoolwork for guided help</small><b>Ask a question →</b></Link>
+    <Link href="/community" className="academic-hub-tile"><span aria-hidden="true">👥</span><strong>Study rooms</strong><small>Learn with moderated classmates</small><b>Join a room →</b></Link>
+    <Link href="/progress" className="academic-hub-tile"><span aria-hidden="true">📈</span><strong>My growth</strong><small>See mastery and what needs revision</small><b>View progress →</b></Link>
    </div>
-   <aside className="welcome-status" aria-label="Today's learning focus">
-    <span className="status-label">TODAY'S FOCUS</span>
-    <strong>{learnerTopicTitle(focusTopic)}</strong>
-    <p>{learnerTopicTitle(focusName)}</p>
-    <div className="status-row"><span>{focusState}</span><b>{focusAccuracy==null?'—':`${focusAccuracy}%`}</b></div>
-   </aside>
   </section>
 
   <section className="shell focus-band">
