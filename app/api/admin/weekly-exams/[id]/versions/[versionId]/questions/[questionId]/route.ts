@@ -1,0 +1,11 @@
+import {NextResponse} from 'next/server';import {requireAdmin} from '@/lib/admin/access';import {sql,withDbRetry} from '@/lib/db';
+export async function PATCH(req:Request,{params}:{params:Promise<{id:string;versionId:string;questionId:string}>}){await requireAdmin();const {id,versionId,questionId}=await params;const b=await req.json();const action=String(b.action||''),note=String(b.note||'').trim().slice(0,1000);
+ const [row]=await withDbRetry(()=>sql`SELECT x.question_id,v.status FROM weekly_exam_version_questions x JOIN weekly_exam_versions v ON v.id=x.version_id WHERE x.version_id=${versionId} AND x.question_id=${questionId} AND v.blueprint_id=${id}`);
+ if(!row)return NextResponse.json({error:'Paper question not found.'},{status:404});if(!['DRAFT','IN_REVIEW'].includes(String(row.status)))return NextResponse.json({error:'This paper version is no longer editable.'},{status:409});
+ if(action==='PASS_RELEVANCE')await withDbRetry(()=>sql`UPDATE weekly_exam_version_questions SET relevance_status='PASSED',reviewer_note=COALESCE(NULLIF(${note},''),reviewer_note) WHERE version_id=${versionId} AND question_id=${questionId}`);
+ else if(action==='PASS_ANSWER')await withDbRetry(()=>sql`UPDATE weekly_exam_version_questions SET answer_status='PASSED',reviewer_note=COALESCE(NULLIF(${note},''),reviewer_note) WHERE version_id=${versionId} AND question_id=${questionId}`);
+ else if(action==='REJECT'){await withDbRetry(()=>sql`UPDATE weekly_exam_version_questions SET relevance_status='FAILED',answer_status='FAILED',reviewer_note=${note||'Rejected by academic reviewer'} WHERE version_id=${versionId} AND question_id=${questionId}`);await withDbRetry(()=>sql`UPDATE questions SET quality_status='REJECTED' WHERE id=${questionId}`);}
+ else if(action==='REGENERATE')return NextResponse.json({message:'Question marked for regeneration. AI replacement is handled as a new draft so this original remains auditable.'},{status:202});
+ else return NextResponse.json({error:'Unknown review action.'},{status:400});
+ return NextResponse.json({ok:true,message:'Academic review saved.'});
+}
