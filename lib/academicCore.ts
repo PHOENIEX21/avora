@@ -43,9 +43,10 @@ export async function getActiveAcademicPlan(classLevel:string){
    const rows=await sql`
     SELECT o.id::text,o.day_index,o.title,o.objective_text,o.lesson_anchor,o.question_target,
            t.subject_name,t.curriculum_topic_id,COALESCE(tp.name,t.curriculum_topic_id) AS topic_name,
-           t.term,t.week_number
+           t.term,t.week_number,da.status AS daily_check_status
     FROM academic_daily_objectives o
     JOIN term_topic_schedule t ON t.id=o.schedule_id
+    LEFT JOIN daily_assessments da ON da.objective_id=o.id
     LEFT JOIN topics tp ON tp.id::text=t.curriculum_topic_id
     WHERE t.class_level=${classLevel} AND o.status='LIVE'
     ORDER BY t.term,t.week_number,o.day_index,o.sort_order,t.subject_name
