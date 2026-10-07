@@ -110,19 +110,24 @@ function enrichJss3AuthoredPlan(plan:TutorPlan,subject:string,topic:string):Tuto
    // but are benchmarked to the progression used by standard Nigerian JSS3 texts
    // (New General Mathematics Book 3 / Essential & Effective Mathematics Book 3;
    // New Oxford Secondary English Course 3 / New Concept English JSS 3).
+   // Materialize the authored examples directly into this unit. Keeping this
+   // composition explicit avoids the stale generated enrichment closure that was
+   // crashing production while preserving the authored JSS3 lesson bank.
    const modelStart=(index*3)%Math.max(1,examples.length);
-   const modelExamples=examples.length
-    ? [0,1,2,3,4]
-       .map(offset=>examples[(modelStart+offset)%examples.length])
-       .filter(Boolean)
-       .map((example,exampleIndex)=>deepenWorkedModel(
-          subject,
-          example,
-          teaching[(modelStart+exampleIndex)%Math.max(1,teaching.length)]||extraTeaching,
-          guided[(modelStart+exampleIndex)%Math.max(1,guided.length)]||practice,
-          exampleIndex
-       ))
-    : [];
+   const authoredModels:string[]=[];
+   if(examples.length){
+    for(let offset=0;offset<5;offset++){
+     const example=examples[(modelStart+offset)%examples.length];
+     if(!example)continue;
+     authoredModels.push(deepenWorkedModel(
+      subject,
+      example,
+      teaching[(modelStart+offset)%Math.max(1,teaching.length)]||extraTeaching,
+      guided[(modelStart+offset)%Math.max(1,guided.length)]||practice,
+      offset
+     ));
+    }
+   }
    const existing=unit.example?deepenWorkedModel(subject,String(unit.example||''),extraTeaching,practice,index):'';
    return {
     ...unit,
@@ -130,7 +135,7 @@ function enrichJss3AuthoredPlan(plan:TutorPlan,subject:string,topic:string):Tuto
     why:unit.why||extraTeaching,
     outcomes:Array.from(new Set([...(unit.outcomes||[]),deep.objectives[index%Math.max(1,deep.objectives.length)]])),
     example:existing,
-    workedExamples:modelExamples,
+    workedExamples:authoredModels,
     check:practice||unit.check,
     commonMistakes:Array.from(new Set([...(unit.commonMistakes||[]),...deep.misconceptions.slice(index%Math.max(1,deep.misconceptions.length),(index%Math.max(1,deep.misconceptions.length))+2)]))
    };
