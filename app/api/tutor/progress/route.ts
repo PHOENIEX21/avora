@@ -4,8 +4,8 @@ import {getSession} from '@/lib/auth';
 import {sql,withDbRetry} from '@/lib/db';
 import {subjectSlug} from '@/lib/subjects';
 
-const progressBody=z.object({topic:z.string().min(1).max(120),subject:z.string().min(2).max(80),exam:z.string().min(2).max(40),currentUnit:z.number().int().min(0).max(100),coveredUnits:z.array(z.number().int().min(0).max(100)).max(100),coverageComplete:z.boolean(),lastUnitTitle:z.string().max(180).optional()});
-const interactionBody=z.object({topic:z.string().min(1).max(120),subject:z.string().min(2).max(80),exam:z.string().min(2).max(40),unitTitle:z.string().max(180).optional(),kind:z.enum(['CHECKPOINT','QUESTION','RETEACH','LESSON_COMPLETE']),learnerText:z.string().max(8000).optional(),teacherText:z.string().max(16000).optional(),outcome:z.string().max(80).optional()});
+const progressBody=z.object({topic:z.string().min(1).max(500),subject:z.string().min(2).max(80),exam:z.string().min(2).max(40),currentUnit:z.number().int().min(0).max(100),coveredUnits:z.array(z.number().int().min(0).max(100)).max(100),coverageComplete:z.boolean(),lastUnitTitle:z.string().max(180).optional()});
+const interactionBody=z.object({topic:z.string().min(1).max(500),subject:z.string().min(2).max(80),exam:z.string().min(2).max(40),unitTitle:z.string().max(180).optional(),kind:z.enum(['CHECKPOINT','QUESTION','RETEACH','LESSON_COMPLETE']),learnerText:z.string().max(8000).optional(),teacherText:z.string().max(16000).optional(),outcome:z.string().max(80).optional()});
 
 export async function GET(req:Request){
  const s=await getSession();if(!s)return NextResponse.json({error:'Unauthorized'},{status:401});
