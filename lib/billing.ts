@@ -2,7 +2,7 @@ import { sql, withDbRetry } from '@/lib/db';
 
 export const FAMILY_PLAN_KEY='FAMILY_MONTHLY';
 export const FAMILY_MAX_STUDENTS=3;
-export const TRIAL_DAYS=14;
+export const TRIAL_DAYS=30;
 export const SEAT_REPLACEMENT_COOLDOWN_DAYS=90;
 
 export function familyPlanCode(){return process.env.PAYSTACK_PLAN_CODE_FAMILY_MONTHLY||''}
