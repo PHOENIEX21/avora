@@ -1,0 +1,1 @@
+import {redirect} from 'next/navigation';import {getSession} from '@/lib/auth';import WeeklyExamRunner from '@/components/WeeklyExamRunner';export default async function Page({params}:{params:Promise<{id:string}>}){const s=await getSession();if(!s)redirect('/login');const {id}=await params;return <WeeklyExamRunner examId={id}/>}
