@@ -4,6 +4,7 @@ import {getSession} from '@/lib/auth';
 import {requireStudentLearningAccess} from '@/lib/learningAccess';
 import {sql,withDbRetry} from '@/lib/db';
 import {learnerTopicTitle} from '@/lib/learnerPresentation';
+import {getActiveAcademicPlan} from '@/lib/academicCore';
 
 export const dynamic='force-dynamic';
 export const revalidate=0;
@@ -17,11 +18,12 @@ export default async function Welcome(){
  if(!u?.onboarding_completed) redirect('/onboarding');
  if(u?.class_level==='Primary 5'||u?.class_level==='Primary 6') redirect('/common-entrance');
 
- const [[st],[at],skillRows,remediationRows]=await Promise.all([
+ const [[st],[at],skillRows,remediationRows,academicPlan]=await Promise.all([
   withDbRetry(()=>sql`SELECT COALESCE(ROUND(AVG(score)*100),0) AS mastery,COUNT(*)::int skills FROM mastery WHERE student_id=${s.userId}`,2),
   withDbRetry(()=>sql`SELECT COUNT(*)::int attempts,COUNT(*) FILTER(WHERE is_correct)::int correct,COUNT(*) FILTER(WHERE mode='DIAGNOSTIC')::int diagnostic_attempts,COUNT(*) FILTER(WHERE mode='DIAGNOSTIC' AND is_correct)::int diagnostic_correct FROM attempts WHERE student_id=${s.userId}`,2),
   withDbRetry(()=>sql`SELECT s.name,t.name AS topic,ROUND(AVG(CASE WHEN a.is_correct THEN 1 ELSE 0 END)*100)::int AS accuracy,COUNT(*)::int evidence FROM attempts a JOIN questions q ON q.id=a.question_id JOIN skills s ON s.id=q.skill_id JOIN topics t ON t.id=s.topic_id WHERE a.student_id=${s.userId} GROUP BY s.id,s.name,t.name ORDER BY accuracy ASC,evidence DESC LIMIT 3`,2),
-  withDbRetry(()=>sql`SELECT recommended_topic,plan_reason FROM remediation_plans WHERE student_id=${s.userId} AND status='ACTIVE' ORDER BY created_at DESC LIMIT 1`,2)
+  withDbRetry(()=>sql`SELECT recommended_topic,plan_reason FROM remediation_plans WHERE student_id=${s.userId} AND status='ACTIVE' ORDER BY created_at DESC LIMIT 1`,2),
+  getActiveAcademicPlan(String(u.class_level||'JSS3'))
  ]);
 
  const first=(u.full_name||'Learner').split(/\s+/)[0];
@@ -46,7 +48,15 @@ export default async function Welcome(){
  const skills=Number(st?.skills||0);
  const focusState=focusAccuracy==null?'Ready to begin':focusAccuracy<45?'Needs teaching':focusAccuracy<75?'Developing':'Building confidence';
 
+ const weekday=Math.max(1,Math.min(5,new Date().getDay()||5));
+ const liveToday=(academicPlan as any[]).filter((x:any)=>Number(x.day_index)===weekday).slice(0,4);
+
  return <main className="premium-home">
+
+  <section className="shell today-command">
+   <header><div><span className="section-kicker">TODAY · ${new Intl.DateTimeFormat('en-NG',{weekday:'long',day:'numeric',month:'long'}).format(new Date())}</span><h1>Know exactly what to do today.</h1><p>${liveToday.length?'Your curriculum work is ready. Study each focus first, then complete its Daily Check.':'Your verified daily curriculum timetable is being prepared. Until it is live, continue from your current AVORA learning focus below.'}</p></div><Link href="/ask" className="premium-secondary">Add what school taught me →</Link></header>
+   ${liveToday.length?<div className="today-task-list">${liveToday.map((x:any)=><article key={x.id}><div><small>${x.subject_name} · Week ${x.week_number}</small><h2>${x.topic_name}</h2><strong>${x.title}</strong><p>${x.objective_text}</p></div><div className="today-task-actions"><Link href={'/tutor?subject='+encodeURIComponent(x.subject_name)+'&topic='+encodeURIComponent(x.topic_name)+(x.lesson_anchor?'&focus='+encodeURIComponent(x.lesson_anchor):'')}>Study this topic →</Link><span>${x.question_target} question Daily Check</span></div></article>)}</div>:<div className="today-empty-plan"><b>Current recommendation</b><strong>${learnerTopicTitle(focusTopic)}</strong><p>We will replace this recommendation with the verified weekly curriculum schedule as soon as the academic plan is approved.</p><Link href={remediation?.recommended_topic?'/tutor?topic='+encodeURIComponent(remediation.recommended_topic)+'&subject='+encodeURIComponent(u.preferred_subject||'Mathematics'):'/learn'}>Continue learning →</Link></div>}
+  </section>
 
   {u.class_level==='JSS3'&&!diagnosticComplete&&<section className="shell diagnostic-home-callout"><div><span className="section-kicker">START HERE · ABOUT 5 QUESTIONS</span><h2>Help AVORA find your starting point.</h2><p>You can still explore Learn, Tutor and Exam. This short check simply makes your recommendations more personal.</p></div><Link href="/diagnostic" className="premium-primary">Start diagnostic <span>→</span></Link></section>}
   <section className="shell premium-welcome">
