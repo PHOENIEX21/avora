@@ -1,4 +1,4 @@
-import Link from 'next/link';import {notFound} from 'next/navigation';import {requireAdmin} from '@/lib/admin/access';import {sql,withDbRetry} from '@/lib/db';import WeeklyExamAiPanel from '@/components/WeeklyExamAiPanel';
+import Link from 'next/link';import {notFound} from 'next/navigation';import {requireAdmin} from '@/lib/admin/access';import {sql,withDbRetry} from '@/lib/db';import WeeklyExamAiPanel from '@/components/WeeklyExamAiPanel';import WeeklyExamSchedule from '@/components/WeeklyExamSchedule';
 export const dynamic='force-dynamic';
 export default async function WeeklyExamWorkspace({params}:{params:Promise<{id:string}>}){await requireAdmin();const {id}=await params;
  const [exam]=await withDbRetry(()=>sql`SELECT * FROM weekly_exam_blueprints WHERE id=${id}`).catch(()=>[]);if(!exam)notFound();
@@ -8,5 +8,5 @@ export default async function WeeklyExamWorkspace({params}:{params:Promise<{id:s
  ]);
  return <main className="shell weekly-paper-workspace"><header className="admin-hero"><div><span className="eyebrow">{exam.class_level} · TERM {exam.term} · WEEK {exam.week_number}</span><h1>{exam.title}</h1><p>{exam.question_count} questions · {exam.duration_minutes} minutes · Status: {exam.status}</p></div><Link href="/admin/weekly-exams">← Weekly exams</Link></header>
  <section className="weekly-blueprint-scope"><header><span className="section-kicker">LOCKED ACADEMIC INTENT</span><h2>What this exam must measure</h2></header>{scope.map((x:any)=><article key={x.schedule_id}><div><small>{x.subject_name}</small><strong>{x.curriculum_topic_id}</strong><span>{x.objectives} approved daily objectives</span></div><b>{x.target_questions} questions</b></article>)}</section>
- <WeeklyExamAiPanel examId={String(exam.id)} canGenerate={scope.length>0}/>
+ <WeeklyExamAiPanel examId={String(exam.id)} canGenerate={scope.length>0}/><WeeklyExamSchedule examId={String(exam.id)} status={String(exam.status)}/>
  <section className="exam-version-history"><header><span className="section-kicker">PAPER VERSIONS</span><h2>Nothing published is silently rewritten.</h2></header>{versions.length?versions.map((v:any)=><Link key={v.id} href={'/admin/weekly-exams/'+exam.id+'/versions/'+v.id}><span>Version {v.version_number} · {v.generated_by}</span><strong>{v.status}</strong><small>{v.verified}/{v.questions} questions verified</small></Link>):<p>No paper generated yet. The blueprint above exists independently from AI output.</p>}</section></main>}
