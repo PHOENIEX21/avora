@@ -18,7 +18,7 @@ export async function POST(req:Request,{params}:{params:Promise<{id:string}>}){
   const [profile]=await withDbRetry(()=>sql`SELECT class_level FROM student_profiles WHERE user_id=${s.userId}`);
   const [room]=await withDbRetry(()=>sql`SELECT class_level FROM study_rooms WHERE id=${id} AND status='ACTIVE'`);
   if(!room||(s.role!=='ADMIN'&&String(room.class_level)!==String(profile?.class_level)))return NextResponse.json({error:'This group is not available for your class.'},{status:403});
-  if(d.parentPostId){const [parent]=await withDbRetry(()=>sql`SELECT id FROM study_room_posts WHERE id=${d.parentPostId} AND room_id=${id} AND status='VISIBLE'`);if(!parent)return NextResponse.json({error:'Reply target unavailable.'},{status:409})}
+  if(d.parentPostId){const parentId=d.parentPostId;const [parent]=await withDbRetry(()=>sql`SELECT id FROM study_room_posts WHERE id=${parentId} AND room_id=${id} AND status='VISIBLE'`);if(!parent)return NextResponse.json({error:'Reply target unavailable.'},{status:409})}
   const bytes=file instanceof File?Buffer.from(await file.arrayBuffer()):null;
   if(bytes){const signatures:Record<string,boolean>={'application/pdf':bytes.subarray(0,5).toString()==='%PDF-','image/png':bytes.subarray(0,8).toString('hex')==='89504e470d0a1a0a','image/jpeg':bytes.subarray(0,3).toString('hex')==='ffd8ff','image/webp':bytes.subarray(0,4).toString()==='RIFF'&&bytes.subarray(8,12).toString()==='WEBP'};if(!signatures[(file as File).type])return NextResponse.json({error:'File content does not match its type.'},{status:400})}
   const name=file instanceof File?file.name.replace(/[\\/\x00-\x1f]/g,'').slice(0,120)||'attachment':null;
