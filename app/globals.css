@@ -1182,3 +1182,11 @@ main,section,article,aside,header,footer,nav,form,div{min-width:0}
 .community-chat-input button,.community-message button{margin-top:.6rem}
 .community-empty-chat{margin:auto;text-align:center;color:#607286;max-width:30rem}
 @media(max-width:600px){.community-message{max-width:100%}.community-chat-shell{border-radius:14px}.community-chat-stream{padding:.8rem}.community-chat-input{padding:.8rem}}
+
+.study-polls{max-width:920px;margin:1.4rem auto;padding:1.25rem;border:1px solid #dce5ed;border-radius:18px;background:#fff}
+.study-polls>header{display:flex;justify-content:space-between;align-items:center;gap:1rem}
+.study-poll-editor{display:grid;gap:.6rem;margin:1rem 0}
+.study-poll-editor input{width:100%;padding:.8rem;border:1px solid #cbd5e1;border-radius:10px}
+.study-poll-card{display:grid;gap:.6rem;margin-top:1rem;padding:1rem;background:#f7fafc;border-radius:14px}
+.study-poll-card button{text-align:left;padding:.7rem 1rem;border:1px solid #cbd5e1;border-radius:10px;background:#fff}
+.study-poll-card button[aria-pressed="true"]{border-color:#2870a6;background:#e7f3ff}
