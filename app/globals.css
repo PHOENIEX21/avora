@@ -1198,3 +1198,10 @@ main,section,article,aside,header,footer,nav,form,div{min-width:0}
 .community-message-own header b{color:#175b36}
 .community-message .study-reply-composer{margin-top:.8rem;border-top:1px solid #d9e3e9;padding-top:.7rem}
 .community-message .study-reply-composer textarea{min-height:52px}
+
+.community-composer-actions{display:flex;gap:.75rem;align-items:center;flex-wrap:wrap;margin-top:.6rem}
+.community-attach{cursor:pointer;border:1px solid #cbd5e1;border-radius:10px;padding:.6rem .85rem;background:#f8fafc;font-size:.9rem}
+.community-attach input{display:block;max-width:220px;font-size:.75rem;margin-top:.3rem}
+.community-attachment{margin:.65rem 0;max-width:360px}
+.community-attachment img{display:block;max-width:100%;max-height:340px;object-fit:contain;border-radius:12px;border:1px solid #d8e2ec}
+.community-attachment a{overflow-wrap:anywhere}
