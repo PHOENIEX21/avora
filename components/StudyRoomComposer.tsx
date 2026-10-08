@@ -1,22 +1,24 @@
 'use client';
-import {useState} from 'react';
-import {useRouter} from 'next/navigation';
+import {useState} from 'react';import {useRouter} from 'next/navigation';
 export default function StudyRoomComposer({roomId,parentPostId,compact=false}:{roomId:string;parentPostId?:string;compact?:boolean}){
- const router=useRouter();const [body,setBody]=useState(''),[busy,setBusy]=useState(false),[msg,setMsg]=useState(''),[error,setError]=useState(false);
+ const router=useRouter();const [body,setBody]=useState(''),[file,setFile]=useState<File|null>(null),[busy,setBusy]=useState(false),[msg,setMsg]=useState(''),[error,setError]=useState(false),[reset,setReset]=useState(0);
  async function post(){
-  if(busy||body.trim().length<3)return;
+  if(busy||(!file&&body.trim().length<3))return;
   setBusy(true);setMsg('');setError(false);
   try{
-   const r=await fetch('/api/community/rooms/'+roomId+'/posts',{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify({body,parentPostId:parentPostId||null,postType:parentPostId?'ANSWER':'QUESTION'})});
-   const raw=await r.text();let data:{error?:string;message?:string}={};
-   try{data=raw?JSON.parse(raw):{}}catch{throw new Error('The server returned an unexpected response (HTTP '+r.status+').')}
-   if(!r.ok)throw new Error(data.error||'Could not send your message (HTTP '+r.status+').');
-   setBody('');setMsg('Message sent to the group.');router.refresh();
-  }catch(e){setError(true);setMsg(e instanceof Error?e.message:'Could not send. Please try again.')}finally{setBusy(false)}
+   const form=new FormData();form.set('body',body);form.set('postType',parentPostId?'ANSWER':'QUESTION');if(parentPostId)form.set('parentPostId',parentPostId);if(file)form.set('file',file);
+   const r=await fetch('/api/community/rooms/'+roomId+'/posts',{method:'POST',body:form});
+   const raw=await r.text();let d:{error?:string;message?:string}={};
+   try{d=raw?JSON.parse(raw):{}}catch{throw Error('Unexpected server response (HTTP '+r.status+').')}
+   if(!r.ok)throw Error(d.error||'Could not post (HTTP '+r.status+').');
+   setBody('');setFile(null);setReset(x=>x+1);setMsg('Sent to group.');router.refresh();
+  }catch(e){setError(true);setMsg(e instanceof Error?e.message:'Could not post.')}finally{setBusy(false)}
  }
  return <div className={compact?'study-reply-composer':'study-room-composer'}>
-  <textarea rows={compact?2:3} maxLength={4000} value={body} onChange={e=>setBody(e.target.value)} placeholder={compact?'Write a reply or explain the solution…':'Message your study group: ask, explain or share your working…'} aria-label={compact?'Reply to message':'Write a group message'}/>
-  <button type="button" disabled={busy||body.trim().length<3} onClick={post}>{busy?'Sending…':compact?'Send reply':'Send message →'}</button>
-  {msg&&<small role="status" style={{color:error?'#b91c1c':undefined}}>{msg}</small>}
+ <textarea rows={compact?2:3} maxLength={4000} value={body} onChange={e=>setBody(e.target.value)} placeholder={compact?'Reply or explain the solution…':'Message your study group…'} aria-label={compact?'Reply':'Group message'}/>
+ <div className="community-composer-actions"><label className="community-attach">📎 Image / PDF<input key={reset} type="file" accept=".pdf,.jpg,.jpeg,.png,.webp,application/pdf,image/jpeg,image/png,image/webp" onChange={e=>{const f=e.target.files?.[0]||null;if(f&&f.size>4*1024*1024){setError(true);setMsg('Maximum file size is 4 MB.');setFile(null)}else{setFile(f);setMsg('');setError(false)}}}/></label>
+ {file&&<small>{file.name} ({(file.size/1024/1024).toFixed(2)} MB) <button type="button" onClick={()=>{setFile(null);setReset(x=>x+1)}}>Remove</button></small>}
+ <button type="button" disabled={busy||(!file&&body.trim().length<3)} onClick={post}>{busy?'Sending…':compact?'Reply →':'Send →'}</button></div>
+ {msg&&<small role="status" style={{color:error?'#b91c1c':undefined}}>{msg}</small>}
  </div>;
 }
