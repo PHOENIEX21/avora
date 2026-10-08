@@ -1250,3 +1250,13 @@ main,section,article,aside,header,footer,nav,form,div{min-width:0}
 .community-react-toggle,.community-pin-action{border:0;background:transparent;font-size:.78rem;color:#356b5b;cursor:pointer;padding:.2rem}
 .community-emoji-picker{display:flex;gap:.2rem;padding:.3rem;background:#fff;border:1px solid #dbe4df;border-radius:18px;box-shadow:0 2px 8px #0001}
 .community-emoji-picker button{background:transparent;border:0;font-size:1.15rem;cursor:pointer}
+
+.community-report-action{display:inline-flex;flex-direction:column;gap:.25rem}
+.community-report-action>button{background:transparent;border:0;color:#64748b;font-size:.77rem;cursor:pointer;padding:.2rem}
+.community-report-form{display:flex;flex-direction:column;gap:.35rem;max-width:270px}
+.community-report-form input{width:100%;padding:.4rem;border:1px solid #cbd5e1;border-radius:6px}
+.community-report-form button,.community-report-buttons button{padding:.45rem .7rem;border:1px solid #cbd5e1;border-radius:7px;background:#fff;cursor:pointer}
+.community-report-buttons{display:flex;gap:.5rem;flex-wrap:wrap}
+.community-admin-grant{display:flex;gap:.5rem;flex-wrap:wrap;margin:.75rem 0}
+.community-admin-grant input{min-width:240px;flex:1;padding:.6rem;border:1px solid #cbd5e1;border-radius:8px}
+.community-admin-entry{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:.65rem;border-bottom:1px solid #e2e8f0}
