@@ -1266,3 +1266,7 @@ main,section,article,aside,header,footer,nav,form,div{min-width:0}
 .community-search-panel form{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center;margin-top:.6rem}
 .community-search-panel input{flex:1;min-width:180px;border:1px solid #cbd5e1;border-radius:7px;padding:.55rem}
 .community-search-panel button{padding:.55rem .8rem;border-radius:7px;border:1px solid #cbd5e1}
+
+.community-composer-emojis{display:flex;flex-wrap:wrap;gap:.15rem;align-items:center;background:#fff;border:1px solid #e2e8f0;padding:.3rem;border-radius:12px;max-width:260px}
+.community-composer-emojis button{font-size:1.15rem;border:0;background:transparent;padding:.25rem;cursor:pointer}
+.community-older-messages{display:block;text-align:center;padding:.55rem;margin:.4rem auto;color:#246e59;text-decoration:underline;font-size:.85rem}
