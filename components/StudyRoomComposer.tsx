@@ -11,7 +11,7 @@ export default function StudyRoomComposer({roomId,parentPostId,compact=false}:{r
    const raw=await r.text();let data:{error?:string;message?:string}={};
    try{data=raw?JSON.parse(raw):{}}catch{throw new Error('The server returned an unexpected response (HTTP '+r.status+').')}
    if(!r.ok)throw new Error(data.error||'Could not send your message (HTTP '+r.status+').');
-   setBody('');setMsg('Sent for moderation. Your message is visible to you while awaiting approval.');router.refresh();
+   setBody('');setMsg('Message sent to the group.');router.refresh();
   }catch(e){setError(true);setMsg(e instanceof Error?e.message:'Could not send. Please try again.')}finally{setBusy(false)}
  }
  return <div className={compact?'study-reply-composer':'study-room-composer'}>
