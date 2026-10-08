@@ -1224,3 +1224,8 @@ main,section,article,aside,header,footer,nav,form,div{min-width:0}
 .community-reply-action .study-reply-composer{margin-top:.5rem}
 .community-reply-action textarea{width:100%}
 @media(max-width:640px){.community-room-heading{padding:.7rem}.community-chat-shell{max-height:78dvh;min-height:400px}.community-chat-stream{padding:.55rem}.community-message{max-width:92%;padding:.65rem .75rem}.community-group-avatar{width:42px;height:42px;flex-basis:42px}}
+
+.community-post-tools{display:flex;gap:.75rem;align-items:flex-start;flex-wrap:wrap;margin-top:.3rem}
+.community-message-actions button{border:0;background:transparent;color:#8b6510;cursor:pointer;font-size:.78rem;padding:.2rem 0}
+.community-message-actions button[aria-pressed="true"]{font-weight:700}
+.community-message-actions small{display:block;color:#b91c1c}
