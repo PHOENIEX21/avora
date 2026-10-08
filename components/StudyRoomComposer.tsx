@@ -1,25 +1,58 @@
 'use client';
-import {useState} from 'react';import {useRouter} from 'next/navigation';
+import {useRef,useState} from 'react';
+import {useRouter} from 'next/navigation';
+
 export default function StudyRoomComposer({roomId,parentPostId,compact=false}:{roomId:string;parentPostId?:string;compact?:boolean}){
- const router=useRouter();const [showEmoji,setShowEmoji]=useState(false);const [body,setBody]=useState(''),[file,setFile]=useState<File|null>(null),[busy,setBusy]=useState(false),[msg,setMsg]=useState(''),[error,setError]=useState(false),[reset,setReset]=useState(0);
- async function post(){
-  if(busy||(!file&&body.trim().length<3))return;
-  setBusy(true);setMsg('');setError(false);
-  try{
-   const form=new FormData();form.set('body',body);form.set('postType',parentPostId?'ANSWER':'QUESTION');if(parentPostId)form.set('parentPostId',parentPostId);if(file)form.set('file',file);
-   const r=await fetch('/api/community/rooms/'+roomId+'/posts',{method:'POST',body:form});
-   const raw=await r.text();let d:{error?:string;message?:string}={};
-   try{d=raw?JSON.parse(raw):{}}catch{throw Error('Unexpected server response (HTTP '+r.status+').')}
-   if(!r.ok)throw Error(d.error||'Could not post (HTTP '+r.status+').');
-   setBody('');setFile(null);setReset(x=>x+1);setMsg('Sent to group.');router.refresh();
-  }catch(e){setError(true);setMsg(e instanceof Error?e.message:'Could not post.')}finally{setBusy(false)}
+ const router=useRouter();
+ const [body,setBody]=useState('');
+ const [file,setFile]=useState<File|null>(null);
+ const [busy,setBusy]=useState(false);
+ const [message,setMessage]=useState('');
+ const [attachmentOpen,setAttachmentOpen]=useState(false);
+ const [emojiOpen,setEmojiOpen]=useState(false);
+ const inputRef=useRef<HTMLTextAreaElement>(null);
+ const fileRef=useRef<HTMLInputElement>(null);
+ const galleryRef=useRef<HTMLInputElement>(null);
+ const cameraRef=useRef<HTMLInputElement>(null);
+ const hasContent=Boolean(body.trim()||file);
+ function chooseFile(next:File|null){
+  if(!next)return;
+  if(next.size>4*1024*1024){setMessage('Maximum attachment size is 4 MB.');return}
+  if(!['application/pdf','image/jpeg','image/png','image/webp'].includes(next.type)){setMessage('Only PDF, JPG, PNG and WebP are supported.');return}
+  setFile(next);setMessage('');setAttachmentOpen(false);
  }
- return <div className={compact?'study-reply-composer':'study-room-composer'}>
- <textarea rows={compact?2:3} maxLength={4000} value={body} onChange={e=>setBody(e.target.value)} placeholder={compact?'Reply or explain the solution…':'Message your study group…'} aria-label={compact?'Reply':'Group message'}/>
- <div className="community-composer-actions"><button type="button" aria-expanded={showEmoji} aria-label="Choose emoji" onClick={()=>setShowEmoji(v=>!v)}>☺</button>{showEmoji&&<div className="community-composer-emojis">{['😀','😊','👍','❤️','👏','🙏','🎉','📚','✏️','💡'].map(emoji=><button type="button" key={emoji} onClick={()=>{setBody(v=>(v+emoji).slice(0,4000));setShowEmoji(false)}}>{emoji}</button>)}</div>}<label className="community-attach">📎 Image / PDF<input key={reset} type="file" accept=".pdf,.jpg,.jpeg,.png,.webp,application/pdf,image/jpeg,image/png,image/webp" onChange={e=>{const f=e.target.files?.[0]||null;if(f&&f.size>4*1024*1024){setError(true);setMsg('Maximum file size is 4 MB.');setFile(null)}else{setFile(f);setMsg('');setError(false)}}}/></label>
- <label className="community-attach">📷 Camera<input key={'camera-'+reset} type="file" accept="image/*" capture="environment" onChange={e=>{const f=e.target.files?.[0]||null;if(f&&(!['image/jpeg','image/png','image/webp'].includes(f.type)||f.size>4*1024*1024)){setError(true);setMsg('Use JPG, PNG or WebP up to 4 MB.');setFile(null)}else{setFile(f);setError(false);setMsg('')}}}/></label>
- {file&&<small>{file.name} ({(file.size/1024/1024).toFixed(2)} MB) <button type="button" onClick={()=>{setFile(null);setReset(x=>x+1)}}>Remove</button></small>}
- <button type="button" disabled={busy||(!file&&body.trim().length<3)} onClick={post}>{busy?'Sending…':compact?'Reply →':'Send →'}</button></div>
- {msg&&<small role="status" style={{color:error?'#b91c1c':undefined}}>{msg}</small>}
+ async function send(){
+  if(busy||(!file&&body.trim().length<3))return;
+  setBusy(true);setMessage('');
+  try{
+   const data=new FormData();
+   data.set('body',body);
+   data.set('postType',parentPostId?'ANSWER':'QUESTION');
+   if(parentPostId)data.set('parentPostId',parentPostId);
+   if(file)data.set('file',file);
+   const response=await fetch('/api/community/rooms/'+roomId+'/posts',{method:'POST',body:data});
+   const payload=await response.json().catch(()=>({error:'Unexpected server response'}));
+   if(!response.ok)throw Error(payload.error||'Could not send message.');
+   setBody('');setFile(null);setAttachmentOpen(false);setEmojiOpen(false);router.refresh();
+  }catch(e){setMessage(e instanceof Error?e.message:'Message could not be sent.')}
+  finally{setBusy(false)}
+ }
+ return <div className={compact?'study-reply-composer':'avora-chat-composer'}>
+  <div className="avora-chat-input-row">
+   <div className="avora-chat-field">
+    <button className="avora-chat-icon" type="button" aria-label="Insert emoji" aria-expanded={emojiOpen} onClick={()=>{setEmojiOpen(v=>!v);setAttachmentOpen(false)}}>☺</button>
+    <textarea ref={inputRef} rows={1} value={body} maxLength={4000} aria-label={compact?'Reply':'Message'} placeholder={compact?'Reply':'Message'} onChange={e=>setBody(e.target.value)} onKeyDown={e=>{if(e.key==='Enter'&&!e.shiftKey&&!e.nativeEvent.isComposing){e.preventDefault();void send()}}}/>
+    <button className="avora-chat-icon" type="button" aria-label="Add attachment" aria-expanded={attachmentOpen} onClick={()=>{setAttachmentOpen(v=>!v);setEmojiOpen(false)}}>📎</button>
+    <button className="avora-chat-icon" type="button" aria-label="Open camera" onClick={()=>cameraRef.current?.click()}>📷</button>
+   </div>
+   <button className="avora-chat-send" type="button" aria-label={hasContent?'Send message':'Voice messages not yet available'} title={hasContent?'Send message':'Voice messages coming soon'} disabled={busy||!hasContent||(!file&&body.trim().length<3)} onClick={()=>void send()}>{hasContent?'➤':'🎙'}</button>
+  </div>
+  <input className="avora-chat-hidden-file" ref={fileRef} type="file" accept=".pdf,application/pdf" aria-label="Choose PDF document" onChange={e=>chooseFile(e.target.files?.[0]||null)}/>
+  <input className="avora-chat-hidden-file" ref={galleryRef} type="file" accept="image/jpeg,image/png,image/webp" aria-label="Choose image" onChange={e=>chooseFile(e.target.files?.[0]||null)}/>
+  <input className="avora-chat-hidden-file" ref={cameraRef} type="file" accept="image/*" capture="environment" aria-label="Take a photo" onChange={e=>chooseFile(e.target.files?.[0]||null)}/>
+  {emojiOpen&&<div className="avora-chat-emoji-menu">{['😀','😂','😊','❤️','👍','🙏','👏','🎉','📚','💡'].map(e=><button key={e} type="button" onClick={()=>{setBody(v=>(v+e).slice(0,4000));setEmojiOpen(false);inputRef.current?.focus()}}>{e}</button>)}</div>}
+  {attachmentOpen&&<div className="avora-chat-attachment-sheet"><div className="avora-chat-sheet-handle"/><button type="button" onClick={()=>fileRef.current?.click()}><span>📄</span>Document</button><button type="button" onClick={()=>galleryRef.current?.click()}><span>🖼️</span>Gallery</button><button type="button" onClick={()=>cameraRef.current?.click()}><span>📷</span>Camera</button><button type="button" onClick={()=>setAttachmentOpen(false)}><span>✕</span>Close</button></div>}
+  {file&&<div className="avora-chat-file-preview"><span>📎 {file.name}</span><button type="button" onClick={()=>setFile(null)}>Remove</button></div>}
+  {message&&<small role="status" className="avora-chat-error">{message}</small>}
  </div>;
 }
