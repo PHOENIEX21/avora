@@ -1260,3 +1260,9 @@ main,section,article,aside,header,footer,nav,form,div{min-width:0}
 .community-admin-grant{display:flex;gap:.5rem;flex-wrap:wrap;margin:.75rem 0}
 .community-admin-grant input{min-width:240px;flex:1;padding:.6rem;border:1px solid #cbd5e1;border-radius:8px}
 .community-admin-entry{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:.65rem;border-bottom:1px solid #e2e8f0}
+
+.community-search-panel{background:#fff;padding:.6rem 1rem;border:1px solid #e2e8f0}
+.community-search-panel summary{cursor:pointer;font-size:.86rem;font-weight:600}
+.community-search-panel form{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center;margin-top:.6rem}
+.community-search-panel input{flex:1;min-width:180px;border:1px solid #cbd5e1;border-radius:7px;padding:.55rem}
+.community-search-panel button{padding:.55rem .8rem;border-radius:7px;border:1px solid #cbd5e1}
