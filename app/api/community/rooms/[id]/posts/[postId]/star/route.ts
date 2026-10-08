@@ -1,8 +1,8 @@
 import {NextResponse} from 'next/server';
-import {getSession} from '@/lib/auth';import {sql,withDbRetry} from '@/lib/db';
+import {getSession} from '@/lib/auth';import {isCommunityAdmin} from '@/lib/communityAccess';import {sql,withDbRetry} from '@/lib/db';
 async function check(roomId:string,userId:string,role:string){
  const [room]=await withDbRetry(()=>sql`SELECT class_level FROM study_rooms WHERE id=${roomId} AND status='ACTIVE'`);
- if(!room)return false;if(role==='ADMIN')return true;
+ if(!room)return false;if(await isCommunityAdmin(userId))return true;
  const [profile]=await withDbRetry(()=>sql`SELECT class_level FROM student_profiles WHERE user_id=${userId}`);
  return String(profile?.class_level)===String(room.class_level);
 }
