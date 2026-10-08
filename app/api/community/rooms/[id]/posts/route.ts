@@ -24,7 +24,7 @@ export async function POST(req:Request,{params}:{params:Promise<{id:string}>}){
   const name=file instanceof File?file.name.replace(/[\\/\x00-\x1f]/g,'').slice(0,120)||'attachment':null;
   await withDbRetry(()=>sql.begin(async tx=>{
    const [post]=await tx`INSERT INTO study_room_posts(room_id,author_id,parent_post_id,post_type,body,status) VALUES(${id},${s.userId},${d.parentPostId||null},${d.postType},${d.body},'VISIBLE') RETURNING id`;
-   if(bytes&&file){const encoded=bytes.toString('base64');await tx`INSERT INTO study_room_attachments(post_id,file_name,mime_type,file_size,file_bytes) VALUES(${post.id},${name},${file.type},${bytes.length},decode(${encoded},'base64'))`}
+   if(bytes&&file){const encoded=bytes.toString('base64');await tx`INSERT INTO study_room_attachments(post_id,file_name,mime_type,file_size,file_bytes) VALUES(${post.id},${name||'attachment'},${file.type},${bytes.length},decode(${encoded},'base64'))`}
   }));
   return NextResponse.json({ok:true,message:'Message posted to your study group.'});
  }catch(e){console.error('community post failed',e);return NextResponse.json({error:'Message could not be posted. Please retry.'},{status:500})}
