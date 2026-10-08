@@ -1316,3 +1316,5 @@ body:has(.study-room) .footer,body:has(.study-room) [class*="trial-countdown"],b
 .community-polls-panel,.community-search-panel{max-width:920px;margin:0 auto;padding:6px 14px;background:#fff;border-bottom:1px solid #ececec}
 .community-polls-panel>summary,.community-search-panel>summary{font-size:.78rem;cursor:pointer;color:#53606c}
 @media(max-width:600px){.study-room{padding-left:0!important;padding-right:0!important}.community-message-interaction{max-width:88%}.study-room .community-chat-stream{padding:12px 9px}.study-room .community-chat-input{padding:7px}.study-room .study-room-composer textarea{width:100%;flex-basis:100%;order:0}.study-room .community-room-heading{padding:8px 10px}}
+
+body:has(.study-room) .trial-live-strip{display:none!important}
