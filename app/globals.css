@@ -1190,3 +1190,11 @@ main,section,article,aside,header,footer,nav,form,div{min-width:0}
 .study-poll-card{display:grid;gap:.6rem;margin-top:1rem;padding:1rem;background:#f7fafc;border-radius:14px}
 .study-poll-card button{text-align:left;padding:.7rem 1rem;border:1px solid #cbd5e1;border-radius:10px;background:#fff}
 .study-poll-card button[aria-pressed="true"]{border-color:#2870a6;background:#e7f3ff}
+
+/* Messaging alignment: classmates left, own messages right */
+.community-thread{width:100%}
+.community-message-own{margin-left:auto;background:#e4f5ea;border-color:#c1e3cb}
+.community-message-peer{margin-right:auto;background:#fff}
+.community-message-own header b{color:#175b36}
+.community-message .study-reply-composer{margin-top:.8rem;border-top:1px solid #d9e3e9;padding-top:.7rem}
+.community-message .study-reply-composer textarea{min-height:52px}
