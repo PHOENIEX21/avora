@@ -34,7 +34,7 @@ export default async function DawnToday(){
    <section className={styles.content}>
     <div className={styles.weekRow}><div><p className={styles.sectionLabel}>THIS WEEK</p><h2>Term {Number(state.term)} · Week {Number(state.current_week)}</h2></div><span className={styles.weekIcon}>✷</span></div>
     {onboardingRequired?
-     <article className={styles.onboarding}><div className={styles.onboardingIcon}>♡</div><h3>Let’s get your learning space ready</h3><p>A parent or guardian needs to complete the secure setup before the new learning experience opens. Your existing lessons and results are safe.</p><span className={styles.pending}>Guardian setup coming soon</span><Link href="/home" className={styles.secondary}>Continue existing lessons →</Link></article>
+     <article className={styles.onboarding}><div className={styles.onboardingIcon}>♡</div><h3>Let’s get your learning space ready</h3><p>A parent or guardian needs to complete the secure setup before the new learning experience opens. Your existing lessons and results are safe.</p><Link href="/dawn/guardian-setup" className={styles.secondary}>View guardian setup →</Link><Link href="/home" className={styles.secondary}>Continue existing lessons →</Link></article>
      :<article className={styles.onboarding}><div className={styles.onboardingIcon}>✦</div><h3>Your new learning journey is almost ready</h3><p>We’re finishing the verified guardian access and weekly assessments. Continue your existing lessons while we prepare.</p><Link href="/home" className={styles.secondary}>Continue existing lessons →</Link></article>}
     <h2 className={styles.nextTitle}>Your learning, your pace</h2>
     <div className={styles.tiles}>
