@@ -6,7 +6,7 @@ const source=readFileSync(new URL('../lib/weeklyLearning.ts',import.meta.url),'u
 const compiled=ts.transpileModule(source,{compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022}}).outputText;
 const testModule={exports:{}};
 new Function('module','exports','require',compiled )(testModule,testModule.exports,()=>({sql:null,withDbRetry:null}));
-const {nextRevisitInterval,canServeWeeklyItem,canAccessClassRoom,nextWeekRevisionDates,validateWeeklyExamPlan,isoWeekday}=testModule.exports;
+const {nextRevisitInterval,canServeWeeklyItem,canAccessClassRoom,nextWeekRevisionDates,validateWeeklyExamPlan,isoWeekday,defaultExamSaturday,defaultRevisionWednesday}=testModule.exports;
 test('scheduler: first correct 2 days, second 7 days, third 21 days, wrong resets',()=>{
  assert.equal(nextRevisitInterval(0,true),2);
  assert.equal(nextRevisitInterval(1,true),7);
@@ -32,14 +32,13 @@ test('migration: no destructive operations and pilot defaults disabled',()=>{
  assert.match(sql,/weekly_item_approval_gate/);
 });
 
-test('weekly calendar: Monday-Friday objective days, Saturday exam, next-week revision selection',()=>{
+test('weekly defaults and scheduling overrides',()=>{
  assert.equal(isoWeekday('2026-10-12'),1);
- assert.equal(isoWeekday('2026-10-16'),5);
- assert.equal(isoWeekday('2026-10-17'),6);
+ assert.equal(defaultExamSaturday('2026-10-12'),'2026-10-17');
+ assert.equal(defaultRevisionWednesday('2026-10-17'),'2026-10-21');
  assert.deepEqual(nextWeekRevisionDates('2026-10-17'),['2026-10-19','2026-10-20','2026-10-21','2026-10-22','2026-10-23','2026-10-24','2026-10-25']);
- assert.equal(validateWeeklyExamPlan('2026-10-17','2026-10-21'),true);
- assert.equal(validateWeeklyExamPlan('2026-10-17','2026-10-18'),false);
- assert.equal(validateWeeklyExamPlan('2026-10-17','2026-10-26'),false);
- assert.throws(()=>nextWeekRevisionDates('2026-10-16'));
+ assert.equal(validateWeeklyExamPlan('2026-10-16','2026-10-20'),true);
+ assert.equal(validateWeeklyExamPlan('2026-10-17','2026-10-18'),true);
+ assert.equal(validateWeeklyExamPlan('2026-10-17','2026-10-16'),false);
  assert.throws(()=>isoWeekday('2026-02-30'));
 });
