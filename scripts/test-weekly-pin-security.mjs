@@ -2,6 +2,8 @@ import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import test from 'node:test';
 import ts from 'typescript';
+import {createRequire} from 'node:module';
+const require=createRequire(import.meta.url);
 const source=readFileSync(new URL('../lib/weeklyPinSecurity.ts',import.meta.url),'utf8');
 const compiled=ts.transpileModule(source,{compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022}}).outputText;
 const testModule={exports:{}};
