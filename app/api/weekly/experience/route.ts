@@ -24,14 +24,14 @@ export async function GET(){
 
   // A legacy account never inherits consent or a parent PIN implicitly.
   const [consent]=await withDbRetry(()=>sql`
-   SELECT consent_data,consent_version,consent_at FROM weekly_parent_consents
+   SELECT consent_data,consent_version,consent_at,parent_contact_verified_at FROM weekly_parent_consents
    WHERE student_id=${session.userId} LIMIT 1`);
   const [parentPin]=await withDbRetry(()=>sql`
    SELECT student_id FROM weekly_parent_pins WHERE student_id=${session.userId} LIMIT 1`);
   const [studentPin]=await withDbRetry(()=>sql`
    SELECT student_id FROM weekly_student_pins WHERE student_id=${session.userId} LIMIT 1`);
   const hasConsent=consent?.consent_data===true&&Boolean(consent?.consent_version)&&Boolean(consent?.consent_at);
-  const needsParentOnboarding=!hasConsent||!parentPin;
+  const needsParentOnboarding=!hasConsent||!consent?.parent_contact_verified_at||!parentPin;
   const needsStudentPin=!studentPin;
   if(needsParentOnboarding||needsStudentPin)
    return NextResponse.json({
