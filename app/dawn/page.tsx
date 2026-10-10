@@ -18,10 +18,10 @@ export default async function DawnToday(){
  if(!(await isWeeklyLearningEnabled(classLevel)))redirect('/home');
  const [state]=await withDbRetry(()=>sql`SELECT term,current_week FROM weekly_class_week_state WHERE class_level=${classLevel} LIMIT 1`);
  if(!state)redirect('/home');
- const [consent]=await withDbRetry(()=>sql`SELECT consent_data,consent_at,consent_version FROM weekly_parent_consents WHERE student_id=${session.userId} LIMIT 1`);
+ const [consent]=await withDbRetry(()=>sql`SELECT consent_data,consent_at,consent_version,parent_contact_verified_at FROM weekly_parent_consents WHERE student_id=${session.userId} LIMIT 1`);
  const [parentPin]=await withDbRetry(()=>sql`SELECT student_id FROM weekly_parent_pins WHERE student_id=${session.userId} LIMIT 1`);
  const [studentPin]=await withDbRetry(()=>sql`SELECT student_id FROM weekly_student_pins WHERE student_id=${session.userId} LIMIT 1`);
- const onboardingRequired=consent?.consent_data!==true||!consent.consent_at||!consent.consent_version||!parentPin||!studentPin;
+ const onboardingRequired=consent?.consent_data!==true||!consent.consent_at||!consent.consent_version||!consent.parent_contact_verified_at||!parentPin||!studentPin;
  return <main className={styles.screen}>
   <div className={styles.phone}>
    <header className={styles.header}>
@@ -38,13 +38,13 @@ export default async function DawnToday(){
      :<article className={styles.onboarding}><div className={styles.onboardingIcon}>✦</div><h3>Your new learning journey is almost ready</h3><p>We’re finishing the verified guardian access and weekly assessments. Continue your existing lessons while we prepare.</p><Link href="/home" className={styles.secondary}>Continue existing lessons →</Link></article>}
     <h2 className={styles.nextTitle}>Your learning, your pace</h2>
     <div className={styles.tiles}>
-     <div className={styles.tile}><span>◉</span><b>Today</b><small>Your daily activities</small></div>
-     <div className={styles.tile}><span>✧</span><b>This Week</b><small>Weekly learning goals</small></div>
-     <div className={styles.tile}><span>✦</span><b>My Stars</b><small>Your mastery journey</small></div>
-     <div className={styles.tile}><span>♡</span><b>Parent Area</b><small>Protected family access</small></div>
+     <div className={styles.tile}><span>◉</span><b>Today</b><small>Daily activities preparing</small></div>
+     <Link href="/dawn/this-week" className={styles.tile}><span>✧</span><b>This Week</b><small>Weekly learning goals</small></Link>
+     <div className={styles.tile}><span>✦</span><b>My Stars</b><small>Mastery view preparing</small></div>
+     <div className={styles.tile}><span>♡</span><b>Parent Area</b><small>Secure setup pending</small></div>
     </div>
    </section>
-   <nav className={styles.nav} aria-label="Learning navigation"><span className={styles.navActive}>⌂ <small>Today</small></span><Link href="/home">◫ <small>Old home</small></Link><Link href="/learn">▤ <small>Lessons</small></Link><Link href="/profile">◯ <small>Profile</small></Link></nav>
+   <nav className={styles.nav} aria-label="Learning navigation"><span className={styles.navActive}>⌂ <small>Today</small></span><Link href="/dawn/this-week">◫ <small>This week</small></Link><Link href="/learn">▤ <small>Lessons</small></Link><Link href="/profile">◯ <small>Profile</small></Link></nav>
   </div>
  </main>;
 }
