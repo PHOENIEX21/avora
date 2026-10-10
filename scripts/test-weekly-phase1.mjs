@@ -4,9 +4,9 @@ import test from 'node:test';
 import ts from 'typescript';
 const source=readFileSync(new URL('../lib/weeklyLearning.ts',import.meta.url),'utf8');
 const compiled=ts.transpileModule(source,{compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022}}).outputText;
-const module={exports:{}};
-new Function('module','exports','require',compiled)(module,module.exports,()=>({sql:null,withDbRetry:null}));
-const {nextRevisitInterval,canServeWeeklyItem,canAccessClassRoom,nextWeekRevisionDates,validateWeeklyExamPlan,isoWeekday}=module.exports;
+const testModule={exports:{}};
+new Function('module','exports','require',compiled )(testModule,testModule.exports,()=>({sql:null,withDbRetry:null}));
+const {nextRevisitInterval,canServeWeeklyItem,canAccessClassRoom,nextWeekRevisionDates,validateWeeklyExamPlan,isoWeekday}=testModule.exports;
 test('scheduler: first correct 2 days, second 7 days, third 21 days, wrong resets',()=>{
  assert.equal(nextRevisitInterval(0,true),2);
  assert.equal(nextRevisitInterval(1,true),7);
