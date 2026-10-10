@@ -25,7 +25,7 @@ export async function GET(req:Request){
   questions=await withDbRetry(()=>sql`
    SELECT aq.id,aq.original_text,aq.curriculum_topic_id,aq.classification_confidence,aq.question_type,
           aq.options,aq.correct_answer,aq.rubric,aq.max_marks,aq.model_solution,aq.needs_confirmation,aq.last_resurfaced_at,aq.resurfaced_count,aq.next_review_at,aq.active_for_review,
-          ua.id assignment_id,ua.label,ua.subject_name,ua.class_level,ua.uploaded_at,
+          ua.id assignment_id,ua.label,ua.subject_name,ua.class_level,ua.uploaded_at,ua.approved_at,ua.solution_ready_at,
           COALESCE(stats.attempt_count,0)::int attempt_count,stats.latest_score,stats.latest_attempt_at
    FROM assignment_questions aq
    JOIN uploaded_assignments ua ON ua.id=aq.assignment_id

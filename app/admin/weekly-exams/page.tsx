@@ -1,0 +1,11 @@
+import Link from 'next/link';
+import {requireAdmin} from '@/lib/admin/access';
+import {sql,withDbRetry} from '@/lib/db';
+export const dynamic='force-dynamic';
+export default async function WeeklyExamsAdmin(){
+ await requireAdmin();
+ const rows=await withDbRetry(()=>sql`SELECT b.*,COUNT(DISTINCT s.schedule_id)::int scope_items,COUNT(DISTINCT v.id)::int versions,MAX(v.version_number)::int latest_version FROM weekly_exam_blueprints b LEFT JOIN weekly_exam_scope s ON s.blueprint_id=b.id LEFT JOIN weekly_exam_versions v ON v.blueprint_id=b.id GROUP BY b.id ORDER BY b.created_at DESC LIMIT 100`).catch(()=>[]);
+ return <main className="shell admin-weekly-exams"><header className="admin-hero"><div><span className="eyebrow">AVORA WEEKLY · SERIOUS ASSESSMENT</span><h1>Build the exam from what was actually taught this week.</h1><p>AI receives an approved weekly blueprint—not a vague topic prompt. Review coverage, difficulty, every question, answer and solution before locking the paper.</p></div><Link href="/admin/weekly-exams/new" className="premium-primary">Create weekly exam →</Link></header>
+ <section className="weekly-exam-principles"><div><b>1</b><span>Collect this week’s approved topics & objectives</span></div><div><b>2</b><span>Set subject weights, difficulty and duration</span></div><div><b>3</b><span>Engage AI to draft a balanced paper</span></div><div><b>4</b><span>Review / replace individual questions</span></div><div><b>5</b><span>Approve, lock, schedule and publish</span></div></section>
+ <section className="admin-day-list">{rows.length?rows.map((x:any)=><Link href={'/admin/weekly-exams/'+x.id} key={x.id}><div><small>{x.class_level} · Term {x.term} · Week {x.week_number}</small><h2>{x.title}</h2><p>{x.question_count} questions · {x.duration_minutes} minutes · {x.scope_items} scoped curriculum items</p></div><aside><span>{x.status}</span><b>{x.versions}</b><small>{x.latest_version?'latest v'+x.latest_version:'no paper yet'}</small></aside></Link>):<div className="admin-empty"><h2>No weekly exams created yet.</h2><p>Create one only after that week’s curriculum topics and daily objectives are approved.</p></div>}</section></main>;
+}

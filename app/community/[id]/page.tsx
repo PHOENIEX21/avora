@@ -1,0 +1,46 @@
+import {redirect,notFound} from 'next/navigation';
+import Link from 'next/link';
+import {getSession} from '@/lib/auth';
+import {sql,withDbRetry} from '@/lib/db';
+import StudyRoomComposer from '@/components/StudyRoomComposer';
+import StudyPolls from '@/components/StudyPolls';
+import CommunityLiveRefresh from '@/components/CommunityLiveRefresh';
+import CommunityChatStream from '@/components/CommunityChatStream';
+import StudyReplyAction from '@/components/StudyReplyAction';
+import StudyMessageActions from '@/components/StudyMessageActions';
+import StudyReactions from '@/components/StudyReactions';
+import StudyPinAction from '@/components/StudyPinAction';
+import StudyReportAction from '@/components/StudyReportAction';
+import CommunityMessageMenu from '@/components/CommunityMessageMenu';
+import {isCommunityAdmin,isCommunityOwner} from '@/lib/communityAccess';
+export const dynamic='force-dynamic';
+export default async function Room({params,searchParams}:{params:Promise<{id:string}>;searchParams:Promise<{q?:string;before?:string}>}){
+ const s=await getSession();if(!s)redirect('/login');
+ const {id}=await params;const search=await searchParams;const q=String(search.q||'').trim().slice(0,100).toLowerCase();const before=String(search.before||'');const beforeDate=/^\d{4}-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{3}Z$/.test(before)&&!Number.isNaN(Date.parse(before))?before:null;
+ const [room]=await withDbRetry(()=>sql`SELECT * FROM study_rooms WHERE id=${id} AND status='ACTIVE'`).catch(()=>[]);
+ if(!room)notFound();
+ const [profile]=await withDbRetry(()=>sql`SELECT class_level FROM student_profiles WHERE user_id=${s.userId}`).catch(()=>[]);
+ const canModerate=await isCommunityAdmin(s.userId);
+ if(!canModerate&&String(profile?.class_level)!==String(room.class_level))notFound();
+ const posts=await withDbRetry(()=>sql`SELECT p.id,p.parent_post_id,p.post_type,p.body,p.status,p.author_id,p.created_at,u.full_name,a.id AS attachment_id,a.file_name AS attachment_name,a.mime_type AS attachment_type,(st.post_id IS NOT NULL) AS is_starred FROM study_room_posts p JOIN users u ON u.id=p.author_id LEFT JOIN study_room_attachments a ON a.post_id=p.id LEFT JOIN study_room_starred_posts st ON st.post_id=p.id AND st.user_id=${s.userId} WHERE p.room_id=${id} AND (p.status='VISIBLE' OR (p.status='PENDING_REVIEW' AND p.author_id=${s.userId})) AND (${beforeDate}::timestamptz IS NULL OR p.created_at < ${beforeDate}::timestamptz) AND (${q}='' OR p.body ILIKE ${'%'+q+'%'} OR u.full_name ILIKE ${'%'+q+'%'} OR a.file_name ILIKE ${'%'+q+'%'}) ORDER BY p.created_at DESC,p.id DESC LIMIT 100`).then(rows=>rows.reverse()).catch(()=>[]);
+ const rawPolls=await withDbRetry(()=>sql`SELECT p.id,p.question,p.options,(SELECT json_agg(json_build_object('option',v.option_index,'voter',v.voter_id)) FROM study_room_poll_votes v WHERE v.poll_id=p.id) votes FROM study_room_polls p WHERE p.room_id=${id} ORDER BY p.created_at DESC LIMIT 20`).catch(()=>[]);
+ const polls=rawPolls.map((p:any)=>{const options=typeof p.options==='string'?JSON.parse(p.options):p.options;const votes=p.votes||[];return {id:p.id,question:p.question,options,counts:options.map((_:string,i:number)=>votes.filter((v:any)=>v.option===i).length),mine:votes.find((v:any)=>v.voter===s.userId)?.option??null}});
+ const rawReactions=await withDbRetry(()=>sql`SELECT r.post_id,r.user_id,r.emoji FROM study_room_reactions r JOIN study_room_posts p ON p.id=r.post_id WHERE p.room_id=${id} AND p.status='VISIBLE'`).catch(()=>[]);
+ const displayedPosts=posts;
+ const postById=new Map(posts.map((p:any)=>[String(p.id),p]));
+ const renderPost=(p:any)=>{
+ const own=p.author_id===s.userId;
+ const actions=p.status==='VISIBLE'?<div className="community-post-tools"><StudyReplyAction roomId={id} postId={p.id}/><StudyMessageActions roomId={id} postId={p.id} initialStarred={Boolean(p.is_starred)}/><StudyReportAction roomId={id} postId={p.id}/><StudyReactions roomId={id} postId={p.id} mine={rawReactions.find((r:any)=>r.post_id===p.id&&r.user_id===s.userId)?.emoji||null} counts={Array.from(new Set(rawReactions.filter((r:any)=>r.post_id===p.id).map((r:any)=>String(r.emoji)))).map((emoji:string)=>({emoji,count:rawReactions.filter((r:any)=>r.post_id===p.id&&r.emoji===emoji).length}))}/>{canModerate&&<StudyPinAction roomId={id} postId={p.id} pinned={room.pinned_post_id===p.id}/>}</div>:null;
+ return <CommunityMessageMenu key={p.id} own={own} actions={actions}><article id={'message-'+p.id} className={'community-message '+(own?'community-message-own':'community-message-peer')}>
+ {!own&&<b className="community-sender-name">{p.full_name}</b>}
+ {p.parent_post_id&&<a className="community-quote" href={'#message-'+p.parent_post_id}><strong>{(postById.get(String(p.parent_post_id)) as any)?.full_name||'Original message'}</strong><span>{String((postById.get(String(p.parent_post_id)) as any)?.body||'📎 Attachment').slice(0,140)}</span></a>}
+ {p.body&&<p>{p.body}</p>}
+ {p.attachment_id&&<div className="community-attachment">{String(p.attachment_type).startsWith('image/')?<a href={'/api/community/rooms/'+id+'/attachments/'+p.attachment_id} target="_blank" rel="noreferrer"><img src={'/api/community/rooms/'+id+'/attachments/'+p.attachment_id} alt={'Shared image: '+p.attachment_name} loading="lazy"/></a>:<a href={'/api/community/rooms/'+id+'/attachments/'+p.attachment_id} target="_blank" rel="noreferrer">📄 {p.attachment_name}</a>}</div>}
+ {p.status==='PENDING_REVIEW'&&<small className="community-pending">Awaiting moderation</small>}
+ <div className="community-bubble-meta">{Boolean(p.is_starred)&&<span aria-label="Starred">★</span>}<time dateTime={new Date(p.created_at).toISOString()}>{new Date(p.created_at).toLocaleTimeString('en-NG',{hour:'numeric',minute:'2-digit'})}</time></div>
+ </article></CommunityMessageMenu>};
+ return <main className="shell study-room">
+ <header className="community-room-heading"><Link className="community-back" href="/community" aria-label="Back to study groups">‹</Link><span className="community-group-avatar" aria-hidden="true">📚</span><div className="community-heading-main"><h1>{room.title}</h1><CommunityLiveRefresh roomId={id}/></div><details className="community-header-more"><summary aria-label="Group options">⋮</summary><nav><Link href={'/community/'+id+'/starred'}>Starred messages</Link>{canModerate&&<Link href="/community/reports">Safety reports</Link>}{isCommunityOwner(s.userId)&&<Link href="/community/admins">Manage admins</Link>}</nav></details></header>
+ {room.pinned_post_id&&posts.some((p:any)=>p.id===room.pinned_post_id)&&<a className="community-pinned-banner" href={'#message-'+room.pinned_post_id}><span>📌</span><span><strong>Pinned message</strong><small>{String(posts.find((p:any)=>p.id===room.pinned_post_id)?.body||'Shared attachment').slice(0,100)}</small></span><span>↓</span></a>}<details className="community-search-panel"><summary>🔎 Search messages</summary><form method="GET"><label htmlFor="community-search">Find a message in this group</label><input id="community-search" name="q" maxLength={100} defaultValue={q} placeholder="Search this conversation"/><button type="submit">Search</button></form>{q&&<Link href={'/community/'+id}>Clear search</Link>}</details><details className="community-polls-panel"><summary>Group polls</summary><StudyPolls roomId={id} polls={polls}/></details><section className="community-chat-shell" aria-label="Academic group conversation"><CommunityChatStream>{displayedPosts.length===100&&<Link className="community-older-messages" href={'/community/'+id+'?'+new URLSearchParams({...(q?{q}:{}),before:new Date(displayedPosts[0].created_at).toISOString()}).toString()}>← Older messages</Link>}{displayedPosts.length===0&&<p className="community-empty-chat">Start the conversation. Ask a question or share a solution with your classmates.</p>}{displayedPosts.map((p:any,i:number)=>{const date=new Date(p.created_at).toLocaleDateString('en-NG',{day:'numeric',month:'short',year:'numeric'});const previous=i?new Date(displayedPosts[i-1].created_at).toLocaleDateString('en-NG',{day:'numeric',month:'short',year:'numeric'}):null;return <div key={p.id} className="community-chat-entry">{date!==previous&&<div className="community-date-divider"><span>{date}</span></div>}{renderPost(p)}</div>})}</CommunityChatStream><div className="community-chat-input"><StudyRoomComposer roomId={id}/></div></section>
+ </main>;
+}

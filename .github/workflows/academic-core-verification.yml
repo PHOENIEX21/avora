@@ -1,0 +1,32 @@
+name: Academic Core Verification
+on:
+  push:
+    branches: [avora-academic-core-v1]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+      - run: npm ci
+      - name: TypeScript validation
+        run: npm run typecheck
+      - name: ESLint
+        run: npm run lint
+      - name: Answer marking regression
+        run: npm run test:answer-marking
+      - name: Curriculum audits
+        run: npm run audit:curriculum
+      - name: Next.js production build
+        run: |
+          export AUTH_SECRET="$(node -e 'process.stdout.write(require("node:crypto").randomBytes(48).toString("hex"))')"
+          npm run build

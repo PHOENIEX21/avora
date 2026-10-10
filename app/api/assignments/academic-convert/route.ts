@@ -6,16 +6,17 @@ import {convertAcademicQuestion} from '@/lib/assignmentAcademicConverter';
 
 export async function POST(req:Request){
  const session=await getSession();
- if(!session||!['STUDENT','ADMIN'].includes(session.role))return NextResponse.json({error:'Forbidden'},{status:403});
+ if(!session||session.role!=='ADMIN')return NextResponse.json({error:'Admin approval is required before AI academic preparation.'},{status:403});
  const body=await req.json();
  const questionId=String(body.questionId||'');
  if(!questionId)return NextResponse.json({error:'questionId is required.'},{status:400});
  const [row]=await withDbRetry(()=>sql`
   SELECT aq.id,aq.original_text,aq.curriculum_topic_id,aq.classification_confidence,
-         ua.student_id,ua.class_level,ua.subject_name
+         ua.student_id,ua.class_level,ua.subject_name,ua.approved_at
   FROM assignment_questions aq JOIN uploaded_assignments ua ON ua.id=aq.assignment_id
-  WHERE aq.id=${questionId} AND (${session.role}='ADMIN' OR ua.student_id=${session.userId})`);
+  WHERE aq.id=${questionId}`);
  if(!row)return NextResponse.json({error:'Assignment question not found.'},{status:404});
+ if(!row.approved_at)return NextResponse.json({error:'Approve this submission before AI academic preparation.'},{status:409});
 
  // Academic preparation must not be blocked just because automatic topic matching
  // is uncertain. Convert the learner's actual question first; topic confirmation
@@ -43,6 +44,7 @@ export async function POST(req:Request){
    model_solution=${q.modelSolution},
    needs_confirmation=true
   WHERE id=${questionId}`);
+ const [pending]=await withDbRetry(()=>sql`SELECT COUNT(*)::int n FROM assignment_questions WHERE assignment_id=(SELECT assignment_id FROM assignment_questions WHERE id=${questionId}) AND (model_solution='Pending academic conversion.' OR model_solution='')`);if(Number(pending?.n||0)===0)await withDbRetry(()=>sql`UPDATE uploaded_assignments SET solution_ready_at=now(),updated_at=now() WHERE id=(SELECT assignment_id FROM assignment_questions WHERE id=${questionId})`);
  return NextResponse.json({
   questionId,
   converted:q,

@@ -1,0 +1,6 @@
+import {NextResponse} from 'next/server';import {requireAdmin} from '@/lib/admin/access';import {sql,withDbRetry} from '@/lib/db';
+export async function POST(req:Request,{params}:{params:Promise<{id:string}>}){await requireAdmin();const {id}=await params;const b=await req.json();const release=new Date(String(b.releaseAt||'')),close=new Date(String(b.closesAt||'')),results=b.resultsReleaseAt?new Date(String(b.resultsReleaseAt)):close;
+ if(Number.isNaN(+release)||Number.isNaN(+close)||Number.isNaN(+results)||close<=release||results<release)return NextResponse.json({error:'Use a valid opening, closing and results window.'},{status:400});
+ const [exam]=await withDbRetry(()=>sql`SELECT b.*,v.id AS version_id FROM weekly_exam_blueprints b JOIN weekly_exam_versions v ON v.blueprint_id=b.id AND v.status='LOCKED' WHERE b.id=${id}`);if(!exam)return NextResponse.json({error:'A locked paper is required before scheduling.'},{status:409});
+ await withDbRetry(()=>sql`UPDATE weekly_exam_blueprints SET status='SCHEDULED',release_at=${release.toISOString()},closes_at=${close.toISOString()},results_release_at=${results.toISOString()},scheduled_at=${release.toISOString()},updated_at=now() WHERE id=${id}`);
+ return NextResponse.json({ok:true,versionId:String(exam.version_id)});}
