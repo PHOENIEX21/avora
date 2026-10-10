@@ -16,12 +16,14 @@ export async function GET(request:Request){
   const [student]=await withDbRetry(()=>sql`SELECT class_level FROM student_profiles WHERE user_id=${session.userId} LIMIT 1`);
   if(String(student?.class_level||'').toUpperCase()!==cls)return NextResponse.json({error:'Other class curriculum is private'},{status:403});
   if(!(await isWeeklyLearningEnabled(cls)))return NextResponse.json({error:'Weekly learning not enabled for this class'},{status:404});
+  const [state]=await withDbRetry(()=>sql`SELECT term,current_week FROM weekly_class_week_state WHERE class_level=${cls} LIMIT 1`);
+  if(!state||Number(state.term)!==term||Number(state.current_week)!==week)return NextResponse.json({error:'This week has not been released'},{status:404});
  }
  try{
   const rows=await withDbRetry(()=>sql`
    SELECT id,subject_name,day_index,topic_title,objective_text,source_reference
    FROM weekly_curriculum_objectives
-   WHERE class_level=${cls} AND term=${term} AND week_number=${week} AND approval_status='APPROVED'
+   WHERE class_level=${cls} AND term=${term} AND week_number=${week} AND approval_status='PUBLISHED' AND published_at IS NOT NULL
    ORDER BY day_index,subject_name,topic_title,objective_text`);
   return NextResponse.json({classLevel:cls,term,week,days:[1,2,3,4,5].map(day=>({
    dayIndex:day,objectives:rows.filter(row=>Number(row.day_index)===day)
