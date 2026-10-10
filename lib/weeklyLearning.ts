@@ -30,15 +30,26 @@ export function isoWeekday(date:string):number{
  if(Number.isNaN(d.getTime())||d.toISOString().slice(0,10)!==date)throw new Error('Invalid date');
  return d.getUTCDay()||7;
 }
-export function nextWeekRevisionDates(saturday:string):string[]{
- if(isoWeekday(saturday)!==6)throw new Error('Official weekly examination must be on Saturday');
- const start=new Date(saturday+'T12:00:00Z');
+export function defaultExamSaturday(monday:string):string{
+ if(isoWeekday(monday)!==1)throw new Error('Week starts Monday');
+ const d=new Date(monday+'T12:00:00Z');d.setUTCDate(d.getUTCDate()+5);
+ return d.toISOString().slice(0,10);
+}
+export function defaultRevisionWednesday(examDate:string):string{
+ const d=new Date(examDate+'T12:00:00Z');
+ const days=(3-isoWeekday(examDate)+7)%7||7;
+ d.setUTCDate(d.getUTCDate()+days);
+ return d.toISOString().slice(0,10);
+}
+export function nextWeekRevisionDates(examDate:string):string[]{
+ const d=new Date(examDate+'T12:00:00Z');
+ d.setUTCDate(d.getUTCDate()+8-isoWeekday(examDate));
  return Array.from({length:7},(_,i)=>{
-  const d=new Date(start);
-  d.setUTCDate(d.getUTCDate()+i+2);
-  return d.toISOString().slice(0,10);
+  const day=new Date(d);day.setUTCDate(day.getUTCDate()+i);
+  return day.toISOString().slice(0,10);
  });
 }
 export function validateWeeklyExamPlan(officialDate:string,revisionDate:string):boolean{
- return isoWeekday(officialDate)===6&&nextWeekRevisionDates(officialDate).includes(revisionDate);
+ isoWeekday(officialDate);isoWeekday(revisionDate);
+ return revisionDate>officialDate;
 }
