@@ -2,6 +2,7 @@ import {NextResponse} from 'next/server';
 import {z} from 'zod';
 import {getSession} from '@/lib/auth';
 import {sql,withDbRetry} from '@/lib/db';
+import {parseCurriculumCsv} from '@/lib/weeklyCurriculumCsv';
 
 const rowSchema=z.object({
  classLevel:z.enum(['JSS1','JSS2','JSS3']),
@@ -33,7 +34,17 @@ export async function GET(request:Request){
 export async function POST(request:Request){
  const session=await getSession();
  if(!session||session.role!=='ADMIN')return NextResponse.json({error:'Admin only'},{status:403});
- const parsed=payload.safeParse(await request.json().catch(()=>null));
+ let data:unknown;
+ if(request.headers.get('content-type')?.includes('text/csv')){
+  try{
+   const csv=await request.text();
+   data={rows:parseCurriculumCsv(csv).map(r=>({
+    ...r,term:Number(r.term),weekNumber:Number(r.weekNumber),dayIndex:Number(r.dayIndex),
+    curriculumTopicId:r.curriculumTopicId||null
+   }))};
+  }catch(error){return NextResponse.json({error:error instanceof Error?error.message:'Invalid CSV'},{status:400})}
+ }else data=await request.json().catch(()=>null);
+ const parsed=payload.safeParse(data);
  if(!parsed.success)return NextResponse.json({error:'Invalid curriculum rows',issues:parsed.error.issues},{status:400});
  try{
   let inserted=0;
