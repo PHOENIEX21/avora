@@ -30,10 +30,12 @@ export async function POST(request:Request){
     SELECT COUNT(*)::int AS total, COUNT(DISTINCT day_index)::int AS days
     FROM weekly_curriculum_objectives
     WHERE class_level=${classLevel} AND term=${term!} AND week_number=${week!}
-      AND approval_status='APPROVED' AND day_index BETWEEN 1 AND 5`);
+      AND approval_status='PUBLISHED' AND published_at IS NOT NULL AND day_index BETWEEN 1 AND 5`);
    if(Number(ready?.days)!==5||Number(ready?.total)<5)
     return NextResponse.json({error:'Pilot activation requires approved curriculum objectives across all five weekdays'},{status:409});
   }
+  if(enabled){const [state]=await withDbRetry(()=>sql`SELECT term,current_week FROM weekly_class_week_state WHERE class_level=${classLevel}`);
+   if(!state||Number(state.term)!==term||Number(state.current_week)!==week)return NextResponse.json({error:'Release the matching class week before enabling the pilot'},{status:409});}
   await withDbRetry(()=>sql`
    INSERT INTO weekly_class_flags(class_level,enabled,pilot_term,pilot_week,updated_by,updated_at)
    VALUES(${classLevel},${enabled},${term??null},${week??null},${session.userId},now())
