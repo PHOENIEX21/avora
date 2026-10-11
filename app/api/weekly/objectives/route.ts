@@ -31,6 +31,14 @@ export async function GET(request:Request){
    SELECT id,subject_name,day_index,topic_title,objective_text,source_reference
    FROM weekly_curriculum_objectives
    WHERE class_level=${cls} AND term=${term} AND week_number=${week} AND approval_status='PUBLISHED' AND published_at IS NOT NULL
+     AND ( ${session.role==='ADMIN'} OR EXISTS (
+      SELECT 1 FROM weekly_class_subjects cs WHERE cs.class_level=${cls}
+       AND cs.subject_name=weekly_curriculum_objectives.subject_name AND cs.active=true
+       AND (cs.subject_kind='CORE' OR EXISTS (
+        SELECT 1 FROM weekly_student_optional_subjects os
+        WHERE os.student_id=${session.userId} AND os.class_level=${cls} AND os.subject_name=cs.subject_name
+       ))
+     ))
    ORDER BY day_index,subject_name,topic_title,objective_text`);
   return NextResponse.json({classLevel:cls,term,week,days:[1,2,3,4,5].map(day=>({
    dayIndex:day,objectives:rows.filter(row=>Number(row.day_index)===day)
