@@ -25,5 +25,5 @@ export function guardianChallengeState(expiresAt:Date,consumedAt:Date|null,attem
  return 'pending';
 }
 export function guardianChallengeAllowed(expiresAt:Date,attempts:number,now=new Date()):boolean{
- return attempts<GUARDIAN_CHALLENGE_MAX_ATTEMPTS&&expiresAt.getTime()>now.getTime();
+ return guardianChallengeState(expiresAt,null,attempts,now)==='pending';
 }
