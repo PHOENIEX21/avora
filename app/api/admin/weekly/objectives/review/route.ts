@@ -14,7 +14,7 @@ export async function POST(request:Request){
   const [existing]=await withDbRetry(()=>sql`SELECT id,approval_status,reviewed_by,day_index FROM weekly_curriculum_objectives WHERE id=${objectiveId}`);
   if(!existing)return NextResponse.json({error:'Objective not found'},{status:404});
   const current=String(existing.approval_status);
-  const decision=objectiveReviewTransition(action,current,existing.reviewed_by,Number(existing.day_index));
+  const decision=objectiveReviewTransition(action,current,existing.reviewed_by,existing.day_index===null?null:Number(existing.day_index));
   if(!decision.ok)return NextResponse.json({error:decision.reason},{status:409});
   // The original ZIP (Phase 2b, step 5) requires question and exam readiness BEFORE publishing.
   if(action==='PUBLISH'){
