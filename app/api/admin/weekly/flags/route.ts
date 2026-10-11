@@ -27,12 +27,36 @@ export async function POST(request:Request){
  try{
   if(enabled){
    const [ready]=await withDbRetry(()=>sql`
-    SELECT COUNT(*)::int AS total, COUNT(DISTINCT day_index)::int AS days
-    FROM weekly_curriculum_objectives
-    WHERE class_level=${classLevel} AND term=${term!} AND week_number=${week!}
-      AND approval_status='PUBLISHED' AND published_at IS NOT NULL AND day_index BETWEEN 1 AND 5`);
-   if(Number(ready?.days)!==5||Number(ready?.total)<5)
-    return NextResponse.json({error:'Pilot activation requires approved curriculum objectives across all five weekdays'},{status:409});
+    WITH subjects AS (
+     SELECT subject_name FROM weekly_class_subjects WHERE class_level=${classLevel} AND active=true
+    ), objectives AS (
+     SELECT id,subject_name FROM weekly_curriculum_objectives
+     WHERE class_level=${classLevel} AND term=${term!} AND week_number=${week!}
+      AND approval_status='PUBLISHED' AND published_at IS NOT NULL
+    ), item_counts AS (
+     SELECT o.id,count(i.id)::int AS approved_count FROM objectives o
+     LEFT JOIN weekly_items i ON i.objective_id=o.id AND i.status IN ('APPROVED','PUBLISHED')
+      AND i.reviewer_id IS NOT NULL AND i.reviewed_at IS NOT NULL AND i.answer_key IS NOT NULL
+     GROUP BY o.id
+    )
+    SELECT
+     (SELECT count(*)::int FROM subjects) AS subjects,
+     (SELECT count(*)::int FROM subjects s WHERE EXISTS(
+      SELECT 1 FROM objectives o WHERE o.subject_name=s.subject_name)) AS published_subjects,
+     (SELECT count(*)::int FROM item_counts WHERE approved_count<6) AS missing_items,
+     (SELECT count(DISTINCT e.subject_name)::int FROM weekly_exams e
+      WHERE e.class_level=${classLevel} AND e.term=${term!} AND e.week_number=${week!}
+       AND e.subject_name IN (SELECT subject_name FROM subjects)
+       AND e.status IN ('REVIEWED','SCHEDULED') AND EXISTS(
+        SELECT 1 FROM weekly_exam_items ei WHERE ei.exam_id=e.id)) AS exam_subjects,
+     (SELECT count(DISTINCT day_index)::int FROM weekly_english_daily_plan
+      WHERE class_level=${classLevel} AND term=${term!} AND week_number=${week!}
+       AND status='PUBLISHED') AS english_days
+   `);
+   if(!Number(ready?.subjects)||Number(ready?.published_subjects)!==Number(ready?.subjects)||
+      Number(ready?.missing_items)!==0||Number(ready?.exam_subjects)<Number(ready?.subjects)||
+      Number(ready?.english_days)!==5)
+    return NextResponse.json({error:'Pilot activation blocked: publish every active subject, six approved questions per objective, a reviewed exam per subject, and all five English Daily plans'},{status:409});
   }
   if(enabled){const [state]=await withDbRetry(()=>sql`SELECT term,current_week FROM weekly_class_week_state WHERE class_level=${classLevel}`);
    if(!state||Number(state.term)!==term||Number(state.current_week)!==week)return NextResponse.json({error:'Release the matching class week before enabling the pilot'},{status:409});}
