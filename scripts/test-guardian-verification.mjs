@@ -37,3 +37,7 @@ test('challenge lifecycle blocks reused, expired and exhausted codes',()=>{
  assert.equal(guardianChallengeState(now,null,0,now),'expired');
  assert.equal(guardianChallengeState(future,null,5,now),'exhausted');
 });
+
+test('code hash rejects an insufficient secret',()=>{
+ assert.throws(()=>hashGuardianChallenge('123456','nonce','short'));
+});
