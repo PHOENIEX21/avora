@@ -89,7 +89,8 @@
     "audit:v14.9.2-jss1-math-slides": "node --experimental-strip-types scripts/audit-v14.9.2-jss1-math-slides.mjs",
     "test:dawn-security": "node --test scripts/test-dawn-access-policy.mjs scripts/test-guardian-verification.mjs scripts/test-weekly-pin-security.mjs",
     "test:weekly-baseline": "node --test scripts/test-weekly-baseline.mjs",
-    "test:weekly-objective-review": "node --test scripts/test-weekly-objective-review.mjs"
+    "test:weekly-objective-review": "node --test scripts/test-weekly-objective-review.mjs",
+    "test:weekly-publication-readiness": "node --test scripts/test-weekly-publication-readiness.mjs"
   },
   "dependencies": {
     "bcryptjs": "^3.0.2",
