@@ -35,6 +35,7 @@ export async function POST(request:Request){
     published_by=CASE WHEN ${action==='PUBLISH'} THEN ${session.userId}::uuid ELSE published_by END,
     published_at=CASE WHEN ${action==='PUBLISH'} THEN now() ELSE published_at END
    WHERE id=${objectiveId} AND approval_status=${current} RETURNING id,approval_status`);
-  return NextResponse.json({ok:result.length===1,objective:result[0]??null});
+  if(result.length!==1)return NextResponse.json({error:'Objective was changed by another review; refresh and retry'},{status:409});
+  return NextResponse.json({ok:true,objective:result[0]});
  }catch{return NextResponse.json({error:'Review failed; confirm the Phase 1 migration is installed'},{status:503})}
 }
