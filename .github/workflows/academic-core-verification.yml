@@ -30,6 +30,8 @@ jobs:
         run: npm run test:weekly-baseline
       - name: Weekly objective publication security tests
         run: npm run test:weekly-objective-review
+      - name: Weekly publication readiness regression
+        run: npm run test:weekly-publication-readiness
       - name: Curriculum audits
         run: npm run audit:curriculum
       - name: Next.js production build
