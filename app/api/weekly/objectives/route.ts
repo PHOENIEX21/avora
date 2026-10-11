@@ -2,6 +2,7 @@ import {NextResponse} from 'next/server';
 import {getSession} from '@/lib/auth';
 import {sql,withDbRetry} from '@/lib/db';
 import {isWeeklyLearningEnabled} from '@/lib/weeklyLearning';
+import {getDawnGate} from '@/lib/dawnAccess';
 
 export async function GET(request:Request){
  const session=await getSession();
@@ -13,6 +14,9 @@ export async function GET(request:Request){
  if(!cls||!['JSS1','JSS2','JSS3'].includes(cls)||!Number.isInteger(term)||term<1||term>3||!Number.isInteger(week)||week<1||week>16)
   return NextResponse.json({error:'Invalid class, term or week'},{status:400});
  if(session.role!=='ADMIN'){
+  if(session.role!=='STUDENT')return NextResponse.json({error:'Student access required'},{status:403});
+  const gate=await getDawnGate(session.userId);
+  if(gate.status!=='ready')return NextResponse.json({error:'Guardian onboarding and verification required'},{status:403});
   const [student]=await withDbRetry(()=>sql`SELECT class_level FROM student_profiles WHERE user_id=${session.userId} LIMIT 1`);
   if(String(student?.class_level||'').toUpperCase()!==cls)return NextResponse.json({error:'Other class curriculum is private'},{status:403});
   if(!(await isWeeklyLearningEnabled(cls)))return NextResponse.json({error:'Weekly learning not enabled for this class'},{status:404});
