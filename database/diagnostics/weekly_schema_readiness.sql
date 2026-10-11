@@ -13,7 +13,7 @@ missing_tables AS (
 status_constraints AS (
  SELECT c.conrelid::regclass::text AS table_name,c.conname,pg_get_constraintdef(c.oid) AS definition
  FROM pg_constraint c WHERE c.contype='c'
- AND c.conrelid IN ('public.weekly_curriculum_objectives'::regclass,'public.weekly_items'::regclass)
+ AND c.conrelid IN (to_regclass('public.weekly_curriculum_objectives'),to_regclass('public.weekly_items'))
  AND c.conname IN ('weekly_curriculum_objectives_approval_status_check','weekly_items_status_check')
 )
 SELECT
