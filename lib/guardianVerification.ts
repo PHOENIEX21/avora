@@ -24,6 +24,9 @@ export function guardianChallengeState(expiresAt:Date,consumedAt:Date|null,attem
  if(attempts>=GUARDIAN_CHALLENGE_MAX_ATTEMPTS)return 'exhausted';
  return 'pending';
 }
+export function canIssueGuardianChallenge(lastIssuedAt:Date|null,now=new Date()):boolean{
+ return lastIssuedAt===null||now.getTime()-lastIssuedAt.getTime()>=GUARDIAN_CHALLENGE_COOLDOWN_MS;
+}
 export function guardianChallengeAllowed(expiresAt:Date,attempts:number,now=new Date()):boolean{
  return guardianChallengeState(expiresAt,null,attempts,now)==='pending';
 }
