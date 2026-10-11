@@ -16,6 +16,18 @@ export async function POST(request:Request){
   const current=String(existing.approval_status);
   const decision=objectiveReviewTransition(action,current,existing.reviewed_by,Number(existing.day_index));
   if(!decision.ok)return NextResponse.json({error:decision.reason},{status:409});
+  // The ZIP requires at least six reviewed items per objective and an assembled weekly exam.
+  // Fail closed: the admin cannot publish a bare objective or bypass the assessment bank.
+  if(action==='PUBLISH'){
+   const [ready]=await withDbRetry(()=>sql`
+    SELECT
+     (SELECT count(*)::int FROM weekly_items i WHERE i.objective_id=${objectiveId} AND i.status='APPROVED' AND i.reviewer_id IS NOT NULL AND i.answer_key IS NOT NULL) AS approved_items,
+     (SELECT count(*)::int FROM weekly_exam_items ei JOIN weekly_exams e ON e.id=ei.exam_id
+      JOIN weekly_curriculum_objectives o ON o.class_level=e.class_level AND o.subject_name=e.subject_name AND o.term=e.term AND o.week_number=e.week_number
+      WHERE o.id=${objectiveId} AND e.status IN ('REVIEWED','SCHEDULED')) AS assembled_exam_items`);
+   if(Number(ready?.approved_items)<6 || Number(ready?.assembled_exam_items)<1)
+    return NextResponse.json({error:'Publication requires at least six reviewed questions for this objective and an assembled reviewed weekly exam',approvedItems:Number(ready?.approved_items??0),assembledExamItems:Number(ready?.assembled_exam_items??0)},{status:409});
+  }
   const result=await withDbRetry(()=>sql`
    UPDATE weekly_curriculum_objectives SET
     approval_status=${decision.next},
