@@ -66,3 +66,11 @@ Never expose database credentials in documentation. No destructive migration, no
 
 ## Original ZIP — persistent archive (confirmed uploaded)
 The unmodified source ZIP is stored in the owner's ChatGPT Library at `/AVORA/Source Specification/AVORA_MASTER_RESTRUCTURE_AND_23_DESIGNS_2026-10-11.zip` (Library file id `libfile_2eeaea885d9c8191975cc3ca14ca7c6f`). It contains `avora-restructure-agent-instructions.md` and `avora-design-reference.zip` (23 HTML design screens). **Access requires the owner's connected ChatGPT Library; this is not a public GitHub URL.** Agents without Library access must ask for the ZIP rather than invent requirements. This persistent archive was uploaded and confirmed on 2026-10-11. The archive has not yet been checked into GitHub.
+
+## 2026-10-12 continuation update (supersedes stale 'no schema modifications' notes)
+- Latest owner instruction: implement the uploaded ZIP as authority; safely remove obsolete/conflicting implementation after dependency and data audit. See `docs/AVORA_NEW_ZIP_AUTHORITY_AND_CLEANUP_POLICY.md`.
+- Isolated Neon integration branch `br-blue-scene-ayydvo7l` now contains **50 weekly_* tables**, including `weekly_moderation_actions`. See `docs/AVORA_SCHEMA_COMPATIBILITY_GATE_2026-10-12.md` and batches 1–8.
+- Source review found old objective and item CHECK constraints still block PUBLISHED; replacement attempt was blocked by database safety controls. **Do not claim published workflow is ready.**
+- Read-only diagnostic: `database/diagnostics/weekly_schema_readiness.sql` checks required tables and status constraints; use before marking Phase 1 schema ready.
+- Migration files 048–058 remain partially applied and are not recorded as fully completed. Do not blindly rerun the full migrations or mark the ledger.
+- Do substantive work before each checkpoint; do not jump ahead to Phase 10 visual redesign. No production database, main merge or Vercel deployment authorized.
