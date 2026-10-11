@@ -63,3 +63,6 @@ After each batch, record: date, Git branch/commit, files changed, migrations and
 
 ## 9. Safety
 Never expose database credentials in documentation. No destructive migration, no accidental Neon production mutation, no automatic publication of AI content, no unapproved deployment. Preserve existing students' progress and parent relationships. Remove temporary branches only after the user confirms they're no longer needed.
+
+## Original ZIP — persistent archive (confirmed uploaded)
+The unmodified source ZIP is stored in the owner's ChatGPT Library at `/AVORA/Source Specification/AVORA_MASTER_RESTRUCTURE_AND_23_DESIGNS_2026-10-11.zip` (Library file id `libfile_2eeaea885d9c8191975cc3ca14ca7c6f`). It contains `avora-restructure-agent-instructions.md` and `avora-design-reference.zip` (23 HTML design screens). **Access requires the owner's connected ChatGPT Library; this is not a public GitHub URL.** Agents without Library access must ask for the ZIP rather than invent requirements. This persistent archive was uploaded and confirmed on 2026-10-11. The archive has not yet been checked into GitHub.
