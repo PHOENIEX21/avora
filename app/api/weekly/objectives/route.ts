@@ -18,7 +18,7 @@ export async function GET(request:Request){
  if(session.role!=='ADMIN'){
   if(session.role!=='STUDENT')return NextResponse.json({error:'Student access required'},{status:403});
   const gate=await getDawnGate(session.userId);
-  if(gate.status!=='ready')return NextResponse.json({error:'Guardian onboarding and verification required'},{status:403});
+  if(String(gate.status)!=='ready')return NextResponse.json({error:'Guardian onboarding and verification required'},{status:403});
   if(gate.classLevel!==cls)return NextResponse.json({error:'Other class curriculum is private'},{status:403});
   const [student]=await withDbRetry(()=>sql`SELECT class_level FROM student_profiles WHERE user_id=${session.userId} LIMIT 1`);
   if(String(student?.class_level||'').toUpperCase()!==cls)return NextResponse.json({error:'Other class curriculum is private'},{status:403});
