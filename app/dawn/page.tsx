@@ -1,8 +1,7 @@
 import Link from 'next/link';
 import {redirect} from 'next/navigation';
 import {getSession} from '@/lib/auth';
-import {sql,withDbRetry} from '@/lib/db';
-import {isWeeklyLearningEnabled} from '@/lib/weeklyLearning';
+import {getDawnGate} from '@/lib/dawnAccess';
 import styles from './page.module.css';
 
 export const dynamic='force-dynamic';
@@ -12,16 +11,11 @@ export default async function DawnToday(){
  const session=await getSession();
  if(!session)redirect('/login');
  if(session.role!=='STUDENT')redirect('/');
- const [profile]=await withDbRetry(()=>sql`SELECT class_level FROM student_profiles WHERE user_id=${session.userId} LIMIT 1`);
- const classLevel=String(profile?.class_level??'').toUpperCase();
- if(!['JSS1','JSS2','JSS3'].includes(classLevel))redirect('/home');
- if(!(await isWeeklyLearningEnabled(classLevel)))redirect('/home');
- const [state]=await withDbRetry(()=>sql`SELECT term,current_week FROM weekly_class_week_state WHERE class_level=${classLevel} LIMIT 1`);
- if(!state)redirect('/home');
- const [consent]=await withDbRetry(()=>sql`SELECT consent_data,consent_at,consent_version,parent_contact_verified_at FROM weekly_parent_consents WHERE student_id=${session.userId} LIMIT 1`);
- const [parentPin]=await withDbRetry(()=>sql`SELECT student_id FROM weekly_parent_pins WHERE student_id=${session.userId} LIMIT 1`);
- const [studentPin]=await withDbRetry(()=>sql`SELECT student_id FROM weekly_student_pins WHERE student_id=${session.userId} LIMIT 1`);
- const onboardingRequired=consent?.consent_data!==true||!consent.consent_at||!consent.consent_version||!consent.parent_contact_verified_at||!parentPin||!studentPin;
+ const gate=await getDawnGate(session.userId);
+ if(gate.status==='legacy')redirect('/home');
+ const classLevel=gate.classLevel;
+ const state={term:gate.term,current_week:gate.week};
+ const onboardingRequired=gate.status==='onboarding_required';
  return <main className={styles.screen}>
   <div className={styles.phone}>
    <header className={styles.header}>
