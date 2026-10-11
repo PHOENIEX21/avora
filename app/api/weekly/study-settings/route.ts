@@ -26,13 +26,14 @@ export async function PUT(request:Request){
  const data=body as Record<string,unknown>;
  if(!periods.includes(data.studyPeriod as typeof periods[number])||!validTime(data.studyTime))
   return NextResponse.json({error:'Select a study period and valid HH:MM time'},{status:400});
- if(typeof data.parentWeeklySummaryEnabled!=='boolean')
+ const parentWeeklySummaryEnabled=data.parentWeeklySummaryEnabled;
+ if(typeof parentWeeklySummaryEnabled!=='boolean')
   return NextResponse.json({error:'Invalid summary preference'},{status:400});
  // Opting in here records a preference only; it does not authorize contacting a guardian.
  try{
   await withDbRetry(()=>sql`INSERT INTO weekly_student_study_settings
    (student_id,study_period,study_time,timezone,parent_weekly_summary_enabled)
-   VALUES(${session.userId},${data.studyPeriod as string},${data.studyTime as string},'Africa/Lagos',${data.parentWeeklySummaryEnabled})
+   VALUES(${session.userId},${data.studyPeriod as string},${data.studyTime as string},'Africa/Lagos',${parentWeeklySummaryEnabled})
    ON CONFLICT(student_id) DO UPDATE SET
    study_period=EXCLUDED.study_period,study_time=EXCLUDED.study_time,
    parent_weekly_summary_enabled=EXCLUDED.parent_weekly_summary_enabled,updated_at=now()`);
