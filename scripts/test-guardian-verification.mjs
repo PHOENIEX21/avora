@@ -19,6 +19,8 @@ test('verification uses nonce and constant-time digest comparison',()=>{
  assert.equal(matchesGuardianChallenge('012346','nonce-one',secret,hash),false);
  assert.equal(matchesGuardianChallenge('012345','nonce-two',secret,hash),false);
  assert.equal(matchesGuardianChallenge('012345','nonce-one',secret,'invalid'),false);
+ assert.notEqual(hashGuardianChallenge('012345','nonce-one',secret),hashGuardianChallenge('012345','nonce-two',secret));
+ assert.throws(()=>hashGuardianChallenge('12345','nonce-one',secret));
 });
 test('expired or exhausted challenges cannot be used',()=>{
  const now=new Date('2026-10-11T12:00:00Z');
