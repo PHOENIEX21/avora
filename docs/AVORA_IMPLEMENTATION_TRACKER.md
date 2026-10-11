@@ -7,8 +7,8 @@
 | Phase 0: repository and database audit | VERIFIED (inventory only) | `docs/AVORA_PHASE0_INTEGRATION_AUDIT_2026-10-11.md`; GitHub run 38180382314 passed |
 | Integration environment | VERIFIED (created) | Neon test branch `br-blue-scene-ayydvo7l`; not production |
 | Academic-core existing code | PARTIALLY VERIFIED | Existing implementation and CI pass; full runtime/E2E not verified |
-| Weekly schema reconciliation | IN PROGRESS | `docs/AVORA_WEEKLY_ACADEMIC_SCHEMA_COMPATIBILITY.md`; migrations not yet applied |
-| Phase 1 data model | IN PROGRESS | Both schema families exist on different branches; integration missing |
+| Weekly schema reconciliation | IN PROGRESS | 49 weekly_* tables verified on isolated integration branch; migration 048–058 still partially applied; restrictive objective/item publication checks remain; see batch 1–8 reports |
+| Phase 1 data model | IN PROGRESS | Isolated integration branch now has 49 weekly_* tables; constraint reconciliation, missing objects and runtime verification remain |
 | Phase 1c registration / parent | NOT VERIFIED | Guardian/PIN CI passes but end-to-end target flow not tested |
 | Phase 1d baseline / study time | NOT VERIFIED | Baseline policy tests pass, runtime not tested |
 | Phase 2 verified curriculum | NOT VERIFIED | Import/review route exists; source coverage/release not verified |
@@ -34,8 +34,14 @@
 ## Latest change log
 - 2026-10-11: CI run 38180382314 successful on academic-core branch; verified TypeScript, lint, security, baseline, curriculum, marking, build.
 - 2026-10-11: Audited separate Neon schemas and documented overlap.
-- 2026-10-11: Created isolated Neon integration branch `br-blue-scene-ayydvo7l`. No schema modifications yet.
+- 2026-10-11: Created isolated Neon integration branch `br-blue-scene-ayydvo7l`; subsequently created and verified weekly schema objects in batches 1–8 (see docs/AVORA_INTEGRATION_SCHEMA_*).
 - 2026-10-11: Added `AGENTS.md` to make next-agent continuation self-contained about known work and safe next steps. **Original ZIP is still required for full specification fidelity.**
 
 ## Next work
-Locate exact migrations creating weekly tables; inspect dependencies; apply only compatible additive migrations to isolated Neon integration branch; test runtime endpoints. Then work through ZIP roadmap with evidence per phase.
+Compare every statement in migrations 048–058 with isolated Neon schema; reconcile objective and item status constraints with reviewed change approval, then test actual admin/learner routes and permissions. Do not mark full migration files applied while incomplete. Proceed through ZIP phases with evidence.
+
+## 2026-10-12 verified checkpoint
+- Isolated integration Neon branch contains **49 weekly_* tables**; this does not imply all migrations are complete.
+- Both `weekly_curriculum_objectives` and `weekly_items` still have narrow status constraints preventing PUBLISHED. The objective table additionally has a broader constraint; the narrower one still controls. No destructive constraint replacement authorized or executed.
+- Additive published-objectives lookup index succeeded; moderation-actions creation was not confirmed, and a follow-up index attempt failed because its table was absent. Treat that object as pending.
+- No production database modification, deployment or main merge. Continue with compatibility review and end-to-end validation before visual reconstruction.
