@@ -18,6 +18,12 @@ export function matchesGuardianChallenge(code:string,nonce:string,secret:string,
  const actual=hashGuardianChallenge(code,nonce,secret);
  return timingSafeEqual(Buffer.from(actual,'hex'),Buffer.from(expected,'hex'));
 }
+export function guardianChallengeState(expiresAt:Date,consumedAt:Date|null,attempts:number,now=new Date()):'used'|'expired'|'exhausted'|'pending'{
+ if(consumedAt)return 'used';
+ if(expiresAt.getTime()<=now.getTime())return 'expired';
+ if(attempts>=GUARDIAN_CHALLENGE_MAX_ATTEMPTS)return 'exhausted';
+ return 'pending';
+}
 export function guardianChallengeAllowed(expiresAt:Date,attempts:number,now=new Date()):boolean{
  return attempts<GUARDIAN_CHALLENGE_MAX_ATTEMPTS&&expiresAt.getTime()>now.getTime();
 }
