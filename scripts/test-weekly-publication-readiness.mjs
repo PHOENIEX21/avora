@@ -1,20 +1,17 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
-const route=readFileSync(new URL('../app/api/admin/weekly/objectives/review/route.ts',import.meta.url),'utf8');
-test('publication fails closed if fewer than six reviewed objective items exist',()=>{
- assert.match(route,/approved_items/);
- assert.match(route,/i\.status='APPROVED'/);
- assert.match(route,/i\.reviewer_id IS NOT NULL/);
- assert.match(route,/i\.answer_key IS NOT NULL/);
- assert.match(route,/Number\(ready\?\.approved_items\)<6/);
+const review=readFileSync(new URL('../app/api/admin/weekly/objectives/review/route.ts',import.meta.url),'utf8');
+const readiness=readFileSync(new URL('../app/api/admin/weekly/readiness/route.ts',import.meta.url),'utf8');
+test('objective approval and publication remain separate from complete week release',()=>{
+ assert.match(review,/objectiveReviewTransition/);
+ assert.match(review,/approval_status=\$\{decision\.next\}/);
+ assert.doesNotMatch(review,/approved_items/);
 });
-test('publication requires assembled reviewed or scheduled exam',()=>{
- assert.match(route,/weekly_exam_items/);
- assert.match(route,/weekly_exams/);
- assert.match(route,/e\.status IN \('REVIEWED','SCHEDULED'\)/);
- assert.match(route,/Number\(ready\?\.assembled_exam_items\)<1/);
+test('weekly release requires reviewed items and an assembled exam',()=>{
+ assert.match(readiness,/approved_count<6/);
+ assert.match(readiness,/weekly_exam_items/);
+ assert.match(readiness,/weekly_english_daily_plan/);
+ assert.match(readiness,/weeklyReleaseReadiness/);
 });
-test('all publication gates precede database publication mutation',()=>{
- assert.ok(route.indexOf("if(action==='PUBLISH')")<route.indexOf('UPDATE weekly_curriculum_objectives'));
-});
+test('readiness endpoint is owner-only',()=>assert.match(readiness,/session\.role!=='ADMIN'/));
