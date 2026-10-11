@@ -20,7 +20,7 @@ test('each missing guardian requirement blocks Dawn',()=>{
 test('records alone cannot activate unapproved guardian workflow',()=>{
  assert.equal(decideDawnAccess({...complete,guardianWorkflowApproved:false}),'verification_pending');
 });
-test('ready requires every explicit gate',()=>assert.equal(decideDawnAccess(complete),'ready'));
+test('even complete records cannot activate a disabled guardian workflow',()=>assert.equal(decideDawnAccess(complete),'verification_pending'));
 test('undefined and missing evidence fail closed',()=>{
  assert.notEqual(decideDawnAccess({}),'ready');
 });
