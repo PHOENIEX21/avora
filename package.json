@@ -87,7 +87,8 @@
     "audit:v14.9-authored-english-bank": "node --experimental-strip-types scripts/audit-v14.9-authored-jss2-english-bank.mjs",
     "audit:v14.9.1-tutor-ui": "node scripts/audit-v14.9.1-tutor-ui.mjs",
     "audit:v14.9.2-jss1-math-slides": "node --experimental-strip-types scripts/audit-v14.9.2-jss1-math-slides.mjs",
-    "test:dawn-security": "node --test scripts/test-dawn-access-policy.mjs scripts/test-guardian-verification.mjs scripts/test-weekly-pin-security.mjs"
+    "test:dawn-security": "node --test scripts/test-dawn-access-policy.mjs scripts/test-guardian-verification.mjs scripts/test-weekly-pin-security.mjs",
+    "test:weekly-baseline": "node --test scripts/test-weekly-baseline.mjs"
   },
   "dependencies": {
     "bcryptjs": "^3.0.2",
