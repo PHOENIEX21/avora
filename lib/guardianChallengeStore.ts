@@ -23,7 +23,7 @@ export async function confirmGuardianContactChallenge(
   if(state!=='pending')return state;
   const valid=matchesGuardianChallenge(code,String(row.nonce),secret,String(row.code_hash));
   if(valid){
-   await tx`UPDATE weekly_guardian_challenges SET consumed_at=now()
+   await tx`UPDATE weekly_guardian_challenges SET consumed_at=now(),verified_at=now()
     WHERE id=${challengeId} AND student_id=${studentId}`;
    return 'verified';
   }
