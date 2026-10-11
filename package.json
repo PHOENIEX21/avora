@@ -92,7 +92,8 @@
     "test:weekly-objective-review": "node --test scripts/test-weekly-objective-review.mjs",
     "test:weekly-publication-readiness": "node --test scripts/test-weekly-publication-readiness.mjs",
     "test:weekly-release-readiness": "node --test scripts/test-weekly-release-readiness.mjs",
-    "test:weekly-pilot-gate": "node --test scripts/test-weekly-pilot-gate.mjs"
+    "test:weekly-pilot-gate": "node --test scripts/test-weekly-pilot-gate.mjs",
+    "test:weekly-student-visibility": "node --test scripts/test-weekly-student-visibility.mjs"
   },
   "dependencies": {
     "bcryptjs": "^3.0.2",
