@@ -28,6 +28,8 @@ jobs:
         run: npm run test:dawn-security
       - name: Starting-check policy tests
         run: npm run test:weekly-baseline
+      - name: Weekly objective publication security tests
+        run: npm run test:weekly-objective-review
       - name: Curriculum audits
         run: npm run audit:curriculum
       - name: Next.js production build
