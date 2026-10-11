@@ -5,9 +5,9 @@ import ts from 'typescript';
 
 const source=readFileSync(new URL('../lib/weeklyBaselinePolicy.ts',import.meta.url),'utf8');
 const js=ts.transpileModule(source,{compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022}}).outputText;
-const module={exports:{}};
-new Function('module','exports',js)(module,module.exports);
-const {BASELINE_QUESTION_TARGET,BASELINE_DURATION_MS,baselineMayPostpone,baselinePostponementDeadline,baselineTimeRemaining}=module.exports;
+const testModule={exports:{}};
+new Function('module','exports',js)(testModule,testModule.exports);
+const {BASELINE_QUESTION_TARGET,BASELINE_DURATION_MS,baselineMayPostpone,baselinePostponementDeadline,baselineTimeRemaining}=testModule.exports;
 
 test('baseline targets twenty questions and fifteen minutes',()=>{
  assert.equal(BASELINE_QUESTION_TARGET,20);
