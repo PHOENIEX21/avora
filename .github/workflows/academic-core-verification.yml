@@ -36,6 +36,8 @@ jobs:
         run: npm run test:weekly-release-readiness
       - name: Weekly pilot activation security tests
         run: npm run test:weekly-pilot-gate
+      - name: Student weekly visibility regression
+        run: npm run test:weekly-student-visibility
       - name: Curriculum audits
         run: npm run audit:curriculum
       - name: Next.js production build
