@@ -1,6 +1,7 @@
 import {NextResponse} from 'next/server';
 import {getSession} from '@/lib/auth';
 import {sql,withDbRetry} from '@/lib/db';
+import {baselineMayPostpone,baselinePostponementDeadline} from '@/lib/weeklyBaselinePolicy';
 
 export async function GET(){
  const session=await getSession();
@@ -33,8 +34,9 @@ export async function POST(request:Request){
     FROM weekly_student_baseline_state WHERE student_id=${session.userId} FOR UPDATE`;
    if(row.status==='COMPLETED'||row.status==='IN_PROGRESS')return 'unchanged';
    if(action==='POSTPONE'){
-    const limit=new Date(row.first_offered_at).getTime()+3*24*60*60*1000;
-    if(Date.now()>=limit)return 'postpone_expired';
+    const firstOffered=new Date(row.first_offered_at);
+    if(!baselineMayPostpone(firstOffered))return 'postpone_expired';
+    const limit=baselinePostponementDeadline(firstOffered).getTime();
     await tx`UPDATE weekly_student_baseline_state SET status='POSTPONED',
      postponed_until=to_timestamp(${limit}/1000.0),updated_at=now()
      WHERE student_id=${session.userId}`;
