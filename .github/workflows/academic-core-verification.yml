@@ -24,6 +24,8 @@ jobs:
         run: npm run lint
       - name: Answer marking regression
         run: npm run test:answer-marking
+      - name: Dawn guardian and PIN security tests
+        run: npm run test:dawn-security
       - name: Curriculum audits
         run: npm run audit:curriculum
       - name: Next.js production build
