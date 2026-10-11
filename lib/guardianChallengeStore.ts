@@ -1,5 +1,5 @@
 import {sql} from '@/lib/db';
-import {guardianChallengeState,matchesGuardianChallenge} from '@/lib/guardianVerification';
+import {guardianChallengeState,matchesGuardianChallenge,GUARDIAN_CHALLENGE_MAX_ATTEMPTS} from '@/lib/guardianVerification';
 
 export type ChallengeConfirmation='verified'|'invalid'|'expired'|'used'|'exhausted'|'missing';
 
@@ -27,8 +27,8 @@ export async function confirmGuardianContactChallenge(
     WHERE id=${challengeId} AND student_id=${studentId}`;
    return 'verified';
   }
-  await tx`UPDATE weekly_guardian_challenges SET attempts=LEAST(attempts+1,5)
+  await tx`UPDATE weekly_guardian_challenges SET attempts=LEAST(attempts+1,${GUARDIAN_CHALLENGE_MAX_ATTEMPTS})
    WHERE id=${challengeId} AND student_id=${studentId}`;
-  return Number(row.attempts)+1>=5?'exhausted':'invalid';
+  return Number(row.attempts)+1>=GUARDIAN_CHALLENGE_MAX_ATTEMPTS?'exhausted':'invalid';
  });
 }
