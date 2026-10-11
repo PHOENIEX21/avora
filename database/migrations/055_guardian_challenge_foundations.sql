@@ -15,5 +15,8 @@ CREATE TABLE IF NOT EXISTS weekly_guardian_challenges (
 );
 CREATE INDEX IF NOT EXISTS weekly_guardian_challenges_student_recent
  ON weekly_guardian_challenges(student_id,created_at DESC);
-CREATE UNIQUE INDEX IF NOT EXISTS weekly_guardian_challenges_one_active
- ON weekly_guardian_challenges(student_id) WHERE consumed_at IS NULL;
+-- An expired, unconsumed row must not permanently prevent issuing a replacement.
+-- Issuance will atomically consume old pending challenges before inserting a new one.
+CREATE INDEX IF NOT EXISTS weekly_guardian_challenges_pending
+ ON weekly_guardian_challenges(student_id,expires_at DESC)
+ WHERE consumed_at IS NULL;
