@@ -16,3 +16,7 @@ export function baselineMayPostpone(firstOfferedAt:Date,now=new Date()):boolean{
 export function baselineTimeRemaining(startedAt:Date,now=new Date()):number{
  return Math.max(0,BASELINE_DURATION_MS-(now.getTime()-startedAt.getTime()));
 }
+
+export function baselineAttemptExpired(startedAt:Date,now=new Date()):boolean{
+ return baselineTimeRemaining(startedAt,now)===0;
+}
