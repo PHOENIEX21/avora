@@ -1,5 +1,6 @@
 import {sql,withDbRetry} from '@/lib/db';
 import {isWeeklyLearningEnabled} from '@/lib/weeklyLearning';
+import {decideDawnAccess} from '@/lib/dawnAccessPolicy';
 
 /**
  * Server-side Dawn gate. A feature flag is necessary but not sufficient.
@@ -27,7 +28,14 @@ export async function getDawnGate(studentId:string):Promise<DawnGate>{
   const verifiedContact=Boolean(consent?.parent_contact_verified_at);
   const parentPinReady=Boolean(parentPin),studentPinReady=Boolean(studentPin);
   const base={classLevel,term:Number(week.term),week:Number(week.current_week)};
-  if(!guardianConsent||!verifiedContact||!parentPinReady||!studentPinReady)
+  const decision=decideDawnAccess({
+   classReleased:true,weekReleased:true,consentRecorded:guardianConsent,
+   contactVerified:verifiedContact,parentPinPresent:parentPinReady,
+   studentPinPresent:studentPinReady,
+   // Must remain false until approved legal wording, verification and audit workflow exist.
+   guardianWorkflowApproved:false
+  });
+  if(decision==='onboarding_required')
    return {status:'onboarding_required',...base,guardianConsent,verifiedContact,parentPin:parentPinReady,studentPin:studentPinReady};
   // A verified contact timestamp alone is not a completed, legally approved guardian flow.
   return {status:'verification_pending',...base};
