@@ -32,6 +32,8 @@ jobs:
         run: npm run test:weekly-objective-review
       - name: Weekly publication readiness regression
         run: npm run test:weekly-publication-readiness
+      - name: Weekly release readiness tests
+        run: npm run test:weekly-release-readiness
       - name: Curriculum audits
         run: npm run audit:curriculum
       - name: Next.js production build
