@@ -90,7 +90,8 @@
     "test:dawn-security": "node --test scripts/test-dawn-access-policy.mjs scripts/test-guardian-verification.mjs scripts/test-weekly-pin-security.mjs",
     "test:weekly-baseline": "node --test scripts/test-weekly-baseline.mjs",
     "test:weekly-objective-review": "node --test scripts/test-weekly-objective-review.mjs",
-    "test:weekly-publication-readiness": "node --test scripts/test-weekly-publication-readiness.mjs"
+    "test:weekly-publication-readiness": "node --test scripts/test-weekly-publication-readiness.mjs",
+    "test:weekly-release-readiness": "node --test scripts/test-weekly-release-readiness.mjs"
   },
   "dependencies": {
     "bcryptjs": "^3.0.2",
