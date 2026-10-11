@@ -37,7 +37,7 @@ export async function GET(request:Request){
     (SELECT count(*)::int FROM subjects s WHERE EXISTS(
       SELECT 1 FROM objectives o WHERE o.subject_name=s.subject_name)) AS published_subject_count,
     (SELECT count(*)::int FROM item_counts WHERE approved_count<6) AS objectives_without_six_items,
-    (SELECT count(*)::int FROM weekly_exams e WHERE e.class_level=${classLevel}
+    (SELECT count(DISTINCT e.subject_name)::int FROM weekly_exams e WHERE e.class_level=${classLevel}
       AND e.term=${term} AND e.week_number=${week}
       AND e.subject_name IN (SELECT subject_name FROM subjects)
       AND e.status IN ('REVIEWED','SCHEDULED') AND EXISTS(
