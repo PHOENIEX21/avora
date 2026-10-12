@@ -42,6 +42,8 @@ jobs:
         run: npm run test:weekly-curriculum-import
       - name: Reviewed live question bank gate
         run: npm run test:weekly-live-question-bank
+      - name: Student release window boundary tests
+        run: npm run test:weekly-release-window
       - name: Curriculum audits
         run: npm run audit:curriculum
       - name: Next.js production build
