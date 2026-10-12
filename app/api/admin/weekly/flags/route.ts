@@ -50,7 +50,7 @@ export async function POST(request:Request){
        AND e.subject_name IN (SELECT subject_name FROM subjects)
        AND e.status IN ('REVIEWED','SCHEDULED') AND EXISTS(
         SELECT 1 FROM weekly_exam_items ei WHERE ei.exam_id=e.id)) AS exam_subjects,
-     (SELECT count(*)::int FROM weekly_topic_question_sets qs
+     (SELECT count(DISTINCT qs.subject_name)::int FROM weekly_topic_question_sets qs
       WHERE qs.class_level=${classLevel} AND qs.term=${term!} AND qs.week_number=${week!}
        AND qs.subject_name IN (SELECT subject_name FROM subjects)
        AND (SELECT count(*) FROM weekly_topic_question_memberships m
