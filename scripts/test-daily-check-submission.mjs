@@ -35,6 +35,7 @@ function fixture(options={}){
   if(text.includes('FROM daily_assessment_questions'))return options.questions??[
    {id:question,question_type:'MULTIPLE_CHOICE',correct_answer:'4',options:['3','4'],skill_id:'skill'}
   ];
+  if(text.includes('SELECT DISTINCT membership.question_id'))return options.held?[{question_id:question}]:[];
   if(text.includes('INSERT INTO daily_assessment_submissions')){
    if(saved)return [];
    saved={correct_count:0,total_count:0};return [{student_id:student}];
@@ -50,11 +51,12 @@ function fixture(options={}){
   const before=saved;
   try{return await work(query)}catch(error){saved=before;throw error}
  };
+ const embargo=compile('../lib/weeklyExamEmbargo.ts',{'./db':{sql:query,withDbRetry:work=>work()}});
  const {POST}=compile('../app/api/daily-check/[id]/submit/route.ts',{
   'next/server':{NextResponse:{json:(body,init)=>Response.json(body,init)}},
   '@/lib/auth':{getSession:async()=>options.session===null?null:{userId:student,role:options.role??'STUDENT'}},
   '@/lib/db':{sql:query,withDbRetry:work=>work()},
-  '@/lib/answers':answers,'@/lib/mastery':mastery,zod:{z}
+  '@/lib/answers':answers,'@/lib/mastery':mastery,'@/lib/weeklyExamEmbargo':embargo,zod:{z}
  });
  return {calls,submit:(body={answers:{[question]:'4'}},id=objective)=>POST(
   new Request('https://avora.test/api/daily-check/'+id+'/submit',{
@@ -66,6 +68,10 @@ test('unauthenticated and non-student submissions never query the database',asyn
  for(const [options,status] of [[{session:null},401],[{role:'ADMIN'},403],[{role:'PARENT'},403]]){
   const f=fixture(options);assert.equal((await f.submit()).status,status);assert.equal(f.calls.length,0);
  }
+});
+test('official exam embargo prevents daily-check correctness disclosure and evidence writes',async()=>{
+ const f=fixture({held:true});assert.equal((await f.submit()).status,409);
+ assert.ok(!f.calls.some(call=>call.text==='BEGIN'||/^\s*(INSERT|UPDATE)/.test(call.text)));
 });
 test('invalid objective and malformed answers return 400 without database writes',async()=>{
  for(const [body,id] of [['{',objective],[{},objective],[{answers:{bad:'4'}},objective],[{answers:{[question]:'x'.repeat(4001)}},objective],[{answers:{}},'bad']]){

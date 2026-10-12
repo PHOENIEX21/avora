@@ -1,3 +1,15 @@
-import {NextResponse} from 'next/server';import {getSession} from '@/lib/auth';import {learningAccessDenial} from '@/lib/apiAccess';import {sql,withDbRetry} from '@/lib/db';import {z} from 'zod';
+import {NextResponse} from 'next/server';
+import {getSession} from '@/lib/auth';
+import {learningAccessDenial} from '@/lib/apiAccess';
+import {saveOfficialWeeklyAnswer} from '@/lib/weeklyExamSession';
+import {WeeklyWorkspaceError} from '@/lib/weeklyWorkspace';
+import {z} from 'zod';
 const schema=z.object({sessionId:z.string().uuid(),questionId:z.string().uuid(),answer:z.string().max(12000)});
-export async function POST(req:Request){const s=await getSession();if(!s)return NextResponse.json({error:'Sign in required.'},{status:401});const denied=await learningAccessDenial(s);if(denied)return denied;try{const d=schema.parse(await req.json());const rows=await withDbRetry(()=>sql`UPDATE exam_sessions es SET answers=answers||${sql.json({[d.questionId]:d.answer})} FROM weekly_exam_blueprints b WHERE es.id=${d.sessionId} AND es.student_id=${s.userId} AND es.weekly_exam_blueprint_id=b.id AND es.status IN ('ACTIVE','IN_PROGRESS') AND now()<=b.closes_at AND ${d.questionId}::uuid=ANY(es.question_ids) RETURNING es.id`);if(!rows.length)return NextResponse.json({error:'This weekly exam is closed or this question is not part of your locked paper.'},{status:409});return NextResponse.json({ok:true})}catch{return NextResponse.json({error:'Answer could not sync. Keep it on screen and retry.'},{status:503})}}
+export async function POST(request:Request){
+ const session=await getSession();if(!session)return NextResponse.json({error:'Sign in required.'},{status:401});
+ if(session.role!=='STUDENT')return NextResponse.json({error:'Student access required.'},{status:403});
+ const denied=await learningAccessDenial(session);if(denied)return denied;
+ const parsed=schema.safeParse(await request.json().catch(()=>null));if(!parsed.success)return NextResponse.json({error:'Invalid weekly request.'},{status:400});
+ try{return NextResponse.json(await saveOfficialWeeklyAnswer(session.userId,parsed.data.sessionId,parsed.data.questionId,parsed.data.answer))}
+ catch(error){return NextResponse.json({error:error instanceof WeeklyWorkspaceError?error.message:'Weekly exam unavailable. Retry.'},{status:error instanceof WeeklyWorkspaceError?error.status:503})}
+}

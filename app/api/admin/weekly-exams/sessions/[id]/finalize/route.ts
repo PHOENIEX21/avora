@@ -1,8 +1,33 @@
-import {syncWeeklyOutcome} from '@/lib/weeklyOutcome';import {NextResponse} from 'next/server';import {requireAdmin} from '@/lib/admin/access';import {sql,withDbRetry} from '@/lib/db';import {nextMasteryScore} from '@/lib/mastery';import {evidenceConfidence,evidenceStatus} from '@/lib/learnerIntelligence';
-export async function POST(req:Request,{params}:{params:Promise<{id:string}>}){const admin=await requireAdmin();const {id}=await params;const body=await req.json();const marks=body.marks&&typeof body.marks==='object'?body.marks:{};
- const [s]=await withDbRetry(()=>sql`SELECT es.*,b.title,b.term,b.week_number,b.results_release_at FROM exam_sessions es JOIN weekly_exam_blueprints b ON b.id=es.weekly_exam_blueprint_id WHERE es.id=${id} AND es.marking_status='REVIEW_PENDING'`);if(!s)return NextResponse.json({error:'This session is not awaiting mark review.'},{status:409});
- const qs=await withDbRetry(()=>sql`SELECT x.objective_id,x.subject_name,x.curriculum_topic_id,q.id,q.question_type,q.skill_id FROM weekly_exam_version_questions x JOIN questions q ON q.id=x.question_id WHERE x.version_id=${s.weekly_exam_version_id}`);let earned=0,total=qs.length;
- await withDbRetry(()=>sql.begin(async tx=>{for(const q of qs){let fraction=0;if(q.question_type==='MULTIPLE_CHOICE'){const [m]=await tx`SELECT mark_fraction FROM weekly_exam_question_marks WHERE session_id=${id} AND question_id=${q.id}`;fraction=m?Number(m.mark_fraction):0;}else{const raw=marks[String(q.id)];fraction=Math.max(0,Math.min(1,Number(raw?.fraction||0)));await tx`UPDATE weekly_exam_question_marks SET mark_fraction=${fraction},feedback=${String(raw?.feedback||'').slice(0,2000)},marking_source='ADMIN',marked_by=${admin.userId},marked_at=now() WHERE session_id=${id} AND question_id=${q.id}`;}earned+=fraction;
- if(q.skill_id){const correct=fraction>=.7;const ex=await tx`SELECT score,evidence_count FROM mastery WHERE student_id=${s.student_id} AND skill_id=${q.skill_id}`;const current=ex[0]?Number(ex[0].score):0,count=ex[0]?Number(ex[0].evidence_count):0,score=nextMasteryScore(current,correct,count);await tx`INSERT INTO mastery(student_id,skill_id,score,evidence_count,last_practiced_at) VALUES(${s.student_id},${q.skill_id},${score},1,now()) ON CONFLICT(student_id,skill_id) DO UPDATE SET score=${score},evidence_count=mastery.evidence_count+1,last_practiced_at=now(),updated_at=now()`;const ev=count+1,status=evidenceStatus(score,ev,correct?0:1),confidence=evidenceConfidence(ev);await tx`INSERT INTO learner_skill_insights(student_id,skill_id,status,confidence,independent_accuracy,independent_evidence,updated_at) VALUES(${s.student_id},${q.skill_id},${status},${confidence},${score},${ev},now()) ON CONFLICT(student_id,skill_id) DO UPDATE SET status=${status},confidence=${confidence},independent_accuracy=${score},independent_evidence=${ev},updated_at=now()`;}}
- await tx`UPDATE exam_sessions SET score=${total?earned/total:0},marking_status='COMPLETED' WHERE id=${id}`;}));
- await syncWeeklyOutcome(id);return NextResponse.json({ok:true,score:Math.round((total?earned/total:0)*100)});}
+import {NextResponse} from 'next/server';
+import {requireAdmin} from '@/lib/admin/access';
+import {sql,withDbRetry} from '@/lib/db';
+import {z} from 'zod';
+import {WeeklyWorkspaceError} from '@/lib/weeklyWorkspace';
+import type {WeeklyPaperQuestion} from '@/lib/weeklyExamSession';
+const schema=z.object({marks:z.record(z.string().uuid(),z.object({fraction:z.number().min(0).max(1),feedback:z.string().max(2000)}))});
+export async function POST(request:Request,{params}:{params:Promise<{id:string}>}){
+ const admin=await requireAdmin(),{id}=await params;
+ const parsed=schema.safeParse(await request.json().catch(()=>null));if(!z.string().uuid().safeParse(id).success||!parsed.success)return NextResponse.json({error:'Invalid reviewed marks.'},{status:400});
+ try{
+  const [owner]=await withDbRetry(()=>sql`SELECT student_id FROM exam_sessions WHERE id=${id}`);
+  if(!owner)return NextResponse.json({error:'Paper not found.'},{status:404});
+  const result=await sql.begin(async tx=>{
+   await tx`SELECT id FROM users WHERE id=${owner.student_id} FOR UPDATE`;
+   const [session]=await tx`SELECT * FROM exam_sessions WHERE id=${id} AND student_id=${owner.student_id} AND status='COMPLETED' AND marking_status='REVIEW_PENDING' FOR UPDATE`;
+   if(!session)throw new WeeklyWorkspaceError('This session is not awaiting mark review.',409);
+   const paper=session.weekly_paper_snapshot as WeeklyPaperQuestion[];
+   if(!Array.isArray(paper)||!paper.length)throw new WeeklyWorkspaceError('This earlier paper needs owner review of its original source.',409);
+   const theory=paper.filter(q=>q.type!=='MULTIPLE_CHOICE'),allowed=new Set(theory.map(q=>q.id));
+   if(Object.keys(parsed.data.marks).length!==theory.length||Object.keys(parsed.data.marks).some(id=>!allowed.has(id)))throw new WeeklyWorkspaceError('Review every theory question from this paper.',400);
+   for(const question of theory){const mark=parsed.data.marks[question.id];
+    const updated=await tx`UPDATE weekly_exam_question_marks SET mark_fraction=${mark.fraction},feedback=${mark.feedback},marking_source='ADMIN',marked_by=${admin.userId},marked_at=clock_timestamp()
+     WHERE session_id=${id} AND question_id=${question.id} RETURNING question_id`;
+    if(!updated.length)throw new WeeklyWorkspaceError('The theory marking draft is incomplete.',409);
+   }
+   const marks=await tx`SELECT question_id,mark_fraction FROM weekly_exam_question_marks WHERE session_id=${id}`;
+   if(marks.length!==paper.length||marks.some(mark=>!paper.some(q=>q.id===String(mark.question_id))))throw new WeeklyWorkspaceError('The reviewed marks are incomplete.',409);
+   const score=marks.reduce((sum,mark)=>sum+Number(mark.mark_fraction),0)/paper.length;
+   await tx`UPDATE exam_sessions SET score=${score},marking_status='COMPLETED' WHERE id=${id}`;return {ok:true,score:Math.round(score*100)};
+  });return NextResponse.json(result);
+ }catch(error){return NextResponse.json({error:error instanceof WeeklyWorkspaceError?error.message:'Could not finalize reviewed marks.'},{status:error instanceof WeeklyWorkspaceError?error.status:503})}
+}

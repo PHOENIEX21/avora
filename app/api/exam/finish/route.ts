@@ -1,3 +1,4 @@
+import {heldOfficialQuestionIds} from '@/lib/weeklyExamEmbargo';
 import {learningAccessDenial} from '@/lib/apiAccess';
 import {NextResponse} from 'next/server';
 import {getSession} from '@/lib/auth';
@@ -47,10 +48,11 @@ export async function POST(req:Request){
  const s=await getSession();if(!s)return NextResponse.json({error:'Please sign in again.'},{status:401});const accessDenied=await learningAccessDenial(s);if(accessDenied)return accessDenied;
  try{
   const {sessionId,extendedAnswers={},selectedExtendedKeys=[]}=schema.parse(await req.json());
-  const [x]=await withDbRetry(()=>sql`SELECT * FROM exam_sessions WHERE id=${sessionId} AND student_id=${s.userId}`);
+  const [x]=await withDbRetry(()=>sql`SELECT * FROM exam_sessions WHERE id=${sessionId} AND student_id=${s.userId} AND weekly_exam_blueprint_id IS NULL AND COALESCE(assessment_type,'')<>'WEEKLY_EXAM'`);
   if(!x)return NextResponse.json({error:'Assessment not found.'},{status:404});
+  if((await heldOfficialQuestionIds((x.question_ids||[]).map(String))).size)return NextResponse.json({error:'This paper includes questions held for an official assessment.'},{status:409});
   if(x.status==='COMPLETED')return NextResponse.json({error:'This assessment has already been submitted.'},{status:409});
-  if(x.assessment_type==='AUTHORED_MOCK'){await withDbRetry(()=>sql`UPDATE exam_sessions SET extended_answers=extended_answers||${sql.json(extendedAnswers)},extended_selected_keys=${selectedExtendedKeys} WHERE id=${sessionId} AND student_id=${s.userId}`);x.extended_answers={...(x.extended_answers||{}),...extendedAnswers};x.extended_selected_keys=selectedExtendedKeys;}
+  if(x.assessment_type==='AUTHORED_MOCK'){await withDbRetry(()=>sql`UPDATE exam_sessions SET extended_answers=extended_answers||${sql.json(extendedAnswers)},extended_selected_keys=${selectedExtendedKeys} WHERE id=${sessionId} AND student_id=${s.userId} AND weekly_exam_blueprint_id IS NULL AND COALESCE(assessment_type,'')<>'WEEKLY_EXAM'`);x.extended_answers={...(x.extended_answers||{}),...extendedAnswers};x.extended_selected_keys=selectedExtendedKeys;}
   const qs=await withDbRetry(()=>sql`SELECT q.id,q.prompt,q.question_type,q.correct_answer,q.options,q.explanation,q.solution_steps,q.wrong_answer_reasoning,q.micro_skill,q.misconception_tags,q.difficulty,q.exam_year,q.exam_name,q.content_origin,q.rights_status,q.assessment_kind,q.mock_answer_guidance,q.skill_id,sk.name skill,COALESCE(q.exam_topic,t.name) topic FROM questions q JOIN skills sk ON sk.id=q.skill_id JOIN topics t ON t.id=sk.topic_id WHERE q.id=ANY(${x.question_ids})`);
   const byId=new Map(qs.map((q:any)=>[q.id,q]));const ordered=(x.question_ids||[]).map((id:string)=>byId.get(id)).filter(Boolean);
   const ans=x.answers||{};let correct=0;const topic:any={};const attemptRows:any[]=[];const review:any[]=[];

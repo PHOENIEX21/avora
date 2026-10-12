@@ -1,3 +1,4 @@
+import {heldOfficialQuestionIds} from '@/lib/weeklyExamEmbargo';
 import {learningAccessDenial} from '@/lib/apiAccess';
 import {NextResponse} from 'next/server';
 import {z} from 'zod';
@@ -22,6 +23,7 @@ export async function POST(req:Request){
  // learner whether the answer is correct even if the later evidence write has a transient failure.
  let q:any;
  try{
+  if((await heldOfficialQuestionIds([data.questionId])).size)return NextResponse.json({error:'Question unavailable during the official exam window.'},{status:409});
   [q]=await withDbRetry(()=>sql`SELECT q.id,q.skill_id,q.correct_answer,q.options,q.explanation,q.difficulty,q.micro_skill,q.wrong_answer_reasoning,q.misconception_tags,sk.name skill,t.name topic FROM questions q JOIN skills sk ON sk.id=q.skill_id JOIN topics t ON t.id=sk.topic_id WHERE q.id=${data.questionId} AND q.status='PUBLISHED'`,4);
  }catch(e:any){
   console.error('attempt question read',e);

@@ -1,6 +1,30 @@
-import {NextResponse} from 'next/server';import {requireAdmin} from '@/lib/admin/access';import {sql,withDbRetry} from '@/lib/db';import {markWeeklyTheory} from '@/lib/weeklyTheoryMarker';
+import {NextResponse} from 'next/server';
+import {requireAdmin} from '@/lib/admin/access';
+import {sql,withDbRetry} from '@/lib/db';
+import {markWeeklyTheory} from '@/lib/weeklyTheoryMarker';
+import type {WeeklyPaperQuestion} from '@/lib/weeklyExamSession';
+import {z} from 'zod';
 export const maxDuration=60;
-export async function POST(_req:Request,{params}:{params:Promise<{id:string}>}){const admin=await requireAdmin();const {id}=await params;const [s]=await withDbRetry(()=>sql`SELECT es.*,b.id blueprint_id,v.id version_id FROM exam_sessions es JOIN weekly_exam_blueprints b ON b.id=es.weekly_exam_blueprint_id JOIN weekly_exam_versions v ON v.id=es.weekly_exam_version_id WHERE es.id=${id} AND es.status='COMPLETED' AND es.marking_status='PENDING'`);if(!s)return NextResponse.json({error:'No weekly theory paper is waiting for marking.'},{status:404});
- const qs=await withDbRetry(()=>sql`SELECT x.objective_id,x.subject_name,x.curriculum_topic_id,q.id,q.prompt,q.question_type,q.explanation,q.correct_answer,q.curriculum_objective FROM weekly_exam_version_questions x JOIN questions q ON q.id=x.question_id WHERE x.version_id=${s.version_id} ORDER BY x.position`);const ans=s.answers||{};const theory=qs.filter((q:any)=>q.question_type!=='MULTIPLE_CHOICE').map((q:any)=>({questionId:String(q.id),prompt:String(q.prompt),approvedSolution:String(q.explanation||q.correct_answer||''),learnerAnswer:String(ans[q.id]||''),objective:String(q.curriculum_objective||'')}));
- const marked=await markWeeklyTheory(theory);if(!marked.ok)return NextResponse.json({error:'Theory marking could not be validated. The learner result remains pending.'},{status:422});const markMap=new Map(marked.json!.marks.map(m=>[m.questionId,m]));
- await withDbRetry(()=>sql.begin(async tx=>{for(const q of qs){if(q.question_type==='MULTIPLE_CHOICE')continue;const m:any=markMap.get(String(q.id));await tx`INSERT INTO weekly_exam_question_marks(session_id,question_id,objective_id,subject_name,curriculum_topic_id,mark_fraction,marking_source,feedback,marked_by) VALUES(${id},${q.id},${q.objective_id},${q.subject_name},${q.curriculum_topic_id},${m.fraction},'AI_DRAFT',${m.feedback},${admin.userId}) ON CONFLICT(session_id,question_id) DO UPDATE SET mark_fraction=EXCLUDED.mark_fraction,feedback=EXCLUDED.feedback,marking_source='AI_DRAFT',marked_by=EXCLUDED.marked_by,marked_at=now()`;}await tx`UPDATE exam_sessions SET marking_status='REVIEW_PENDING' WHERE id=${id}`;}));return NextResponse.json({ok:true,count:theory.length,message:'AI marking draft created. Admin review remains required before final result release.'});}
+export async function POST(_request:Request,{params}:{params:Promise<{id:string}>}){
+ const admin=await requireAdmin(),{id}=await params;if(!z.string().uuid().safeParse(id).success)return NextResponse.json({error:'Invalid paper.'},{status:400});
+ const [session]=await withDbRetry(()=>sql`SELECT * FROM exam_sessions WHERE id=${id} AND status='COMPLETED' AND marking_status='PENDING'`);
+ if(!session)return NextResponse.json({error:'No theory paper is waiting for marking.'},{status:404});
+ const paper=session.weekly_paper_snapshot as WeeklyPaperQuestion[];
+ if(!Array.isArray(paper)||!paper.length)return NextResponse.json({error:'This earlier paper needs owner review of its original source.'},{status:409});
+ const theory=paper.filter(q=>q.type!=='MULTIPLE_CHOICE');
+ const marked=await markWeeklyTheory(theory.map(q=>({questionId:q.id,prompt:q.prompt,approvedSolution:q.explanation,learnerAnswer:String(session.answers?.[q.id]||''),objective:q.objectiveText})));
+ if(!marked.ok)return NextResponse.json({error:'Theory marking could not be validated. The result remains pending.'},{status:422});
+ const markMap=new Map(marked.json!.marks.map(mark=>[mark.questionId,mark]));
+ if(markMap.size!==theory.length||theory.some(q=>!markMap.has(q.id)))return NextResponse.json({error:'Marking does not match this paper.'},{status:422});
+ const saved=await sql.begin(async tx=>{
+  await tx`SELECT id FROM users WHERE id=${session.student_id} FOR UPDATE`;
+  const [current]=await tx`SELECT id FROM exam_sessions WHERE id=${id} AND status='COMPLETED' AND marking_status='PENDING' FOR UPDATE`;
+  if(!current)return false;
+  for(const question of theory){const mark=markMap.get(question.id)!;
+   await tx`INSERT INTO weekly_exam_question_marks(session_id,question_id,objective_id,subject_name,curriculum_topic_id,mark_fraction,marking_source,feedback,marked_by)
+    VALUES(${id},${question.id},${question.objectiveId},${question.subject},${question.topic},${mark.fraction},'AI_DRAFT',${mark.feedback},${admin.userId})
+    ON CONFLICT(session_id,question_id) DO UPDATE SET mark_fraction=EXCLUDED.mark_fraction,feedback=EXCLUDED.feedback,marking_source='AI_DRAFT',marked_by=EXCLUDED.marked_by,marked_at=clock_timestamp()`;
+  }
+  await tx`UPDATE exam_sessions SET marking_status='REVIEW_PENDING' WHERE id=${id}`;return true;
+ });return NextResponse.json(saved?{ok:true,count:theory.length}:{error:'This paper has already moved to review.'},{status:saved?200:409});
+}

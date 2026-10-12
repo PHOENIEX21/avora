@@ -6,7 +6,7 @@ import {markAssignmentMcq,gradeAssignmentTheory} from '@/lib/assignmentMarking';
 export async function POST(req:Request){
  const s=await getSession();if(!s)return NextResponse.json({error:'Please sign in again.'},{status:401});
  const body=await req.json(),sessionId=String(body.sessionId||'');
- const [exam]=await withDbRetry(()=>sql`SELECT id,assignment_question_ids,assignment_answers,status FROM exam_sessions WHERE id=${sessionId} AND student_id=${s.userId}`);
+ const [exam]=await withDbRetry(()=>sql`SELECT id,assignment_question_ids,assignment_answers,status FROM exam_sessions WHERE id=${sessionId} AND student_id=${s.userId} AND weekly_exam_blueprint_id IS NULL AND COALESCE(assessment_type,'')<>'WEEKLY_EXAM'`);
  if(!exam)return NextResponse.json({error:'Assessment not found.'},{status:404});
  if(exam.status!=='ACTIVE')return NextResponse.json({error:'This assessment is no longer active.'},{status:409});
  const ids=(exam.assignment_question_ids||[]).map(String);if(!ids.length)return NextResponse.json({marks:[],assignmentPercent:null});

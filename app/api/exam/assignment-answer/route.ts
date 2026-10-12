@@ -12,7 +12,7 @@ export async function POST(req:Request){
   const d=schema.parse(await req.json());
   const rows=await withDbRetry(()=>sql`
    UPDATE exam_sessions SET assignment_answers=assignment_answers||${sql.json({[d.questionId]:d.answer})}
-   WHERE id=${d.sessionId} AND student_id=${s.userId} AND status='ACTIVE'
+   WHERE id=${d.sessionId} AND student_id=${s.userId} AND weekly_exam_blueprint_id IS NULL AND COALESCE(assessment_type,'')<>'WEEKLY_EXAM' AND status='ACTIVE'
      AND ${d.questionId}=ANY(assignment_question_ids)
    RETURNING id`);
   if(!rows.length)return NextResponse.json({error:'This assignment question is not part of the active assessment.'},{status:409});

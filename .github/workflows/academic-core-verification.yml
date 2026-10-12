@@ -44,6 +44,8 @@ jobs:
         run: node --test scripts/test-weekly-baseline-flow.mjs
       - name: Mistakes and spaced similar follow-up regression
         run: node --test scripts/test-weekly-mistakes.mjs
+      - name: Official weekly paper integrity and delayed outcomes
+        run: node --test scripts/test-weekly-official-exam.mjs
       - name: Weekly objective publication security tests
         run: npm run test:weekly-objective-review
       - name: Weekly publication readiness regression

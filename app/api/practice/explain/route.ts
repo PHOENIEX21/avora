@@ -1,3 +1,4 @@
+import {heldOfficialQuestionIds} from '@/lib/weeklyExamEmbargo';
 import {requirePremiumFeature} from '@/lib/premiumAccess';
 import {NextResponse} from 'next/server';
 import {z} from 'zod';
@@ -33,6 +34,7 @@ export async function POST(req:Request){
  const premiumDenied=await requirePremiumFeature(session,'Personalized AI Practice Guidance');if(premiumDenied)return premiumDenied;
  try{
   const d=schema.parse(await req.json());
+  if((await heldOfficialQuestionIds([d.questionId])).size)return NextResponse.json({error:'Question unavailable during the official exam window.'},{status:409});
   const [q]=await withDbRetry(()=>sql`SELECT q.prompt,q.correct_answer,q.options,q.hint_text,q.explanation,q.micro_skill,sk.name skill,t.name topic FROM questions q JOIN skills sk ON sk.id=q.skill_id JOIN topics t ON t.id=sk.topic_id WHERE q.id=${d.questionId} AND q.status='PUBLISHED'`);
   if(!q)return NextResponse.json({error:'Question not found.'},{status:404});
   const expected=displayCorrectAnswer(q.correct_answer);

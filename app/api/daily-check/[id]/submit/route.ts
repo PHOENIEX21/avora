@@ -4,6 +4,7 @@ import {sql,withDbRetry} from '@/lib/db';
 import {answerIsCorrect} from '@/lib/answers';
 import {nextMasteryScore} from '@/lib/mastery';
 import {z} from 'zod';
+import {heldOfficialQuestionIds} from '@/lib/weeklyExamEmbargo';
 
 const schema=z.object({answers:z.record(z.string().uuid(),z.string().max(4000))});
 
@@ -22,6 +23,7 @@ export async function POST(req:Request,{params}:{params:Promise<{id:string}>}){
  const [a]=await withDbRetry(()=>sql`SELECT a.id FROM daily_assessments a JOIN academic_daily_objectives o ON o.id=a.objective_id JOIN term_topic_schedule t ON t.id=o.schedule_id WHERE o.id=${id} AND a.status='PUBLISHED' AND t.class_level=${String(p?.class_level||'')}`);
  if(!a)return NextResponse.json({error:'Daily Check is unavailable.'},{status:404});
  const qs=await withDbRetry(()=>sql`SELECT q.id,q.question_type,q.correct_answer,q.options,q.skill_id FROM daily_assessment_questions x JOIN questions q ON q.id=x.question_id WHERE x.assessment_id=${a.id} ORDER BY x.position`);
+ if((await heldOfficialQuestionIds(qs.map(q=>String(q.id)))).size)return NextResponse.json({error:'This check includes questions held for an official assessment.'},{status:409});
  if(!qs.length||qs.some(q=>q.question_type!=='MULTIPLE_CHOICE'))
   return NextResponse.json({error:'Daily Check is not ready.'},{status:409});
  const questionIds=new Set(qs.map(q=>String(q.id)));

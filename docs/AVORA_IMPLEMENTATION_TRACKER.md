@@ -14,7 +14,7 @@
 | Phase 2 verified curriculum | NOT VERIFIED | Import/review route exists; source coverage/release not verified |
 | Phase 2b all-class objective gating | NOT VERIFIED | Class flag API exists; runtime not tested |
 | Phase 3 weekly | PARTIALLY VERIFIED | Guarded dashboard, historical objectives and study/practice implemented; full weekly exam cycle remains |
-| Phase 3b exams/notifications/revisit | NOT VERIFIED | Academic-core and weekly models diverge |
+| Phase 3b exams/notifications/revisit | PARTIALLY VERIFIED | Existing official flexible-window paper sealing, ownership, autosave/expiry and delayed outcomes verified; objective compatibility, full scheduling/lobby/notifications and midweek revisit remain |
 | Phase 3c week switching | NOT VERIFIED | Need state transition tests |
 | Phase 4 daily tasks | PARTIALLY VERIFIED | Objective practice/submissions and progress verified; English Daily five-task flow remains |
 | Existing Daily Check submissions | PARTIALLY VERIFIED | Student/input/bank checks and replay-safe progress updates tested with mocked DB; live Neon integration pending |
@@ -39,7 +39,7 @@
 - 2026-10-11: Added `AGENTS.md` to make next-agent continuation self-contained about known work and safe next steps. **Original ZIP is still required for full specification fidelity.**
 
 ## Next work
-Continue from the baseline/catch-up/mistakes milestone without rebuilding completed work. Guardian/email activation is owner-deferred; use SendGrid and remind before rollout. Continue independent reviewed daily content, weekly exam/calendar and private-upload integration in the original phase sequence. Reconcile remaining statements in migrations 048–058 against the isolated schema; do not blindly rerun or mark incomplete migrations applied. Later checkpoint reports supersede historical publication/network blockers below.
+Continue from the official-exam integrity milestone without rebuilding completed work. Guardian/email activation is owner-deferred; use SendGrid and remind before rollout. Continue existing-objective compatibility, reviewed daily content, exam/calendar/remediation and private-upload integration in the original phase sequence. Reconcile remaining statements in migrations 048–058 against the isolated schema; do not blindly rerun or mark incomplete migrations applied. Later checkpoint reports supersede historical publication/network blockers below.
 
 ## 2026-10-12 verified checkpoint
 - Isolated integration Neon branch contains **50 weekly_* tables**; this does not imply all migrations are complete.

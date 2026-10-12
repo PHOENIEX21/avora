@@ -1,7 +1,25 @@
-import {NextResponse} from 'next/server';import {requireAdmin} from '@/lib/admin/access';import {sql,withDbRetry} from '@/lib/db';
-export async function POST(_req:Request,{params}:{params:Promise<{id:string;versionId:string}>}){const admin=await requireAdmin();const {id,versionId}=await params;
- const [v]=await withDbRetry(()=>sql`SELECT v.*,b.question_count FROM weekly_exam_versions v JOIN weekly_exam_blueprints b ON b.id=v.blueprint_id WHERE v.id=${versionId} AND b.id=${id}`);if(!v)return NextResponse.json({error:'Paper version not found.'},{status:404});if(!['DRAFT','IN_REVIEW'].includes(String(v.status)))return NextResponse.json({error:'Only a review-stage paper can be locked.'},{status:409});
- const [audit]=await withDbRetry(()=>sql`SELECT COUNT(*)::int total,COUNT(*) FILTER(WHERE relevance_status IN ('PASSED','ADMIN_OVERRIDE') AND answer_status IN ('PASSED','ADMIN_OVERRIDE'))::int verified,COUNT(*) FILTER(WHERE relevance_status='FAILED' OR answer_status='FAILED')::int failed FROM weekly_exam_version_questions WHERE version_id=${versionId}`);
- if(Number(audit.total)!==Number(v.question_count)||Number(audit.verified)!==Number(v.question_count)||Number(audit.failed)>0)return NextResponse.json({error:`Cannot lock: ${audit.verified}/${v.question_count} questions are fully verified.`},{status:409});
- await withDbRetry(()=>sql.begin(async tx=>{await tx`UPDATE weekly_exam_versions SET status='LOCKED',locked_at=now() WHERE id=${versionId}`;await tx`UPDATE weekly_exam_blueprints SET status='APPROVED',approved_by=${admin.userId},approved_at=now(),updated_at=now() WHERE id=${id}`;await tx`UPDATE weekly_exam_versions SET status='SUPERSEDED' WHERE blueprint_id=${id} AND id<>${versionId} AND status IN ('DRAFT','IN_REVIEW','APPROVED')`;}));
- return NextResponse.json({ok:true});}
+import {NextResponse} from 'next/server';
+import {requireAdmin} from '@/lib/admin/access';
+import {sql} from '@/lib/db';
+import {reviewedOfficialVersion} from '@/lib/weeklyExamSession';
+import {WeeklyWorkspaceError} from '@/lib/weeklyWorkspace';
+import {z} from 'zod';
+export async function POST(_request:Request,{params}:{params:Promise<{id:string;versionId:string}>}){
+ const admin=await requireAdmin(),{id,versionId}=await params;
+ if(!z.string().uuid().safeParse(id).success||!z.string().uuid().safeParse(versionId).success)return NextResponse.json({error:'Invalid paper version.'},{status:400});
+ try{
+  await sql.begin(async tx=>{
+   const [version]=await tx`SELECT v.*,b.question_count,b.class_level,b.term,b.week_number FROM weekly_exam_versions v
+    JOIN weekly_exam_blueprints b ON b.id=v.blueprint_id WHERE v.id=${versionId} AND b.id=${id} FOR UPDATE OF b,v`;
+   if(!version)throw new WeeklyWorkspaceError('Paper version not found.',404);
+   if(!['DRAFT','IN_REVIEW'].includes(String(version.status)))throw new WeeklyWorkspaceError('Only a review-stage paper can be sealed.',409);
+   const [started]=await tx`SELECT id FROM exam_sessions WHERE weekly_exam_blueprint_id=${id} LIMIT 1`;
+   if(started)throw new WeeklyWorkspaceError('A paper with saved attempts cannot be replaced. Keep the original assessment.',409);
+   const paper=await reviewedOfficialVersion(tx,{versionId,classLevel:String(version.class_level),term:Number(version.term),week:Number(version.week_number),count:Number(version.question_count)});
+   await tx`UPDATE questions SET status='PUBLISHED',quality_status='REVIEWED' WHERE id=ANY(${paper.map(q=>q.id)}::uuid[])`;
+   await tx`UPDATE weekly_exam_versions SET status='LOCKED',paper_snapshot=${JSON.stringify(paper)}::jsonb,locked_at=clock_timestamp() WHERE id=${versionId}`;
+   await tx`UPDATE weekly_exam_blueprints SET status='APPROVED',approved_by=${admin.userId},approved_at=clock_timestamp(),updated_at=clock_timestamp() WHERE id=${id}`;
+   await tx`UPDATE weekly_exam_versions SET status='SUPERSEDED' WHERE blueprint_id=${id} AND id<>${versionId} AND status IN ('DRAFT','IN_REVIEW','APPROVED','LOCKED')`;
+  });return NextResponse.json({ok:true});
+ }catch(error){return NextResponse.json({error:error instanceof WeeklyWorkspaceError?error.message:'Could not seal reviewed paper.'},{status:error instanceof WeeklyWorkspaceError?error.status:503})}
+}

@@ -1,3 +1,4 @@
+import {withoutHeldOfficialQuestions} from '@/lib/weeklyExamEmbargo';
 import {learningAccessDenial} from '@/lib/apiAccess';
 import {NextResponse} from 'next/server';
 import {sql,withDbRetry} from '@/lib/db';
@@ -21,7 +22,7 @@ export async function GET(req:Request){
    const [done]=await withDbRetry(()=>sql`SELECT COUNT(*)::int n FROM attempts a JOIN questions q ON q.id=a.question_id WHERE a.student_id=${session.userId} AND a.mode='DIAGNOSTIC' AND q.class_level=${classLevel}`);
    const answered=Number(done?.n||0);if(answered>=DIAGNOSTIC_TARGET)return NextResponse.json({question:null,complete:true,context:{exam:classExam||`${classLevel} Curriculum`,classLevel,subject,answered,minimumEvidence:DIAGNOSTIC_TARGET}});
    const rows=await withDbRetry(()=>sql`SELECT q.id,q.prompt,q.question_type,q.options,q.correct_answer,q.difficulty,q.hint_text,q.interaction_steps,q.question_group,s.name AS skill_name,t.name AS topic_name FROM questions q JOIN skills s ON s.id=q.skill_id JOIN topics t ON t.id=s.topic_id JOIN subjects sub ON sub.id=t.subject_id WHERE q.status='PUBLISHED' AND q.quality_status='REVIEWED' AND char_length(trim(q.prompt))>=8 AND sub.slug=${subSlug} AND q.class_level=${classLevel} AND (${classExam}::text IS NULL OR q.exam_name=${classExam}) AND q.id NOT IN (SELECT question_id FROM attempts WHERE student_id=${session.userId} AND mode='DIAGNOSTIC') ORDER BY q.difficulty,q.curriculum_order,random() LIMIT 25`);
-   const r=rows.find(isExamReadyQuestion);if(!r)return NextResponse.json({question:null,complete:true,context:{exam:classExam||`${classLevel} Curriculum`,classLevel,subject,answered,minimumEvidence:DIAGNOSTIC_TARGET,bank:available}});
+   const r=(await withoutHeldOfficialQuestions(rows)).find(isExamReadyQuestion);if(!r)return NextResponse.json({question:null,complete:true,context:{exam:classExam||`${classLevel} Curriculum`,classLevel,subject,answered,minimumEvidence:DIAGNOSTIC_TARGET,bank:available}});
    await withDbRetry(()=>sql`UPDATE student_profiles SET diagnostic_started_at=COALESCE(diagnostic_started_at,now()) WHERE user_id=${session.userId}`);
    return NextResponse.json({question:shape(r,false),mode,context:{exam:classExam||`${classLevel} Curriculum`,classLevel,subject,answered,minimumEvidence:DIAGNOSTIC_TARGET,trial:{diagnosticIncluded:true,diagnosticQuestions:DIAGNOSTIC_TARGET}}});
   }
@@ -44,6 +45,7 @@ export async function GET(req:Request){
   rows=rows.filter(isExamReadyQuestion);
   if(!rows[0])rows=[...(await withDbRetry(()=>sql`SELECT q.id,q.prompt,q.question_type,q.options,q.correct_answer,q.difficulty,q.hint_text,q.interaction_steps,q.question_group,s.name AS skill_name,t.name AS topic_name FROM questions q JOIN skills s ON s.id=q.skill_id JOIN topics t ON t.id=s.topic_id WHERE q.status='PUBLISHED' AND q.quality_status='REVIEWED' AND q.class_level=${classLevel} AND q.skill_id=${skillId} AND (${classExam}::text IS NULL OR q.exam_name=${classExam}) ORDER BY random() LIMIT 25`))];
   rows=rows.filter(isExamReadyQuestion);
+  rows=await withoutHeldOfficialQuestions(rows);
   const r=rows[0];if(!r)return NextResponse.json({question:null,complete:true,context:{classLevel,subject,topic:selectedTopicName}});
   const [progress]=await withDbRetry(()=>sql`SELECT COUNT(*)::int answered,COUNT(*) FILTER(WHERE is_correct)::int correct FROM attempts a JOIN questions q ON q.id=a.question_id WHERE a.student_id=${session.userId} AND a.mode='PRACTICE' AND q.skill_id=${skillId}`);
   const reserved=await reserveTrialQuestions(session.userId,'PRACTICE',[String(r.id)]);if(!reserved.allowed)return NextResponse.json({error:`Your 14-day trial includes ${reserved.limit} self-service assessment questions. You have ${reserved.remaining} remaining. Subscribe to continue practice without the trial cap.`,code:'TRIAL_QUESTION_LIMIT',trial:reserved},{status:402});return NextResponse.json({question:shape(r,true),mode,context:{exam:classExam||`${classLevel} Curriculum`,classLevel,subject,topic:r.topic_name,skill:r.skill_name,group:r.question_group||r.skill_name,answered:Number(progress?.answered||0),minimumEvidence:5,accuracy:Number(progress?.answered||0)?Number(progress?.correct||0)/Number(progress?.answered||1):0,trial:reserved.isTrial?{remaining:reserved.remaining,limit:reserved.limit}:null}});
