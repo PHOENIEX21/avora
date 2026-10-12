@@ -73,4 +73,6 @@ The unmodified source ZIP is stored in the owner's ChatGPT Library at `/AVORA/So
 - Source review found old objective and item CHECK constraints still block PUBLISHED; replacement attempt was blocked by database safety controls. **Do not claim published workflow is ready.**
 - Read-only diagnostic: `database/diagnostics/weekly_schema_readiness.sql` checks required tables and status constraints; use before marking Phase 1 schema ready.
 - Migration files 048–058 remain partially applied and are not recorded as fully completed. Do not blindly rerun the full migrations or mark the ledger.
+- Later report `docs/AVORA_PUBLICATION_GATE_VERIFIED_2026-10-12.md` records owner repair of restrictive publication checks and 52 weekly tables; it supersedes the earlier constraint blocker. Reverify on the isolated branch before writes.
+- Cloud continuation from c109dca: local typecheck, lint, build, curriculum and answer marking pass; 57 weekly/security and 8 Daily Check route tests pass. Existing Daily Check is hardened; new weekly dashboard/daily-task/progress milestones remain incomplete. See the tracker's cloud continuation for network, credential and original-ZIP blockers.
 - Do substantive work before each checkpoint; do not jump ahead to Phase 10 visual redesign. No production database, main merge or Vercel deployment authorized.

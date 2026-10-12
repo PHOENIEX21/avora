@@ -28,7 +28,8 @@ test('permissions: only own class unless explicitly moderator',()=>{
 const sql=readFileSync(new URL('../database/migrations/048_weekly_restructure_phase1.sql',import.meta.url),'utf8');
 test('migration: no destructive operations and pilot defaults disabled',()=>{
  assert.match(sql,/enabled boolean NOT NULL DEFAULT false/i);
- assert.doesNotMatch(sql,/\b(?:DROP|TRUNCATE|DELETE FROM|ALTER TABLE)\b/i);
+ const statements=sql.split('\n').filter(line=>!line.trimStart().startsWith('--')).join('\n');
+ assert.doesNotMatch(statements,/\b(?:DROP|TRUNCATE|DELETE FROM|ALTER TABLE)\b/i);
  assert.match(sql,/weekly_item_approval_gate/);
 });
 

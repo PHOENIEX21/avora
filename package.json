@@ -88,6 +88,7 @@
     "audit:v14.9.1-tutor-ui": "node scripts/audit-v14.9.1-tutor-ui.mjs",
     "audit:v14.9.2-jss1-math-slides": "node --experimental-strip-types scripts/audit-v14.9.2-jss1-math-slides.mjs",
     "test:dawn-security": "node --test scripts/test-dawn-access-policy.mjs scripts/test-guardian-verification.mjs scripts/test-weekly-pin-security.mjs",
+    "test:daily-check": "node --test scripts/test-daily-check-submission.mjs",
     "test:weekly-baseline": "node --test scripts/test-weekly-baseline.mjs",
     "test:weekly-objective-review": "node --test scripts/test-weekly-objective-review.mjs",
     "test:weekly-publication-readiness": "node --test scripts/test-weekly-publication-readiness.mjs",

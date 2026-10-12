@@ -24,6 +24,10 @@ jobs:
         run: npm run lint
       - name: Answer marking regression
         run: npm run test:answer-marking
+      - name: Daily Check submission and progress regression
+        run: npm run test:daily-check
+      - name: Weekly foundation regression
+        run: node --test scripts/test-weekly-phase1.mjs scripts/test-weekly-phase2.mjs
       - name: Dawn guardian and PIN security tests
         run: npm run test:dawn-security
       - name: Starting-check policy tests

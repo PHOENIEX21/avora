@@ -17,6 +17,7 @@
 | Phase 3b exams/notifications/revisit | NOT VERIFIED | Academic-core and weekly models diverge |
 | Phase 3c week switching | NOT VERIFIED | Need state transition tests |
 | Phase 4 daily tasks | NOT VERIFIED | Need complete flow |
+| Existing Daily Check submissions | PARTIALLY VERIFIED | Student/input/bank checks and replay-safe progress updates tested with mocked DB; live Neon integration pending |
 | Phase 4g English Daily | NOT VERIFIED | Need approved real content and tests |
 | Phase 5 uploads | NOT VERIFIED | Need flow and safety tests |
 | Phase 6 scheduler | NOT VERIFIED | Need timezone, retries and idempotency tests |
@@ -50,3 +51,15 @@ Compare every statement in migrations 048–058 with isolated Neon schema; const
 - Read `docs/AVORA_SCHEMA_COMPATIBILITY_GATE_2026-10-12.md` for the verified 50-table inventory and publication constraint gate.
 - Inspected admin objectives import and class flags route: activation requires five published weekdays and matching week state; no runtime HTTP test yet.
 - Narrow CHECK constraints on objectives and items require an approved atomic replacement; no DROP executed.
+
+## 2026-10-12 cloud continuation
+- Base commit: `c109dcaa8ab84262e7bcd46b986be5450c003601`, branch `avora-academic-core-v1`.
+- Local checks passed: TypeScript; lint (0 errors, 11 existing warnings); answer marking (12 checks); all seven curriculum audit scripts; 57 weekly/guardian/security tests; 8 new Daily Check route tests; production build with an ephemeral AUTH_SECRET. GitHub Actions API returned Forbidden, so remote run status is unverified.
+- Fixed the Phase 1 migration test's false positive on a rollback comment. Added Phase 1/2 and Daily Check tests to the academic-core workflow.
+- Daily Check now rejects non-students, invalid JSON/UUIDs/answers, foreign question IDs, and empty/non-objective banks before progress writes. Student-row locking serializes simultaneous Daily Check evidence updates. Replay returns the stored result without new attempts or progress increments.
+- The new route tests execute transpiled handler code with mocked SQL and real validation/marking. They do not establish real PostgreSQL transaction/concurrency behavior or live schema compatibility.
+- Newer `AVORA_PUBLICATION_GATE_VERIFIED_2026-10-12.md` supersedes the earlier narrow-constraint blocker: it reports owner repair of both checks and 52 weekly tables. This cloud session has not independently queried Neon.
+- Owner provided the development endpoint and authorized read-only checks and non-destructive tests. Connection attempts failed with EAI_AGAIN; HTTPS proxy also rejected the endpoint with 403. No database query or write succeeded. Runtime DATABASE_URL is still absent in this running session.
+- Original specification and designs remain unavailable: `docs/source/avora-restructure-agent-instructions.md` is a pointer only. Per AGENTS.md, feature implementation requires the original ZIP. `/weekly` remains a placeholder; dashboard, new weekly daily-task integration and complete progress tracking are not complete.
+- No production operations, main merge, deployment, migration or data reset performed. Temporary credential-bearing diagnostic file was removed.
+- Next: publish the environment configuration with endpoint/API network access and runtime credentials, verify endpoint-to-branch identity, run read-only schema diagnostics, obtain the original ZIP, then continue roadmap implementation and live integration checks.
