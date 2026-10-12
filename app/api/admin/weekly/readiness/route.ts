@@ -46,6 +46,14 @@ export async function GET(request:Request){
       AND e.subject_name IN (SELECT subject_name FROM subjects)
       AND e.status IN ('REVIEWED','SCHEDULED') AND EXISTS(
        SELECT 1 FROM weekly_exam_items ei WHERE ei.exam_id=e.id)) AS reviewed_exam_count,
+    (SELECT count(*)::int FROM weekly_topic_question_sets qs
+     WHERE qs.class_level=${classLevel} AND qs.term=${term} AND qs.week_number=${week}
+      AND qs.subject_name IN (SELECT subject_name FROM subjects)
+      AND (SELECT count(*) FROM weekly_topic_question_memberships m
+        JOIN weekly_items i ON i.id=m.item_id
+        WHERE m.topic_set_id=qs.id AND m.pool='LIVE'
+         AND i.status IN ('APPROVED','PUBLISHED') AND i.reviewer_id IS NOT NULL
+         AND i.reviewed_at IS NOT NULL AND i.answer_key IS NOT NULL) BETWEEN 40 AND 50) AS ready_topic_sets,
     (SELECT count(DISTINCT day_index)::int FROM weekly_english_daily_plan
      WHERE class_level=${classLevel} AND term=${term} AND week_number=${week}
       AND status='PUBLISHED') AS published_english_days
@@ -57,6 +65,7 @@ export async function GET(request:Request){
    publishedSubjectCount:Number(row?.published_subject_count??0),
    objectivesWithoutSixItems:Number(row?.objectives_without_six_items??0),
    reviewedExamCount:Number(row?.reviewed_exam_count??0),
+   readyTopicSets:Number(row?.ready_topic_sets??0),
    publishedEnglishDays:Number(row?.published_english_days??0)
   };
   return NextResponse.json({classLevel,term,week,...weeklyReleaseReadiness(evidence),evidence});
