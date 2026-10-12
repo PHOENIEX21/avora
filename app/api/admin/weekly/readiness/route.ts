@@ -49,6 +49,7 @@ export async function GET(request:Request){
     (SELECT count(DISTINCT qs.subject_name)::int FROM weekly_topic_question_sets qs
      WHERE qs.class_level=${classLevel} AND qs.term=${term} AND qs.week_number=${week}
       AND qs.subject_name IN (SELECT subject_name FROM subjects)
+      AND EXISTS (SELECT 1 FROM weekly_curriculum_objectives o WHERE o.class_level=qs.class_level AND o.subject_name=qs.subject_name AND o.term=qs.term AND o.week_number=qs.week_number AND o.topic_title=qs.topic_title AND o.approval_status='PUBLISHED')
       AND (SELECT count(*) FROM weekly_topic_question_memberships m
         JOIN weekly_items i ON i.id=m.item_id
         WHERE m.topic_set_id=qs.id AND m.pool='LIVE'
