@@ -65,6 +65,8 @@ After each batch, record: date, Git branch/commit, files changed, migrations and
 Never expose database credentials in documentation. No destructive migration, no accidental Neon production mutation, no automatic publication of AI content, no unapproved deployment. Preserve existing students' progress and parent relationships. Remove temporary branches only after the user confirms they're no longer needed.
 
 ## Original ZIP — persistent archive (confirmed uploaded)
+
+2026-10-12 cloud continuation: the owner supplied the complete package. The full specification is now tracked at `docs/source/avora-spec.md`, the exact design archive at `docs/source/avora-design-reference.zip`, and the continuation document at `docs/source/AVORA_Codex_Continuation_Handover.docx`. Read these local sources; do not ask the owner for the ZIP again. The provided design archive has 22 HTML screens plus README/canvas metadata (earlier handoffs called it 23 screens).
 The unmodified source ZIP is stored in the owner's ChatGPT Library at `/AVORA/Source Specification/AVORA_MASTER_RESTRUCTURE_AND_23_DESIGNS_2026-10-11.zip` (Library file id `libfile_2eeaea885d9c8191975cc3ca14ca7c6f`). It contains `avora-restructure-agent-instructions.md` and `avora-design-reference.zip` (23 HTML design screens). **Access requires the owner's connected ChatGPT Library; this is not a public GitHub URL.** Agents without Library access must ask for the ZIP rather than invent requirements. This persistent archive was uploaded and confirmed on 2026-10-11. The archive has not yet been checked into GitHub.
 
 ## 2026-10-12 continuation update (supersedes stale 'no schema modifications' notes)
@@ -76,3 +78,9 @@ The unmodified source ZIP is stored in the owner's ChatGPT Library at `/AVORA/So
 - Later report `docs/AVORA_PUBLICATION_GATE_VERIFIED_2026-10-12.md` records owner repair of restrictive publication checks and 52 weekly tables; it supersedes the earlier constraint blocker. Reverify on the isolated branch before writes.
 - Cloud continuation from c109dca: local typecheck, lint, build, curriculum and answer marking pass; 57 weekly/security and 8 Daily Check route tests pass. Existing Daily Check is hardened; new weekly dashboard/daily-task/progress milestones remain incomplete. See the tracker's cloud continuation for network, credential and original-ZIP blockers.
 - Do substantive work before each checkpoint; do not jump ahead to Phase 10 visual redesign. No production database, main merge or Vercel deployment authorized.
+
+## Verified weekly workspace continuation
+- Read `docs/AVORA_WORKSPACE_MILESTONE_2026-10-12.md`: guarded dashboard, persistent study, reviewed practice, stored marking/results, progress and scheduling are implemented using existing weekly CBT sessions. Live pilot activation remains gated.
+- Full source documents and the newer exported interface screenshots are now tracked under `docs/source/`. The new screenshot package adds visual references without changing functional requirements.
+- Isolated Neon identity is verified; additive workspace schema is applied. Local app health returns HTTP 200 with database connected using an opt-in, endpoint/branch-locked development WebSocket transport. Native postgres remains the default for production.
+- Regression, live rollback integration and mobile component checks are documented in the milestone report. Continue the original phase sequence without rebuilding verified work or publishing sample content.
