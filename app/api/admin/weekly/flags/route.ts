@@ -50,13 +50,21 @@ export async function POST(request:Request){
        AND e.subject_name IN (SELECT subject_name FROM subjects)
        AND e.status IN ('REVIEWED','SCHEDULED') AND EXISTS(
         SELECT 1 FROM weekly_exam_items ei WHERE ei.exam_id=e.id)) AS exam_subjects,
+     (SELECT count(*)::int FROM weekly_topic_question_sets qs
+      WHERE qs.class_level=${classLevel} AND qs.term=${term!} AND qs.week_number=${week!}
+       AND qs.subject_name IN (SELECT subject_name FROM subjects)
+       AND (SELECT count(*) FROM weekly_topic_question_memberships m
+         JOIN weekly_items i ON i.id=m.item_id
+         WHERE m.topic_set_id=qs.id AND m.pool='LIVE'
+          AND i.status IN ('APPROVED','PUBLISHED') AND i.reviewer_id IS NOT NULL
+          AND i.reviewed_at IS NOT NULL AND i.answer_key IS NOT NULL) BETWEEN 40 AND 50) AS ready_topic_sets,
      (SELECT count(DISTINCT day_index)::int FROM weekly_english_daily_plan
       WHERE class_level=${classLevel} AND term=${term!} AND week_number=${week!}
        AND status='PUBLISHED') AS english_days
    `);
    if(!Number(ready?.subjects)||Number(ready?.published_objectives)<Number(ready?.subjects)||Number(ready?.published_subjects)!==Number(ready?.subjects)||
       Number(ready?.missing_items)!==0||Number(ready?.exam_subjects)<Number(ready?.subjects)||
-      Number(ready?.english_days)!==5)
+      Number(ready?.ready_topic_sets)<Number(ready?.subjects)||Number(ready?.english_days)!==5)
     return NextResponse.json({error:'Pilot activation blocked: publish every active subject, six approved questions per objective, a reviewed exam per subject, and all five English Daily plans'},{status:409});
   }
   if(enabled){const [state]=await withDbRetry(()=>sql`SELECT term,current_week FROM weekly_class_week_state WHERE class_level=${classLevel}`);
