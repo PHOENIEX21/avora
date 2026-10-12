@@ -5,6 +5,7 @@ import {requireStudentLearningAccess} from '@/lib/learningAccess';
 import {sql,withDbRetry} from '@/lib/db';
 import {learnerTopicTitle} from '@/lib/learnerPresentation';
 import {getActiveAcademicPlan} from '@/lib/academicCore';
+import {getDawnGate} from '@/lib/dawnAccess';
 
 export const dynamic='force-dynamic';
 export const revalidate=0;
@@ -12,7 +13,11 @@ export const revalidate=0;
 export default async function Welcome(){
  const s=await getSession();
  if(!s) redirect('/login');
+ if(s.role!=='STUDENT')redirect(s.role==='ADMIN'?'/admin':s.role==='PARENT'?'/parent':'/');
  const access=await requireStudentLearningAccess(s);
+ const gate=await getDawnGate(s.userId);
+ if(gate.status==='ready')redirect('/weekly');
+ const legacyAcademic=gate.status==='legacy'&&['CLASS_UNSET','NOT_RELEASED'].includes(gate.reason);
 
  const [u]=await withDbRetry(()=>sql`SELECT u.full_name,sp.class_level,sp.target_exam,sp.preferred_subject,sp.learning_goal,sp.daily_goal_minutes,sp.onboarding_completed,sp.diagnostic_completed,sp.diagnostic_score FROM users u LEFT JOIN student_profiles sp ON sp.user_id=u.id WHERE u.id=${s.userId}`,2);
  if(!u?.onboarding_completed) redirect('/onboarding');
@@ -23,7 +28,7 @@ export default async function Welcome(){
   withDbRetry(()=>sql`SELECT COUNT(*)::int attempts,COUNT(*) FILTER(WHERE is_correct)::int correct,COUNT(*) FILTER(WHERE mode='DIAGNOSTIC')::int diagnostic_attempts,COUNT(*) FILTER(WHERE mode='DIAGNOSTIC' AND is_correct)::int diagnostic_correct FROM attempts WHERE student_id=${s.userId}`,2),
   withDbRetry(()=>sql`SELECT s.name,t.name AS topic,ROUND(AVG(CASE WHEN a.is_correct THEN 1 ELSE 0 END)*100)::int AS accuracy,COUNT(*)::int evidence FROM attempts a JOIN questions q ON q.id=a.question_id JOIN skills s ON s.id=q.skill_id JOIN topics t ON t.id=s.topic_id WHERE a.student_id=${s.userId} GROUP BY s.id,s.name,t.name ORDER BY accuracy ASC,evidence DESC LIMIT 3`,2),
   withDbRetry(()=>sql`SELECT recommended_topic,plan_reason FROM remediation_plans WHERE student_id=${s.userId} AND status='ACTIVE' ORDER BY created_at DESC LIMIT 1`,2),
-  getActiveAcademicPlan(String(u.class_level||'JSS3'))
+  legacyAcademic?getActiveAcademicPlan(String(u.class_level||'JSS3')):Promise.resolve([])
  ]);
 
  const first=(u.full_name||'Learner').split(/\s+/)[0];
@@ -48,14 +53,15 @@ export default async function Welcome(){
  const skills=Number(st?.skills||0);
  const focusState=focusAccuracy==null?'Ready to begin':focusAccuracy<45?'Needs teaching':focusAccuracy<75?'Developing':'Building confidence';
 
- const weeklyExams=await withDbRetry(()=>sql`SELECT b.id,b.title,b.release_at,b.closes_at,es.submitted_at FROM weekly_exam_blueprints b JOIN weekly_exam_versions v ON v.blueprint_id=b.id AND v.status='LOCKED' LEFT JOIN exam_sessions es ON es.weekly_exam_version_id=v.id AND es.student_id=${s.userId} WHERE b.class_level=${String(u.class_level||'')} AND b.status IN ('SCHEDULED','LIVE') AND b.closes_at>=now() ORDER BY b.release_at LIMIT 2`).catch(()=>[]);
- const weekday=Math.max(1,Math.min(5,new Date().getDay()||5));
+ const weeklyExams=legacyAcademic?await withDbRetry(()=>sql`SELECT b.id,b.title,b.release_at,b.closes_at,es.submitted_at FROM weekly_exam_blueprints b JOIN weekly_exam_versions v ON v.blueprint_id=b.id AND v.status='LOCKED' AND v.locked_at IS NOT NULL AND v.paper_snapshot IS NOT NULL LEFT JOIN exam_sessions es ON es.weekly_exam_version_id=v.id AND es.student_id=${s.userId} WHERE b.class_level=${String(u.class_level||'')} AND b.approved_by IS NOT NULL AND b.approved_at IS NOT NULL AND b.status IN ('SCHEDULED','LIVE') AND b.closes_at>=clock_timestamp() ORDER BY b.release_at LIMIT 2`).catch(()=>[]):[];
+ const day=new Intl.DateTimeFormat('en',{weekday:'short',timeZone:'Africa/Lagos'}).format(new Date());
+ const weekday=({Mon:1,Tue:2,Wed:3,Thu:4,Fri:5} as Record<string,number>)[day]||0;
  const liveToday=(academicPlan as any[]).filter((x:any)=>Number(x.day_index)===weekday).slice(0,4);
 
  return <main className="premium-home">
 
   <section className="shell today-command">
-   <header><div><span className="section-kicker">TODAY · {new Intl.DateTimeFormat('en-NG',{weekday:'long',day:'numeric',month:'long'}).format(new Date())}</span><h1>Know exactly what to do today.</h1><p>{liveToday.length?'Your curriculum work is ready. Study each focus first, then complete its Daily Check.':'Your verified daily curriculum timetable is being prepared. Until it is live, continue from your current AVORA learning focus below.'}</p></div><Link href="/ask" className="premium-secondary">Add what school taught me →</Link></header>
+   <header><div><span className="section-kicker">TODAY · {new Intl.DateTimeFormat('en-NG',{weekday:'long',day:'numeric',month:'long',timeZone:'Africa/Lagos'}).format(new Date())}</span><h1>Know exactly what to do today.</h1><p>{liveToday.length?'Your curriculum work is ready. Study each focus first, then complete its Daily Check.':'Your verified daily curriculum timetable is being prepared. Until it is live, continue from your current AVORA learning focus below.'}</p></div><Link href="/ask" className="premium-secondary">Add what school taught me →</Link></header>
    {liveToday.length?<div className="today-task-list">{liveToday.map((x:any)=><article key={x.id}><div><small>{x.subject_name} · Week {x.week_number}</small><h2>{x.topic_name}</h2><strong>{x.title}</strong><p>{x.objective_text}</p></div><div className="today-task-actions"><Link href={'/tutor?subject='+encodeURIComponent(x.subject_name)+'&topic='+encodeURIComponent(x.topic_name)+(x.lesson_anchor?'&focus='+encodeURIComponent(x.lesson_anchor):'')}>Study this topic →</Link>{x.daily_check_status==='PUBLISHED'?<Link href={'/daily-check/'+x.id}>{x.question_target} question Daily Check →</Link>:<span>{x.question_target} question Daily Check · preparing</span>}</div></article>)}</div>:<div className="today-empty-plan today-recommendation"><b>Current recommendation</b><strong>{learnerTopicTitle(focusTopic)}</strong><p>We will replace this recommendation with the verified weekly curriculum schedule as soon as the academic plan is approved.</p><Link href={remediation?.recommended_topic?'/tutor?topic='+encodeURIComponent(remediation.recommended_topic)+'&subject='+encodeURIComponent(u.preferred_subject||'Mathematics'):'/learn'}>Continue learning →</Link></div>}
   </section>
   {weeklyExams.length>0&&<section className="shell today-weekly-exam"><span className="section-kicker">AVORA WEEKLY</span>{weeklyExams.map((x:any)=><article key={x.id}><div><h2>{x.title}</h2><p>{x.submitted_at?'Submitted — result will follow the configured release time.':Date.now()<new Date(x.release_at).getTime()?'Your serious weekly assessment is scheduled.':'Your weekly assessment is open now.'}</p></div>{!x.submitted_at&&<Link href={'/weekly-exam/'+x.id}>{Date.now()<new Date(x.release_at).getTime()?'View assessment →':'Start weekly exam →'}</Link>}</article>)}</section>}

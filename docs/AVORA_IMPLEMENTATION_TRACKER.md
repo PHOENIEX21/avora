@@ -92,3 +92,8 @@ Superseded for current connectivity/specification/workspace status by `docs/AVOR
 - Existing deep lessons and genuine historical wrong answers are preserved. New tables/columns are additive on the isolated development branch only. No content or class release was fabricated or activated.
 - Secure SendGrid bindings and guardian consent/activation are deferred per owner instruction. Remind before rollout; do not repeatedly request them during independent work.
 - Full English Daily, uploaded-work, calendar/exam cycle, closed-window exam mistakes, parent/community/privacy, Dawn redesign and platform QA remain outstanding. Do not interpret passing CI as complete platform delivery.
+
+## 2026-10-12 Home Entry
+
+- `docs/AVORA_HOME_ENTRY_CHECKPOINT_2026-10-12.md`: home respects the existing weekly/guardian gate before academic queries, routes ready students to the working weekly workspace, preserves unreleased legacy lessons and only shows sealed official cards.
+- Role boundaries and Lagos weekday selection are covered by actual-page regression tests. This does not complete the Today task/ring, global navigation or guardian activation.

@@ -119,3 +119,8 @@ The unmodified source ZIP is stored in the owner's ChatGPT Library at `/AVORA/So
 - Read `docs/AVORA_WEEKLY_VISUAL_CHECKPOINT_2026-10-12.md`. Weekly subject/objective screens now use scoped Dawn tokens, distinct subject gems, topic-first hierarchy, readable evidence/study states and selected study-source controls. No lesson, schema, publication or access model changed.
 - Screenshots of actual components with clearly labelled TEST_ONLY fixtures are committed under `docs/screenshots/weekly-visual/`. They are not live learner content, an authenticated full-app preview or owner visual sign-off.
 - Global navigation, self-hosted design fonts, the Today ring/theme and the other reference screens remain unfinished. Preserve global/legacy navigation until its real destination and release compatibility is implemented; do not add a competing dock inside the weekly screen.
+
+## Weekly home entry continuation
+- Read `docs/AVORA_HOME_ENTRY_CHECKPOINT_2026-10-12.md`. Ready students enter `/weekly` through `/home`; guardian-pending, missing-week and unavailable-gate states cannot load the legacy academic plan or official exam cards there. Unreleased legacy classes retain lessons and reviewed owner-sealed exam cards.
+- Home rejects non-student roles before learner queries and uses Africa/Lagos weekday/date selection. Weekends no longer pretend Friday's work is Today. No schema/data/content/publication change or guardian activation occurred.
+- Full Today tasks/ring and target navigation remain unfinished. This secure entry bridge is not the complete Dawn home, live guardian verification or full authenticated E2E sign-off.
