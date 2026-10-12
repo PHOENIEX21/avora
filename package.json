@@ -97,7 +97,8 @@
     "test:weekly-curriculum-import": "node --test scripts/test-weekly-curriculum-import.mjs",
     "test:weekly-live-question-bank": "node --test scripts/test-weekly-live-question-bank.mjs",
     "test:weekly-release-window": "node --test scripts/test-weekly-release-window.mjs",
-    "test:weekly-coverage-grid": "node --test scripts/test-weekly-coverage-grid.mjs"
+    "test:weekly-coverage-grid": "node --test scripts/test-weekly-coverage-grid.mjs",
+    "test:weekly-unpublished-gate": "node --test scripts/test-weekly-unpublished-gate.mjs"
   },
   "dependencies": {
     "bcryptjs": "^3.0.2",
