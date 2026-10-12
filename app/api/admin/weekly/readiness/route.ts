@@ -35,6 +35,7 @@ export async function GET(request:Request){
    SELECT
     (SELECT count(*)::int FROM subjects) AS subject_count,
     (SELECT count(*)::int FROM objectives) AS published_objective_count,
+    (SELECT count(*)::int FROM subjects s WHERE NOT EXISTS (SELECT 1 FROM objectives o WHERE o.subject_name=s.subject_name AND o.day_index BETWEEN 1 AND 5)) AS subjects_without_weekday_objectives,
     (SELECT count(*)::int FROM subjects s WHERE EXISTS(
       SELECT 1 FROM objectives o WHERE o.subject_name=s.subject_name)) AS published_subject_count,
     (SELECT count(*)::int FROM item_counts WHERE approved_count<6) AS objectives_without_six_items,
@@ -62,6 +63,7 @@ export async function GET(request:Request){
   const evidence={
    subjectCount:Number(row?.subject_count??0),
    publishedObjectiveCount:Number(row?.published_objective_count??0),
+   subjectsWithoutWeekdayObjectives:Number(row?.subjects_without_weekday_objectives??0),
    objectivesOutsideActiveSubjects:Number(row?.objectives_outside_active_subjects??0),
    publishedSubjectCount:Number(row?.published_subject_count??0),
    objectivesWithoutSixItems:Number(row?.objectives_without_six_items??0),
