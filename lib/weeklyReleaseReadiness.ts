@@ -2,6 +2,7 @@
 export type WeeklyReleaseEvidence={
  subjectCount:number;
  publishedObjectiveCount:number;
+ unpublishedObjectiveCount:number;
  subjectsWithoutWeekdayObjectives:number;
  objectivesOutsideActiveSubjects:number;
  publishedSubjectCount:number;
@@ -14,6 +15,7 @@ export function weeklyReleaseReadiness(e:WeeklyReleaseEvidence){
  const blockers:string[]=[];
  if(!Number.isInteger(e.subjectCount)||e.subjectCount<1)blockers.push('No active class subjects configured');
  if(e.subjectsWithoutWeekdayObjectives!==0)blockers.push('Each active subject needs a published weekday objective');
+ if(e.unpublishedObjectiveCount!==0)blockers.push('Imported objectives are awaiting publication');
  if(e.publishedObjectiveCount<e.subjectCount)blockers.push('Published objectives are missing');
  if(e.objectivesOutsideActiveSubjects!==0)blockers.push('Published objectives reference inactive subjects');
  if(e.publishedSubjectCount!==e.subjectCount)blockers.push('Every active subject needs published objectives');
