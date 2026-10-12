@@ -16,7 +16,9 @@ export async function GET(request:Request){
     count(o.id)::int AS objective_count,
     count(o.id) FILTER(WHERE o.approval_status='PUBLISHED' AND o.published_at IS NOT NULL)::int AS published_count,
     count(o.id) FILTER(WHERE o.source_reference IS NULL OR btrim(o.source_reference)='')::int AS missing_sources,
-    count(DISTINCT o.topic_title)::int AS topic_count
+    count(DISTINCT o.topic_title)::int AS topic_count,
+    count(o.id) FILTER(WHERE o.day_index IS NULL)::int AS unscheduled_count,
+    count(DISTINCT o.day_index) FILTER(WHERE o.approval_status='PUBLISHED' AND o.published_at IS NOT NULL)::int AS scheduled_days
    FROM weekly_class_subjects cs
    CROSS JOIN generate_series(1,16) AS calendar_week(week_number)
    LEFT JOIN weekly_curriculum_objectives o ON o.class_level=cs.class_level
@@ -29,8 +31,8 @@ export async function GET(request:Request){
    subjectName:row.subject_name,subjectKind:row.subject_kind,
    week:Number(row.week_number??0),objectives:Number(row.objective_count),
    published:Number(row.published_count),missingSources:Number(row.missing_sources),
-   topics:Number(row.topic_count),
-   status:Number(row.objective_count)===0?'EMPTY':Number(row.missing_sources)>0?'SOURCE_MISSING':
+   topics:Number(row.topic_count),unscheduled:Number(row.unscheduled_count),scheduledDays:Number(row.scheduled_days),
+   status:Number(row.objective_count)===0?'EMPTY':Number(row.missing_sources)>0?'SOURCE_MISSING':Number(row.unscheduled_count)>0?'UNSCHEDULED':
     Number(row.published_count)===Number(row.objective_count)?'PUBLISHED':'IN_PROGRESS'
   }))});
  }catch{return NextResponse.json({error:'Curriculum coverage unavailable'},{status:503})}
