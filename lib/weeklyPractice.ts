@@ -51,8 +51,12 @@ export async function finishWeeklyPractice(context:WeeklyStudentContext,sessionI
   if(answers.length!==visible.questions.length)throw new WeeklyWorkspaceError('Answer every question before finishing.',409);
   if(!session.submitted_at){
    for(const answer of answers){
-    const [old]=await tx`SELECT streak FROM weekly_student_item_schedule WHERE student_id=${context.studentId} AND item_id=${answer.item_id}`;
-    const retained=answer.is_correct&&answer.confidence!=='GUESS',streak=retained?Number(old?.streak||0)+1:0;
+    const [old]=await tx`SELECT streak,due_date<=(now() AT TIME ZONE 'Africa/Lagos')::date AS due
+     FROM weekly_student_item_schedule WHERE student_id=${context.studentId} AND item_id=${answer.item_id} FOR UPDATE`;
+    const retained=answer.is_correct&&answer.confidence!=='GUESS';
+    // Early practice is scored, but is not evidence of spaced retention.
+    if(old&&retained&&!old.due)continue;
+    const streak=retained?Number(old?.streak||0)+1:0;
     const interval=nextRevisitInterval(Number(old?.streak||0),Boolean(retained));
     await tx`INSERT INTO weekly_student_item_schedule(student_id,item_id,due_date,interval_days,streak,last_result,last_served_at)
      VALUES(${context.studentId},${answer.item_id},(now() AT TIME ZONE 'Africa/Lagos')::date+${interval}::integer,${interval},${streak},${answer.is_correct},now())

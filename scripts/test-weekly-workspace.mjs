@@ -64,7 +64,7 @@ function fixture(options={}){
   if(text.includes('UPDATE weekly_cbt_sessions'))submitted=true;
   if(text.includes('SELECT id FROM weekly_question_reports'))return reportSaved?[{id:'report'}]:[];
   if(text.includes('INSERT INTO weekly_question_reports'))reportSaved=true;
-  if(text.includes('SELECT streak'))return [{streak:0}];
+  if(text.includes('SELECT streak'))return options.schedule?[options.schedule]:[];
   if(text.includes('RETURNING study_source'))return [{study_source:values[2],studied_at:values[3]}];
   return [];
  };
@@ -145,6 +145,33 @@ test('study completion uses authenticated identity and does not create answer ev
  const insert=f.calls.find(x=>x.text.includes('INSERT INTO weekly_objective_study'));
  assert.equal(insert.values[0],student);assert.equal(insert.values[2],'LESSON');
  assert.ok(!f.calls.some(x=>x.text.includes('INSERT INTO weekly_cbt_answers')));
+});
+test('correct practice before the Lagos due date preserves the retention schedule',async()=>{
+ const f=fixture({schedule:{streak:1,due:false}});
+ for(const item of f.items)await f.post({action:'ANSWER',sessionId,itemId:item.id,answer:'Two',confidence:'SURE'});
+ const result=await f.post({action:'FINISH',sessionId});
+ assert.equal(result.status,200);assert.equal((await result.json()).correct,5);
+ assert.equal(f.calls.filter(x=>x.text.includes('INSERT INTO weekly_student_item_schedule')).length,0);
+ const check=f.calls.find(x=>x.text.includes('SELECT streak'));
+ assert.ok(check.text.includes("AT TIME ZONE 'Africa/Lagos'"));assert.ok(check.text.includes('FOR UPDATE'));
+});
+test('due correct practice advances the existing two, seven, twenty-one day intervals',async()=>{
+ for(const [streak,interval] of [[1,7],[2,21]]){
+  const f=fixture({schedule:{streak,due:true}});
+  for(const item of f.items)await f.post({action:'ANSWER',sessionId,itemId:item.id,answer:'Two'});
+  assert.equal((await f.post({action:'FINISH',sessionId})).status,200);
+  const schedules=f.calls.filter(x=>x.text.includes('INSERT INTO weekly_student_item_schedule'));
+  assert.equal(schedules.length,5);assert.ok(schedules.every(x=>x.values[2]===interval&&x.values[4]===streak+1));
+ }
+});
+test('early wrong and guessed answers reset the retention streak and return tomorrow',async()=>{
+ const f=fixture({schedule:{streak:2,due:false}});
+ for(const [i,item] of f.items.entries())await f.post({action:'ANSWER',sessionId,itemId:item.id,
+  answer:i===0?'One':'Two',confidence:i===1?'GUESS':'SURE'});
+ const result=await f.post({action:'FINISH',sessionId});assert.equal(result.status,200);
+ assert.equal((await result.json()).correct,4);
+ const schedules=f.calls.filter(x=>x.text.includes('INSERT INTO weekly_student_item_schedule'));
+ assert.equal(schedules.length,2);assert.ok(schedules.every(x=>x.values[2]===1&&x.values[4]===0));
 });
 test('past-week study records are read-only',async()=>{
  const f=fixture({objectiveWeek:1,currentWeek:2});

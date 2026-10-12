@@ -20,7 +20,7 @@
 | Existing Daily Check submissions | PARTIALLY VERIFIED | Student/input/bank checks and replay-safe progress updates tested with mocked DB; live Neon integration pending |
 | Phase 4g English Daily | NOT VERIFIED | Need approved real content and tests |
 | Phase 5 uploads | NOT VERIFIED | Need flow and safety tests |
-| Phase 6 scheduler | NOT VERIFIED | Need timezone, retries and idempotency tests |
+| Phase 6 scheduler | PARTIALLY VERIFIED | Practice-to-schedule updates verified on isolated Neon: Lagos due dates, replay safety, early-repeat protection, wrong/guess resets; daily due runner/cap and retention metrics remain |
 | Phase 6b mistakes | NOT VERIFIED | Need remediation tests |
 | Phase 7 question bank | NOT VERIFIED | Need provenance, review and rotation |
 | Phase 8 monitored groups | NOT VERIFIED | Need admin moderation and permission tests |
@@ -39,7 +39,7 @@
 - 2026-10-11: Added `AGENTS.md` to make next-agent continuation self-contained about known work and safe next steps. **Original ZIP is still required for full specification fidelity.**
 
 ## Next work
-Compare every statement in migrations 048–058 with isolated Neon schema; constraint replacement is gated on owner approval per Neon safety requirements. Meanwhile implement fail-closed diagnostics and test admin/learner routes and permissions. Do not mark full migration files applied while incomplete. Proceed through ZIP phases with evidence.
+Continue from the weekly workspace and scheduler checkpoints. Complete secure guardian workflow, reviewed daily content and daily revisit integration in the original phase sequence. Reconcile remaining statements in migrations 048–058 against the isolated schema; do not blindly rerun or mark incomplete migrations applied. Later checkpoint reports supersede historical publication/network blockers below.
 
 ## 2026-10-12 verified checkpoint
 - Isolated integration Neon branch contains **50 weekly_* tables**; this does not imply all migrations are complete.
@@ -65,3 +65,9 @@ Superseded for current connectivity/specification/workspace status by `docs/AVOR
 - Original specification and designs remain unavailable: `docs/source/avora-restructure-agent-instructions.md` is a pointer only. Per AGENTS.md, feature implementation requires the original ZIP. `/weekly` remains a placeholder; dashboard, new weekly daily-task integration and complete progress tracking are not complete.
 - No production operations, main merge, deployment, migration or data reset performed. Temporary credential-bearing diagnostic file was removed.
 - Next: publish the environment configuration with endpoint/API network access and runtime credentials, verify endpoint-to-branch identity, run read-only schema diagnostics, obtain the original ZIP, then continue roadmap implementation and live integration checks.
+
+## 2026-10-12 retention continuation
+
+- `docs/AVORA_REVISIT_SCHEDULER_CHECKPOINT_2026-10-12.md` records the scheduler correction and verification. Early correct practice no longer advances retention; due correct answers use existing intervals and wrong/guessed answers return tomorrow.
+- Passed 86 regression tests, 144 real Neon assertions with full rollback, independent TypeScript, lint (11 existing warnings), answer marking and all seven curriculum audits.
+- Cloud onboarding has no user-facing browser preview support. Internal app/database health works; a localhost address is not an owner-accessible preview. No deployment or public tunnel authorized or created.

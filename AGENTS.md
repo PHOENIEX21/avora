@@ -84,3 +84,7 @@ The unmodified source ZIP is stored in the owner's ChatGPT Library at `/AVORA/So
 - Full source documents and the newer exported interface screenshots are now tracked under `docs/source/`. The new screenshot package adds visual references without changing functional requirements.
 - Isolated Neon identity is verified; additive workspace schema is applied. Local app health returns HTTP 200 with database connected using an opt-in, endpoint/branch-locked development WebSocket transport. Native postgres remains the default for production.
 - Regression, live rollback integration and mobile component checks are documented in the milestone report. Continue the original phase sequence without rebuilding verified work or publishing sample content.
+
+## Revisit retention continuation
+- Read `docs/AVORA_REVISIT_SCHEDULER_CHECKPOINT_2026-10-12.md`: early correct practice preserves existing due dates/streaks; due practice advances intervals; wrong/guessed answers reset to one day. Verified with 86 regression tests and 144 rollback-only Neon assertions. No migration needed.
+- The cloud onboarding interface does not support owner-accessible browser previews. Use local HTTP/browser checks internally, but never present a localhost URL as an accessible preview or deploy/tunnel to bypass this without authorization.

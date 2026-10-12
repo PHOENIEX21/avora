@@ -81,6 +81,38 @@ export async function verifyWeeklyWorkspace(sql){
   equal(currentRows.length,1);equal(currentRows[0].progress.evidence,5);equal(currentRows[0].progress.accuracy,100);
   equal(currentRows[0].progress.status==='MASTERED',false);
   equal((await workspace.weeklyObjectives(context,1,1)).length,1);
+  const snapshot=async()=>await tx`SELECT item_id,due_date,interval_days,streak,last_result,last_served_at
+   FROM weekly_student_item_schedule WHERE student_id=${student} ORDER BY item_id`;
+  const repeat=async({wrong=false,guess=false}={})=>{
+   const response=await post(practice,{action:'START',objectiveId:current});equal(response.status,200);
+   const set=await response.json();equal(set.id===paper.id,false);
+   for(const q of set.questions)equal((await post(practice,{action:'ANSWER',sessionId:set.id,itemId:q.id,
+    answer:wrong?'One':'Two',confidence:guess?'GUESS':'SURE'})).status,200);
+   const completed=await post(practice,{action:'FINISH',sessionId:set.id});equal(completed.status,200);
+   equal((await completed.json()).correct,wrong?0:5);
+  };
+  const beforeEarly=await snapshot();
+  await repeat();assert.deepEqual(await snapshot(),beforeEarly);checks++;
+  // Simulated due dates are confined to the rollback-only fixture transaction.
+  for(const [interval,expectedStreak] of [[7,2],[21,3]]){
+   await tx`UPDATE weekly_student_item_schedule SET due_date=(now() AT TIME ZONE 'Africa/Lagos')::date,streak=${expectedStreak-1}
+    WHERE student_id=${student}`;
+   await repeat();
+   for(const schedule of await snapshot()){
+    equal(Number(schedule.interval_days),interval);equal(Number(schedule.streak),expectedStreak);
+   }
+  }
+  await repeat({wrong:true});
+  for(const schedule of await snapshot()){
+   equal(Number(schedule.interval_days),1);equal(Number(schedule.streak),0);equal(schedule.last_result,false);
+  }
+  await repeat({guess:true});
+  for(const schedule of await snapshot()){
+   equal(Number(schedule.interval_days),1);equal(Number(schedule.streak),0);equal(schedule.last_result,true);
+  }
+  const afterRepeats=await workspace.weeklyObjectives(context);
+  equal(afterRepeats[0].progress.evidence,5);equal(afterRepeats[0].progress.accuracy,100);
+  equal(afterRepeats[0].progress.status==='MASTERED',false);
   signedIn=otherStudent;
   equal((await practice.GET(new Request('https://avora-test.invalid/api/weekly/practice?sessionId='+paper.id))).status,404);
   signedIn=student;gateStatus='verification_pending';
