@@ -28,7 +28,9 @@ export async function weeklyObjectives(context:WeeklyStudentContext,term=context
     count(*) FILTER(WHERE latest.is_correct AND latest.confidence IS DISTINCT FROM 'GUESS') retained_correct
    FROM (SELECT DISTINCT ON (a.item_id) a.item_id,a.is_correct,a.confidence
     FROM weekly_cbt_answers a JOIN weekly_cbt_sessions s ON s.id=a.session_id
-    WHERE s.student_id=${context.studentId} AND s.objective_id=o.id AND s.submitted_at IS NOT NULL
+    WHERE s.student_id=${context.studentId} AND s.submitted_at IS NOT NULL AND s.mode='PRACTICE'
+     AND (s.objective_id=o.id OR (s.source='REVISIT' AND s.item_snapshot @>
+      jsonb_build_array(jsonb_build_object('id',a.item_id::text,'objectiveId',o.id::text))))
     ORDER BY a.item_id,s.submitted_at DESC,s.id DESC) latest
   ) progress ON true
   WHERE o.class_level=${context.classLevel} AND o.term=${term} AND o.week_number=${week}

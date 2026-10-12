@@ -88,3 +88,8 @@ The unmodified source ZIP is stored in the owner's ChatGPT Library at `/AVORA/So
 ## Revisit retention continuation
 - Read `docs/AVORA_REVISIT_SCHEDULER_CHECKPOINT_2026-10-12.md`: early correct practice preserves existing due dates/streaks; due practice advances intervals; wrong/guessed answers reset to one day. Verified with 86 regression tests and 144 rollback-only Neon assertions. No migration needed.
 - The cloud onboarding interface does not support owner-accessible browser previews. Use local HTTP/browser checks internally, but never present a localhost URL as an accessible preview or deploy/tunnel to bypass this without authorization.
+
+## Daily Revisit continuation
+- Read `docs/AVORA_DAILY_REVISIT_MILESTONE_2026-10-12.md`. `/weekly/revisit` uses existing CBT sessions/answers/schedules: reviewed due bank, eight-question daily cap, resume, confident-mistake priority, original objective snapshots, stored scores/progress and 21-day retention. No schema migration; private uploaded-work and carried-over seeding are not yet integrated.
+- Practice APIs reject official exam snapshots. Existing guardian access remains closed; fixture contexts do not authorize pilot activation.
+- Latest local evidence: 91 regression tests, 177 rollback-only Neon assertions, typecheck/build/curriculum/marking, and four-width browser workflows. Continue the full original roadmap, not a claimed completed platform.

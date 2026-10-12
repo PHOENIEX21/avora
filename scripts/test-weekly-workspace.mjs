@@ -46,15 +46,19 @@ test('study is not mastery and seven distinct successful answers use existing ev
 function fixture(options={}){
  const calls=[],items=Array.from({length:5},(_,i)=>({...policy.reviewedPracticeItem(published),id:`00000000-0000-4000-8000-00000000000${i}`}));
  const row={id:objective,class_level:'JSS1',subject_name:'Mathematics',topic_title:'Test topic',term:1,week_number:options.objectiveWeek??1};
- let submitted=false,open=Boolean(options.resume),reportSaved=false;const answers=new Map();
+ let submitted=false,open=Boolean(options.resume),reportSaved=false,source=options.source??'DAILY_LESSON',activeItems=items;const answers=new Map();
  const query=async(strings,...values)=>{
   const text=strings.join('?');calls.push({text,values});
   if(text.includes('SELECT o.*'))return options.hidden?[]:[row];
   if(text.includes('SELECT id FROM weekly_cbt_sessions'))return open?[{id:sessionId}]:[];
-  if(text.includes('SELECT i.*'))return options.bank??items.map(item=>({...published,id:item.id}));
-  if(text.includes('INSERT INTO weekly_cbt_sessions')){open=true;return [{id:sessionId}];}
-  if(text.includes('SELECT id,objective_id,item_snapshot'))return values[1]===student?[{id:sessionId,objective_id:objective,item_snapshot:items,submitted_at:submitted?'2026-10-12':null}]:[];
-  if(text.includes('SELECT item_snapshot,submitted_at'))return [{item_snapshot:items,submitted_at:submitted?'2026-10-12':null}];
+  if(text.includes('SELECT i.*'))return options.bank??items.map(item=>({...published,id:item.id,scheduled_interval_days:2,retention_check:false}));
+  if(text.includes('INSERT INTO weekly_cbt_sessions')){
+   open=true;source=text.includes("'REVISIT'")?'REVISIT':'DAILY_LESSON';
+   activeItems=JSON.parse(values.at(-1));return [{id:sessionId}];
+  }
+  if(text.includes('SELECT id,objective_id,item_snapshot'))return values[1]===student?[{id:sessionId,objective_id:source==='REVISIT'?null:objective,
+   source,mode:options.mode??'PRACTICE',item_snapshot:activeItems,submitted_at:submitted?'2026-10-12':null}]:[];
+  if(text.includes('SELECT item_snapshot,submitted_at'))return [{item_snapshot:activeItems,submitted_at:submitted?'2026-10-12':null}];
   if(text.includes('SELECT submitted_at,correct_count'))return [{submitted_at:submitted?'2026-10-12':null,correct_count:5,total_count:5}];
   if(text.includes('SELECT answer,is_correct'))return answers.has(values[1])?[answers.get(values[1])]:[];
   if(text.includes('FROM weekly_cbt_answers'))return [...answers.values()];
@@ -77,7 +81,7 @@ function fixture(options={}){
  const route=load('app/api/weekly/practice/route.ts'),study=load('app/api/weekly/study/route.ts');
  const request=body=>new Request('https://avora.test/api/weekly/practice',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)});
  return {calls,items,post:body=>route.POST(request(body)),get:()=>route.GET(new Request('https://avora.test/api/weekly/practice?sessionId='+sessionId)),
-  study:body=>study.POST(request(body)),workspace:load('lib/weeklyWorkspace.ts')};
+  study:body=>study.POST(request(body)),workspace:load('lib/weeklyWorkspace.ts'),revisit:load('lib/weeklyRevisit.ts')};
 }
 test('weekly routes reject unauthenticated and non-student users before data access',async()=>{
  for(const [options,status] of [[{auth:null},401],[{role:'PARENT'},403],[{role:'ADMIN'},403]]){
@@ -102,6 +106,52 @@ test('practice response contains no unchecked answer keys or explanations',async
  const f=fixture();const body=await (await f.get()).json();
  assert.equal(body.questions.length,5);
  for(const q of body.questions){assert.equal(q.saved,null);assert.ok(!('answer' in q));assert.ok(!('explanation' in q));}
+});
+test('official exam snapshots never expose corrections through the practice API',async()=>{
+ for(const options of [{source:'WEEKLY_EXAM'},{mode:'EXAM'}]){
+  const f=fixture(options);assert.equal((await f.get()).status,404);
+  assert.ok(!f.calls.some(x=>x.text.includes('FROM weekly_cbt_answers')));
+ }
+});
+test('daily revisit stores at most eight reviewed items in the existing CBT model',async()=>{
+ const bank=Array.from({length:12},(_,i)=>({...published,id:`00000000-0000-4000-8000-${String(i).padStart(12,'0')}`,
+  scheduled_interval_days:i===0?21:2,retention_check:i===0}));
+ const f=fixture({bank});const response=await f.post({action:'START_REVISIT',studentId:'someone-else'});
+ assert.equal(response.status,200);const data=await response.json();assert.equal(data.questions.length,8);
+ assert.equal(data.objectiveId,null);assert.ok(data.questions.every(q=>q.saved===null&&!('answer' in q)));
+ const insert=f.calls.find(x=>x.text.includes('INSERT INTO weekly_cbt_sessions'));
+ assert.equal(insert.values[0],student);assert.equal(insert.values[1].length,8);
+ assert.ok(insert.text.includes("'REVISIT','PRACTICE'"));
+ assert.ok(JSON.parse(insert.values[2]).every(item=>item.objectiveId===objective));
+ assert.equal(JSON.parse(insert.values[2])[0].retentionCheck,true);
+ await f.post({action:'START_REVISIT'});
+ assert.equal(f.calls.filter(x=>x.text.includes('INSERT INTO weekly_cbt_sessions')).length,1);
+ const query=f.calls.find(x=>x.text.includes('FROM weekly_student_item_schedule schedule'));
+ for(const guard of ["AT TIME ZONE 'Africa/Lagos'","o.approval_status='PUBLISHED'","i.status='PUBLISHED'",
+  "m.pool='LIVE'",'weekly_student_optional_subjects',"last_answer.confidence='SURE'",'count(DISTINCT r.student_id)>=3',"s.mode='PRACTICE'"])
+  assert.ok(query.text.includes(guard),guard);
+ const existing=f.calls.find(x=>x.text.includes("source='REVISIT'"));
+ assert.ok(existing.text.includes('submitted_at IS NULL'));assert.ok(existing.text.includes('submitted_at AT TIME ZONE'));
+});
+test('21-day retention includes only completed own practice and treats guessing separately',async()=>{
+ const f=fixture();assert.deepEqual(await f.revisit.weeklyRetentionSummary({studentId:student,classLevel:'JSS1',term:1,week:1}),
+  {questions:0,correct:0,retained:0});
+ const query=f.calls.find(x=>x.text.includes('jsonb_array_elements'));
+ assert.equal(query.values[0],student);
+ for(const guard of ["s.source='REVISIT'","s.mode='PRACTICE'",'s.submitted_at IS NOT NULL',"a.confidence IS DISTINCT FROM 'GUESS'","item->>'retentionCheck'='true'"])
+  assert.ok(query.text.includes(guard),guard);
+});
+test('no eligible revisit content yields an empty state, not fabricated questions',async()=>{
+ const f=fixture({bank:[{...published,status:'DRAFT'}]});
+ const response=await f.post({action:'START_REVISIT'});assert.equal(response.status,200);
+ assert.deepEqual(await response.json(),{id:null,submitted:false,questions:[]});
+ assert.ok(!f.calls.some(x=>x.text.includes('INSERT INTO weekly_cbt_sessions')));
+});
+test('revisit cannot bypass role, guardian or objective release gates',async()=>{
+ for(const [options,status] of [[{auth:null},401],[{role:'PARENT'},403],[{gate:'verification_pending'},403],
+  [{hidden:true},404],[{objectiveWeek:2},404]]){
+  const f=fixture(options);assert.equal((await f.post({action:'START_REVISIT'})).status,status);
+ }
 });
 test('start stores reviewed questions in existing CBT model and resumes the same session',async()=>{
  const f=fixture();const body={action:'START',objectiveId:objective,studentId:'another-student'};

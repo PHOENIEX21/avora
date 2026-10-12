@@ -2,13 +2,13 @@
 import {useState} from 'react';
 import Link from 'next/link';
 import {useRouter} from 'next/navigation';
-import {ArrowLeft,BookOpen,Check,ChevronRight,Star} from 'lucide-react';
+import {ArrowLeft,BookOpen,Check,ChevronRight,RotateCcw,Star} from 'lucide-react';
 import styles from './WeeklyDashboard.module.css';
 
 export type WeeklyObjectiveView={id:string;subject:string;topic:string;text:string;source:string;lessonHref:string|null;
  studied:boolean;studySource:'TEXTBOOK'|'LESSON'|null;progress:{status:string;evidence:number;accuracy:number|null}};
 export type WeeklyDashboardProps={classLevel:string;term:number;week:number;currentTerm:number;currentWeek:number;
- weeks:Array<{term:number;week:number}>;objectives:WeeklyObjectiveView[]};
+ weeks:Array<{term:number;week:number}>;objectives:WeeklyObjectiveView[];retention?:{questions:number;correct:number;retained:number}};
 export default function WeeklyDashboard(props:WeeklyDashboardProps){
  const router=useRouter(),[subject,setSubject]=useState<string|null>(null),[busy,setBusy]=useState<string|null>(null),[error,setError]=useState('');
  const [studySources,setStudySources]=useState<Record<string,'TEXTBOOK'|'LESSON'>>({});
@@ -60,6 +60,7 @@ export default function WeeklyDashboard(props:WeeklyDashboardProps){
      <small className={styles.source}>Source: {objective.source}</small>
     </article>)}
    </section>:<section aria-label="Weekly subjects" className={styles.subjectList}>{cards.slice(0,4)}{cards.length>4&&<details><summary>{cards.length-4} more subjects</summary><div className={styles.subjectList}>{cards.slice(4)}</div></details>}</section>}
-  <footer className={styles.footer}><Link href="/learn">Lessons</Link><Link href="/weekly-exam">Weekly exams</Link><Link href="/progress">Learning history</Link></footer>
+  {props.retention&&props.retention.questions>0&&<p className={styles.evidence}>21-day retention: {props.retention.retained} of {props.retention.questions} correct without guessing</p>}
+  <footer className={styles.footer}><Link href="/weekly/revisit"><RotateCcw size={18}/> Today's revisit</Link><Link href="/learn">Lessons</Link><Link href="/weekly-exam">Weekly exams</Link><Link href="/progress">Learning history</Link></footer>
  </main>;
 }

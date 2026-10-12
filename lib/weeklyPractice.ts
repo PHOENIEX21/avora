@@ -28,13 +28,20 @@ export async function startWeeklyPractice(context:WeeklyStudentContext,objective
  });
 }
 export async function weeklyPracticeSession(context:WeeklyStudentContext,sessionId:string){
- const [session]=await withDbRetry(()=>sql`SELECT id,objective_id,item_snapshot,submitted_at FROM weekly_cbt_sessions
+ const [session]=await withDbRetry(()=>sql`SELECT id,objective_id,item_snapshot,submitted_at,source,mode FROM weekly_cbt_sessions
   WHERE id=${sessionId} AND student_id=${context.studentId}`);
- if(!session)throw new WeeklyWorkspaceError('Practice unavailable.',404);
- await weeklyObjective(context,String(session.objective_id));
+ if(!session||session.mode!=='PRACTICE'||!['DAILY_LESSON','REVISIT'].includes(String(session.source))
+  ||!Array.isArray(session.item_snapshot)||!session.item_snapshot.length)
+  throw new WeeklyWorkspaceError('Practice unavailable.',404);
+ const items=session.item_snapshot as Array<PracticeItem&{objectiveId?:string}>;
+ if(session.source==='REVISIT'){
+  for(const objectiveId of new Set(items.map(item=>item.objectiveId))){
+   if(!objectiveId)throw new WeeklyWorkspaceError('Practice unavailable.',404);
+   await weeklyObjective(context,objectiveId);
+  }
+ }else await weeklyObjective(context,String(session.objective_id));
  const answers=await withDbRetry(()=>sql`SELECT item_id,answer,confidence,is_correct FROM weekly_cbt_answers WHERE session_id=${sessionId}`);
- const items=session.item_snapshot as PracticeItem[];
- return {id:String(session.id),objectiveId:String(session.objective_id),submitted:Boolean(session.submitted_at),
+ return {id:String(session.id),objectiveId:session.objective_id?String(session.objective_id):null,submitted:Boolean(session.submitted_at),
   questions:items.map(item=>{
    const answer=answers.find(row=>String(row.item_id)===item.id);
    return {...publicPracticeItem(item),saved:answer?{answer:String(answer.answer),confidence:answer.confidence,

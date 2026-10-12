@@ -125,6 +125,72 @@ export async function verifyWeeklyWorkspace(sql){
   equal(reports.count,1);
   for(const reporter of [admin,otherStudent])await tx`INSERT INTO weekly_question_reports(student_id,item_id,reason) VALUES(${reporter},${paper.questions[0].id},'TEST_ONLY')`;
   equal((await post(practice,{action:'START',objectiveId:current})).status,409);
+  const eligible=[],blocked=[];
+  async function dueItem(objectiveId,{live=true,status='PUBLISHED',due=true}={}){
+   const [objective]=await tx`SELECT * FROM weekly_curriculum_objectives WHERE id=${objectiveId}`;
+   const [set]=await tx`INSERT INTO weekly_topic_question_sets(class_level,subject_name,term,week_number,topic_title)
+    VALUES(${objective.class_level},${objective.subject_name},${objective.term},${objective.week_number},${objective.topic_title})
+    ON CONFLICT(class_level,subject_name,term,week_number,topic_title) DO UPDATE SET topic_title=EXCLUDED.topic_title RETURNING id`;
+   const id=randomUUID();
+   await tx`INSERT INTO weekly_items(id,objective_id,prompt,item_type,options,answer_key,explanation,difficulty,source,source_ref,status,reviewer_id,reviewed_at)
+    VALUES(${id},${objectiveId},'TEST_ONLY_REVISIT','MCQ','["One","Two","Three","Four"]'::jsonb,'{"correct":"B"}'::jsonb,
+     'TEST_ONLY','APPLICATION','CURRICULUM_BANK','TEST_FIXTURE_NOT_CURRICULUM',${status},${admin},now())`;
+   await tx`INSERT INTO weekly_topic_question_memberships(topic_set_id,item_id,pool,exam_eligible)
+    VALUES(${set.id},${id},${live?'LIVE':'RESERVE'},true)`;
+   await tx`INSERT INTO weekly_student_item_schedule(student_id,item_id,due_date,interval_days,streak)
+    VALUES(${student},${id},(now() AT TIME ZONE 'Africa/Lagos')::date+${due?-3:2}::integer,2,1)`;
+   return {id,objectiveId};
+  }
+  for(let i=0;i<11;i++)eligible.push(await dueItem(i<6?past:current));
+  for(const objectiveId of [future,draft,otherClass])blocked.push(await dueItem(objectiveId));
+  blocked.push(await dueItem(current,{live:false}),await dueItem(current,{status:'RETIRED'}),await dueItem(current,{due:false}));
+  const optional=randomUUID(),optionalSubject=subject+'_OPTIONAL';
+  await tx`INSERT INTO weekly_class_subjects(class_level,subject_name,subject_kind) VALUES('JSS1',${optionalSubject},'OPTIONAL')`;
+  await tx`INSERT INTO weekly_curriculum_objectives(id,class_level,subject_name,term,week_number,day_index,topic_title,objective_text,source_reference,approval_status,reviewed_by,published_by,published_at)
+   VALUES(${optional},'JSS1',${optionalSubject},1,2,1,${topic},'TEST_ONLY_OPTIONAL','TEST_FIXTURE_NOT_CURRICULUM','PUBLISHED',${admin},${admin},now())`;
+  blocked.push(await dueItem(optional));
+  const sureMistake=eligible.at(-1),mistakeSession=randomUUID();
+  await tx`UPDATE weekly_student_item_schedule SET interval_days=21,streak=3,last_served_at=now()-interval '21 days'
+   WHERE student_id=${student} AND item_id=${sureMistake.id}`;
+  const mistakeSnapshot=[{id:sureMistake.id,objectiveId:current,prompt:'TEST_ONLY_REVISIT',options:['One','Two','Three','Four'],answer:'Two',explanation:'TEST_ONLY'}];
+  await tx`INSERT INTO weekly_cbt_sessions(id,student_id,objective_id,source,mode,question_ids,item_snapshot,submitted_at,correct_count,total_count)
+   VALUES(${mistakeSession},${student},${current},'DAILY_LESSON','PRACTICE',${[sureMistake.id]},${JSON.stringify(mistakeSnapshot)}::jsonb,now()-interval '1 day',0,1)`;
+  await tx`INSERT INTO weekly_cbt_answers(session_id,item_id,answer,confidence,is_correct)
+   VALUES(${mistakeSession},${sureMistake.id},'One','SURE',false)`;
+  await tx`UPDATE weekly_student_item_schedule SET due_date=(now() AT TIME ZONE 'Africa/Lagos')::date WHERE student_id=${student} AND item_id=${sureMistake.id}`;
+  const revisitResponse=await post(practice,{action:'START_REVISIT'});equal(revisitResponse.status,200);
+  const revisit=await revisitResponse.json();equal(revisit.questions.length,8);equal(revisit.questions[0].id,sureMistake.id);
+  equal(revisit.questions.some(q=>blocked.some(item=>item.id===q.id)),false);
+  equal(revisit.questions.every(q=>eligible.some(item=>item.id===q.id)&&q.saved===null&&!('answer' in q)),true);
+  equal((await (await post(practice,{action:'START_REVISIT'})).json()).id,revisit.id);
+  const retention=load('lib/weeklyRevisit.ts');
+  equal((await retention.weeklyRetentionSummary(context)).questions,0);
+  for(const q of revisit.questions)equal((await post(practice,{action:'ANSWER',sessionId:revisit.id,itemId:q.id,answer:'Two',confidence:'SURE'})).status,200);
+  const resumed=await (await practice.GET(new Request('https://avora-test.invalid/api/weekly/practice?sessionId='+revisit.id))).json();
+  equal(resumed.questions.every(q=>q.saved?.correct===true&&q.saved.correctAnswer==='Two'),true);
+  equal((await post(practice,{action:'FINISH',sessionId:revisit.id})).status,200);
+  const [revisitStored]=await tx`SELECT source,mode,objective_id,correct_count,total_count FROM weekly_cbt_sessions WHERE id=${revisit.id}`;
+  equal(revisitStored.source,'REVISIT');equal(revisitStored.mode,'PRACTICE');equal(revisitStored.objective_id,null);
+  equal(Number(revisitStored.correct_count),8);equal(Number(revisitStored.total_count),8);
+  const measured=await retention.weeklyRetentionSummary(context);
+  equal(measured.questions,1);equal(measured.correct,1);equal(measured.retained,1);
+  equal((await (await post(practice,{action:'START_REVISIT'})).json()).id,revisit.id);
+  const revisitSchedule=await snapshot();
+  equal((await (await post(practice,{action:'FINISH',sessionId:revisit.id})).json()).alreadySubmitted,true);
+  assert.deepEqual(await snapshot(),revisitSchedule);checks++;
+  for(const objectiveId of [current,past]){
+   const rows=await workspace.weeklyObjectives(context,1,objectiveId===current?2:1);
+   const expected=revisit.questions.filter(q=>eligible.find(item=>item.id===q.id)?.objectiveId===objectiveId).length;
+   equal(rows[0].progress.evidence,(objectiveId===current?5:0)+expected);
+  }
+  signedIn=otherStudent;
+  equal((await practice.GET(new Request('https://avora-test.invalid/api/weekly/practice?sessionId='+revisit.id))).status,404);
+  equal((await (await post(practice,{action:'START_REVISIT'})).json()).questions.length,0);
+  signedIn=student;
+  const official=randomUUID();
+  await tx`INSERT INTO weekly_cbt_sessions(id,student_id,source,mode,question_ids,item_snapshot)
+   VALUES(${official},${student},'WEEKLY_EXAM','EXAM',${[sureMistake.id]},${JSON.stringify(mistakeSnapshot)}::jsonb)`;
+  equal((await practice.GET(new Request('https://avora-test.invalid/api/weekly/practice?sessionId='+official))).status,404);
   throw new Error(rollbackMarker);
  });}catch(error){if(error.message!==rollbackMarker)throw error;rolledBack=true}
  assert.ok(rolledBack);

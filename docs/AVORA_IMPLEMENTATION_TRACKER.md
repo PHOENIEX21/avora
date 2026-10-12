@@ -20,7 +20,7 @@
 | Existing Daily Check submissions | PARTIALLY VERIFIED | Student/input/bank checks and replay-safe progress updates tested with mocked DB; live Neon integration pending |
 | Phase 4g English Daily | NOT VERIFIED | Need approved real content and tests |
 | Phase 5 uploads | NOT VERIFIED | Need flow and safety tests |
-| Phase 6 scheduler | PARTIALLY VERIFIED | Practice-to-schedule updates verified on isolated Neon: Lagos due dates, replay safety, early-repeat protection, wrong/guess resets; daily due runner/cap and retention metrics remain |
+| Phase 6 scheduler | PARTIALLY VERIFIED | Reviewed-bank daily due runner, eight-item cap/resume, Lagos dates, replay safety, early-repeat protection, wrong/guess resets and 21-day retention verified; uploaded-work/carry-over seeding remains |
 | Phase 6b mistakes | NOT VERIFIED | Need remediation tests |
 | Phase 7 question bank | NOT VERIFIED | Need provenance, review and rotation |
 | Phase 8 monitored groups | NOT VERIFIED | Need admin moderation and permission tests |
@@ -71,3 +71,10 @@ Superseded for current connectivity/specification/workspace status by `docs/AVOR
 - `docs/AVORA_REVISIT_SCHEDULER_CHECKPOINT_2026-10-12.md` records the scheduler correction and verification. Early correct practice no longer advances retention; due correct answers use existing intervals and wrong/guessed answers return tomorrow.
 - Passed 86 regression tests, 144 real Neon assertions with full rollback, independent TypeScript, lint (11 existing warnings), answer marking and all seven curriculum audits.
 - Cloud onboarding has no user-facing browser preview support. Internal app/database health works; a localhost address is not an owner-accessible preview. No deployment or public tunnel authorized or created.
+
+## 2026-10-12 daily Revisit milestone
+
+- `docs/AVORA_DAILY_REVISIT_MILESTONE_2026-10-12.md`: guarded daily set, confident-mistake priority, persisted answers/marking/results, cross-objective progress, cap/resume and retention implemented on the existing weekly CBT model. No migration needed.
+- Official exam snapshots are rejected by the practice API before corrections can be returned.
+- Verified 91 regression tests, 177 rollback-only Neon assertions, typecheck, production build, curriculum and marking audits, and browser workflows at four widths. Full guardian onboarding and the full platform remain incomplete.
+- Next: secure approved guardian onboarding, baseline and reviewed English Daily, private uploaded-work integration and carry-over seeding, My mistakes similar-question follow-up/shared cap, then remaining roadmap phases. Do not mark all of Phase 6 complete from the reviewed-bank subset.

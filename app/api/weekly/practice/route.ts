@@ -6,9 +6,11 @@ import {answerIsCorrect} from '@/lib/answers';
 import {weeklyStudentContext,WeeklyWorkspaceError} from '@/lib/weeklyWorkspace';
 import {startWeeklyPractice,weeklyPracticeSession,finishWeeklyPractice} from '@/lib/weeklyPractice';
 import type {PracticeItem} from '@/lib/weeklyWorkspacePolicy';
+import {startWeeklyRevisit} from '@/lib/weeklyRevisit';
 
 const requestSchema=z.discriminatedUnion('action',[
  z.object({action:z.literal('START'),objectiveId:z.string().uuid()}),
+ z.object({action:z.literal('START_REVISIT')}),
  z.object({action:z.literal('ANSWER'),sessionId:z.string().uuid(),itemId:z.string().uuid(),answer:z.string().min(1).max(4000),confidence:z.enum(['GUESS','FAIRLY_SURE','SURE']).nullable().optional()}),
  z.object({action:z.literal('REPORT'),sessionId:z.string().uuid(),itemId:z.string().uuid(),reason:z.string().trim().min(5).max(500)}),
  z.object({action:z.literal('FINISH'),sessionId:z.string().uuid()})
@@ -31,6 +33,10 @@ export async function POST(request:Request){
  if(!parsed.success)return NextResponse.json({error:'Invalid practice request.'},{status:400});
  try{
   const context=await weeklyStudentContext(session.userId),data=parsed.data;
+  if(data.action==='START_REVISIT'){
+   const id=await startWeeklyRevisit(context);
+   return NextResponse.json(id?await weeklyPracticeSession(context,id):{id:null,submitted:false,questions:[]});
+  }
   if(data.action==='START'){
    const id=await startWeeklyPractice(context,data.objectiveId);
    return NextResponse.json(await weeklyPracticeSession(context,id));
