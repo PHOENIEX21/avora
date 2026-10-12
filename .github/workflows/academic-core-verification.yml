@@ -44,6 +44,8 @@ jobs:
         run: npm run test:weekly-live-question-bank
       - name: Student release window boundary tests
         run: npm run test:weekly-release-window
+      - name: Weekly coverage grid tests
+        run: npm run test:weekly-coverage-grid
       - name: Curriculum audits
         run: npm run audit:curriculum
       - name: Next.js production build
