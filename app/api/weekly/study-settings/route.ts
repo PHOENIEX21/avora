@@ -11,7 +11,7 @@ export async function GET(){
  if(!session)return NextResponse.json({error:'Sign in required'},{status:401});
  if(session.role!=='STUDENT')return NextResponse.json({error:'Student access only'},{status:403});
  try{
-  const [row]=await withDbRetry(()=>sql`SELECT study_period,study_time::text AS study_time,timezone,parent_weekly_summary_enabled
+  const [row]=await withDbRetry(()=>sql`SELECT study_period,to_char(study_time,'HH24:MI') AS study_time,timezone,parent_weekly_summary_enabled
    FROM weekly_student_study_settings WHERE student_id=${session.userId}`);
   return NextResponse.json({settings:row??null});
  }catch{return NextResponse.json({error:'Study settings unavailable'},{status:503})}
@@ -27,16 +27,21 @@ export async function PUT(request:Request){
  if(!periods.includes(data.studyPeriod as typeof periods[number])||!validTime(data.studyTime))
   return NextResponse.json({error:'Select a study period and valid HH:MM time'},{status:400});
  const parentWeeklySummaryEnabled=data.parentWeeklySummaryEnabled;
- if(typeof parentWeeklySummaryEnabled!=='boolean')
+ if(parentWeeklySummaryEnabled!==undefined&&typeof parentWeeklySummaryEnabled!=='boolean')
   return NextResponse.json({error:'Invalid summary preference'},{status:400});
- // Opting in here records a preference only; it does not authorize contacting a guardian.
+ // Guardian notification preferences may only change through verified guardian access.
  try{
-  await withDbRetry(()=>sql`INSERT INTO weekly_student_study_settings
-   (student_id,study_period,study_time,timezone,parent_weekly_summary_enabled)
-   VALUES(${session.userId},${data.studyPeriod as string},${data.studyTime as string},'Africa/Lagos',${parentWeeklySummaryEnabled})
-   ON CONFLICT(student_id) DO UPDATE SET
-   study_period=EXCLUDED.study_period,study_time=EXCLUDED.study_time,
-   parent_weekly_summary_enabled=EXCLUDED.parent_weekly_summary_enabled,updated_at=now()`);
+  const result=await sql.begin(async tx=>{
+   await tx`SELECT id FROM users WHERE id=${session.userId} FOR UPDATE`;
+   const [existing]=await tx`SELECT parent_weekly_summary_enabled FROM weekly_student_study_settings WHERE student_id=${session.userId} FOR UPDATE`;
+   if(parentWeeklySummaryEnabled!==undefined&&parentWeeklySummaryEnabled!==(existing?.parent_weekly_summary_enabled??false))return 'guardian_only';
+   await tx`INSERT INTO weekly_student_study_settings(student_id,study_period,study_time,timezone)
+    VALUES(${session.userId},${data.studyPeriod as string},${data.studyTime as string},'Africa/Lagos')
+    ON CONFLICT(student_id) DO UPDATE SET study_period=EXCLUDED.study_period,study_time=EXCLUDED.study_time,
+     timezone=EXCLUDED.timezone,updated_at=now()`;
+   return 'saved';
+  });
+  if(result==='guardian_only')return NextResponse.json({error:'Guardian access required to change summary preferences'},{status:403});
   return NextResponse.json({saved:true});
  }catch{return NextResponse.json({error:'Unable to save study settings'},{status:503})}
 }

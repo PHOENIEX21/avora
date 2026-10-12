@@ -93,3 +93,8 @@ The unmodified source ZIP is stored in the owner's ChatGPT Library at `/AVORA/So
 - Read `docs/AVORA_DAILY_REVISIT_MILESTONE_2026-10-12.md`. `/weekly/revisit` uses existing CBT sessions/answers/schedules: reviewed due bank, eight-question daily cap, resume, confident-mistake priority, original objective snapshots, stored scores/progress and 21-day retention. No schema migration; private uploaded-work and carried-over seeding are not yet integrated.
 - Practice APIs reject official exam snapshots. Existing guardian access remains closed; fixture contexts do not authorize pilot activation.
 - Latest local evidence: 91 regression tests, 177 rollback-only Neon assertions, typecheck/build/curriculum/marking, and four-width browser workflows. Continue the full original roadmap, not a claimed completed platform.
+
+## Study-time continuation
+- Read `docs/AVORA_STUDY_SETTINGS_MILESTONE_2026-10-12.md`. Student-owned study preferences have a working screen and persist in the existing table; student updates cannot change guardian summary settings.
+- Baseline reads/postponement require guardian/release access and keep a fixed deadline. START no longer creates a phantom in-progress state; the reviewed timed baseline runner remains unfinished. Do not invent questions or claim it is complete.
+- 100 local regression tests, 202 rollback-only Neon assertions and four-width browser flows pass. Practice completion now timestamps actual finish time for deterministic latest-answer evidence. No new migration, production operation, main merge or deployment authorized.

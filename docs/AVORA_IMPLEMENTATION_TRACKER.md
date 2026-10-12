@@ -10,7 +10,7 @@
 | Weekly schema reconciliation | IN PROGRESS | 50 weekly_* tables verified on isolated integration branch; migration 048–058 still partially applied; restrictive objective/item publication checks remain; see batch 1–8 reports |
 | Phase 1 data model | IN PROGRESS | Isolated integration branch now has 50 weekly_* tables; constraint reconciliation, missing objects and runtime verification remain |
 | Phase 1c registration / parent | NOT VERIFIED | Guardian/PIN CI passes but end-to-end target flow not tested |
-| Phase 1d baseline / study time | NOT VERIFIED | Baseline policy tests pass, runtime not tested |
+| Phase 1d baseline / study time | PARTIALLY VERIFIED | Study-time screen/persistence and guardian preference restrictions verified; baseline access/deadline/stub safety tested; actual timed baseline and reminders remain |
 | Phase 2 verified curriculum | NOT VERIFIED | Import/review route exists; source coverage/release not verified |
 | Phase 2b all-class objective gating | NOT VERIFIED | Class flag API exists; runtime not tested |
 | Phase 3 weekly | PARTIALLY VERIFIED | Guarded dashboard, historical objectives and study/practice implemented; full weekly exam cycle remains |
@@ -78,3 +78,10 @@ Superseded for current connectivity/specification/workspace status by `docs/AVOR
 - Official exam snapshots are rejected by the practice API before corrections can be returned.
 - Verified 91 regression tests, 177 rollback-only Neon assertions, typecheck, production build, curriculum and marking audits, and browser workflows at four widths. Full guardian onboarding and the full platform remain incomplete.
 - Next: secure approved guardian onboarding, baseline and reviewed English Daily, private uploaded-work integration and carry-over seeding, My mistakes similar-question follow-up/shared cap, then remaining roadmap phases. Do not mark all of Phase 6 complete from the reviewed-bank subset.
+
+## 2026-10-12 study-time continuation
+
+- `docs/AVORA_STUDY_SETTINGS_MILESTONE_2026-10-12.md`: student study-time screen and persistent preferences implemented on the existing table; guardian summary preferences are protected from student changes.
+- Baseline routes now enforce guardian/release gates and fixed first-offer/postponement dates. START fails honestly without a reviewed assessment instead of recording a phantom attempt. Existing completed/active records are preserved.
+- Verified 100 regression tests, 202 rollback-only Neon assertions, independent typecheck, lint (11 existing warnings), build/curriculum/marking and four-width browser flows. Fixed a submission timestamp tie exposed by the integration rerun and reran successfully.
+- No phase-completion claim for the unfinished timed baseline, reminders, guardian activation or complete platform.

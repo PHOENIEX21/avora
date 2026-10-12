@@ -54,6 +54,38 @@ export async function verifyWeeklyWorkspace(sql){
   }
   const practice=load('app/api/weekly/practice/route.ts'),study=load('app/api/weekly/study/route.ts'),workspace=load('lib/weeklyWorkspace.ts');
   const post=(handler,body)=>handler.POST(new Request('https://avora-test.invalid/api/weekly',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)}));
+  const settings=load('app/api/weekly/study-settings/route.ts'),baseline=load('app/api/weekly/baseline/route.ts');
+  const put=body=>settings.PUT(new Request('https://avora-test.invalid/api/weekly/study-settings',{method:'PUT',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)}));
+  equal((await (await settings.GET()).json()).settings,null);
+  equal((await put({studyPeriod:'EVENING',studyTime:'18:45',studentId:otherStudent})).status,200);
+  const savedSettings=(await (await settings.GET()).json()).settings;
+  equal(savedSettings.study_time,'18:45');equal(savedSettings.timezone,'Africa/Lagos');equal(savedSettings.parent_weekly_summary_enabled,false);
+  // Simulate a previously verified guardian setting; student updates must preserve it.
+  await tx`UPDATE weekly_student_study_settings SET parent_weekly_summary_enabled=true WHERE student_id=${student}`;
+  equal((await put({studyPeriod:'AFTER_DINNER',studyTime:'20:15'})).status,200);
+  equal((await put({studyPeriod:'EVENING',studyTime:'18:45',parentWeeklySummaryEnabled:false})).status,403);
+  const preserved=(await (await settings.GET()).json()).settings;
+  equal(preserved.study_time,'20:15');equal(preserved.parent_weekly_summary_enabled,true);
+  signedIn=otherStudent;equal((await (await settings.GET()).json()).settings,null);
+  signedIn=student;role='ADMIN';equal((await put({studyPeriod:'EVENING',studyTime:'18:45'})).status,403);role='STUDENT';
+  gateStatus='verification_pending';equal((await baseline.GET()).status,403);gateStatus='ready';
+  const offered=(await (await baseline.GET()).json()).baseline;equal(offered.status,'NOT_STARTED');equal(Boolean(offered.first_offered_at),true);
+  equal((await post(baseline,{action:'START'})).status,409);
+  equal((await (await baseline.GET()).json()).baseline.status,'NOT_STARTED');
+  equal((await post(baseline,{action:'POSTPONE'})).status,200);
+  const firstPostponement=(await (await baseline.GET()).json()).baseline;
+  equal((await post(baseline,{action:'POSTPONE'})).status,200);
+  const secondPostponement=(await (await baseline.GET()).json()).baseline;
+  equal(secondPostponement.first_offered_at,firstPostponement.first_offered_at);
+  equal(secondPostponement.postponed_until,firstPostponement.postponed_until);
+  equal(new Date(secondPostponement.postponed_until)-new Date(secondPostponement.first_offered_at),3*24*60*60*1000);
+  await tx`UPDATE weekly_student_baseline_state SET first_offered_at=now()-interval '4 days' WHERE student_id=${student}`;
+  equal((await post(baseline,{action:'POSTPONE'})).status,409);
+  await tx`UPDATE weekly_student_baseline_state SET status='COMPLETED',completed_at=now() WHERE student_id=${student}`;
+  equal((await post(baseline,{action:'START'})).status,200);
+  equal((await (await baseline.GET()).json()).baseline.status,'COMPLETED');
+  await tx`UPDATE weekly_student_baseline_state SET first_offered_at=NULL WHERE student_id=${student}`;
+  equal((await (await baseline.GET()).json()).baseline.first_offered_at,null);
   equal((await post(study,{objectiveId:current,source:'TEXTBOOK',action:'COMPLETE'})).status,200);
   let [studied]=await tx`SELECT studied_at FROM weekly_objective_study WHERE student_id=${student} AND objective_id=${current}`;
   equal(Boolean(studied.studied_at),true);

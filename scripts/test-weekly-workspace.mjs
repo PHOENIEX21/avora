@@ -188,6 +188,7 @@ test('incomplete submission is blocked; finishing twice schedules revisit only o
  const schedules=f.calls.filter(x=>x.text.includes('INSERT INTO weekly_student_item_schedule'));
  assert.equal(schedules.length,5);assert.equal(schedules[0].values[2],1);assert.equal(schedules[1].values[2],2);
  assert.ok(schedules.every(x=>x.text.includes("AT TIME ZONE 'Africa/Lagos'")));
+ assert.ok(f.calls.find(x=>x.text.includes('UPDATE weekly_cbt_sessions')).text.includes('submitted_at=clock_timestamp()'));
 });
 test('study completion uses authenticated identity and does not create answer evidence',async()=>{
  const f=fixture();const response=await f.study({objectiveId:objective,source:'LESSON',action:'COMPLETE',studentId:'someone-else'});

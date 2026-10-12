@@ -36,6 +36,8 @@ jobs:
         run: npm run test:dawn-security
       - name: Starting-check policy tests
         run: npm run test:weekly-baseline
+      - name: Study settings and starting-check access regression
+        run: node --test scripts/test-weekly-onboarding-routes.mjs
       - name: Weekly objective publication security tests
         run: npm run test:weekly-objective-review
       - name: Weekly publication readiness regression

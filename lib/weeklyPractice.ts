@@ -70,7 +70,7 @@ export async function finishWeeklyPractice(context:WeeklyStudentContext,sessionI
      ON CONFLICT(student_id,item_id) DO UPDATE SET due_date=EXCLUDED.due_date,interval_days=EXCLUDED.interval_days,
       streak=EXCLUDED.streak,last_result=EXCLUDED.last_result,last_served_at=EXCLUDED.last_served_at`;
    }
-   await tx`UPDATE weekly_cbt_sessions SET submitted_at=now(),correct_count=${answers.filter(a=>a.is_correct).length},total_count=${answers.length}
+   await tx`UPDATE weekly_cbt_sessions SET submitted_at=clock_timestamp(),correct_count=${answers.filter(a=>a.is_correct).length},total_count=${answers.length}
     WHERE id=${sessionId} AND student_id=${context.studentId}`;
   }
   return {submitted:true,correct:session.submitted_at?Number(session.correct_count):answers.filter(a=>a.is_correct).length,

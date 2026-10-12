@@ -2,7 +2,7 @@
 import {useState} from 'react';
 import Link from 'next/link';
 import {useRouter} from 'next/navigation';
-import {ArrowLeft,BookOpen,Check,ChevronRight,RotateCcw,Star} from 'lucide-react';
+import {ArrowLeft,BookOpen,Check,ChevronRight,RotateCcw,Settings,Star} from 'lucide-react';
 import styles from './WeeklyDashboard.module.css';
 
 export type WeeklyObjectiveView={id:string;subject:string;topic:string;text:string;source:string;lessonHref:string|null;
@@ -61,6 +61,6 @@ export default function WeeklyDashboard(props:WeeklyDashboardProps){
     </article>)}
    </section>:<section aria-label="Weekly subjects" className={styles.subjectList}>{cards.slice(0,4)}{cards.length>4&&<details><summary>{cards.length-4} more subjects</summary><div className={styles.subjectList}>{cards.slice(4)}</div></details>}</section>}
   {props.retention&&props.retention.questions>0&&<p className={styles.evidence}>21-day retention: {props.retention.retained} of {props.retention.questions} correct without guessing</p>}
-  <footer className={styles.footer}><Link href="/weekly/revisit"><RotateCcw size={18}/> Today's revisit</Link><Link href="/learn">Lessons</Link><Link href="/weekly-exam">Weekly exams</Link><Link href="/progress">Learning history</Link></footer>
+  <footer className={styles.footer}><Link href="/weekly/revisit"><RotateCcw size={18}/> Today's revisit</Link><Link href="/learn">Lessons</Link><Link href="/weekly-exam">Weekly exams</Link><Link href="/progress">Learning history</Link><Link href="/weekly/settings"><Settings size={18}/> Study time</Link></footer>
  </main>;
 }
