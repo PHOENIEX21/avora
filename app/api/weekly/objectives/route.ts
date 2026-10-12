@@ -3,6 +3,7 @@ import {getSession} from '@/lib/auth';
 import {sql,withDbRetry} from '@/lib/db';
 import {isWeeklyLearningEnabled} from '@/lib/weeklyLearning';
 import {getDawnGate} from '@/lib/dawnAccess';
+import {canReadReleasedWeek} from '@/lib/weeklyReleaseWindow';
 
 export async function GET(request:Request){
  const session=await getSession();
@@ -24,7 +25,7 @@ export async function GET(request:Request){
   if(String(student?.class_level||'').toUpperCase()!==cls)return NextResponse.json({error:'Other class curriculum is private'},{status:403});
   if(!(await isWeeklyLearningEnabled(cls)))return NextResponse.json({error:'Weekly learning not enabled for this class'},{status:404});
   const [state]=await withDbRetry(()=>sql`SELECT term,current_week FROM weekly_class_week_state WHERE class_level=${cls} LIMIT 1`);
-  if(!state||Number(state.term)<term||(Number(state.term)===term&&Number(state.current_week)<week))return NextResponse.json({error:'This week has not been released'},{status:404});
+  if(!canReadReleasedWeek(state?{term:Number(state.term),week:Number(state.current_week)}:null,{term,week}))return NextResponse.json({error:'This week has not been released'},{status:404});
  }
  try{
   const rows=await withDbRetry(()=>sql`
