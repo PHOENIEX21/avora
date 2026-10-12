@@ -20,11 +20,10 @@ export async function GET(request:Request){
    WITH subjects AS (
     SELECT subject_name FROM weekly_class_subjects WHERE class_level=${classLevel} AND active=true
    ),
-   objectives AS (
-    all_objectives AS (
+   all_objectives AS (
      SELECT id,subject_name,approval_status,published_at FROM weekly_curriculum_objectives
      WHERE class_level=${classLevel} AND term=${term} AND week_number=${week}
-    ),
+    ), objectives AS (
     SELECT id,subject_name FROM weekly_curriculum_objectives
     WHERE class_level=${classLevel} AND term=${term} AND week_number=${week}
       AND approval_status='PUBLISHED' AND published_at IS NOT NULL
