@@ -7,7 +7,6 @@ test('weekly objectives require release and enrollment',()=>{
 });
 
 test('published past weeks remain readable for revisit; future weeks are blocked',()=>{
- assert.ok(route.includes('Number(state.term)<term'));
- assert.ok(route.includes('Number(state.current_week)<week'));
+ assert.ok(route.includes('canReadReleasedWeek('));
  assert.ok(!route.includes('Number(state.current_week)!==week'));
 });
