@@ -50,4 +50,16 @@ try{for(const width of [360,390,412,1280]){
  await page.route('**/api/weekly/practice',route=>{const data=route.request().postDataJSON();return route.fulfill({json:data.action==='START'?{id:'TEST_ONLY',submitted:false,questions:Array.from({length:5},(_,i)=>({id:String(i),prompt:'TEST_ONLY practice prompt with long wrapping text '+i,options:['One','Two','Three','Four'],saved:null}))}:data.action==='ANSWER'?{correct:true,correctAnswer:'Two',explanation:'TEST_ONLY reviewed explanation'}:{ok:true}})});
  await page.goto(base+'/practice');await page.getByText('Question 1 of 5',{exact:true}).waitFor();await page.getByRole('button',{name:'B Two',exact:true}).click();await page.getByRole('button',{name:'Sure',exact:true}).click();await page.getByRole('button',{name:'Check answer'}).click();await page.getByText('TEST_ONLY reviewed explanation',{exact:true}).waitFor();await page.getByRole('button',{name:'Next',exact:true}).click();await page.getByText('Question 2 of 5',{exact:true}).waitFor();
  assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));assert.deepEqual(errors,[]);console.log('PASS weekly subjects/objectives, retry/study/reload/history, practice and settings at '+width+'px');await page.close();
+ const today=await browser.newPage({viewport:{width,height:800},reducedMotion:'reduce'}),todayErrors=[];today.on('pageerror',error=>todayErrors.push(error.message));
+ await today.goto(base+'/today');const ring=today.getByRole('progressbar',{name:'Completed planned activities'});await ring.waitFor();assert.equal(await ring.getAttribute('aria-valuenow'),'0');assert.equal(await ring.getAttribute('aria-valuemax'),'3');
+ await today.screenshot({path:out+'/today-'+width+'.png',fullPage:true});assert.ok(await today.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
+ const study=today.getByRole('link',{name:'Study objective'});assert.equal(await study.getAttribute('href'),'/weekly?term=1&week=2&subject=Mathematics');
+ const taskColour=await today.locator('article h2').first().evaluate(el=>({fg:getComputedStyle(el).color,bg:getComputedStyle(el.closest('article')).backgroundColor}));
+ assert.ok((Math.max(luminance(taskColour.fg),luminance(taskColour.bg))+.05)/(Math.min(luminance(taskColour.fg),luminance(taskColour.bg))+.05)>=4.5);
+ for(const link of await today.getByRole('link').all()){const box=await link.boundingBox();assert.ok(box.height>=44)}
+ await study.click();await today.getByRole('heading',{name:'TEST_ONLY topic with a long title for phone wrapping'}).waitFor();
+ await today.goto(base+'/today-complete');await today.getByRole('heading',{name:"Today's set is complete"}).waitFor();assert.equal(await ring.getAttribute('aria-valuenow'),'3');
+ await today.screenshot({path:out+'/today-complete-'+width+'.png',fullPage:true});
+ await today.goto(base+'/today-empty');await today.getByRole('heading',{name:'No daily set scheduled'}).waitFor();assert.equal(await today.locator('article').count(),0);assert.equal(await ring.getAttribute('aria-valuetext'),'No scheduled activities');
+ assert.deepEqual(todayErrors,[]);console.log('PASS Today ring, complete/empty states, deep-linked study, contrast and targets at '+width+'px');await today.close();
 }}finally{await browser.close();await new Promise(r=>server.close(r))}

@@ -40,7 +40,7 @@ export async function weeklyObjectives(context:WeeklyStudentContext,term=context
   ORDER BY o.subject_name,o.topic_title,o.day_index,o.objective_text`);
  return rows.map(row=>({...row,id:String(row.id),subject_name:String(row.subject_name),topic_title:String(row.topic_title),
   objective_text:String(row.objective_text),source_reference:String(row.source_reference),
-  curriculum_topic_id:row.curriculum_topic_id,study_source:row.study_source,studied_at:row.studied_at,
+  curriculum_topic_id:row.curriculum_topic_id,study_source:row.study_source,studied_at:row.studied_at,day_index:Number(row.day_index),
   progress:weeklyProgress(Number(row.evidence),Number(row.correct),Boolean(row.studied_at),Number(row.retained_correct))}));
 }
 export async function weeklyObjective(context:WeeklyStudentContext,objectiveId:string){

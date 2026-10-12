@@ -34,6 +34,8 @@ jobs:
         run: node --test scripts/test-weekly-visual.mjs
       - name: Weekly home entry and guardian isolation
         run: node --test scripts/test-weekly-home-entry.mjs
+      - name: Guarded Today task plan and progress ring
+        run: node --test scripts/test-weekly-today.mjs
       - name: Development database isolation regression
         run: node --test scripts/test-neon-development-db.mjs
       - name: Weekly foundation regression

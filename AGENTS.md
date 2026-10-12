@@ -124,3 +124,9 @@ The unmodified source ZIP is stored in the owner's ChatGPT Library at `/AVORA/So
 - Read `docs/AVORA_HOME_ENTRY_CHECKPOINT_2026-10-12.md`. Ready students enter `/weekly` through `/home`; guardian-pending, missing-week and unavailable-gate states cannot load the legacy academic plan or official exam cards there. Unreleased legacy classes retain lessons and reviewed owner-sealed exam cards.
 - Home rejects non-student roles before learner queries and uses Africa/Lagos weekday/date selection. Weekends no longer pretend Friday's work is Today. No schema/data/content/publication change or guardian activation occurred.
 - Full Today tasks/ring and target navigation remain unfinished. This secure entry bridge is not the complete Dawn home, live guardian verification or full authenticated E2E sign-off.
+
+## Guarded Today continuation
+- Read `docs/AVORA_WEEKLY_TODAY_MILESTONE_2026-10-12.md`. `/weekly/today` now uses real released weekday objectives, saved study, complete same-day practice and assigned/due reviewed Revisit. Home/Dawn ready entry points route here. No new academic tables, content or guardian activation.
+- Due preview shares existing scheduler eligibility and cap checks and writes nothing. Read-only Today cannot start a paper or spend budget. Yesterday's/incomplete practice and incomplete Revisit cannot manufacture completion; study remains distinct from mastery.
+- 161 regression tests, 255 workspace plus 60 baseline real rollback assertions, four-width Today/shared component workflows, guest checks and build/types/curriculum/teaching audits pass. Review TEST_ONLY screenshots are committed under `docs/screenshots/weekly-today/`.
+- This supersedes earlier 'no Today ring' notes only for the objective/Revisit subset. English Daily, private uploaded work, full shell/profile/photos/menu, exam reminders/countdown, time theme/streak/rest-day rules and final visual matching remain unfinished. Keep production and guardian/SendGrid restrictions.

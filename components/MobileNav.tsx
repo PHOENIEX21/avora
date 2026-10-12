@@ -29,7 +29,7 @@ export default function MobileNav({role='STUDENT'}:{role?:string}){
    <Link href="/support"><span>Human support</span><small>Message a real AVORA support person inside the app.</small></Link>
   </div>}
   <nav className="mobile-dock" aria-label="Mobile navigation">
-   {primary.map(item=>{const active=path===item.href||path.startsWith(item.href+'/');return <Link key={item.href} href={item.href} className={active?'active':''}><span aria-hidden="true">{item.icon}</span><b>{item.label}</b></Link>})}
+   {primary.map(item=>{const active=(item.href==='/home'&&path==='/weekly/today')||path===item.href||path.startsWith(item.href+'/');return <Link key={item.href} href={item.href} className={active?'active':''}><span aria-hidden="true">{item.icon}</span><b>{item.label}</b></Link>})}
    <button type="button" className={moreActive||open?'active':''} onClick={()=>setOpen(v=>!v)} aria-expanded={open}><span aria-hidden="true">•••</span><b>More</b></button>
   </nav>
  </>;

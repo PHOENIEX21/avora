@@ -113,6 +113,23 @@ export async function verifyWeeklyWorkspace(sql){
   equal(currentRows.length,1);equal(currentRows[0].progress.evidence,5);equal(currentRows[0].progress.accuracy,100);
   equal(currentRows[0].progress.status==='MASTERED',false);
   equal((await workspace.weeklyObjectives(context,1,1)).length,1);
+  const todayService=load('lib/weeklyToday.ts');
+  const [todayClock]=await tx`SELECT extract(isodow FROM clock_timestamp() AT TIME ZONE 'Africa/Lagos')::int weekday`;
+  await tx`UPDATE weekly_curriculum_objectives SET day_index=${Math.min(5,todayClock.weekday)} WHERE id=${current}`;
+  let daily=await todayService.weeklyTodayPlan(student);equal(daily.total,todayClock.weekday<=5?2:0);equal(daily.completed,daily.total);
+  equal(daily.tasks.every(task=>!task.id.includes(past)&&!task.id.includes(future)&&!task.id.includes(draft)&&!task.id.includes(otherClass)),true);
+  const [countBefore]=await tx`SELECT count(*)::int count FROM weekly_cbt_sessions WHERE student_id=${student}`;
+  await todayService.weeklyTodayPlan(student);
+  const [countAfter]=await tx`SELECT count(*)::int count FROM weekly_cbt_sessions WHERE student_id=${student}`;equal(countAfter.count,countBefore.count);
+  const [originalPaper]=await tx`SELECT question_ids,item_snapshot FROM weekly_cbt_sessions WHERE id=${paper.id}`;
+  await tx`INSERT INTO weekly_cbt_sessions(student_id,objective_id,source,mode,question_ids,item_snapshot,submitted_at)
+   VALUES(${otherStudent},${current},'DAILY_LESSON','PRACTICE',${originalPaper.question_ids},${JSON.stringify(originalPaper.item_snapshot)}::jsonb,clock_timestamp())`;
+  const incomplete=await todayService.weeklyTodayPlan(otherStudent);equal(incomplete.completed,0);
+  const [completedTime]=await tx`SELECT submitted_at FROM weekly_cbt_sessions WHERE id=${paper.id}`;
+  await tx`UPDATE weekly_cbt_sessions SET submitted_at=clock_timestamp()-interval '1 day' WHERE id=${paper.id}`;
+  daily=await todayService.weeklyTodayPlan(student);equal(daily.completed,todayClock.weekday<=5?1:0);
+  await tx`UPDATE weekly_cbt_sessions SET submitted_at=${completedTime.submitted_at} WHERE id=${paper.id}`;
+  gateStatus='verification_pending';await assert.rejects(todayService.weeklyTodayPlan(student),/Guardian/);checks++;gateStatus='ready';
   const snapshot=async()=>await tx`SELECT item_id,due_date,interval_days,streak,last_result,last_served_at
    FROM weekly_student_item_schedule WHERE student_id=${student} ORDER BY item_id`;
   const repeat=async({wrong=false,guess=false}={})=>{
@@ -190,7 +207,11 @@ export async function verifyWeeklyWorkspace(sql){
   await tx`INSERT INTO weekly_cbt_answers(session_id,item_id,answer,confidence,is_correct)
    VALUES(${mistakeSession},${sureMistake.id},'One','SURE',false)`;
   await tx`UPDATE weekly_student_item_schedule SET due_date=(now() AT TIME ZONE 'Africa/Lagos')::date WHERE student_id=${student} AND item_id=${sureMistake.id}`;
+  const dueToday=await todayService.weeklyTodayPlan(student),pendingRevision=dueToday.tasks.find(task=>task.kind==='REVISIT');
+  equal(pendingRevision.questions,8);equal(pendingRevision.done,false);
+  const [unspent]=await tx`SELECT count(*)::int count FROM weekly_cbt_sessions WHERE student_id=${student} AND source='REVISIT'`;equal(unspent.count,0);
   const revisitResponse=await post(practice,{action:'START_REVISIT'});equal(revisitResponse.status,200);
+  const assignedToday=await todayService.weeklyTodayPlan(student);equal(assignedToday.tasks.some(task=>task.kind==='REVISIT'&&!task.done),true);
   const revisit=await revisitResponse.json();equal(revisit.questions.length,8);equal(revisit.questions[0].id,sureMistake.id);
   equal(revisit.questions.some(q=>blocked.some(item=>item.id===q.id)),false);
   equal(revisit.questions.every(q=>eligible.some(item=>item.id===q.id)&&q.saved===null&&!('answer' in q)),true);
@@ -201,6 +222,7 @@ export async function verifyWeeklyWorkspace(sql){
   const resumed=await (await practice.GET(new Request('https://avora-test.invalid/api/weekly/practice?sessionId='+revisit.id))).json();
   equal(resumed.questions.every(q=>q.saved?.correct===true&&q.saved.correctAnswer==='Two'),true);
   equal((await post(practice,{action:'FINISH',sessionId:revisit.id})).status,200);
+  const completedToday=await todayService.weeklyTodayPlan(student);equal(completedToday.tasks.some(task=>task.kind==='REVISIT'&&task.done),true);
   const [revisitStored]=await tx`SELECT source,mode,objective_id,correct_count,total_count FROM weekly_cbt_sessions WHERE id=${revisit.id}`;
   equal(revisitStored.source,'REVISIT');equal(revisitStored.mode,'PRACTICE');equal(revisitStored.objective_id,null);
   equal(Number(revisitStored.correct_count),8);equal(Number(revisitStored.total_count),8);

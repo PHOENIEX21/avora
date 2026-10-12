@@ -27,7 +27,7 @@ test('home routes guests and non-students to their own entry before learner data
  }
 });
 test('a ready weekly student enters the existing workspace before legacy academic queries',async()=>{
- const f=fixture({gate:{status:'ready',classLevel:'JSS1',term:1,week:2}});await assert.rejects(f.home(),/REDIRECT:\/weekly$/);assert.equal(f.calls.length,0);assert.equal(f.planReads(),0);
+ const f=fixture({gate:{status:'ready',classLevel:'JSS1',term:1,week:2}});await assert.rejects(f.home(),/REDIRECT:\/weekly\/today$/);assert.equal(f.calls.length,0);assert.equal(f.planReads(),0);
 });
 test('guardian pending, missing release and gate failures cannot expose academic plans or official cards through home',async()=>{
  for(const gate of [{status:'onboarding_required'},{status:'verification_pending'},{status:'legacy',reason:'WEEK_UNSET'},{status:'legacy',reason:'UNAVAILABLE'}]){

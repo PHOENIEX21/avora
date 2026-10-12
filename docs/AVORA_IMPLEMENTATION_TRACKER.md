@@ -16,7 +16,7 @@
 | Phase 3 weekly | PARTIALLY VERIFIED | Guarded dashboard, historical objectives and study/practice implemented; full weekly exam cycle remains |
 | Phase 3b exams/notifications/revisit | PARTIALLY VERIFIED | Existing official flexible-window paper sealing, ownership, autosave/expiry and delayed outcomes verified; objective compatibility, full scheduling/lobby/notifications and midweek revisit remain |
 | Phase 3c week switching | NOT VERIFIED | Need state transition tests |
-| Phase 4 daily tasks | PARTIALLY VERIFIED | Objective practice/submissions and progress verified; English Daily five-task flow remains |
+| Phase 4 daily tasks | PARTIALLY VERIFIED | Guarded Today objectives/study/practice and due/assigned Revisit ring verified; English Daily and uploaded-work daily tasks remain |
 | Existing Daily Check submissions | PARTIALLY VERIFIED | Student/input/bank checks and replay-safe progress updates tested with mocked DB; live Neon integration pending |
 | Phase 4g English Daily | NOT VERIFIED | Need approved real content and tests |
 | Phase 5 uploads | NOT VERIFIED | Need flow and safety tests |
@@ -97,3 +97,8 @@ Superseded for current connectivity/specification/workspace status by `docs/AVOR
 
 - `docs/AVORA_HOME_ENTRY_CHECKPOINT_2026-10-12.md`: home respects the existing weekly/guardian gate before academic queries, routes ready students to the working weekly workspace, preserves unreleased legacy lessons and only shows sealed official cards.
 - Role boundaries and Lagos weekday selection are covered by actual-page regression tests. This does not complete the Today task/ring, global navigation or guardian activation.
+
+## 2026-10-12 Guarded Today
+
+- `docs/AVORA_WEEKLY_TODAY_MILESTONE_2026-10-12.md` supersedes the no-Today-ring note for the existing objective/Revisit subset. Real released weekday tasks, persisted completion, deep links and read-only due preview use the existing academic foundation; no sample content or new model.
+- Full English Daily/uploaded-work, global navigation/profile/photos/menu, reminders/countdown and complete Dawn matching remain outstanding. Guardian activation remains deferred; production untouched.

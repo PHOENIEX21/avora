@@ -14,22 +14,8 @@ export async function weeklyRevisitBudget(tx:postgres.TransactionSql,studentId:s
  return Number(row?.used||0);
 }
 
-export async function startWeeklyRevisit(context:WeeklyStudentContext):Promise<string|null>{
- await seedWeeklyCatchup(context);
- return sql.begin(async tx=>{
-  await tx`SELECT id FROM users WHERE id=${context.studentId} FOR UPDATE`;
-  const [existing]=await tx`SELECT id FROM weekly_cbt_sessions WHERE student_id=${context.studentId}
-   AND source='REVISIT' AND mode='PRACTICE' AND item_snapshot IS NOT NULL
-   AND submitted_at IS NULL
-   ORDER BY submitted_at NULLS FIRST,started_at DESC LIMIT 1`;
-  if(existing)return String(existing.id);
-  const remaining=Math.max(0,WEEKLY_REVISIT_DAILY_CAP-await weeklyRevisitBudget(tx,context.studentId));
-  if(!remaining){
-   const [completed]=await tx`SELECT id FROM weekly_cbt_sessions WHERE student_id=${context.studentId} AND source='REVISIT' AND mode='PRACTICE'
-    AND item_snapshot IS NOT NULL AND (submitted_at AT TIME ZONE 'Africa/Lagos')::date=(clock_timestamp() AT TIME ZONE 'Africa/Lagos')::date
-    ORDER BY submitted_at DESC,id LIMIT 1`;
-   return completed?String(completed.id):null;
-  }
+async function reviewedDueRevisitItems(tx:postgres.TransactionSql,context:WeeklyStudentContext,remaining:number){
+ if(remaining<=0)return [];
   const rows=await tx`SELECT i.*,schedule.interval_days AS scheduled_interval_days,
    schedule.interval_days=21 AND (schedule.last_served_at AT TIME ZONE 'Africa/Lagos')::date+21
     <=(now() AT TIME ZONE 'Africa/Lagos')::date AS retention_check
@@ -63,6 +49,33 @@ export async function startWeeklyRevisit(context:WeeklyStudentContext):Promise<s
     retentionCheck:row.retention_check===true});
    if(items.length===remaining)break;
   }
+ return items;
+}
+
+export async function weeklyRevisitDueCount(context:WeeklyStudentContext){
+ return sql.begin(async tx=>{
+  const remaining=Math.max(0,WEEKLY_REVISIT_DAILY_CAP-await weeklyRevisitBudget(tx,context.studentId));
+  return (await reviewedDueRevisitItems(tx,context,remaining)).length;
+ });
+}
+
+export async function startWeeklyRevisit(context:WeeklyStudentContext):Promise<string|null>{
+ await seedWeeklyCatchup(context);
+ return sql.begin(async tx=>{
+  await tx`SELECT id FROM users WHERE id=${context.studentId} FOR UPDATE`;
+  const [existing]=await tx`SELECT id FROM weekly_cbt_sessions WHERE student_id=${context.studentId}
+   AND source='REVISIT' AND mode='PRACTICE' AND item_snapshot IS NOT NULL
+   AND submitted_at IS NULL
+   ORDER BY submitted_at NULLS FIRST,started_at DESC LIMIT 1`;
+  if(existing)return String(existing.id);
+  const remaining=Math.max(0,WEEKLY_REVISIT_DAILY_CAP-await weeklyRevisitBudget(tx,context.studentId));
+  if(!remaining){
+   const [completed]=await tx`SELECT id FROM weekly_cbt_sessions WHERE student_id=${context.studentId} AND source='REVISIT' AND mode='PRACTICE'
+    AND item_snapshot IS NOT NULL AND (submitted_at AT TIME ZONE 'Africa/Lagos')::date=(clock_timestamp() AT TIME ZONE 'Africa/Lagos')::date
+    ORDER BY submitted_at DESC,id LIMIT 1`;
+   return completed?String(completed.id):null;
+  }
+  const items=await reviewedDueRevisitItems(tx,context,remaining);
   if(!items.length)return null;
   const [created]=await tx`INSERT INTO weekly_cbt_sessions(student_id,source,mode,question_ids,item_snapshot)
    VALUES(${context.studentId},'REVISIT','PRACTICE',${items.map(x=>x.id)},${JSON.stringify(items)}::jsonb) RETURNING id`;

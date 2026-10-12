@@ -16,7 +16,7 @@ export default async function Welcome(){
  if(s.role!=='STUDENT')redirect(s.role==='ADMIN'?'/admin':s.role==='PARENT'?'/parent':'/');
  const access=await requireStudentLearningAccess(s);
  const gate=await getDawnGate(s.userId);
- if(gate.status==='ready')redirect('/weekly');
+ if(gate.status==='ready')redirect('/weekly/today');
  const legacyAcademic=gate.status==='legacy'&&['CLASS_UNSET','NOT_RELEASED'].includes(gate.reason);
 
  const [u]=await withDbRetry(()=>sql`SELECT u.full_name,sp.class_level,sp.target_exam,sp.preferred_subject,sp.learning_goal,sp.daily_goal_minutes,sp.onboarding_completed,sp.diagnostic_completed,sp.diagnostic_score FROM users u LEFT JOIN student_profiles sp ON sp.user_id=u.id WHERE u.id=${s.userId}`,2);

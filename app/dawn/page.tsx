@@ -13,6 +13,7 @@ export default async function DawnToday(){
  if(session.role!=='STUDENT')redirect('/');
  const gate=await getDawnGate(session.userId);
  if(gate.status==='legacy')redirect('/home');
+ if(gate.status==='ready')redirect('/weekly/today');
  const classLevel=gate.classLevel;
  const state={term:gate.term,current_week:gate.week};
  const onboardingRequired=gate.status==='onboarding_required';

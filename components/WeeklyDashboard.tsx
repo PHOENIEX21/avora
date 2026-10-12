@@ -8,10 +8,10 @@ import {weeklySubjectColour,weeklyObjectiveState} from '@/lib/weeklyVisual';
 
 export type WeeklyObjectiveView={id:string;subject:string;topic:string;text:string;source:string;lessonHref:string|null;
  studied:boolean;studySource:'TEXTBOOK'|'LESSON'|null;progress:{status:string;evidence:number;accuracy:number|null}};
-export type WeeklyDashboardProps={classLevel:string;term:number;week:number;currentTerm:number;currentWeek:number;
+export type WeeklyDashboardProps={classLevel:string;term:number;week:number;currentTerm:number;currentWeek:number;initialSubject?:string;
  weeks:Array<{term:number;week:number}>;objectives:WeeklyObjectiveView[];retention?:{questions:number;correct:number;retained:number}};
 export default function WeeklyDashboard(props:WeeklyDashboardProps){
- const router=useRouter(),[subject,setSubject]=useState<string|null>(null),[busy,setBusy]=useState<string|null>(null),[error,setError]=useState('');
+ const router=useRouter(),[subject,setSubject]=useState<string|null>(props.initialSubject||null),[busy,setBusy]=useState<string|null>(null),[error,setError]=useState('');
  const [studySources,setStudySources]=useState<Record<string,'TEXTBOOK'|'LESSON'>>({});
  const subjects=[...new Set(props.objectives.map(x=>x.subject))];
  const selectedSubject=subject&&subjects.includes(subject)?subject:null;

@@ -9,7 +9,7 @@ import {sql,withDbRetry} from '@/lib/db';
 import WeeklyDashboard from '@/components/WeeklyDashboard';
 import {weeklyRetentionSummary} from '@/lib/weeklyRevisit';
 export const dynamic='force-dynamic';
-export default async function WeeklyPage({searchParams}:{searchParams:Promise<{term?:string;week?:string}>}){
+export default async function WeeklyPage({searchParams}:{searchParams:Promise<{term?:string;week?:string;subject?:string}>}){
  const session=await getSession();
  if(!session)redirect('/login');
  if(session.role!=='STUDENT')redirect('/home');
@@ -25,7 +25,7 @@ export default async function WeeklyPage({searchParams}:{searchParams:Promise<{t
      AND (term<${context.term} OR (term=${context.term} AND week_number<=${context.week})) ORDER BY term,week_number`);
    const weeks=history.map(x=>({term:Number(x.term),week:Number(x.week_number)}));
    if(!weeks.some(x=>x.term===context.term&&x.week===context.week))weeks.push({term:context.term,week:context.week});
-   return <WeeklyDashboard classLevel={context.classLevel} term={term} week={week} currentTerm={context.term} currentWeek={context.week} weeks={weeks} retention={retention}
+   return <WeeklyDashboard initialSubject={requested.subject} classLevel={context.classLevel} term={term} week={week} currentTerm={context.term} currentWeek={context.week} weeks={weeks} retention={retention}
     objectives={objectives.map(x=>({id:x.id,subject:x.subject_name,topic:x.topic_title,text:x.objective_text,source:String(x.source_reference),
      studied:Boolean(x.studied_at),studySource:x.study_source==='TEXTBOOK'||x.study_source==='LESSON'?x.study_source:null,
      lessonHref:weeklyLessonLink(context.classLevel,x.subject_name,x.curriculum_topic_id),progress:x.progress}))}/>;
