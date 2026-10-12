@@ -21,7 +21,7 @@ export async function GET(request:Request){
     SELECT subject_name FROM weekly_class_subjects WHERE class_level=${classLevel} AND active=true
    ),
    all_objectives AS (
-     SELECT id,subject_name,approval_status,published_at FROM weekly_curriculum_objectives
+     SELECT id,subject_name,approval_status,published_at,day_index FROM weekly_curriculum_objectives
      WHERE class_level=${classLevel} AND term=${term} AND week_number=${week}
     ), objectives AS (
     SELECT id,subject_name FROM weekly_curriculum_objectives
@@ -39,6 +39,7 @@ export async function GET(request:Request){
     (SELECT count(*)::int FROM subjects) AS subject_count,
     (SELECT count(*)::int FROM objectives) AS published_objective_count,
     (SELECT count(*)::int FROM all_objectives WHERE approval_status<>'PUBLISHED' OR published_at IS NULL) AS unpublished_objectives,
+    (SELECT count(*)::int FROM all_objectives WHERE day_index IS NULL OR day_index NOT BETWEEN 1 AND 5) AS unscheduled_objectives,
     (SELECT count(*)::int FROM subjects s WHERE NOT EXISTS (SELECT 1 FROM objectives o WHERE o.subject_name=s.subject_name AND o.day_index BETWEEN 1 AND 5)) AS subjects_without_weekday_objectives,
     (SELECT count(*)::int FROM subjects s WHERE EXISTS(
       SELECT 1 FROM objectives o WHERE o.subject_name=s.subject_name)) AS published_subject_count,
@@ -68,6 +69,7 @@ export async function GET(request:Request){
    subjectCount:Number(row?.subject_count??0),
    publishedObjectiveCount:Number(row?.published_objective_count??0),
    unpublishedObjectiveCount:Number(row?.unpublished_objectives??0),
+   unscheduledObjectiveCount:Number(row?.unscheduled_objectives??0),
    subjectsWithoutWeekdayObjectives:Number(row?.subjects_without_weekday_objectives??0),
    objectivesOutsideActiveSubjects:Number(row?.objectives_outside_active_subjects??0),
    publishedSubjectCount:Number(row?.published_subject_count??0),
