@@ -40,6 +40,8 @@ jobs:
         run: npm run test:weekly-student-visibility
       - name: Weekly curriculum import checks
         run: npm run test:weekly-curriculum-import
+      - name: Reviewed live question bank gate
+        run: npm run test:weekly-live-question-bank
       - name: Curriculum audits
         run: npm run audit:curriculum
       - name: Next.js production build
