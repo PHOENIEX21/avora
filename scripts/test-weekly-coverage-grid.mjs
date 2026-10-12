@@ -8,7 +8,7 @@ test('coverage grid includes empty weeks for each active class subject',()=>{
  assert.ok(source.includes("?'EMPTY'"));
 });
 test('coverage exposes missing sources and publication state',()=>{
- for(const token of ['source_reference','missingSources','published_count','objective_count','topic_count'])assert.ok(source.includes(token));
+ for(const token of ['source_reference','missingSources','published_count','objective_count','topic_count','unscheduled_count','scheduled_days'])assert.ok(source.includes(token));
 });
 test('coverage is owner-only and class-scoped',()=>{
  assert.ok(source.includes("session.role!=='ADMIN'"));
