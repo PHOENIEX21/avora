@@ -46,6 +46,8 @@ jobs:
         run: npm run test:weekly-release-window
       - name: Weekly coverage grid tests
         run: npm run test:weekly-coverage-grid
+      - name: Unpublished curriculum release gate
+        run: npm run test:weekly-unpublished-gate
       - name: Curriculum audits
         run: npm run audit:curriculum
       - name: Next.js production build
