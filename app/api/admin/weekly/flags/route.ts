@@ -50,6 +50,7 @@ export async function POST(request:Request){
      (SELECT count(*)::int FROM subjects s WHERE NOT EXISTS (SELECT 1 FROM objectives o WHERE o.subject_name=s.subject_name AND o.day_index BETWEEN 1 AND 5)) AS subjects_without_weekday_objectives,
      (SELECT count(*)::int FROM subjects s WHERE EXISTS(
       SELECT 1 FROM objectives o WHERE o.subject_name=s.subject_name)) AS published_subjects,
+     (SELECT count(*)::int FROM objectives o WHERE NOT EXISTS (SELECT 1 FROM subjects s WHERE s.subject_name=o.subject_name)) AS outside_active_subjects,
      (SELECT count(*)::int FROM item_counts WHERE approved_count<6) AS missing_items,
      (SELECT count(DISTINCT e.subject_name)::int FROM weekly_exams e
       WHERE e.class_level=${classLevel} AND e.term=${term!} AND e.week_number=${week!}
@@ -70,7 +71,7 @@ export async function POST(request:Request){
        AND status='PUBLISHED') AS english_days
    `);
    if(!Number(ready?.subjects)||Number(ready?.published_objectives)<Number(ready?.subjects)||Number(ready?.published_subjects)!==Number(ready?.subjects)||
-      Number(ready?.unscheduled_objectives)!==0||Number(ready?.unpublished_objectives)!==0||Number(ready?.subjects_without_weekday_objectives)!==0||Number(ready?.missing_items)!==0||Number(ready?.exam_subjects)<Number(ready?.subjects)||
+      Number(ready?.unscheduled_objectives)!==0||Number(ready?.unpublished_objectives)!==0||Number(ready?.subjects_without_weekday_objectives)!==0||Number(ready?.outside_active_subjects)!==0||Number(ready?.missing_items)!==0||Number(ready?.exam_subjects)<Number(ready?.subjects)||
       Number(ready?.ready_topic_sets)<Number(ready?.subjects)||Number(ready?.english_days)!==5)
     return NextResponse.json({error:'Pilot activation blocked: publish every active subject, six approved questions per objective, a reviewed exam per subject, and all five English Daily plans'},{status:409});
   }
