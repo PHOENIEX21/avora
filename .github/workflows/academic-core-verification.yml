@@ -64,6 +64,8 @@ jobs:
         run: npm run test:weekly-student-visibility
       - name: Weekly curriculum import checks
         run: npm run test:weekly-curriculum-import
+      - name: Source-backed word bank import and owner review
+        run: node --test scripts/test-weekly-word-bank.mjs
       - name: Reviewed live question bank gate
         run: npm run test:weekly-live-question-bank
       - name: Student release window boundary tests

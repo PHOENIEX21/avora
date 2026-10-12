@@ -102,3 +102,10 @@ Superseded for current connectivity/specification/workspace status by `docs/AVOR
 
 - `docs/AVORA_WEEKLY_TODAY_MILESTONE_2026-10-12.md` supersedes the no-Today-ring note for the existing objective/Revisit subset. Real released weekday tasks, persisted completion, deep links and read-only due preview use the existing academic foundation; no sample content or new model.
 - Full English Daily/uploaded-work, global navigation/profile/photos/menu, reminders/countdown and complete Dawn matching remain outstanding. Guardian activation remains deferred; production untouched.
+
+## 2026-10-12 English Word Bank
+
+- Read `docs/AVORA_WORD_BANK_MILESTONE_2026-10-12.md`. Owner import/review now uses the existing vocabulary table: mandatory source/examples, atomic DRAFT imports, case/trim duplicate protection, guarded class/status/search pagination, draft edits and revision-checked explicit owner approval. No publication action or generated curriculum.
+- Additive migration 066 is applied/recorded only on the isolated branch; existing sources and learner data are preserved. Real rollback tests verify partial-import failure and approval/published-source boundaries. Four-width owner component screenshots are labelled TEST_ONLY.
+- Verified: 171 Node tests; 76 word-bank plus 255 workspace real rollback assertions (331 fresh); production build, independent types, lint, curriculum/teaching audits, guest browser/API checks and zero production dependency vulnerabilities. Ten new word-bank tests also run in GitHub Actions.
+- Full English Daily and its deep release validation remain IN PROGRESS. Published plan-row counts alone are not full readiness; rule/oral/audio/sentence/question linkage and no-repeat year plans remain. No class/guardian activation, production write, main merge or deployment.

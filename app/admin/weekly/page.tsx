@@ -35,6 +35,7 @@ export default function WeeklyCurriculumImport(){
  return <main style={{maxWidth:960,margin:'0 auto',padding:'24px 16px',color:'#1B1840',background:'#FBF7F2',minHeight:'100vh'}}>
   <h1>Weekly curriculum review</h1>
   <Link href="/admin/weekly/baseline">Starting-check review</Link>
+  {' · '}<Link href="/admin/weekly/words">English word bank</Link>
   <p>Import only verified curriculum objectives. The source reference is mandatory. Imported records remain drafts until explicitly reviewed and published.</p>
   <label htmlFor="pilot-class">Class</label>{' '}
   <select id="pilot-class" value={classLevel} onChange={e=>{setClassLevel(e.target.value);setRows([])}}><option>JSS1</option><option>JSS2</option><option>JSS3</option></select>
