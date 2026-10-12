@@ -12,17 +12,18 @@ export async function GET(request:Request){
  try{
   const rows=await withDbRetry(()=>sql`
    SELECT cs.subject_name,cs.subject_kind,
-    o.week_number,
+    calendar_week.week_number,
     count(o.id)::int AS objective_count,
     count(o.id) FILTER(WHERE o.approval_status='PUBLISHED' AND o.published_at IS NOT NULL)::int AS published_count,
     count(o.id) FILTER(WHERE o.source_reference IS NULL OR btrim(o.source_reference)='')::int AS missing_sources,
     count(DISTINCT o.topic_title)::int AS topic_count
    FROM weekly_class_subjects cs
+   CROSS JOIN generate_series(1,16) AS calendar_week(week_number)
    LEFT JOIN weekly_curriculum_objectives o ON o.class_level=cs.class_level
-    AND o.subject_name=cs.subject_name AND o.term=${term}
+    AND o.subject_name=cs.subject_name AND o.term=${term} AND o.week_number=calendar_week.week_number
    WHERE cs.class_level=${classLevel} AND cs.active=true
-   GROUP BY cs.subject_name,cs.subject_kind,o.week_number
-   ORDER BY cs.subject_name,o.week_number
+   GROUP BY cs.subject_name,cs.subject_kind,calendar_week.week_number
+   ORDER BY cs.subject_name,calendar_week.week_number
   `);
   return NextResponse.json({classLevel,term,coverage:rows.map(row=>({
    subjectName:row.subject_name,subjectKind:row.subject_kind,
