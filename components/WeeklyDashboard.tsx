@@ -4,6 +4,7 @@ import Link from 'next/link';
 import {useRouter} from 'next/navigation';
 import {ArrowLeft,BookOpen,Check,ChevronRight,RotateCcw,Settings,Star} from 'lucide-react';
 import styles from './WeeklyDashboard.module.css';
+import {weeklySubjectColour,weeklyObjectiveState} from '@/lib/weeklyVisual';
 
 export type WeeklyObjectiveView={id:string;subject:string;topic:string;text:string;source:string;lessonHref:string|null;
  studied:boolean;studySource:'TEXTBOOK'|'LESSON'|null;progress:{status:string;evidence:number;accuracy:number|null}};
@@ -13,6 +14,9 @@ export default function WeeklyDashboard(props:WeeklyDashboardProps){
  const router=useRouter(),[subject,setSubject]=useState<string|null>(null),[busy,setBusy]=useState<string|null>(null),[error,setError]=useState('');
  const [studySources,setStudySources]=useState<Record<string,'TEXTBOOK'|'LESSON'>>({});
  const subjects=[...new Set(props.objectives.map(x=>x.subject))];
+ const selectedSubject=subject&&subjects.includes(subject)?subject:null;
+ const selectedObjectives=props.objectives.filter(x=>x.subject===selectedSubject);
+ const topics=[...new Set(selectedObjectives.map(x=>x.topic))];
  const current=props.term===props.currentTerm&&props.week===props.currentWeek;
  const mastered=props.objectives.filter(x=>x.progress.status==='MASTERED').length;
  async function study(objective:WeeklyObjectiveView,action:'START'|'COMPLETE',source:'TEXTBOOK'|'LESSON'){
@@ -27,17 +31,19 @@ export default function WeeklyDashboard(props:WeeklyDashboardProps){
  const cards=subjects.map(name=>{
   const objectives=props.objectives.filter(x=>x.subject===name);
   return <button key={name} className={styles.subject} onClick={()=>setSubject(name)}>
-   <span className={styles.edge} style={{background:name==='Mathematics'?'#E8590C':name.includes('English')?'#3B82F6':'#12A594'}}/>
+   <span className={styles.edge} style={{background:weeklySubjectColour(name)}}/>
    <span className={styles.subjectCopy}><span className={styles.subjectHeading}><strong>{name}</strong><small>{objectives.filter(x=>x.progress.status==='MASTERED').length}/{objectives.length} stars</small></span>
     <span>{[...new Set(objectives.map(x=>x.topic))].join(' · ')}</span>
-    <span className={styles.stars}>{objectives.map(x=><Star key={x.id} size={16} aria-label={x.progress.status.replaceAll('_',' ')} fill={x.progress.status==='MASTERED'?'#FFC857':'none'}/>)}</span>
+    <span className={styles.stars}>{objectives.map(x=><Star key={x.id} size={16} aria-label={weeklyObjectiveState(x).label} data-state={weeklyObjectiveState(x).tone} fill={x.progress.status==='MASTERED'?'var(--dawn-gold)':'none'}/>)}</span>
    </span><ChevronRight size={20}/>
   </button>;
  });
  return <main className={styles.workspace}>
-  <header className={styles.header}><Link href="/home" className={styles.back}><ArrowLeft size={18}/> Today</Link>
-   <p>{props.classLevel} · TERM {props.term}</p><h1>{subject||'Week '+props.week}</h1>
-   <div className={styles.weekRow}><span>{subjects.length} subjects · {mastered} stars lit</span>
+  <header className={styles.header}>{selectedSubject?<button className={styles.back} onClick={()=>setSubject(null)}><ArrowLeft size={18}/> All subjects</button>:<Link href="/home" className={styles.back}><ArrowLeft size={18}/> Today</Link>}
+   <p>{props.classLevel} · TERM {props.term}{selectedSubject?' · WEEK '+props.week:''}</p>
+   {selectedSubject&&<div className={styles.subjectLabel}>{selectedSubject}</div>}
+   <h1>{selectedSubject?topics.join(' · '):'Week '+props.week}</h1>
+   <div className={styles.weekRow}><span>{selectedSubject?selectedObjectives.filter(x=>x.progress.status==='MASTERED').length+' of '+selectedObjectives.length+' stars lit':subjects.length+' subjects · '+mastered+' stars lit'}</span>
     <label>Week<select aria-label="Choose released week" value={props.term+':'+props.week} onChange={e=>{const [term,week]=e.target.value.split(':');setSubject(null);router.push('/weekly?term='+term+'&week='+week)}}>
      {props.weeks.map(x=><option key={x.term+':'+x.week} value={x.term+':'+x.week}>Term {x.term} · Week {x.week}</option>)}
     </select></label></div>
@@ -45,10 +51,10 @@ export default function WeeklyDashboard(props:WeeklyDashboardProps){
   {!current&&<p className={styles.history}>Previous week · study record is read-only</p>}
   {error&&<p role="alert" className={styles.error}>{error}</p>}
   {!props.objectives.length?<section className={styles.empty}><h2>Your weekly plan is being prepared</h2><Link href="/learn"><BookOpen size={18}/> Continue lessons</Link></section>
-   :subject?<section aria-label="Topic objectives"><button className={styles.back} onClick={()=>setSubject(null)}><ArrowLeft size={18}/> All subjects</button>
-    {props.objectives.filter(x=>x.subject===subject).map((objective,i)=><article key={objective.id} className={styles.objective}>
-     <div className={styles.objectiveHeading}><Star size={22} fill={objective.progress.status==='MASTERED'?'#FFC857':'none'}/><span>Objective {i+1}</span><small>{objective.progress.status.replaceAll('_',' ')}</small></div>
-     <h2>{objective.topic}</h2><p>{objective.text}</p>
+   :selectedSubject?<section aria-label="Topic objectives" className={styles.objectiveList}>
+    {selectedObjectives.map((objective,i)=><article key={objective.id} className={styles.objective}>
+     <div className={styles.objectiveHeading}><Star size={22} aria-hidden="true" data-state={weeklyObjectiveState(objective).tone} fill={objective.progress.status==='MASTERED'?'var(--dawn-gold)':'none'}/><span>Objective {i+1}</span><small className={styles.status} data-state={weeklyObjectiveState(objective).tone}>{weeklyObjectiveState(objective).label}</small></div>
+     {topics.length>1&&<p className={styles.objectiveTopic}>{objective.topic}</p>}<h2>{objective.text}</h2>
      <fieldset disabled={busy===objective.id||!current}><legend>Study source</legend><div className={styles.sourceChoices}>
       <button aria-pressed={(studySources[objective.id]||objective.studySource)==='TEXTBOOK'} onClick={()=>study(objective,'START','TEXTBOOK')}><BookOpen size={18}/> My textbook</button>
       {objective.lessonHref?<button aria-pressed={(studySources[objective.id]||objective.studySource)==='LESSON'} onClick={()=>study(objective,'START','LESSON')}><BookOpen size={18}/> In-app lesson</button>:<span>Lesson not available</span>}

@@ -26,7 +26,7 @@
 | Phase 8 monitored groups | NOT VERIFIED | Need admin moderation and permission tests |
 | Phase 8b DMs | NOT VERIFIED | Need safety/privacy tests |
 | Phase 9 photos | NOT VERIFIED | Need consent/withdrawal and privacy tests |
-| Phase 10 23-screen visual redesign | NOT VERIFIED | Compare each screen to ZIP references |
+| Phase 10 23-screen visual redesign | IN PROGRESS | Weekly subjects/objectives visual subset tested against exported references; review screenshots committed. Global shell/fonts and remaining screens still incomplete |
 | Phase 10b admin | NOT VERIFIED | Need full workflow coverage |
 | Phase 11 analytics | NOT VERIFIED | Need learner/parent/admin accuracy checks |
 | Phase 12 QA | NOT STARTED | End-to-end, accessibility, mobile, low-bandwidth, security and release gates |

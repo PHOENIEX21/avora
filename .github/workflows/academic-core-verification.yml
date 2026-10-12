@@ -30,6 +30,8 @@ jobs:
         run: npm run test:daily-check
       - name: Weekly workspace and practice regression
         run: npm run test:weekly-workspace
+      - name: Weekly visual state and supplied-content regression
+        run: node --test scripts/test-weekly-visual.mjs
       - name: Development database isolation regression
         run: node --test scripts/test-neon-development-db.mjs
       - name: Weekly foundation regression

@@ -114,3 +114,8 @@ The unmodified source ZIP is stored in the owner's ChatGPT Library at `/AVORA/So
 - Verification: 145 Node tests, 428 real isolated SQL/route assertions with rollback, four-width component workflows, guest HTTP/browser checks, independent typecheck/build/curriculum/teaching/dependency audits. Eleven existing lint warnings remain. Recheck final push/PR Actions before further edits.
 - Outcome cron is secret-protected POST but not scheduled/deployed. Do not claim unattended outcomes work in production. Real AI quality, large-class/concurrent stress, unified academic/weekly objective compatibility, notifications/lobby/full scheduling, uploaded-work proportions and official midweek/mistake follow-up remain.
 - Guardian and SendGrid activation remain owner-deferred; remind before rollout, not repeatedly during independent development. Full platform is incomplete; no main merge, production write or deployment authorized.
+
+## Weekly visual continuation
+- Read `docs/AVORA_WEEKLY_VISUAL_CHECKPOINT_2026-10-12.md`. Weekly subject/objective screens now use scoped Dawn tokens, distinct subject gems, topic-first hierarchy, readable evidence/study states and selected study-source controls. No lesson, schema, publication or access model changed.
+- Screenshots of actual components with clearly labelled TEST_ONLY fixtures are committed under `docs/screenshots/weekly-visual/`. They are not live learner content, an authenticated full-app preview or owner visual sign-off.
+- Global navigation, self-hosted design fonts, the Today ring/theme and the other reference screens remain unfinished. Preserve global/legacy navigation until its real destination and release compatibility is implemented; do not add a competing dock inside the weekly screen.
