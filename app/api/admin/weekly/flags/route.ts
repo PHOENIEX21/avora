@@ -33,7 +33,7 @@ export async function POST(request:Request){
      SELECT id,subject_name,approval_status,published_at,day_index FROM weekly_curriculum_objectives
      WHERE class_level=${classLevel} AND term=${term!} AND week_number=${week!}
     ), objectives AS (
-    SELECT id,subject_name FROM weekly_curriculum_objectives
+    SELECT id,subject_name,day_index FROM weekly_curriculum_objectives
      WHERE class_level=${classLevel} AND term=${term!} AND week_number=${week!}
       AND approval_status='PUBLISHED' AND published_at IS NOT NULL
     ), item_counts AS (
