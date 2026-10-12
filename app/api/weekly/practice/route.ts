@@ -7,10 +7,12 @@ import {weeklyStudentContext,WeeklyWorkspaceError} from '@/lib/weeklyWorkspace';
 import {startWeeklyPractice,weeklyPracticeSession,finishWeeklyPractice} from '@/lib/weeklyPractice';
 import type {PracticeItem} from '@/lib/weeklyWorkspacePolicy';
 import {startWeeklyRevisit} from '@/lib/weeklyRevisit';
+import {recordWeeklyMistakeAnswer,startWeeklyFix} from '@/lib/weeklyMistakes';
 
 const requestSchema=z.discriminatedUnion('action',[
  z.object({action:z.literal('START'),objectiveId:z.string().uuid()}),
  z.object({action:z.literal('START_REVISIT')}),
+ z.object({action:z.literal('START_FIX'),mistakeId:z.string().uuid()}),
  z.object({action:z.literal('ANSWER'),sessionId:z.string().uuid(),itemId:z.string().uuid(),answer:z.string().min(1).max(4000),confidence:z.enum(['GUESS','FAIRLY_SURE','SURE']).nullable().optional()}),
  z.object({action:z.literal('REPORT'),sessionId:z.string().uuid(),itemId:z.string().uuid(),reason:z.string().trim().min(5).max(500)}),
  z.object({action:z.literal('FINISH'),sessionId:z.string().uuid()})
@@ -33,6 +35,7 @@ export async function POST(request:Request){
  if(!parsed.success)return NextResponse.json({error:'Invalid practice request.'},{status:400});
  try{
   const context=await weeklyStudentContext(session.userId),data=parsed.data;
+  if(data.action==='START_FIX')return NextResponse.json(await weeklyPracticeSession(context,await startWeeklyFix(context,data.mistakeId)));
   if(data.action==='START_REVISIT'){
    const id=await startWeeklyRevisit(context);
    return NextResponse.json(id?await weeklyPracticeSession(context,id):{id:null,submitted:false,questions:[]});
@@ -53,16 +56,21 @@ export async function POST(request:Request){
    return NextResponse.json({reported:true});
   }
   const result=await sql.begin(async tx=>{
-   const [row]=await tx`SELECT item_snapshot,submitted_at FROM weekly_cbt_sessions
+   await tx`SELECT id FROM users WHERE id=${session.userId} FOR UPDATE`;
+   const [row]=await tx`SELECT item_snapshot,submitted_at,objective_id,source,mode FROM weekly_cbt_sessions
     WHERE id=${data.sessionId} AND student_id=${session.userId} FOR UPDATE`;
-   if(!row||row.submitted_at)throw new WeeklyWorkspaceError('Practice already finished or unavailable.',409);
+   if(!row||row.submitted_at||row.mode!=='PRACTICE'||!['DAILY_LESSON','REVISIT'].includes(row.source))throw new WeeklyWorkspaceError('Practice already finished or unavailable.',409);
    const item=(row.item_snapshot as PracticeItem[]).find(x=>x.id===data.itemId);
    if(!item||!item.options.includes(data.answer))throw new WeeklyWorkspaceError('Choose an option from this question.',400);
    const [prior]=await tx`SELECT answer,is_correct FROM weekly_cbt_answers WHERE session_id=${data.sessionId} AND item_id=${data.itemId}`;
    if(prior&&prior.answer!==data.answer)throw new WeeklyWorkspaceError('This answer has already been checked.',409);
    const correct=prior?Boolean(prior.is_correct):answerIsCorrect(data.answer,item.answer,item.options);
-   if(!prior)await tx`INSERT INTO weekly_cbt_answers(session_id,item_id,answer,confidence,is_correct)
-    VALUES(${data.sessionId},${data.itemId},${data.answer},${data.confidence??null},${correct})`;
+   if(!prior){
+    await tx`INSERT INTO weekly_cbt_answers(session_id,item_id,answer,confidence,is_correct)
+     VALUES(${data.sessionId},${data.itemId},${data.answer},${data.confidence??null},${correct})`;
+    await recordWeeklyMistakeAnswer(tx,context,{sessionId:data.sessionId,itemId:data.itemId,
+     objectiveId:String((item as PracticeItem&{objectiveId?:string}).objectiveId??row.objective_id),correct,confidence:data.confidence??null});
+   }
    return {correct,correctAnswer:item.answer,explanation:item.explanation};
   });
   return NextResponse.json(result);

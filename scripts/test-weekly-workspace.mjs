@@ -46,9 +46,13 @@ test('study is not mastery and seven distinct successful answers use existing ev
 function fixture(options={}){
  const calls=[],items=Array.from({length:5},(_,i)=>({...policy.reviewedPracticeItem(published),id:`00000000-0000-4000-8000-00000000000${i}`}));
  const row={id:objective,class_level:'JSS1',subject_name:'Mathematics',topic_title:'Test topic',term:1,week_number:options.objectiveWeek??1};
- let submitted=false,open=Boolean(options.resume),reportSaved=false,source=options.source??'DAILY_LESSON',activeItems=items;const answers=new Map();
+ let submitted=false,open=Boolean(options.resume),reportSaved=false,source=options.source??'DAILY_LESSON',activeItems=items;const answers=new Map(),seeded=new Set();
  const query=async(strings,...values)=>{
   const text=strings.join('?');calls.push({text,values});
+  if(text.includes('SELECT o.id,o.subject_name,o.topic_title'))return options.catchupRows??[];
+  if(text.includes('WITH candidates AS'))return options.bank??items.map(item=>({...published,id:item.id}));
+  if(text.includes('SELECT item_id FROM weekly_student_item_schedule'))return [...seeded].map(item_id=>({item_id}));
+  if(text.includes('FROM unnest(')){for(const id of values[1])seeded.add(id);return values[1].map(item_id=>({item_id}));}
   if(text.includes('SELECT o.*'))return options.hidden?[]:[row];
   if(text.includes('SELECT id FROM weekly_cbt_sessions'))return open?[{id:sessionId}]:[];
   if(text.includes('SELECT i.*'))return options.bank??items.map(item=>({...published,id:item.id,scheduled_interval_days:2,retention_check:false}));
@@ -58,8 +62,8 @@ function fixture(options={}){
   }
   if(text.includes('SELECT id,objective_id,item_snapshot'))return values[1]===student?[{id:sessionId,objective_id:source==='REVISIT'?null:objective,
    source,mode:options.mode??'PRACTICE',item_snapshot:activeItems,submitted_at:submitted?'2026-10-12':null}]:[];
-  if(text.includes('SELECT item_snapshot,submitted_at'))return [{item_snapshot:activeItems,submitted_at:submitted?'2026-10-12':null}];
-  if(text.includes('SELECT submitted_at,correct_count'))return [{submitted_at:submitted?'2026-10-12':null,correct_count:5,total_count:5}];
+  if(text.includes('SELECT item_snapshot,submitted_at'))return [{item_snapshot:activeItems,submitted_at:submitted?'2026-10-12':null,objective_id:objective,source,mode:options.mode??'PRACTICE'}];
+  if(text.includes('SELECT submitted_at,correct_count'))return [{submitted_at:submitted?'2026-10-12':null,correct_count:5,total_count:5,source,mode:options.mode??'PRACTICE',item_snapshot:options.appendBeforeFinish?[...activeItems,{...items[0],id:'extra'}]:activeItems}];
   if(text.includes('SELECT answer,is_correct'))return answers.has(values[1])?[answers.get(values[1])]:[];
   if(text.includes('FROM weekly_cbt_answers'))return [...answers.values()];
   if(text.includes('INSERT INTO weekly_cbt_answers')){
@@ -81,7 +85,7 @@ function fixture(options={}){
  const route=load('app/api/weekly/practice/route.ts'),study=load('app/api/weekly/study/route.ts');
  const request=body=>new Request('https://avora.test/api/weekly/practice',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)});
  return {calls,items,post:body=>route.POST(request(body)),get:()=>route.GET(new Request('https://avora.test/api/weekly/practice?sessionId='+sessionId)),
-  study:body=>study.POST(request(body)),workspace:load('lib/weeklyWorkspace.ts'),revisit:load('lib/weeklyRevisit.ts')};
+  study:body=>study.POST(request(body)),workspace:load('lib/weeklyWorkspace.ts'),revisit:load('lib/weeklyRevisit.ts'),catchup:load('lib/weeklyCatchup.ts')};
 }
 test('weekly routes reject unauthenticated and non-student users before data access',async()=>{
  for(const [options,status] of [[{auth:null},401],[{role:'PARENT'},403],[{role:'ADMIN'},403]]){
@@ -130,8 +134,22 @@ test('daily revisit stores at most eight reviewed items in the existing CBT mode
  for(const guard of ["AT TIME ZONE 'Africa/Lagos'","o.approval_status='PUBLISHED'","i.status='PUBLISHED'",
   "m.pool='LIVE'",'weekly_student_optional_subjects',"last_answer.confidence='SURE'",'count(DISTINCT r.student_id)>=3',"s.mode='PRACTICE'"])
   assert.ok(query.text.includes(guard),guard);
- const existing=f.calls.find(x=>x.text.includes("source='REVISIT'"));
- assert.ok(existing.text.includes('submitted_at IS NULL'));assert.ok(existing.text.includes('submitted_at AT TIME ZONE'));
+ const existing=f.calls.find(x=>x.text.includes('SELECT id FROM weekly_cbt_sessions')&&x.text.includes("source='REVISIT'"));
+ assert.ok(existing.text.includes('submitted_at IS NULL'));
+ const budget=f.calls.find(x=>x.text.includes('sum(cardinality(question_ids))'));
+ assert.ok(budget.text.includes('submitted_at AT TIME ZONE'));assert.ok(budget.text.includes('started_at AT TIME ZONE'));
+});
+test('catch-up seeds a reviewed objective once without resetting existing schedules',async()=>{
+ const f=fixture({catchupRows:[{id:objective,subject_name:'Mathematics',topic_title:'TEST_ONLY',objective_text:'TEST_ONLY',term:1,week_number:1,reason:'NOT_STUDIED'}]});
+ const context={studentId:student,classLevel:'JSS1',term:1,week:2};
+ assert.equal(await f.catchup.seedWeeklyCatchup(context),1);assert.equal(await f.catchup.seedWeeklyCatchup(context),0);
+ const insert=f.calls.find(x=>x.text.includes('FROM unnest('));assert.equal(insert.values[0],student);assert.equal(insert.values[1].length,1);
+ assert.ok(insert.text.includes('ON CONFLICT(student_id,item_id) DO NOTHING'));
+ const list=f.calls.find(x=>x.text.includes('SELECT o.id,o.subject_name,o.topic_title'));
+ for(const guard of ["o.approval_status='PUBLISHED'",'weekly_student_optional_subjects','evidence.total<7 OR evidence.retained<evidence.total',"s.mode='PRACTICE'"])
+  assert.ok(list.text.includes(guard),guard);
+ const bank=f.calls.find(x=>x.text.includes('WITH candidates AS'));
+ for(const guard of ["m.pool='LIVE'",'weekly_student_optional_subjects','count(DISTINCT r.student_id)>=3','o.week_number<='])assert.ok(bank.text.includes(guard),guard);
 });
 test('21-day retention includes only completed own practice and treats guessing separately',async()=>{
  const f=fixture();assert.deepEqual(await f.revisit.weeklyRetentionSummary({studentId:student,classLevel:'JSS1',term:1,week:1}),
@@ -189,6 +207,13 @@ test('incomplete submission is blocked; finishing twice schedules revisit only o
  assert.equal(schedules.length,5);assert.equal(schedules[0].values[2],1);assert.equal(schedules[1].values[2],2);
  assert.ok(schedules.every(x=>x.text.includes("AT TIME ZONE 'Africa/Lagos'")));
  assert.ok(f.calls.find(x=>x.text.includes('UPDATE weekly_cbt_sessions')).text.includes('submitted_at=clock_timestamp()'));
+});
+test('finishing checks the locked paper when a similar follow-up was appended concurrently',async()=>{
+ const f=fixture({appendBeforeFinish:true});
+ for(const item of f.items)assert.equal((await f.post({action:'ANSWER',sessionId,itemId:item.id,answer:'Two',confidence:'SURE'})).status,200);
+ assert.equal((await f.post({action:'FINISH',sessionId})).status,409);
+ assert.ok(!f.calls.some(call=>call.text.includes('UPDATE weekly_cbt_sessions')));
+ assert.ok(!f.calls.some(call=>call.text.includes('INSERT INTO weekly_student_item_schedule')));
 });
 test('study completion uses authenticated identity and does not create answer evidence',async()=>{
  const f=fixture();const response=await f.study({objectiveId:objective,source:'LESSON',action:'COMPLETE',studentId:'someone-else'});

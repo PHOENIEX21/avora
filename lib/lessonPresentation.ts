@@ -29,7 +29,7 @@ function cleanInline(text:string){
   // content. Remove the label from speech but keep the actual sentence/paragraph.
   .replace(/^\s*(?:Introduction|Body\s+Paragraph\s+\d+|Conclusion|Passage\s+[A-Z0-9]+|Reading\s+Extract)\s*:\s*\*?\s*/i,'')
   // Editorial annotations explain how the source was authored; they are not lesson narration.
-  .replace(/\s*[—–-]?\s*\[(?:Annotation|Closing\s+body)\s*:[^\]]*\]\s*$/i,'')
+  .replace(/\s*[—–-]?\s*\[(?:Annotation|Closing\s+body)\s*:[\s\S]*\]\s*$/i,'')
   .replace(/\s*\(\s*with\s+avora[^)]*\)/i,'') // strip authoring self-references like "(with Avora modeling)"
   .replace(/\s*\[[A-Z]{3,12}\]\s*$/,'') // strip trailing bracketed sensory/author tags like "[SMELL]"
   .replace(PROVENANCE,'')

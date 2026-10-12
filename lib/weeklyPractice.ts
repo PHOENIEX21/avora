@@ -49,13 +49,14 @@ export async function weeklyPracticeSession(context:WeeklyStudentContext,session
   })};
 }
 export async function finishWeeklyPractice(context:WeeklyStudentContext,sessionId:string){
- const visible=await weeklyPracticeSession(context,sessionId);
+ await weeklyPracticeSession(context,sessionId);
  return sql.begin(async tx=>{
   await tx`SELECT id FROM users WHERE id=${context.studentId} FOR UPDATE`;
-  const [session]=await tx`SELECT submitted_at,correct_count,total_count FROM weekly_cbt_sessions WHERE id=${sessionId} AND student_id=${context.studentId} FOR UPDATE`;
-  if(!session)throw new WeeklyWorkspaceError('Practice unavailable.',404);
+  const [session]=await tx`SELECT submitted_at,correct_count,total_count,item_snapshot,source,mode FROM weekly_cbt_sessions WHERE id=${sessionId} AND student_id=${context.studentId} FOR UPDATE`;
+  if(!session||session.mode!=='PRACTICE'||!['DAILY_LESSON','REVISIT'].includes(session.source)||!Array.isArray(session.item_snapshot))throw new WeeklyWorkspaceError('Practice unavailable.',404);
   const answers=await tx`SELECT item_id,is_correct,confidence FROM weekly_cbt_answers WHERE session_id=${sessionId}`;
-  if(answers.length!==visible.questions.length)throw new WeeklyWorkspaceError('Answer every question before finishing.',409);
+  const itemIds=new Set((session.item_snapshot as PracticeItem[]).map(item=>item.id));
+  if(answers.length!==itemIds.size||answers.some(answer=>!itemIds.has(String(answer.item_id))))throw new WeeklyWorkspaceError('Answer every question before finishing.',409);
   if(!session.submitted_at){
    for(const answer of answers){
     const [old]=await tx`SELECT streak,due_date<=(now() AT TIME ZONE 'Africa/Lagos')::date AS due

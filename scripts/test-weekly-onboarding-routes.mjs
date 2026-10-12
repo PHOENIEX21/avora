@@ -4,6 +4,7 @@ import {readFileSync} from 'node:fs';
 import {dirname,resolve} from 'node:path';
 import {fileURLToPath} from 'node:url';
 import ts from 'typescript';
+import {z} from 'zod';
 
 const root=resolve(dirname(fileURLToPath(import.meta.url)),'..'),student='11111111-1111-4111-8111-111111111111';
 function fixture(options={}){
@@ -20,7 +21,7 @@ function fixture(options={}){
    baseline??={status:'NOT_STARTED',first_offered_at:null};
    if(!['COMPLETED','IN_PROGRESS'].includes(baseline.status))baseline.first_offered_at??=new Date();return [baseline];
   }
-  if(query.includes('SELECT status'))return baseline?[baseline]:[];
+  if(query.includes('SELECT status')||query.includes('SELECT * FROM weekly_student_baseline_state'))return baseline?[baseline]:[];
   if(query.includes("SET status='POSTPONED'")){baseline.status='POSTPONED';baseline.postponed_until=new Date(values[0]);return []}
   return [];
  };
@@ -31,6 +32,7 @@ function fixture(options={}){
   const output=ts.transpileModule(readFileSync(file,'utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022}}).outputText;
   new Function('module','exports','require',output)(mod,mod.exports,name=>{
    if(name==='next/server')return {NextResponse:{json:(body,init)=>Response.json(body,init)}};
+   if(name==='zod')return {z};
    if(name==='@/lib/auth')return {getSession:async()=>options.auth===null?null:{userId:student,role:options.role??'STUDENT'}};
    if(name==='@/lib/db'||name==='./db')return {sql,withDbRetry:work=>work()};
    if(name==='./dawnAccess')return {getDawnGate:async()=>({status:options.gate??'ready',classLevel:'JSS1',term:1,week:1})};
@@ -85,7 +87,7 @@ test('baseline routes enforce guardian and release gates before state reads or w
 });
 test('baseline START cannot mark an unassigned starting check in progress',async()=>{
  const f=fixture();assert.equal((await f.baselinePost({action:'START'})).status,409);
- assert.ok(!f.calls.some(x=>/INSERT|UPDATE/.test(x.query)));
+ assert.ok(!f.calls.some(x=>/^\s*(INSERT|UPDATE)\b/.test(x.query)));
 });
 test('baseline first offer and repeated postponement keep a single fixed deadline',async()=>{
  const f=fixture({baseline:{status:'NOT_STARTED',first_offered_at:null}});

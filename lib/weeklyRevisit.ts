@@ -1,18 +1,35 @@
 import {sql,withDbRetry} from './db';
 import type {WeeklyStudentContext} from './weeklyWorkspace';
 import {reviewedPracticeItem,type PracticeItem} from './weeklyWorkspacePolicy';
+import {seedWeeklyCatchup} from './weeklyCatchup';
+import type postgres from 'postgres';
 
 export const WEEKLY_REVISIT_DAILY_CAP=8;
 export type RevisitItem=PracticeItem&{objectiveId:string;scheduledIntervalDays:number;retentionCheck:boolean};
+export async function weeklyRevisitBudget(tx:postgres.TransactionSql,studentId:string){
+ const [row]=await tx`SELECT COALESCE(sum(cardinality(question_ids)),0)::int used FROM weekly_cbt_sessions
+  WHERE student_id=${studentId} AND source='REVISIT' AND mode='PRACTICE' AND item_snapshot IS NOT NULL
+   AND (submitted_at IS NULL OR (started_at AT TIME ZONE 'Africa/Lagos')::date=(clock_timestamp() AT TIME ZONE 'Africa/Lagos')::date
+    OR (submitted_at AT TIME ZONE 'Africa/Lagos')::date=(clock_timestamp() AT TIME ZONE 'Africa/Lagos')::date)`;
+ return Number(row?.used||0);
+}
 
 export async function startWeeklyRevisit(context:WeeklyStudentContext):Promise<string|null>{
+ await seedWeeklyCatchup(context);
  return sql.begin(async tx=>{
   await tx`SELECT id FROM users WHERE id=${context.studentId} FOR UPDATE`;
   const [existing]=await tx`SELECT id FROM weekly_cbt_sessions WHERE student_id=${context.studentId}
    AND source='REVISIT' AND mode='PRACTICE' AND item_snapshot IS NOT NULL
-   AND (submitted_at IS NULL OR (submitted_at AT TIME ZONE 'Africa/Lagos')::date=(now() AT TIME ZONE 'Africa/Lagos')::date)
+   AND submitted_at IS NULL
    ORDER BY submitted_at NULLS FIRST,started_at DESC LIMIT 1`;
   if(existing)return String(existing.id);
+  const remaining=Math.max(0,WEEKLY_REVISIT_DAILY_CAP-await weeklyRevisitBudget(tx,context.studentId));
+  if(!remaining){
+   const [completed]=await tx`SELECT id FROM weekly_cbt_sessions WHERE student_id=${context.studentId} AND source='REVISIT' AND mode='PRACTICE'
+    AND item_snapshot IS NOT NULL AND (submitted_at AT TIME ZONE 'Africa/Lagos')::date=(clock_timestamp() AT TIME ZONE 'Africa/Lagos')::date
+    ORDER BY submitted_at DESC,id LIMIT 1`;
+   return completed?String(completed.id):null;
+  }
   const rows=await tx`SELECT i.*,schedule.interval_days AS scheduled_interval_days,
    schedule.interval_days=21 AND (schedule.last_served_at AT TIME ZONE 'Africa/Lagos')::date+21
     <=(now() AT TIME ZONE 'Africa/Lagos')::date AS retention_check
@@ -44,7 +61,7 @@ export async function startWeeklyRevisit(context:WeeklyStudentContext):Promise<s
    const item=reviewedPracticeItem(row);
    if(item)items.push({...item,objectiveId:String(row.objective_id),scheduledIntervalDays:Number(row.scheduled_interval_days),
     retentionCheck:row.retention_check===true});
-   if(items.length===WEEKLY_REVISIT_DAILY_CAP)break;
+   if(items.length===remaining)break;
   }
   if(!items.length)return null;
   const [created]=await tx`INSERT INTO weekly_cbt_sessions(student_id,source,mode,question_ids,item_snapshot)

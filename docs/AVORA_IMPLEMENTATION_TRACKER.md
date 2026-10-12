@@ -10,7 +10,7 @@
 | Weekly schema reconciliation | IN PROGRESS | 50 weekly_* tables verified on isolated integration branch; migration 048–058 still partially applied; restrictive objective/item publication checks remain; see batch 1–8 reports |
 | Phase 1 data model | IN PROGRESS | Isolated integration branch now has 50 weekly_* tables; constraint reconciliation, missing objects and runtime verification remain |
 | Phase 1c registration / parent | NOT VERIFIED | Guardian/PIN CI passes but end-to-end target flow not tested |
-| Phase 1d baseline / study time | PARTIALLY VERIFIED | Study-time screen/persistence and guardian preference restrictions verified; baseline access/deadline/stub safety tested; actual timed baseline and reminders remain |
+| Phase 1d baseline / study time | PARTIALLY VERIFIED | Timed reviewed baseline, persistent study settings, private marking, kind summaries and owner later comparison verified; reminders and optional baseline variants remain |
 | Phase 2 verified curriculum | NOT VERIFIED | Import/review route exists; source coverage/release not verified |
 | Phase 2b all-class objective gating | NOT VERIFIED | Class flag API exists; runtime not tested |
 | Phase 3 weekly | PARTIALLY VERIFIED | Guarded dashboard, historical objectives and study/practice implemented; full weekly exam cycle remains |
@@ -20,8 +20,8 @@
 | Existing Daily Check submissions | PARTIALLY VERIFIED | Student/input/bank checks and replay-safe progress updates tested with mocked DB; live Neon integration pending |
 | Phase 4g English Daily | NOT VERIFIED | Need approved real content and tests |
 | Phase 5 uploads | NOT VERIFIED | Need flow and safety tests |
-| Phase 6 scheduler | PARTIALLY VERIFIED | Reviewed-bank daily due runner, eight-item cap/resume, Lagos dates, replay safety, early-repeat protection, wrong/guess resets and 21-day retention verified; uploaded-work/carry-over seeding remains |
-| Phase 6b mistakes | NOT VERIFIED | Need remediation tests |
+| Phase 6 scheduler | PARTIALLY VERIFIED | Reviewed-bank runner, shared eight-item cap, baseline/carry-over seeding, replay safety and retention verified; private uploaded-work integration and term-end cycle remain |
+| Phase 6b mistakes | PARTIALLY VERIFIED | Practice history/notebook, similar reviewed items, interval confirmation and shared cap verified; official-exam closed-window import, parent counts and Today integration remain |
 | Phase 7 question bank | NOT VERIFIED | Need provenance, review and rotation |
 | Phase 8 monitored groups | NOT VERIFIED | Need admin moderation and permission tests |
 | Phase 8b DMs | NOT VERIFIED | Need safety/privacy tests |
@@ -39,7 +39,7 @@
 - 2026-10-11: Added `AGENTS.md` to make next-agent continuation self-contained about known work and safe next steps. **Original ZIP is still required for full specification fidelity.**
 
 ## Next work
-Continue from the weekly workspace and scheduler checkpoints. Complete secure guardian workflow, reviewed daily content and daily revisit integration in the original phase sequence. Reconcile remaining statements in migrations 048–058 against the isolated schema; do not blindly rerun or mark incomplete migrations applied. Later checkpoint reports supersede historical publication/network blockers below.
+Continue from the baseline/catch-up/mistakes milestone without rebuilding completed work. Guardian/email activation is owner-deferred; use SendGrid and remind before rollout. Continue independent reviewed daily content, weekly exam/calendar and private-upload integration in the original phase sequence. Reconcile remaining statements in migrations 048–058 against the isolated schema; do not blindly rerun or mark incomplete migrations applied. Later checkpoint reports supersede historical publication/network blockers below.
 
 ## 2026-10-12 verified checkpoint
 - Isolated integration Neon branch contains **50 weekly_* tables**; this does not imply all migrations are complete.
@@ -85,3 +85,10 @@ Superseded for current connectivity/specification/workspace status by `docs/AVOR
 - Baseline routes now enforce guardian/release gates and fixed first-offer/postponement dates. START fails honestly without a reviewed assessment instead of recording a phantom attempt. Existing completed/active records are preserved.
 - Verified 100 regression tests, 202 rollback-only Neon assertions, independent typecheck, lint (11 existing warnings), build/curriculum/marking and four-width browser flows. Fixed a submission timestamp tie exposed by the integration rerun and reran successfully.
 - No phase-completion claim for the unfinished timed baseline, reminders, guardian activation or complete platform.
+
+## 2026-10-12 Baseline, Catch-up and Mistakes
+
+- `docs/AVORA_BASELINE_CATCHUP_MISTAKES_2026-10-12.md` supersedes the earlier unfinished timed-baseline and carry-over notes. Owner-selected mixed baseline, server expiry/autosave/resume, non-scored learner summary, actual later comparison, catch-up and shared-cap practice remediation are implemented and tested.
+- Existing deep lessons and genuine historical wrong answers are preserved. New tables/columns are additive on the isolated development branch only. No content or class release was fabricated or activated.
+- Secure SendGrid bindings and guardian consent/activation are deferred per owner instruction. Remind before rollout; do not repeatedly request them during independent work.
+- Full English Daily, uploaded-work, calendar/exam cycle, closed-window exam mistakes, parent/community/privacy, Dawn redesign and platform QA remain outstanding. Do not interpret passing CI as complete platform delivery.

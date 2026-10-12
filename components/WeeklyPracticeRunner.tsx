@@ -6,8 +6,8 @@ import styles from './WeeklyDashboard.module.css';
 
 type Saved={answer:string;confidence:string|null;correct:boolean;correctAnswer:string;explanation:string};
 type Practice={id:string|null;submitted:boolean;questions:Array<{id:string;prompt:string;options:string[];saved:Saved|null}>};
-type RunnerProps={objectiveId:string;source?:'DAILY_LESSON'}|{source:'REVISIT';objectiveId?:never};
-export default function WeeklyPracticeRunner({objectiveId,source='DAILY_LESSON'}:RunnerProps){
+type RunnerProps={objectiveId:string;source?:'DAILY_LESSON';mistakeId?:never}|{source:'REVISIT';objectiveId?:never;mistakeId?:never}|{source:'FIX';mistakeId:string;objectiveId?:never};
+export default function WeeklyPracticeRunner({objectiveId,mistakeId,source='DAILY_LESSON'}:RunnerProps){
  const [practice,setPractice]=useState<Practice|null>(null),[index,setIndex]=useState(0),[answer,setAnswer]=useState(''),[confidence,setConfidence]=useState<string|null>(null),[busy,setBusy]=useState(false),[error,setError]=useState(''),[reason,setReason]=useState(''),[reported,setReported]=useState<string[]>([]);
  async function request(body:Record<string,unknown>){
   const r=await fetch('/api/weekly/practice',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)});
@@ -15,9 +15,9 @@ export default function WeeklyPracticeRunner({objectiveId,source='DAILY_LESSON'}
  }
  useEffect(()=>{
   let active=true;
-  request(source==='REVISIT'?{action:'START_REVISIT'}:{action:'START',objectiveId}).then(data=>{if(active){setPractice(data);setIndex(Math.max(0,data.questions.findIndex((q:{saved:Saved|null})=>!q.saved)))}}).catch(e=>{if(active)setError(e.message)});
+  request(source==='FIX'?{action:'START_FIX',mistakeId}:source==='REVISIT'?{action:'START_REVISIT'}:{action:'START',objectiveId}).then(data=>{if(active){setPractice(data);setIndex(Math.max(0,data.questions.findIndex((q:{saved:Saved|null})=>!q.saved)))}}).catch(e=>{if(active)setError(e.message)});
   return ()=>{active=false};
- },[objectiveId,source]);
+ },[objectiveId,mistakeId,source]);
  function move(next:number){setIndex(next);setAnswer('');setConfidence(null);setError('');setReason('')}
  async function report(){
   if(!practice?.id)return;setBusy(true);setError('');
@@ -37,12 +37,12 @@ export default function WeeklyPracticeRunner({objectiveId,source='DAILY_LESSON'}
  }
  const question=practice?.questions[index];
  return <main className={styles.workspace}><Link className={styles.back} href="/weekly"><ArrowLeft size={18}/> This week</Link>
-  <header className={styles.header}><p>{source==='REVISIT'?'DAILY REVISIT':'OBJECTIVE PRACTICE'}</p><h1>{source==='REVISIT'?(practice?.submitted?'Revisit complete':"Today's revisit"):(practice?.submitted?'Practice complete':'Keep building understanding')}</h1></header>
+  <header className={styles.header}><p>{source==='FIX'?'SIMILAR PRACTICE':source==='REVISIT'?'DAILY REVISIT':'OBJECTIVE PRACTICE'}</p><h1>{source==='FIX'?'Work through a mistake':source==='REVISIT'?(practice?.submitted?'Revisit complete':"Today's revisit"):(practice?.submitted?'Practice complete':'Keep building understanding')}</h1></header>
   {error&&<p className={styles.error} role="alert">{error}</p>}
   {!practice&&error&&<button onClick={()=>location.reload()}>Retry</button>}
   {!practice&&!error&&<p role="status">Loading practice…</p>}
   {practice&&!practice.questions.length&&<section className={styles.empty}><h2>No reviewed questions are due</h2><Link href="/weekly">Return to this week</Link></section>}
-  {practice?.submitted?<section className={styles.empty}><h2>{practice.questions.filter(q=>q.saved?.correct).length} of {practice.questions.length} correct</h2><Link href="/weekly">Return to weekly progress</Link></section>
+  {practice?.submitted?<section className={styles.empty}><h2>{practice.questions.filter(q=>q.saved?.correct).length} of {practice.questions.length} correct</h2>{practice.questions.some(q=>q.saved&&!q.saved.correct)&&<div className={styles.actions}><Link href="/weekly/mistakes">Work through mistakes <ArrowRight size={18}/></Link></div>}<Link href="/weekly">Return to weekly progress</Link></section>
    :question&&practice&&<section className={styles.question}>
     <p>Question {index+1} of {practice.questions.length}</p><progress max={practice.questions.length} value={practice.questions.filter(q=>q.saved).length} aria-label="Practice progress"/>
     <h2>{question.prompt}</h2><div className={styles.options}>{question.options.map((option,i)=><button key={option} disabled={busy||Boolean(question.saved)} aria-pressed={(question.saved?.answer||answer)===option} onClick={()=>setAnswer(option)}><b>{String.fromCharCode(65+i)}</b>{option}</button>)}</div>
