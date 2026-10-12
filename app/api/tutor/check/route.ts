@@ -1,3 +1,4 @@
+import {heldOfficialQuestionIds} from '@/lib/weeklyExamEmbargo';
 import {NextResponse} from 'next/server';
 import {getSession} from '@/lib/auth';
 import {sql,withDbRetry} from '@/lib/db';
@@ -13,6 +14,7 @@ export async function POST(req:Request){
  
  try{
   const d=schema.parse(await req.json());
+  if((await heldOfficialQuestionIds([d.questionId])).size)return NextResponse.json({error:'Question unavailable during the official exam window.'},{status:409});
   const [q]=await withDbRetry(()=>sql`SELECT prompt,question_type,correct_answer,options,hint_text,explanation FROM questions WHERE id=${d.questionId} AND status='PUBLISHED'`);
   if(!q)return NextResponse.json({error:'Question not found.'},{status:404});
   const options=normalizeQuestionOptions(q.options);

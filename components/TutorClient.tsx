@@ -503,7 +503,7 @@ export default function TutorClient(){
  const useCleanDataPresentation=classLevel==='JSS1'&&subject==='Mathematics'&&(topicKey==='data presentation'||unitKey==='data presentation'||topicKey==='data representation'||unitKey==='data representation');
  const probeQ=questions.find(q=>q.type==='MULTIPLE_CHOICE'&&Array.isArray(q.options)&&q.options.length>=2);
  const exerciseQ=exerciseQuestions[exerciseIndex];
- const guidedQ=useMemo(()=>{if(!unit||!questions.length)return undefined;const ranked=[...questions].map(q=>({q,score:questionFit(q,unit)})).sort((a,b)=>b.score-a.score);const matched=ranked.filter(x=>x.score>=1);if(matched.length)return matched[unitIndex%matched.length].q;return questions[unitIndex%questions.length]},[questions,unit,unitIndex]);
+ const guidedQ=useMemo(()=>{if(!unit||!questions.length)return undefined;const ranked=[...questions].map(q=>({q,score:questionFit(q,unit)})).sort((a,b)=>b.score-a.score);const matched=ranked.filter(x=>x.score>=1);if(matched.length)return matched[unitIndex%matched.length].q;return undefined},[questions,unit,unitIndex]);
  const lessonQuickCheck=useMemo(()=>{if(!unit||!exerciseQuestions.length)return undefined;const ranked=[...exerciseQuestions].filter(q=>q.type==='MULTIPLE_CHOICE'&&Array.isArray(q.options)&&q.options.length>=2).map(q=>({q,score:questionFit(q,unit)})).sort((a,b)=>b.score-a.score);return ranked.find(x=>x.score>=1)?.q},[exerciseQuestions,unit]);
 
  useEffect(()=>{

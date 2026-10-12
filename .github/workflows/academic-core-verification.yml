@@ -1,0 +1,84 @@
+name: Academic Core Verification
+on:
+  push:
+    branches: [avora-academic-core-v1]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+      - run: npm ci
+      - name: TypeScript validation
+        run: npm run typecheck
+      - name: ESLint
+        run: npm run lint
+      - name: Answer marking regression
+        run: npm run test:answer-marking
+      - name: Preserved lesson behavior and clarity regression
+        run: node --test scripts/test-v9-behaviour.mjs scripts/test-v903-clarity.mjs scripts/test-lesson-presentation.mjs
+      - name: Daily Check submission and progress regression
+        run: npm run test:daily-check
+      - name: Weekly workspace and practice regression
+        run: npm run test:weekly-workspace
+      - name: Weekly visual state and supplied-content regression
+        run: node --test scripts/test-weekly-visual.mjs
+      - name: Weekly home entry and guardian isolation
+        run: node --test scripts/test-weekly-home-entry.mjs
+      - name: Guarded Today task plan and progress ring
+        run: node --test scripts/test-weekly-today.mjs
+      - name: Development database isolation regression
+        run: node --test scripts/test-neon-development-db.mjs
+      - name: Weekly foundation regression
+        run: node --test scripts/test-weekly-phase1.mjs scripts/test-weekly-phase2.mjs
+      - name: Dawn guardian and PIN security tests
+        run: npm run test:dawn-security
+      - name: Starting-check policy tests
+        run: npm run test:weekly-baseline
+      - name: Study settings and starting-check access regression
+        run: node --test scripts/test-weekly-onboarding-routes.mjs
+      - name: Reviewed timed baseline regression
+        run: node --test scripts/test-weekly-baseline-flow.mjs
+      - name: Mistakes and spaced similar follow-up regression
+        run: node --test scripts/test-weekly-mistakes.mjs
+      - name: Official weekly paper integrity and delayed outcomes
+        run: node --test scripts/test-weekly-official-exam.mjs
+      - name: Weekly objective publication security tests
+        run: npm run test:weekly-objective-review
+      - name: Weekly publication readiness regression
+        run: npm run test:weekly-publication-readiness
+      - name: Weekly release readiness tests
+        run: npm run test:weekly-release-readiness
+      - name: Weekly pilot activation security tests
+        run: npm run test:weekly-pilot-gate
+      - name: Student weekly visibility regression
+        run: npm run test:weekly-student-visibility
+      - name: Weekly curriculum import checks
+        run: npm run test:weekly-curriculum-import
+      - name: Source-backed word bank import and owner review
+        run: node --test scripts/test-weekly-word-bank.mjs
+      - name: Reviewed live question bank gate
+        run: npm run test:weekly-live-question-bank
+      - name: Student release window boundary tests
+        run: npm run test:weekly-release-window
+      - name: Weekly coverage grid tests
+        run: npm run test:weekly-coverage-grid
+      - name: Unpublished curriculum release gate
+        run: npm run test:weekly-unpublished-gate
+      - name: Curriculum audits
+        run: npm run audit:curriculum
+      - name: Source-backed teaching pipeline audit
+        run: npm run audit:teaching-pipeline
+      - name: Next.js production build
+        run: |
+          export AUTH_SECRET="$(node -e 'process.stdout.write(require("node:crypto").randomBytes(48).toString("hex"))')"
+          npm run build

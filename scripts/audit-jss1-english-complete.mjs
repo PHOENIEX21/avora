@@ -2,7 +2,7 @@ import fs from 'node:fs';
 const read=p=>fs.readFileSync(p,'utf8');
 const official=JSON.parse(read('data/nerdc-2025-official-jss1-jss2.json')).records;
 const map=read('lib/nerdc2025TopicMap.ts');
-const teaching=[read('lib/jss1EnglishDeepLessons.ts'),read('lib/revised2025SupplementalLessons.ts'),read('lib/nerdc2025Teaching.ts')].join('\n');
+const teaching=[read('lib/jss1EnglishDeepLessons.ts'),read('lib/revised2025SupplementalLessons.ts'),read('lib/nerdc2025Teaching.ts'),read('lib/jss1EnglishWordFormationDeepLessons.ts'),read('lib/jss1EnglishLetterWritingDeepLessons.ts'),read('lib/jss1EnglishCreativeWritingDeepLessons.ts'),read('lib/jss1EnglishIntroductionLiteratureDeepLessons.ts'),read('lib/jss1EnglishFolktalesDeepLessons.ts'),read('lib/jss1EnglishMythsLegendsDeepLessons.ts'),read('lib/jss1EnglishProseFictionDeepLessons.ts')].join('\n');
 const objectives=read('lib/curriculumObjectives.ts');
 const current=official.filter(x=>x.classLevel==='JSS1'&&x.subject==='English Language');
 const mapped=[...map.matchAll(/\[K\('JSS1','English Language','([^']+)'\),m\(\[(.*?)\],\[(.*?)\]\)\]/g)];

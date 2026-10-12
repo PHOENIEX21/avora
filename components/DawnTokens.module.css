@@ -1,0 +1,27 @@
+.surface {
+ --dawn-ink:#1B1840;
+ --dawn-muted:#5B5886;
+ --dawn-paper:#FBF7F2;
+ --dawn-night:#0E0F2E;
+ --dawn-night-surface:#1E1B50;
+ --dawn-night-line:#4A456F;
+ --dawn-night-text:#F4F1FF;
+ --dawn-night-muted:#B9B5D8;
+ --dawn-night-success:#6DE2C4;
+ --dawn-white:#FFFFFF;
+ --dawn-line:#EAE5F5;
+ --dawn-control:#B9B5D8;
+ --dawn-gold:#FFC857;
+ --dawn-rose:#F0568C;
+ --dawn-teal:#19C3B1;
+ --dawn-star:#8A5A00;
+ --dawn-success:#0F6B50;
+ --dawn-success-wash:#DDF5EC;
+ --dawn-warning:#795000;
+ --dawn-warning-wash:#FFF0C9;
+ --dawn-neutral-wash:#EEEAF8;
+ --dawn-focus:#2459C7;
+ --dawn-radius:16px;
+ --dawn-display:Georgia,'Times New Roman',serif;
+ --dawn-body:Arial,Helvetica,sans-serif;
+}

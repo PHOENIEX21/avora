@@ -1,7 +1,9 @@
 import fs from 'node:fs';
 import vm from 'node:vm';
 import ts from 'typescript';
-function load(path){const src=fs.readFileSync(path,'utf8');const out=ts.transpileModule(src,{compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022}}).outputText;const mod={exports:{}};vm.runInNewContext(out,{module:mod,exports:mod.exports,require(){throw new Error('unexpected import')},console},{filename:path});return mod.exports}
+import {resolve,dirname} from 'node:path';
+const cache=new Map();
+function load(path){path=resolve(path);if(cache.has(path))return cache.get(path);const src=fs.readFileSync(path,'utf8');const out=ts.transpileModule(src,{compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022}}).outputText;const mod={exports:{}};cache.set(path,mod.exports);vm.runInNewContext(out,{module:mod,exports:mod.exports,require(name){if(!name.startsWith('.'))throw new Error('unexpected import '+name);return load(resolve(dirname(path),name)+'.ts')},console},{filename:path});return mod.exports}
 const c=load('lib/tutorCurriculum.ts');
 const l=load('lib/learnerIntelligence.ts');
 const assert=(ok,msg)=>{if(!ok)throw new Error(msg);console.log('✓ '+msg)};

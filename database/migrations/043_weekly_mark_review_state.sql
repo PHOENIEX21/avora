@@ -1,0 +1,2 @@
+ALTER TABLE exam_sessions DROP CONSTRAINT IF EXISTS exam_sessions_marking_status_check;
+ALTER TABLE exam_sessions ADD CONSTRAINT exam_sessions_marking_status_check CHECK(marking_status IN ('NOT_REQUIRED','PENDING','REVIEW_PENDING','COMPLETED','FAILED'));

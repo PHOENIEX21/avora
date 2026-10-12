@@ -1,0 +1,88 @@
+import {NextResponse} from 'next/server';
+import {z} from 'zod';
+import {getSession} from '@/lib/auth';
+import {sql,withDbRetry} from '@/lib/db';
+
+const schema=z.object({
+ classLevel:z.enum(['JSS1','JSS2','JSS3']),
+ enabled:z.boolean(),
+ term:z.number().int().min(1).max(3).nullable().optional(),
+ week:z.number().int().min(1).max(16).nullable().optional()
+});
+export async function GET(){
+ const session=await getSession();
+ if(!session||session.role!=='ADMIN')return NextResponse.json({error:'Admin only'},{status:403});
+ try{
+  const flags=await withDbRetry(()=>sql`SELECT class_level,enabled,pilot_term,pilot_week,updated_at FROM weekly_class_flags ORDER BY class_level`);
+  return NextResponse.json({flags});
+ }catch{return NextResponse.json({error:'Weekly schema not installed'},{status:503})}
+}
+export async function POST(request:Request){
+ const session=await getSession();
+ if(!session||session.role!=='ADMIN')return NextResponse.json({error:'Admin only'},{status:403});
+ const parsed=schema.safeParse(await request.json().catch(()=>null));
+ if(!parsed.success)return NextResponse.json({error:'Invalid class flag settings'},{status:400});
+ const {classLevel,enabled,term,week}=parsed.data;
+ if(enabled&&(!term||!week))return NextResponse.json({error:'Select a pilot term and week'},{status:400});
+ try{
+  if(enabled){
+   const [ready]=await withDbRetry(()=>sql`
+    WITH subjects AS (
+     SELECT subject_name FROM weekly_class_subjects WHERE class_level=${classLevel} AND active=true
+    ), all_objectives AS (
+     SELECT id,subject_name,approval_status,published_at,day_index FROM weekly_curriculum_objectives
+     WHERE class_level=${classLevel} AND term=${term!} AND week_number=${week!}
+    ), objectives AS (
+    SELECT id,subject_name,day_index FROM weekly_curriculum_objectives
+     WHERE class_level=${classLevel} AND term=${term!} AND week_number=${week!}
+      AND approval_status='PUBLISHED' AND published_at IS NOT NULL
+    ), item_counts AS (
+     SELECT o.id,count(i.id)::int AS approved_count FROM objectives o
+     LEFT JOIN weekly_items i ON i.objective_id=o.id AND i.status IN ('APPROVED','PUBLISHED')
+      AND i.reviewer_id IS NOT NULL AND i.reviewed_at IS NOT NULL AND i.answer_key IS NOT NULL
+     GROUP BY o.id
+    )
+    SELECT
+     (SELECT count(*)::int FROM subjects) AS subjects,
+     (SELECT count(*)::int FROM objectives) AS published_objectives,
+    (SELECT count(*)::int FROM all_objectives WHERE approval_status<>'PUBLISHED' OR published_at IS NULL) AS unpublished_objectives,
+    (SELECT count(*)::int FROM all_objectives WHERE day_index IS NULL OR day_index NOT BETWEEN 1 AND 5) AS unscheduled_objectives,
+     (SELECT count(*)::int FROM subjects s WHERE NOT EXISTS (SELECT 1 FROM objectives o WHERE o.subject_name=s.subject_name AND o.day_index BETWEEN 1 AND 5)) AS subjects_without_weekday_objectives,
+     (SELECT count(*)::int FROM subjects s WHERE EXISTS(
+      SELECT 1 FROM objectives o WHERE o.subject_name=s.subject_name)) AS published_subjects,
+     (SELECT count(*)::int FROM objectives o WHERE NOT EXISTS (SELECT 1 FROM subjects s WHERE s.subject_name=o.subject_name)) AS outside_active_subjects,
+     (SELECT count(*)::int FROM item_counts WHERE approved_count<6) AS missing_items,
+     (SELECT count(DISTINCT e.subject_name)::int FROM weekly_exams e
+      WHERE e.class_level=${classLevel} AND e.term=${term!} AND e.week_number=${week!}
+       AND e.subject_name IN (SELECT subject_name FROM subjects)
+       AND e.status IN ('REVIEWED','SCHEDULED') AND EXISTS(
+        SELECT 1 FROM weekly_exam_items ei WHERE ei.exam_id=e.id)) AS exam_subjects,
+     (SELECT count(DISTINCT qs.subject_name)::int FROM weekly_topic_question_sets qs
+      WHERE qs.class_level=${classLevel} AND qs.term=${term!} AND qs.week_number=${week!}
+       AND qs.subject_name IN (SELECT subject_name FROM subjects)
+      AND EXISTS (SELECT 1 FROM weekly_curriculum_objectives o WHERE o.class_level=qs.class_level AND o.subject_name=qs.subject_name AND o.term=qs.term AND o.week_number=qs.week_number AND o.topic_title=qs.topic_title AND o.approval_status='PUBLISHED')
+       AND (SELECT count(*) FROM weekly_topic_question_memberships m
+         JOIN weekly_items i ON i.id=m.item_id
+         WHERE m.topic_set_id=qs.id AND m.pool='LIVE'
+          AND i.status IN ('APPROVED','PUBLISHED') AND i.reviewer_id IS NOT NULL
+          AND i.reviewed_at IS NOT NULL AND i.answer_key IS NOT NULL) BETWEEN 40 AND 50) AS ready_topic_sets,
+     (SELECT count(DISTINCT day_index)::int FROM weekly_english_daily_plan
+      WHERE class_level=${classLevel} AND term=${term!} AND week_number=${week!}
+       AND status='PUBLISHED') AS english_days
+   `);
+   if(!Number(ready?.subjects)||Number(ready?.published_objectives)<Number(ready?.subjects)||Number(ready?.published_subjects)!==Number(ready?.subjects)||
+      Number(ready?.unscheduled_objectives)!==0||Number(ready?.unpublished_objectives)!==0||Number(ready?.subjects_without_weekday_objectives)!==0||Number(ready?.outside_active_subjects)!==0||Number(ready?.missing_items)!==0||Number(ready?.exam_subjects)<Number(ready?.subjects)||
+      Number(ready?.ready_topic_sets)<Number(ready?.subjects)||Number(ready?.english_days)!==5)
+    return NextResponse.json({error:'Pilot activation blocked: publish every active subject, six approved questions per objective, a reviewed exam per subject, and all five English Daily plans'},{status:409});
+  }
+  if(enabled){const [state]=await withDbRetry(()=>sql`SELECT term,current_week FROM weekly_class_week_state WHERE class_level=${classLevel}`);
+   if(!state||Number(state.term)!==term||Number(state.current_week)!==week)return NextResponse.json({error:'Release the matching class week before enabling the pilot'},{status:409});}
+  await withDbRetry(()=>sql`
+   INSERT INTO weekly_class_flags(class_level,enabled,pilot_term,pilot_week,updated_by,updated_at)
+   VALUES(${classLevel},${enabled},${term??null},${week??null},${session.userId},now())
+   ON CONFLICT(class_level) DO UPDATE SET
+    enabled=EXCLUDED.enabled,pilot_term=EXCLUDED.pilot_term,pilot_week=EXCLUDED.pilot_week,
+    updated_by=EXCLUDED.updated_by,updated_at=now()`);
+  return NextResponse.json({ok:true,classLevel,enabled});
+ }catch{return NextResponse.json({error:'Could not update the weekly pilot flag'},{status:503})}
+}
