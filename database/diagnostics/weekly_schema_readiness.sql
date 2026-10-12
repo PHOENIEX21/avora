@@ -5,7 +5,8 @@ WITH required_tables(name) AS (
  ('weekly_class_week_state'),('weekly_parent_consents'),('weekly_parent_pins'),
  ('weekly_student_baseline_state'),('weekly_baseline_attempts'),
  ('weekly_english_daily_plan'),('weekly_topic_question_sets'),
- ('weekly_moderation_actions'),('weekly_question_reports')
+ ('weekly_moderation_actions'),('weekly_question_reports'),
+ ('weekly_objective_study'),('weekly_cbt_sessions'),('weekly_cbt_answers')
 ),
 missing_tables AS (
  SELECT name FROM required_tables WHERE to_regclass('public.' || name) IS NULL

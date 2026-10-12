@@ -89,6 +89,7 @@
     "audit:v14.9.2-jss1-math-slides": "node --experimental-strip-types scripts/audit-v14.9.2-jss1-math-slides.mjs",
     "test:dawn-security": "node --test scripts/test-dawn-access-policy.mjs scripts/test-guardian-verification.mjs scripts/test-weekly-pin-security.mjs",
     "test:daily-check": "node --test scripts/test-daily-check-submission.mjs",
+    "test:weekly-workspace": "node --test scripts/test-weekly-workspace.mjs",
     "test:weekly-baseline": "node --test scripts/test-weekly-baseline.mjs",
     "test:weekly-objective-review": "node --test scripts/test-weekly-objective-review.mjs",
     "test:weekly-publication-readiness": "node --test scripts/test-weekly-publication-readiness.mjs",
@@ -102,20 +103,25 @@
     "test:weekly-unpublished-gate": "node --test scripts/test-weekly-unpublished-gate.mjs"
   },
   "dependencies": {
+    "@neondatabase/serverless": "^1.2.0",
     "bcryptjs": "^3.0.2",
+    "https-proxy-agent": "^9.1.0",
     "jose": "^6.1.0",
-    "next": "16.3.3",
+    "lucide-react": "^1.55.0",
+    "next": "16.3.8",
     "postgres": "^3.4.7",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
+    "ws": "^8.22.0",
     "zod": "^4.1.5"
   },
   "devDependencies": {
     "@types/node": "^24.3.0",
     "@types/react": "^19.1.12",
     "@types/react-dom": "^19.1.9",
+    "@types/ws": "^8.18.2",
     "eslint": "^9.35.0",
-    "eslint-config-next": "16.3.3",
+    "eslint-config-next": "16.3.8",
     "typescript": "^5.9.2"
   }
 }

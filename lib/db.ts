@@ -1,15 +1,18 @@
 import postgres from "postgres";
+import {createNeonDevelopmentSql} from './neonDevelopmentDb';
 
 const globalForDb = globalThis as unknown as { sql?: ReturnType<typeof postgres> };
 
 export const sql =
   globalForDb.sql ??
-  postgres(process.env.DATABASE_URL || "", {
+  (process.env.AVORA_DATABASE_TRANSPORT==='neon-websocket'&&process.env.NODE_ENV!=='production'
+   ?createNeonDevelopmentSql(process.env.DATABASE_URL||'')
+   :postgres(process.env.DATABASE_URL || "", {
     ssl: "require",
     max: 3,
     idle_timeout: 30,
     connect_timeout: 8
-  });
+  }));
 
 if (process.env.NODE_ENV !== "production") globalForDb.sql = sql;
 

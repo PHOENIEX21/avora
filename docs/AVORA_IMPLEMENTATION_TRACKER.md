@@ -13,10 +13,10 @@
 | Phase 1d baseline / study time | NOT VERIFIED | Baseline policy tests pass, runtime not tested |
 | Phase 2 verified curriculum | NOT VERIFIED | Import/review route exists; source coverage/release not verified |
 | Phase 2b all-class objective gating | NOT VERIFIED | Class flag API exists; runtime not tested |
-| Phase 3 weekly | NOT VERIFIED | Weekly routes exist; schema mismatch |
+| Phase 3 weekly | PARTIALLY VERIFIED | Guarded dashboard, historical objectives and study/practice implemented; full weekly exam cycle remains |
 | Phase 3b exams/notifications/revisit | NOT VERIFIED | Academic-core and weekly models diverge |
 | Phase 3c week switching | NOT VERIFIED | Need state transition tests |
-| Phase 4 daily tasks | NOT VERIFIED | Need complete flow |
+| Phase 4 daily tasks | PARTIALLY VERIFIED | Objective practice/submissions and progress verified; English Daily five-task flow remains |
 | Existing Daily Check submissions | PARTIALLY VERIFIED | Student/input/bank checks and replay-safe progress updates tested with mocked DB; live Neon integration pending |
 | Phase 4g English Daily | NOT VERIFIED | Need approved real content and tests |
 | Phase 5 uploads | NOT VERIFIED | Need flow and safety tests |
@@ -53,6 +53,8 @@ Compare every statement in migrations 048–058 with isolated Neon schema; const
 - Narrow CHECK constraints on objectives and items require an approved atomic replacement; no DROP executed.
 
 ## 2026-10-12 cloud continuation
+
+Superseded for current connectivity/specification/workspace status by `docs/AVORA_WORKSPACE_MILESTONE_2026-10-12.md`: source package received and archived, GitHub Actions reads now work, Neon branch identity verified, additive workspace migrations applied, dashboard/practice implemented and tested. Earlier blocker notes below describe the prior checkpoint.
 - Base commit: `c109dcaa8ab84262e7bcd46b986be5450c003601`, branch `avora-academic-core-v1`.
 - Local checks passed: TypeScript; lint (0 errors, 11 existing warnings); answer marking (12 checks); all seven curriculum audit scripts; 57 weekly/guardian/security tests; 8 new Daily Check route tests; production build with an ephemeral AUTH_SECRET. GitHub Actions API returned Forbidden, so remote run status is unverified.
 - Fixed the Phase 1 migration test's false positive on a rollback comment. Added Phase 1/2 and Daily Check tests to the academic-core workflow.

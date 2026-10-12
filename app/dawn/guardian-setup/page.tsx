@@ -13,6 +13,7 @@ export default async function DawnGuardianSetup(){
  if(session.role!=='STUDENT')redirect('/');
  const gate=await getDawnGate(session.userId);
  if(gate.status==='legacy')redirect('/home');
+ if(gate.status==='ready')redirect('/weekly');
  const classLevel=gate.classLevel;
  const checks=[
   {name:'Guardian consent',ready:gate.status==='verification_pending'||gate.guardianConsent},

@@ -11,7 +11,8 @@ import {decideDawnAccess} from '@/lib/dawnAccessPolicy';
 export type DawnGate =
  | {status:'legacy';reason:'CLASS_UNSET'|'NOT_RELEASED'|'WEEK_UNSET'|'UNAVAILABLE'}
  | {status:'onboarding_required';classLevel:string;term:number;week:number;guardianConsent:boolean;verifiedContact:boolean;parentPin:boolean;studentPin:boolean}
- | {status:'verification_pending';classLevel:string;term:number;week:number};
+ | {status:'verification_pending';classLevel:string;term:number;week:number}
+ | {status:'ready';classLevel:string;term:number;week:number};
 
 export async function getDawnGate(studentId:string):Promise<DawnGate>{
  try{
@@ -37,7 +38,8 @@ export async function getDawnGate(studentId:string):Promise<DawnGate>{
   });
   if(decision==='onboarding_required')
    return {status:'onboarding_required',...base,guardianConsent,verifiedContact,parentPin:parentPinReady,studentPin:studentPinReady};
-  // A verified contact timestamp alone is not a completed, legally approved guardian flow.
+  if(decision==='ready')return {status:'ready',...base};
+  // The policy remains inactive until the guardian workflow is approved.
   return {status:'verification_pending',...base};
  }catch{
   return {status:'legacy',reason:'UNAVAILABLE'};

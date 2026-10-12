@@ -19,8 +19,7 @@ export async function GET(request:Request){
  if(session.role!=='ADMIN'){
   if(session.role!=='STUDENT')return NextResponse.json({error:'Student access required'},{status:403});
   const gate=await getDawnGate(session.userId);
-  // DawnGate deliberately has no ready state until guardian approval is implemented.
-  if(gate.status==='legacy'||gate.status==='onboarding_required'||gate.status==='verification_pending')return NextResponse.json({error:'Guardian onboarding and verification required'},{status:403});
+  if(gate.status!=='ready')return NextResponse.json({error:'Guardian onboarding and verification required'},{status:403});
   const [student]=await withDbRetry(()=>sql`SELECT class_level FROM student_profiles WHERE user_id=${session.userId} LIMIT 1`);
   if(String(student?.class_level||'').toUpperCase()!==cls)return NextResponse.json({error:'Other class curriculum is private'},{status:403});
   if(!(await isWeeklyLearningEnabled(cls)))return NextResponse.json({error:'Weekly learning not enabled for this class'},{status:404});

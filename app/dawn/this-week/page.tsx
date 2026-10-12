@@ -12,6 +12,7 @@ export default async function DawnThisWeek(){
  if(session.role!=='STUDENT')redirect('/');
  const gate=await getDawnGate(session.userId);
  if(gate.status==='legacy')redirect('/home');
+ if(gate.status==='ready')redirect('/weekly');
  const classLevel=gate.classLevel;
  const state={term:gate.term,current_week:gate.week};
  // A verified contact record is not sufficient for full Dawn release.
