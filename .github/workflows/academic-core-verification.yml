@@ -38,6 +38,8 @@ jobs:
         run: npm run test:weekly-pilot-gate
       - name: Student weekly visibility regression
         run: npm run test:weekly-student-visibility
+      - name: Weekly curriculum import checks
+        run: npm run test:weekly-curriculum-import
       - name: Curriculum audits
         run: npm run audit:curriculum
       - name: Next.js production build
