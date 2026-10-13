@@ -114,6 +114,11 @@ export async function releaseLearnerSeat(params:{parentId:string;studentId:strin
 }
 
 export async function getStudentEntitlement(studentId:string){
+  // Explicit local-only preview switch for validating the learner UI with expired
+  // trial accounts. Never bypass real entitlements in production or Vercel deploys.
+  if(process.env.NODE_ENV!=='production'&&process.env.AVORA_LOCAL_PREVIEW==='true'){
+    return {allowed:true,source:'LOCAL_PREVIEW',status:'PREVIEW',endsAt:null,parentId:null};
+  }
   const [family]=await withDbRetry(()=>sql`
     SELECT b.status,b.current_period_end,b.trial_ends_at,b.owner_user_id
     FROM billing_student_seats s JOIN billing_accounts b ON b.id=s.billing_account_id
