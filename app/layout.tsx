@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import Link from "next/link";
 import "./globals.css";
+import "@/components/AvoraExperience.css";
 import { getSession } from "@/lib/auth";
 import UserNav from "@/components/UserNav";
 import Brand from "@/components/Brand";
